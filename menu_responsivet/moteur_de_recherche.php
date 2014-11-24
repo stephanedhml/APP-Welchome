@@ -1,10 +1,17 @@
 <head>
 	<meta charset="utf-8" />
-
+<link rel="stylesheet" href="style_menu.css" />
+<link rel="stylesheet" href="style_recherche.css" />
   <?php include("menu_responsive.js"); ?>
   <title>Recherche</title>
 </head>
 
+<body>
+		<header>
+        <?php include("menus.php"); ?>
+		</header>
+
+<div>
 <?
 
 if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
@@ -54,3 +61,8 @@ else
 }
 
 ?>
+
+</div>
+
+</body>
+
