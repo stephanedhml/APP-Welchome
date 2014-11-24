@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 21 Novembre 2014 à 21:28
+-- Généré le :  Lun 24 Novembre 2014 à 11:55
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -103,21 +103,21 @@ CREATE TABLE IF NOT EXISTS `services` (
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `id_user` int(255) NOT NULL AUTO_INCREMENT,
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `rights` varchar(255) NOT NULL,
   `signup_date` int(10) NOT NULL,
   `avatar` text NOT NULL,
-  PRIMARY KEY (`id_user`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id_user`, `username`, `password`, `email`, `rights`, `signup_date`, `avatar`) VALUES
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `rights`, `signup_date`, `avatar`) VALUES
 (1, 'Yoko', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'yoko@moncul.com', '', 0, ''),
 (2, 'Alexis', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'alex@gmai.com', '', 0, ''),
 (3, 'Manu', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'manu@gmail.com', '', 0, ''),
