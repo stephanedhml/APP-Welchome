@@ -20,7 +20,7 @@
 					Vos vacances à portée de mains gratuitement
 					</h1>
 					
-					<form method="post" action="traitement.php">
+					<form method="post" action="accueilmanu_recherche.php">
 						<p>
 							<input type="text" name="recherche_simple" placeholder="Rechercher" id="recherche_simple" />
 						</p>

@@ -21,11 +21,15 @@
 					Vos vacances à portée de mains gratuitement
 					</h1>
 					
-					<form method="post" action="traitement.php">
-						<p>
-							<input type="text" name="recherche_simple" placeholder="Rechercher" id="recherche_simple" />
-						</p>
-					</form>	
+					
+						
+				
+
+ <form action="moteur_de_recherche.php" method="Post">
+<input type="text" name="requete" placeholder="Rechercher" id="recherche_simple" />
+</form>
+
+						
 			<!-- <div id="bkcolor"></div> -->
 			</div>
 			<div id="partie2">
