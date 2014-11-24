@@ -1,11 +1,18 @@
+<head>
+	<meta charset="utf-8" />
+
+  <?php include("menu_responsive.js"); ?>
+  <title>Recherche</title>
+</head>
+
 <?
 
 if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 {
 mysql_connect('localhost','root','root');
-mysql_select_db('Recherche'); // on se connecte à MySQL. 
+mysql_select_db('Welchome'); // on se connecte à MySQL. 
 $requete = htmlspecialchars($_POST['requete']); // on crée une variable $requete pour faciliter l'écriture de la requête SQL.
-$query = mysql_query("SELECT * FROM recherche WHERE Localisation LIKE '%$requete%' ORDER BY id DESC") or die (mysql_error()); 
+$query = mysql_query("SELECT * FROM logement WHERE Localisation LIKE '%$requete%' ORDER BY id DESC") or die (mysql_error()); 
 $nb_resultats = mysql_num_rows($query); // on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
 if($nb_resultats != 0) // si le nombre de résultats est supérieur à 0, on continue
 {
