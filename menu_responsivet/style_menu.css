@@ -21,13 +21,13 @@ nav {
 }
 nav ul {
 	padding: 0;
+    text-align: center;
 	margin: 0 auto;
-	width: 900px;
 	height: 40px;
 }
 nav li {
-	display: inline;
-	float: left;
+	display: inline-block;
+    text-align: center;
 }
 nav a {
 	color: #fff;
