@@ -20,7 +20,7 @@
 		</header>
 
 <div>
-<?
+<?php
 
 if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 {
@@ -33,7 +33,7 @@ if($nb_resultats != 0) // si le nombre de résultats est supérieur à 0, on con
 // maintenant, on va afficher les résultats 
 ?>
 <h3>Résultats de votre recherche.</h3>
-<p>Nous avons trouvé <? echo $nb_resultats; 
+<p>Nous avons trouvé <?php echo $nb_resultats; 
 if($nb_resultats > 1) { echo ' résultats'; } else { echo ' résultat'; } // on vérifie le nombre de résultats pour orthographier correctement. 
 ?>
  dans notre base de données. Voici les maisons que nous avons trouvées:<br/>
