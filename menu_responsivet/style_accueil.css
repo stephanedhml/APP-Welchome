@@ -9,9 +9,10 @@
 {
     height: 580px;
     width: 100%;
-    background-image: url('wall1.jpg');
+    background-image: url('wall6.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: 2000px;
+    background-position: bottom;
     position: relative;
     background-color: #212121;
     padding-top: 7%;
@@ -63,11 +64,11 @@
 }
 
 #partie2 {
-    background-color: #00695C;
+    background-color: #DCEDC8;
 
 }
 .h2_p2 {
-    background-color: #004D40;
+    background-color: #8BC34A;
     margin: 0px;
     color: #ffffff;
     font-family: Calibri;
@@ -137,7 +138,6 @@
         color: white;
     }
     .h2_p2 {
-        background-color: #004D40;
         margin: 0px;
         color: #ffffff;
         font-family: Calibri;
@@ -149,9 +149,9 @@
     {
         height: 450px;
         width: 100%;
-        background-image: url('wall1.jpg');
+        background-image: url('wall6.jpg');
         background-repeat: no-repeat;
-        background-position: center;
+        background-size: cover;
         position: relative;
         background-color: #212121;
         padding-top: 7%;
@@ -184,6 +184,6 @@ footer {
 body
 {
     margin: 0px;
-    background-color: #004D40;
+    background-color: #8BC34A;
 }
 
