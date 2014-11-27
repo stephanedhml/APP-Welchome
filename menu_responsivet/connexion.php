@@ -11,8 +11,8 @@ session_start();
         <?php include("menu_responsive.js"); ?>
         <title>Connexion</title>
     </head>
-	
-	<body>
+
+	<body class="wall">
 		<div class="header">
             <?php include("menus.php"); ?>
 		</div>
@@ -90,6 +90,7 @@ session_start();
 ?>
 
 <div class="formulaire_connexion">
+    <div class="fond_form_connex"></div>
     <form action="connexion.php" method="post">
         <div class="center">
         <br /><br/>
@@ -106,5 +107,5 @@ session_start();
 		}
 }
 ?>
-	</body>
+    </body>
 </html>
