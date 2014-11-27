@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ded5ab5-f96c-40ac-a8ec-d6924ea99aa5" name="Default" comment="Changement de l'apparence (couleurs + wall) du site pour faire vacances">
+    <list default="true" id="7ded5ab5-f96c-40ac-a8ec-d6924ea99aa5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="cbd0832d-fabb-42d5-89df-91aad9b02c7a" name="Rejected commit: Default" comment="Changement de l'apparence (couleurs + wall) du site pour faire vacances">
@@ -251,6 +251,13 @@
       <option name="number" value="Default" />
       <updated>1417077585379</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changement de l'apparence (couleurs + wall) du site pour faire vacances">
+      <created>1417109623592</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1417109623592</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -291,6 +298,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
