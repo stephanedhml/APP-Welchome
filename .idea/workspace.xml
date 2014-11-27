@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ded5ab5-f96c-40ac-a8ec-d6924ea99aa5" name="Default" comment="Menu responsive réparé">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/connexion.php" afterPath="$PROJECT_DIR$/menu_responsivet/connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/sign_up.php" afterPath="$PROJECT_DIR$/menu_responsivet/sign_up.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/style.css" afterPath="$PROJECT_DIR$/menu_responsivet/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/style_accueil.css" afterPath="$PROJECT_DIR$/menu_responsivet/style_accueil.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/style_connexion.css" afterPath="$PROJECT_DIR$/menu_responsivet/style_connexion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/style_sign_up.css" afterPath="$PROJECT_DIR$/menu_responsivet/style_sign_up.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu_responsivet/responsive.css" afterPath="$PROJECT_DIR$/menu_responsivet/responsive.css" />
     </list>
     <ignored path="APP-Welchome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style_accueil.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style_accueil.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menu_responsivet/style_accueil.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63870245" vertical-offset="347" max-vertical-offset="3315">
+            <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="3315">
               <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/menu_responsivet/responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77964205" vertical-offset="0" max-vertical-offset="1258">
+              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -136,13 +140,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/menu_responsivet/responsive.css" />
         <option value="$PROJECT_DIR$/menu_responsivet/style.css" />
         <option value="$PROJECT_DIR$/menu_responsivet/connexion.php" />
         <option value="$PROJECT_DIR$/menu_responsivet/style_connexion.css" />
         <option value="$PROJECT_DIR$/menu_responsivet/style_sign_up.css" />
         <option value="$PROJECT_DIR$/menu_responsivet/sign_up.php" />
         <option value="$PROJECT_DIR$/menu_responsivet/style_accueil.css" />
+        <option value="$PROJECT_DIR$/menu_responsivet/responsive.css" />
       </list>
     </option>
   </component>
@@ -334,14 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu_responsivet/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13310961" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/menu_responsivet/accueilmanu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.192307" vertical-offset="101" max-vertical-offset="969">
@@ -373,14 +369,6 @@
           <folding>
             <marker date="1417082203881" expanded="true" signature="1414:1463" placeholder="SELECT passw..users..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu_responsivet/style_menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -421,8 +409,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/menu_responsivet/style_accueil.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63870245" vertical-offset="347" max-vertical-offset="3315">
+        <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="3315">
           <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu_responsivet/style_menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu_responsivet/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77964205" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding />
         </state>
       </provider>
