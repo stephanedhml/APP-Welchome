@@ -76,9 +76,6 @@
     .message {
     padding-top: 20%;
 }
-    .formulaire_connexion .center {
-        margin-top: 100px;
-    }
 }
 
 @media only screen and (max-width : 450px) {
