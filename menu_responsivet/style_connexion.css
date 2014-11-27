@@ -38,10 +38,14 @@
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
 }
-
+.message {
+    text-align: center;
+    margin-top: 20%;
+}
 @media only screen and (max-width : 450px) {
     .formulaire_connexion {
         position: absolute;
         margin-top: 7%;
         margin-left: 28%;
     }
+

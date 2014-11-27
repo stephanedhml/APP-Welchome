@@ -40,16 +40,6 @@
 
 /*Apparence pour des écrans de taille inférieure à 915px en largeur*/
 @media only screen and (max-width : 915px) {
-    .clearfix, nav ul {
-    padding: 0;
-        margin: 0 auto;
-        width: 900px;
-        height: 40px;
-    }
-    .clearfix, nav li {
-    display: inline;
-    float: left;
-    }
     nav {
         border-bottom: 0;
     }
