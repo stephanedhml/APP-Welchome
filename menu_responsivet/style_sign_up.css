@@ -1,13 +1,12 @@
 .content {
-    position: absolute;
     margin-top: 7%;
-    margin-left: 43%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .signup_form {
     position: relative;
     color: #fff;
-    display: inline-block;
     text-align: center;
     text-decoration: none;
     line-height: 40px;
@@ -52,14 +51,14 @@
 }
 @media only screen and (max-width : 1400px) {
     .content {
-        position: absolute;
         margin-top: 150px;
-        margin-left: 38%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 @media only screen and (max-width : 500px) {
     .content {
-        position: absolute;
         margin-top: 150px;
-        margin-left: 23%;
+        margin-left: auto;
+        margin-right: auto;
     }

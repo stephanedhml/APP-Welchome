@@ -119,7 +119,6 @@ if($form)
 <?php
 }
 ?>
-		<div class="foot"><a href="http://localhost/Welchome/connexion/index.php">Retour à l'accueil</a> - <a href= "http://localhost/Welchome/connexion/index.php">WelcHome</a></div>
 	</body>
 </html>
 			

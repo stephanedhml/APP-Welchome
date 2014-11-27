@@ -27,7 +27,9 @@ session_start();
 
 ?>
 
-<div class="message">Vous avez bien été déconnecté !</br></div>
+<div class="message">Vous avez bien été déconnecté !</br>
+    <a href="http://localhost/APP-Welchome/menu_responsivet/accueilmanu.php" class="btn_rtr_accueil">Retour à l'accueil</a>
+</div>
 
 <?php
 	session_destroy();
@@ -61,7 +63,9 @@ session_start();
 				$_SESSION["userid"]=$dn["id"];
 ?>
 
-<div class="message">Vous avez bien été connecté !</br></div>
+<div class="message">Vous avez bien été connecté !</br>
+    <a href="http://localhost/APP-Welchome/menu_responsivet/accueilmanu.php" class="btn_rtr_accueil">Retour à l'accueil</a>
+</div>
 
 <?php
 			}
@@ -102,10 +106,5 @@ session_start();
 		}
 }
 ?>
-
-		<div class="foot"><a href="http://localhost/Welchome/connexion/index.php">Retour à l'accueil</a></div>
 	</body>
 </html>
-<?php
-    session_unset();
-?>
