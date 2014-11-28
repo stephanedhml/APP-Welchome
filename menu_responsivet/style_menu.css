@@ -3,6 +3,10 @@
     content: " ";
     display: table;
 }
+@font-face {
+    font-family: 'Sinkin';
+    src: url('Sinkin.otf');
+}
 
 /* Basic Styles */
 body {
@@ -10,13 +14,13 @@ body {
 
 }
 nav {
-	height: 40px;
+	height: 50px;
 	width: 100%;
 
-	background-color: rgba(86,153,151,0.7);
+	background-color: rgba(0,0,0,0.6);
 
 	font-size: 11pt;
-	font-family: 'PT Sans', Arial, sans-serif;
+	font-family: 'Sinkin', 'PT Sans', Arial, sans-serif;
 	font-weight: bold;
 	position: relative;
 	border-bottom: 2px solid #283744;
@@ -39,8 +43,9 @@ nav a {
 	width: 150px;
 	text-align: center;
 	text-decoration: none;
-	line-height: 40px;
+	line-height: 0px;
 	text-shadow: 1px 1px 0px #283744;
+	margin-top: 27px;
 }
 nav li a {
 	border-right: 1px solid #576979;
@@ -51,8 +56,12 @@ nav li a {
 nav li:last-child a {
 	border-right: 0;
 }
+
+
 nav a:hover, nav a:active {
 	background-color: #8c99a4;
+	color: rgba(210, 230, 220,1.0); 
+	
 }
 .recherche_avancee {
     width:150px;

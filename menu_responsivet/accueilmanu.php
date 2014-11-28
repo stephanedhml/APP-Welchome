@@ -26,7 +26,7 @@
 				
 
  <form action="moteur_de_recherche.php" method="Post">
-<input type="text" name="requete" placeholder="Rechercher" id="recherche_simple" />
+<input type="text" name="requete" placeholder="Saisir une destination" id="recherche_simple" />
 </form>
 
 						
@@ -44,7 +44,7 @@
 			
 		<footer>
 			<p>
-			
+			FOOTER
 			</p>
 		</footer>
 	</div>

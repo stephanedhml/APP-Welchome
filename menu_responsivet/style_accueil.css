@@ -14,7 +14,7 @@
     background-size: 2000px;
     background-position: bottom;
     position: relative;
-    background-color: rgba(22, 160, 133,1.0);
+    background-color: rgba(26, 188, 156,1.0);
     padding-top: 7%;
 }
 
@@ -28,6 +28,14 @@
 	top: 86.5px;
 }
 */
+
+#partie2
+
+{
+    height: 1000px;
+    background-color: rgba(236, 240, 241,1.0);
+
+}
 
 #partie1 h1
 {
@@ -68,7 +76,7 @@
 
 }
 .h2_p2 {
-    background-color: rgba(22, 160, 133,1.0);
+    background-color: rgba(236, 240, 241,1.0);
     margin: 0px;
     color: #ffffff;
     font-family: Calibri;
@@ -149,11 +157,11 @@
     {
         height: 450px;
         width: 100%;
-        background-image: url('wall6.jpg');
+        background-image: url('wall5.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        background-color: rgba(22, 160, 133,1.0);
+        background-color: rgba(189, 195, 199,1.0);
         padding-top: 7%;
     }
     .html5_logo {
@@ -179,11 +187,12 @@
 }
 footer {
     padding-top: 20px;
+     text-align:center;
 }
 
 body
 {
     margin: 0px;
-    background-color: rgba(22, 160, 133,0.7);
+    background-color: rgba(236, 240, 241,1.0);
 }
 
