@@ -9,12 +9,12 @@
 {
     height: 580px;
     width: 100%;
-    background-image: url('wall6.jpg');
+    background-image: url('wall2.jpg');
     background-repeat: no-repeat;
     background-size: 2000px;
     background-position: bottom;
     position: relative;
-    background-color: #212121;
+    background-color: rgba(22, 160, 133,1.0);
     padding-top: 7%;
 }
 
@@ -68,7 +68,7 @@
 
 }
 .h2_p2 {
-    background-color: #8BC34A;
+    background-color: rgba(22, 160, 133,1.0);
     margin: 0px;
     color: #ffffff;
     font-family: Calibri;
@@ -153,7 +153,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        background-color: #212121;
+        background-color: rgba(22, 160, 133,1.0);
         padding-top: 7%;
     }
     .html5_logo {
@@ -184,6 +184,6 @@ footer {
 body
 {
     margin: 0px;
-    background-color: #8BC34A;
+    background-color: rgba(22, 160, 133,0.7);
 }
 
