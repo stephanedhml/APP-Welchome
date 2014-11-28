@@ -4,7 +4,10 @@
 @import "style_connexion.css";
 @import "style_sign_up.css";
 
-
+.foot {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 

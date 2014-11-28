@@ -9,14 +9,13 @@
 {
     height: 580px;
     width: 100%;
-    background-image: url('wall1.jpg');
+    background-image: url('wall6.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: 2000px;
+    background-position: bottom;
     position: relative;
     background-color: #212121;
     padding-top: 7%;
-
-
 }
 
 /*
@@ -51,8 +50,11 @@
     width: 60%;
     height: 40px;
     font-size: 30px;
-
-
+}
+@media only screen and (max-width : 1720px) {
+    #recherche_simple {
+        margin-top: 7%;
+    }
 }
 #bloc_page
 {
@@ -62,11 +64,11 @@
 }
 
 #partie2 {
-    background-color: #00695C;
+    background-color: #DCEDC8;
 
 }
 .h2_p2 {
-    background-color: #004D40;
+    background-color: #8BC34A;
     margin: 0px;
     color: #ffffff;
     font-family: Calibri;
@@ -81,7 +83,6 @@
 }
 .html5_logo {
     width: 800px;
-    height: 468,75px;
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -96,13 +97,86 @@
     text-shadow: 0px 0px 5px black;
 }
 
-/*
-Uniquement si menu est un tableau
-header, td
-{
-	display: inline-block;
-}*/
+@media only screen and (max-width : 900px) {
+    #partie1 h1{
+        text-align: center;
+        padding-top: 150px;
+        width: 100%;
+        font-size: 60px;
+        text-shadow: 0px 0px 30px black;
+        margin: 0px;
+        font-family: Calibri;
+        color: white;
+    }
+    #recherche_simple
+    {
+        position: relative;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 10%;
+        border-radius: 5px;
+        width: 60%;
+        height: 40px;
+        font-size: 30px;
+    }
+    .html5_logo {
+        width: 700px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
 
+@media only screen and (max-width : 765px) {
+    #partie1 h1{
+        text-align: center;
+        padding-top: 150px;
+        width: 100%;
+        font-size: 40px;
+        text-shadow: 0px 0px 30px black;
+        margin: 0px;
+        font-family: Calibri;
+        color: white;
+    }
+    .h2_p2 {
+        margin: 0px;
+        color: #ffffff;
+        font-family: Calibri;
+        font-size: 25px;
+        text-align: center;
+        height: 105px;
+    }
+    #partie1
+    {
+        height: 450px;
+        width: 100%;
+        background-image: url('wall6.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #212121;
+        padding-top: 7%;
+    }
+    .html5_logo {
+        width: 500px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width : 765px) {
+    .html5_logo {
+        width: 300px;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+    .schema1 {
+        margin: 0px;
+    }
+}
+@media only screen and (max-width : 475px) {
+    .h2_p2 {
+        font-size: 20px;
+    }
+}
 footer {
     padding-top: 20px;
 }
@@ -110,5 +184,6 @@ footer {
 body
 {
     margin: 0px;
-    background-color: #004D40;
+    background-color: #8BC34A;
 }
+

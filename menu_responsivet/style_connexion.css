@@ -1,7 +1,8 @@
+
 .formulaire_connexion {
-    position: absolute;
     margin-top: 7%;
-    margin-left: 43%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formulaire_connexion #username_form {
@@ -29,7 +30,6 @@
 .formulaire_connexion .center {
     position: relative;
     color: #fff;
-    display: inline-block;
     text-align: center;
     text-decoration: none;
     line-height: 40px;
@@ -37,11 +37,52 @@
     font-size: 11pt;
     font-family: 'PT Sans', Arial, sans-serif;
     font-weight: bold;
+    background-image: url('fond_form_connex.png');
+    background-repeat: no-repeat;
+    background-position: 50% 190%;
+    margin-top: 200px;
+}
+.message {
+    text-align: center;
+    padding-top: 15%;
+    font-size: 40px;
+    text-shadow: 0px 0px 30px black;
+    margin: 0px;
+    font-family: Calibri;
+    color: white;
+}
+.message .btn_rtr_accueil {
+    background-color: #17b09c;
+    border: 1px solid transparent;
+    border-bottom: 3px solid #569997;
+    color: #fff;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    text-shadow: 1px 1px 0px #283744;
+    font-size: 11pt;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.wall {
+    background-image: url('wall3.jpg');
+}
+
+@media only screen and (max-width : 1400px) {
+    .message {
+    padding-top: 20%;
+}
 }
 
 @media only screen and (max-width : 450px) {
     .formulaire_connexion {
-        position: absolute;
         margin-top: 7%;
-        margin-left: 28%;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+

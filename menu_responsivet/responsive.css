@@ -1,5 +1,5 @@
 /*Apparence pour des écrans de taille inférieure à 916px en largeur*/
-@media screen and (max-width: 916px) {
+@media screen and (max-width: 950px) {
     #partie1 h1
     {
         text-align: center;
@@ -39,17 +39,7 @@
 }
 
 /*Apparence pour des écrans de taille inférieure à 915px en largeur*/
-@media only screen and (max-width : 915px) {
-    .clearfix, nav ul {
-    padding: 0;
-        margin: 0 auto;
-        width: 900px;
-        height: 40px;
-    }
-    .clearfix, nav li {
-    display: inline;
-    float: left;
-    }
+@media only screen and (max-width : 949px) {
     nav {
         border-bottom: 0;
     }

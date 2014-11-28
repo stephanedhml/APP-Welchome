@@ -4,7 +4,8 @@ include('config.php');
 if(isset($_SESSION['username']))
 {
 ?>
-<li><a href="connexion.php">Se déconnecter</a></li>
+    <li><a href="#">Notifications</a></li>
+    <li><a href="connexion.php">Se déconnecter</a></li>
 <?php
 }
 else

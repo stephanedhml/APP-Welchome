@@ -6,14 +6,17 @@
 
 /* Basic Styles */
 body {
-	background-color: #424242;
     margin: 0;
 
 }
 nav {
 	height: 40px;
 	width: 100%;
+<<<<<<< HEAD
 	background-color: rgba(86,153,151,0.7);
+=======
+	background: #8BC34A;
+>>>>>>> FETCH_HEAD
 	font-size: 11pt;
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-weight: bold;
