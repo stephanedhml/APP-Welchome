@@ -8,16 +8,19 @@
 body {
 	background-color: #424242;
     margin: 0;
+
 }
 nav {
 	height: 40px;
 	width: 100%;
-	background: #569997;
+	background-color: rgba(86,153,151,0.7);
 	font-size: 11pt;
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-weight: bold;
 	position: relative;
 	border-bottom: 2px solid #283744;
+
+
 }
 nav ul {
 	padding: 0;

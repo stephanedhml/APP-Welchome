@@ -1,13 +1,5 @@
 <head>
 	<meta charset="utf-8" />
-
-  <?php include("menu_responsive.js");
-        include ("config.php");?>
-
-  <title>Recherche</title>
-</head>
-
-<?php
 <link rel="stylesheet" href="style_menu.css" />
 <link rel="stylesheet" href="style_recherche.css" />
   <?php include("menu_responsive.js"); ?>
@@ -24,9 +16,12 @@
 
 if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 {
+$dblink = mysql_connect('localhost','root','root') ;
+
 mysql_select_db('Welchome'); // on se connecte à MySQL. 
 $requete = htmlspecialchars($_POST['requete']); // on crée une variable $requete pour faciliter l'écriture de la requête SQL.
-$query = mysql_query("SELECT * FROM logement WHERE Localisation LIKE '%$requete%' ORDER BY id DESC") or die (mysql_error()); 
+
+$query = mysql_query("SELECT * FROM logement WHERE Localisation LIKE '%$requete%' ORDER BY id DESC");
 $nb_resultats = mysql_num_rows($query); // on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
 if($nb_resultats != 0) // si le nombre de résultats est supérieur à 0, on continue
 {
@@ -49,14 +44,14 @@ while($donnees = mysql_fetch_array($query)) // on fait un while pour afficher la
 ?><br/>
 <br/>
 <a href="accueilmanu.php">Faire une nouvelle recherche</a></p>
-<?php
+<?
 } // Afficher l'éventuelle erreur.
 else
 { //HTML
 ?>
 <h3>Pas de résultats</h3>
 <p>Nous n'avons trouvé aucun résultat pour votre requête "<? echo $_POST['requete']; ?>". <a href="accueilmanu.php">Réessayez</a> avec autre chose.</p>
-<?php
+<?
 }
 mysql_close(); // on ferme mysql
 }
