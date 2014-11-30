@@ -9,10 +9,10 @@
 {
     height: 580px;
     width: 100%;
-    background-image: url('wall2.jpg');
+    background-image: url('wall7.jpg');
     background-repeat: no-repeat;
-    background-size: 2000px;
-    background-position: bottom;
+    background-size: cover;
+    background-position: center;
     position: relative;
     background-color: rgba(26, 188, 156,1.0);
     padding-top: 7%;
@@ -32,7 +32,6 @@
 #partie2
 
 {
-    height: 1000px;
     background-color: rgba(236, 240, 241,1.0);
 
 }
@@ -72,11 +71,11 @@
 }
 
 #partie2 {
-    background-color: #DCEDC8;
+    background-color: #CFD8DC;
 
 }
 .h2_p2 {
-    background-color: rgba(236, 240, 241,1.0);
+    background-color: #455A64;
     margin: 0px;
     color: #ffffff;
     font-family: Calibri;
@@ -95,9 +94,7 @@
     margin-top: 40px;
 }
 
-.schema1 {
-    margin: 40px;
-}
+
 #partie2, h2 h3
 {
     text-align: center;
@@ -157,7 +154,7 @@
     {
         height: 450px;
         width: 100%;
-        background-image: url('wall5.jpg');
+        background-image: url('wall7.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -193,6 +190,6 @@ footer {
 body
 {
     margin: 0px;
-    background-color: rgba(236, 240, 241,1.0);
+    background-color: #455A64;
 }
 

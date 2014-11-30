@@ -44,7 +44,7 @@
 			
 		<footer>
 			<p>
-			FOOTER
+			<!--FOOTER-->
 			</p>
 		</footer>
 	</div>
