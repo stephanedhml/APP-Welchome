@@ -14,12 +14,13 @@ var carrousel=
 	{
 			this.nbSlide = elem.find(".slide").length;
 		//Créer la pagination
-		elem.append('<div class="navigation"></div>');
+		/*elem.append('<div class="navigation"></div>');
 		for(var i=1;i<=this.nbSlide;i++)
 		{
 			elem.find(".navigation").append("<span>"+i+"</span>")
-		}
+		}*/
 		elem.find(".navigation span").click(function(){carrousel.gotoSlide($(this).text());})
+		
 		//initialisation du carrousel
 		this.elem=elem;
 		elem.find(".slide").hide();
