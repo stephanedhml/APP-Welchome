@@ -62,7 +62,7 @@ Cochez les attributs qui vous intéressent parmi les suivants<br/>
 		   
 		   Avez-vous quelque chose a ajouter ?<br/>
 		   <textarea name="message" rows="8" cols="45">
-          Ton message ici.
+          Votre message ici.
            </textarea>
 		   	       <input type="submit" value="Valider" /><br/>
 </pre>			   
