@@ -1,10 +1,13 @@
-@import "style_menu.css";
-@import "responsive.css";
-@import "style_accueil.css";
-@import "style_connexion.css";
-@import "style_sign_up.css";
+@import "fichiers_css/fichiers_dans_style/style_menu.css";
+@import "fichiers_css/fichiers_dans_style/responsive.css";
+@import "fichiers_css/fichiers_dans_style/style_accueil.css";
+@import "fichiers_css/fichiers_dans_style/style_connexion.css";
+@import "fichiers_css/fichiers_dans_style/style_sign_up.css";
 
-
+.foot {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 
