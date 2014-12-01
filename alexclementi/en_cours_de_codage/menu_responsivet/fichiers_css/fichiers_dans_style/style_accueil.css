@@ -37,7 +37,7 @@
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: absolute/*relative*/;
     background-color: rgba(26, 188, 156,1.0);
     padding-top: 7%;
 }
@@ -118,9 +118,9 @@
     top: 86px;
 }
 
-#partie2 {
+#partie2 
+{
     background-color: #CFD8DC;
-
 }
 .h2_p2 {
     background-color: #455A64;
