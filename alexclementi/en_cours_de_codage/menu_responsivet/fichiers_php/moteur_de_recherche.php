@@ -46,7 +46,7 @@
 					while($donnees = $nbresult->fetch()) 
 					{
 		?>
-						<a href="fonction.php" id="<? echo $donnees['id']; ?>"><? echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?></a><br/>
+						<a href="fonction.php" id="<?php echo $donnees['id']; ?>"><?php echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?></a><br/>
 
 		<?php
 					} // fin du while
