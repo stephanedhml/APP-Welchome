@@ -37,13 +37,8 @@
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-<<<<<<< HEAD:alexclementi/en_cours_de_codage/menu_responsivet/fichiers_css/fichiers_dans_style/style_accueil.css
-    position: absolute/*relative*/;
-    background-color: rgba(26, 188, 156,1.0);
-=======
-    position: relative;
+    position: absolute;
     background-color: #CFD8DC;
->>>>>>> origin/master:alexclementi/en_cours_de_codage/menu_responsivet/fichiers_css/style_accueil.css
     padding-top: 7%;
 }
 #slide2
