@@ -5,6 +5,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
+		<script type="text/javascript" src="../jquery.js"></script>
+		<script type="text/javascript" src="carrousel.js"></script>
         <?php session_start(); ?>
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<title>Accueil</title>
@@ -20,16 +22,94 @@
 		<div id="bloc_page">
 		
 			<div id="partie1">
-				<h1>
-					Vos vacances à portée de mains gratuitement
-				</h1>
-					<form action="moteur_de_recherche.php" method="Post">
-						<input type="text" name="requete" placeholder="Saisir une destination"
-						id="recherche_simple" />
-					</form>
-				<!-- <div id="bkcolor"></div> -->
-			</div>
+				<div id="slide1" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+				
+				<div id="slide2" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+				
+				<div id="slide3" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+				
+				<div id="slide4" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+				
+				<div id="slide5" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+				
+				<div id="slide6" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+				
+				<div id="slide7" class="slide">
+					<h1>
+						Vos vacances à portée de mains gratuitement
+					</h1>
+						<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
+						</form>
+					<!-- <div id="bkcolor"></div> -->
+				</div>
+			</div>	
 			
+			<!--<div class="navigation">
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+				<span>7</span>
+			</div>
+			-->
 			<div id="partie2">
 				<div class="h2_p2">
 					<p>
