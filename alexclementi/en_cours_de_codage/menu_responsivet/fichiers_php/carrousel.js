@@ -8,7 +8,7 @@ var carrousel=
 	nbCurrent:1,
 	elemCurrent : null,
 	elem : null,
-	timer: null,
+	//timer: null,
 	
 	init : function(elem)
 	{
@@ -29,12 +29,12 @@ var carrousel=
 		this.elem.find(".navigation span:first").addClass("active");
 		
 		//le timer
-		this.timer=window.setInterval("carrousel.next()",5000)
-		//carrousel.play();
+		//this.timer=window.setInterval("carrousel.next()",5000)
+		carrousel.play();
 		
 		//stop quand on passe dessus
-		//elem.mouseover(carrousel.stop);
-		//elem.mouseout(carrousel.play);
+		elem.mouseover(carrousel.stop);
+		elem.mouseout(carrousel.play);
 	},
 	
 	gotoSlide : function(num)
@@ -59,16 +59,16 @@ var carrousel=
 		this.gotoSlide(num);
 	},
 	
-	/*stop: function()
+	stop: function()
 	{
-		window.clearInterval(carrousel.timer);
+		clearInterval(carrousel.timer);
 	},
 	
 	play:function()
 	{
-		window.clearInterval(carrousel.timer);
-		this.timer=window.setInterval("carrousel.next()",2000);
-	},*/
+		clearInterval(carrousel.timer);
+		carrousel.timer=window.setInterval("carrousel.next()",2000);
+	},
 }
 $(function()
 {
