@@ -27,7 +27,7 @@
 #slide1
 {
     
-    background-image: url('../../walls/wall1.jpg');
+    background-image: url('../walls/wall1.jpg');
 
 }
 .slide
@@ -37,33 +37,38 @@
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+<<<<<<< HEAD:alexclementi/en_cours_de_codage/menu_responsivet/fichiers_css/fichiers_dans_style/style_accueil.css
     position: absolute/*relative*/;
     background-color: rgba(26, 188, 156,1.0);
+=======
+    position: relative;
+    background-color: #CFD8DC;
+>>>>>>> origin/master:alexclementi/en_cours_de_codage/menu_responsivet/fichiers_css/style_accueil.css
     padding-top: 7%;
 }
 #slide2
 {
-    background-image: url('../../walls/wall2.jpg');
+    background-image: url('../walls/wall2.jpg');
 }
 #slide3
 {
-    background-image: url('../../walls/wall3.jpg');
+    background-image: url('../walls/wall3.jpg');
 }
 #slide4
 {
-    background-image: url('../../walls/wall4.jpg');
+    background-image: url('../walls/wall4.jpg');
 }
 #slide5
 {
-    background-image: url('../../walls/wall5.jpg');
+    background-image: url('../walls/wall5.jpg');
 }
 #slide6
 {
-    background-image: url('../../walls/wall6.jpg');
+    background-image: url('../walls/wall6.jpg');
 }
 #slide7
 {
-    background-image: url('../../walls/wall7.jpg');
+    background-image: url('../walls/wall7.jpg');
 }
 */
 /*
