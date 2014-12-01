@@ -1,0 +1,17 @@
+.carrousel {
+	margin:0;
+	padding:0;
+	height:75px;
+}
+.carrousel li {
+	float:left;
+	width:75px;
+	height:75px;
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#FFF;
+	font:3em/1.2 Georgia, "Times New Roman", Times, serif;
+	text-align:center;
+	background:#C00;
+}

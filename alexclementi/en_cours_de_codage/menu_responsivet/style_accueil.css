@@ -1,0 +1,114 @@
+.menu_respo {
+    position: fixed;
+    top: 0px;
+    z-index: 100000;
+    width: 100%;
+}
+
+#partie1
+{
+    height: 580px;
+    width: 100%;
+    background-image: url('wall1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-color: #212121;
+    padding-top: 7%;
+
+
+}
+
+/*
+#bkcolor
+{
+	background-color: rgba(255,255,0,0.3);
+	height: 1024px;
+	width: 100%;
+	position: absolute;
+	top: 86.5px;
+}
+*/
+
+#partie1 h1
+{
+    text-align: center;
+    padding-top: 150px;
+    width: 100%;
+    font-size: 90px;
+    text-shadow: 0px 0px 30px black;
+    margin: 0px;
+    font-family: Calibri;
+    color: white;
+}
+#recherche_simple
+{
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 60%;
+    height: 40px;
+    font-size: 30px;
+
+
+}
+#bloc_page
+{
+
+    margin: auto;
+    top: 86px;
+}
+
+#partie2 {
+    background-color: #00695C;
+
+}
+.h2_p2 {
+    background-color: #004D40;
+    margin: 0px;
+    color: #ffffff;
+    font-family: Calibri;
+    font-size: 40px;
+    text-align: center;
+    height: 125px;
+}
+.h2_p2 p {
+    margin: 0px;
+    position: relative;
+    padding-top: 35px;
+}
+.html5_logo {
+    width: 800px;
+    height: 468,75px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.schema1 {
+    margin: 40px;
+}
+#partie2, h2 h3
+{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px black;
+}
+
+/*
+Uniquement si menu est un tableau
+header, td
+{
+	display: inline-block;
+}*/
+
+footer {
+    padding-top: 20px;
+}
+
+body
+{
+    margin: 0px;
+    background-color: #004D40;
+}
