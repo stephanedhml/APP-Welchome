@@ -20,7 +20,7 @@ session_start();
     <div class="formulaire_r_avancee">
 	<form method="post" action="cible_recherche.php">
 <pre>       
-	   Quel type de logement souhaitez-vous ?<br/>
+	   <p>Quel type de logement souhaitez-vous ?</p><br/>
 <select name="type_logement">
     <option value="choix1">Studio</option>
     <option value="choix2">Appartement</option>
