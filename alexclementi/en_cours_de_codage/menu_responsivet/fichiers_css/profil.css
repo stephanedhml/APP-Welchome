@@ -1,40 +1,43 @@
-.body_profil {
-    background-color: #CFD8DC;
-}
-
 #bloc_page_profil
 {
     width: 1200px;
-    padding-top: 100px;
     margin: auto;
-    padding-left: 320px;
-    background-color: #CFD8DC;
+    padding-top: 100px;
+    padding-left: 260px;
+}
+
+.body_profil
+{
+    background-color: #F8F8F8;
+    color:#404040  ;
+}
+
+#bloc1
+{
+    width:227px;
 }
 
 #bloc_identité
 {
     width:225px;
+
 }
-
-
 
 #article2
 {
     border:1px black solid;
     display:block;
-    width: 213px;
-    padding-left: 5px;
-    background-color: #ECEFF1;
+    background-color: white;
+    padding-left: 10px;
 }
 
 #article3
 {
     border:1px black solid;
-    padding-left: 5px;
-    width: 213px;
-    background-color: #ECEFF1;
+    width:227px;
+    background-color: white;
+    padding-left: 10px;
 }
-
 
 #article1,.Norma.jpg img
 {
@@ -46,14 +49,15 @@
 {
     text-decoration: underline;
     font-size: 1.2em;
+    color:#FF6666;
 }
-
 
 #apropos
 {
     margin-left: 35px;
     text-decoration: underline;
     font-size: 1.2em;
+    color:#FF6666;
 }
 
 #bloc_commentaires
@@ -65,19 +69,24 @@
 
 #barre1
 {
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 #barre2
 {
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 
 #divcom1,#divcom2,#divcom3
 {
     width: 630px;
-    height: 70px;
+    height: 140px;
+}
+
+.Taylor.jpg img,#com1
+{
+    display:inline-block;
 }
 
 .Taylor.jpg,#com1
@@ -90,21 +99,16 @@
     display:inline-block;
 }
 
+#article2,#article3
+{
+    background-color:white;
+    width:224px;
+}
+
 .Henry.jpg,#com3
 {
     display:inline-block;
 }
-
-#divcom2
-{
-    margin-top: 50px;
-}
-
-#divcom3
-{
-    margin-top: 50px;
-}
-
 
 .Henry.jpg
 {
@@ -121,14 +125,11 @@
     float:left;
 }
 
-.Taylor.jpg,#com1:
+.nom
 {
-    display:inline-block;
-}
-
-.Carolin.jpg,#com2
-{
-    display:inline-block;
+    margin-left: 14px;
+    font-size: 1em;
+    margin-top: -3px;
 }
 
 #com1,#com2,#com3
@@ -144,17 +145,22 @@
     margin-left:300px;
 }
 
-
 #Identification,#commentaires
 {
     display:inline-block;
 }
 
+h2
+{
+    font-size: 1.2em;
+}
+
 #Presentation
 {
     font-size:0.8em;
-    margin: auto;
+    text-align:justify;
     line-height: 20px;
+    width:740px;
 }
 
 #Paris
@@ -170,6 +176,7 @@
     margin-left:50px;
     text-decoration: underline;
     font-size: 1.2em;
+    color:#FF6666;
 }
 
 #Salutations
@@ -188,4 +195,6 @@
 #Bonjour
 {
     font-size: 1.5em;
+    color:#EC1C43;
 }
+
