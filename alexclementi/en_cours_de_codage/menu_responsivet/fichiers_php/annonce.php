@@ -7,15 +7,16 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="Maison Provence.css" />
+        <link rel="stylesheet" href="../style.css"/>
+        <link rel="stylesheet" href="../fichiers_css/annonce.css"/>
 		<title>Maison Provence</title>
 	</head>
 	
 	<body>
+    <header>
+        <?php include("menus.php"); ?>
+    </header>
 		<div id="bloc_page">
-			<header>
-                <?php include("menus.php"); ?>
-			</header>
 			<section id="bloc0">
 				<div id="bloc1">
 					<div id="banniere_image">
