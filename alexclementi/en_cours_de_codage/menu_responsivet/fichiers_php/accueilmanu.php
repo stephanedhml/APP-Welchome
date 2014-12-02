@@ -1,5 +1,4 @@
 <!--Page d'accueil Welchome-->
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -121,6 +120,9 @@
 				</div>
 			</div>
 			
+			<!--<div id="partie3">
+				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
+			</div>-->
 			<footer>
 				<p>
 				<!--FOOTER-->

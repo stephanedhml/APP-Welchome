@@ -1,5 +1,4 @@
 <?php
-
 function derniere_annonce($nb_derniereannonce)
 {
 // Connexion à MySQL
