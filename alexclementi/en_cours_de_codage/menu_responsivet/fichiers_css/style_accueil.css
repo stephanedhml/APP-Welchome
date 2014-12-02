@@ -27,7 +27,7 @@
 #slide1
 {
     
-    background-image: url('../walls/wall1.jpg');
+    background-image: url('../walls/wall1cmp.jpg');
 
 }
 .slide
@@ -37,33 +37,33 @@
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: absolute;
+    position: relative;
     background-color: #CFD8DC;
     padding-top: 7%;
 }
 #slide2
 {
-    background-image: url('../walls/wall2.jpg');
+    background-image: url('../walls/wall2cmp.jpg');
 }
 #slide3
 {
-    background-image: url('../walls/wall3.jpg');
+    background-image: url('../walls/wall3cmp.jpg');
 }
 #slide4
 {
-    background-image: url('../walls/wall4.jpg');
+    background-image: url('../walls/wall4cmp.jpg');
 }
 #slide5
 {
-    background-image: url('../walls/wall5.jpg');
+    background-image: url('../walls/wall5cmp.jpg');
 }
 #slide6
 {
-    background-image: url('../walls/wall6.jpg');
+    background-image: url('../walls/wall6cmp.jpg');
 }
 #slide7
 {
-    background-image: url('../walls/wall7.jpg');
+    background-image: url('../walls/wall7cmp.jpg');
 }
 */
 /*
@@ -80,8 +80,9 @@
 #partie2
 
 {
+	display: inline-block;
+	top:1000px;
     background-color: rgba(236, 240, 241,1.0);
-
 }
 
 #partie1 h1

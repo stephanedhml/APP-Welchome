@@ -8,7 +8,7 @@ var carrousel=
 	nbCurrent:1,
 	elemCurrent : null,
 	elem : null,
-	//timer: null,
+	timer: null,
 	
 	init : function(elem)
 	{
@@ -41,7 +41,7 @@ var carrousel=
 	{
 		if(num==this.nbCurrent){return false;}
 		this.elemCurrent.fadeOut();
-		this.elem.find("#slide"+num).fadeIn();
+		this.elem.find("#slide"+num).delay(400).fadeIn();
 		this.elem.find(".navigation span").removeClass("active");
 		this.elem.find(".navigation span:eq("+(num-1)+")").addClass("active");
 		this.nbCurrent=num;
@@ -67,7 +67,7 @@ var carrousel=
 	play:function()
 	{
 		clearInterval(carrousel.timer);
-		carrousel.timer=window.setInterval("carrousel.next()",2000);
+		carrousel.timer=window.setInterval("carrousel.next()",10000);
 	},
 }
 $(function()
