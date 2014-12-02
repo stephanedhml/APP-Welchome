@@ -55,7 +55,7 @@
     }
     nav a#pull:after {
         content:"";
-        background: url('../menu_responsive/icone/nav-icon.png') no-repeat;
+        background: url('menu_responsive/icone/nav-icon.png') no-repeat;
         width: 30px;
         height: 30px;
         display: inline-block;
