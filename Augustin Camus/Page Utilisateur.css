@@ -1,0 +1,232 @@
+body
+{
+    background-color:grey;
+}
+
+#bloc_page
+{
+    width: 1200px;
+    margin: auto;
+}
+
+#bloc_identité
+{
+    width:225px;
+}
+
+
+
+#article2
+{
+    border:1px black solid;
+    display:block;
+    width: 213px;
+    padding-left: 5px;
+}
+
+#article3
+{
+    border:1px black solid;
+    padding-left: 5px;
+}
+
+
+#article1,.Norma.jpg img
+{
+    display:inline-block;
+    vertical-align: top;
+}
+
+#commentaires
+{
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+
+#apropos
+{
+    margin-left: 35px;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+#bloc_commentaires
+{
+    float:right;
+    margin-right: 300px;
+    margin-top:px;
+}
+
+#barre1
+{
+    margin-top: 70px;
+}
+
+#barre2
+{
+    margin-top: 60px;
+}
+
+
+#divcom1,#divcom2,#divcom3
+{
+    width: 630px;
+    height: 70px;
+}
+
+.Taylor.jpg,#com1
+{
+    display:inline-block;
+}
+
+.Carolin.jpg,#com2
+{
+    display:inline-block;
+}
+
+.Henry.jpg,#com3
+{
+    display:inline-block;
+}
+
+#divcom2
+{
+    margin-top: 50px;
+}
+
+#divcom3
+{
+    margin-top: 50px;
+}
+
+
+.Henry.jpg
+{
+    float:left;
+}
+
+.Taylor.jpg
+{
+    float:left;
+}
+
+.Carolin.jpg
+{
+    float:left;
+}
+
+.Taylor.jpg,#com1:
+{
+    display:inline-block;
+}
+
+.Carolin.jpg,#com2
+{
+    display:inline-block;
+}
+
+#com1,#com2,#com3
+{
+   
+    font-size:1.3em;
+    width: 500px;
+    float:right;
+}
+
+.homme.jpg img
+{
+    margin-left:300px;
+}
+
+
+#Identification,#commentaires
+{
+    display:inline-block;
+}
+
+
+h2
+{
+    font-size: 1.2em;
+}
+
+#Presentation
+{
+	font-size:0.8em;
+	margin: auto;
+	line-height: 20px;
+}
+
+#Paris
+{
+	font-size:0.7em;
+	margin-left:30px;
+	margin-top: -20px;
+}
+
+
+#Identification
+{
+    margin-left:50px;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+nav
+{
+    width: 1200px;
+    text-align:left;
+    background-color: rgba(24,24,24,0.8);
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    padding-left: 4px;
+    box-shadow: 4px 4px 4px #1c1a19;
+    margin-bottom: 10px;
+}
+
+nav ul
+{
+    text-align: center;
+    padding-left:0px;
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: white;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 2px solid #760001;
+}
+
+#Salutations
+{
+    display:block;
+    font-size:1.5em;
+}
+
+#article1
+{
+    margin-left:40px;
+    position: relative;
+    top:-15px;
+}
+
+#Bonjour
+{
+    font-size: 1.5em;
+}
+
