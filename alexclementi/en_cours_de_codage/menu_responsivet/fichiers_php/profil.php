@@ -16,8 +16,8 @@
     <?php include("menus.php"); ?>
 </header>
 
-<body>
-    <div id="bloc_page">
+<body class="body_profil">
+    <div id="bloc_page_profil">
     <div id="Salutations">
         <img id="Norma.jpg" src="Norma.jpg" alt="Norma.jpg"/>
         <div id="article1">
