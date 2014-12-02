@@ -17,6 +17,7 @@
 </header>
 
 <body>
+    <div id="bloc_page">
     <div id="Salutations">
         <img id="Norma.jpg" src="Norma.jpg" alt="Norma.jpg"/>
         <div id="article1">
@@ -61,5 +62,6 @@
         </div>
     </aside>
 
+    </div>
     </div>
 </body>
