@@ -154,7 +154,11 @@
     {
         height: 450px;
         width: 100%;
+<<<<<<< Updated upstream
         background-image: url('wall7.jpg');
+=======
+        background-image: url('wall2.jpg');
+>>>>>>> Stashed changes
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;

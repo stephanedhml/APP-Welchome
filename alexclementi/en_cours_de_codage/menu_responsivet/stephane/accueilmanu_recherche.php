@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="../fichiers_css/fichiers_dans_style/style_menu.css" />
+
 
 <header>
 
@@ -16,6 +16,8 @@
 		</ul>
 	</nav>
 </header>
+<body>
+
 <?
 	if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 {
@@ -64,3 +66,5 @@ else
 }
 
 ?>
+
+</body>

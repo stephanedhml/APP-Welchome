@@ -1,12 +1,14 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="../style.css" />
+	<link rel="stylesheet" href="moteur_de_recherche.css" />
+
 	<?php include("../menu_responsive/javascript/menu_responsive.js");
 	?>
 	<title>Recherche</title>
 </head>
 
-<body>
+
 
 <?php 	
 	// on se connecte à MySQL.
@@ -15,8 +17,10 @@
 <div class="header">
 	<?php include("menus.php"); ?>
 </div>
-	
-	<div>
+
+<div class="recherche">
+		
+
 		<?php
 			// on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 			if(isset($_POST['requete']) && $_POST['requete'] != NULL) 
@@ -46,7 +50,7 @@
 					while($donnees = $nbresult->fetch()) 
 					{
 		?>
-						<a href="fonction.php" id="<?php echo $donnees['id']; ?>"><?php echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?></a><br/>
+						<a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>"><?php echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?></a><br/>
 
 		<?php
 					} // fin du while
@@ -70,7 +74,6 @@
 		<?php
 			}
 		?>
-	</div>
-
-</body>
+	
+</div>
 
