@@ -26,10 +26,10 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -37,10 +37,10 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -48,10 +48,10 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -59,10 +59,10 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -70,10 +70,10 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -81,10 +81,10 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -92,12 +92,15 @@
 					<h1>
 						Vos vacances à portée de mains gratuitement
 					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
+						<!--<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
 							id="recherche_simple" />
-						</form>
+						</form>-->
 					<!-- <div id="bkcolor"></div> -->
 				</div>
+				<form action="moteur_de_recherche.php" method="Post">
+							<input type="text" name="requete" placeholder="Saisir une destination"
+							id="recherche_simple" />
 			</div>	
 			
 			<!--<div class="navigation">
