@@ -75,28 +75,6 @@
 						</form>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
-				
-				<div id="slide6" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
-				
-				<div id="slide7" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
 			</div>	
 			
 			<!--<div class="navigation">
