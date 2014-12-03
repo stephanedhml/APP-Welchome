@@ -43,7 +43,7 @@ include( 'config.php');
 							// on vérifie le nombre de résultats pour orthographier correctement. 
 							if($nb_resultats > 1) { echo ' résultats'; } else { echo ' résultat'; } 
 						?>
-					dans notre base de données. Voici les maisons que nous avons trouvées:<br/><br/>
+					dans notre base de données. Voici les logements que nous avons trouvées:<br/><br/>
 
 				    </p>
 
