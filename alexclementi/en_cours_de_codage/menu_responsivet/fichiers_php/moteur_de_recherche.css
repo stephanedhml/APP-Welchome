@@ -23,18 +23,18 @@ padding :10px;
  }
 
 
-a:link {
+.cadre a:link {
 	color: #2c3e50;
 	text-decoration:none; 
 
 }
-a:visited {color: #2c3e50;}
+.cadre a:visited {color: #2c3e50;}
 
-a:hover {
+.cadre a:hover {
 	color: #34495e;
 	text-decoration:underline;
 }
-a:active {color: #bdc3c7;}
+.cadre a:active {color: #bdc3c7;}
 
 
 
