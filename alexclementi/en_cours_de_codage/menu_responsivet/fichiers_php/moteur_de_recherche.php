@@ -5,6 +5,8 @@ include( 'config.php');
 
 <head>
 	<meta charset="utf-8" />
+    <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
+    <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 	<link rel="stylesheet" href="../style.css" />
 	<link rel="stylesheet" href="moteur_de_recherche.css" />
 
