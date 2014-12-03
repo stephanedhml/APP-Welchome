@@ -19,6 +19,8 @@
 </div>
 
 <div class="recherche">
+
+<p class="cadre">
 		
 
 		<?php
@@ -45,16 +47,25 @@
 							if($nb_resultats > 1) { echo ' résultats'; } else { echo ' résultat'; } 
 						?>
 					dans notre base de données. Voici les maisons que nous avons trouvées:<br/><br/>
+
+				</p>
+
+
+					
 		<?php
 					// on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
 					while($donnees = $nbresult->fetch()) 
+					
 					{
 		?>
-						<a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>"><?php echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?></a><br/>
-
+						<div class="cadre">
+						<a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
+					<?php echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
+						</div><br/>
 		<?php
 					} // fin du while
-		?>			<br/><br/>
+
+		?>		 <br/><br/>
 					<a href="../accueilmanu.php">Faire une nouvelle recherche</a></p>
 		<?php
 				} 
@@ -74,6 +85,6 @@
 		<?php
 			}
 		?>
-	
+	</p>
 </div>
 
