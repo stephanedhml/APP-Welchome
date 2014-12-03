@@ -68,7 +68,7 @@ include( 'config.php');
 					} // fin du while
 
 		?>		 <br/><br/>
-					<a href="../accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
+					<a href="../fichiers_php/accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
 		<?php
 				} 
 				// Afficher l'éventuelle erreur :
