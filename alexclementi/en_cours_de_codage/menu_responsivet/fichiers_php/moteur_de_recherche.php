@@ -1,3 +1,8 @@
+<?php
+// on se connecte à MySQL.
+include( 'config.php');
+?>
+
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="../style.css" />
@@ -8,22 +13,14 @@
 	<title>Recherche</title>
 </head>
 
-
-
-<?php 	
-	// on se connecte à MySQL.
-	include( 'config.php');
-?>
+<body>
 <div class="header">
 	<?php include("menus.php"); ?>
 </div>
 
 <div class="recherche">
 
-<body>
-		
-
-		<?php
+        <?php
 			// on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 			if(isset($_POST['requete']) && $_POST['requete'] != NULL) 
 			{
@@ -48,7 +45,7 @@
 						?>
 					dans notre base de données. Voici les maisons que nous avons trouvées:<br/><br/>
 
-				</p>
+				    </p>
 
 
 					
@@ -59,14 +56,19 @@
 					{
 		?>
 						<div class="cadre">
-						<a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
-					<?php echo '<p>' . $donnees['Localisation']. ' - ' . $donnees['Nombre de voyageurs']. ' voyageurs - ' . $donnees['Type de logement'] . " : <br/>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
-						</div><br/>
+                            <div class="#">
+                                <aside class="description"><a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
+					<?php echo '<p>' . $donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
+                                </aside></div>
+
+                            <img src="../walls/wall7cmp.jpg" class="photo">
+
+                            </div><br/>
 		<?php
 					} // fin du while
 
 		?>		 <br/><br/>
-					<a href="../accueilmanu.php">Faire une nouvelle recherche</a></p>
+					<a href="../accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
 		<?php
 				} 
 				// Afficher l'éventuelle erreur :

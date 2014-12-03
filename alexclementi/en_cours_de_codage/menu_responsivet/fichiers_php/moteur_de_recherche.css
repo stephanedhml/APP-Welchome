@@ -2,41 +2,68 @@ body
 
 {
 	background-color: rgb(248,248,248) ;
+    font-family: Calibri;
 
 }
 
 .recherche
 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 	padding-top: 50px;
 	background-color: rgb(248,248,248) ;
-	padding-left: 30px;
-	padding-right: 30px;
+    width: 920px;
 }
 
 .cadre
  {
- border-width:1px;
- border-style:inset;
- border-color:black;
-padding :10px;
+    border-width:1px;
+    border-style:inset;
+    border-color:black;
+    padding :10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 
  }
+.photo {
+    width: 315px;
+    height: 200px;
+}
 
-
-.cadre a:link {
+.description {
+    position: relative;
+    float: right;
+    width: 50%;
+    margin: 2%;
+}
+.recherche p {
+    margin-bottom: 0px;
+}
+.description a:link {
 	color: #2c3e50;
 	text-decoration:none; 
 
 }
-.cadre a:visited {color: #2c3e50;}
+.description a:visited {color: #2c3e50;}
 
-.cadre a:hover {
+.description a:hover {
 	color: #34495e;
 	text-decoration:underline;
 }
-.cadre a:active {color: #bdc3c7;}
+.description a:active {color: #bdc3c7;}
 
 .search_result {
     padding-top: 30px;
 }
 
+.nlle_r {
+    font-size: 14px;
+    color: #666;
+    list-style: none;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    text-decoration: none;
+    padding-left: 10px;
+}
