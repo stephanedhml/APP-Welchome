@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
+    <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <script type="text/javascript" src="../carrousel/jquery.js"></script>
     <script type="text/javascript" src="../carrousel/carrousel.js"></script>
     <?php session_start(); ?>

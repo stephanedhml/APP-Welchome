@@ -1,5 +1,6 @@
 <!--Différences d'affichage du menu en fonction de l'état connecté ou non-->
-
+<link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
+<link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 <?php
 	include('config.php');
 	//Si lutilisateur est connecté, on lui donne un lien pour modifier ses informations, pour voir ses messages et un pour se deconnecter

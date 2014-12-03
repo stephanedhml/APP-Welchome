@@ -8,6 +8,8 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="../style.css" />
+        <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
+        <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<title>Inscription</title>
 	</head>
