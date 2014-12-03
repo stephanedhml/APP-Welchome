@@ -36,5 +36,7 @@ padding :10px;
 }
 .cadre a:active {color: #bdc3c7;}
 
-
+.search_result {
+    padding-top: 30px;
+}
 

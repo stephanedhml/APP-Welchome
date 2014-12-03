@@ -20,7 +20,7 @@
 
 <div class="recherche">
 
-<p class="cadre">
+<body>
 		
 
 		<?php
@@ -39,7 +39,7 @@
 				{
 					// maintenant, on va afficher les résultats 
 		?>
-					<h3>Résultats de votre recherche.</h3>
+					<img src="../images_diverses/search_result.png" class="search_result">
 					<p>
 					Nous avons trouvé 
 						<?php echo $nb_resultats; 
@@ -86,5 +86,5 @@
 			}
 		?>
 	</p>
-</div>
+</body>
 
