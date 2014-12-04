@@ -1,0 +1,200 @@
+#bloc_page_profil
+{
+    width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+    padding-left: 260px;
+}
+
+.body_profil
+{
+    background-color: #F8F8F8;
+    color:#404040  ;
+}
+
+#bloc1
+{
+    width:227px;
+}
+
+#bloc_identité
+{
+    width:225px;
+
+}
+
+#article2
+{
+    border:1px black solid;
+    display:block;
+    background-color: white;
+    padding-left: 10px;
+}
+
+#article3
+{
+    border:1px black solid;
+    width:227px;
+    background-color: white;
+    padding-left: 10px;
+}
+
+#article1,.Norma.jpg img
+{
+    display:inline-block;
+    vertical-align: top;
+}
+
+#commentaires
+{
+    text-decoration: underline;
+    font-size: 1.2em;
+    color:#FF6666;
+}
+
+#apropos
+{
+    margin-left: 35px;
+    text-decoration: underline;
+    font-size: 1.2em;
+    color:#FF6666;
+}
+
+#bloc_commentaires
+{
+    float:right;
+    margin-right: 300px;
+    margin-top:px;
+}
+
+#barre1
+{
+    margin-top: 10px;
+}
+
+#barre2
+{
+    margin-top: 10px;
+}
+
+
+#divcom1,#divcom2,#divcom3
+{
+    width: 630px;
+    height: 140px;
+}
+
+.Taylor.jpg img,#com1
+{
+    display:inline-block;
+}
+
+.Taylor.jpg,#com1
+{
+    display:inline-block;
+}
+
+.Carolin.jpg,#com2
+{
+    display:inline-block;
+}
+
+#article2,#article3
+{
+    background-color:white;
+    width:224px;
+}
+
+.Henry.jpg,#com3
+{
+    display:inline-block;
+}
+
+.Henry.jpg
+{
+    float:left;
+}
+
+.Taylor.jpg
+{
+    float:left;
+}
+
+.Carolin.jpg
+{
+    float:left;
+}
+
+.nom
+{
+    margin-left: 14px;
+    font-size: 1em;
+    margin-top: -3px;
+}
+
+#com1,#com2,#com3
+{
+
+    font-size:1.3em;
+    width: 500px;
+    float:right;
+}
+
+.homme.jpg img
+{
+    margin-left:300px;
+}
+
+#Identification,#commentaires
+{
+    display:inline-block;
+}
+
+h2
+{
+    font-size: 1.2em;
+}
+
+#Presentation
+{
+    font-size:0.8em;
+    text-align:justify;
+    line-height: 20px;
+    width:740px;
+}
+
+#Paris
+{
+    font-size:0.7em;
+    margin-left:30px;
+    margin-top: -20px;
+}
+
+
+#Identification
+{
+    margin-left:50px;
+    text-decoration: underline;
+    font-size: 1.2em;
+    color:#FF6666;
+}
+
+#Salutations
+{
+    display:block;
+    font-size:1.5em;
+}
+
+#article1
+{
+    margin-left:40px;
+    position: relative;
+    top:-15px;
+}
+
+#Bonjour
+{
+    font-size: 1.5em;
+    color:#EC1C43;
+}
+

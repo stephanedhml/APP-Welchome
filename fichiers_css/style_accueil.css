@@ -1,0 +1,240 @@
+/* Utile si boutons au carroussel
+.navigation
+{
+	position:absolute;
+	bottom:300px;
+	right:5px;
+}
+.navigation span
+{
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigation span:hover,.navigation span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
+}*/
+
+.menu_respo {
+    position: fixed;
+    top: 0px;
+    z-index: 100000;
+    width: 100%;
+}
+
+#slide1
+{
+    
+    background-image: url('../walls/wall7cmp.jpg');
+
+}
+.slide
+{
+	height: 580px;
+    width: 100%;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #CFD8DC;
+    padding-top: 7%;
+}
+#slide2
+{
+    background-image: url('../walls/wall2cmp.jpg');
+}
+#slide3
+{
+    background-image: url('../walls/wall3cmp.jpg');
+}
+#slide4
+{
+    background-image: url('../walls/wall4cmp.jpg');
+}
+#slide5
+{
+    background-image: url('../walls/wall5cmp.jpg');
+}
+
+*/
+
+/*
+#bkcolor
+{
+	background-color: rgba(255,255,0,0.3);
+	height: 1024px;
+	width: 100%;
+	position: absolute;
+	top: 86.5px;
+}
+*/
+
+#partie2
+
+{
+	display: inline-block;
+	top:1000px;
+    background-color: rgba(236, 240, 241,1.0);
+}
+
+#partie1 h1
+{
+    text-align: center;
+    padding-top: 150px;
+    width: 100%;
+    font-size: 90px;
+    text-shadow: 0px 0px 30px black;
+    margin: 0px;
+    font-family: Calibri;
+    color: white;
+}
+#recherche_simple
+{
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 60%;
+    height: 40px;
+    font-size: 30px;
+}
+@media only screen and (max-width : 1720px) {
+    #recherche_simple {
+        margin-top: 7%;
+    }
+}
+#bloc_page
+{
+
+    margin: auto;
+    top: 86px;
+}
+
+#partie2 
+{
+    background-color: #CFD8DC;
+}
+.h2_p2 {
+    background-color: #455A64;
+    margin: 0px;
+    color: #ffffff;
+    font-family: Calibri;
+    font-size: 40px;
+    text-align: center;
+    height: 125px;
+}
+.h2_p2 p {
+    margin: 0px;
+    position: relative;
+    padding-top: 35px;
+}
+.html5_logo {
+    width: 800px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+#partie2, h2 h3
+{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px black;
+}
+
+@media only screen and (max-width : 900px) {
+    #partie1 h1{
+        text-align: center;
+        padding-top: 150px;
+        width: 100%;
+        font-size: 60px;
+        text-shadow: 0px 0px 30px black;
+        margin: 0px;
+        font-family: Calibri;
+        color: white;
+    }
+    #recherche_simple
+    {
+        position: relative;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 10%;
+        border-radius: 5px;
+        width: 60%;
+        height: 40px;
+        font-size: 30px;
+    }
+    .html5_logo {
+        width: 700px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width : 765px) {
+    #partie1 h1{
+        text-align: center;
+        padding-top: 150px;
+        width: 100%;
+        font-size: 40px;
+        text-shadow: 0px 0px 30px black;
+        margin: 0px;
+        font-family: Calibri;
+        color: white;
+    }
+    .h2_p2 {
+        margin: 0px;
+        color: #ffffff;
+        font-family: Calibri;
+        font-size: 25px;
+        text-align: center;
+        height: 105px;
+    }
+ /*   #partie1
+    {
+        height: 450px;
+        width: 100%;
+        background-image: url('wall7.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: rgba(189, 195, 199,1.0);
+        padding-top: 7%;
+    }
+	*/
+    .html5_logo {
+        width: 500px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width : 765px) {
+    .html5_logo {
+        width: 300px;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+    .schema1 {
+        margin: 0px;
+    }
+}
+@media only screen and (max-width : 475px) {
+    .h2_p2 {
+        font-size: 20px;
+    }
+}
+footer {
+    padding-top: 20px;
+     text-align:center;
+}
+
+body
+{
+    margin: 0px;
+    background-color: #455A64;
+}
+
