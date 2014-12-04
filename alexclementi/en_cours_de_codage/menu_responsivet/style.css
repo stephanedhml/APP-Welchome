@@ -1,11 +1,10 @@
-@import "fichiers_css/style_menu.css";
+@import "menu_responsive/style_menu.css";
 @import "fichiers_css/responsive.css";
 @import "fichiers_css/style_accueil.css";
 @import "fichiers_css/style_connexion.css";
 @import "fichiers_css/style_sign_up.css";
 @import "fichiers_css/recherche_avancee.css";
 @import "fichiers_css/profil.css";
-
 .foot {
     text-align: center;
     margin-bottom: 20px;
