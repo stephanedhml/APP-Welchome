@@ -63,6 +63,19 @@
         right: 15px;
         top: 10px;
     }
+    .btn_FAQ {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .btn_FORUM {
+        width: 100%;
+    }
+    .btn_ACCUEIL {
+        width: 100%;
+    }
+    .btn_SECONNECTER {
+        width: 100%;
+    }
 }
 
 

@@ -7,7 +7,8 @@
 	if(isset($_SESSION['username']))
 	{
 ?>
-		<li><a href="#">Notifications</a></li>
+        <li><a href="profil.php">Profil</a></li>
+        <li><a href="#">Notifications</a></li>
 		<li><a href="connexion.php">Se déconnecter</a></li>
 <?php
 	}
@@ -15,8 +16,9 @@
 	{
 	//Sinon, on lui donne un lien pour sinscrire et un autre pour se connecter
 ?>
-	<li><a href="sign_up.php">Inscription</a></li>
-	<li><a href="connexion.php">Se connecter</a></li>
+        <li><a href="#" class="btn_FAQ">FAQ</a></li>
+        <li><a href="sign_up.php">Inscription</a></li>
+	<li><a href="connexion.php" class="btn_SECONNECTER">Se connecter</a></li>
 <?php
 	}
 ?>

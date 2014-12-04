@@ -56,13 +56,27 @@ nav li:last-child a {
 
 
 nav a:hover, nav a:active {
-	background-color: #8c99a4;
-	color: rgba(210, 230, 220,1.0); 
+	color: rgb(191, 185, 193);
 	
 }
 .recherche_avancee {
-    width:150px;
+    width:200px;
 }
 nav a#pull {
 	display: none;
+}
+
+.btn_FAQ {
+    width: 75px;
+    padding-left: 10px;
+}
+
+.btn_FORUM {
+    width: 100px;
+}
+.btn_ACCUEIL {
+    width: 97px;
+}
+.btn_SECONNECTER {
+    width: 120px;
 }
