@@ -58,12 +58,12 @@ include( 'config.php');
 					{
 		?>
 						<div class="cadre">
-                            <div class="#">
-                                <aside class="description"><a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
-					<?php echo '<p>' .''.'<img width="125px" height="125px" align="left" src="'.$donnees ['Liendelaphoto'].'">'. $donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
-                                </aside></div>
+                            <?php echo '<img width="125px" height="125px" align="left" src="'.$donnees ['Liendelaphoto'].'" class="photo">' ?>
+                                <aside class="description"><a href="fonction.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
+					<?php echo '<p>' .''.$donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
+                                </aside>
 
-                            <img src="../walls/wall7cmp.jpg" class="photo">
+
 
                             </div><br/>
 		<?php
