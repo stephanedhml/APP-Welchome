@@ -15,13 +15,13 @@
 <body>
 
 <header>
-    <?php include("../menu_responsive/menus.php"); ?>
+    <?php include("menus.php"); ?>
 </header>
 
 <body class="body_profil">
     <div id="bloc_page_profil">
     <div id="Salutations">
-        <img id="Norma.jpg" src="Norma.jpg" alt="Norma.jpg"/>
+        <img id="Norma.jpg" src="../photos_utilisateurs/Norma.jpg" alt="Norma.jpg"/>
         <div id="article1">
             <h1 id="Bonjour"> Bonjour, je m'appelle Sylvie !</h1>
             <p id="Paris"> <strong>Paris</strong>, Hauts-de-Seine, France</p>
@@ -31,17 +31,17 @@
     <article id="bloc_commentaires">
         <h1 id="commentaires">Commentaires:</h1>
         <div id="divcom1">
-            <img id="Taylor.jpg" src="Taylor.jpg" alt="Taylor.jpg"/>
+            <img id="Taylor.jpg" src="../photos_utilisateurs/Taylor.jpg" alt="Taylor.jpg"/>
             <p id="com1">My friends and I really enjoyed our stay at this place. It has a great location. Everything is within a mile. The place was bigger than I expected and everything you need in the kitchen is there.</p>
         </div>
         <hr id="barre1"/>
         <div id="divcom2">
-            <img id="Carolin.jpg" src="Carolin.jpg" alt="Carolin.jpg"/>
+            <img id="Carolin.jpg" src="../photos_utilisateurs/Carolin.jpg" alt="Carolin.jpg"/>
             <p id="com2">Very good stay at Norma's. Very well kept and everything as advertised. Great location.</p>
         </div>
         <hr id="barre2"/>
         <div id="divcom3">
-            <img id="Henry.jpg" src="Henry.jpg" alt="Henry.jpg"/>
+            <img id="Henry.jpg" src="../photos_utilisateurs/Henry.jpg" alt="Henry.jpg"/>
             <p id="com3">The studio was as expected, no surprises. Norma was available for our queries when we needed her. Clean, pretty basic but very close to the beach. Fair value for money</p>
         </div>
     </article>

@@ -16,7 +16,7 @@
 	
 	<body>
 		<div class="header">
-            <?php include("../menu_responsive/menus.php"); ?>
+            <?php include("menus.php"); ?>
 		</div>
 		
 		<?php

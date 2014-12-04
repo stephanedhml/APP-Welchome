@@ -17,7 +17,7 @@
 	
 	<body>
     <header>
-        <?php include("../menu_responsive/menus.php"); ?>
+        <?php include("menus.php"); ?>
     </header>
 		<div id="bloc_page">
 			<section id="bloc0">

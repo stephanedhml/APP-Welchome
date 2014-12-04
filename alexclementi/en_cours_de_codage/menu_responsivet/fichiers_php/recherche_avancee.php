@@ -16,7 +16,7 @@ session_start();
 
     <body>
     <div class="header">
-        <?php include("../menu_responsive/menus.php"); ?>
+        <?php include("menus.php"); ?>
     </div>
 
     <div class="formulaire_r_avancee">

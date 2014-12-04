@@ -16,13 +16,13 @@
 	<body>
 	
 		<header>
-			<?php include("../menu_responsive/menus.php"); ?>
+			<?php include("menus.php"); ?>
 		</header>
 		
 		
 		<div id="bloc_page">
 		
-			<?php include("../carrousel/carrousel.php"); ?>
+			<?php include("carrousel.php"); ?>
 			
 			<div id="partie2">
 				<div class="h2_p2">

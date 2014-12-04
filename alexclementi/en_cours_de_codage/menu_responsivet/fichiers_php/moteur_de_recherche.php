@@ -8,7 +8,7 @@ include( 'config.php');
     <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 	<link rel="stylesheet" href="../style.css" />
-	<link rel="stylesheet" href="moteur_de_recherche.css" />
+	<link rel="stylesheet" href="../fichiers_css/moteur_de_recherche.css" />
 
 	<?php include("../menu_responsive/javascript/menu_responsive.js");
 	?>
@@ -17,7 +17,7 @@ include( 'config.php');
 
 <body>
 <div class="header">
-	<?php include("../menu_responsive/menus.php"); ?>
+	<?php include("menus.php"); ?>
 </div>
 
 <div class="recherche">
