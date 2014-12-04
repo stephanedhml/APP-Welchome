@@ -1,3 +1,4 @@
+/* Utile si boutons au carroussel
 .navigation
 {
 	position:absolute;
@@ -15,7 +16,7 @@
 	background: #fff;
 	color: #000;
 	cursor:pointer;
-}
+}*/
 
 .menu_respo {
     position: fixed;
@@ -58,6 +59,7 @@
     background-image: url('../walls/wall5cmp.jpg');
 }
 
+*/
 
 /*
 #bkcolor
@@ -76,7 +78,6 @@
 	display: inline-block;
 	top:1000px;
     background-color: rgba(236, 240, 241,1.0);
-    width: 100%;
 }
 
 #partie1 h1

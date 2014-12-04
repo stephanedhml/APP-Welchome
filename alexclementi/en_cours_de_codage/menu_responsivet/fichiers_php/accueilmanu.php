@@ -16,79 +16,14 @@
 	<body>
 	
 		<header>
-			<?php include("menus.php"); ?>
+			<?php include("../menu_responsive/menus.php"); ?>
 		</header>
 		
 		
 		<div id="bloc_page">
 		
-			<div id="partie1">
-				<div id="slide1" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
-				
-				<div id="slide2" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
-				
-				<div id="slide3" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
-				
-				<div id="slide4" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
-				
-				<div id="slide5" class="slide">
-					<h1>
-						Vos vacances à portée de mains gratuitement
-					</h1>
-						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
-							id="recherche_simple" />
-						</form>
-					<!-- <div id="bkcolor"></div> -->
-				</div>
-			</div>	
+			<?php include("../carrousel/carrousel.php"); ?>
 			
-			<!--<div class="navigation">
-				<span>1</span>
-				<span>2</span>
-				<span>3</span>
-				<span>4</span>
-				<span>5</span>
-				<span>6</span>
-				<span>7</span>
-			</div>
-			-->
 			<div id="partie2">
 				<div class="h2_p2">
 					<p>
@@ -103,6 +38,7 @@
 			<!--<div id="partie3">
 				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
 			</div>-->
+
 			<footer>
 				<p>
 				<!--FOOTER-->

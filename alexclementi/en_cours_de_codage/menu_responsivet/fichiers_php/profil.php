@@ -15,7 +15,7 @@
 <body>
 
 <header>
-    <?php include("menus.php"); ?>
+    <?php include("../menu_responsive/menus.php"); ?>
 </header>
 
 <body class="body_profil">
