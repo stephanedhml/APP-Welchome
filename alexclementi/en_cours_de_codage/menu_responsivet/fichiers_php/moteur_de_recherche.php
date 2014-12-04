@@ -29,7 +29,7 @@ include( 'config.php');
 
 				// on crée une variable $requete pour faciliter l'écriture de la requête SQL.
 				$requete = htmlspecialchars($_POST['requete']); 
-				$nbresult =$bdd->query("SELECT * FROM logement WHERE Localisation LIKE '%$requete%' ORDER BY id DESC");
+				$nbresult =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE Localisation LIKE '%$requete%' ORDER BY id DESC");
 				
 				// on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
 				$nb_resultats = $nbresult->rowCount(); 
@@ -60,7 +60,7 @@ include( 'config.php');
 						<div class="cadre">
                             <div class="#">
                                 <aside class="description"><a href="fonction.php?id=<? echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
-					<?php echo '<p>' . $donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
+					<?php echo '<p>' .''.'<img width="125px" height="125px" align="left" src="'.$donnees ['Liendelaphoto'].'">'. $donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
                                 </aside></div>
 
                             <img src="../walls/wall7cmp.jpg" class="photo">
