@@ -39,7 +39,7 @@ include( 'config.php');
 					// maintenant, on va afficher les résultats 
 		?>
 					<img src="../images_diverses/search_result.png" class="search_result">
-					<p>
+					<p class="search_result_txt">
 					Nous avons trouvé 
 						<?php echo $nb_resultats; 
 							// on vérifie le nombre de résultats pour orthographier correctement. 
@@ -58,14 +58,20 @@ include( 'config.php');
 					{
 		?>
 						<div class="cadre">
+                                <div class="left">
                             <?php echo '<img width="125px" height="125px" align="left" src="'.$donnees ['Liendelaphoto'].'" class="photo">' ?>
-                                <aside class="description"><a href="fonction.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" class="lien">
+                                </div>
+
+                                <div class="right">
+                                    <span>
+                                    <a href="fonction.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
 					<?php echo '<p>' .''.$donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
-                                </aside>
+                                    </span>
+                                </div>
 
 
 
-                            </div><br/>
+                        </div><br/>
 		<?php
 					} // fin du while
 
