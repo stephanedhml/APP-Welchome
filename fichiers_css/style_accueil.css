@@ -254,6 +254,8 @@ body
     margin: 0 auto;
     -webkit-transform-style: preserve-3d;
     -webkit-animation: Caroussel 50s infinite linear;
+    -moz-transform-style: preserve-3d;
+    -moz-animation: Caroussel 50s infinite linear;
 }
 
 .plan{
@@ -277,7 +279,11 @@ body
     to { -webkit-transform: translateX(0px); }
 }
 
+@-moz-keyframes Caroussel{
 
+    from { -moz-transform: translateX(-2100px); }
+    to { -moz-transform: translateX(0px); }
+}
 
 .p1{ -webkit-transform: translateX(0px)}
 .p2{ -webkit-transform: translateX(600px)}
@@ -287,3 +293,12 @@ body
 .p6{ -webkit-transform: translateX(3000px)}
 .p7{ -webkit-transform: translateX(3600px)}
 .p8{ -webkit-transform: translateX(4200px)}
+
+.p1{ -moz-transform: translateX(0px)}
+.p2{ -moz-transform: translateX(600px)}
+.p3{ -moz-transform: translateX(1200px)}
+.p4{ -moz-transform: translateX(1800px)}
+.p5{ -moz-transform: translateX(2400px)}
+.p6{ -moz-transform: translateX(3000px)}
+.p7{ -moz-transform: translateX(3600px)}
+.p8{ -moz-transform: translateX(4200px)}
