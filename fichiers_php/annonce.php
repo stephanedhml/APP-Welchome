@@ -16,6 +16,17 @@
 	</head>
 	
 	<body>
+	
+	<?php
+			
+			$annonce = htmlspecialchars($_GET['id'] );
+			$recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
+			$donnees = $recherche_id->fetch()
+
+
+
+	?>
+
     <header>
         <?php include("menus.php"); ?>
     </header>
@@ -23,6 +34,7 @@
 			<section id="bloc0">
 				<div id="bloc1">
 					<div id="banniere_image">
+						<?php echo '<img  align="left" src="'.$donnees ['Liendelaphoto'].'" class="photo">' ?>
 			                <div id="banniere_description">
 			                    Villa Santa Clara, Provence
 			                    <a href="#" class="bouton_rouge">Plus de photos <img src="flecheblanchedroite.png" alt="" /></a>
@@ -30,7 +42,10 @@
 					</div>
 				    
 				    <aside id="description1">
-				    	La villa Santa Clara dispose de 3 chambres climatisées, toutes avec lit king size et leur salle de bains privative.<br/> Le grand séjour et salle à manger sont largement ouverts sur la piscine.<br/> A l’extérieur, un confortable gazebo régulièrement ventilé avec ses ouvertures à l’antillaise, est l’espace idéal pour tous les moments de la journée à l’ombre, face à la piscine et en profitant de la vue mer.<br/> L’entrée de la villa est privative et offre un très large parking. La Villa Santa Clara est idéalement située à 10 minutes à pied des plus belles plages de l’ile dont celle de Longue Island et toujours très proches des très nombreuses autres plages.<br/> La Villa Santa Clara se trouve à 10 minutes en voiture des très nombreux restaurants tous plus différents les uns que les autres, des casinos et des boites de nuits de la partie hollandaise.
+				    	 <?php echo $donnees['Description'];?> 
+
+				    	
+				    	
 				 	</aside>
 				</div>
 

@@ -1,3 +1,9 @@
+body
+{
+
+background-color: rgb(248,248,248) ;
+}
+
 #bloc_page
 {
     width: 1200px;
@@ -49,20 +55,25 @@
 
 }
 
+
+
 #bloc2
 {
     margin-top: 0px;
     width: 1200px;
-    border: 1px black solid;
+    
     border-radius: 5px;
     padding-bottom: 10px;
+      background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }
 
 #description1
 {
 
     line-height:18px;
-    border: 1px black solid;
+   
     border-radius: 5px;
     text-align: justify;
     margin-top: 10px;
@@ -73,6 +84,9 @@
     padding: 10px;
     color: black;
     font-size: 0.9em;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+    background-color: white;
+
 }
 
 #banniere_image,#description1
@@ -83,7 +97,7 @@
 #banniere_image
 {
     position: relative;
-    background: url('villa7.jpg');
+    background: url('../Augustin Camus/Villa7.jpg');
     margin-top: 10px;
     margin-bottom: 10px;
     height: 350px;
@@ -103,6 +117,8 @@
     background-color: rgba(24,24,24,0.8);
     color: white;
     font-size: 0.8em;
+    
+
 }
 
 .bouton_rouge

@@ -17,7 +17,7 @@ include( 'config.php');
 
 <body>
 <div class="header">
-	<?php include("menus.php"); ?>
+	<?php include("menus.php"); ?> 
 </div>
 
 <div class="recherche">
@@ -64,7 +64,7 @@ include( 'config.php');
 
                                 <div class="right">
                                     <span>
-                                    <a href="fonction.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
+                                    <a href="annonce.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
 					<?php echo '<p>' .''.$donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
