@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall2.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wall/wall8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/accueilmanu.php" afterPath="$PROJECT_DIR$/fichiers_php/accueilmanu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_accueil.css" afterPath="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -51,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style_accueil.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style_accueil.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4365" max-vertical-offset="5287">
-              <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.27784157" vertical-offset="3940" max-vertical-offset="5304">
+              <caret line="246" column="20" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -81,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accueilmanu.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="accueilmanu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7741348" vertical-offset="306" max-vertical-offset="1377">
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="306" max-vertical-offset="1377">
               <caret line="43" column="131" selection-start-line="43" selection-start-column="131" selection-end-line="43" selection-end-column="131" />
               <folding />
             </state>
@@ -111,8 +102,8 @@
       <list>
         <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
         <option value="$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
         <option value="$PROJECT_DIR$/fichiers_php/accueilmanu.php" />
+        <option value="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
       </list>
     </option>
   </component>
@@ -285,14 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1417739662465</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout des images carrousel">
+      <created>1417772551235</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1417772551235</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3303671" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -307,7 +305,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -332,7 +329,8 @@
     <MESSAGE value="Commit de fichiers qui devraient être ignorés..." />
     <MESSAGE value="Ajout d'un carrousel horizontal à la page d'accueil" />
     <MESSAGE value="Correction du bug d'affichage du carrousel sur Firefox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction du bug d'affichage du carrousel sur Firefox" />
+    <MESSAGE value="Ajout des images carrousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des images carrousel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -473,18 +471,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4365" max-vertical-offset="5287">
-          <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="306" max-vertical-offset="1377">
+          <caret line="43" column="131" selection-start-line="43" selection-start-column="131" selection-end-line="43" selection-end-column="131" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7741348" vertical-offset="306" max-vertical-offset="1377">
-          <caret line="43" column="131" selection-start-line="43" selection-start-column="131" selection-end-line="43" selection-end-column="131" />
+        <state vertical-scroll-proportion="0.27784157" vertical-offset="3940" max-vertical-offset="5304">
+          <caret line="246" column="20" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
           <folding />
         </state>
       </provider>
