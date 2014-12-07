@@ -25,7 +25,7 @@ session_start();
 	<form method="post" action="cible_recherche.php">
 
         <p>Dans quelle ville souhaitez-vous aller ?</p>
-        <input type="text" name="ville "/>
+        <input type="text" name="ville" />
 	   <p>Quel type de logement souhaitez-vous ?<br/>
 <select name="type_logement">
     <option value="choix8">Peu importe</option>

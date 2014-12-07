@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
     <head>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="../style.css" />
+        <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
+
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <title>Résultat de la recherche avancée</title>
@@ -9,7 +12,9 @@
         
     </head>
     <body>
-     
+     <p>
+         Vous voulez un logement à <?php echo $_POST['ville'] ?>
+     </p>
 	  
 	  <p>
 	  Vous voulez comme type de logement <?php
@@ -97,12 +102,9 @@
 	   if ($_POST['case12']=='on')
 	   {echo "Internet sans fil";}
 	    
-	  ?> !</p>
+	  ?> </p>
 	  <p>
-	  Tu as rajouter le texte suivant:<br/>
-	  <?php 
-	  echo $_POST['message'];
-	  ?>
+
 	  <p/>
 	  
 	  <p>
