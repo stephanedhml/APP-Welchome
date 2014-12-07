@@ -3,7 +3,7 @@
 <?php
 try
 	{
-		$bdd = new PDO ('mysql:host=localhost;dbname=welchome', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		$bdd = new PDO ('mysql:host=localhost;dbname=welchome', 'root', 'toor', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	}
 catch(Exception $e)
 	{

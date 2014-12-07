@@ -2,7 +2,9 @@
 
 <?php
 	include("config.php");
-	session_start();
+    include("modeles.php");
+
+session_start();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -50,10 +52,8 @@
 					$password = $_POST["password"];
 					
 					//On récupère le mot de passe de l'utilisateur
-					$req = $bdd->prepare('SELECT password, id FROM users WHERE username = ?');
-					$req->execute(array($_POST['username']));
-					$dn = $req->fetch();
-					
+                    $dn=recuperer_psswd_user();
+
 					//Puisque le mdp de la BDD est haché, on hache le mdp fourni par l'utilisateur
 					$pass_hache=sha1($password);
 					

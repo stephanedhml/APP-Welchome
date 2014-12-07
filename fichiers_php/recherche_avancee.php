@@ -1,5 +1,7 @@
 <?php
 include("config.php");
+include("modeles.php");
+
 session_start();
 ?>
 
@@ -21,8 +23,12 @@ session_start();
 
     <div class="formulaire_r_avancee">
 	<form method="post" action="cible_recherche.php">
+
+        <p>Dans quelle ville souhaitez-vous aller ?</p>
+        <input type="text" name="ville "/>
 	   <p>Quel type de logement souhaitez-vous ?<br/>
 <select name="type_logement">
+    <option value="choix8">Peu importe</option>
     <option value="choix1">Studio</option>
     <option value="choix2">Appartement</option>
     <option value="choix3">Maison</option>
@@ -34,21 +40,13 @@ session_start();
 </select><br/>
 
         <p>Veuillez entrez les dates qui vous conviennent:<br/>
-          de <input type="date" name="d1" value="JJ/MM/AAAA"> à <input type="date" name="d2" value="JJ/MM/AAAA"></p>
+          de <input type="date" name="d1" placeholder="JJ/MM/AAAA"> à <input type="date" name="d2" placeholder="JJ/MM/AAAA"></p>
 
-<p>Sélectionnez le nombre de personnes qui vous accompagneront<br/>
-<select name="nombre">
-    <option value="choix1">1</option>
-    <option value="choix2">2</option>
-    <option value="choix3">3</option>
-    <option value="choix4">4</option>
-    <option value="choix4">5</option>
-    <option value="choix4">6</option>
-    <option value="choix4">7 ou plus</option>
-</select><br/></p>
+<p>Entrez la capacité d'accueil qui vous intéresse.<br/>
+<input type="number" name="nb_personne" value="Capacité d'accueil" min="0"></p>
 
 <p>Entrer la surface minimale du logement que vous souhaitez.<br/>
-<input type="number" name="surface_min" value="Surface minimale"></p>
+<input type="number" name="surface_min" value="Surface minimale" min="0"></p>
     
 <p>Avez-vous des préférences parmi les propositions suivantes ?<br/>
 <input type="checkbox" name="lieu1" id="case" /> <label for="case">Banlieue</label><br/>

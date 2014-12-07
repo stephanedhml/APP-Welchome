@@ -1,6 +1,6 @@
 <?php
 // on se connecte à MySQL.
-include( 'config.php');
+include('config.php');
 ?>
 
 <head>
@@ -17,7 +17,7 @@ include( 'config.php');
 
 <body>
 <div class="header">
-	<?php include("menus.php"); ?> 
+	<?php include("menus.php"); ?>
 </div>
 
 <div class="recherche">
@@ -28,8 +28,7 @@ include( 'config.php');
 			{
 
 				// on crée une variable $requete pour faciliter l'écriture de la requête SQL.
-				$requete = htmlspecialchars($_POST['requete']); 
-				$nbresult =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE Localisation LIKE '%$requete%' ORDER BY id DESC");
+				$nbresult =resultats_requete_simple();
 				
 				// on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
 				$nb_resultats = $nbresult->rowCount(); 
@@ -64,7 +63,7 @@ include( 'config.php');
 
                                 <div class="right">
                                     <span>
-                                    <a href="annonce.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
+                                    <a href="fonction.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
 					<?php echo '<p>' .''.$donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
@@ -76,7 +75,7 @@ include( 'config.php');
 					} // fin du while
 
 		?>		 <br/><br/>
-					<a href="../fichiers_php/accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
+					<a href="accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
 		<?php
 				} 
 				// Afficher l'éventuelle erreur :
@@ -96,5 +95,6 @@ include( 'config.php');
 			}
 		?>
 	</p>
+  </div>
 </body>
 

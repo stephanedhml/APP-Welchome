@@ -2,6 +2,7 @@
 
 <?php
 	include("config.php");
+    include("modeles.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,26 +33,16 @@
 						//On vérifie si l'email est valide
 						if(preg_match('#^(([a-z0-9!\#$%&\\\'*+/=?^_`{|}~-]+\.?)*[a-z0-9!\#$%&\\\'*+/=?^_`{|}~-]+)@(([a-z0-9-_]+\.?)*[a-z0-9-_]+)\.[a-z]{2,}$#i',$_POST['email']))
 						{
-							// Hachage du mot de passe
-							$pass_hache = sha1($_POST["password"]);
+
 				
 							//On vérifie si le pseudo n'existe pas déjà
-							$req = $bdd->prepare('SELECT id FROM users WHERE username=?');
-							$req->execute(array($_POST['username']));
-							$res = $req->fetch();
-									
+							$res=recuperer_username();
+
 							if(!$res)
 							{
 								//On insère les données saisies par l'utilisateur dans la BDD
-								$req = $bdd->prepare('INSERT INTO users(username,password,email,avatar) VALUES(:username, :password, :email, :avatar)');
-								$req->execute(array
-								(
-								'username' => $_POST["username"],
-								'password' => $pass_hache,
-								'email' => $_POST["email"],
-								'avatar' => $_POST["avatar"],
-								));
-											
+								$req =add_user_datas($pass_hache);
+
 								//On enregistre les infos dans la base de donnée
 								if($bdd->lastInsertId())
 								{
