@@ -17,22 +17,37 @@
      </p>
 	  
 	  <p>
-	  Vous voulez comme type de logement <?php
-      if ($_POST['choix1']==on)
-	  {echo "un studio";}
-	  if ($_POST['choix2']==on)
-	  {echo "un appartement";}
-	  if ($_POST['choix3']==on)
-	  {echo "une maison";}
-	  if ($_POST['choix4']==on)
-	  {echo "un pavillon";}
-	   if ($_POST['choix5']==on)
-	  {echo "un bungalow ou un gîte";}
-	   if ($_POST['choix6']==on)
-	  {echo "un bateau ou une péniche";}
-	   if ($_POST['choix7']==on)
-	  {echo "un camping car";}
-	  
+      <?php
+      if ($_POST['type1']=='off' && $_POST['type2']=='off' && $_POST['type3']=='off' && $_POST['type4']=='off' && $_POST['type5']=='off' && $_POST['type6']=='off' && $_POST['type7']=='off')
+      {
+          echo "Vous n'avez pas sélectionné de type de logement en particulier.";
+      }
+      else
+      {
+       echo   "Vous êtes interessé par:</br> " ;
+      if ($_POST['type1'] == 'on') {
+          echo "-un studio</br> ";
+      }
+	  if ($_POST['type2'] == 'on') {
+          echo "-un appartement</br> ";
+      }
+	  if ($_POST['type3'] == 'on') {
+          echo "-une maison</br> ";
+      }
+	  if ($_POST['type4'] == 'on') {
+          echo "-un pavillon</br> ";
+      }
+	   if ($_POST['type5'] == 'on') {
+           echo "-un bungalow ou un gîte</br> ";
+       }
+	   if ($_POST['type6'] == 'on') {
+           echo "-un bateau ou une péniche</br> ";
+       }
+	   if ($_POST['type7'] == 'on') {
+           echo "-un camping car</br> ";
+       }
+
+	  }
 	  ?>
 	
 	  <p>
@@ -41,66 +56,73 @@
 	  </p>
 	  
 	  <p>
-	    Il y aura <?php
-	    if ($_POST[nombre]=='nb1')
+	    Vous souhaitez une capacité d'accueil de <?php
+	    if ($_POST['nombre']==1)
 	  {echo "1 personne";}
-	  if ($_POST[nombre]=='nb2')
-	  {echo "2 personnes";}
-	  if ($_POST[nombre]=='nb3')
-	  {echo "3 personnes";}
-	  if ($_POST[nombre]=='nb4')
-	  {echo "4 personnes";}
-	  if ($_POST[nombre]=='nb5')
-	  {echo "5 personnes";}
-	  if ($_POST[nombre]=='nb6')
-	  {echo "6 personnes";}
-	  if ($_POST[nombre]=='nb7')
-	  {echo "7 personnes ou plus";}
-	  ?> avec vous.
+	  if ($_POST['nombre']>1)
+	  {echo $_POST['nombre']. " personnes";}
+
+	  ?>
 	  </p>
 	  
 	  <p>
-	    Vous souhaitez une surface minimale de <?php echo $_POST['surface_min']?> m².
+          <?php if (isset($_POST['surface_min']))
+          {
+	    echo "Vous souhaitez une surface minimale de ". $_POST['surface_min']. "m²";
+          }
+          ?>
 	  </p>
 	  
 	  <p>
-	    Vous préférez être <?php
-	    if ($_POST['lieu1']=='on')
-	   {echo " en banlieue";}
-	   if ($_POST['lieu2']=='on')
-	   {echo " à la campagne";}
-	   if ($_POST['lieu3']=='on')
-	   {echo " à la montagne";}
-	   if ($_POST['lieu4']=='on')
-	   {echo " en ville";}
-	   ?>.
+        <?php
+          if ($_POST['lieu1']=='off' && $_POST['lieu2']=='off' && $_POST['lieu3']=='off' && $_POST['lieu4']=='off')
+          {
+          echo "Vous n'avez pas sélectionné de type de logement en particulier.";
+          }
+        else
+        {
+            echo "Vous voudriez voir les logements qui se situent:</br>" ;
+	    if ($_POST['lieu1'] == 'on') {
+            echo "-en banlieue</br> ";
+        }
+	   if ($_POST['lieu2'] == 'on') {
+           echo "-à la campagne</br> ";
+       }
+	   if ($_POST['lieu3'] == 'on') {
+           echo "-à la montagne</br> ";
+       }
+	   if ($_POST['lieu4'] == 'on') {
+           echo "-en ville</br> ";
+       }
+        }
+	   ?>
 	  </p>
 	  
-	  <p>Vous avez sélectionné les attributs suivants: <?php 
+	  <p>Vous avez sélectionné les attributs suivants:<br/> <?php
        if ($_POST['case1']=='on')
-	   {echo "Animaux acceptés";}
+	   {echo "-Animaux acceptés<br/>";}
 	   if ($_POST['case2']=='on')
-	   {echo "Climatisation";}
+	   {echo "-Climatisation</br>";}
 	   if ($_POST['case3']=='on')
-	   {echo " Chauffage";}
+	   {echo "-Chauffage</br>";}
 	   if ($_POST['case4']=='on')
-	   {echo " Machine à laver";}
+	   {echo "-Machine à laver</br>";}
 	   if ($_POST['case5']=='on')
-	   {echo "Sèche linge";}
+	   {echo "-Sèche linge</br>";}
 	   if ($_POST['case6']=='on')
-	   {echo "Cheminée";}
+	   {echo "-Cheminée</br>";}
 	   if ($_POST['case7']=='on')
-	   {echo "Télévision";}
+	   {echo "-Télévision</br>";}
 	   if ($_POST['case8']=='on')
-	   {echo "Parking";}
+	   {echo "-Parking</br>";}
 	   if ($_POST['case9']=='on')
-	   {echo "Piscine";}
+	   {echo "-Piscine</br>";}
 	   if ($_POST['case10']=='on')
-	   {echo "Jardin";}
+	   {echo "-Jardin</br>";}
 	   if ($_POST['case11']=='on')
-	   {echo "Balcon";}
+	   {echo "-Balcon</br>";}
 	   if ($_POST['case12']=='on')
-	   {echo "Internet sans fil";}
+	   {echo "-Internet</br>";}
 	    
 	  ?> </p>
 	  <p>

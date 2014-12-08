@@ -17,10 +17,10 @@ function recuperer_psswd_user()
 
 //Fonction de moteur_de_recherche.php
 
-function resultats_requete_simple()
+function resultats_requete_simple($requete)
 {
     global $bdd;
-    $requete = htmlspecialchars($_POST['requete']);
+
     $results =$bdd->query("SELECT * FROM logement WHERE Localisation LIKE '%$requete%' ORDER BY id DESC");
     return $results;
 }

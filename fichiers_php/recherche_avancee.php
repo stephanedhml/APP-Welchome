@@ -26,24 +26,21 @@ session_start();
 
         <p>Dans quelle ville souhaitez-vous aller ?</p>
         <input type="text" name="ville" />
-	   <p>Quel type de logement souhaitez-vous ?<br/>
-<select name="type_logement">
-    <option value="choix8">Peu importe</option>
-    <option value="choix1">Studio</option>
-    <option value="choix2">Appartement</option>
-    <option value="choix3">Maison</option>
-    <option value="choix4">Pavillon</option>
-    <option value="choix5">Bungalow/Gîte</option>
-    <option value="choix6">Bateau/Péniche</option>
-    <option value="choix7">Camping car</option></p>
-
-</select><br/>
+	   <p>Par quel(s) type(s) de logement êtes vous interessé?<br/>
+           <input type="checkbox" name="type1" id="case" /> <label for="case">un studio</label><br/>
+           <input type="checkbox" name="type2" id="case" /> <label for="case">un appartement</label><br/>
+           <input type="checkbox" name="type3" id="case" /> <label for="case">une maison</label><br/>
+           <input type="checkbox" name="type4" id="case" /> <label for="case">un pavillon</label><br/>
+           <input type="checkbox" name="type5" id="case" /> <label for="case">un bungalow ou un gîte</label><br/>
+           <input type="checkbox" name="type6" id="case" /> <label for="case">un bateau ou une péniche</label><br/>
+           <input type="checkbox" name="type7" id="case" /> <label for="case">un camping car</label><br/>
+<br/>
 
         <p>Veuillez entrez les dates qui vous conviennent:<br/>
           de <input type="date" name="d1" placeholder="JJ/MM/AAAA"> à <input type="date" name="d2" placeholder="JJ/MM/AAAA"></p>
 
 <p>Entrez la capacité d'accueil qui vous intéresse.<br/>
-<input type="number" name="nb_personne" value="Capacité d'accueil" min="0"></p>
+<input type="number" name="nombre" value="Capacité d'accueil" min="0"></p>
 
 <p>Entrer la surface minimale du logement que vous souhaitez.<br/>
 <input type="number" name="surface_min" value="Surface minimale" min="0"></p>
