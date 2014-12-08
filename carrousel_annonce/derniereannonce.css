@@ -1,26 +1,109 @@
-.photo1
-
-
-
-
-
-
-@media only screen and (max-width : 1720px)
+.titreannonce
 {
+	
+	text-decoration: underline; 
+	color: blue;
+	    width: 100%;
+        font-size: 30px;
+        margin: 0px;
+        font-family: Calibri;
 }
 
-@media only screen and (max-width : 900px) 
+.bloccarrouseltxt
 {
+	display: inline-bloc;
+	height: 400px;
+    width: 600px;
+	float:right;
+	text-align: left;
+    border-left: 5px ridge #CFD8DC;
+	padding-right: 35%;
 }
 
-@media only screen and (max-width : 765px) 
+
+.annoncetxt
 {
+        width: 100%;
+        font-size: 30px;
+        margin-left: 10px;
+        font-family: Calibri;
+        color: black;
+}
+.imageslide
+{
+	height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+	
+}
+.navigationsss
+{
+	position:absolute;
+	left:25%;
+}
+.navigationsss span
+{
+	background: #000;
+	color: #fff;
+	padding: 5px 5px;
+}
+.navigationsss span:hover,.navigationsss span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
 }
 
-@media only screen and (max-width : 765px)
+.navigations
 {
+	position:absolute;
+	left:25%;
+}
+.navigations span
+{
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigations span:hover,.navigations span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
 }
 
-@media only screen and (max-width : 475px) 
+.navigationss
 {
+	position:absolute;
+	left:25%;
+}
+.navigationss span
+{
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigationss span:hover,.navigationss span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
+}
+.slidesss
+{
+   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+}
+.slides
+{
+   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+}
+.slidess
+{
+   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
 }

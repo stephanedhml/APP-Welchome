@@ -32,7 +32,7 @@
 				</div>
 				<div class="schema1">
 
-                    <div id="wrapper" >
+                    <div class="wrapper" >
 
 
 

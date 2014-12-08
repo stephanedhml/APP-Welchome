@@ -1,3 +1,25 @@
+.annonce
+{   
+	font-size: 14px;
+    color: #000;
+    list-style: none;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.photo1
+{ width: 20%;}
+.photo2
+{width: 20%;}
+.photo3
+{width: 20%;}
+.photo4
+{width: 20%;}
+.photo5
+{width: 20%;}
+
 /* Utile si boutons au carroussel
 .navigation
 {
