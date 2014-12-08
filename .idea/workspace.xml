@@ -317,7 +317,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418003700512</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="tentative de correction du problème du moteur de recherche">
+      <created>1418003885952</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1418003885952</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
