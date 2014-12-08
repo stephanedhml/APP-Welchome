@@ -1,6 +1,7 @@
 <?php
 // on se connecte à MySQL.
 include('config.php');
+include('modeles.php');
 ?>
 
 <head>
@@ -28,8 +29,7 @@ include('config.php');
 			{
 
 				// on crée une variable $requete pour faciliter l'écriture de la requête SQL.
-                $requete = htmlspecialchars($_POST['requete']);
-                $nbresult =resultats_requete_simple($requete);
+                $nbresult =resultats_requete_simple();
 				
 				// on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
 				$nb_resultats = $nbresult->rowCount(); 
