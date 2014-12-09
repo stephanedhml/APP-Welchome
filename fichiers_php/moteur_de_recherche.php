@@ -29,7 +29,8 @@ include('modeles.php');
 			{
 
 				// on crée une variable $requete pour faciliter l'écriture de la requête SQL.
-                $nbresult =resultats_requete_simple();
+                $requete = htmlspecialchars($_POST['requete']);
+                $nbresult =resultats_requete_simple($requete);
 				
 				// on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
 				$nb_resultats = $nbresult->rowCount(); 

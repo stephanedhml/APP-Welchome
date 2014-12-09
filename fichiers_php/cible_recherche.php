@@ -1,3 +1,8 @@
+<?php
+// on se connecte à MySQL.
+include('config.php');
+include('modeles.php');
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -14,12 +19,13 @@
     </head>
     <body>
      <p>
+
          Vous voulez un logement à <?php echo $_POST['ville'] ?>
      </p>
 	  
 	  <p>
       <?php
-      if ($_POST['type1']=='off' && $_POST['type2']=='off' && $_POST['type3']=='off' && $_POST['type4']=='off' && $_POST['type5']=='off' && $_POST['type6']=='off' && $_POST['type7']=='off')
+      if ($_POST['type1'] !=='on' && $_POST['type2']!=='on' && $_POST['type3']!=='on' && $_POST['type4']!=='on' && $_POST['type5']!=='on' && $_POST['type6']!=='on' && $_POST['type7']!=='on')
       {
           echo "Vous n'avez pas sélectionné de type de logement en particulier.";
       }
@@ -76,9 +82,9 @@
 	  
 	  <p>
         <?php
-          if ($_POST['lieu1']=='off' && $_POST['lieu2']=='off' && $_POST['lieu3']=='off' && $_POST['lieu4']=='off')
+          if ($_POST['lieu1']!=='on' && $_POST['lieu2']!=='on' && $_POST['lieu3']!=='on' && $_POST['lieu4']!=='on')
           {
-          echo "Vous n'avez pas sélectionné de type de logement en particulier.";
+          echo "Vous n'avez pas sélectionné d'endroit particulier.";
           }
         else
         {
@@ -127,6 +133,72 @@
 	    
 	  ?> </p>
 	  <p>
+          <?php
+          // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
+
+          // on crée une variable $requete pour faciliter l'écriture de la requête SQL.
+          $nbresult =resultats_requete_avancée();
+
+          // on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
+          $nb_resultats = $nbresult->rowCount();
+
+          if($nb_resultats != 0) // si le nombre de résultats est supérieur à 0, on continue
+          {
+          // maintenant, on va afficher les résultats
+          ?>
+          <img src="../images_diverses/search_result.png" alt="img" class="search_result">
+     <p class="search_result_txt">
+         Nous avons trouvé
+         <?php echo $nb_resultats;
+         // on vérifie le nombre de résultats pour orthographier correctement.
+         if($nb_resultats > 1) { echo ' résultats'; } else { echo ' résultat'; }
+         ?>
+         dans notre base de données. Voici les logements que nous avons trouvées:<br/><br/>
+
+     </p>
+
+
+
+     <?php
+     // on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
+     while($donnees = $nbresult->fetch())
+
+     {
+         ?>
+         <div class="cadre">
+             <div class="left">
+                 <?php echo '<img width="125px" height="125px" align="left" src="'.$donnees ['Liendelaphoto'].'" class="photo">' ?>
+             </div>
+
+             <div class="right">
+                                    <span>
+                                    <a href="fonction.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
+                                        <?php echo '<p>' .''.$donnees['Localisation']. ' </br>' . $donnees['Nombre de voyageurs']. ' voyageurs </br>' . $donnees['Type de logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
+                                    </span>
+             </div>
+
+
+
+         </div><br/>
+     <?php
+     } // fin du while
+
+     ?>		 <br/><br/>
+     <a href="recherche_avancee.php" class="nlle_r">Faire une nouvelle recherche avancée</a></p>
+     <?php
+     }
+     // Afficher l'éventuelle erreur :
+     else
+     { //HTML
+         ?>
+         <h3>Pas de résultats</h3>
+         <p>Nous n'avons trouvé aucun résultat pour votre requête "<?php echo $_POST['requete']; ?>". <a href="accueilmanu.php">Réessayez</a> avec autre chose.</p>
+     <?php
+     }
+     $nbresult->closeCursor(); // on ferme mysql
+
+
+         ?>
 
 	  <p/>
 	  

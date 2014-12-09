@@ -17,11 +17,9 @@ function recuperer_psswd_user()
 
 //Fonction de moteur_de_recherche.php
 
-function resultats_requete_simple()
+function resultats_requete_simple($requete)
 {
     global $bdd;
-    $requete = htmlspecialchars($_POST['requete']);
-
     $results =$bdd->query("SELECT * FROM logement WHERE Localisation LIKE '%$requete%' ORDER BY id DESC");
     return $results;
 }
@@ -30,7 +28,7 @@ function resultats_requete_simple()
 
 function test_destruction($a)
 {
-    if($a==off)
+    if($a!=='on')
     {
         unset($a);
     }
@@ -39,46 +37,43 @@ function test_destruction($a)
 function resultats_requete_avancée()
 {
     global $bdd;
-    $lieu=$_POST['ville'];
-    $nb_pers=$_POST['nombre'];
+    $lieu=htmlspecialchars($_POST['ville']);
+    $capacité=htmlspecialchars($_POST['nombre']);
 
-    //On détruit les variables associéés aux cases non coché
-    test_destruction($_POST["choix1"]);
-    test_destruction($_POST["choix2"]);
-    test_destruction($_POST["choix3"]);
-    test_destruction($_POST["choix4"]);
-    test_destruction($_POST["choix5"]);
-    test_destruction($_POST["choix6"]);
-    test_destruction($_POST["choix7"]);
-    test_destruction($_POST["lieu1"]);
-    test_destruction($_POST["lieu2"]);
-    test_destruction($_POST["lieu3"]);
-    test_destruction($_POST["lieu4"]);
-    test_destruction($_POST["case1"]);
-    test_destruction($_POST["case2"]);
-    test_destruction($_POST["case3"]);
-    test_destruction($_POST["case4"]);
-    test_destruction($_POST["case5"]);
-    test_destruction($_POST["case6"]);
-    test_destruction($_POST["case7"]);
-    test_destruction($_POST["case8"]);
-    test_destruction($_POST["case9"]);
-    test_destruction($_POST["case10"]);
-    test_destruction($_POST["case11"]);
-    test_destruction($_POST["case12"]);
-    test_destruction($_POST["case13"]);
+
 
 
     $results =$bdd->query("SELECT * FROM logement WHERE Localisation LIKE '%$lieu%'
-                                                  AND Nombre de voyageurs>=$nb_pers
-                                                  AND Type de logement
-
-
+                                                  
 ORDER BY id DESC");
     //cherche comment afficher le contenu des cases cocher dans la requete
     
     return $results;
 }
+//On détruit les variables associéés aux cases non coché
+/*test_destruction($_POST["type1"]);
+test_destruction($_POST["type2"]);
+test_destruction($_POST["type3"]);
+test_destruction($_POST["type4"]);
+test_destruction($_POST["type5"]);
+test_destruction($_POST["type6"]);
+test_destruction($_POST["type7"]);
+test_destruction($_POST["lieu1"]);
+test_destruction($_POST["lieu2"]);
+test_destruction($_POST["lieu3"]);
+test_destruction($_POST["lieu4"]);
+test_destruction($_POST["case1"]);
+test_destruction($_POST["case2"]);
+test_destruction($_POST["case3"]);
+test_destruction($_POST["case4"]);
+test_destruction($_POST["case5"]);
+test_destruction($_POST["case6"]);
+test_destruction($_POST["case7"]);
+test_destruction($_POST["case8"]);
+test_destruction($_POST["case9"]);
+test_destruction($_POST["case10"]);
+test_destruction($_POST["case11"]);
+test_destruction($_POST["case12"]);*/
 
 
 //Fonctions de sign_up.php
