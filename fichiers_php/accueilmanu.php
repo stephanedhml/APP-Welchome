@@ -10,6 +10,10 @@
 		<script type="text/javascript" src="../carrousel/carrousel.js"></script>
         <?php session_start(); ?>
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
+		<link rel="stylesheet" href="../carrousel_annonce/derniereannonce.css" />
+<script type="text/javascript" src="../carrousel/carrousel1.js"></script>
+<script type="text/javascript" src="../carrousel/carrousel2.js"></script>
+<script type="text/javascript" src="../carrousel/carrousel3.js"></script>
 		<title>Accueil</title>
 	</head>
 	
@@ -61,9 +65,8 @@
                 </div>
 			</div>
 			
-			<!--<div id="partie3">
-				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
-			</div>-->
+
+				<?php// include '../carrousel_annonce/derniereannonce.php' ?>
 
 			<footer>
 				<p>

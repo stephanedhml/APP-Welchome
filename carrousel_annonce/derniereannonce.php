@@ -1,8 +1,3 @@
-<link rel="stylesheet" href="derniereannonce.css" />
-<script type="text/javascript" src="../carrousel/jquery.js"></script>
-<script type="text/javascript" src="../carrousel/carrousel1.js"></script>
-<script type="text/javascript" src="../carrousel/carrousel2.js"></script>
-<script type="text/javascript" src="../carrousel/carrousel3.js"></script>
 <?php
 function derniere_annonce($nb_derniereannonce)
 {
@@ -34,26 +29,27 @@ $nbcarrousel=0;
 
 while ( $row = $result->fetch() ) 
 {// Afficher les résultats
+	echo '<div class="bloccarrouseltxtimage">';
 	echo '<div class="bloccarrouseltxt">';
 	if (!empty($row['date']))
 	{
-		echo '<p><div class="titreannonce">Date:</div><span class="annoncetxt">' . $row['date'] . '' . "\n </span> </p>";
+		echo '<p><span class="titreannonce">Date:</span> <span class="annoncetxt">' . $row['date'] . '' . "\n </span> </p>";
 	}	
 	if (!empty($row['Localisation']))
 	{
-		echo   '<p><div class="titreannonce"> Localisation :</div><span class="annoncetxt">' . $row['Localisation'] . ''. "\n </span> </p>";
+		echo   '<p><span class="titreannonce"> Localisation :</span> <span class="annoncetxt">' . $row['Localisation'] . ''. "\n </span> </p>";
 	}
 	if (!empty($row['Nombre de voyageurs']))
 	{
-		echo '<p><div class="titreannonce"> Le nombre de voyageurs est de :</div><span class="annoncetxt">' . $row['Nombre de voyageurs'] . '' . "\n </span></p>";
+		echo '<p><span class="titreannonce"> Le nombre de voyageurs est de :</span> <span class="annoncetxt">' . $row['Nombre de voyageurs'] . '' . "\n </span></p>";
 	}
 	if (!empty($row['Type de logement']))
 	{
-		echo '<p><div class="titreannonce"> Type de logement :</div><span class="annoncetxt">' . $row['Type de logement'] . '' . "\n </span></p>";
+		echo '<p><span class="titreannonce"> Type de logement :</span><span class="annoncetxt">' . $row['Type de logement'] . '' . "\n </span></p>";
 	}
 	if (!empty($row['Description']))
 	{
-	echo '<p><div class="titreannonce"> Description :</div><span class="annoncetxt">' . $row['Description'] . '' . "\n </span></p>";
+	echo '<p><span class="titreannonce"> Description :</span><span class="annoncetxt">' . $row['Description'] . '' . "\n </span></p>";
 	}
 	$nbcarrousel=$nbcarrousel+1;
 	echo '</div>'	;
@@ -189,6 +185,7 @@ while ( $row = $result->fetch() )
 			$i=$i+1;
 	}echo '</div>';}
 echo '<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />';
+echo '</div>';
 }
 $result->closeCursor();
 }
