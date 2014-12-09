@@ -1,23 +1,23 @@
 .titreannonce
 {
-	
 	text-decoration: underline; 
 	color: blue;
-	    width: 100%;
-        font-size: 30px;
-        margin: 0px;
-        font-family: Calibri;
+	width: 100%;
+    font-size: 30px;
+    margin: 0px;
+    font-family: Calibri;
 }
 
 .bloccarrouseltxt
 {
 	display: inline-bloc;
-	height: 400px;
+	height: 600px;
     width: 600px;
 	float:right;
+	left:750px;
 	text-align: left;
     border-left: 5px ridge #CFD8DC;
-	padding-right: 35%;
+	padding-left: 5px;
 }
 
 
@@ -31,15 +31,15 @@
 }
 .imageslide
 {
-	height: 400px;
-    width: 600px;
+	height: 600px;
+    width: 800px;
     border-left: 5px ridge #CFD8DC;
 	
 }
 .navigationsss
 {
 	position:absolute;
-	left:25%;
+	left:720px;
 }
 .navigationsss span
 {
@@ -57,7 +57,7 @@
 .navigations
 {
 	position:absolute;
-	left:25%;
+	left:720px;
 }
 .navigations span
 {
@@ -75,7 +75,7 @@
 .navigationss
 {
 	position:absolute;
-	left:25%;
+	left:720px;
 }
 .navigationss span
 {
@@ -107,3 +107,6 @@
     width: 600px;
     border-left: 5px ridge #CFD8DC;
 }
+/*@media only screen and (max-width : 1720px) 
+{
+}*/
