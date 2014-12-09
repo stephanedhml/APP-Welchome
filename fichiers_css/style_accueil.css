@@ -255,7 +255,6 @@ footer {
     width: 100%;
     height: 400px;
     margin: 0 auto;
-    -webkit-transform-style: preserve-3d;
     -webkit-animation: Caroussel 50s infinite linear;
     -moz-transform-style: preserve-3d;
     -moz-animation: Caroussel 50s infinite linear;
