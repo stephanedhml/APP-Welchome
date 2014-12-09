@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .titreannonce
 {
 	text-decoration: underline; 
@@ -78,31 +79,34 @@
 	left:720px;
 }
 .navigationss span
+=======
+.photo1
+
+
+
+
+
+
+@media only screen and (max-width : 1720px)
+>>>>>>> Stashed changes
 {
-	background: #000;
-	color: #fff;
-	padding: 4px 4px;
 }
-.navigationss span:hover,.navigationss span.active
+
+@media only screen and (max-width : 900px) 
 {
-	background: #fff;
-	color: #000;
-	cursor:pointer;
 }
-.slidesss
+
+@media only screen and (max-width : 765px) 
 {
-   height: 400px;
-    width: 600px;
-    border-left: 5px ridge #CFD8DC;
 }
-.slides
+
+@media only screen and (max-width : 765px)
 {
-   height: 400px;
-    width: 600px;
-    border-left: 5px ridge #CFD8DC;
 }
-.slidess
+
+@media only screen and (max-width : 475px) 
 {
+<<<<<<< Updated upstream
    height: 400px;
     width: 600px;
     border-left: 5px ridge #CFD8DC;
@@ -110,3 +114,6 @@
 /*@media only screen and (max-width : 1720px) 
 {
 }*/
+=======
+}
+>>>>>>> Stashed changes
