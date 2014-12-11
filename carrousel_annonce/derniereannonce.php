@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-<link rel="stylesheet" href="derniereannonce.css" />
->>>>>>> origin/master
+
 <?php
 function derniere_annonce($nb_derniereannonce)
 {
@@ -26,25 +23,19 @@ $result=$bdd->query('SELECT * FROM logement ORDER BY id DESC LIMIT 0,'.$nb_derni
 if ( !$result) {
   $message  = 'Invalid query: ' . mysql_error() . "\n";
   $message .= 'Whole query: ' . $result;
-  die( $message );
-}
+  die( $message );}
+
+  $nbcarrousel=0;
 
 //prendre les lignes une à une
 while ( $row = $result->fetch() ) 
 {// Afficher les résultats
-<<<<<<< HEAD
 	echo '<div class="bloccarrouseltxtimage">';
 	echo '<div class="bloccarrouseltxt">';
 	if (!empty($row['date']))
 	{
 		echo '<p><span class="titreannonce">Date:</span> <span class="annoncetxt">' . $row['date'] . '' . "\n </span> </p>";
-=======
-	if (!empty($row['date']))
-	{
-<<<<<<< Updated upstream
-		echo '<p><div class="titreannonce">Date:</div><span class="annoncetxt">' . $row['date'] . '' . "\n </span> </p>";
->>>>>>> origin/master
-	}	
+	}
 	if (!empty($row['Localisation']))
 	{
 		echo   '<p><span class="titreannonce"> Localisation :</span> <span class="annoncetxt">' . $row['Localisation'] . ''. "\n </span> </p>";
@@ -59,71 +50,97 @@ while ( $row = $result->fetch() )
 	}
 	if (!empty($row['Description']))
 	{
-<<<<<<< HEAD
 	echo '<p><span class="titreannonce"> Description :</span><span class="annoncetxt">' . $row['Description'] . '' . "\n </span></p>";
-=======
-	echo '<p><div class="titreannonce"> Description :</div><span class="annoncetxt">' . $row['Description'] . '' . "\n </span></p>";
-=======
-		echo '<p class="h2_p2">  Date: ' . $row['date'] . '' . "\n </p>";
-	}	
-	if (!empty($row['Localisation']))
-	{
-		echo   '<p class="h2_p2"> Localisation : ' . $row['Localisation'] . ''. "\n </p>";
->>>>>>> origin/master
 	}
-	if (!empty($row['Nombre de voyageurs']))
-	{
-		echo '<p class="h2_p2"> Le nombre de voyageurs est de : ' . $row['Nombre de voyageurs'] . '' . "\n </p>";
-	}
-	if (!empty($row['Type de logement']))
-	{
-		echo '<p class="h2_p2"> Type de logement : ' . $row['Type de logement'] . '' . "\n </p>";
-	}
-	if (!empty($row['Description']))
-	{
-	echo '<p class="h2_p2"> Description : ' . $row['Description'] . '' . "\n </p>";
->>>>>>> Stashed changes
-	}
+	$nbcarrousel=$nbcarrousel+1;
+	echo '</div>'	;
+	
+	if ($nbcarrousel==1)
+{
 	$i=1;
+	echo '<div id="partie3">';
 	while ($i<=5)
 	{
-			if ($i==1 )
+		if ($i==1 )
 			{
 				if (!empty($row['photo1']))
 				{
-					echo '    <th class="photo1" scope="col"><img src="'.$row['photo1'].'"></th>';
+					echo '    <div id="slidesss1" class="slidesss"><img class="imageslide" src="'.$row['photo1'].'"></img></div>';
 				}
 			}
 			if ($i==2) 
 			{
 				if (!empty($row['photo2']))
 				{
-					echo '    <th class="photo2" scope="col"><img src="'.$row['photo2'].'"></th>';
+					echo '    <div id="slidesss2" class="slidesss"><img class="imageslide" src="'.$row['photo2'].'"></img></div>';
 				}
 			}
 			if ($i==3)
 			{
 				if (!empty($row['photo3']))
 				{
-				echo '    <th class="photo3" scope="col"><img src="'.$row['photo3'].'"></th>';
+				echo '    <div id="slidesss3" class="slidesss"><img class="imageslide" src="'.$row['photo3'].'"></img></div>';
 				}
 			}
 			if ($i==4) 
 			{
 				if (!empty($row['photo4']))
 				{
-				echo '    <th class="photo4" scope="col"><img src="'.$row['photo4'].'"></th>';
+				echo '    <div id="slidesss4" class="slidesss"><img class="imageslide" src="'.$row['photo4'].'"></img></div>';
 				}
 			}
 			if ($i==5) 
 			{
 				if (!empty($row['photo5']))
 				{
-				echo '    <th class="photo5" scope="col"><img src="'.$row['photo5'].'"></th>';
+				echo '    <div id="slidesss5" class="slidesss"><img class="imageslide" src="'.$row['photo5'].'"></img></div>';
 				}
 			}
 			$i=$i+1;
-<<<<<<< Updated upstream
+	}echo '</div>';}
+	
+	if ($nbcarrousel==2)
+{
+	$i=1;
+	echo '<div id="partie4">';
+	while ($i<=5)
+	{
+			if ($i==1 )
+			{
+				if (!empty($row['photo1']))
+				{
+					echo '    <div id="slides1" class="slides"><img class="imageslide" src="'.$row['photo1'].'"></img></div>';
+				}
+			}
+			if ($i==2) 
+			{
+				if (!empty($row['photo2']))
+				{
+					echo '    <div id="slides2" class="slides"><img class="imageslide" src="'.$row['photo2'].'"></img></div>';
+				}
+			}
+			if ($i==3)
+			{
+				if (!empty($row['photo3']))
+				{
+				echo '    <div id="slides3" class="slides"><img class="imageslide" src="'.$row['photo3'].'"></img></div>';
+				}
+			}
+			if ($i==4) 
+			{
+				if (!empty($row['photo4']))
+				{
+				echo '    <div id="slides4" class="slides"><img class="imageslide" src="'.$row['photo4'].'"></img></div>';
+				}
+			}
+			if ($i==5) 
+			{
+				if (!empty($row['photo5']))
+				{
+				echo ' <div id="slides5" class="slides"><img class="imageslide" src="'.$row['photo5'].'"></img></div>';   
+				}
+			}
+			$i=$i+1;
 	}echo '</div>';}
 		if ($nbcarrousel==3)
 {
@@ -169,14 +186,9 @@ while ( $row = $result->fetch() )
 			$i=$i+1;
 	}echo '</div>';}
 echo '<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />';
-<<<<<<< HEAD
+
 echo '</div>';
-=======
-=======
-	}	
-echo '<br />';
->>>>>>> Stashed changes
->>>>>>> origin/master
+
 }
 $result->closeCursor();
 }
