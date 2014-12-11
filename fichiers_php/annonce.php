@@ -1,5 +1,6 @@
 <?php
 	include("config.php");
+    include("modeles.php");
 	session_start();
 ?>
 
@@ -18,10 +19,8 @@
 	<body>
 	
 	<?php
-			
-			$annonce = htmlspecialchars($_GET['id'] );
-			$recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
-			$donnees = $recherche_id->fetch()
+
+			$donnees = recherche_annonce();
 
 
 
