@@ -69,7 +69,7 @@
 				<?php// include '../carrousel_annonce/derniereannonce.php' ?>
 
                 <?php
-                include("footer.php");
+                include("footer2.php");
                 ?>
 			
 		</div>

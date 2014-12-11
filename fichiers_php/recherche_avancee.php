@@ -72,7 +72,7 @@ session_start();
 </form>
         </div>
     <?php
-    include("footer.php");
+    include("footer2.php");
     ?>
     </body>
 </html>
