@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Entypo";
+    src: url("../fonts/Entypo%20@font-face/entypo.eot");
+    src: url("../fonts/Entypo%20@font-face/entypo.eot?#iefix") format("embedded-opentype"), url("../fonts/Entypo%20@font-face/entypo.woff") format("woff"), url("../fonts/Entypo%20@font-face/entypo.ttf") format("truetype"), url("../fonts/Entypo%20@font-face/entypo.svg#EntypoRegular") format("svg");
+}
+@font-face {
+    font-family: "Entypo-social";
+    src: url("../fonts/Entypo%20Social%20@font-face/entypo-social.eot");
+    src: url("../fonts/Entypo%20Social%20@font-face/entypo-social.eot?#iefix") format("embedded-opentype"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.woff") format("woff"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.ttf") format("truetype"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.svg#EntypoRegular") format("svg");
+}
+
+.footer1 {
+    position: relative;
+    font-size: 11pt;
+    font-family: 'Sinkin', 'PT Sans', Arial, sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px 0px #283744;
+}
+.footer1 li {
+    list-style-type:none;
+    line-height: 25px;
+}
+.icons {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.top {
+    position: relative;
+    height: 60px;
+    top: 10px;
+}
+.iconfooter {
+    position: absolute;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+}
+.top li {
+    font-family: Entypo;
+    font-size: 45px;
+    width: 100px;
+    display: inline-block;
+}
+#fb, #github, #twitter, #gplus, #lnkdin {
+    font-family: Entypo-social;
+}
+#team {
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    padding-top: 10px;
+}
+.left1 {
+    position: absolute;
+    top: 60px; left: 0;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+}
+.left1 ul {
+    border-right: 1px solid #999;
+    font-weight: bold;
+}
+.left2 {
+    position: absolute;
+    top: 60px; left: 25%;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+}
+.left2 ul {
+    border-right: 1px solid #999;
+    font-weight: bold;
+}
+.right1 {
+     position: absolute;
+     top: 60px; right: 25%;
+     height: 100%;
+     width: 25%;
+     text-align: center;
+     font-weight: bold;
+ }
+.right1 ul {
+    border-right: 1px solid #999;
+    font-weight: bold;
+}
+.right2 {
+    position: absolute;
+    top: 60px; right: 0;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+}
