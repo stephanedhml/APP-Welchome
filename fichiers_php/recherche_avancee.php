@@ -71,5 +71,8 @@ session_start();
 </pre>
 </form>
         </div>
+    <?php
+    include("footer.php");
+    ?>
     </body>
 </html>

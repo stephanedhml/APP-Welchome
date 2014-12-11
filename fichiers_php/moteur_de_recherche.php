@@ -98,5 +98,8 @@ include('modeles.php');
 		?>
 	</p>
   </div>
+<?php
+include("footer.php");
+?>
 </body>
 
