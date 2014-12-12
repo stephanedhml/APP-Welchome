@@ -7,19 +7,21 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-        <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
-        <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
-        <link rel="stylesheet" href="../style.css"/>
-        <link rel="stylesheet" href="../fichiers_css/annonce.css"/>        
-		<?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
+		<link rel="stylesheet" href="Maison Provence.css" />
 		<title>Maison Provence</title>
 	</head>
 	
 	<body>
+<<<<<<< Updated upstream
     <header>
         <?php include("menus.php"); ?>
     </header>
+=======
+>>>>>>> Stashed changes
 		<div id="bloc_page">
+			<header>
+                <?php include("menus.php"); ?>
+			</header>
 			<section id="bloc0">
 				<div id="bloc1">
 					<div id="banniere_image">

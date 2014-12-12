@@ -242,7 +242,7 @@ footer {
     height: 30px;
 }
 
-.wrapper{
+#wrapper{
     width:100%;
     overflow: hidden;
     -webkit-perspective: 1000;

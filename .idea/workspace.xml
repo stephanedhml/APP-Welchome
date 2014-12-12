@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/cible_recherche.php" afterPath="$PROJECT_DIR$/fichiers_php/cible_recherche.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/modeles.php" afterPath="$PROJECT_DIR$/fichiers_php/modeles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" afterPath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -340,13 +343,7 @@
       <option name="project" value="LOCAL" />
       <updated>1418004415639</updated>
     </task>
-    <task id="LOCAL-00014" summary="tentative de correction">
-      <created>1418130450479</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1418130450479</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -356,7 +353,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3303671" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25595695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -365,6 +361,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -400,8 +397,7 @@
     <MESSAGE value="avancement dans la recherche avancée" />
     <MESSAGE value="tentative de correction du problème du moteur de recherche" />
     <MESSAGE value="correction du probleme de recherche" />
-    <MESSAGE value="tentative de correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="tentative de correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction du probleme de recherche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

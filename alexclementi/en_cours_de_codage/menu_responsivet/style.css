@@ -4,7 +4,15 @@
 @import "fichiers_css/style_connexion.css";
 @import "fichiers_css/style_sign_up.css";
 @import "fichiers_css/recherche_avancee.css";
+<<<<<<< Updated upstream
 @import "fichiers_css/profil.css";
+<<<<<<< Updated upstream
+=======
+=======
+@import "fichiers_css/Recherche.css";
+>>>>>>> Stashed changes
+
+>>>>>>> Stashed changes
 .foot {
     text-align: center;
     margin-bottom: 20px;
