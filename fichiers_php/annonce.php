@@ -126,10 +126,8 @@
             </section>
         </div>
 
-        <footer>
-                <p>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                </p>
-            </footer>
+    <?php
+    include("footer2.php");
+    ?>
     </body>
 </html>
