@@ -14,7 +14,7 @@
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<title>Inscription</title>
 	</head>
-	
+
 	<body class="wood">
 		<div class="header">
             <?php include("menus.php"); ?>
@@ -35,7 +35,7 @@
 						if(preg_match('#^(([a-z0-9!\#$%&\\\'*+/=?^_`{|}~-]+\.?)*[a-z0-9!\#$%&\\\'*+/=?^_`{|}~-]+)@(([a-z0-9-_]+\.?)*[a-z0-9-_]+)\.[a-z]{2,}$#i',$_POST['email']))
 						{
 
-				
+
 							//On vérifie si le pseudo n'existe pas déjà
 							$res=recuperer_username();
 
@@ -95,9 +95,9 @@
 				//Le formulaire n'a pas été bien envoyé
 				$form=true;
 			}
-			
-			
-			
+
+
+
 		if($form)
 		{
 			if(isset($message))
@@ -112,13 +112,16 @@
             </div>
             <div class="contentd1">
                 <div class="signup_form1">
+                <form>
                     <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" /></br>
                     <br/><label for="password">Mot de passe<span class="small"> (6 caractères minimum)</span></label><br/><input type="password" name="password" /><br />
                     <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" /><br />
                     <br/><label for="email">Email</label><br/><input type="text" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
                     <br/><label for="avatar">Image perso<span class="small"> (facultatif)</span></label><br/><input type="text" name="avatar" value="<?php if(isset($_POST['avatar'])){echo htmlentities($_POST['avatar'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
+                    <br/><input type="submit" value="Envoyer" id="btn_envoyer" />
+
                 </div>
-				</form>
+
             </div>
             <div class="contentd2">
                 <div class="signup_form2">
@@ -126,9 +129,9 @@
                     <br/><label for="firstname">Prénom :</label><br/><input type="text" name="firstname" /><br />
                     <br/><label for="genre">Genre :</label><br/><span>M</span><input type="radio" name="genre" /><span>F</span><input type="radio" name="genre" /><br />
                     <br/><label for="tel">Tel :</label><br/><input type="tel" name="tel"/><br/>
-                    <br/><input type="submit" value="Envoyer" id="btn_envoyer" />
-                </div>
 
+                </div>
+                </form>
             </div>
 		<?php
 		}
