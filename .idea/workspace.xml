@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/sign_up.php" afterPath="$PROJECT_DIR$/fichiers_php/sign_up.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_accueil.css" afterPath="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_sign_up.css" afterPath="$PROJECT_DIR$/fichiers_css/style_sign_up.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/connexion.php" afterPath="$PROJECT_DIR$/fichiers_php/connexion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_connexion.css" afterPath="$PROJECT_DIR$/fichiers_css/style_connexion.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -47,7 +46,7 @@
       <file leaf-file-name="moteur_de_recherche.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1428">
               <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
@@ -57,36 +56,27 @@
       <file leaf-file-name="moteur_de_recherche.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-44.46154" vertical-offset="561" max-vertical-offset="1938">
+            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1938">
               <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modeles.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modeles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57751477" vertical-offset="1586" max-vertical-offset="2431">
+            <state vertical-scroll-proportion="-19.653847" vertical-offset="1563" max-vertical-offset="2431">
               <caret line="122" column="35" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
               <folding>
-                <marker date="1418407559445" expanded="true" signature="184:235" placeholder="SELECT * FRO..logement..." />
-                <marker date="1418407559445" expanded="true" signature="418:467" placeholder="SELECT passw..users..." />
-                <marker date="1418407559445" expanded="true" signature="692:787" placeholder="SELECT * FRO..logement..." />
-                <marker date="1418407559445" expanded="true" signature="927:1095" placeholder="INSERT INTO ..." />
-                <marker date="1418407559445" expanded="true" signature="1650:1774" placeholder="SELECT * FRO..logement..." />
-                <marker date="1418407559445" expanded="true" signature="3515:3552" placeholder="SELECT id FR..users..." />
+                <marker date="1418416119100" expanded="true" signature="184:235" placeholder="SELECT * FRO..logement..." />
+                <marker date="1418416119100" expanded="true" signature="418:467" placeholder="SELECT passw..users..." />
+                <marker date="1418416119100" expanded="true" signature="692:787" placeholder="SELECT * FRO..logement..." />
+                <marker date="1418416119100" expanded="true" signature="927:1095" placeholder="INSERT INTO ..." />
+                <marker date="1418416119100" expanded="true" signature="1650:1774" placeholder="SELECT * FRO..logement..." />
+                <marker date="1418416119100" expanded="true" signature="2919:3080" placeholder="INSERT INTO ..." />
+                <marker date="1418416119100" expanded="true" signature="3515:3552" placeholder="SELECT id FR..users..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.5" vertical-offset="182" max-vertical-offset="2482">
-              <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,8 +84,41 @@
       <file leaf-file-name="style_sign_up.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2006">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2023">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="100" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_connexion.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fichiers_css/style_connexion.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.76119405" vertical-offset="357" max-vertical-offset="2431">
+              <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.769231" vertical-offset="1684" max-vertical-offset="2516">
+              <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+              <folding>
+                <marker date="1418417859684" expanded="true" signature="1874:1911" placeholder="SELECT id FR..users..." />
+                <marker date="1418417859684" expanded="true" signature="2251:2346" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.307692" vertical-offset="1241" max-vertical-offset="2176">
+              <caret line="101" column="67" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -122,7 +145,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="990d060afaf1ebdca10d195486960f458fe5ec3b" />
+        <entry key="$PROJECT_DIR$" value="7ea7d7384a65e565f82d3c64df23f9cb702aad1f" />
       </map>
     </option>
   </component>
@@ -135,7 +158,6 @@
         <option value="$PROJECT_DIR$/fichiers_php/menus.php" />
         <option value="$PROJECT_DIR$/fichiers_php/annonce.php" />
         <option value="$PROJECT_DIR$/fichiers_php/cible_recherche.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
         <option value="$PROJECT_DIR$/fichiers_php/profil.php" />
         <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
         <option value="$PROJECT_DIR$/fichiers_php/accueilmanu.php" />
@@ -149,8 +171,10 @@
         <option value="$PROJECT_DIR$/fichiers_php/footer2.php" />
         <option value="$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css" />
         <option value="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_sign_up.css" />
         <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+        <option value="$PROJECT_DIR$/fichiers_css/style_sign_up.css" />
+        <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
+        <option value="$PROJECT_DIR$/fichiers_css/style_connexion.css" />
       </list>
     </option>
   </component>
@@ -203,6 +227,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="walls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,119 +418,6 @@
       <recent name="C:\wamp\www\APP-Welchome\fichiers_php" />
     </key>
   </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/modeles.php</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/sign_up.php</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
-  </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
@@ -508,15 +433,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -616,7 +541,25 @@
       <option name="project" value="LOCAL" />
       <updated>1418407986311</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Réparation du formulaire d'inscription">
+      <created>1418417205984</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1418417205984</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Formulaire d'inscription sans fioritures (mises en commentaires)">
+      <created>1418417804677</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1418417804677</updated>
+    </task>
+    <task id="LOCAL-00017" summary="mise en commentaire de fioritures et ajout d'une image de fond et bdd">
+      <created>1418417877379</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1418417877379</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -630,7 +573,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12526652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12633263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -657,6 +600,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -672,20 +616,16 @@
     <MESSAGE value="Correction des erreurs de syntaxe" />
     <MESSAGE value="Changement position bloc p dans code html" />
     <MESSAGE value="Améliorations visuelles (petites retouches)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Améliorations visuelles (petites retouches)" />
+    <MESSAGE value="Réparation du formulaire d'inscription" />
+    <MESSAGE value="Formulaire d'inscription sans fioritures (mises en commentaires)" />
+    <MESSAGE value="mise en commentaire de fioritures et ajout d'une image de fond et bdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en commentaire de fioritures et ajout d'une image de fond et bdd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5304">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1479">
@@ -913,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1297" max-vertical-offset="2142">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
@@ -996,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.46154" vertical-offset="561" max-vertical-offset="1938">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1938">
           <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
           <folding />
         </state>
@@ -1032,34 +964,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2006">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="-19.653847" vertical-offset="1563" max-vertical-offset="2431">
+          <caret line="122" column="35" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
+          <folding>
+            <marker date="1418416119100" expanded="true" signature="184:235" placeholder="SELECT * FRO..logement..." />
+            <marker date="1418416119100" expanded="true" signature="418:467" placeholder="SELECT passw..users..." />
+            <marker date="1418416119100" expanded="true" signature="692:787" placeholder="SELECT * FRO..logement..." />
+            <marker date="1418416119100" expanded="true" signature="927:1095" placeholder="INSERT INTO ..." />
+            <marker date="1418416119100" expanded="true" signature="1650:1774" placeholder="SELECT * FRO..logement..." />
+            <marker date="1418416119100" expanded="true" signature="2919:3080" placeholder="INSERT INTO ..." />
+            <marker date="1418416119100" expanded="true" signature="3515:3552" placeholder="SELECT id FR..users..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.5" vertical-offset="182" max-vertical-offset="2482">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        <state vertical-scroll-proportion="-9.769231" vertical-offset="1684" max-vertical-offset="2516">
+          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+          <folding>
+            <marker date="1418417859684" expanded="true" signature="1874:1911" placeholder="SELECT id FR..users..." />
+            <marker date="1418417859684" expanded="true" signature="2251:2346" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="1241" max-vertical-offset="2176">
+          <caret line="101" column="67" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57751477" vertical-offset="1586" max-vertical-offset="2431">
-          <caret line="122" column="35" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
-          <folding>
-            <marker date="1418407559445" expanded="true" signature="184:235" placeholder="SELECT * FRO..logement..." />
-            <marker date="1418407559445" expanded="true" signature="418:467" placeholder="SELECT passw..users..." />
-            <marker date="1418407559445" expanded="true" signature="692:787" placeholder="SELECT * FRO..logement..." />
-            <marker date="1418407559445" expanded="true" signature="927:1095" placeholder="INSERT INTO ..." />
-            <marker date="1418407559445" expanded="true" signature="1650:1774" placeholder="SELECT * FRO..logement..." />
-            <marker date="1418407559445" expanded="true" signature="3515:3552" placeholder="SELECT id FR..users..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2023">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="100" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_connexion.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76119405" vertical-offset="357" max-vertical-offset="2431">
+          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
