@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/connexion.php" afterPath="$PROJECT_DIR$/fichiers_php/connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_connexion.css" afterPath="$PROJECT_DIR$/fichiers_css/style_connexion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" afterPath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -33,6 +32,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="accueilmanu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="15.230769" vertical-offset="566" max-vertical-offset="1411">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="style_accueil.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,18 +55,18 @@
       <file leaf-file-name="moteur_de_recherche.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1428">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1428">
               <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="moteur_de_recherche.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="moteur_de_recherche.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1938">
-              <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.102163464" vertical-offset="0" max-vertical-offset="1955">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -84,41 +93,18 @@
       <file leaf-file-name="style_sign_up.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2023">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="100" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style_connexion.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style_connexion.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_css/style_connexion.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76119405" vertical-offset="357" max-vertical-offset="2431">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2431">
               <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.769231" vertical-offset="1684" max-vertical-offset="2516">
-              <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
-              <folding>
-                <marker date="1418417859684" expanded="true" signature="1874:1911" placeholder="SELECT id FR..users..." />
-                <marker date="1418417859684" expanded="true" signature="2251:2346" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692" vertical-offset="1241" max-vertical-offset="2176">
-              <caret line="101" column="67" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -159,7 +145,6 @@
         <option value="$PROJECT_DIR$/fichiers_php/annonce.php" />
         <option value="$PROJECT_DIR$/fichiers_php/cible_recherche.php" />
         <option value="$PROJECT_DIR$/fichiers_php/profil.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
         <option value="$PROJECT_DIR$/fichiers_php/accueilmanu.php" />
         <option value="$PROJECT_DIR$/fichiers_css/footer.css" />
         <option value="$PROJECT_DIR$/fichiers_css/footer2.css" />
@@ -171,10 +156,11 @@
         <option value="$PROJECT_DIR$/fichiers_php/footer2.php" />
         <option value="$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css" />
         <option value="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_sign_up.css" />
         <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
         <option value="$PROJECT_DIR$/fichiers_css/style_connexion.css" />
+        <option value="$PROJECT_DIR$/fichiers_css/style_sign_up.css" />
+        <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
       </list>
     </option>
   </component>
@@ -559,7 +545,19 @@
       <option name="project" value="LOCAL" />
       <updated>1418417877379</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Mise en place d'un style pour la page de connexion">
+      <created>1418419345466</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1418419345466</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Correction d'un problème css affectant les résultats de recherche">
+      <created>1418419591158</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1418419591158</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -619,7 +617,9 @@
     <MESSAGE value="Réparation du formulaire d'inscription" />
     <MESSAGE value="Formulaire d'inscription sans fioritures (mises en commentaires)" />
     <MESSAGE value="mise en commentaire de fioritures et ajout d'une image de fond et bdd" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en commentaire de fioritures et ajout d'une image de fond et bdd" />
+    <MESSAGE value="Mise en place d'un style pour la page de connexion" />
+    <MESSAGE value="Correction d'un problème css affectant les résultats de recherche" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction d'un problème css affectant les résultats de recherche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -861,14 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="1394">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/recherche_avancee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="1428">
@@ -940,22 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1938">
-          <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_css/footer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1955">
@@ -980,17 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.769231" vertical-offset="1684" max-vertical-offset="2516">
-          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
-          <folding>
-            <marker date="1418417859684" expanded="true" signature="1874:1911" placeholder="SELECT id FR..users..." />
-            <marker date="1418417859684" expanded="true" signature="2251:2346" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.307692" vertical-offset="1241" max-vertical-offset="2176">
@@ -999,18 +964,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2023">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="100" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38701922" vertical-offset="1582" max-vertical-offset="2516">
+          <caret line="112" column="36" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+          <folding>
+            <marker date="1418419555319" expanded="true" signature="-1:-1" placeholder="SELECT id FR..users..." />
+            <marker date="1418419555319" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_css/style_connexion.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76119405" vertical-offset="357" max-vertical-offset="2431">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2431">
           <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="15.230769" vertical-offset="566" max-vertical-offset="1411">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.102163464" vertical-offset="0" max-vertical-offset="1955">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>

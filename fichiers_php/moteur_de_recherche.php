@@ -3,6 +3,7 @@
 include('config.php');
 include('modeles.php');
 ?>
+<?php session_start(); ?>
 
 <head>
 	<meta charset="utf-8" />
