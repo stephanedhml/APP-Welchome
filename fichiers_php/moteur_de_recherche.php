@@ -78,7 +78,7 @@ include('modeles.php');
 		<?php
 					} // fin du while
 
-		?>		 <br/><br/>
+		?>		 <br/>
 					<a href="accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
 		<?php
 				} 
@@ -100,5 +100,8 @@ include('modeles.php');
 		?>
 	</p>
   </div>
+<?php
+include("footer.php");
+?>
 </body>
 

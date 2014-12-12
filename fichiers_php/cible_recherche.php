@@ -205,5 +205,8 @@ include('modeles.php');
 	  <p>
 	<a href="recherche_avancée.php">Cliquer ici</a> pour effectuer une autre recherche.
 	  </p>
+     <?php
+     include("footer.php");
+     ?>
     </body>
 </html>

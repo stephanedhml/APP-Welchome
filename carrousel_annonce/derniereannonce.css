@@ -1,9 +1,13 @@
-<<<<<<< Updated upstream
+
+.bloccarrouseltxtimage
+{
+	width: 1900px;
+}
 .titreannonce
 {
 	text-decoration: underline; 
-	color: blue;
-	width: 100%;
+	color: white;
+	width: 1070px;
     font-size: 30px;
     margin: 0px;
     font-family: Calibri;
@@ -13,18 +17,19 @@
 {
 	display: inline-bloc;
 	height: 600px;
-    width: 600px;
+    width: 1070px;
 	float:right;
-	left:750px;
 	text-align: left;
-    border-left: 5px ridge #CFD8DC;
+	word-wrap: break-word;
+	overflow:hidden;
+    border: 5px ridge #CFD8DC;
 	padding-left: 5px;
 }
 
 
 .annoncetxt
 {
-        width: 100%;
+        width: 50%;
         font-size: 30px;
         margin-left: 10px;
         font-family: Calibri;
@@ -34,19 +39,21 @@
 {
 	height: 600px;
     width: 800px;
-    border-left: 5px ridge #CFD8DC;
+    border: 5px ridge #CFD8DC;
 	
 }
 .navigationsss
 {
 	position:absolute;
-	left:720px;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
 }
 .navigationsss span
 {
 	background: #000;
 	color: #fff;
-	padding: 5px 5px;
+	padding: 4px 4px;
 }
 .navigationsss span:hover,.navigationsss span.active
 {
@@ -58,7 +65,9 @@
 .navigations
 {
 	position:absolute;
-	left:720px;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
 }
 .navigations span
 {
@@ -72,48 +81,110 @@
 	color: #000;
 	cursor:pointer;
 }
-
 .navigationss
 {
 	position:absolute;
-	left:720px;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
 }
 .navigationss span
-=======
-.photo1
-
-
-
-
-
-
-@media only screen and (max-width : 1720px)
->>>>>>> Stashed changes
 {
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigationss span:hover,.navigationss span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
 }
 
-@media only screen and (max-width : 900px) 
+.slidesss
 {
-}
-
-@media only screen and (max-width : 765px) 
-{
-}
-
-@media only screen and (max-width : 765px)
-{
-}
-
-@media only screen and (max-width : 475px) 
-{
-<<<<<<< Updated upstream
    height: 400px;
     width: 600px;
     border-left: 5px ridge #CFD8DC;
 }
-/*@media only screen and (max-width : 1720px) 
+.slides
 {
-}*/
-=======
+	   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
 }
->>>>>>> Stashed changes
+.slidess
+{
+   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+}
+/*@media only screen and (max-width : 1400px) 
+{
+.bloccarrouseltxtimage
+{
+<<<<<<< HEAD
+	width: 1400px;
+}
+.titreannonce
+{
+	text-decoration: underline; 
+	color: blue;
+	width: 870px;
+    font-size: 30px;
+    margin: 0px;
+    font-family: Calibri;
+}
+
+.bloccarrouseltxt
+{
+	display: inline-bloc;
+	height: 350px;
+    width: 870px;
+	float:right;
+	text-align: left;
+	word-wrap: break-word;
+	overflow:hidden;
+    border: 5px ridge #CFD8DC;
+	padding-left: 5px;
+}
+
+
+.annoncetxt
+{
+        width: 50%;
+        font-size: 30px;
+        margin-left: 10px;
+        font-family: Calibri;
+        color: black;
+}
+.imageslide
+{
+	height: 350px;
+    width: 500px;
+    border: 5px ridge #CFD8DC;
+	
+}
+.navigations
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigationss
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigationsss
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+}*/
+

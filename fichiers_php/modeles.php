@@ -1,6 +1,17 @@
 <?php
 require("config.php");
 
+//Fonction de annonce.php
+
+function recherche_annonce()
+{
+    global $bdd;
+    $annonce = htmlspecialchars($_GET['id'] );
+    $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
+    $donnees = $recherche_id->fetch();
+    return $donnees;
+}
+
 //Fonction de connexion.php
 
 function recuperer_psswd_user()
