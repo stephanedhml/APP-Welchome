@@ -122,7 +122,7 @@
                     <br/><input type="submit" value="Envoyer" id="btn_envoyer" />
                 </form>
                 </div>
-            </div>
+            <!-- </div>
             <div class="contentd1">
 
             </div>
@@ -131,7 +131,7 @@
 
                 </div>
 
-            </div>
+            </div> -->
 		<?php
 		}
 		?>
