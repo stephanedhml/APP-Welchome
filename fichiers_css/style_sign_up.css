@@ -83,7 +83,7 @@
     color: #fff;
 }
 
-.btn_envoyer {
+#btn_envoyer {
     background-color: #78909C;
     border: 1px solid transparent;
     border-bottom: 3px solid #37474F;
