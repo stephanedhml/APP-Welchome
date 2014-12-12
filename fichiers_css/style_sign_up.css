@@ -3,7 +3,7 @@
 }
 .cadre {
     position: relative;
-    width: 920px;
+    width: 300px;
     height: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -18,25 +18,12 @@
 .contentg {
     position: absolute;
     margin-bottom: 100px;
-    width: 30%;
+    width: 300px;
     background-color: #E0E0E0;
     height: 700px;
     box-shadow: inset 0 0 2px #1c1a19;
     border-radius: 4px 0 0 4px;
-}
-.contentd1 {
-    position: absolute;
-    margin-bottom: 100px;
-    padding-left: 30%;
-    width: 35%;
-}
-.contentd2 {
-    position: absolute;
-    margin-bottom: 100px;
-    right: 0;
-    width: 35%;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+
 }
 .signup_form1 {
     position: relative;
@@ -46,10 +33,23 @@
     line-height: 40px;
     font-size: 11pt;
     font-family: century, arial,sans-serif;
-    background-color: #F5F5F5;
     height: 580px;
-
-    padding-top: 120px;
+    padding-top: 50px;
+}
+/* .contentd1 {
+    position: absolute;
+    margin-bottom: 100px;
+    padding-left: 30%;
+    width: 35%;
+    background-color: #F5F5F5;
+}
+.contentd2 {
+    position: absolute;
+    margin-bottom: 100px;
+    right: 0;
+    width: 70%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 .signup_form2 {
     position: relative;
@@ -64,6 +64,7 @@
 
     padding-top: 100px;
 }
+*/
 
 .foot {
     position: relative;

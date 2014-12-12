@@ -112,9 +112,6 @@
             ?>
 			<div class="cadre">
             <div class="contentg">
-
-            </div>
-            <div class="contentd1">
                 <div class="signup_form1">
                 <form action="sign_up.php" method="post">
                     <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" /></br>
@@ -125,6 +122,8 @@
                     <br/><input type="submit" value="Envoyer" id="btn_envoyer" />
                 </form>
                 </div>
+            </div>
+            <div class="contentd1">
 
             </div>
             <div class="contentd2">
