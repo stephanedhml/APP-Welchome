@@ -20,7 +20,8 @@ include('modeles.php');
 <div class="header">
 	<?php include("menus.php"); ?>
 </div>
-
+<div class="superglobal">
+<div class="global">
 <div class="recherche">
 
         <?php
@@ -98,8 +99,10 @@ include('modeles.php');
 		?>
 	</p>
   </div>
+</div>
 <?php
-include("footer.php");
+include("footer2.php");
 ?>
+</div>
 </body>
 

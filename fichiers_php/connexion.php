@@ -22,7 +22,8 @@ session_start();
 		<div class="header">
             <?php include("menus.php"); ?>
 		</div>
-
+        <div class="superglobal">
+        <div class="global">
 
 		<?php
 			//Si l'utilisateur est connecté, on le déconnecte
@@ -113,8 +114,10 @@ session_start();
 				}
 			}
 					?>
+            </div>
         <?php
         include("footer.php");
         ?>
+        </div>
     </body>
 </html>

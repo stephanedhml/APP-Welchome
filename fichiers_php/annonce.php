@@ -30,6 +30,8 @@
     <header>
         <?php include("menus.php"); ?>
     </header>
+    <div class="superglobal">
+        <div class="global">
         <div id="bloc_page">
             <section id="bloc0">
                 <div id="bloc1">
@@ -125,9 +127,10 @@
             </div>
             </section>
         </div>
-
+        </div>
     <?php
     include("footer2.php");
     ?>
+    </div>
     </body>
 </html>

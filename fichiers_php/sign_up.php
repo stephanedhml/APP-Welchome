@@ -19,7 +19,8 @@
 		<div class="header">
             <?php include("menus.php"); ?>
 		</div>
-		
+        <div class="superglobal">
+        <div class="global">
 		<?php
 			//Vérification du bon envoi du formulaire
 			if(isset($_POST['username'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
@@ -120,10 +121,12 @@
 		<?php
 		}
 		?>
+        </div>
         <?php
         include("footer.php");
         ?>
-	</body>
+	    </div>
+    </body>
 </html>
 			
 			
