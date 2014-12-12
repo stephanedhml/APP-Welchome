@@ -111,13 +111,17 @@ function add_user_datas()
 global $bdd;
     // Hachage du mot de passe
 	$pass_hache = sha1($_POST["password"]);
-    $req = $bdd->prepare("INSERT INTO users(username,password,email,avatar) VALUES(:username, :password, :email, :avatar'");
+    $req = $bdd->prepare("INSERT INTO users(username,password,email,avatar,lastname,firstname,genre,tel) VALUES(:username, :password, :email, :avatar, :lastname, :firstname, :genre, :tel)");
     $req->execute(array
     (
         'username' => $_POST["username"],
         'password' => $pass_hache,
         'email' => $_POST["email"],
-        'avatar' => $_POST["avatar"]
+        'avatar' => $_POST["avatar"],
+		'lastname' => $_POST["lastname"],
+        'firstname' => $_POST["firstname"],
+        'genre' => $_POST["genre"],
+        'tel' => $_POST["tel"],
     ));
     return $req;
 }

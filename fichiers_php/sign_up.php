@@ -23,7 +23,7 @@
         <div class="global">
 		<?php
 			//Vérification du bon envoi du formulaire
-			if(isset($_POST['username'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
+			if(isset($_POST['username'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar'], $_POST['lastname'], $_POST['firstname'], $_POST['genre'], $_POST['tel']) and $_POST['username']!='')
 			{
 				//On vérifie que les deux mots de passe coïncident
 				if($_POST['password']==$_POST['passverif'])
@@ -114,6 +114,10 @@
 						<br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" /><br />
 						<br/><label for="email">Email</label><br/><input type="text" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
 						<br/><label for="avatar">Image perso<span class="small"> (facultatif)</span></label><br/><input type="text" name="avatar" value="<?php if(isset($_POST['avatar'])){echo htmlentities($_POST['avatar'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
+						<br/><label for="lastname">Nom :</label><br/><input type="text" name="lastname" /><br />
+						<br/><label for="firstname">Prénom :</label><br/><input type="text" name="firstname" /><br />
+						<br/><label for="genre">Genre :</label><br/><span>M</span><input type="radio" name="genre" /><span>F</span><input type="radio" name="genre" /><br />
+						<br/><label for="tel">Tel :</label><br/><input type="tel" name="tel"/><br/>
 						<br/><input type="submit" value="Envoyer" id="btn_envoyer" />
 					</div>
 				</form>
@@ -123,7 +127,7 @@
 		?>
         </div>
         <?php
-        include("footer.php");
+        include("footer2.php");
         ?>
 	    </div>
     </body>
