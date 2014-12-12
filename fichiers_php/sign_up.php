@@ -41,8 +41,8 @@
 
 							if(!$res)
 							{
-								//On insère les données saisies par l'utilisateur dans la BDD
-								$req =add_user_datas($pass_hache);
+								//On insère les données saisies par l'utilisateur dans la BD
+								$req =add_user_datas();
 
 								//On enregistre les infos dans la base de donnée
 								if($bdd->lastInsertId())
