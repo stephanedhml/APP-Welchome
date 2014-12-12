@@ -40,14 +40,14 @@ function resultats_requete_simple($requete)
 function inserer_logement()
 {
     global $bdd;
-    $req = $bdd->prepare("INSERT INTO `welchome`.`logement` (`id`, `Localisation`, `Nombre de voyageurs`, `Type de logement`, `Description`) VALUES (NULL, :localisation, :nb_personne, :logement, :description)");
+    $req = $bdd->prepare("INSERT INTO welchome.logement (id, Localisation, Nombre de voyageurs, Type de logement, Description) VALUES (NULL, :localisation, :nb_personne, :logement, :description)");
 
     $req->execute(array(
 
-        'localisation' => $_POST['localisation']
-        'nb_personne' => $_POST['nb_personne']
-        'logement' => $_POST['logement']
-        'description' => $_POST['description']
+        'localisation' => $_POST['localisation'],
+        'nb_personne' => $_POST['nb_personne'],
+        'logement' => $_POST['logement'],
+        'description' => $_POST['description'],
 
         ));
     return $req;
