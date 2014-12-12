@@ -110,7 +110,7 @@
             }
             // On affiche le formulaire
             ?>
-			<div class="cadre">
+			<div class="cadreinscrpt">
             <div class="contentg">
                 <div class="signup_form1">
                 <form action="sign_up.php" method="post">
