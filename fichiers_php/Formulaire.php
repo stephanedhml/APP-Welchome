@@ -12,7 +12,7 @@ include "config.php";
 
 <body>
 
-<form method="post" action="cible_postannonce.php">
+<form method="post" action=
 
 <!-- Localisation logement  -->
 <p>

@@ -35,7 +35,7 @@ function resultats_requete_simple($requete)
     return $results;
 }
 
-//Fonction de publication_annonce.php
+//Fonction de publication_annonce
 
 
 
