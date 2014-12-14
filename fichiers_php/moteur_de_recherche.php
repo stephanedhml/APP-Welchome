@@ -101,12 +101,18 @@ include('modeles.php');
 	</p>
   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> FETCH_HEAD
 </div>
 <?php
 include("footer2.php");
 ?>
 </div>
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
 >>>>>>> FETCH_HEAD
 </body>
 
