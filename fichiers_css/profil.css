@@ -2,7 +2,7 @@
 {
     width: 1200px;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 45px;
     padding-left: 260px;
 }
 
@@ -19,29 +19,28 @@
 
 #bloc_identité
 {
-    width:225px;
+    width:235px;
+    position : fixed;
+    margin-top: 245px;
+    padding-top: 50px;
 
 }
 
 #article2
 {
-    border:1px black solid;
+    border:1px rgba(0,0,0,0.5) solid;
     display:block;
     background-color: white;
-    padding-left: 10px;
+    border-radius: 5px;
+    
+    
 }
 
-#article3
-{
-    border:1px black solid;
-    width:227px;
-    background-color: white;
-    padding-left: 10px;
-}
+
 
 #article1,.Norma.jpg img
 {
-    display:inline-block;
+    
     vertical-align: top;
 }
 
@@ -62,9 +61,9 @@
 
 #bloc_commentaires
 {
-    float:right;
-    margin-right: 300px;
-    margin-top:px;
+    float:left;
+    margin-left: 350px;
+    margin-top:0px;
 }
 
 #barre1
@@ -78,52 +77,6 @@
 }
 
 
-#divcom1,#divcom2,#divcom3
-{
-    width: 630px;
-    height: 140px;
-}
-
-.Taylor.jpg img,#com1
-{
-    display:inline-block;
-}
-
-.Taylor.jpg,#com1
-{
-    display:inline-block;
-}
-
-.Carolin.jpg,#com2
-{
-    display:inline-block;
-}
-
-#article2,#article3
-{
-    background-color:white;
-    width:224px;
-}
-
-.Henry.jpg,#com3
-{
-    display:inline-block;
-}
-
-.Henry.jpg
-{
-    float:left;
-}
-
-.Taylor.jpg
-{
-    float:left;
-}
-
-.Carolin.jpg
-{
-    float:left;
-}
 
 .nom
 {
@@ -173,28 +126,161 @@ h2
 
 #Identification
 {
-    margin-left:50px;
-    text-decoration: underline;
-    font-size: 1.2em;
-    color:#FF6666;
+    
+    font-family: century;
+    font-size: 1em;
+    border:1px rgba(0,0,0,0.2) solid;
+    background-color: rgba(189, 195, 199,0.3);
+    text-align: center;
+    width: 231px;
+height: 30px;
+margin-top: 0px;
+padding-top: 10px;
+
+
+
+    
 }
 
 #Salutations
 {
     display:block;
     font-size:1.5em;
+    position : fixed;
+    padding-top: 50px;
 }
 
 #article1
 {
-    margin-left:40px;
+    text-align: center;
     position: relative;
     top:-15px;
 }
 
 #Bonjour
 {
-    font-size: 1.5em;
-    color:#EC1C43;
+    font-size: 1.2em;
+    font-family: century;
+    color:#16a085;
+    padding-left: 15px;
 }
 
+.profil
+
+{
+    
+    width: 180px;
+    height: 180px;
+    display: inline;
+    margin-left: 19px;
+   
+     border-radius:150px;
+    
+
+}
+
+#a_propos
+
+{
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+#bloc2
+
+{
+    padding-top: 0px;
+}
+
+#Description3
+{
+    margin-top: 0px;
+    width: 700px;
+  
+    border-radius: 5px;
+    padding-bottom: 10px;
+      background-color: rgba(250, 250, 250, .05);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 3px;
+    padding-top: 10px;
+  
+    padding-bottom: 20px;
+
+    font-size: 1.1em;
+
+
+}
+
+#Description4
+{
+    margin-top: 0px;
+    width: 800px;
+  
+    border-radius: 5px;
+    padding-bottom: 10px;
+      background-color: rgba(250, 250, 250, .05);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 3px;
+    padding-top: 10px;
+  
+    
+
+    font-size: 1.1em;
+
+
+}
+
+#Titre2
+
+{
+    text-align: center;
+    font-size: 1.2em;
+    font-family: century;
+    color:rgba(26, 188, 156,1.0);
+
+}
+
+.cadre
+ {
+    border-width:1px;
+    border-style:inset;
+    border-color:black;
+    padding :10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+    height: 200px;
+    position: relative;
+ }
+
+ .right {
+    position: absolute;
+    padding-left: 325px;
+    height: 200px;
+    padding-top: 6%;
+}
+
+.right a:link {
+    color: #2c3e50;
+    text-decoration:none; 
+
+}
+.right a:visited {color: #2c3e50;}
+
+.right a:hover {
+    color: #34495e;
+    text-decoration:underline;
+}
+.right a:active {color: #bdc3c7;}
+
+.right span {
+
+}
+
+.photo
+
+{
+ box-shadow: rgba(0, 0, 0, 0.04) 0 20px 6px;
+
+}

@@ -21,11 +21,28 @@
             
             $annonce = htmlspecialchars($_GET['id'] );
             $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
+
             $donnees = $recherche_id->fetch()
 
 
 
     ?>
+
+    <?php
+            
+            
+    
+    $annonce1 = htmlspecialchars($_GET['id_users'] );
+    $results =$bdd->query("SELECT * FROM users  WHERE id=$annonce1");
+    $donnees1 = $results->fetch()
+    
+
+
+
+    ?>
+
+   
+
 
     <header>
         <?php include("menus.php"); ?>
@@ -101,11 +118,12 @@
 
                  <section class="bouton1">
 
-                    <img class="Norma" src="../photos_utilisateurs/Norma.jpg" alt="Norma.jpg"/> <br></br>
-                    <h7 class="Norma1"> Norma </h7> <br> </br>
+                     
+                    <?php echo '<img   src="'.$donnees1 ['avatar'].'"  class="Norma">'  ?> <br></br>
+                    <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
                     <h7 class="Norma2"> Membre depuis 2014 </h7> <br> </br>
 
-                <button type="button" onclick="self.location.href='profil.php'" class="bouton"> 
+                <button type="button" onclick="self.location.href='profil.php?id=<?php echo $donnees['id']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"> 
                   Contacter l'hôte
                 </button> 
                 </section>
