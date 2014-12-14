@@ -22,7 +22,8 @@
 		<header>
 			<?php include("menus.php"); ?>
 		</header>
-		
+        <div class="superglobal">
+        <div class="global">
 		
 		<div id="bloc_page">
 		
@@ -67,11 +68,11 @@
 			
 
 				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
-
+            </div>
                 <?php
-                include("footer2.php");
+                include("footer.php");
                 ?>
-			
+			</div>
 		</div>
 	</body>
 </html>

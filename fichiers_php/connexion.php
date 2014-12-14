@@ -18,11 +18,12 @@ session_start();
         <title>Connexion</title>
     </head>
 
-	<body class="wall">
+	<body class="wood">
 		<div class="header">
             <?php include("menus.php"); ?>
 		</div>
-
+        <div class="superglobal">
+        <div class="global">
 
 		<?php
 			//Si l'utilisateur est connecté, on le déconnecte
@@ -95,26 +96,27 @@ session_start();
 					//On affiche le formulaire
 		?>
 
-					<div class="formulaire_connexion">
-						<div class="fond_form_connex"></div>
+					<div class="cadrec">
+                    <div class="contentgc">
+						<div class="connex1">
 						<form action="connexion.php" method="post">
-							<div class="center">
-							<br /><br/>
 								<label for="username" id="username_form"> Nom d'utilisateur </label><br/>
 								<input type="text" name="username" id="username" /><br /><br/>
 								<label for="password">Mot de passe </label><br/>
 								<input type="password" name="password" id="password" /><br /><br/>
 								<input type="submit" value="Connexion" id="btn_connexion" /><br/><br/>
-							</div>
 						</form>
-					</div>
-
+                        </div>
+                    </div>
+                    </div>
 					<?php
 				}
 			}
 					?>
+            </div>
         <?php
         include("footer.php");
         ?>
+        </div>
     </body>
 </html>

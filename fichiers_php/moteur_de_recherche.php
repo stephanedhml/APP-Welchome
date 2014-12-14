@@ -3,6 +3,7 @@
 include('config.php');
 include('modeles.php');
 ?>
+<?php session_start(); ?>
 
 <head>
 	<meta charset="utf-8" />
@@ -20,7 +21,8 @@ include('modeles.php');
 <div class="header">
 	<?php include("menus.php"); ?>
 </div>
-
+<div class="superglobal">
+<div class="global">
 <div class="recherche">
 
         <?php
@@ -98,5 +100,13 @@ include('modeles.php');
 		?>
 	</p>
   </div>
+<<<<<<< HEAD
+=======
+</div>
+<?php
+include("footer2.php");
+?>
+</div>
+>>>>>>> FETCH_HEAD
 </body>
 

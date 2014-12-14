@@ -8,9 +8,17 @@
     src: url("../fonts/Entypo%20Social%20@font-face/entypo-social.eot");
     src: url("../fonts/Entypo%20Social%20@font-face/entypo-social.eot?#iefix") format("embedded-opentype"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.woff") format("woff"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.ttf") format("truetype"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.svg#EntypoRegular") format("svg");
 }
+.superglobal{
+    min-height: 100%;
+}
 
+.global{
+    position: relative;
+    min-height: 100%;
+    margin: 0 auto;
+}
 .footer1 {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     height: 30px;
@@ -32,7 +40,6 @@
 }
 .top {
     position: relative;
-    height: 60px;
     top: -9px;
 }
 .iconfooter {
@@ -51,10 +58,13 @@
     font-family: Entypo-social;
 }
 #team {
-    position: fixed;
-    right: 10px;
-    bottom: 0px;
+    position: relative;
+    text-align: center;
     font-size: 10px;
+    width: 100%;
+    padding-top: 5px;
+    margin-top: 0px;
+    background-color: #455A64;
 }
 .left1 {
     position: absolute;

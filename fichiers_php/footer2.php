@@ -10,8 +10,8 @@ include("config.php");
             <li id="twitter">&#62217;</li>
             <li id="gplus">&#62223;</li>
             <li id="lnkdin">&#62232;</li>
+            <p id="team">Developped by Hackers de l'espace</p>
         </div>
-        <p id="team">Developped by Hackers de l'espace</p>
     </div>
     <!-- <div class="left1">
         <ul>

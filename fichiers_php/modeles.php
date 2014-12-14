@@ -35,6 +35,23 @@ function resultats_requete_simple($requete)
     return $results;
 }
 
+//Fonction de publication_annonce.php
+
+function inserer_logement()
+{
+    global $bdd;
+    $req = $bdd->prepare("INSERT INTO welchome.logement (id, Localisation, Nombre de voyageurs, Type de logement, Description) VALUES (NULL, :localisation, :nb_personne, :logement, :description)");
+
+    $req->execute(array(
+
+        'localisation' => $_POST['localisation'],
+        'nb_personne' => $_POST['nb_personne'],
+        'logement' => $_POST['logement'],
+        'description' => $_POST['description'],
+
+        ));
+    return $req;
+}
 // Fonction de recherche_avancée.php
 
 function test_destruction($a)
@@ -93,14 +110,18 @@ function add_user_datas()
 {
 global $bdd;
     // Hachage du mot de passe
-    $pass_hache = sha1($_POST["password"]);
-    $req = $bdd->prepare("INSERT INTO users(username,password,email,avatar) VALUES(:username, :pass_hache, :email, :avatar'");
+	$pass_hache = sha1($_POST["password"]);
+    $req = $bdd->prepare("INSERT INTO users(username,password,email,avatar,lastname,firstname,genre,tel) VALUES(:username, :password, :email, :avatar, :lastname, :firstname, :genre, :tel)");
     $req->execute(array
     (
         'username' => $_POST["username"],
         'password' => $pass_hache,
         'email' => $_POST["email"],
         'avatar' => $_POST["avatar"],
+		'lastname' => $_POST["lastname"],
+        'firstname' => $_POST["firstname"],
+        'genre' => $_POST["genre"],
+        'tel' => $_POST["tel"],
     ));
     return $req;
 }
