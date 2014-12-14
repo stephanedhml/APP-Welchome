@@ -1,8 +1,12 @@
+<?php
+include("config.php");
+include("modeles.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <!--<link rel="stylesheet" href="style.css" />-->
         <title>Welc'Home</title>
     </head>
 
@@ -44,4 +48,7 @@ Il pourra accueillir jusqu'à <?php echo $_POST['nb_personne']; ?> et la superfi
 	    
 	  ?> </p>
 
-<p>Si certaines de ces informations sont fausses, merci de les modifier <a href="formulaire.php">en revenant au formulaire</a> </p>
+
+
+<p>Si certaines de ces informations sont fausses, merci de les modifier en revenant au <a href="Formulaire.php"> formulaire</a> </p>
+<p>Sinon cliquer<a href="confirmation_annonce.php"> ici</a> pour confirmer </p>
