@@ -35,137 +35,73 @@ function resultats_requete_simple($requete)
     return $results;
 }
 
-//Fonction de publication_annonce
+//Fonction de publication_annonce.php
 
-
-
-function publier_annonce()
+function inserer_logement()
 {
     global $bdd;
+    $req = $bdd->prepare("INSERT INTO welchome.logement (id, Localisation, Nombre de voyageurs, Type de logement, Description) VALUES (NULL, :localisation, :nb_personne, :logement, :description)");
 
-    $req = $bdd->prepare("INSERT INTO logement(Localisation,Nom_maison,Nombre_voyageurs,Type_logement,Nb_chambres,Nb_salles_bain,Description)
-VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain, :description)");
-    $req->execute(array
-    (
+    $req->execute(array(
+
         'localisation' => $_POST['localisation'],
-        'nom_maison' => $_POST['nom_maison'],
         'nb_personne' => $_POST['nb_personne'],
         'logement' => $_POST['logement'],
-        'nb_chambres' => $_POST['nb_chambres'],
-        'nb_salle_bain' => $_POST['nb_salle_bain'],
         'description' => $_POST['description'],
-    ));
+
+        ));
     return $req;
 }
 // Fonction de recherche_avancée.php
 
+function test_destruction($a)
+{
+    if($a!=='on')
+    {
+        unset($a);
+    }
+}
 
-function resultats_requete_avancee()
+function resultats_requete_avancée()
 {
     global $bdd;
     $lieu=htmlspecialchars($_POST['ville']);
-    $capacite=htmlspecialchars($_POST['capacite']);
-    $type1=htmlspecialchars($_POST['type1']);
-    $type2=htmlspecialchars($_POST['type2']);
-    $type3=htmlspecialchars($_POST['type3']);
-    $type4=htmlspecialchars($_POST['type4']);
-    $type5=htmlspecialchars($_POST['type5']);
-    $type6=htmlspecialchars($_POST['type6']);
-    $type7=htmlspecialchars($_POST['type7']);
-    $surface_min=htmlspecialchars($_POST['surface_min']);
-    $chambres=htmlspecialchars($_POST['nb_room']);
-    $bathroom=htmlspecialchars($_POST['nb_bathroom']);
-    $lieu1=htmlspecialchars($_POST['lieu1']);
-    $lieu2=htmlspecialchars($_POST['lieu2']);
-    $lieu3=htmlspecialchars($_POST['lieu3']);
-    $lieu4=htmlspecialchars($_POST['lieu4']);
+    $capacité=htmlspecialchars($_POST['nombre']);
 
 
-    if (isset($capacite)) {
-        $message1 = "AND Nombre_voyageurs >= $capacite";
-    }
-    if (isset($type1)) {
-        $message2 = " AND Type_logement LIKE '%$type1%'";
-    }
-    if (isset($type2)) {
-        $message3 =  " AND Type_logement LIKE '%$type2%'";
-    }
-    if (isset($type3)) {
-        $message4 =  " AND Type_logement LIKE '%$type3%'";
-    }
-    if (isset($type4)) {
-        $message5 =  " AND Type_logement LIKE '%$type4%'";
-    }
-    if (isset($type5)) {
-        $message6 =  " AND Type_logement LIKE '%$type5%'";
-    }
-    if (isset($type6)) {
-        $message7 =  " AND Type_logement LIKE '%$type6%'";
-    }
-    if (isset($type7)) {
-        $message8 =  " AND Type_logement LIKE '%$type7%'";
-    }
-    if (isset($surface_min)) {
-        $message9 =  "AND superficie >= $surface_min";
-    }
-    if (isset($chambres)) {
-        $message10 = "AND Nb_chambres >= $chambres";
-    }
-    if (isset($bathroom)) {
-        $message11 = "AND Nb_salles_bain >= $bathroom";
-    }
-    if (isset($lieu1)) {
-        $message12 = " AND Type_endroit LIKE '%$lieu1%'";
-    }
-    if (isset($lieu2)) {
-        $message13 = " AND Type_endroit LIKE '%$lieu2%'";
-    }
-    if (isset($lieu3)) {
-        $message14 = " AND Type_endroit LIKE '%$lieu3%'";
-    }
-    if (isset($lieu4)) {
-        $message15 =" AND Type_endroit LIKE '%$lieu4%'";
-    }
 
-    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE
- Localisation LIKE '%$lieu%'
-  $message1
-  $message2
-  $message3
-  $message4
-  $message5
-  $message6
-  $message7
-  $message8
-  $message9
-  $message10
-  $message11
-  $message12
-  $message13
-  $message14
-  $message15
-  ORDER BY id DESC");
 
+    $results =$bdd->query("SELECT * FROM logement WHERE Localisation LIKE '%$lieu%'
+                                                  
+ORDER BY id DESC");
+    //cherche comment afficher le contenu des cases cocher dans la requete
+    
     return $results;
 }
-
- /*AND Nombre_voyageurs >= $capacite
- AND Type_logement LIKE '%$type1%'
- AND Type_logement LIKE '%$type2%'
- AND Type_logement LIKE '%$type3%'
- AND Type_logement LIKE '%$type4%'
- AND Type_logement LIKE '%$type5%'
- AND Type_logement LIKE '%$type6%'
- AND Type_logement LIKE '%$type7%'
- AND superficie >= $surface_min
- AND Nb_chambres >= $chambres
- AND Nb_salles_bain >= $bathroom
- AND Type_endroit LIKE '%$lieu1%'
- AND Type_endroit LIKE '%$lieu2%'
- AND Type_endroit LIKE '%$lieu3%'
- AND Type_endroit LIKE '%$lieu4%'
-   ; */
-
+//On détruit les variables associéés aux cases non coché
+/*test_destruction($_POST["type1"]);
+test_destruction($_POST["type2"]);
+test_destruction($_POST["type3"]);
+test_destruction($_POST["type4"]);
+test_destruction($_POST["type5"]);
+test_destruction($_POST["type6"]);
+test_destruction($_POST["type7"]);
+test_destruction($_POST["lieu1"]);
+test_destruction($_POST["lieu2"]);
+test_destruction($_POST["lieu3"]);
+test_destruction($_POST["lieu4"]);
+test_destruction($_POST["case1"]);
+test_destruction($_POST["case2"]);
+test_destruction($_POST["case3"]);
+test_destruction($_POST["case4"]);
+test_destruction($_POST["case5"]);
+test_destruction($_POST["case6"]);
+test_destruction($_POST["case7"]);
+test_destruction($_POST["case8"]);
+test_destruction($_POST["case9"]);
+test_destruction($_POST["case10"]);
+test_destruction($_POST["case11"]);
+test_destruction($_POST["case12"]);*/
 
 
 //Fonctions de sign_up.php
@@ -197,6 +133,5 @@ function recuperer_username()
     $res = $req->fetch();
 
     return $res;
-
 }
 ?>
