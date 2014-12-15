@@ -12,13 +12,25 @@ include("modeles.php");
 
 <p>Bonjour !</p>
 
-<p>Votre logement se situe à <?php echo $_POST['localisation']; ?> </p>
+<p>Votre logement se situe à <?php echo $_POST['localisation']; ?>. </p>
 
-<p>Votre <?php echo $_POST['logement']; ?> est disponible du <?php echo $_POST['date_arrivée']; ?> au <?php echo $_POST['date_départ']; ?>.
+<p>Votre <?php echo $_POST['logement']; ?> est disponible du <?php echo $_POST['date_arrivée']; ?> au <?php echo $_POST['date_départ']; ?>.</p>
 
-Il pourra accueillir jusqu'à <?php echo $_POST['nb_personne']; ?> et la superficie totale de votre bien est de <?php echo $_POST['surface']; ?> m2. </p>
+<p>Il pourra accueillir jusqu'à <?php echo $_POST['nb_personne']; ?>
+ <?php if ($_POST["nb_personne"]>1)
+{echo "personnes";}
+else {echo "personne";}
+?>
 
-<p>Votre bien se situe <?php echo $_POST['lieu']; ?> </p>
+
+
+
+
+	et la superficie totale de votre bien est de <?php echo $_POST['surface']; ?> m2. </p>
+
+<p>Votre bien se situe <?php echo $_POST['lieu']; ?> .</p>
+
+<p>Il possède <?php echo $_POST['nb_chambres']; ?> chambres et <?php echo $_POST['nb_salle_bain']; ?> salle(s) de bain .</p>
 
 <p>Vous avez sélectionné :<br/> <?php
        if ($_POST['case1']=='on')

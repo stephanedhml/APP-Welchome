@@ -14,11 +14,12 @@ include "config.php";
 
 <form method="post" action=cible_postannonce.php>
 
-<!-- Localisation logement  -->
+<!-- Nom logement  -->
 <p>
-Nom de vôtre logement.<br />
+Nom de votre logement.<br />
     <input type="text" name="nom_maison">
 </p>
+<!-- Localisation logement  -->
 <p>
     Où se situe votre logement ?<br />
     <input type="text" name="localisation" placeholder="Ex: Paris" />
