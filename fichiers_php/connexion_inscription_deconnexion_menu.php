@@ -7,8 +7,8 @@
 	if(isset($_SESSION['username']))
 	{
 ?>
-        <li><a href="profil.php">Profil</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="profil.php" class="btn_PROFIL">Profil</a></li>
+        <li><a href="liremsg.php" class="btn_MESSAGES">Messages</a></li>
 		<li><a href="connexion.php">Se déconnecter</a></li>
 <?php
 	}

@@ -44,3 +44,6 @@ else {
     <?php
     }
 }
+?>
+<br/>
+<a href="ecriremsg.php">Envoyer un message</a>
