@@ -16,7 +16,7 @@ include "config.php";
 
 <!-- Localisation logement  -->
 <p>
-Nom de vôtre logement.<br />
+Nom de votre logement.<br />
     <input type="text" name="nom_maison">
 </p>
 <p>
