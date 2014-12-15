@@ -116,7 +116,7 @@
                                 <div class="right">
                                     <span>
                                     <a href="annonce.php?id=<?php echo $donnees1['id']; ?>&amp;id_users=<?php echo $annonce ?>" >
-                    <?php echo '<p>' .''.$donnees1['Localisation']. ' </br>' . $donnees1['Nombre de voyageurs']. ' voyageurs </br>' . $donnees1['Type de logement'] . '</p>'; ?> </a><br/>
+                    <?php echo '<p>' .''.$donnees1['Localisation']. ' </br>' . $donnees1['Nombre_voyageurs']. ' voyageurs </br>' . $donnees1['Type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
 

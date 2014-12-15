@@ -60,10 +60,10 @@
                     <h9 class="Localisation">  <?php echo $donnees['Localisation'] ;?>  </h9> <br></br>
                     
 
-                    <li class="membres"> Type de logement: <?php echo $donnees['Type de logement'] ;?> 
+                    <li class="membres"> Type de logement: <?php echo $donnees['Type_logement'] ;?>
                     </li>
                     
-                    <li class="membres">  <?php echo $donnees['Nombre de voyageurs']  ;?> voyageurs
+                    <li class="membres">  <?php echo $donnees['Nombre_voyageurs']  ;?> voyageurs
                     </li>
 
                     <li class="membres"> <?php echo $donnees['Nb de chambres'] ;?> Chambres
