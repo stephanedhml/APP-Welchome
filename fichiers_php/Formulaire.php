@@ -1,5 +1,6 @@
-<?php include "modeles.php";
-include "config.php";
+<?php 
+include("config.php");
+include("modeles.php");
 ?>
 
 <!DOCTYPE html>

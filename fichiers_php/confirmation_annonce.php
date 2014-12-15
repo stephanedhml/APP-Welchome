@@ -1,7 +1,7 @@
 <?php
 include("config.php");
 include("modeles.php");
-
+?>
 <?php
 $req = $bdd->prepare("INSERT INTO logement(Localisation,Nom_maison,Nombre_voyageurs,Type_logement,Nb_chambres,Nb_salles_bain,Description) VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain, :description");
                                 $req->execute(array
