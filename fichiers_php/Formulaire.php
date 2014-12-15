@@ -49,13 +49,13 @@ Nom de votre logement.<br />
 
 <p>
     Selectionnez la capacité du logement<br /> <select name="nb_personne"></label>
-                                                <option value="1"> 1 personne</option>
-                                                <option value="2"> 2 personnes</option>
-                                                <option value="3"> 3 personnes</option>
-                                                <option value="4"> 4 personnes</option>
-                                                <option value="5"> 5 personnes</option>
-                                                <option value="6"> 6 personnes</option>
-                                                <option value="7"> 7 personnes</option>
+                                                <option value="1 personne"> 1 personne</option>
+                                                <option value="2 personnes"> 2 personnes</option>
+                                                <option value="3 personnes"> 3 personnes</option>
+                                                <option value="4 personnes"> 4 personnes</option>
+                                                <option value="5 personnes"> 5 personnes</option>
+                                                <option value="6 personnes"> 6 personnes</option>
+                                                <option value="7 personnes"> 7 personnes</option>
 </select>
 </p>
 
