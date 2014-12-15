@@ -16,7 +16,17 @@ include("modeles.php");
 
 <p>Votre <?php echo $_POST['logement']; ?> est disponible du <?php echo $_POST['date_arrivée']; ?> au <?php echo $_POST['date_départ']; ?>.</p>
 
-<p>Il pourra accueillir jusqu'à <?php echo $_POST['nb_personne']; ?> et la superficie totale de votre bien est de <?php echo $_POST['surface']; ?> m2. </p>
+<p>Il pourra accueillir jusqu'à <?php echo $_POST['nb_personne']; ?>
+ <?php if ($_POST["nb_personne"]>1)
+{echo "personnes";}
+else {echo "personne";}
+?>
+
+
+
+
+
+	et la superficie totale de votre bien est de <?php echo $_POST['surface']; ?> m2. </p>
 
 <p>Votre bien se situe <?php echo $_POST['lieu']; ?> .</p>
 
