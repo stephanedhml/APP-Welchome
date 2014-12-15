@@ -11,7 +11,7 @@ $re->execute(array
     'logement' => $_POST['logement'],
     'nb_chambres' => $_POST['nb_chambres'],
     'nb_salle_bain' => $_POST['nb_salle_bain'],
-    'description' => $_POST['description']
+    'description' => $_POST['description'],
 ));
 
 
