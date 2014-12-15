@@ -21,6 +21,7 @@ if ($nb == 0) {
     echo 'Aucun message';
 }
 else {
+    echo 'Vous avez des messages : <br/>';
     for ($i=0 ; $i < $nb ; $i++) {
         $msg_recu = $req -> fetch();
         $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
