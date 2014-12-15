@@ -63,7 +63,7 @@ session_start();
 					{
 						//Mot de passe correct : on affiche pas le formulaire
 						$form=false;
-						//On enregistre son pseudo dans la session username et son identifiant dans la session userid
+						//On enregistre son pseudo et son identifiant dans la session
 						$_SESSION["username"]=$username;
 						$_SESSION["userid"]=$dn["id"];
 				?>
