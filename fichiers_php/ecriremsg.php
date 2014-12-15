@@ -40,7 +40,8 @@ if (isset($_POST["destinataire"],$_POST["titre"], $_POST["message"]))
     else
     {
         ?>
-        <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div>
+        <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
+        <a href="accueilmanu.php">Retourner à l'accueil</a>
         <?php
     }
 
