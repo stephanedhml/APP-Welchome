@@ -1,5 +1,5 @@
-<?php <include "modeles.php" >
-<include "config.php" >
+<?php include "modeles.php";
+include "config.php"; 
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
 
 <p>
     Disponibilité de votre logement<br /> 
-    du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" />
+    du <input type="date" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="date" name="date_départ" placeholder="JJ/MM/AAAA" size="12" />
    
 </p>
 
