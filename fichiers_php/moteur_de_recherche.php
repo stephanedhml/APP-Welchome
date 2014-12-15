@@ -56,9 +56,9 @@ include('modeles.php');
 					
 		<?php
 					// on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
-					while($donnees = $nbresult->fetch()) 
-					
+					for($i=0 ; $i < $nb_resultats ; $i++)
 					{
+                        $donnees = $nbresult->fetch();
 		?>
 						<div class="cadre">
                                 <div class="left">
