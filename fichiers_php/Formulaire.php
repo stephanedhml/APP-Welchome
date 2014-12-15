@@ -1,21 +1,24 @@
-<?php <include "modeles.php" >
-<include "config.php" >
+<?php include "modeles.php";
+include "config.php";
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Welc'Home</title>
+
+        <title>Publication d'annonce</title>
     </head>
 
 <body>
 
-<form method="post" action="cible_postannonce.php">
+<form method="post" action=cible_postannonce.php>
 
 <!-- Localisation logement  -->
-
+<p>
+Nom de vôtre logement.<br />
+    <input type="text" name="nom_maison">
+</p>
 <p>
     Où se situe votre logement ?<br />
     <input type="text" name="localisation" placeholder="Ex: Paris" />
@@ -46,13 +49,13 @@
 
 <p>
     Selectionnez la capacité du logement<br /> <select name="nb_personne"></label>
-                                                <option value="1 personne"> 1 personne</option>
-                                                <option value="2 personnes"> 2 personnes</option>
-                                                <option value="3 personnes"> 3 personnes</option>
-                                                <option value="4 personnes"> 4 personnes</option>
-                                                <option value="5 personnes"> 5 personnes</option>
-                                                <option value="6 personnes"> 6 personnes</option>
-                                                <option value="7 personnes"> 7 personnes</option>
+                                                <option value="1"> 1 personne</option>
+                                                <option value="2"> 2 personnes</option>
+                                                <option value="3"> 3 personnes</option>
+                                                <option value="4"> 4 personnes</option>
+                                                <option value="5"> 5 personnes</option>
+                                                <option value="6"> 6 personnes</option>
+                                                <option value="7"> 7 personnes</option>
 </select>
 </p>
 
@@ -62,14 +65,23 @@
     <label>Entrez la surface de votre logement (en m2)<br /> <input type="text" name="surface" placeholder="Ex: 32" size="12"/>
    
 </p>
+<p>
+    Combien de chambres possède votre logement ?<br />
+<input type="number" name="nb_chambres" min="0"/>
+</p>
+
+<p>
+    Combien de salles de bain possède votre logement ?<br />
+    <input type="number" name="nb_salle_bain" min="0" />
+</p>
 
 <!-- Menu localisation du logement-->
 <p>
 Où se situe votre logement ?<br /><select name="lieu"></label>
-                                                <option value="en banlieue"> En banlieue</option>
-                                                <option value="à la campagne"> À la campagne</option>
-                                                <option value="à la montagne"> À la montagne</option>
-                                                <option value="en ville"> En ville</option>
+                                                <option value="banlieue"> En banlieue</option>
+                                                <option value="campagne"> À la campagne</option>
+                                                <option value="montagne"> À la montagne</option>
+                                                <option value="ville"> En ville</option>
                                                 
 </select>
 </p>
@@ -95,7 +107,7 @@ Quels attributs sont présents dans votre logement ?<br />
 
 <!-- Description logmement -->
 <p>
-Ajoutez une description de votre logmement<br>
+Ajoutez une description de votre logement<br>
 <input type="text" name="description" />
 </p>
 
@@ -105,10 +117,6 @@ Ajoutez une description de votre logmement<br>
 
 </form>
 
-<?php
-inserer_logement();
 
-
-?>
 
 </body>
