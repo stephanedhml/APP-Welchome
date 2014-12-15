@@ -1,9 +1,10 @@
 #bloc_page_profil
 {
-    width: 1200px;
+   
     margin: auto;
     padding-top: 45px;
-    padding-left: 260px;
+    padding-left: 210px;
+    background-image: url("pattern-5jn1.png"); 
 }
 
 .body_profil
@@ -284,3 +285,4 @@ padding-top: 10px;
  box-shadow: rgba(0, 0, 0, 0.04) 0 20px 6px;
 
 }
+
