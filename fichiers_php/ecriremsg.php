@@ -45,12 +45,23 @@ if (isset($_POST["destinataire"],$_POST["titre"], $_POST["message"]))
     }
 
 }
+
+$req = $bdd -> prepare("SELECT username FROM users");
+$req -> execute(array());
+$nb = $req -> rowCount();
+
 ?>
 
 <form action="ecriremsg.php" method="post" xmlns="http://www.w3.org/1999/html">
     <select name="destinataire">
-        <option value="Yoko">Yoko</option>
-        <option value="Manu">Manu</option>
+        <?php
+        for ($i=0 ; $i < $nb ; $i++) {
+            $username = $req -> fetch();
+            ?>
+            <option value='<?php echo $username[0] ?>' ><?php echo $username[0]?></option>
+            <?php
+        }
+        ?>
     </select> <br />
     <label for="titre">Titre du message</label>
     <input type="text" name="titre"> <br/>
