@@ -34,13 +34,13 @@ if (isset($_POST["destinataire"],$_POST["titre"], $_POST["message"]))
     if($bdd -> lastInsertId())
     {
         ?>
-        <div>Votre message a bien été envoyé !</div>
+        <div>Votre message a bien &#233;t&#233; envoy&#233; !</div>
         <?php
     }
     else
     {
         ?>
-        <div>Il y a eu un problème lors de l'envoi de votre message, veuillez réessayer.</div>
+        <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div>
         <?php
     }
 
