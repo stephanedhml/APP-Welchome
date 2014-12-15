@@ -137,7 +137,7 @@ include('modeles.php');
           // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 
           // on crée une variable $requete pour faciliter l'écriture de la requête SQL.
-          $nbresult =resultats_requete_avancée();
+          $nbresult =resultats_requete_avancee();
 
           // on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
           $nb_resultats = $nbresult->rowCount();
@@ -203,7 +203,7 @@ include('modeles.php');
 	  <p/>
 	  
 	  <p>
-	<a href="recherche_avancée.php">Cliquer ici</a> pour effectuer une autre recherche.
+	<a href="recherche_avancee.php">Cliquer ici</a> pour effectuer une autre recherche.
 	  </p>
      <?php
      include("footer.php");
