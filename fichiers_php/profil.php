@@ -12,7 +12,7 @@
      ?>
 
     <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
-    <title>Accueil</title>
+    <title>Profil</title>
 </head>
 
 <body>
