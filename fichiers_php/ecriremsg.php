@@ -35,6 +35,7 @@ if (isset($_POST["destinataire"],$_POST["titre"], $_POST["message"]))
     {
         ?>
         <div>Votre message a bien &#233;t&#233; envoy&#233; !</div>
+        <a href="accueilmanu.php">Retourner à l'accueil</a>
         <?php
     }
     else
