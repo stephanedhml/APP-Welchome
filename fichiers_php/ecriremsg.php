@@ -40,7 +40,7 @@ session_start();
         $req -> execute(array($destinataire));
         $dn = $req -> fetch();
 
-        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date,titre,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
+        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
         $res -> execute(array(
             "destinataire" => $dn[0],
             "expediteur" => $userid,
