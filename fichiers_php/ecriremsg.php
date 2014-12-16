@@ -51,8 +51,8 @@ session_start();
         if($bdd -> lastInsertId())
         {
             ?>
-            <div>Votre message a bien &#233;t&#233; envoy&#233; !</div>
-            <a href="accueilmanu.php">Retourner à l'accueil</a>
+            <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
+            <a href="accueilmanu.php">Retourner à l'accueil</a></div>
             <?php
         }
         else
@@ -70,8 +70,11 @@ session_start();
     $nb = $req -> rowCount();
 
     ?>
-
+<div class="cadre_msg"
+<div class="contentg">
+<div class="msg_form">
     <form action="ecriremsg.php" method="post" xmlns="http://www.w3.org/1999/html">
+        <label for="destinataire">Destinataire</label><br/>
         <select name="destinataire">
             <?php
             for ($i=0 ; $i < $nb ; $i++) {
@@ -81,13 +84,16 @@ session_start();
                 <?php
             }
             ?>
-        </select> <br />
+        </select> <br /> <br />
         <label for="titre">Titre du message</label>
         <input type="text" name="titre"> <br/>
         <label for="message">Message</label>
-        <input type="text" name="message">
+        <input type="text" name="message"> <br /><br />
         <input type="submit" value="Envoyer">
     </form>
+</div>
+</div>
+</div>
                 </div>
             </div>
         </div>
