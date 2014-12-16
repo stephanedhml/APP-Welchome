@@ -59,6 +59,7 @@ session_start();
                         </table>
                     <?php
                     }
+                    echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
                 }
             ?>
             <br/>
