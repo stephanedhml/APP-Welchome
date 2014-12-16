@@ -37,7 +37,7 @@ session_start();
                     echo '<div class="no_msg"><p>Aucun message <br/><br/> <a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
                 }
                 else {
-                    echo '<div class="new_msg"> Vous avez des messages : <br/>';
+                    echo '<div class="new_msg"><h7>Messages</h7></div>';
                     for ($i=0 ; $i < $nb ; $i++) {
                         $msg_recu = $req -> fetch();
                         $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
