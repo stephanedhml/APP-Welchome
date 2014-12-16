@@ -78,26 +78,58 @@ VALUES(:localisation,:lieu, :nom_maison, :nb_personne, :logement, :nb_chambres, 
 }
 // Fonction de recherche_avancée.php
 
-
 function resultats_requete_avancee()
 {
     global $bdd;
-    $lieu=htmlspecialchars($_POST['ville']);
-    $capacite=htmlspecialchars($_POST['capacite']);
-    $type1=htmlspecialchars($_POST['type1']);
-    $type2=htmlspecialchars($_POST['type2']);
-    $type3=htmlspecialchars($_POST['type3']);
-    $type4=htmlspecialchars($_POST['type4']);
-    $type5=htmlspecialchars($_POST['type5']);
-    $type6=htmlspecialchars($_POST['type6']);
-    $type7=htmlspecialchars($_POST['type7']);
-    $surface_min=htmlspecialchars($_POST['surface_min']);
-    $chambres=htmlspecialchars($_POST['nb_room']);
-    $bathroom=htmlspecialchars($_POST['nb_bathroom']);
-    $lieu1=htmlspecialchars($_POST['lieu1']);
-    $lieu2=htmlspecialchars($_POST['lieu2']);
-    $lieu3=htmlspecialchars($_POST['lieu3']);
-    $lieu4=htmlspecialchars($_POST['lieu4']);
+    if (isset($_POST['ville'])) {
+        $lieu = htmlspecialchars($_POST['ville']);
+    }
+    if (isset($_POST['capacite'])) {
+        $capacite = htmlspecialchars($_POST['capacite']);
+    }
+    if (isset($_POST['type1'])) {
+        $type1 = htmlspecialchars($_POST['type1']);
+    }
+    if (isset($_POST['type2'])) {
+        $type2 = htmlspecialchars($_POST['type2']);
+    }
+    if (isset($_POST['type3'])) {
+        $type3 = htmlspecialchars($_POST['type3']);
+    }
+    if (isset($_POST['type4'])) {
+        $type4 = htmlspecialchars($_POST['type4']);
+    }
+    if (isset($_POST['type5'])) {
+        $type5 = htmlspecialchars($_POST['type5']);
+    }
+    if (isset($_POST['type6'])) {
+        $type6 = htmlspecialchars($_POST['type6']);
+    }
+    if (isset($_POST['type7'])) {
+        $type7 = htmlspecialchars($_POST['type7']);
+    }
+    if (isset($_POST['surface_min'])) {
+        $surface_min = htmlspecialchars($_POST['surface_min']);
+    }
+    if (isset($_POST['nb_room'])) {
+        $chambres = htmlspecialchars($_POST['nb_room']);
+    }
+    if (isset($_POST['nb_bathroom'])) {
+        $bathroom = htmlspecialchars($_POST['nb_bathroom']);
+    }
+    if (isset($_POST['lieu1'])) {
+        $lieu1 = htmlspecialchars($_POST['lieu1']);
+    }
+    if (isset($_POST['lieu2'])) {
+        $lieu2 = htmlspecialchars($_POST['lieu2']);
+    }
+    if (isset($_POST['lieu3'])) {
+        $lieu3 = htmlspecialchars($_POST['lieu3']);
+    }
+    if (isset($_POST['lieu4'])) {
+        $lieu4 = htmlspecialchars($_POST['lieu4']);
+    }
+
 
 
     if (isset($capacite)) {
@@ -167,6 +199,7 @@ function resultats_requete_avancee()
 
     return $results;
 }
+
 
  /*AND Nombre_voyageurs >= $capacite
  AND Type_logement LIKE '%$type1%'
