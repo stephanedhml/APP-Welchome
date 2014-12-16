@@ -59,10 +59,6 @@ VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_sa
 }
 // Fonction de recherche_avancée.php
 
-function test_destruction($a)
-{
-    if (isset($a));
-}
 
 
 function resultats_requete_avancee()
