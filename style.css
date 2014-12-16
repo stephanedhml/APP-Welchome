@@ -6,10 +6,7 @@
 @import "fichiers_css/recherche_avancee.css";
 @import "fichiers_css/profil.css";
 @import "fichiers_css/footer.css";
-.foot {
-    text-align: center;
-    margin-bottom: 20px;
-}
+@import "fichiers_css/messagerie.css";
 
 
 
