@@ -1,5 +1,6 @@
-<?php include "modeles.php";
-include "config.php";
+<?php 
+include("config.php");
+include("modeles.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ include "config.php";
 
 <!-- Nom logement  -->
 <p>
-Nom de votre logement.<br />
+Nom de votre logement.<br/>
     <input type="text" name="nom_maison">
 </p>
 <!-- Localisation logement  -->
@@ -117,7 +118,5 @@ Ajoutez une description de votre logement<br>
 </p>
 
 </form>
-
-
 
 </body>
