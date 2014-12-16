@@ -38,7 +38,7 @@ session_start();
                 }
                 else {
                     echo '<div class="new_msg"><h7>Messages</h7></div>';
-                    for ($i=0 ; $i < $nb ; $i++) {
+                    for ($i=0 ; $i < $nb AND $i < 5 ; $i++) {
                         $msg_recu = $req -> fetch();
                         $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
                         $quser -> execute(array($msg_recu[0]));
