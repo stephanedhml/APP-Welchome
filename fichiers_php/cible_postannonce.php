@@ -17,15 +17,40 @@ include("modeles.php");
 <p>Votre <?php echo $_POST['logement']; ?> est disponible du <?php echo $_POST['date_arrivée']; ?> au <?php echo $_POST['date_départ']; ?>.</p>
 
 <p>Il pourra accueillir jusqu'à <?php echo $_POST['nb_personne']; ?>
+
  <?php if ($_POST["nb_personne"]>1)
-{echo "personnes";}
-else {echo "personne";}
+{
+	echo "personnes";
+}
+
+else {echo "personne";
+}
+
 ?>
  et la superficie totale de votre bien est de <?php echo $_POST['surface']; ?> m2. </p>
 
 <p>Votre bien se situe <?php echo $_POST['lieu']; ?> .</p>
 
-<p>Il possède <?php echo $_POST['nb_chambres']; ?> chambres et <?php echo $_POST['nb_salle_bain']; ?> salle(s) de bain .</p>
+<p>Il possède <?php echo $_POST['nb_chambres']; ?>
+
+<?php if ($_POST['nb_chambres']>1)
+{
+	echo "chambres";
+}
+	else {echo "chambre";
+}
+?>
+ et <?php echo $_POST['nb_salle_bain']; ?>
+
+<?php if ($_POST['nb_salle_bain']>1)
+{
+	echo "salles de bain";
+}
+	else {echo "salle de bain";
+}
+?> 
+
+</p>
 
 <p>Vous avez sélectionné :<br/> <?php
        if ($_POST['case1']=='on')
@@ -54,6 +79,10 @@ else {echo "personne";}
 	   {echo "-Internet</br>";}
 	    
 	  ?> </p>
+
+<p>Si certaines de ces informations sont fausses, merci de les modifier en revenant au <a href="Formulaire.php"> formulaire</a> </p>
+
+<p>Sinon cliquer<a href="confirmation_annonce.php"> ici</a> pour confirmer </p>
 
 <?php
 $req = $bdd->prepare("INSERT INTO logement(Localisation,Nom_maison,Nombre_voyageurs,Type_logement,Nb_chambres,Nb_salles_bain,Description) VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain, :description");
