@@ -7,6 +7,11 @@
     font-family: 'Sinkin';
     src: url('Sinkin.otf');
 }
+@font-face {
+    font-family: "Numberfont";
+    src: url("../fonts/numberfont/number_font.eot");
+    src: url("../fonts/numberfont/number_font.eot?#iefix") format("embedded-opentype"), url("../fonts/numberfont/number_font.woff") format("woff"), url("../fonts/numberfont/number_font.ttf") format("truetype"), url("../fonts/numberfont/number_font.svg#EntypoRegular") format("svg");
+}
 
 /* Basic Styles */
 body {
@@ -87,5 +92,25 @@ nav a#pull {
 }
 .btn_MESSAGES_NEW {
     width: 120px;
-    color: red;
+}
+.numberfont {
+    font-family: Numberfont;
+    border-radius:50%;
+    background: crimson;
+    border:2px solid #ffffff;
+    display: inline-block;
+    font-family: "number_font";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    font-size: 110%;
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 }
