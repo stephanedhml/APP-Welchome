@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-<<<<<<< HEAD
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/cible_recherche.php" afterPath="$PROJECT_DIR$/fichiers_php/cible_recherche.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/modeles.php" afterPath="$PROJECT_DIR$/fichiers_php/modeles.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" afterPath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
-=======
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fichiers_css/footer2.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fichiers_php/footer2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/accueilmanu.php" afterPath="$PROJECT_DIR$/fichiers_php/accueilmanu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" afterPath="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" />
->>>>>>> FETCH_HEAD
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -602,11 +601,9 @@
       <option name="project" value="LOCAL" />
       <updated>1418340413273</updated>
     </task>
-<<<<<<< HEAD
+
     <option name="localTasksCounter" value="14" />
-=======
-    <option name="localTasksCounter" value="11" />
->>>>>>> FETCH_HEAD
+
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -617,11 +614,10 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
+
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> FETCH_HEAD
+
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -660,7 +656,7 @@
     <MESSAGE value="Ajout d'un carrousel horizontal à la page d'accueil" />
     <MESSAGE value="Correction du bug d'affichage du carrousel sur Firefox" />
     <MESSAGE value="Ajout des images carrousel" />
-<<<<<<< HEAD
+
     <MESSAGE value="Marvin a ajouté le fichier modèle et donc remplacé les fichiers comportants du SQL" />
     <MESSAGE value="Marvin a ajouté le fichier modele.php et donc remplacé les fichiers comportants du SQL" />
     <MESSAGE value="modele.php ajouté" />
@@ -668,13 +664,13 @@
     <MESSAGE value="tentative de correction du problème du moteur de recherche" />
     <MESSAGE value="correction du probleme de recherche" />
     <option name="LAST_COMMIT_MESSAGE" value="correction du probleme de recherche" />
-=======
+
     <MESSAGE value="Règlage du problème de dépassement lié au carrousel" />
     <MESSAGE value="Retrait d'une ligne inutile + correction d'un problème de nom de classe" />
     <MESSAGE value="Création d'un footer" />
     <MESSAGE value="Intégration d'un footer en position fixed sur toutes les pages" />
     <option name="LAST_COMMIT_MESSAGE" value="Intégration d'un footer en position fixed sur toutes les pages" />
->>>>>>> FETCH_HEAD
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
