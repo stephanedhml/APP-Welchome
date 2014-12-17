@@ -28,7 +28,7 @@ session_start();
                     exit();
                 }
 
-                $req = $bdd -> prepare("SELECT id_expediteur, titre, message FROM messages WHERE id=?");
+                $req = $bdd -> prepare("SELECT id_expediteur, titre, message, id FROM messages WHERE id=?");
                 $req -> execute(array($_GET['id']));
                 $nb = $req -> rowCount();
 
@@ -43,6 +43,10 @@ session_start();
                         $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
                         $quser -> execute(array($msg_recu[0]));
                         $un = $quser -> fetch();
+
+                        $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=1 WHERE id=? ");
+                        $lu -> execute(array($msg_recu[3]));
+
                         ?>
                         <table class="tableau_new_messages" ">
                             <tr>
@@ -56,7 +60,7 @@ session_start();
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td><br/>
                             </tr>
-                        </table>
+                        </table> <br/>
                     <?php
                     }
                     echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
