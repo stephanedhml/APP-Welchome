@@ -15,7 +15,7 @@ function check_new_msg()
 	if(isset($_SESSION['username']))
 	{
 ?>
-        <li><a href="profil.php" class="btn_PROFIL">Profil</a></li>
+        <li><a href="profil.php?id=8&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL">Profil</a></li>
         <?php echo check_new_msg() ?>
 		<li><a href="connexion.php">Se déconnecter</a></li>
 <?php
