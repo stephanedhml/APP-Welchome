@@ -252,13 +252,18 @@ function recuperer_username()
 
 }
 
-function ajout_favoris($user1, $user2)
+function ajout_favoris($demandeur, $proprietaire)
 {
     global $bdd;
+    $res = $bdd -> prepare("SELECT user1, user2 FROM echange WHERE id_proprietaire=?");
+    $res -> execute(array($proprietaire));
+    $res -> fetch();
+
     if ($user1=1 AND $user2=1) {
-        $req = $bdd -> prepare("INSERT INTO favoris(id_user, friend) VALUES(:username, :ami)");
+        $req = $bdd -> prepare("INSERT INTO favoris(id_user,id_ami, friend) VALUES(:username, :friend_username, :ami)");
         $req -> execute(array(
-            'username' => $user1,
+            'username' => $proprietaire,
+            'friend_username' => $demandeur,
             'ami' => 1,
         ));
     }
