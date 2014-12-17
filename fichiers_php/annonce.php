@@ -125,9 +125,12 @@
                     <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
                     <h7 class="Norma2"> Membre depuis 2014 </h7> <br> </br>
 
-                <button type="button" onclick="self.location.href='profil.php?id=<?php echo $donnees['id']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"> 
-                  Contacter l'hôte
-                </button> 
+                <button type="button" onclick="self.location.href='profil.php?id=<?php echo $donnees['id']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton">
+                  Consulter profil
+                </button>
+                <button type="button" onclick="<?php include('echange.php');?>" class="bouton">
+                    <a href="accueilmanu.php">Proposer un échange</a>
+                </button>
                 </section>
 
                 <div>
