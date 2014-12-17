@@ -28,14 +28,11 @@ session_start();
                 exit();
             }
 
-            $req = $bdd -> prepare("SELECT id FROM messages WHERE id_destinataire=? GROUP BY id_expediteur");
+            $req = $bdd -> prepare("
+              SELECT id_expediteur, titre, date_update FROM messages AS m1 WHERE id_destinataire=? ORDER BY id DESC
+              ");
             $req -> execute(array($_SESSION["userid"]));
-            $new_msg = $req -> fetch();
-            print_r($new_msg);
-
-            $res = $bdd -> prepare('SELECT id_expediteur, titre, message FROM messages WHERE id=?');
-            $res -> execute(array($new_msg[0]));
-            $nb = $res -> rowCount();
+            $nb = $req -> rowCount();
 
 
             if ($nb == 0) {
@@ -43,21 +40,17 @@ session_start();
             }
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
-                for ($i=0 ; $i < $nb AND $i < 5 ; $i++) {
-                    $msg_recu = $res -> fetch();
-
-
+                for ($i=0 ; $i < $nb ; $i++) {
+                    $msg_recu = $req -> fetch();
                     $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
-
-
                     ?>
                     <table class="tableau_new_messages" ">
                             <tr>
                                 <th>Nom exp&#233;diteur</td>
                                 <th>Objet</td>
-                                <th>Message</td>
+                                <th>Date</td>
 
                             </tr>
                             <tr>
