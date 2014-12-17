@@ -6,3 +6,19 @@ $req -> execute(array(
     "logement" => $donnees['id'],
     "date_update" => date("Y-m-d H:i:s"),
 ));
+
+$res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
+$res -> execute(array(
+    "destinataire" => $donnees1['id'],
+    "expediteur" => $_SESSION["userid"],
+    "dates" => $date = date("Y-m-d H:i:s"),
+    "titre" => "Proposition d'échange",
+    "message" => "Voulez vous échanger votre logement avec moi ?",
+));
+
+    $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
+    $nv -> execute(array($bdd -> lastInsertId()));
+
+?>
+
+<script>window.location.href='accueilmanu.php'</script>

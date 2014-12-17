@@ -128,8 +128,8 @@
                 <button type="button" onclick="self.location.href='profil.php?id=<?php echo $donnees['id']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton">
                   Consulter profil
                 </button>
-                <button type="button" onclick="<?php include('echange.php');?>" class="bouton">
-                    <a href="accueilmanu.php">Proposer un échange</a>
+                <button type="button" class="bouton">
+                    <a href="accueilmanu.php" onclick="<?php include('echange.php');?>">Proposer un échange</a>
                 </button>
                 </section>
 
