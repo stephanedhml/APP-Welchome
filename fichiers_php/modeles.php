@@ -251,4 +251,16 @@ function recuperer_username()
     return $res;
 
 }
+
+function ajout_favoris($user1, $user2)
+{
+    global $bdd;
+    if ($user1=1 AND $user2=1) {
+        $req = $bdd -> prepare("INSERT INTO favoris(id_user, friend) VALUES(:username, :ami)");
+        $req -> execute(array(
+            'username' => $user1,
+            'ami' => 1,
+        ));
+    }
+}
 ?>
