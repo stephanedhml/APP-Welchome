@@ -48,7 +48,7 @@ session_start();
                     ?>
                     <table class'tableau_friend_box'>
                         <tr>
-                            <td class="column_msg_1"><?php echo $usr_friend_name[0]; ?></td>
+                            <td class="column_msg_1"><a href="discussion.php?id_friend=<?php echo $user_friend[0];?>"><?php echo $usr_friend_name[0]; ?></a></td>
                         </tr>
                     </table>
                 <?php
