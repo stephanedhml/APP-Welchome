@@ -129,7 +129,7 @@
                   Consulter profil
                 </button>
                 <button type="button" class="bouton">
-                    <a href="accueilmanu.php" onclick="<?php include('echange.php');?>">Proposer un échange</a>
+                    <a href="echange_msg.php">Proposer un échange</a>
                 </button>
                 </section>
 

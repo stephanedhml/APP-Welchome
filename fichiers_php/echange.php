@@ -20,5 +20,3 @@ $res -> execute(array(
     $nv -> execute(array($bdd -> lastInsertId()));
 
 ?>
-
-<script>window.location.href='accueilmanu.php'</script>
