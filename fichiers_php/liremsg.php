@@ -28,7 +28,7 @@ session_start();
                     exit();
                 }
 
-                $req = $bdd -> prepare("SELECT id_expediteur, titre, message, id FROM messages WHERE id=?");
+                $req = $bdd -> prepare("SELECT id_expediteur, titre, message, id, echange FROM messages WHERE id=?");
                 $req -> execute(array($_GET['id']));
                 $nb = $req -> rowCount();
 
@@ -50,18 +50,27 @@ session_start();
                         ?>
                         <table class="tableau_new_messages" ">
                             <tr>
-                                <th>Nom exp&#233;diteur</td>
-                                <th>Objet</td>
-                                <th>Message</td>
+                                <th>Nom exp&#233;diteur</th>
+                                <th>Objet</th>
+                                <th>Message</th>
+                                <?php if (isset($msg_recu[4])) {echo '<th>Accepter la proposition</th>';} ?>
 
                             </tr>
                             <tr>
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
-                                <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td><br/>
+                                <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
+                                <?php if (isset($msg_recu[4])) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"></td></form>' ;} ?><br/>
                             </tr>
                         </table> <br/>
                     <?php
+                    if (isset($_POST['validation'])) {
+                        $req = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
+                        $req -> execute(array($msg_recu[0]));
+                        echo '<div class="no_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/><br/>
+                    <a href="accueilmanu.php">Retourner à l\'accueil</a></div>';
+                    } else {echo "MA COUIIIILE";}
+
                     }
                     echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
                 }

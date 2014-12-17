@@ -35,21 +35,23 @@ session_start();
                 $userid = $_SESSION["userid"];
 
 
-            $req = $bdd -> prepare('INSERT INTO echange(id_demandeur, id_proprietaire, id_logement, date_update) VALUES(:demandeur, :proprietaire, :logement, :date_update)');
+            $req = $bdd -> prepare('INSERT INTO echange(id_demandeur, id_proprietaire, id_logement, date_update, user1) VALUES(:demandeur, :proprietaire, :logement, :date_update,:user1_want)');
             $req -> execute(array(
                 "demandeur" => $_GET['demandeur'],
                 "proprietaire" => $_GET['proprietaire'],
                 "logement" => $_GET['logement'],
                 "date_update" => date("Y-m-d H:i:s"),
+                "user1_want" => 1,
             ));
 
-            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
+            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message,echange) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange)");
             $res -> execute(array(
                 "destinataire" => $_GET['proprietaire'],
                 "expediteur" => $_SESSION["userid"],
                 "dates" => $date = date("Y-m-d H:i:s"),
                 "titre" => "Proposition d'échange",
                 "message" => $message,
+                "echange" => 1,
             ));
 
                 if($derid = $bdd -> lastInsertId())
