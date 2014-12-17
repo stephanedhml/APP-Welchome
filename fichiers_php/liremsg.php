@@ -44,7 +44,7 @@ session_start();
                         $quser -> execute(array($msg_recu[0]));
                         $un = $quser -> fetch();
 
-                        $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=1 WHERE id=? ");
+                        $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id=? ");
                         $lu -> execute(array($msg_recu[3]));
 
                         ?>

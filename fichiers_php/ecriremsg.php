@@ -49,8 +49,11 @@ session_start();
             "message" => $message,
         ));
 
-        if($bdd -> lastInsertId())
+
+        if($derid = $bdd -> lastInsertId())
         {
+            $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
+            $nv -> execute(array($derid));
             ?>
             <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
             <a href="accueilmanu.php">Retourner à l'accueil</a></div>

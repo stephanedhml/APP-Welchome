@@ -58,7 +58,7 @@ session_start();
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu[1] ?></a></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
-                                <td class="column_msg_2"><?php if ($msg_recu[4] == 0) {echo 'Non lu';} else {echo 'Lu';} ?></td>
+                                <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
                             </tr>
                         </table>
                     <?php
