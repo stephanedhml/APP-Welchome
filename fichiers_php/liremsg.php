@@ -67,6 +67,8 @@ session_start();
                     if (isset($_POST['validation'])) {
                         $req = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
                         $req -> execute(array($msg_recu[0]));
+
+
                         echo '<div class="no_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/><br/> <a href="accueilmanu.php">Retourner à l\'accueil</a></div>';
                         $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"]);
                     }

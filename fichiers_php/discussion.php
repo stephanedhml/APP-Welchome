@@ -27,18 +27,33 @@ session_start();
                 header ("Location: accueilmanu.php");
                 exit();
             }
+            $id = $_GET['id_friend'];
+            echo '
+                            <div class="cadre_msg_answer"
+                            <div class="contentg">
+                                <div class="msg_form">
+                                    <form action="discussion.php?id_friend='. $_GET['id_friend'] .'" method="post" xmlns="http://www.w3.org/1999/html">
+                                        <label for="titre">Titre du message</label>
+                                        <input type="text" name="titre"> <br/>
+                                        <label for="message">Message</label>
+                                        <input type="text" name="message"> <br /><br />
+                                        <input type="submit" value="Envoyer">
+                                    </form>
+                                </div>
+                            </div>
+                            </div> ';
 
-            $req = $bdd -> prepare("SELECT id_expediteur, titre, message, id, echange FROM messages WHERE id=?");
-            $req -> execute(array($_GET['id']));
+            $req = $bdd -> prepare("SELECT id_expediteur, titre, message, id, echange FROM messages WHERE id_expediteur=? ORDER BY date_update DESC");
+            $req -> execute(array($_GET['id_friend']));
             $nb = $req -> rowCount();
 
 
             if ($nb == 0) {
-                echo '<div class="no_msg"><p><h7>Aucun message</h7><br/><br/><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
+                echo '<div class="no_msg"><p><h7>Aucun message</h7></p></div>';
             }
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
-                for ($i=0 ; $i < $nb AND $i < 5 ; $i++) {
+                for ($i=0 ; $i < $nb ; $i++) {
                     $msg_recu = $req -> fetch();
                     $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
                     $quser -> execute(array($msg_recu[0]));
@@ -69,8 +84,8 @@ session_start();
                     $message = $_POST["message"];
                     $userid = $_SESSION["userid"];
                     //On fait correspondre le pseudo du destinataire avec son id
-                    $id2 = $_GET["id"];
-                    $req = $bdd -> prepare("SELECT id_expediteur FROM messages WHERE id = ? ");
+                    $id2 = $_GET["id_friend"];
+                    $req = $bdd -> prepare("SELECT id_destinataire FROM messages WHERE id_destinataire = ? ");
                     $req -> execute(array($id2));
                     $dn = $req -> fetch();
 
@@ -102,22 +117,6 @@ session_start();
                     }
 
                 }
-                $id = $_GET['id'];
-                echo '
-                            <div class="no_msg_answer"><p id="btn_connexion">Envoyer un message</p></div>
-                            <div class="cadre_msg_answer"
-                            <div class="contentg">
-                                <div class="msg_form">
-                                    <form action="discussion.php?id='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
-                                        <label for="titre">Titre du message</label>
-                                        <input type="text" name="titre"> <br/>
-                                        <label for="message">Message</label>
-                                        <input type="text" name="message"> <br /><br />
-                                        <input type="submit" value="Envoyer">
-                                    </form>
-                                </div>
-                            </div>
-                            </div> ';
             }
             ?>
             <br/>
