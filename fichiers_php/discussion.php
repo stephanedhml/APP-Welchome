@@ -12,8 +12,15 @@ session_start();
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body onLoad="window.setTimeout('history.go(0)', 10000)">
+<script type="text/javascript">
+    var auto_refresh = setInterval(
+        function ()
+        {
+            $('#refresher').load('discussion.php?id_friend=12').fadeIn("slow");
+        }, 5000);   //id="refresher"
 
+</script>
 <header>
     <?php include("menus.php"); ?>
 </header>
@@ -37,11 +44,12 @@ session_start();
                                         <input type="text" name="titre"> <br/>
                                         <label for="message">Message</label>
                                         <input type="text" name="message"> <br /><br />
-                                        <input type="submit" value="Envoyer">
+                                        <input type="submit" value="Envoyer" onclick="window.location.href=window.location.href">
                                     </form>
                                 </div>
                             </div>
                             </div> ';
+
 
             $req = $bdd -> query("SELECT id_expediteur, titre, message, id, echange FROM messages WHERE id_expediteur= '" . $_GET['id_friend'] . "' OR id_expediteur= '" . $_SESSION["userid"] . "' ORDER BY date_update DESC");
             $req -> execute(array($_GET['id_friend'], $_SESSION["userid"]));
@@ -53,7 +61,8 @@ session_start();
             }
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
-                for ($i=0 ; $i < $nb ; $i++) {
+
+                for ($i=0 ; $i < $nb AND $i < 15 ; $i++) {
                     $msg_recu = $req -> fetch();
                     $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
                     $quser -> execute(array($msg_recu[0]));
@@ -63,7 +72,7 @@ session_start();
                     $lu -> execute(array($msg_recu[3]));
 
                     ?>
-                    <table class="tableau_new_messages" ">
+                    <table class="tableau_new_messages">
                             <tr>
                                 <th>Nom exp&#233;diteur</th>
                                 <th>Objet</th>
@@ -75,7 +84,7 @@ session_start();
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
                             </tr>
                         </table> <br/>
-                    <?php
+                <?php
 
                     }
                 if (isset($_POST["titre"], $_POST["message"]))
@@ -104,8 +113,6 @@ session_start();
                         $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
                         $nv -> execute(array($derid));
                         ?>
-                        <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
-                            <a href="accueilmanu.php">Retourner à l'accueil</a></div>
                     <?php
                     }
                     else
@@ -115,7 +122,6 @@ session_start();
                         <a href="accueilmanu.php">Retourner à l'accueil</a>
                     <?php
                     }
-
                 }
             }
             ?>
