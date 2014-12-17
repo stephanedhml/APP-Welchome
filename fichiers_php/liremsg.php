@@ -72,7 +72,61 @@ session_start();
                     }
 
                     }
-                    echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
+                    if (isset($_POST["titre"], $_POST["message"]))
+                    {
+                        $titre = $_POST["titre"];
+                        $message = $_POST["message"];
+                        $userid = $_SESSION["userid"];
+                        //On fait correspondre le pseudo du destinataire avec son id
+                        $id2 = $_GET["id"];
+                        $req = $bdd -> prepare("SELECT id_expediteur FROM messages WHERE id = ? ");
+                        $req -> execute(array($id2));
+                        $dn = $req -> fetch();
+
+                        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
+                        $res -> execute(array(
+                            "destinataire" => $dn[0],
+                            "expediteur" => $userid,
+                            "dates" => $date = date("Y-m-d H:i:s"),
+                            "titre" => $titre,
+                            "message" => $message,
+                        ));
+
+
+                        if($derid = $bdd -> lastInsertId())
+                        {
+                            $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
+                            $nv -> execute(array($derid));
+                            ?>
+                            <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
+                                <a href="accueilmanu.php">Retourner à l'accueil</a></div>
+                        <?php
+                        }
+                        else
+                        {
+                            ?>
+                            <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
+                            <a href="accueilmanu.php">Retourner à l'accueil</a>
+                        <?php
+                        }
+
+                    }
+                    $id = $_GET['id'];
+                    echo '
+                            <div class="no_msg_answer"><p id="btn_connexion">Envoyer un message</p></div>
+                            <div class="cadre_msg_answer"
+                            <div class="contentg">
+                                <div class="msg_form">
+                                    <form action="liremsg.php?id='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
+                                        <label for="titre">Titre du message</label>
+                                        <input type="text" name="titre"> <br/>
+                                        <label for="message">Message</label>
+                                        <input type="text" name="message"> <br /><br />
+                                        <input type="submit" value="Envoyer">
+                                    </form>
+                                </div>
+                            </div>
+                            </div> ';
                 }
             ?>
             <br/>

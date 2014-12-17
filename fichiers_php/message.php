@@ -27,7 +27,9 @@ session_start();
                 header ("Location: accueilmanu.php");
                 exit();
             }
-
+            if (isset($_POST['validation'])) {
+                echo '<div class="accept_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/></div>';
+            }
             $req = $bdd -> prepare("
               SELECT id_expediteur, titre, date_update, id, lu_nonlu, echange FROM messages AS m1 WHERE id_destinataire=? ORDER BY id DESC
               ");
@@ -71,9 +73,6 @@ session_start();
                         $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"]);
                     }
                     }
-                if (isset($_POST['validation'])) {
-                    echo '<div class="no_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/><br/> <a href="accueilmanu.php">Retourner à l\'accueil</a></div>';
-                }
                 echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
             }
             ?>
