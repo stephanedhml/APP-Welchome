@@ -2,7 +2,7 @@
 
 <?php
 	include("config.php");
-    include("modeles.php");
+    //include("modeles.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,20 +25,31 @@
             //Vérification du bon envoi du formulaire
             if(isset($_POST['nom_maison'], $_POST['localisation'], $_POST['logement'], $_POST['date_arrivée'], $_POST['date_départ'], $_POST['nb_personne'], $_POST['surface'], $_POST['nb_chambres'], $_POST['nb_salle_bain'], $_POST['lieu'], $_POST['description']))
             {
-                    
-                        
-                                //On insère les données saisies par l'utilisateur dans la BDD
-                                $req = $bdd->prepare("INSERT INTO logement(Localisation,Nom de la maison,Nombre_voyageurs,Type_logement,Nb de chambres,Nb de salles de bains,Description) VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain, :description");
-                                $req->execute(array
-                                (
-                                    'localisation' => $_POST['localisation'],
-                                    'nom_maison' => $_POST['nom_maison'],
-                                    'nb_personne' => $_POST['nb_personne'],
-                                    'logement' => $_POST['logement'],
-                                    'nb_chambres' => $_POST['nb_chambres'],
-                                    'nb_salle_bain' => $_POST['nb_salle_bain'],
-                                    'description' => $_POST['description'],
-                                ));
+
+
+                try
+                {
+                    //On insère les données saisies par l'utilisateur dans la BDD
+                    $req = $bdd->prepare("INSERT INTO logement(localisation,type_endroit,nom_maison,nombre_voyageurs,type_logement,nb_chambres,nb_salles_bains,superficie,description_logement)
+VALUES(:localisation, :lieu, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain,:surface, :description");
+                  $req->execute(array
+                    (
+                        'localisation' => $_POST['localisation'],
+                        'lieu' => $_POST['lieu'],
+                        'nom_maison' => $_POST['nom_maison'],
+                        'nb_personne' => $_POST['nb_personne'],
+                        'logement' => $_POST['logement'],
+                        'nb_chambres' => $_POST['nb_chambres'],
+                        'nb_salle_bain' => $_POST['nb_salle_bain'],
+                        'surface' => $_POST['surface'],
+                        'description' => $_POST['description'],
+                    ));
+                }
+                catch(Exception $e)
+                {
+                    die('Erreur : '.$e->getMessage());
+                }
+
                                 //On enregistre les infos dans la base de donnée
                                 if($bdd->lastInsertId())
                                 {
