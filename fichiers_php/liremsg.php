@@ -28,8 +28,8 @@ session_start();
                     exit();
                 }
 
-                $req = $bdd -> prepare("SELECT id_expediteur, titre, message FROM messages WHERE id_destinataire=?");
-                $req -> execute(array($_SESSION["userid"]));
+                $req = $bdd -> prepare("SELECT id_expediteur, titre, message FROM messages WHERE id=?");
+                $req -> execute(array($_GET['id']));
                 $nb = $req -> rowCount();
 
 
