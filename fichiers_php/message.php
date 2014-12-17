@@ -29,7 +29,7 @@ session_start();
             }
 
             $req = $bdd -> prepare("
-              SELECT id_expediteur, titre, date_update FROM messages AS m1 WHERE id_destinataire=? ORDER BY id DESC
+              SELECT id_expediteur, titre, date_update,id FROM messages AS m1 WHERE id_destinataire=? ORDER BY id DESC
               ");
             $req -> execute(array($_SESSION["userid"]));
             $nb = $req -> rowCount();
@@ -55,8 +55,8 @@ session_start();
                             </tr>
                             <tr>
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
-                                <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
-                                <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td><br/>
+                                <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu[1] ?></a></td>
+                                <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                             </tr>
                         </table>
                     <?php
