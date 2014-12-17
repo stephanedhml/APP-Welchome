@@ -274,4 +274,3 @@ function ajout_favoris($demandeur, $proprietaire)
         ));
     }
 }
-?>

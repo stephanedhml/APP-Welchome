@@ -3,12 +3,20 @@
 <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 <?php
 	include('config.php');
+function check_new_msg()
+{
+    global $bdd;
+    $req = $bdd -> prepare("SELECT lu_nonlu FROM messages WHERE id_destinataire=? AND lu_nonlu=1");
+    $req -> execute(array($_SESSION['userid']));
+    $new = $req -> fetch();
+    if (isset($new[0])) {echo '<li><a href="message.php" class="btn_MESSAGES_NEW">Messages</a></li>';} else {echo '<li><a href="message.php" class="btn_MESSAGES">Messages</a></li>';}
+}
 	//Si lutilisateur est connecté, on lui donne un lien pour modifier ses informations, pour voir ses messages et un pour se deconnecter
 	if(isset($_SESSION['username']))
 	{
 ?>
         <li><a href="profil.php" class="btn_PROFIL">Profil</a></li>
-        <li><a href="message.php" class="btn_MESSAGES">Messages</a></li>
+        <?php echo check_new_msg() ?>
 		<li><a href="connexion.php">Se déconnecter</a></li>
 <?php
 	}
