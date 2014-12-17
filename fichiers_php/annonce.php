@@ -124,17 +124,10 @@
 			</div>
 			</section>
 		</div>
-<<<<<<< HEAD
 
-		<footer>
-				<p>
-				<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-				</p>
-			</footer>
-=======
     <?php
     include("footer.php");
     ?>
->>>>>>> FETCH_HEAD
+
     </body>
 </html>
