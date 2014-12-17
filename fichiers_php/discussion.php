@@ -12,15 +12,15 @@ session_start();
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css" />
 </head>
-<body onLoad="window.setTimeout('history.go(0)', 10000)">
-<script type="text/javascript">
+<body <!-- onLoad="window.setTimeout('history.go(0)', 10000)" -->>
+<!-- <script type="text/javascript">
     var auto_refresh = setInterval(
         function ()
         {
             $('#refresher').load('discussion.php?id_friend=12').fadeIn("slow");
         }, 5000);   //id="refresher"
 
-</script>
+</script> -->
 <header>
     <?php include("menus.php"); ?>
 </header>
@@ -68,7 +68,7 @@ session_start();
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
 
-                    $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id=? ");
+                    $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id=? AND id_expediteur= '" . $_GET['id_friend'] . "' ");
                     $lu -> execute(array($msg_recu[3]));
 
                     ?>
