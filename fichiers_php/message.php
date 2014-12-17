@@ -27,6 +27,35 @@ session_start();
                 header ("Location: accueilmanu.php");
                 exit();
             }
+
+            $req = $bdd -> prepare("SELECT id_ami FROM favoris WHERE friend=1 AND id_user=? GROUP BY id_ami");
+            $req -> execute(array($_SESSION['userid']));
+            $nb_friend = $req -> rowCount();
+
+            if ($nb_friend !==0) {
+                ?><table class="tableau_title_friend_box">
+                    <tr>
+                        <th>Liste d'amis</th>
+                    </tr>
+                </table>
+                <div class="friend_box">
+                <?php
+                for ($x = 0 ; $x < $nb_friend ; $x++) {
+                    $user_friend = $req->fetch();
+                    $requst = $bdd -> prepare("SELECT username FROM users INNER JOIN favoris ON users.id=favoris.id_ami WHERE users.id=?");
+                    $requst -> execute(array($user_friend[0]));
+                    $usr_friend_name = $requst->fetch();
+                    ?>
+                    <table class'tableau_friend_box'>
+                        <tr>
+                            <td class="column_msg_1"><?php echo $usr_friend_name[0]; ?></td>
+                        </tr>
+                    </table>
+                <?php
+                }
+                ?> </div> <?php
+            }
+
             if (isset($_POST['validation'])) {
                 echo '<div class="accept_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/></div>';
             }
@@ -48,7 +77,7 @@ session_start();
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
                     ?>
-                    <table class="tableau_new_messages" ">
+                    <table class="tableau_new_messages">
                             <tr>
                                 <th>Nom exp&#233;diteur</td>
                                 <th>Objet</td>

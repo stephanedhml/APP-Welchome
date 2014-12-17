@@ -3,7 +3,21 @@
     width: 100%;
     padding-top: 40px;
 }
-
+.tableau_title_friend_box {
+    position: fixed;
+    text-align: center;
+    margin-top: 130px;
+    margin-left: 70px;
+    margin-bottom: 15px;
+    width: 146px;
+}
+.friend_box {
+    position: fixed;
+    text-align: center;
+    margin-top: 210px;
+    margin-left: 70px;
+    margin-bottom: 15px;
+}
 .no_msg {
     position: relative;
     text-align: center;
