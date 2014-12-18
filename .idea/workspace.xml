@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="derniere amélioration">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php" afterPath="$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/discussion.php" afterPath="$PROJECT_DIR$/fichiers_php/discussion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/echange.php" afterPath="$PROJECT_DIR$/fichiers_php/echange.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/ecriremsg.php" afterPath="$PROJECT_DIR$/fichiers_php/ecriremsg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/liremsg.php" afterPath="$PROJECT_DIR$/fichiers_php/liremsg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/message.php" afterPath="$PROJECT_DIR$/fichiers_php/message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/messagerie.css" afterPath="$PROJECT_DIR$/fichiers_css/messagerie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_menu.css" afterPath="$PROJECT_DIR$/fichiers_css/style_menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BDD/welchome18.sql" afterPath="$PROJECT_DIR$/BDD/welchome18.sql" />
+    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -181,20 +171,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="285">
-              <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.12396694" vertical-offset="0" max-vertical-offset="605">
+              <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ecriremsg.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ecriremsg.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/ecriremsg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.338843" vertical-offset="0" max-vertical-offset="1650">
+            <state vertical-scroll-proportion="-35.217392" vertical-offset="0" max-vertical-offset="1650">
               <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
               <folding>
                 <marker date="1418874842484" expanded="true" signature="1071:1116" placeholder="SELECT id_us..users..." />
@@ -266,8 +256,8 @@
         <option value="$PROJECT_DIR$/BDD/welchome18.sql" />
         <option value="$PROJECT_DIR$/fichiers_php/Formulaire.php" />
         <option value="$PROJECT_DIR$/fichiers_php/publier_logement.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/config.php" />
         <option value="$PROJECT_DIR$/fichiers_php/ecriremsg.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/config.php" />
       </list>
     </option>
   </component>
@@ -760,7 +750,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418871617142</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="derniere amélioration">
+      <created>1418877516042</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1418877516042</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1212,14 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="285">
-          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BDD/welchome18.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.358209" vertical-offset="2025" max-vertical-offset="4875">
@@ -1230,7 +1218,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/ecriremsg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.338843" vertical-offset="0" max-vertical-offset="1650">
+        <state vertical-scroll-proportion="-35.217392" vertical-offset="0" max-vertical-offset="1650">
           <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
           <folding>
             <marker date="1418874842484" expanded="true" signature="1071:1116" placeholder="SELECT id_us..users..." />
@@ -1238,6 +1226,14 @@
             <marker date="1418874842484" expanded="true" signature="1706:1758" placeholder="UPDATE messa..." />
             <marker date="1418874842484" expanded="true" signature="2294:2320" placeholder="SELECT usern..users..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12396694" vertical-offset="0" max-vertical-offset="605">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
