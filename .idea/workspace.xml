@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="tout fonctionne sauf les putain de messages de Manu =)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/annonce.php" afterPath="$PROJECT_DIR$/fichiers_php/annonce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/confirmation_annonce.php" afterPath="$PROJECT_DIR$/fichiers_php/confirmation_annonce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/echg_msg.php" afterPath="$PROJECT_DIR$/fichiers_php/echg_msg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/liremsg.php" afterPath="$PROJECT_DIR$/fichiers_php/liremsg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/message.php" afterPath="$PROJECT_DIR$/fichiers_php/message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/modeles.php" afterPath="$PROJECT_DIR$/fichiers_php/modeles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/profil.php" afterPath="$PROJECT_DIR$/fichiers_php/profil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/sign_up.php" afterPath="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -271,14 +262,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confirmation_annonce.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="confirmation_annonce.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/confirmation_annonce.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10344828" vertical-offset="0" max-vertical-offset="580">
+            <state vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="360">
               <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding>
                 <marker date="1418865259752" expanded="true" signature="75:304" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12931034" vertical-offset="0" max-vertical-offset="580">
+              <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -328,7 +329,6 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/fichiers_css/style_connexion.css" />
         <option value="$PROJECT_DIR$/fichiers_css/messagerie.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/config.php" />
         <option value="$PROJECT_DIR$/fichiers_php/ecriremsg.php" />
         <option value="$PROJECT_DIR$/fichiers_php/discussion.php" />
         <option value="$PROJECT_DIR$/fichiers_php/echange.php" />
@@ -343,6 +343,7 @@
         <option value="$PROJECT_DIR$/fichiers_php/message.php" />
         <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
         <option value="$PROJECT_DIR$/fichiers_php/profil.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/config.php" />
       </list>
     </option>
   </component>
@@ -805,7 +806,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418845582393</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="tout fonctionne sauf les putain de messages de Manu =)">
+      <created>1418869269634</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1418869269634</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1190,14 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12396694" vertical-offset="0" max-vertical-offset="605">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/echange.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="405">
@@ -1319,11 +1318,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/confirmation_annonce.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10344828" vertical-offset="0" max-vertical-offset="580">
+        <state vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="360">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
             <marker date="1418865259752" expanded="true" signature="75:304" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12931034" vertical-offset="0" max-vertical-offset="580">
+          <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
