@@ -25,7 +25,7 @@
             
     global $bdd;
     $annonce = htmlspecialchars($_GET['id_users'] );
-    $results =$bdd->query("SELECT * FROM users WHERE id=$annonce");
+    $results =$bdd->query("SELECT * FROM users WHERE id_users=$annonce");
     $donnees = $results->fetch()
     
 
@@ -38,7 +38,7 @@
             
             $annonce1 = htmlspecialchars($_GET['id'] );
             
-            $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce1 ORDER BY id DESC");
+            $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=$annonce1 ORDER BY id_logement DESC");
 
             $donnees1 = $results->fetch()
 
@@ -69,7 +69,7 @@
                      <aside id="Description3">
 
                     <div class="couverture">
-                            <?php echo '<img  style="width:700px; height: 300px;" src="'.$donnees1 ['Liendelaphoto'].'" class="photo">' ?>
+                            <?php echo '<img  style="width:700px; height: 300px;" src="'.$donnees1 ['lien_photo'].'" class="photo">' ?>
                     </div>
 
                       </aside>
@@ -79,7 +79,7 @@
                        <p id="Titre2"> Descriptif </p> <br></br>
                     
 
-                    <?php echo $donnees['Description'] ;?>            
+                    <?php echo $donnees['description_users'] ;?>
                 
                     
                         
@@ -92,7 +92,7 @@
                        <p id="Titre2"> Préférences d'échange </p> <br></br>
                     
 
-                    <?php echo $donnees['Preference_echange'] ;?>            
+                    <?php echo $donnees['preference_echange'] ;?>
                 
                     
                         
@@ -110,13 +110,13 @@
 
                         <div class="cadre">
                                 <div class="left">
-                            <?php echo '<img width="300px" height="200px" align="left" src="'.$donnees1 ['Liendelaphoto'].'" class="photo">' ?>
+                            <?php echo '<img width="300px" height="200px" align="left" src="'.$donnees1 ['lien_photo'].'" class="photo">' ?>
                                 </div>
 
                                 <div class="right">
                                     <span>
-                                    <a href="annonce.php?id=<?php echo $donnees1['id']; ?>&amp;id_users=<?php echo $annonce ?>" >
-                    <?php echo '<p>' .''.$donnees1['Localisation']. ' </br>' . $donnees1['Nombre_voyageurs']. ' voyageurs </br>' . $donnees1['Type_logement'] . '</p>'; ?> </a><br/>
+                                    <a href="annonce.php?id=<?php echo $donnees1['id_logement']; ?>&amp;id_users=<?php echo $annonce ?>" >
+                    <?php echo '<p>' .''.$donnees1['localisation']. ' </br>' . $donnees1['nombre_voyageurs']. ' voyageurs </br>' . $donnees1['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
 
