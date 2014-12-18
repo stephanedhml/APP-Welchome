@@ -129,7 +129,7 @@
                   Consulter profil
                 </button>
                 <button type="button" class="bouton">
-                    <a href="echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"] ;?>">Proposer un échange</a>
+                    <a href="echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&id_logement=<?php echo $donnees["id_logement"] ;?>">Proposer un échange</a>
                 </button>
                 </section>
 

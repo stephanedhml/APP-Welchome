@@ -39,7 +39,7 @@ session_start();
             $req -> execute(array(
                 "demandeur" => $_GET['demandeur'],
                 "proprietaire" => $_GET['proprietaire'],
-                "logement" => $_GET['logement'],
+                "logement" => $_GET['id_logement'],
                 "date_update" => date("Y-m-d H:i:s"),
                 "user1_want" => 1,
             ));
@@ -82,13 +82,13 @@ session_start();
             <?php
                 $demandeur = $_GET["demandeur"];
                 $proprietaire = $_GET["proprietaire"];
-                $logement = $_GET["logement"];
+                $logement = $_GET["id_logement"];
             ?>
 
             <div class="cadre_msg"
             <div class="contentg">
                 <div class="msg_form">
-                    <form action="echg_msg.php?demandeur=<?php echo $demandeur;?>&proprietaire=<?php echo $proprietaire; ?>&logement=<?php echo $logement ;?>" method="post" xmlns="http://www.w3.org/1999/html">
+                    <form action="echg_msg.php?demandeur=<?php echo $demandeur;?>&proprietaire=<?php echo $proprietaire; ?>&id_logement=<?php echo $logement ;?>" method="post" xmlns="http://www.w3.org/1999/html">
                         <label for="message">Message</label>
                         <input type="text" name="message"> <br /><br />
                         <input type="submit" value="Envoyer">

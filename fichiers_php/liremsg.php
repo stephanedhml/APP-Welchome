@@ -60,7 +60,7 @@ session_start();
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
-                                <?php if (isset($msg_recu[4])) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"></td></form>' ;} ?><br/>
+                                <?php if (isset($msg_recu[4])) {echo '<td class="column_msg_1"><form action="liremsg.php?id_messages=' . $_GET['id_messages'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"></td></form>' ;} ?><br/>
                             </tr>
                         </table> <br/>
                     <?php
@@ -111,13 +111,13 @@ session_start();
                         }
 
                     }
-                    $id = $_GET['id'];
+                    $id = $_GET['id_messages'];
                     echo '
                             <div class="no_msg_answer"><p id="btn_connexion">Envoyer un message</p></div>
                             <div class="cadre_msg_answer"
                             <div class="contentg">
                                 <div class="msg_form">
-                                    <form action="liremsg.php?id='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
+                                    <form action="liremsg.php?id_messages='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
                                         <label for="titre">Titre du message</label>
                                         <input type="text" name="titre"> <br/>
                                         <label for="message">Message</label>
