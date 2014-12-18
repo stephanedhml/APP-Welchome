@@ -61,13 +61,13 @@ include('modeles.php');
                     ?>
                     <div class="cadre">
                         <div class="left">
-                            <?php echo '<img width="125px" height="125px" align="left" src="'.$donnees ['Liendelaphoto'].'" class="photo">' ?>
+                            <?php echo '<img width="125px" height="125px" align="left" src="'.$donnees ['lien_photo'].'" class="photo">' ?>
                         </div>
 
                         <div class="right">
                                     <span>
-                                    <a href="annonce.php?id=<?php echo $donnees['id']; ?>" id="<?php echo $donnees['id']; ?>" >
-                                        <?php echo '<p>' .''.$donnees['Localisation']. ' </br>' . $donnees['Nombre_voyageurs']. ' voyageurs </br>' . $donnees['Type_logement'] . " </br>  ". $donnees['Description'] . '</p>'; ?> </a><br/>
+                                    <a href="annonce.php?id_logement=<?php echo $donnees['id_logement']; ?>" id_users="<?php echo $donnees['id_users']; ?>" >
+                                        <?php echo '<p>' .''.$donnees['localisation']. ' </br>' . $donnees['nombre_voyageurs']. ' voyageurs </br>' . $donnees['type_logement'] . " </br>  ". $donnees['description_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                         </div>
 
