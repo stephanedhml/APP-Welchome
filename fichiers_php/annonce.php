@@ -128,7 +128,19 @@
                 <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton">
                   Consulter profil
                 </button>
-                <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"] ;?>'">Proposer un échange</button>
+                     <?php if(isset($_SESSION['userid'])) { ?>
+                         <button type="button" class="bouton"
+                                 onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'">
+                             Proposer un échange
+                         </button>
+                     <?php
+                     }
+                     else { ?>
+                         <button type="button" class="bouton"
+                                 onclick="window.location='sign_up.php'">
+                             Proposer un échange
+                         </button>
+                     <?php } ?>
                 </section>
 
                 <div>
