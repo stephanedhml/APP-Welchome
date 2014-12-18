@@ -18,7 +18,7 @@ function recuperer_psswd_user()
 {
     global $bdd;
 
-    $req = $bdd->prepare("SELECT password, id FROM users WHERE username = ?");
+    $req = $bdd->prepare("SELECT password, id_users FROM users WHERE username = ?");
     $req->execute(array($_POST['username']));
     $dn = $req->fetch();
     return $dn;
@@ -178,24 +178,7 @@ function resultats_requete_avancee()
         $message15 =" AND Type_endroit LIKE '%$lieu4%'";
     }
 
-    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE
- Localisation LIKE '%$lieu%'
-  $message1
-  $message2
-  $message3
-  $message4
-  $message5
-  $message6
-  $message7
-  $message8
-  $message9
-  $message10
-  $message11
-  $message12
-  $message13
-  $message14
-  $message15
-  ORDER BY id DESC");
+
 
     return $results;
 }

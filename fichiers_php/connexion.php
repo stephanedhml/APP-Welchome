@@ -65,7 +65,7 @@ session_start();
 						$form=false;
 						//On enregistre son pseudo et son identifiant dans la session
 						$_SESSION["username"]=$username;
-						$_SESSION["userid"]=$dn["id"];
+						$_SESSION["userid"]=$dn["id_users"];
 				?>
 
 						<div class="message">Vous avez bien été connecté !</br>

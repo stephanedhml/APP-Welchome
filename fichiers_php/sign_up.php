@@ -39,7 +39,7 @@
 
 
                             //On vérifie si le pseudo n'existe pas déjà
-                            $req = $bdd->prepare('SELECT id FROM users WHERE username=?');
+                            $req = $bdd->prepare('SELECT id_users FROM users WHERE username=?');
                             $req->execute(array($_POST['username']));
                             $res = $req->fetch();
                             if(!$res)
