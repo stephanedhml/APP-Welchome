@@ -36,7 +36,7 @@
     
     <?php
             
-            $annonce1 = htmlspecialchars($_GET['id'] );
+            $annonce1 = htmlspecialchars($_GET['id_logement'] );
             
             $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=$annonce1 ORDER BY id_logement DESC");
 
