@@ -52,6 +52,7 @@
                                     'email' => $_POST["email"],
                                     'avatar' => $_POST["avatar"],
                                 ));
+                                $new_id = $bdd->lastInsertId();
                                 //On enregistre les infos dans la base de donnée
                                 if($bdd->lastInsertId())
                                 {
@@ -102,6 +103,19 @@
                 //Le formulaire n'a pas été bien envoyé
                 $form=true;
             }
+            if(isset($_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement']))
+            {
+                $req = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
+                $req->execute(array
+                (
+                    'localisation' => $_POST['localisation'],
+                    'nom_maison' => $_POST['nom_maison'],
+                    'type_logement' => $_POST['type_logement'],
+                    'id_users' => $new_id,
+                ));
+
+
+            }
             if($form)
             {
             if(isset($message))
@@ -119,14 +133,26 @@
                     <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" /><br />
                     <br/><label for="email">Email</label><br/><input type="text" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
                     <br/><label for="avatar">Image perso<span class="small"> (facultatif)</span></label><br/><input type="text" name="avatar" value="<?php if(isset($_POST['avatar'])){echo htmlentities($_POST['avatar'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
-                    <br/><input type="submit" value="Envoyer" id="btn_envoyer" />
+                    <div class="contentd1">
+                        <label for="nom_maison">Nom de votre logement</label><br/><input type="text" name="nom_maison"><br />
+                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" placeholder="Ex: Paris" /><br />
+                        <label for="type_logement">Quel type de logement proposez vous ?</label><br />
+                        <select name="type_logement">
+                                <option value="Studio"> Studio</option>
+                                <option value="Appartement"> Appartement</option>
+                                <option value="Maison"> Maison</option>
+                                <option value="Pavillon"> Pavillon</option>
+                                <option value="Bungalow/gite"> Bungalow/gite</option>
+                                <option value="Bateau/péniche"> Bateau/péniche</option>
+                                <option value="Camping car"> Camping car</option>
+                        </select><br />
+                        <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
+                        <input type="submit" value="Envoyer" id="btn_envoyer" />
+                    </div>
                 </form>
                 </div>
-            <!-- </div>
-            <div class="contentd1">
-
             </div>
-            <div class="contentd2">
+            <!-- <div class="contentd2">
                 <div class="signup_form2">
 
                 </div>
