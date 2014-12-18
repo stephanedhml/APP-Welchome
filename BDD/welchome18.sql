@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `id_expediteur` int(11) NOT NULL DEFAULT '0',
   `id_destinataires` int(11) NOT NULL DEFAULT '0',
   `date_update` datetime DEFAULT '0000-00-00 00:00:00',
-  `titre_messages` text CHARACTER SET utf8 NOT NULL,
+  `titre_message` text CHARACTER SET utf8 NOT NULL,
   `message` text CHARACTER SET utf8 NOT NULL,
   `lu_nonlu` int(11) DEFAULT NULL,
   `echange` int(11) DEFAULT NULL,

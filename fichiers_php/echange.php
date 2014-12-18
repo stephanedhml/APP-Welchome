@@ -9,7 +9,7 @@ $req -> execute(array(
 
 $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
 $res -> execute(array(
-    "destinataire" => $donnees1['id'],
+    "destinataire" => $donnees1['id_users'],/*?*/
     "expediteur" => $_SESSION["userid"],
     "dates" => $date = date("Y-m-d H:i:s"),
     "titre" => "Proposition d'échange",
