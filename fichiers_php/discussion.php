@@ -44,7 +44,7 @@ session_start();
                                         <input type="text" name="titre"> <br/>
                                         <label for="message">Message</label>
                                         <input type="text" name="message"> <br /><br />
-                                        <input type="submit" value="Envoyer" onclick="window.location.href=window.location.href">
+                                        <input type="submit" value="Envoyer"> <!-- onclick="window.location.href=window.location.href" -->
                                     </form>
                                 </div>
                             </div>
@@ -94,13 +94,13 @@ session_start();
                     $userid = $_SESSION["userid"];
                     //On fait correspondre le pseudo du destinataire avec son id
                     $id2 = $_GET["id_friend"];
-                    $req = $bdd -> prepare("SELECT id_destinataire FROM messages WHERE id_destinataire = ? ");
+                    /* $req = $bdd -> prepare("SELECT id_destinataire FROM messages WHERE id_destinataire = ? ");
                     $req -> execute(array($id2));
-                    $dn = $req -> fetch();
+                    $dn = $req -> fetch(); */
 
                     $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
                     $res -> execute(array(
-                        "destinataire" => $dn[0],
+                        "destinataire" => $id2,
                         "expediteur" => $userid,
                         "dates" => $date = date("Y-m-d H:i:s"),
                         "titre" => $titre,
