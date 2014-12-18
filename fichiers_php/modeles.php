@@ -266,6 +266,11 @@ function ajout_favoris($demandeur, $proprietaire)
             'friend_username' => $demandeur,
             'ami' => 1,
         ));
+        $req = $bdd -> prepare("INSERT INTO favoris(id_user,id_ami, friend) VALUES(:username, :friend_username, :ami)");
+        $req -> execute(array(
+            'username' => $demandeur,
+            'friend_username' => $proprietaire,
+            'ami' => 1,
+        ));
     }
 }
-?>
