@@ -19,7 +19,7 @@
     
     <?php
             
-            $annonce = htmlspecialchars($_GET['id'] );
+            $annonce = htmlspecialchars($_GET['id_logement'] );
             $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=$annonce ");
 
             $donnees = $recherche_id->fetch()
@@ -69,7 +69,7 @@
                     <li class="membres"> <?php echo $donnees['nb_chambres'] ;?> Chambres
                     </li>
 
-                    <li class="membres">  <?php echo $donnees['Nb_salles_bains'] ;?> salles de bains
+                    <li class="membres">  <?php echo $donnees['nb_salles_bains'] ;?> salles de bains
                     </li>
 
                     </div>
@@ -129,7 +129,7 @@
                   Consulter profil
                 </button>
                 <button type="button" class="bouton">
-                    <a href="echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id"]; ?>&logement=<?php echo $donnees["id"] ;?>">Proposer un échange</a>
+                    <a href="echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"] ;?>">Proposer un échange</a>
                 </button>
                 </section>
 

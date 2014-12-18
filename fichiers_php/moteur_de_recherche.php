@@ -67,7 +67,7 @@ include('modeles.php');
 
                                 <div class="right">
                                     <span>
-                                    <a href="annonce.php?id=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>" >
+                                    <a href="annonce.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>" >
 					<?php echo '<p>' .''.$donnees['localisation']. ' </br>' . $donnees['nombre_voyageurs']. ' voyageurs </br>' . $donnees['type_logement'] . " </br>  ". $donnees['description_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
