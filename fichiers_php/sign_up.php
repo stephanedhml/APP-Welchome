@@ -1,5 +1,5 @@
 <!--Module d'inscription -->
-
+<!-- A Ajouter : obliger l'utilisateur à remplir tous les champs (sauf certains) sans quoi le formulaire n'est pas valide -->
 <?php
 	include("config.php");
     include("modeles.php");
@@ -23,7 +23,7 @@
         <div class="global">
             <?php
             //Vérification du bon envoi du formulaire
-            if(isset($_POST['username'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
+            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
             {
                 //On vérifie que les deux mots de passe coïncident
                 if($_POST['password']==$_POST['passverif'])
@@ -97,14 +97,7 @@
                     $form=true;
                     $message="Les mots de passe rentrés ne sont pas identiques.";
                 }
-            }
-            else
-            {
-                //Le formulaire n'a pas été bien envoyé
-                $form=true;
-            }
-            if(isset($_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement']))
-            {
+
                 $req = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
                 $req->execute(array
                 (
@@ -113,8 +106,11 @@
                     'type_logement' => $_POST['type_logement'],
                     'id_users' => $new_id,
                 ));
-
-
+            }
+            else
+            {
+                //Le formulaire n'a pas été bien envoyé
+                $form=true;
             }
             if($form)
             {
@@ -125,17 +121,18 @@
             // On affiche le formulaire
             ?>
 			<div class="cadreinscrpt">
-            <div class="contentg">
                 <div class="signup_form1">
                 <form action="sign_up.php" method="post">
+                    <div class="content_gauche">
                     <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" /></br>
                     <br/><label for="password">Mot de passe<span class="small"> (6 caractères minimum)</span></label><br/><input type="password" name="password" /><br />
                     <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" /><br />
                     <br/><label for="email">Email</label><br/><input type="text" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
                     <br/><label for="avatar">Image perso<span class="small"> (facultatif)</span></label><br/><input type="text" name="avatar" value="<?php if(isset($_POST['avatar'])){echo htmlentities($_POST['avatar'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
+                    </div>
                     <div class="contentd1">
-                        <label for="nom_maison">Nom de votre logement</label><br/><input type="text" name="nom_maison"><br />
-                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" placeholder="Ex: Paris" /><br />
+                        <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" name="nom_maison"><br /><br/>
+                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" placeholder="Ex: Paris" /><br /><br/>
                         <label for="type_logement">Quel type de logement proposez vous ?</label><br />
                         <select name="type_logement">
                                 <option value="Studio"> Studio</option>
@@ -145,13 +142,12 @@
                                 <option value="Bungalow/gite"> Bungalow/gite</option>
                                 <option value="Bateau/péniche"> Bateau/péniche</option>
                                 <option value="Camping car"> Camping car</option>
-                        </select><br />
+                        </select><br /><br/>
                         <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
                         <input type="submit" value="Envoyer" id="btn_envoyer" />
                     </div>
                 </form>
                 </div>
-            </div>
             <!-- <div class="contentd2">
                 <div class="signup_form2">
 
