@@ -23,7 +23,7 @@
         <div class="global">
             <?php
             //Vérification du bon envoi du formulaire
-            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
+            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'],$_POST['lien_photo'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
             {
                 //On vérifie que les deux mots de passe coïncident
                 if($_POST['password']==$_POST['passverif'])
@@ -98,13 +98,19 @@
                     $message="Les mots de passe rentrés ne sont pas identiques.";
                 }
 
-                $req = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
-                $req->execute(array
+                $ret = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
+                $ret->execute(array
                 (
                     'localisation' => $_POST['localisation'],
                     'nom_maison' => $_POST['nom_maison'],
                     'type_logement' => $_POST['type_logement'],
                     'id_users' => $new_id,
+                ));
+                $new_logement = $bdd -> lastInsertId();
+                $res = $bdd -> prepare("INSERT INTO photo(id_logement,lien_photo) VALUES(:id_logement, :lien_photo)");
+                $res -> execute(array(
+                    'id_logement' => $new_logement,
+                    'lien_photo' => $_POST['lien_photo'],
                 ));
             }
             else
@@ -142,7 +148,8 @@
                                 <option value="Bungalow/gite"> Bungalow/gite</option>
                                 <option value="Bateau/péniche"> Bateau/péniche</option>
                                 <option value="Camping car"> Camping car</option>
-                        </select><br /><br/>
+                        </select><br />
+                        <label for="lien_photo">Photo (Lien)</label><br /><input type="text" name="lien_photo"><br/><br/>
                         <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
                         <input type="submit" value="Envoyer" id="btn_envoyer" />
                     </div>
