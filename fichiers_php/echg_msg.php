@@ -44,7 +44,7 @@ session_start();
                 "user1_want" => 1,
             ));
 
-            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message,echange) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange)");
+            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message,echange) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange)");
             $res -> execute(array(
                 "destinataire" => $_GET['proprietaire'],
                 "expediteur" => $_SESSION["userid"],
@@ -56,7 +56,7 @@ session_start();
 
                 if($derid = $bdd -> lastInsertId())
                 {
-                    $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
+                    $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_messages=?");
                     $nv -> execute(array($derid));
                     ?>
                     <div class="no_msg"><h7>Votre demande a bien été transmise !</h7><br/><br/>

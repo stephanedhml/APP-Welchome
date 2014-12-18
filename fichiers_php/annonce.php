@@ -19,8 +19,8 @@
     
     <?php
             
-            $annonce = htmlspecialchars($_GET['id'] );
-            $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
+            $annonce = htmlspecialchars($_GET['id_logement'] );
+            $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE id_logement=$annonce ");
 
             $donnees = $recherche_id->fetch()
 
@@ -33,7 +33,7 @@
             
     
     $annonce1 = htmlspecialchars($_GET['id_users'] );
-    $results =$bdd->query("SELECT * FROM users  WHERE id=$annonce1");
+    $results =$bdd->query("SELECT * FROM users  WHERE id_users=$annonce1");
     $donnees1 = $results->fetch()
     
 
@@ -55,27 +55,27 @@
                     
                     <div class="Titre">
 
-                    <h7 id="Titre1"><?php echo $donnees['Nom de la maison'] ;?>  </h7> <br></br>
+                    <h7 id="Titre1"><?php echo $donnees['nom_maison'] ;?>  </h7> <br></br>
 
-                    <h9 class="Localisation">  <?php echo $donnees['Localisation'] ;?>  </h9> <br></br>
+                    <h9 class="Localisation">  <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
                     
 
-                    <li class="membres"> Type de logement: <?php echo $donnees['Type_logement'] ;?>
+                    <li class="membres"> Type de logement: <?php echo $donnees['type_logement'] ;?>
                     </li>
                     
-                    <li class="membres">  <?php echo $donnees['Nombre_voyageurs']  ;?> voyageurs
+                    <li class="membres">  <?php echo $donnees['nombre_voyageurs']  ;?> voyageurs
                     </li>
 
-                    <li class="membres"> <?php echo $donnees['Nb de chambres'] ;?> Chambres
+                    <li class="membres"> <?php echo $donnees['nb_chambres'] ;?> Chambres
                     </li>
 
-                    <li class="membres">  <?php echo $donnees['Nb de salles de bains'] ;?> salles de bains
+                    <li class="membres">  <?php echo $donnees['nb_salles_bains'] ;?> salles de bains
                     </li>
 
                     </div>
 
                     <div id="banniere_image">
-                        <?php echo '<img  align="left" src="'.$donnees ['Liendelaphoto'].'" class="Photo">' ?>
+                        <?php echo '<img  align="left" src="'.$donnees ['lien_photo'].'" class="Photo">' ?>
                            
                             <div id="banniere_description">
                                 
@@ -95,7 +95,7 @@
                 <div id="bloc2">
                     
                     <aside id="Description">
-                    <?php echo $donnees['Description'];?>           
+                    <?php echo $donnees['description_logement'];?>
                 
                     
                         
@@ -125,11 +125,11 @@
                     <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
                     <h7 class="Norma2"> Membre depuis 2014 </h7> <br> </br>
 
-                <button type="button" onclick="self.location.href='profil.php?id=<?php echo $donnees['id']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton">
+                <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton">
                   Consulter profil
                 </button>
                 <button type="button" class="bouton">
-                    <a href="echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id"]; ?>&logement=<?php echo $donnees["id"] ;?>">Proposer un échange</a>
+                    <a href="echg_msg.php?demandeur=<?php echo $_SESSION["userid"];?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"] ;?>">Proposer un échange</a>
                 </button>
                 </section>
 

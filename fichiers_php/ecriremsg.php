@@ -36,11 +36,11 @@ session_start();
         $userid = $_SESSION["userid"];
         //On fait correspondre le pseudo du destinataire avec son id
         $destinataire = $_POST["destinataire"];
-        $req = $bdd -> prepare("SELECT id FROM users WHERE username = ? ");
+        $req = $bdd -> prepare("SELECT id_users FROM users WHERE username = ? ");
         $req -> execute(array($destinataire));
         $dn = $req -> fetch();
 
-        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
+        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_messages,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
         $res -> execute(array(
             "destinataire" => $dn[0],
             "expediteur" => $userid,
@@ -52,7 +52,7 @@ session_start();
 
         if($derid = $bdd -> lastInsertId())
         {
-            $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
+            $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_messages=?");
             $nv -> execute(array($derid));
             ?>
             <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>

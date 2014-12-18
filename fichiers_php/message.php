@@ -42,7 +42,7 @@ session_start();
                 <?php
                 for ($x = 0 ; $x < $nb_friend ; $x++) {
                     $user_friend = $req->fetch();
-                    $requst = $bdd -> prepare("SELECT username FROM users INNER JOIN favoris ON users.id=favoris.id_ami WHERE users.id=?");
+                    $requst = $bdd -> prepare("SELECT username FROM users INNER JOIN favoris ON users.id_users=favoris.id_ami WHERE users.id_users=?");
                     $requst -> execute(array($user_friend[0]));
                     $usr_friend_name = $requst->fetch();
                     ?>
@@ -60,7 +60,7 @@ session_start();
                 echo '<div class="accept_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/></div>';
             }
             $req = $bdd -> prepare("
-              SELECT id_expediteur, titre, date_update, id, lu_nonlu, echange FROM messages AS m1 WHERE id_destinataire=? ORDER BY id DESC
+              SELECT id_expediteur, titre_message, date_update, id_messages, lu_nonlu, echange FROM messages AS m1 WHERE id_destinataire=? ORDER BY id_messages DESC
               ");
             $req -> execute(array($_SESSION["userid"]));
             $nb = $req -> rowCount();
@@ -73,7 +73,7 @@ session_start();
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
                 for ($i=0 ; $i < $nb ; $i++) {
                     $msg_recu = $req -> fetch();
-                    $quser = $bdd -> prepare("SELECT username FROM users WHERE id=?");
+                    $quser = $bdd -> prepare("SELECT username FROM users WHERE id_users=?");
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
                     ?>

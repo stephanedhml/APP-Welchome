@@ -6,8 +6,8 @@ require("config.php");
 function recherche_annonce()
 {
     global $bdd;
-    $annonce = htmlspecialchars($_GET['id'] );
-    $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
+    $annonce = htmlspecialchars($_GET['id_logement'] );
+    $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE id_logement=$annonce ");
     $donnees = $recherche_id->fetch();
     return $donnees;
 }
@@ -18,7 +18,7 @@ function recuperer_psswd_user()
 {
     global $bdd;
 
-    $req = $bdd->prepare("SELECT password, id FROM users WHERE username = ?");
+    $req = $bdd->prepare("SELECT password, id_users FROM users WHERE username = ?");
     $req->execute(array($_POST['username']));
     $dn = $req->fetch();
     return $dn;
@@ -31,7 +31,7 @@ function recuperer_psswd_user()
 function resultats_requete_simple($requete)
 {
     global $bdd;
-    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE Localisation LIKE '%$requete%' OR logement.Type_logement LIKE '%$requete%' ORDER BY id DESC");
+    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE localisation LIKE '%$requete%' OR logement.type_logement LIKE '%$requete%' ORDER BY id_logement DESC");
     return $results;
 }
 
@@ -48,7 +48,7 @@ function inserer_annonce()
         $nb_chambres = $_POST['nb_chambres'];
         $nb_salle_bain = $_POST['nb_salle_bain'];
         $description = $_POST['description'];
-    $req = $bdd->prepare("INSERT INTO logement(Localisation,Type_endroit,Nom_maison,Nombre_voyageurs,Type_logement,Nb_chambres,Nb_salles_bain,superficie,Description)
+    $req = $bdd->prepare("INSERT INTO logement(localisation,type_endroit,nom_maison,nombre_voyageurs,type_logement,nb_chambres,nb_salles_bain,superficie,description_logement)
 VALUES($localisation,$lieu $nom_maison, $nb_personne, $logement, $nb_chambres, $nb_salle_bain,$surface, $description)");
 
     return $req;
@@ -60,7 +60,7 @@ function publier_annonce()
 {
     global $bdd;
 
-    $req = $bdd->prepare("INSERT INTO logement(Localisation,Type_endroit,Nom_maison,Nombre_voyageurs,Type_logement,Nb_chambres,Nb_salles_bain,superficie,Description)
+    $req = $bdd->prepare("INSERT INTO logement(localisation,type_endroit,nom_maison,nombre_voyageurs,type_logement,nb_chambres,nb_salles_bains,superficie,description_logement)
 VALUES(:localisation,:lieu, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain,:surface, :description)");
     $req->execute(array
     (
@@ -81,105 +81,89 @@ VALUES(:localisation,:lieu, :nom_maison, :nb_personne, :logement, :nb_chambres, 
 function resultats_requete_avancee()
 {
     global $bdd;
-    if (isset($_POST['ville'])) {
+
+    if (isset($_POST['ville']))
+    {
         $lieu = htmlspecialchars($_POST['ville']);
     }
-    if (isset($_POST['capacite'])) {
+    if (isset($_POST['capacite']))
+    {
         $capacite = htmlspecialchars($_POST['capacite']);
+        $message1 = "AND nombre_voyageurs >= $capacite";
     }
-    if (isset($_POST['type1'])) {
+    if (isset($_POST['type1']))
+    {
         $type1 = htmlspecialchars($_POST['type1']);
+        $message2 = " AND type_logement LIKE '%$type1%'";
     }
-    if (isset($_POST['type2'])) {
+    if (isset($_POST['type2']))
+    {
         $type2 = htmlspecialchars($_POST['type2']);
+        $message3 =  " AND type_logement LIKE '%$type2%'";
     }
-    if (isset($_POST['type3'])) {
+    if (isset($_POST['type3']))
+    {
         $type3 = htmlspecialchars($_POST['type3']);
+        $message4 =  " AND type_logement LIKE '%$type3%'";
     }
-    if (isset($_POST['type4'])) {
+    if (isset($_POST['type4']))
+    {
         $type4 = htmlspecialchars($_POST['type4']);
+        $message5 =  " AND type_logement LIKE '%$type4%'";
     }
-    if (isset($_POST['type5'])) {
+    if (isset($_POST['type5']))
+    {
         $type5 = htmlspecialchars($_POST['type5']);
+        $message6 =  " AND type_logement LIKE '%$type5%'";
     }
-    if (isset($_POST['type6'])) {
+    if (isset($_POST['type6']))
+    {
         $type6 = htmlspecialchars($_POST['type6']);
+        $message7 =  " AND type_logement LIKE '%$type6%'";
     }
-    if (isset($_POST['type7'])) {
+    if (isset($_POST['type7']))
+    {
         $type7 = htmlspecialchars($_POST['type7']);
+        $message8 =  " AND type_logement LIKE '%$type7%'";
     }
-    if (isset($_POST['surface_min'])) {
+    if (isset($_POST['surface_min']))
+    {
         $surface_min = htmlspecialchars($_POST['surface_min']);
-    }
-    if (isset($_POST['nb_room'])) {
-        $chambres = htmlspecialchars($_POST['nb_room']);
-    }
-    if (isset($_POST['nb_bathroom'])) {
-        $bathroom = htmlspecialchars($_POST['nb_bathroom']);
-    }
-    if (isset($_POST['lieu1'])) {
-        $lieu1 = htmlspecialchars($_POST['lieu1']);
-    }
-    if (isset($_POST['lieu2'])) {
-        $lieu2 = htmlspecialchars($_POST['lieu2']);
-    }
-    if (isset($_POST['lieu3'])) {
-        $lieu3 = htmlspecialchars($_POST['lieu3']);
-    }
-    if (isset($_POST['lieu4'])) {
-        $lieu4 = htmlspecialchars($_POST['lieu4']);
-    }
-
-
-
-    if (isset($capacite)) {
-        $message1 = "AND Nombre_voyageurs >= $capacite";
-    }
-    if (isset($type1)) {
-        $message2 = " AND Type_logement LIKE '%$type1%'";
-    }
-    if (isset($type2)) {
-        $message3 =  " AND Type_logement LIKE '%$type2%'";
-    }
-    if (isset($type3)) {
-        $message4 =  " AND Type_logement LIKE '%$type3%'";
-    }
-    if (isset($type4)) {
-        $message5 =  " AND Type_logement LIKE '%$type4%'";
-    }
-    if (isset($type5)) {
-        $message6 =  " AND Type_logement LIKE '%$type5%'";
-    }
-    if (isset($type6)) {
-        $message7 =  " AND Type_logement LIKE '%$type6%'";
-    }
-    if (isset($type7)) {
-        $message8 =  " AND Type_logement LIKE '%$type7%'";
-    }
-    if (isset($surface_min)) {
         $message9 =  "AND superficie >= $surface_min";
     }
-    if (isset($chambres)) {
-        $message10 = "AND Nb_chambres >= $chambres";
+    if (isset($_POST['nb_room']))
+    {
+        $chambres = htmlspecialchars($_POST['nb_room']);
+        $message10 = "AND nb_chambres >= $chambres";
     }
-    if (isset($bathroom)) {
-        $message11 = "AND Nb_salles_bain >= $bathroom";
+    if (isset($_POST['nb_bathroom']))
+    {
+        $bathroom = htmlspecialchars($_POST['nb_bathroom']);
+        $message11 = "AND nb_salles_bains >= $bathroom";
     }
-    if (isset($lieu1)) {
-        $message12 = " AND Type_endroit LIKE '%$lieu1%'";
+    if (isset($_POST['lieu1']))
+    {
+        $lieu1 = htmlspecialchars($_POST['lieu1']);
+        $message12 = " AND type_endroit LIKE '%$lieu1%'";
     }
-    if (isset($lieu2)) {
-        $message13 = " AND Type_endroit LIKE '%$lieu2%'";
+    if (isset($_POST['lieu2']))
+    {
+        $lieu2 = htmlspecialchars($_POST['lieu2']);
+        $message13 = " AND type_endroit LIKE '%$lieu2%'";
     }
-    if (isset($lieu3)) {
-        $message14 = " AND Type_endroit LIKE '%$lieu3%'";
+    if (isset($_POST['lieu3']))
+    {
+        $lieu3 = htmlspecialchars($_POST['lieu3']);
+        $message14 = " AND type_endroit LIKE '%$lieu3%'";
     }
-    if (isset($lieu4)) {
-        $message15 =" AND Type_endroit LIKE '%$lieu4%'";
+    if (isset($_POST['lieu4']))
+    {
+        $lieu4 = htmlspecialchars($_POST['lieu4']);
+        $message15 =" AND type_endroit LIKE '%$lieu4%'";
     }
 
-    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE
- Localisation LIKE '%$lieu%'
+    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE
+ localisation LIKE '%$lieu%'
   $message1
   $message2
   $message3
@@ -195,7 +179,7 @@ function resultats_requete_avancee()
   $message13
   $message14
   $message15
-  ORDER BY id DESC");
+  ORDER BY id_logement DESC");
 
     return $results;
 }
@@ -227,7 +211,7 @@ function add_user_datas()
 global $bdd;
     // Hachage du mot de passe
 	$pass_hache = sha1($_POST["password"]);
-    $req = $bdd->prepare("INSERT INTO users(username,password,email,avatar,lastname,firstname,genre,tel) VALUES(:username, :password, :email, :avatar, :lastname, :firstname, :genre, :tel)");
+    $req = $bdd->prepare("INSERT INTO users(username,password,email,avatar,nom_user,prenom_user,genre,tel) VALUES(:username, :password, :email, :avatar, :lastname, :firstname, :genre, :tel)");
     $req->execute(array
     (
         'username' => $_POST["username"],
@@ -244,7 +228,7 @@ global $bdd;
 function recuperer_username()
 {
     global $bdd;
-    $req = $bdd->prepare('SELECT id FROM users WHERE username=?');
+    $req = $bdd->prepare('SELECT id_users FROM users WHERE username=?');
     $req->execute(array($_POST['username']));
     $res = $req->fetch();
 
