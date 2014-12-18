@@ -56,7 +56,7 @@ function resultats_requete_avancée()
 
     $results =$bdd->query("SELECT * FROM logement WHERE Localisation LIKE '%$lieu%'
                                                   
-ORDER BY id DESC");
+ORDER BY id_logement DESC");
     //cherche comment afficher le contenu des cases cocher dans la requete
     
     return $results;
