@@ -116,7 +116,7 @@ session_start();
                     $id = $_GET['id'];
                     echo '
                             <div class="no_msg_answer"><p id="btn_connexion">Envoyer un message</p></div>
-                            <div class="cadre_msg_answer"
+                            <div class="cadre_msg_answermsg"
                             <div class="contentg">
                                 <div class="msg_form">
                                     <form action="liremsg.php?id='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
