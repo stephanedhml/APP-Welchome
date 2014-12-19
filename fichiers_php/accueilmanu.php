@@ -40,17 +40,18 @@
 
                     <div class="wrapper" >
 
-
+                        <?php
+                        $req = $bdd -> prepare("SELECT lien_photo FROM photo ORDER BY id_logement DESC LIMIT 8");
+                        $req -> execute();
+                        ?>
 
                         <div class="carrousel">
-                            <div class="plan p1"><img src="../wall/wall7.jpg" alt="" class="w1"></div>
-                            <div class="plan p2"><img src="../wall/wall6.jpg" alt="" class="w2"></div>
-                            <div class="plan p3"><img src="../wall/wall5.jpg" alt="" class="w3"></div>
-                            <div class="plan p4"><img src="../wall/wall4.jpg" alt="" class="w4"></div>
-                            <div class="plan p5"><a href="http://www.google.fr"><img src="../wall/wall3.jpg" alt="" class="w5"></a></div>
-                            <div class="plan p6"><img src="../wall/wall2.jpeg" alt="" class="w6"></div>
-                            <div class="plan p7"><img src="../wall/wall1.jpg" alt="" class="w7"></div>
-                            <div class="plan p8"><img src="../wall/wall4.jpg" alt="" class="w8"></div>
+                            <?php for($i=1;$i<9;$i++) {
+                                $img_link=$req -> fetch();
+                                ?>
+                                <div class="plan p<?php echo $i ?>"><img src="<?php echo $img_link[0] ?>" class="w<?php echo $i ?>"></div>
+                                <?php
+                            }?>
                         </div>
 
                     </div>
