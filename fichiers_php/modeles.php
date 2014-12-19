@@ -34,7 +34,6 @@ function resultats_requete_simple($requete)
     $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE Localisation LIKE '%$requete%' OR logement.Type_logement LIKE '%$requete%' ORDER BY id_logement DESC");
     return $results;
 }
-
 //Fonction de publication_annonce
 function inserer_annonce()
 {
