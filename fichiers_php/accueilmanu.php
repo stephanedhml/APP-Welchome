@@ -43,13 +43,18 @@
                         <?php
                         $req = $bdd -> prepare("SELECT lien_photo FROM photo ORDER BY id_logement DESC LIMIT 8");
                         $req -> execute();
+                        $res = $bdd -> prepare("SELECT id_logement FROM photo ORDER BY id_logement DESC LIMIT 8");
+                        $res -> execute();
                         ?>
 
                         <div class="carrousel">
                             <?php for($i=1;$i<9;$i++) {
                                 $img_link=$req -> fetch();
+                                $id_logement=$res->fetch();
+                                $ret = $bdd -> query("SELECT id_users FROM logement WHERE id_logement=$id_logement[0]");
+                                $id_users=$ret->fetch();
                                 ?>
-                                <div class="plan p<?php echo $i ?>"><img src="<?php echo $img_link[0] ?>" class="w<?php echo $i ?>"></div>
+                                <div class="plan p<?php echo $i ?>"><a href="annonce.php?id_logement=<?php echo $id_logement[0] ?>&id_users=<?php echo $id_users[0] ?>"><img src="<?php echo $img_link[0] ?>" class="w<?php echo $i ?>"></a></div>
                                 <?php
                             }?>
                         </div>

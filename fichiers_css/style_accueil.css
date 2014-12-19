@@ -269,7 +269,7 @@ body
 }
 @-webkit-keyframes Caroussel{
 
-    from { -webkit-transform: translateX(-2500px); }
+    from { -webkit-transform: translateX(-2900px); }
     to { -webkit-transform: translateX(0px); }
 }
 
