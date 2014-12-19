@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!--Page d'accueil Welchome-->
 <!DOCTYPE html>
 <html>
@@ -8,7 +10,6 @@
 		<link rel="stylesheet" href="../style.css" />
 		<script type="text/javascript" src="../carrousel/jquery.js"></script>
 		<script type="text/javascript" src="../carrousel/carrousel.js"></script>
-        <?php session_start(); ?>
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<link rel="stylesheet" href="../carrousel_annonce/derniereannonce.css" />
 <script type="text/javascript" src="../carrousel/carrousel1.js"></script>
