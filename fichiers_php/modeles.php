@@ -7,7 +7,7 @@ function recherche_annonce()
 {
     global $bdd;
     $annonce = htmlspecialchars($_GET['id'] );
-    $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id=$annonce ");
+    $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE id_logement=$annonce ");
     $donnees = $recherche_id->fetch();
     return $donnees;
 }
@@ -78,110 +78,179 @@ VALUES(:localisation,:lieu, :nom_maison, :nb_personne, :logement, :nb_chambres, 
 }
 // Fonction de recherche_avancée.php
 
+
 function resultats_requete_avancee()
 {
     global $bdd;
-    if (isset($_POST['ville'])) {
+
+    if (isset($_POST['ville']) and $_POST['ville']!='')
+    {
         $lieu = htmlspecialchars($_POST['ville']);
     }
-    if (isset($_POST['capacite'])) {
+    else{}
+    if (isset($_POST['capacite']) and $_POST['capacite']!='')
+    {
         $capacite = htmlspecialchars($_POST['capacite']);
+        $message1 = "AND nombre_voyageurs >= $capacite";
     }
-    if (isset($_POST['type1'])) {
+    else
+    {
+        $message1="";
+    }
+    if (isset($_POST['type1']) and $_POST['type1']!='')
+    {
         $type1 = htmlspecialchars($_POST['type1']);
+        $message2 = " AND type_logement LIKE '%$type1%'";
     }
-    if (isset($_POST['type2'])) {
+    else
+    {
+        $message2="";
+    }
+    if (isset($_POST['type2']) and $_POST['type2']!='')
+    {
         $type2 = htmlspecialchars($_POST['type2']);
+        $message3 =  " AND type_logement LIKE '%$type2%'";
     }
-    if (isset($_POST['type3'])) {
+    else
+    {
+        $message3="";
+    }
+    if (isset($_POST['type3']) and $_POST['type3']!='')
+    {
         $type3 = htmlspecialchars($_POST['type3']);
+        $message4 =  " AND type_logement LIKE '%$type3%'";
     }
-    if (isset($_POST['type4'])) {
+    else
+    {
+        $message4="";
+    }
+    if (isset($_POST['type4']) and $_POST['type4']!='')
+    {
         $type4 = htmlspecialchars($_POST['type4']);
+        $message5 =  " AND type_logement LIKE '%$type4%'";
     }
-    if (isset($_POST['type5'])) {
+    else
+    {
+        $message5="";
+    }
+    if (isset($_POST['type5']) and $_POST['type5']!='')
+    {
         $type5 = htmlspecialchars($_POST['type5']);
+        $message6 =  " AND type_logement LIKE '%$type5%'";
     }
-    if (isset($_POST['type6'])) {
+    else
+    {
+        $message6="";
+    }
+    if (isset($_POST['type6']) and $_POST['type6']!='')
+    {
         $type6 = htmlspecialchars($_POST['type6']);
+        $message7 =  " AND type_logement LIKE '%$type6%'";
     }
-    if (isset($_POST['type7'])) {
+    else
+    {
+        $message7="";
+    }
+    if (isset($_POST['type7']) and $_POST['type7']!='')
+    {
         $type7 = htmlspecialchars($_POST['type7']);
+        $message8 =  " AND type_logement LIKE '%$type7%'";
     }
-    if (isset($_POST['surface_min'])) {
+    else
+    {
+        $message8="";
+    }
+    if (isset($_POST['surface_min']) and $_POST['surface_min']!='')
+    {
         $surface_min = htmlspecialchars($_POST['surface_min']);
-    }
-    if (isset($_POST['nb_room'])) {
-        $chambres = htmlspecialchars($_POST['nb_room']);
-    }
-    if (isset($_POST['nb_bathroom'])) {
-        $bathroom = htmlspecialchars($_POST['nb_bathroom']);
-    }
-    if (isset($_POST['lieu1'])) {
-        $lieu1 = htmlspecialchars($_POST['lieu1']);
-    }
-    if (isset($_POST['lieu2'])) {
-        $lieu2 = htmlspecialchars($_POST['lieu2']);
-    }
-    if (isset($_POST['lieu3'])) {
-        $lieu3 = htmlspecialchars($_POST['lieu3']);
-    }
-    if (isset($_POST['lieu4'])) {
-        $lieu4 = htmlspecialchars($_POST['lieu4']);
-    }
-
-
-
-    if (isset($capacite)) {
-        $message1 = "AND Nombre_voyageurs >= $capacite";
-    }
-    if (isset($type1)) {
-        $message2 = " AND Type_logement LIKE '%$type1%'";
-    }
-    if (isset($type2)) {
-        $message3 =  " AND Type_logement LIKE '%$type2%'";
-    }
-    if (isset($type3)) {
-        $message4 =  " AND Type_logement LIKE '%$type3%'";
-    }
-    if (isset($type4)) {
-        $message5 =  " AND Type_logement LIKE '%$type4%'";
-    }
-    if (isset($type5)) {
-        $message6 =  " AND Type_logement LIKE '%$type5%'";
-    }
-    if (isset($type6)) {
-        $message7 =  " AND Type_logement LIKE '%$type6%'";
-    }
-    if (isset($type7)) {
-        $message8 =  " AND Type_logement LIKE '%$type7%'";
-    }
-    if (isset($surface_min)) {
         $message9 =  "AND superficie >= $surface_min";
     }
-    if (isset($chambres)) {
-        $message10 = "AND Nb_chambres >= $chambres";
+    else
+    {
+        $message9="";
     }
-    if (isset($bathroom)) {
-        $message11 = "AND Nb_salles_bain >= $bathroom";
+    if (isset($_POST['nb_room']) and $_POST['nb_room']!='')
+    {
+        $chambres = htmlspecialchars($_POST['nb_room']);
+        $message10 = "AND nb_chambres >= $chambres";
     }
-    if (isset($lieu1)) {
-        $message12 = " AND Type_endroit LIKE '%$lieu1%'";
+    else
+    {
+        $message10="";
     }
-    if (isset($lieu2)) {
-        $message13 = " AND Type_endroit LIKE '%$lieu2%'";
+    if (isset($_POST['nb_bathroom']) and $_POST['nb_bathroom']!='')
+    {
+        $bathroom = htmlspecialchars($_POST['nb_bathroom']);
+        $message11 = "AND nb_salles_bains >= $bathroom";
     }
-    if (isset($lieu3)) {
-        $message14 = " AND Type_endroit LIKE '%$lieu3%'";
+    else
+    {
+        $message11="";
     }
-    if (isset($lieu4)) {
-        $message15 =" AND Type_endroit LIKE '%$lieu4%'";
+    if (isset($_POST['lieu1']) and $_POST['lieu1']!='')
+    {
+        $lieu1 = htmlspecialchars($_POST['lieu1']);
+        $message12 = " AND type_endroit LIKE '%$lieu1%'";
+    }
+    else
+    {
+        $message12="";
+    }
+    if (isset($_POST['lieu2']) and $_POST['lieu2']!='')
+    {
+        $lieu2 = htmlspecialchars($_POST['lieu2']);
+        $message13 = " AND type_endroit LIKE '%$lieu2%'";
+    }
+    else
+    {
+        $message13="";
+    }
+    if (isset($_POST['lieu3']) and $_POST['lieu3']!='')
+    {
+        $lieu3 = htmlspecialchars($_POST['lieu3']);
+        $message14 = " AND type_endroit LIKE '%$lieu3%'";
+    }
+    else
+    {
+        $message14="";
+    }
+
+    if (isset($_POST['lieu4']) and $_POST['lieu4']!='')
+    {
+        $lieu4 = htmlspecialchars($_POST['lieu4']);
+        $message15 =" AND type_endroit LIKE '%$lieu4%'";
+    }
+    else
+    {
+        $message15="";
     }
 
 
+
+    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE
+ localisation LIKE '%$lieu%'
+  $message1
+ $message2
+  $message3
+  $message4
+  $message5
+  $message6
+  $message7
+  $message8
+  $message9
+  $message10
+  $message11
+  $message12
+  $message13
+  $message14
+  $message15
+
+    ORDER BY id_logement DESC");
 
     return $results;
 }
+
+
 
 
  /*AND Nombre_voyageurs >= $capacite
