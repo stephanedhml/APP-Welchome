@@ -27,7 +27,7 @@ include('modeles.php');
 
         <?php
 			// on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
-			if(isset($_POST['requete']) && $_POST['requete'] != '' && $_POST['requete'] !=NULL)
+			if(isset($_POST['requete']) && $_POST['requete'] != NULL) 
 			{
 
 				// on crée une variable $requete pour faciliter l'écriture de la requête SQL.
@@ -94,14 +94,12 @@ include('modeles.php');
 			}
 			else
 			{ // HTML
-                echo '<body onload=" alert(\'Entre un champ Connard !\')">';
-// puis on le redirige vers la page d'accueil
-                echo '<meta http-equiv="refresh" content="0;URL=accueilmanu.php">';
-
+		?>
+		<?php
 			}
 		?>
 	</p>
-</div>
+  </div>
 </div>
 <?php
 include("footer2.php");
