@@ -65,7 +65,7 @@ while ( $row = $result->fetch() )
 	}
 	if ($i==2)
 	{
-	echo '<div class="plan p2"><img class="w2" src="'.$row['lien_photo'].'"/></span> </div>';
+	echo '<div class="plan p2"><a href="annonce.php?id_logement='.echo $donnees['id_logement'];.'&amp;id_users='.echo $donnees['id_users'];.'" ><img class="w2" src="'.$row['lien_photo'].'"/></span> </div>';
 	}
 	if ($i==3)
 	{
