@@ -61,11 +61,11 @@ while ( $row = $result->fetch() )
 	}*/
 	if ($i==1)
 	{
-	echo '<div class="plan p1"><a href="annonce.php"><img class="w1" src="'.$row['lien_photo'].'"/></a></span> </div>';
+	echo '<div class="plan p1"><a href="annonce.php?id-logement='."><img class="w1" src="'.$row['lien_photo'].'"/></a></span> </div>';
 	}
 	if ($i==2)
 	{
-	echo '<div class="plan p2"><a href="annonce.php?id_logement='.echo $donnees['id_logement'];.'&amp;id_users='.echo $donnees['id_users'];.'" ><img class="w2" src="'.$row['lien_photo'].'"/></span> </div>';
+	echo '<div class="plan p2"><a href="annonce.php"><img class="w1" src="'.$row['lien_photo'].'"/></a></span> </div>';
 	}
 	if ($i==3)
 	{
