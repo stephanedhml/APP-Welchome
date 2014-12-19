@@ -10,9 +10,11 @@
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css"/>
-        <link rel="stylesheet" href="../fichiers_css/annonce.css"/>        
+        <link rel="stylesheet" href="../fichiers_css/annonce.css"/>    
+           <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="js/owlcarroussel/owl.carousel.css" rel="stylesheet">    
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
-        <title>Maison Provence</title>
+        <title>Annonce</title>
     </head>
     
     <body>
@@ -104,6 +106,67 @@
                 
 
                 </div>
+
+                <div id="bloc3">
+
+                    
+
+
+     <div class="carousel">
+        <div class="item">
+
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+
+        </div>
+        <div class="item">
+
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
+
+        </div>  
+
+        <div class="item">
+
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+
+        </div>
+        <div class="item">
+
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
+
+        </div>  
+        <div class="item">
+
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+
+        </div>
+        <div class="item">
+
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
+
+        </div>  
+        <div class="item">
+
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+
+        </div>
+        <div class="item">
+
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
+
+        </div>  
+        
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <script src="js/owlcarroussel/owl.carousel.min.js"></script>
+     <script src="js/app.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+                </div>
+            </div>
 
                 <article class= "commentaire">
                     Equipements <br> </br>
