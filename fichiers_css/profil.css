@@ -1,9 +1,7 @@
 #bloc_page_profil
 {
-   
-    margin: auto;
     padding-top: 45px;
-    padding-left: 210px;
+    margin-left: 20%;
     background-image: url("pattern-5jn1.png"); 
 }
 
@@ -231,7 +229,9 @@ padding-top: 10px;
 
 
 }
+.bloc_profil_gauche {
 
+}
 #Titre2
 
 {

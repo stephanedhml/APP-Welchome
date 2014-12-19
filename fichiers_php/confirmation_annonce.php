@@ -2,7 +2,7 @@
 include("config.php");
 include("modeles.php");
 
-$re = $bdd->prepare("INSERT INTO logement(Localisation,Nom_maison,Nombre_voyageurs,Type_logement,Nb_chambres,Nb_salles_bain,Description) VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain, :description)");
+$re = $bdd->prepare("INSERT INTO logement(localisation,nom_maison,nombre_voyageurs,type_logement,nb_chambres,nb_salles_bains,description_logement) VALUES(:localisation, :nom_maison, :nb_personne, :logement, :nb_chambres, :nb_salle_bain, :description)");
 $re->execute(array
 (
     'localisation' => $_POST['localisation'],

@@ -53,14 +53,16 @@
 
 <body class="body_profil">
     <div id="bloc_page_profil">
-    <div id="Salutations">
-         <?php echo '<img   src="'.$donnees ['avatar'].'"  class="profil">'  ?>
-       
-        <div id="article1">
-            <h1 id="Bonjour"> <?php echo $donnees['username'] ;?>  </h1> 
-            
+        <div class="bloc_profil_gauche">
+            <div id="Salutations">
+                 <?php echo '<img   src="'.$donnees ['avatar'].'"  class="profil">'  ?>
+
+                <div id="article1">
+                    <h1 id="Bonjour"> <?php echo $donnees['username'] ;?>  </h1>
+
+                </div>
+            </div>
         </div>
-    </div>
    
 
     <article id="bloc_commentaires">
