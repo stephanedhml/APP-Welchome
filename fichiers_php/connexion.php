@@ -55,6 +55,8 @@ session_start();
 					//On récupère le mot de passe de l'utilisateur
                     $dn=recuperer_psswd_user();
 
+
+
 					//Puisque le mdp de la BDD est haché, on hache le mdp fourni par l'utilisateur
 					$pass_hache=sha1($password);
 					
@@ -65,7 +67,7 @@ session_start();
 						$form=false;
 						//On enregistre son pseudo et son identifiant dans la session
 						$_SESSION["username"]=$username;
-						$_SESSION["userid"]=$dn["id"];
+						$_SESSION["userid"]=$dn["id_users"];
 				?>
 
 						<div class="message">Vous avez bien été connecté !</br>
@@ -105,6 +107,7 @@ session_start();
 								<label for="password">Mot de passe </label><br/>
 								<input type="password" name="password" id="password" /><br /><br/>
 								<input type="submit" value="Connexion" id="btn_connexion" /><br/><br/>
+
 						</form>
                         </div>
                     </div>
