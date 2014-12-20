@@ -22,7 +22,7 @@
     <?php
             
             $annonce = htmlspecialchars($_GET['id_logement'] );
-            $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=$annonce ");
+            $recherche_id =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE id_logement=$annonce ");
 
             $donnees = $recherche_id->fetch()
 
