@@ -23,7 +23,7 @@
         <div class="global">
             <?php
             //Vérification du bon envoi du formulaire
-            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'],$_POST['lien_photo'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_POST['avatar']) and $_POST['username']!='')
+            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'], $_POST['password'], $_POST['passverif'], $_POST['email']) and $_POST['username']!='')
             {
                 //On vérifie que les deux mots de passe coïncident
                 if($_POST['password']==$_POST['passverif'])
@@ -45,15 +45,43 @@
                             if(!$res)
                             {
                                 //On insère les données saisies par l'utilisateur dans la BDD
-                                $req = $bdd->prepare('INSERT INTO users(username,password,email,avatar) VALUES(:username, :password, :email, :avatar)');
+                                $req = $bdd->prepare('INSERT INTO users(username,password,email) VALUES(:username, :password, :email)');
                                 $req->execute(array(
                                     'username' => $_POST["username"],
                                     'password' => $pass_hache,
                                     'email' => $_POST["email"],
-                                    'avatar' => $_POST["avatar"],
                                 ));
                                 $new_id = $bdd->lastInsertId();
-                                //On enregistre les infos dans la base de donnée
+
+                                //On importe la photo de profil envoyée par l'utilisateur sur le serveur
+                                $up_avatar_folder = "../photos_utilisateurs/{$new_id}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+                                if($_FILES['up_avatar']['error'] > 0 ) {echo "Une erreur est survenue lors de l'envoi de la photo";} else {
+                                    $resultat = move_uploaded_file($_FILES['up_avatar']['tmp_name'],$up_avatar_folder);
+                                }
+                                //On ajoute la photo de profil dans la BDD
+                                $res = $bdd -> query("UPDATE users SET avatar= '../photos_utilisateurs/{$new_id}.jpg' WHERE id_users=$new_id"); //A CORRIGER -> le fichier s'appelle id_logement.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 logement et plusieurs extensions possibles !
+
+                                //On enregistre le logement dans la base de donnée
+                                $ret = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
+                                $ret->execute(array
+                                (
+                                    'localisation' => $_POST['localisation'],
+                                    'nom_maison' => $_POST['nom_maison'],
+                                    'type_logement' => $_POST['type_logement'],
+                                    'id_users' => $new_id,
+                                ));
+                                $new_logement = $bdd -> lastInsertId();
+                                //Importer la photo du logement sur le serveur
+                                if($_FILES['upload_photo']['error'] > 0 ) {echo "Une erreur est survenue lors de l'envoi de la photo";} else {
+                                    $up_folder = "../photos_logement/{$new_logement}.jpg";
+                                    $resultat = move_uploaded_file($_FILES['upload_photo']['tmp_name'],$up_folder);
+                                }
+                                //Ajouter la photo du logement importée dans la BDD
+                                $res = $bdd -> prepare("INSERT INTO photo(id_logement,lien_photo) VALUES(:id_logement, :lien_photo)");
+                                $res -> execute(array(
+                                    'id_logement' => $new_logement,
+                                    'lien_photo' => $up_folder,
+                                ));
                                 if($bdd->lastInsertId())
                                 {
                                     //Si ça a fonctionné, on affiche pas le formulaire
@@ -97,21 +125,6 @@
                     $form=true;
                     $message="Les mots de passe rentrés ne sont pas identiques.";
                 }
-
-                $ret = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
-                $ret->execute(array
-                (
-                    'localisation' => $_POST['localisation'],
-                    'nom_maison' => $_POST['nom_maison'],
-                    'type_logement' => $_POST['type_logement'],
-                    'id_users' => $new_id,
-                ));
-                $new_logement = $bdd -> lastInsertId();
-                $res = $bdd -> prepare("INSERT INTO photo(id_logement,lien_photo) VALUES(:id_logement, :lien_photo)");
-                $res -> execute(array(
-                    'id_logement' => $new_logement,
-                    'lien_photo' => $_POST['lien_photo'],
-                ));
             }
             else
             {
@@ -128,13 +141,13 @@
             ?>
 			<div class="cadreinscrpt">
                 <div class="signup_form1">
-                <form action="sign_up.php" method="post">
+                <form action="sign_up.php" method="post" enctype="multipart/form-data">
                     <div class="content_gauche">
                     <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" /></br>
                     <br/><label for="password">Mot de passe<span class="small"> (6 caractères minimum)</span></label><br/><input type="password" name="password" /><br />
                     <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" /><br />
                     <br/><label for="email">Email</label><br/><input type="text" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
-                    <br/><label for="avatar">Image perso<span class="small"> (facultatif)</span></label><br/><input type="text" name="avatar" value="<?php if(isset($_POST['avatar'])){echo htmlentities($_POST['avatar'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
+                    <br/><label for="avatar">Image perso</label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
                     </div>
                     <div class="contentd1">
                         <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" name="nom_maison"><br /><br/>
@@ -149,7 +162,7 @@
                                 <option value="Bateau/péniche"> Bateau/péniche</option>
                                 <option value="Camping car"> Camping car</option>
                         </select><br />
-                        <label for="lien_photo">Photo (Lien)</label><br /><input type="text" name="lien_photo"><br/><br/>
+                        <label for="lien_photo">Photos</label><br /><input type="file" name="upload_photo" id="upload_photo"><br/><br/> <!-- Il faut ajouter la possibilité d'up plusieurs photos pour un même logement ! -->
                         <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
                         <input type="submit" value="Envoyer" id="btn_envoyer" />
                     </div>
