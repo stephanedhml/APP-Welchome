@@ -109,52 +109,53 @@
 
                 <div id="bloc3">
 
-                    
+
 
 
      <div class="carousel">
+         <!--
         <div class="item">
 
-          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%">
 
         </div>
         <div class="item">
 
-          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%">
 
-        </div>  
+        </div>
 
         <div class="item">
 
-          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%">
 
         </div>
         <div class="item">
 
-          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
-
-        </div>  
-        <div class="item">
-
-          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%">
 
         </div>
         <div class="item">
 
-          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
-
-        </div>  
-        <div class="item">
-
-          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%"> 
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%">
 
         </div>
         <div class="item">
 
-          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%"> 
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%">
 
-        </div>  
-        
+        </div>
+        <div class="item">
+
+          <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%">
+
+        </div>
+        <div class="item">
+
+          <img src= "http://media-cdn.tripadvisor.com/media/photo-s/01/99/43/8f/maison-marianel.jpg" width="100%">
+
+        </div>
+
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
