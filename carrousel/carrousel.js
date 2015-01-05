@@ -67,7 +67,7 @@ var carrousel=
 	play:function()
 	{
 		clearInterval(carrousel.timer);
-		carrousel.timer=window.setInterval("carrousel.next()",10000);
+		carrousel.timer=window.setInterval("carrousel.next()",5000);
 	},
 }
 $(function()
