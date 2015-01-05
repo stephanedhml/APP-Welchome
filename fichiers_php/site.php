@@ -49,7 +49,14 @@ session_start();
             ?>
 
         </table>
-        <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ; ?>" class="new_topic">Nouveau Sujet</a>
+        <?php
+        if(isset($_SESSION['userid'])){
+
+           echo ' <a href="new_topic.php?id_topic='. $_GET['id_cat'] .'" id="btn_connexion">Nouveau Sujet</a> ';
+        }
+        else {echo '<a href="sign_up.php" id="btn_connexion">Inscrivez vous pour lancer un sujet !</a>'; }
+        ?>
+
     </div>
 </div>
 </body>

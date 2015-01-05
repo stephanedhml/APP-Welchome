@@ -63,7 +63,10 @@ session_start();
             ));
             echo '<div class="no_msg_r"><p><h7>Votre message à bien été posté !</h7><br/><br/></p></div>';
             }
-        else { echo '
+        else {
+        if(isset($_SESSION['userid'])){
+
+            echo '
                         <div class="cadrec">
                                 <div class="connex1">
                                     <form action="topic.php?id_topic='. $_GET['id_topic'] .'" method="post">
@@ -74,6 +77,8 @@ session_start();
                                 </div>
                         </div>
                         ';
+        }
+        else {echo '<a href="sign_up.php" id="btn_connexion">Inscrivez vous pour répondre !</a>'; }
         }
         ?>
     </div>
