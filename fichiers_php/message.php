@@ -67,7 +67,7 @@ session_start();
 
 
             if ($nb == 0) {
-                echo '<div class="no_msg_r"><p><h7>Aucun message</h7><br/><br/><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
+                echo '<div class="no_msg_r"><p><h7>Aucun message</h7><br/><br/></p></div>';
             }
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
