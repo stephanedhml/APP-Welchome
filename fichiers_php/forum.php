@@ -38,7 +38,7 @@ session_start();
                     $cat = $req -> fetch();
                     ?>
                     <tr>
-                        <td><?php echo $cat[1]?></td>
+                        <td><a href="site.php?id_cat=<?php echo $cat[0]?>"><?php echo $cat[1]?></a></td>
                         <td><?php echo $cat[2]?></td>
                         <td><?php echo $cat[3]?></td>
                         <td><?php echo $cat[4]?></td>

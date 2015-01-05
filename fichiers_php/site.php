@@ -28,7 +28,8 @@ session_start();
                 <th>Dernier message</th>
             </tr>
             <?php
-            $req = $bdd -> query("SELECT * FROM forum_topic WHERE id_cat=2");
+            $req = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_cat=?");
+            $req -> execute(array($_GET['id_cat']));
             $nb = $req -> rowCount();
 
             if ($nb == 0) {echo "Il n'y a aucun sujet dans cette catégorie du forum";}
@@ -37,9 +38,9 @@ session_start();
                     $topic = $req -> fetch();
                     ?>
                     <tr>
-                        <td><?php echo $topic[2];?></td>
-                        <td><?php echo $topic[3];?></td>
-                        <td><?php echo $topic[4];?></td>
+                        <td><a href="topic.php?id_topic=<?php echo $topic[0]; ?>"><?php echo $topic[3];?></a></td>
+                        <td><?php echo $topic[5];?></td>
+                        <td><?php echo $topic[6];?></td>
                         <td><?php echo ""; ?></td>
                     </tr>
                     <?php
@@ -48,7 +49,7 @@ session_start();
             ?>
 
         </table>
-
+        <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ; ?>" class="new_topic">Nouveau Sujet</a>
     </div>
 </div>
 </body>
