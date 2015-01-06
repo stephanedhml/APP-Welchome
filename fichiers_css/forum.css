@@ -45,3 +45,27 @@
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }
+
+.cadre_topic_post {
+    position: relative;
+    width: 70%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+    border-width: 1px;
+    border-style: inset;
+    border-color: black;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+}
+
+.objet_field {
+    width: 30%;
+}
+
+.message_field {
+    width: 50%;
+    height: 40%;
+}
