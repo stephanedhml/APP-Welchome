@@ -36,7 +36,10 @@ session_start();
 
             echo "
             <tr>
-                <td><img src='$auteur[10]' class='img_member'></td>
+                <td>
+                <img src='$auteur[10]' class='img_member'><br/>
+                <p><a href='profil.php?id_logement=2&amp;id_users=$auteur[0]'>$auteur[1]</a></p>
+                </td>
                 <td>$premier_post[4]</td>
             </tr>
             ";
@@ -53,7 +56,10 @@ session_start();
                     $membre = $ret -> fetch();
                     ?>
                     <tr>
-                        <td><?php echo '<img src="'.$membre[10].'" class="img_member">';?></td>
+                        <td>
+                            <?php echo '<img src="'.$membre[10].'" class="img_member">';?></br>
+                            <p><a href="profil.php?id_logement=2&amp;id_users=<?php echo $membre[0]; ?>"><?php echo "$membre[1]";?></a></p>
+                        </td>
                         <td><?php echo $post[3];?></td>
                     </tr>
                 <?php
