@@ -38,16 +38,26 @@ session_start();
             $req -> execute(array($_GET['id_cat']));
             $nb = $req -> rowCount();
 
-            if ($nb == 0) {echo " ";}
+            $ret = $bdd -> prepare("SELECT last_message FROM forum_forum WHERE id_cat=?");
+            $ret -> execute(array($_GET['id_cat']));
+
+            if ($nb == 0) {echo "";}
             else {
                 for ($i=0;$i<$nb;$i++) {
                     $topic = $req -> fetch();
+                    $last = $ret -> fetch();
+
+                    $last2 = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                    $last2 -> execute(array($last[0]));
+                    $lastf = $last2 -> fetch();
+
+
                     ?>
                     <tr>
                         <td><a href="topic.php?id_topic=<?php echo $topic[0]; ?>"><?php echo $topic[3];?></a></td>
                         <td><?php echo $topic[5];?></td>
                         <td><?php echo $topic[6];?></td>
-                        <td><?php echo ""; ?></td>
+                        <td><?php echo $lastf[1];?></td>
                     </tr>
                     <?php
                 }

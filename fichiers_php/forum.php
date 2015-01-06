@@ -36,12 +36,17 @@ session_start();
             else {
                 for ($i=0 ; $i < $nb ; $i++) {
                     $cat = $req -> fetch();
+
+                    $last = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                    $last -> execute(array($cat[4]));
+                    $lastf = $last -> fetch();
+
                     ?>
                     <tr>
-                        <td><a href="site.php?id_cat=<?php echo $cat[0]?>"><?php echo $cat[1]?></a></td>
-                        <td><?php echo $cat[2]?></td>
-                        <td><?php echo $cat[3]?></td>
-                        <td><?php echo $cat[4]?></td>
+                        <td><a href="site.php?id_cat=<?php echo $cat[0]?>"><?php echo $cat[1];?></a></td>
+                        <td><?php echo $cat[2];?></td>
+                        <td><?php echo $cat[3];?></td>
+                        <td><?php echo ''.$lastf[1].'';?></td>
                     </tr>
                     <?php
                 }
