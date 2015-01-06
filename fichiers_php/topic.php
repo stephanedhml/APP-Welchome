@@ -26,13 +26,18 @@ session_start();
                 <th>Messages</th>
             </tr>
             <?php
-            $ret = $bdd -> prepare("SELECT topic_first_post FROM forum_topic WHERE id_topic=?");
+            $ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
             $ret -> execute(array($_GET['id_topic']));
             $premier_post = $ret -> fetch();
+
+            $res = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+            $res -> execute(array($premier_post[2]));
+            $auteur = $res -> fetch();
+
             echo "
             <tr>
-                <td></td>
-                <td>$premier_post[0]</td>
+                <td><img src='$auteur[10]' class='img_member'></td>
+                <td>$premier_post[4]</td>
             </tr>
             ";
 
@@ -40,11 +45,15 @@ session_start();
             $req -> execute(array($_GET['id_topic']));
             $nb = $req -> rowCount();
 
+
                 for ($i=0;$i<$nb;$i++) {
                     $post = $req -> fetch();
+                    $ret = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                    $ret -> execute(array($post[1]));
+                    $membre = $ret -> fetch();
                     ?>
                     <tr>
-                        <td></td>
+                        <td><?php echo '<img src="'.$membre[10].'" class="img_member">';?></td>
                         <td><?php echo $post[3];?></td>
                     </tr>
                 <?php

@@ -9,3 +9,9 @@
 .new_topic {
     padding-top: 150px;
 }
+
+.img_member {
+    border-radius:65px;
+    width:120px;
+    height:120px;
+}
