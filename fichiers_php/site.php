@@ -54,7 +54,7 @@ session_start();
 
                     ?>
                     <tr>
-                        <td><a href="topic.php?id_topic=<?php echo $topic[0]; ?>"><?php echo $topic[3];?></a></td>
+                        <td><a href="topic.php?id_topic=<?php echo $topic[0]; ?>&id_cat=<?php echo $_GET['id_cat']; ?>"><?php echo $topic[3];?></a></td>
                         <td><?php echo $topic[5];?></td>
                         <td><?php echo $topic[6];?></td>
                         <td><?php echo $lastf[1];?></td>
