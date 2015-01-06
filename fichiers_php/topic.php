@@ -4,6 +4,8 @@ include("modeles.php");
 include("../menu_responsive/javascript/menu_responsive.js");
 
 session_start();
+$rez = $bdd -> prepare("UPDATE forum_topic SET nb_views=nb_views+1 WHERE id_topic=?");
+$rez -> execute(array($_GET['id_topic']));
 ?>
 <html>
 <head>
@@ -76,6 +78,9 @@ session_start();
                 'id_topic' => $_GET['id_topic'],
                 'message' => $_POST['message'],
             ));
+            $rez = $bdd -> prepare("UPDATE forum_topic SET nb_answer=nb_answer+1 WHERE id_topic=?");
+            $rez -> execute(array($_GET['id_topic']));
+
             echo '<div class="no_msg_r"><p><h7>Votre message à bien été posté !</h7><br/><br/></p></div>';
             }
         else {

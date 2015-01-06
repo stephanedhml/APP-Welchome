@@ -5,7 +5,13 @@
     margin-top: 7%;
     width: 70%;
 }
-
+.tableau_site {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    width: 70%;
+}
 .new_topic {
     padding-top: 150px;
 }
@@ -52,7 +58,7 @@
     height: 500px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 1%;
 
     border-width: 1px;
     border-style: inset;
@@ -68,4 +74,23 @@
 .message_field {
     width: 50%;
     height: 40%;
+}
+
+#btn_new_topic {
+    margin-left: 76%;
+    margin-top: 120px;
+
+    background-color: #78909C;
+    border: 1px solid transparent;
+    border-bottom: 3px solid #37474F;
+    color: #fff;
+    display: inline-block;
+    width: 170px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    text-shadow: 1px 1px 0px #283744;
+    font-size: 11pt;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
 }
