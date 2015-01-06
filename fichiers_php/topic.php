@@ -76,11 +76,11 @@ session_start();
         if(isset($_SESSION['userid'])){
 
             echo '
-                        <div class="cadrec">
-                                <div class="connex1">
+                        <div class="cadre_answer_post">
+                                <div class="answer1">
                                     <form action="topic.php?id_topic='. $_GET['id_topic'] .'" method="post">
-                                        <label for="password">Message</label><br/>
-                                        <input type="text" name="message" id="message" /><br /><br/>
+                                        <label for="password">Message</label><br/></br>
+                                        <input type="text" name="message" class="post_message" /><br /><br/>
                                         <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
