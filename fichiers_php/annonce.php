@@ -59,19 +59,22 @@
 
                     <h7 id="Titre1"><?php echo $donnees['nom_maison'] ;?>  </h7> <br></br>
 
-                    <h9 class="Localisation">  <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
+                    <h9 class="Localisation">  <img src="location2.png" width="0.7%"> <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
                     
 
-                    <li class="membres"> Type de logement: <?php echo $donnees['type_logement'] ;?>
+                    <li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?>
                     </li>
                     
-                    <li class="membres">  <?php echo $donnees['nombre_voyageurs']  ;?> voyageurs
+                    <li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?> voyageurs
                     </li>
 
                     <li class="membres"> <?php echo $donnees['nb_chambres'] ;?> Chambres
                     </li>
 
-                    <li class="membres">  <?php echo $donnees['nb_salles_bains'] ;?> salles de bains
+                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?> salles de bains
+                    </li>
+
+                    <li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²
                     </li>
 
                     </div>
@@ -85,7 +88,7 @@
                             </div>
                     </div>
                     
-                    <aside id="dscription1">
+                    <aside id="description1">
 
                          
 
@@ -113,7 +116,7 @@
 
 
      <div class="carousel">
-         <!--
+         
         <div class="item">
 
           <img src= "http://www.construction-contemporaine.com/wp-content/uploads/2011/01/maison-architecte-cubique-blanche.jpg" width="100%">
@@ -168,15 +171,79 @@
 
                 </div>
             </div>
+            
+
+
+               <?php
+
+                $annonce = htmlspecialchars($_GET['id_logement'] );
+                $req1 = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=? ");
+                $req1 -> execute(array($annonce));
+                
+
+                ?>
+
 
                 <article class= "commentaire">
-                    Equipements <br> </br>
-                    <li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Lave vaiselle </li><br></br>
-                    <li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">Internet Wifi </li><br></br>
-                    <li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">Piscine </li><br></br>
-                    <li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">Terrasse </li><br></br>
-                    <li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">Parking </li><br></br>
-                    <li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">Cheminée </li><br></br>
+                    Equipements: <br> </br>
+
+                    <?php
+
+                $donnees3 = $req1 -> fetch();
+                
+
+                if ($donnees3['television'] == 1) {
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Television </li><br></br>';
+                }
+                
+
+                  ?>
+
+                  
+
+                  <?php
+
+                if ($donnees3['machine_a_laver'] == 1) {
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Machine a laver </li><br></br>';
+                }
+                
+                  ?>
+
+                   <?php
+
+                if ($donnees3['parking'] == 1) {
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Parking </li><br></br>';
+                }
+                
+                  ?>
+
+                   <?php
+
+                if ($donnees3['climatisation'] == 1) {
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Climatisation </li><br></br>';
+                }
+                
+                  ?>
+
+                   <?php
+
+                if ($donnees3['piscine'] == 1) {
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Piscine </li><br></br>';
+                }
+                
+                  ?>
+
+                   <?php
+
+                if ($donnees3['jardin'] == 1) {
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Jardin </li><br></br>';
+                }
+                
+                  ?>
+
+
+                    
+
 
                 </article>
 
