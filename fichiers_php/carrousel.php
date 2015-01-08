@@ -1,7 +1,7 @@
 <div id="partie1">
 				<div id="slide1" class="slide">
 					<h1>
-						Vos vacances à portée de mains gratuitement
+						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
@@ -12,7 +12,7 @@
 				
 				<div id="slide2" class="slide">
 					<h1>
-						Vos vacances à portée de mains gratuitement
+						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
@@ -23,7 +23,7 @@
 				
 				<div id="slide3" class="slide">
 					<h1>
-						Vos vacances à portée de mains gratuitement
+						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
@@ -34,7 +34,7 @@
 				
 				<div id="slide4" class="slide">
 					<h1>
-						Vos vacances à portée de mains gratuitement
+						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"
@@ -45,7 +45,7 @@
 				
 				<div id="slide5" class="slide">
 					<h1>
-						Vos vacances à portée de mains gratuitement
+						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="Saisir une destination"

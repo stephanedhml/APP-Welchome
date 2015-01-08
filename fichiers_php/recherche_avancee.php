@@ -25,63 +25,63 @@ session_start();
 	<form method="post" action="cible_recherche.php">
 <div class="container_advanced_search">
     <div class="bloc_search_left">
-        <p>Dans quelle ville souhaitez-vous aller ?</p>
+        <p><?php echo choixville;?></p>
         <input type="text" name="ville" />
-	   <p>Par quel(s) type(s) de logement êtes vous interessé?<br/>
+	   <p><?php echo choixlogement; ?><br/>
            <div class="liste_deroulante1">
-                <input type="checkbox" name="type1" id="case" value="studio"/> <label for="case">un studio</label><br/>
-                <input type="checkbox" name="type2" id="case" value="appart"/> <label for="case">un appartement</label><br/>
-                <input type="checkbox" name="type3" id="case" value="maison"/> <label for="case">une maison</label><br/>
-                <input type="checkbox" name="type4" id="case" value="pavillon"/> <label for="case">un pavillon</label><br/>
-                <input type="checkbox" name="type5" id="case" value="bungalow"/> <label for="case">un bungalow ou un gîte</label><br/>
-                <input type="checkbox" name="type6" id="case" value="bateau"/> <label for="case">un bateau ou une péniche</label><br/>
-                <input type="checkbox" name="type7" id="case" value="camping"/> <label for="case">un camping car</label><br/>
+                <input type="checkbox" name="type1" id="case" value="studio"/> <label for="case"><?php echo studio;?></label><br/>
+                <input type="checkbox" name="type2" id="case" value="appart"/> <label for="case"><?php echo appartement;?></label><br/>
+                <input type="checkbox" name="type3" id="case" value="maison"/> <label for="case"><?php echo maison;?></label><br/>
+                <input type="checkbox" name="type4" id="case" value="pavillon"/> <label for="case"><?php echo pavillon;?></label><br/>
+                <input type="checkbox" name="type5" id="case" value="bungalow"/> <label for="case"><?php echo bungalow;?></label><br/>
+                <input type="checkbox" name="type6" id="case" value="bateau"/> <label for="case"><?php echo bateau;?></label><br/>
+                <input type="checkbox" name="type7" id="case" value="camping"/> <label for="case"><?php echo campingcar;?></label><br/>
            </div>
             <br/>
 
-        <p>Veuillez entrez les dates qui vous conviennent:<br/>
-          de <input type="date" name="d1" placeholder="JJ/MM/AAAA"> à <input type="date" name="d2" placeholder="JJ/MM/AAAA"></p>
+        <p><?php echo choixdates;?><br/>
+          <?php echo de;?> <input type="date" name="d1" placeholder="JJ/MM/AAAA"> <?php echo à;?> <input type="date" name="d2" placeholder="JJ/MM/AAAA"></p>
     </div>
     <div class="bloc_search_center">
-        <p>Entrez la capacité d'accueil qui vous intéresse.<br/>
+        <p><?php echo capacitéaccueil;?><br/>
         <input type="number" name="capacite" value="Capacité d'accueil" min="0"></p>
 
-        Combien de chambres voulez-vous?<br />
+        <?php echo nbchambres;?><br />
         <input type="number" name="nb_room" min="0"/>
         </p>
 
         <p>
-            Combien de salles de bain voulez-vous ?<br />
+            <?php echo nbsallesbain;?><br />
             <input type="number" name="nb_bathroom" min="0" />
         </p>
 
 
-        <p>Entrer la surface minimale du logement que vous souhaitez.<br/>
+        <p><?php echo surfacemin;?><br/>
         <input type="number" name="surface_min" value="Surface minimale" min="0"></p>
 
-        <p>Avez-vous des préférences parmi les propositions suivantes ?<br/>
-        <input type="checkbox" name="lieu1" id="case" value="banlieu"/> <label for="case">Banlieue</label><br/>
-        <input type="checkbox" name="lieu2" id="case" value="campagne"/> <label for="case">Campagne</label><br/>
-        <input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case">Montagne</label><br/>
-        <input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case">Ville</label><br/></p>
+        <p><?php echo choixpreferences;?><br/>
+        <input type="checkbox" name="lieu1" id="case" value="banlieu"/> <label for="case"><?php echo banlieue;?></label><br/>
+        <input type="checkbox" name="lieu2" id="case" value="campagne"/> <label for="case"><?php echo campagne;?></label><br/>
+        <input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/>
+        <input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case"><?php echo ville;?></label><br/></p>
 
     </div>
 
     <div class="bloc_search_right">
 
-        <p>Cochez les attributs qui vous intéressent<br/><br/>
-        <input type="checkbox" name="case01" id="case" value="animaux"/> <label for="case">Animaux acceptés</label><br/>
-        <input type="checkbox" name="case02" id="case" value="clim"/> <label for="case">Climatisation</label><br/>
-        <input type="checkbox" name="case03" id="case" value="chauffage"/> <label for="case">Chauffage</label><br/>
-        <input type="checkbox" name="case04" id="case" value="laver"/> <label for="case">Machine à laver</label><br/>
-        <input type="checkbox" name="case05" id="case" value="sèche linge"/> <label for="case">Sèche linge</label><br/>
-        <input type="checkbox" name="case06" id="case" value="cheminée"/> <label for="case">Cheminée</label><br/>
-        <input type="checkbox" name="case07" id="case" value="télé"/> <label for="case">Télévision</label><br/>
-        <input type="checkbox" name="case08" id="case" value="parking"/> <label for="case">Parking</label><br/>
-        <input type="checkbox" name="case09" id="case" value="piscine"/> <label for="case">Piscine</label><br/>
-        <input type="checkbox" name="case010" id="case" value="jardin"/> <label for="case">Jardin</label><br/>
-        <input type="checkbox" name="case011" id="case" value="balcon"/> <label for="case">Balcon</label><br/>
-        <input type="checkbox" name="case012" id="case" value="wifi"/> <label for="case">Internet en wifi</label><br/><br/></p>
+        <p><?php echo choixattribut;?><br/><br/>
+        <input type="checkbox" name="case01" id="case" value="animaux"/> <label for="case"><?php echo animaux;?></label><br/>
+        <input type="checkbox" name="case02" id="case" value="clim"/> <label for="case"><?php echo climatisation;?></label><br/>
+        <input type="checkbox" name="case03" id="case" value="chauffage"/> <label for="case"><?php echo chauffage;?></label><br/>
+        <input type="checkbox" name="case04" id="case" value="laver"/> <label for="case"><?php echo machinelaver;?></label><br/>
+        <input type="checkbox" name="case05" id="case" value="sèche linge"/> <label for="case"><?php echo sechelinge;?></label><br/>
+        <input type="checkbox" name="case06" id="case" value="cheminée"/> <label for="case"><?php echo cheminee;?></label><br/>
+        <input type="checkbox" name="case07" id="case" value="télé"/> <label for="case"><?php echo tele;?></label><br/>
+        <input type="checkbox" name="case08" id="case" value="parking"/> <label for="case"><?php echo parking;?></label><br/>
+        <input type="checkbox" name="case09" id="case" value="piscine"/> <label for="case"><?php echo piscine;?></label><br/>
+        <input type="checkbox" name="case010" id="case" value="jardin"/> <label for="case"><?php echo jardin;?></label><br/>
+        <input type="checkbox" name="case011" id="case" value="balcon"/> <label for="case"><?php echo balcon;?></label><br/>
+        <input type="checkbox" name="case012" id="case" value="wifi"/> <label for="case"><?php echo internet;?></label><br/><br/></p>
 
             <p><input type="submit" value="Valider" id="btn_valider"/></p><br/>
 

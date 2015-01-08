@@ -33,7 +33,7 @@
 			<div id="partie2">
 				<div class="h2_p2">
 					<p>
-						Trouvez un logement qui vous correspond
+						<?php echo intro; ?>
 					</p>
 				</div>
 				<div class="schema1">
