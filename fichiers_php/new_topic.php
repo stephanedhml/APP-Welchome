@@ -29,6 +29,9 @@ session_start();
                     'nom_topic' => $_POST['objet'],
                     'message' => $_POST['message'],
                 ));
+                $rez = $bdd -> prepare("UPDATE forum_forum SET nb_message=nb_message+1 WHERE id_cat=?");
+                $rez -> execute(array($_GET['id_topic']));
+
                 echo '<div class="no_msg_r"><p><h7>Votre sujet à bien été posté, ainsi que le premier message</h7><br/><br/></p></div>';
             }
         else { echo '

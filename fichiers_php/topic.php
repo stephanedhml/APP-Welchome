@@ -4,6 +4,8 @@ include("modeles.php");
 include("../menu_responsive/javascript/menu_responsive.js");
 
 session_start();
+$rez = $bdd -> prepare("UPDATE forum_topic SET nb_views=nb_views+1 WHERE id_topic=?");
+$rez -> execute(array($_GET['id_topic']));
 ?>
 <html>
 <head>
@@ -76,6 +78,12 @@ session_start();
                 'id_topic' => $_GET['id_topic'],
                 'message' => $_POST['message'],
             ));
+            $rez = $bdd -> prepare("UPDATE forum_topic SET nb_answer=nb_answer+1 WHERE id_topic=?");
+            $rez -> execute(array($_GET['id_cat']));
+
+            $lst = $bdd -> prepare("UPDATE forum_forum SET last_message=? WHERE id_cat=?");
+            $lst -> execute(array($_SESSION['userid'],$_GET['id_cat']));
+
             echo '<div class="no_msg_r"><p><h7>Votre message à bien été posté !</h7><br/><br/></p></div>';
             }
         else {
@@ -84,7 +92,7 @@ session_start();
             echo '
                         <div class="cadre_answer_post">
                                 <div class="answer1">
-                                    <form action="topic.php?id_topic='. $_GET['id_topic'] .'" method="post">
+                                    <form action="topic.php?id_topic='. $_GET['id_topic'] .'&id_cat='. $_GET['id_cat'] .'" method="post">
                                         <label for="password">Message</label><br/></br>
                                         <input type="text" name="message" class="post_message" /><br /><br/>
                                         <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
