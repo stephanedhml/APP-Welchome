@@ -64,6 +64,12 @@ function veriflieu()
     }
 }
 
+function affichage(id,message)
+{
+    document.getElementById(id).innerHTML =  message;
+    return true;
+}
+
 function verifpassword()
 {
 
@@ -138,14 +144,6 @@ function verifinscription()
 
     else
     {
-       verifpassword();
-       verifusername();
-       verifnom();
-       verifegalite();
-       verifemail(document.getElementById('email'));
-       veriflieu();
-
-
 
         return false;
     }

@@ -144,15 +144,15 @@
                 <div class="signup_form1">
                 <form action="sign_up.php" method="post" enctype="multipart/form-data" onsubmit="return verifinscription()">
                     <div class="content_gauche">
-                    <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" id="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="return verifusername()" /><span id="user"></span></br>
-                    <br/><label for="password">Mot de passe<span class="small"> (6 caractères minimum)</span></label><br/><input id="password" type="password" name="password" onblur="return verifpassword()"/><span id="psd"></span><br />
-                    <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" onblur="return verifegalite(this)"/><span id="psd2"></span><br />
-                    <br/><label for="email">Email</label><br/><input type="text" id="email" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="return verifemail(this)"/><span id="mail"></span><br />
+                    <label for="username">Nom d'utilisateur</label><br/><input type="text"  name="username" id="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername()" /><span id="user"></span></br>
+                    <br/><label for="password">Mot de passe</label><br/><input id="password" onclick="document.getElementById('psd').innerHTML =  '6 caractères minimum';" type="password" name="password" onblur="verifpassword()"/><span id="psd"></span><br />
+                    <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" onblur="verifegalite(this)"/><span id="psd2"></span><br />
+                    <br/><label for="email">Email</label><br/><input type="text" id="email" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="verifemail(this)"/><span id="mail"></span><br />
                     <br/><label for="avatar">Image perso</label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
                     </div>
                     <div class="contentd1">
-                        <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" id="home" name="nom_maison" onblur="return verifnom()"><span id="nom"></span><br/><br/>
-                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" id="land" placeholder="Ex: Paris" onblur="return veriflieu()"/><span id="lieu"></span><br /><br/>
+                        <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" onclick="document.getElementById('nom').innerHTML =  'Soyez inspiré'" id="home" name="nom_maison" onblur="verifnom()"><span id="nom"></span><br/><br/>
+                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" onclick="document.getElementById('lieu').innerHTML =  'La ville de préférence'" id="land" placeholder="Ex: Paris" onblur="veriflieu()"/><span id="lieu"></span><br /><br/>
                         <label for="type_logement">Quel type de logement proposez vous ?</label><br />
                         <select name="type_logement" id="choix">
                                 <option value="Studio"> Studio</option>

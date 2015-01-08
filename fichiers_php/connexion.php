@@ -104,9 +104,9 @@ session_start();
 						<div class="connex1">
 						<form action="connexion.php" method="post" onsubmit="return verifconnexion()">
 								<label for="username" id="username_form"> Nom d'utilisateur </label><br/>
-								<input type="text" name="username" id="username" onblur="return verifusername()" /><span id="user"></span><br /><br/>
+								<input type="text" name="username" id="usernom" onblur="return tchekusername()" /><span id="user"></span><br /><br/>
 								<label for="password">Mot de passe </label><br/>
-								<input type="password" name="password" id="passwd" onblur="return verifpassword()"/><span id="mdp"></span><br /><br/>
+								<input type="password" name="password" id="passwd" onblur="return tchekpassword()"/><span id="mdp"></span><br /><br/>
 								<input type="submit" value="Connexion" id="btn_connexion" /><br/><br/>
 
 						</form>

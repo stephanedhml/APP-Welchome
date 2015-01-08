@@ -2,14 +2,6 @@
  * Created by marvin on 06/01/15.
  */
 
-function surligne(champ, erreur)
-{
-    if(erreur)
-        champ.style.backgroundColor = "#fba";
-    else
-        champ.style.backgroundColor = "";
-}
-
 
 
 function rouge(champ,erreur)
@@ -26,7 +18,7 @@ function rouge(champ,erreur)
         champ.style.backgroundColor = "";
         }
 }
-
+/*
 function verif_pseudo(champ) {
     if (document.getElementById('username').value != "") {
         rouge(champ, true);
@@ -43,12 +35,13 @@ function verif_pseudo(champ) {
         return true;
     }
 }
-function verifusername()
+*/
+function tchekusername()
 {
-    if(document.getElementById('username').value == "")
+    if(document.getElementById('usernom').value == "")
     {
 
-rouge(document.getElementById('username'),true);
+rouge(document.getElementById('usernom'),true);
 
 
         document.getElementById('user').innerHTML =  'Entrez votre username';
@@ -57,11 +50,12 @@ rouge(document.getElementById('username'),true);
     }
     else
     {
-        rouge(document.getElementById('username'),false);
+        rouge(document.getElementById('usernom'),false);
+
         return true;
     }
 }
-function verifpassword()
+function tchekpassword()
 {
 
     if(document.getElementById('passwd').value == "")
@@ -93,30 +87,17 @@ function verifpassword()
 
 function verifconnexion()
 {
-    var passwdOk=verifpassword();
-    var usernameOk=verifusername();
+    var passwdOk=tchekpassword();
+    var usernameOk=tchekusername();
 
     if (passwdOk && usernameOk)
     {
     return true;
     }
-    else if (!passwdOk && !usernameOk)
-    {
-        verifusername();
-        verifpassword();
-        return false;
-    }
-    else if(!usernameOk)
-    {
-        verifusername();
-        return false;
-    }
     else
     {
-
-        return passwdOk;
+    return false;
     }
-
 
 }
 
