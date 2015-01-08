@@ -64,13 +64,30 @@
 
                 <div class="h2_p2">
                     <p>
-                        Nouvelles technologies pour vous !
+                        Les dernières annonces
                     </p>
                 </div>
 
-                <div class="schema2">
-                    <img src="../images_diverses/htmlcssjs_logo.png" class="html5_logo">
+                <div class="schema3">
+                   <div class="h3">
+                    <p>
+                        COMMENT ÇA MARCHE ?
+                    </p>
                 </div>
+                </div>
+
+                <div class="schema4">
+                    <div class="h3">
+                    <p>
+                        POINTS FORTS
+                    </p>
+                </div>
+
+                
+
+                <div class="schema5">
+                   <img src="../images_diverses/htmlcssjs_logo.png" class="html5_logo">
+
 			</div>
 			
 
