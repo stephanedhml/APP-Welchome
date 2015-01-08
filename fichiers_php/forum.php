@@ -21,7 +21,7 @@ session_start();
 <div class="superglobal">
     <div class="global">
 
-        <table class="tableau_forum_accueil">
+        <table class="tableau_forum_accueil0">
             <tr>
                 <th>Catégorie</th>
                 <th>Description</th>

@@ -6,6 +6,15 @@ include("../menu_responsive/javascript/menu_responsive.js");
 session_start();
 $rez = $bdd -> prepare("UPDATE forum_topic SET nb_views=nb_views+1 WHERE id_topic=?");
 $rez -> execute(array($_GET['id_topic']));
+
+$ret = $bdd -> prepare("SELECT * FROM forum_forum WHERE id_cat=?");
+$ret -> execute(array($_GET["id_cat"]));
+$name_cat = $ret -> fetch();
+
+$ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
+$ret -> execute(array($_GET["id_topic"]));
+$name_topic = $ret -> fetch();
+
 ?>
 <html>
 <head>
@@ -41,6 +50,18 @@ $rez -> execute(array($_GET['id_topic']));
                         <a href="topic.php?id_topic='.$_GET['id_topic'].'&id_cat='.$_GET['id_cat'].'" id="btn_see_msg">Voir votre message</a>
                   </div>';
         ?>
+
+
+        <div class="forum_top">
+            <div class="arborescence">
+                <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
+            </div>
+            <div class="forum_top_r_button">
+                <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+            </div>
+        </div>
+
+
         <table class="tableau_topic">
             <tr>
                 <th>Membre</th>
@@ -93,6 +114,16 @@ $rez -> execute(array($_GET['id_topic']));
         else {
         if(isset($_SESSION['userid'])){
             ?>
+
+            <div class="forum_top">
+                <div class="arborescence">
+                    <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
+                </div>
+                <div class="forum_top_r_button">
+                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                </div>
+            </div>
+
             <table class="tableau_forum_accueil">
                 <tr>
                     <th>Membre</th>
@@ -156,6 +187,17 @@ $rez -> execute(array($_GET['id_topic']));
         else {
             echo '<a href="sign_up.php" id="btn_new_topic3">Inscrivez vous pour répondre !</a>';
             ?>
+
+            <div class="forum_top">
+                <div class="arborescence">
+                    <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
+                </div>
+                <div class="forum_top_r_button">
+                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                </div>
+            </div>
+
+
             <table class="tableau_topic">
                 <tr>
                     <th>Membre</th>

@@ -1,8 +1,15 @@
-.tableau_forum_accueil {
+.tableau_forum_accueil0 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 7%;
+    width: 70%;
+}
+.tableau_forum_accueil {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
     width: 70%;
 }
 .tableau_site {
@@ -182,13 +189,14 @@
 }
 
 .arborescence {
+    padding-left: 5px;
+    padding-right: 5px;
     float: left;
     background-color: #78909C;
     border: 1px solid transparent;
     border-bottom: 3px solid #37474F;
     color: #fff;
     display: inline-block;
-    width: 170px;
     text-align: center;
     text-decoration: none;
     line-height: 40px;
