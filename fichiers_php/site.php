@@ -4,6 +4,10 @@ include("modeles.php");
 include("../menu_responsive/javascript/menu_responsive.js");
 
 session_start();
+
+$ret = $bdd -> prepare("SELECT * FROM forum_forum WHERE id_cat=?");
+$ret -> execute(array($_GET["id_cat"]));
+$name_cat = $ret -> fetch();
 ?>
 <html>
 <head>
@@ -22,7 +26,16 @@ session_start();
         <?php
         if(isset($_SESSION['userid'])){
 
-            echo ' <a href="new_topic.php?id_topic='. $_GET['id_cat'] .'" id="btn_new_topic">Nouveau Sujet</a> ';
+            echo '
+            <div class="forum_top">
+                <div class="arborescence">
+                    <a href="forum.php">Forum</a> -> <a href="site.php?id_cat='.$name_cat[0].'">'.$name_cat[1].'</a>
+                </div>
+                <div class="forum_top_r_button">
+                    <a href="new_topic.php?id_topic='. $_GET['id_cat'] .'" id="btn_new_topic">Nouveau Sujet</a>
+                </div>
+            </div>
+            ';
         }
         else {echo '<a href="sign_up.php" id="btn_new_topic2">Inscrivez vous pour lancer un sujet !</a>'; }
         ?>
@@ -59,7 +72,7 @@ session_start();
                         <td><?php echo $topic[6];?></td>
                         <td><?php echo $lastf[1];?></td>
                     </tr>
-                    <?php
+                <?php
                 }
             }
             ?>
