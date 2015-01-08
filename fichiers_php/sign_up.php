@@ -8,6 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="../fichier_js/inscription.js"></script>
         <link rel="stylesheet" href="../style.css" />
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
@@ -141,19 +142,19 @@
             ?>
 			<div class="cadreinscrpt">
                 <div class="signup_form1">
-                <form action="sign_up.php" method="post" enctype="multipart/form-data">
+                <form action="sign_up.php" method="post" enctype="multipart/form-data" onsubmit="return verifinscription()">
                     <div class="content_gauche">
-                    <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" /></br>
-                    <br/><label for="password">Mot de passe<span class="small"> (6 caractères minimum)</span></label><br/><input type="password" name="password" /><br />
-                    <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" /><br />
-                    <br/><label for="email">Email</label><br/><input type="text" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" /><br />
+                    <label for="username">Nom d'utilisateur</label><br/><input type="text" name="username" id="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="return verifusername()" /><span id="user"></span></br>
+                    <br/><label for="password">Mot de passe<span class="small"> (6 caractères minimum)</span></label><br/><input id="password" type="password" name="password" onblur="return verifpassword()"/><span id="psd"></span><br />
+                    <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" onblur="return verifegalite(this)"/><span id="psd2"></span><br />
+                    <br/><label for="email">Email</label><br/><input type="text" id="email" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="return verifemail(this)"/><span id="mail"></span><br />
                     <br/><label for="avatar">Image perso</label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
                     </div>
                     <div class="contentd1">
-                        <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" name="nom_maison"><br /><br/>
-                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" placeholder="Ex: Paris" /><br /><br/>
+                        <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" id="home" name="nom_maison" onblur="return verifnom()"><span id="nom"></span><br/><br/>
+                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" id="land" placeholder="Ex: Paris" onblur="return veriflieu()"/><span id="lieu"></span><br /><br/>
                         <label for="type_logement">Quel type de logement proposez vous ?</label><br />
-                        <select name="type_logement">
+                        <select name="type_logement" id="choix">
                                 <option value="Studio"> Studio</option>
                                 <option value="Appartement"> Appartement</option>
                                 <option value="Maison"> Maison</option>
@@ -161,7 +162,7 @@
                                 <option value="Bungalow/gite"> Bungalow/gite</option>
                                 <option value="Bateau/péniche"> Bateau/péniche</option>
                                 <option value="Camping car"> Camping car</option>
-                        </select><br />
+                        </select><span id="type"></span><br />
                         <label for="lien_photo">Photos</label><br /><input type="file" name="upload_photo" id="upload_photo"><br/><br/> <!-- Il faut ajouter la possibilité d'up plusieurs photos pour un même logement ! -->
                         <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
                         <input type="submit" value="Envoyer" id="btn_envoyer" />
