@@ -37,7 +37,16 @@ $name_cat = $ret -> fetch();
             </div>
             ';
         }
-        else {echo '<a href="sign_up.php" id="btn_new_topic2">Inscrivez vous pour lancer un sujet !</a>'; }
+        else {echo '
+                        <div class="forum_top">
+                            <div class="arborescence">
+                                 <a href="forum.php">Forum</a> -> <a href="site.php?id_cat='.$name_cat[0].'">'.$name_cat[1].'</a>
+                            </div>
+                            <div class="forum_top_r_button">
+                                 <a href="sign_up.php" id="btn_new_topic">Inscrivez vous pour lancer un sujet !</a>
+                            </div>
+                        </div>
+                    ';}
         ?>
         <table class="tableau_site">
             <tr>

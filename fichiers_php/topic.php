@@ -185,7 +185,6 @@ $name_topic = $ret -> fetch();
                         ';
         }
         else {
-            echo '<a href="sign_up.php" id="btn_new_topic3">Inscrivez vous pour répondre !</a>';
             ?>
 
             <div class="forum_top">
@@ -193,7 +192,7 @@ $name_topic = $ret -> fetch();
                     <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
                 </div>
                 <div class="forum_top_r_button">
-                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                    <a href="sign_up.php" id="btn_new_topic">Inscrivez vous pour répondre !</a>
                 </div>
             </div>
 
