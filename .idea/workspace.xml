@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fichier_js/connexion2.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/connexion.js" afterPath="$PROJECT_DIR$/fichier_js/connexion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/connexion.php" afterPath="$PROJECT_DIR$/fichiers_php/connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/inscription.js" afterPath="$PROJECT_DIR$/fichier_js/inscription.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/sign_up.php" afterPath="$PROJECT_DIR$/fichiers_php/sign_up.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -850,7 +845,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420690416244</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="javascript sur sign_up et connexion vers2">
+      <created>1420698144618</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1420698144618</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -896,7 +897,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Réel retour en arrière modif marvin" />
     <MESSAGE value="Ajout des modifs de marvin dans la branche recherche_avance" />
     <MESSAGE value="Module d'écriture dans la BDD opérationnel (mais incomplet dans le choix des destinataires)" />
     <MESSAGE value="Affiche les messages reçus dans des tableaux" />
@@ -921,7 +921,8 @@
     <MESSAGE value="derniere amélioration" />
     <MESSAGE value="modif sign up" />
     <MESSAGE value="javascript sur sign_up et connexion" />
-    <option name="LAST_COMMIT_MESSAGE" value="javascript sur sign_up et connexion" />
+    <MESSAGE value="javascript sur sign_up et connexion vers2" />
+    <option name="LAST_COMMIT_MESSAGE" value="javascript sur sign_up et connexion vers2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
