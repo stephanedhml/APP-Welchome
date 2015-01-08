@@ -24,7 +24,7 @@ session_start();
 
             echo ' <a href="new_topic.php?id_topic='. $_GET['id_cat'] .'" id="btn_new_topic">Nouveau Sujet</a> ';
         }
-        else {echo '<a href="sign_up.php" id="btn_connexion">Inscrivez vous pour lancer un sujet !</a>'; }
+        else {echo '<a href="sign_up.php" id="btn_new_topic2">Inscrivez vous pour lancer un sujet !</a>'; }
         ?>
         <table class="tableau_site">
             <tr>
