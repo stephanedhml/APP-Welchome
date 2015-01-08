@@ -19,18 +19,36 @@ function rouge(champ,erreur)
 }
 
 function verifnom() {
-    if (document.getElementById('home').value == "")
+    if (document.getElementById('homename').value == "")
     {
-        rouge(document.getElementById('home'), true);
-        document.getElementById('nom').innerHTML = 'Ce champ n\'est pas remplit';
+        rouge(document.getElementById('homename'), true);
+        document.getElementById('namehome').innerHTML = 'Ce champ n\'est pas remplit';
         return false;
     }
 
     else {
-        rouge(document.getElementById('home'), false);
+        rouge(document.getElementById('homename'), false);
         return true;
     }
 }
+
+function mdp()
+{
+    document.getElementById('psd').innerHTML =  '6 caractères minimum';
+    return true;
+}
+function nom()
+{
+    document.getElementById('namehome').innerHTML =  'Soyez inspiré';
+    return true;
+}
+
+function ville()
+{
+    document.getElementById('lieu').innerHTML =  'La ville de préférence';
+    return true;
+}
+
 function verifusername()
 {
     if(document.getElementById('username').value == "")

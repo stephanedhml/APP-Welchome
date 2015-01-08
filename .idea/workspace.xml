@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/connexion.php" afterPath="$PROJECT_DIR$/fichiers_php/connexion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/inscription.js" afterPath="$PROJECT_DIR$/fichier_js/inscription.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/sign_up.php" afterPath="$PROJECT_DIR$/fichiers_php/sign_up.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -198,8 +201,8 @@
       <file leaf-file-name="connexion.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichier_js/connexion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="1792">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1792">
+              <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -208,34 +211,34 @@
       <file leaf-file-name="inscription.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichier_js/inscription.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="2592">
-              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="2880">
+              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38917977" vertical-offset="2161" max-vertical-offset="3056">
-              <caret line="149" column="57" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
+            <state vertical-scroll-proportion="-3.4363637" vertical-offset="2227" max-vertical-offset="2992">
+              <caret line="151" column="228" selection-start-line="151" selection-start-column="228" selection-end-line="151" selection-end-column="228" />
               <folding>
-                <marker date="1420694834894" expanded="true" signature="2135:2178" placeholder="SELECT id_us..users..." />
-                <marker date="1420694834894" expanded="true" signature="2518:2597" placeholder="INSERT INTO ..." />
-                <marker date="1420694834894" expanded="true" signature="3735:3814" placeholder="UPDATE users..." />
-                <marker date="1420694834894" expanded="true" signature="4127:4257" placeholder="INSERT INTO ..." />
-                <marker date="1420694834894" expanded="true" signature="5349:5424" placeholder="INSERT INTO ..." />
+                <marker date="1420711335737" expanded="true" signature="2135:2178" placeholder="SELECT id_us..users..." />
+                <marker date="1420711335737" expanded="true" signature="2518:2597" placeholder="INSERT INTO ..." />
+                <marker date="1420711335737" expanded="true" signature="3735:3814" placeholder="UPDATE users..." />
+                <marker date="1420711335737" expanded="true" signature="4127:4257" placeholder="INSERT INTO ..." />
+                <marker date="1420711335737" expanded="true" signature="5349:5424" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8333335" vertical-offset="1508" max-vertical-offset="2112">
-              <caret line="106" column="78" selection-start-line="106" selection-start-column="78" selection-end-line="106" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.25827813" vertical-offset="1508" max-vertical-offset="2112">
+              <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="111" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -262,10 +265,10 @@
         <option value="$PROJECT_DIR$/fichier_js/connexion2.js" />
         <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
         <option value="$PROJECT_DIR$/fichiers_php/config.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
         <option value="$PROJECT_DIR$/fichier_js/connexion.js" />
-        <option value="$PROJECT_DIR$/fichier_js/inscription.js" />
+        <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
         <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+        <option value="$PROJECT_DIR$/fichier_js/inscription.js" />
       </list>
     </option>
   </component>
@@ -557,12 +560,6 @@
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
     </task>
-    <task id="LOCAL-00001" summary="Commit de fichiers qui devraient être ignorés...">
-      <created>1417720270356</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1417720270356</updated>
-    </task>
     <task id="LOCAL-00002" summary="Commit de fichiers qui devraient être ignorés...">
       <created>1417720406822</created>
       <option name="number" value="00002" />
@@ -851,7 +848,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420698144618</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="javascript sur sign_up et connexion vers2">
+      <created>1420698150982</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1420698150989</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1267,41 +1270,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8333335" vertical-offset="1508" max-vertical-offset="2112">
-          <caret line="106" column="78" selection-start-line="106" selection-start-column="78" selection-end-line="106" selection-end-column="78" />
-          <folding />
+        <state vertical-scroll-proportion="-3.4363637" vertical-offset="2227" max-vertical-offset="2992">
+          <caret line="151" column="228" selection-start-line="151" selection-start-column="228" selection-end-line="151" selection-end-column="228" />
+          <folding>
+            <marker date="1420711335737" expanded="true" signature="2135:2178" placeholder="SELECT id_us..users..." />
+            <marker date="1420711335737" expanded="true" signature="2518:2597" placeholder="INSERT INTO ..." />
+            <marker date="1420711335737" expanded="true" signature="3735:3814" placeholder="UPDATE users..." />
+            <marker date="1420711335737" expanded="true" signature="4127:4257" placeholder="INSERT INTO ..." />
+            <marker date="1420711335737" expanded="true" signature="5349:5424" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichier_js/inscription.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="2592">
-          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="2880">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichier_js/connexion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="1792">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1103" max-vertical-offset="1792">
+          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38917977" vertical-offset="2161" max-vertical-offset="3056">
-          <caret line="149" column="57" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
-          <folding>
-            <marker date="1420694834894" expanded="true" signature="2135:2178" placeholder="SELECT id_us..users..." />
-            <marker date="1420694834894" expanded="true" signature="2518:2597" placeholder="INSERT INTO ..." />
-            <marker date="1420694834894" expanded="true" signature="3735:3814" placeholder="UPDATE users..." />
-            <marker date="1420694834894" expanded="true" signature="4127:4257" placeholder="INSERT INTO ..." />
-            <marker date="1420694834894" expanded="true" signature="5349:5424" placeholder="INSERT INTO ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.25827813" vertical-offset="1508" max-vertical-offset="2112">
+          <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="111" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
