@@ -88,43 +88,43 @@
                                     //Si ça a fonctionné, on affiche pas le formulaire
                                     $form=false;
                                     ?>
-                                    <div class='message'>Vous avez bien été inscrit. Vous pouvez désormais vous connecter !
-                                        </br><a href="connexion.php">Se connecter</a></div>
+                                    <div class='message'><?php echo bieninscrit ;?>
+                                        </br><a href="connexion.php"><?php echo connect ?></a></div>
                                 <?php
                                 }
                                 else
                                 {
                                     //Sinon, il y a une erreur
                                     $form=true;
-                                    $message = "Une erreur est survenue lors de l'inscription.";
+                                    $message = erreurinscription;
                                 }
                             }
                             else
                             {
                                 //Si il existe déjà, on en informe l'utilisateur
                                 $form=true;
-                                $message="Désolé, ce pseudo est déjà pris !";
+                                $message=pseudopris;
                             }
                         }
                         else
                         {
                             //L'email n'est pas valide, message d'erreur
                             $form=true;
-                            $message="L'email rentrée n'est pas valide.";
+                            $message=wrongmail;
                         }
                     }
                     else
                     {
                         //Le mdp ne fait pas 6 caractères
                         $form=true;
-                        $message="Désolé, votre mot de passe doit faire au moins 6 caractères.";
+                        $message=password6;
                     }
                 }
                 else
                 {
                     //Les mdp ne coïncident pas
                     $form=true;
-                    $message="Les mots de passe rentrés ne sont pas identiques.";
+                    $message=passwordnotequal;
                 }
             }
             else
@@ -142,28 +142,28 @@
                 <div class="signup_form1">
                 <form action="sign_up.php" method="post" enctype="multipart/form-data" onsubmit="return verifinscription()">
                     <div class="content_gauche">
-                    <label for="username">Nom d'utilisateur</label><br/><input type="text"  name="username" id="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername()" /><span id="user"></span></br>
-                    <br/><label for="password">Mot de passe</label><br/><input id="password" onclick="mdp()" type="password" name="password" onblur="verifpassword()"/><span id="psd"></span><br />
-                    <br/><label for="passverif">Mot de passe<span class="small"> (vérification)</span></label><br/><input type="password" name="passverif" onblur="verifegalite(this)"/><span id="psd2"></span><br />
-                    <br/><label for="email">Email</label><br/><input type="text" id="email" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="verifemail(this)"/><span id="mail"></span><br />
-                    <br/><label for="avatar">Image perso</label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
+                    <label for="username"><?php echo username; ?></label><br/><input type="text"  name="username" id="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername()" /><span id="user"></span></br>
+                    <br/><label for="password"><?php echo password; ?></label><br/><input id="password" onclick="mdp()" type="password" name="password" onblur="verifpassword()"/><span id="psd"></span><br />
+                    <br/><label for="passverif"><?php echo password; ?><span class="small"><?php echo verification;?> </span></label><br/><input type="password" name="passverif" onblur="verifegalite(this)"/><span id="psd2"></span><br />
+                    <br/><label for="email"><?php  echo email;?></label><br/><input type="text" id="email" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="verifemail(this)"/><span id="mail"></span><br />
+                    <br/><label for="avatar"><?php echo imageperso; ?></label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
                     </div>
                     <div class="contentd1">
-                        <div class="top_form_inscription_right"><label for="nom_maison">Nom de votre logement</label></div><input type="text" onclick="nom()" id="homename" name="nom_maison" onblur="verifnom()"><span id="namehome"></span><br/><br/>
-                        <label for="location_logement">Où se situe votre logement ?</label><br /><input type="text" name="localisation" onclick="ville()" id="land" onblur="veriflieu()"/><span id="lieu"></span><br /><br/>
-                        <label for="type_logement">Quel type de logement proposez vous ?</label><br />
+                        <div class="top_form_inscription_right"><label for="nom_maison"><?php echo logementname; ?></label></div><input type="text" onclick="nom()" id="homename" name="nom_maison" onblur="verifnom()"><span id="namehome"></span><br/><br/>
+                        <label for="location_logement"><?php echo wherelogement; ?></label><br /><input type="text" name="localisation" onclick="ville()" id="land" onblur="veriflieu()"/><span id="lieu"></span><br /><br/>
+                        <label for="type_logement"><?php echo typelogement;?></label><br />
                         <select name="type_logement" id="choix">
-                                <option value="Studio"> Studio</option>
-                                <option value="Appartement"> Appartement</option>
-                                <option value="Maison"> Maison</option>
-                                <option value="Pavillon"> Pavillon</option>
-                                <option value="Bungalow/gite"> Bungalow/gite</option>
-                                <option value="Bateau/péniche"> Bateau/péniche</option>
-                                <option value="Camping car"> Camping car</option>
+                                <option value="Studio"><?php echo studio;?></option>
+                                <option value="Appartement"><?php echo appartement;?></option>
+                                <option value="Maison"><?php echo maison;?></option>
+                                <option value="Pavillon"><?php echo pavillon;?></option>
+                                <option value="Bungalow/gite"><?php echo bungalow;?></option>
+                                <option value="Bateau/péniche"><?php echo bateau;?></option>
+                                <option value="Camping car"><?php echo campingcar;?></option>
                         </select><span id="type"></span><br />
-                        <label for="lien_photo">Photos</label><br /><input type="file" name="upload_photo" id="upload_photo"><br/><br/> <!-- Il faut ajouter la possibilité d'up plusieurs photos pour un même logement ! -->
+                        <label for="lien_photo"><?php echo photo;?></label><br /><input type="file" name="upload_photo" id="upload_photo"><br/><br/> <!-- Il faut ajouter la possibilité d'up plusieurs photos pour un même logement ! -->
                         <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
-                        <input type="submit" value="Envoyer" id="btn_envoyer" />
+                        <input type="submit" value="<?php echo envoyer;?>" id="btn_envoyer" />
                     </div>
                 </form>
                 </div>

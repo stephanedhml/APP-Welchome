@@ -133,7 +133,7 @@ function verifpassword()
     var psswd = document.getElementById('password') ;
     var psswd2 = document.getElementById('password2') ;
 
-    if(psswd!=psswd2)
+    if(psswd !=psswd2)
     {
         rouge(champ, true);
         document.getElementById('psd2').innerHTML =  'Les mots de passe ne correspondent pas';

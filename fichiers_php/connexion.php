@@ -16,7 +16,7 @@ session_start();
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css" />
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
-        <title>Connexion</title>
+        <title><?php connect;?></title>
     </head>
 
 	<body class="wood">
@@ -34,8 +34,8 @@ session_start();
 				unset($_POST["username"],$_POST["userid"]);
 		?>
 
-				<div class="message">Vous avez bien été déconnecté !</br>
-					<a href="accueilmanu.php" class="btn_rtr_accueil">Retour à l'accueil</a>
+				<div class="message"><?php echo deconnexionsuccess;?></br>
+					<a href="accueilmanu.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
 				</div>
 
 				<?php
@@ -71,8 +71,8 @@ session_start();
 						$_SESSION["userid"]=$dn["id_users"];
 				?>
 
-						<div class="message">Vous avez bien été connecté !</br>
-							<a href="accueilmanu.php" class="btn_rtr_accueil">Retour à l'accueil</a>
+						<div class="message"><?php echo connexionsuccess;?></br>
+							<a href="accueilmanu.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
 						</div>
 
 		<?php
@@ -80,7 +80,7 @@ session_start();
 					else
 					{
 						$form=true;
-						$message = 'Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !';
+						$message = wrongpassword;
 					}
 				}
 				else
@@ -103,11 +103,11 @@ session_start();
                     <div class="contentgc">
 						<div class="connex1">
 						<form action="connexion.php" method="post" onsubmit="return verifconnexion()">
-								<label for="username" id="username_form"> Nom d'utilisateur </label><br/>
+								<label for="username" id="username_form"><?php echo username ?></label><br/>
 								<input type="text" name="username" id="usernom" onblur="tchekusername()" /><span id="user"></span><br /><br/>
-								<label for="password">Mot de passe </label><br/>
+								<label for="password"><?php echo password; ?></label><br/>
 								<input type="password" name="password" id="passwd" onblur="tchekpassword()"/><span id="mdp"></span><br /><br/>
-								<input type="submit" value="Connexion" id="btn_connexion" /><br/><br/>
+								<input type="submit" value="<?php echo connect;?>" id="btn_connexion" /><br/><br/>
 
 						</form>
                         </div>
