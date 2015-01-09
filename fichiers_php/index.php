@@ -70,9 +70,9 @@
 
                  <div class="schema3">
                    <div class="h3">
-                    <p>
+                    <h3>
                         Comment fonctionne Welchome.com
-                    </p>
+                    </h3>
                    
                     <li class="add">
                     <span>
