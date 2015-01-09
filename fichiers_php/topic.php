@@ -14,10 +14,13 @@ $name_cat = $ret -> fetch();
 $ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
 $ret -> execute(array($_GET["id_topic"]));
 $name_topic = $ret -> fetch();
+if (isset($_SESSION["userid"])) {
 
 $rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
 $rel -> execute(array($_SESSION['userid']));
 $user = $rel -> fetch();
+
+}
 
 ?>
 <html>
@@ -49,10 +52,11 @@ $user = $rel -> fetch();
             $lst = $bdd -> prepare("UPDATE forum_forum SET last_message=? WHERE id_cat=?");
             $lst -> execute(array($_SESSION['userid'],$_GET['id_cat']));
 
-            echo '<div class="msg_send">
+            header('Location: topic.php?id_topic='.$_GET['id_topic'] .' &id_cat='. $_GET['id_cat'].'');
+            /* echo '<div class="msg_send">
                         <p><h7>Votre message à bien été posté !</h7><br/><br/></p>
                         <a href="topic.php?id_topic='.$_GET['id_topic'].'&id_cat='.$_GET['id_cat'].'" id="btn_see_msg">Voir votre message</a>
-                  </div>';
+                  </div>'; */
         ?>
 
 
