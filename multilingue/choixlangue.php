@@ -29,7 +29,15 @@
 	if (isset($_GET['lang']))
 	{
 		if ($lang=='fr') 
-		{  
+		{
+		//Menu
+		define('accueil','Accueil');
+		define('rechercheavancee','Recherche avancée');
+		//connexion inscription deconnexion
+		define('profil','Profil');
+		define('disconnect','Se déconnecter');
+		define('faq','FAQ');
+		define('register','Inscription');
 		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
@@ -92,9 +100,23 @@
 		define('retouraccueil','Retour à l\'accueil');
 		define('connexionsuccess','Vous avez bien été connecté !');
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
+			//forum accueil
+		define('forum','Forum');
+		define('categorie','Catégorie');
+		define('description','Description');
+		define('nbmessages','Nb Messages');
+		define('lastmessage','Dernier message');
 		}
 		else if ($lang=='en') 
-		{  
+		{
+		//Menu
+		define('accueil','Homepage');
+		define('rechercheavancee','Advanced Research');
+		//connexion inscription deconnexion
+		define('profil','Profile');
+		define('disconnect','Disconnect');
+		define('faq','FLQ');
+		define('register','Register');		
 				//Accueil
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
@@ -157,12 +179,26 @@
 		define('retouraccueil','Back to homepage');
 		define('connexionsuccess','You success to connect !');
 		define('wrongpassword','Password or username incorrect, please try again');
+			//forum accueil
+		define('forum','Forum');
+		define('categorie','Category');
+		define('description','Description');
+		define('nbmessages','Nb of messages');
+		define('lastmessage','Last message');
 		}
 	}
 	else if (isset($_COOKIE['lang']))
 	{
 		if ($lang=='fr') 
 		{  
+		//Menu
+		define('accueil','Accueil');
+		define('rechercheavancee','Recherche avancée');
+				//connexion inscription deconnexion
+		define('profil','Profil');
+		define('disconnect','Se déconnecter');
+		define('faq','FAQ');
+		define('register','Inscription');
 				//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
@@ -225,9 +261,23 @@
 		define('retouraccueil','Retour à l\'accueil');
 		define('connexionsuccess','Vous avez bien été connecté !');
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
+				//forum accueil
+		define('forum','Forum');
+		define('categorie','Catégorie');
+		define('description','Description');
+		define('nbmessages','Nb Messages');
+		define('lastmessage','Dernier message');
 		}
 		else if ($lang=='en') 
 		{  
+		//Menu
+		define('accueil','Homepage');
+		define('rechercheavancee','Advanced research');
+				//connexion inscription deconnexion
+		define('profil','Profile');
+		define('disconnect','Disconnect');
+		define('faq','FLQ');
+		define('register','Register');
 			//Accueil
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
@@ -290,10 +340,24 @@
 		define('retouraccueil','Back to homepage');
 		define('connexionsuccess','You success to connect !');
 		define('wrongpassword','Password or username incorrect, please try again');
+			//forum accueil
+		define('forum','Forum');
+		define('categorie','Category');
+		define('description','Description');
+		define('nbmessages','Nb of messages');
+		define('lastmessage','Last message');
 		}
 	}
 	else
 	{  
+		//Menu
+		define('accueil','Accueil');
+		define('rechercheavancee','Recherche avancée');
+		//connexion inscription deconnexion
+		define('profil','Profil');
+		define('disconnect','Se déconnecter');
+		define('faq','FAQ');
+		define('register','Inscription');
 		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
@@ -356,6 +420,12 @@
 		define('retouraccueil','Retour à l\'accueil');
 		define('connexionsuccess','Vous avez bien été connecté !');
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
+		//forum accueil
+		define('forum','Forum');
+		define('categorie','Catégorie');
+		define('description','Description');
+		define('nbmessages','Nb Messages');
+		define('lastmessage','Dernier message');
 	}
 	
 }choixlangue();

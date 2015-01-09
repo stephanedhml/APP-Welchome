@@ -20,13 +20,13 @@ session_start();
 </header>
 <div class="superglobal">
     <div class="global">
-        <div class="forum_title"><h7>Forum</h7></div>
+        <div class="forum_title"><h7><?php echo forum ?></h7></div>
         <table class="tableau_forum_accueil0">
             <tr>
-                <th>Catégorie</th>
-                <th>Description</th>
-                <th>Nb Messages</th>
-                <th>Dernier message</th>
+                <th><?php echo categorie; ?></th>
+                <th><?php echo description; ?></th>
+                <th><?php echo nbmessages; ?></th>
+                <th><?php echo lastmessage; ?></th>
             </tr>
             <?php
             $req = $bdd -> query("SELECT * FROM forum_forum");
