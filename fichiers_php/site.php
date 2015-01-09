@@ -15,7 +15,7 @@ if (isset($_SESSION["userid"])) {
     $rel -> execute(array($_SESSION['userid']));
     $user = $rel -> fetch();
 
-} else {$user==NULL;}
+}
 
 ?>
 <html>
@@ -63,7 +63,7 @@ if (isset($_SESSION["userid"])) {
                 <th>Nb réponses</th>
                 <th>Nb vus</th>
                 <th>Dernier message</th>
-                <?php if($user[8]==1) {?> <th>Administration</th> <?php } ?>
+                <?php if (isset($_SESSION["userid"])) {if($user[8]==1) {?> <th>Administration</th> <?php } }?>
             </tr>
             <?php
             $req = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_cat=?");
@@ -90,7 +90,7 @@ if (isset($_SESSION["userid"])) {
                         <td><?php echo $topic[5];?></td>
                         <td><?php echo $topic[6];?></td>
                         <td><?php echo $lastf[1];?></td>
-                        <?php if($user[8]==1) {?> <td><a href='admin.php?del_topic=1&id_topic=<?php echo $topic[0]; ?>&id_cat=<?php echo $_GET['id_cat']; ?>'><img src='https://cdn3.iconfinder.com/data/icons/lynx/22x22/actions/dialog-close.png'></a></td> <?php } ?>
+                        <?php if (isset($_SESSION["userid"])) { if($user[8]==1) {?> <td><a href='admin.php?del_topic=1&id_topic=<?php echo $topic[0]; ?>&id_cat=<?php echo $_GET['id_cat']; ?>'><img src='https://cdn3.iconfinder.com/data/icons/lynx/22x22/actions/dialog-close.png'></a></td> <?php } } ?>
                     </tr>
                 <?php
                 }
