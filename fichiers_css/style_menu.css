@@ -79,9 +79,6 @@ nav a#pull {
 .btn_FORUM {
     width: 100px;
 }
-.btn_ACCUEIL {
-    width: 97px;
-}
 .btn_SECONNECTER {
     width: 120px;
 }
@@ -121,6 +118,10 @@ nav a#pull {
         position: fixed;
     }
 
+    .btn_ACCUEIL {
+        display: none;
+    }
+
     .lienaccueil {
         width: 40px;
         cursor: pointer;
@@ -135,15 +136,18 @@ nav a#pull {
 }
 
 @media only screen and (max-width : 949px) {
-    .drapeau {
+    .accueil {
         display: none;
     }
 
-    .liendrapeau {
+    .btn_ACCUEIL {
+        width: 97px;
+    }
+    .lienaccueil {
         display: none;
     }
 
-    .liendrapeau:hover, .liendrapeau:active {
+    .lienaccueil:hover, .lienaccueil:active {
         color: rgb(191, 185, 193);
     }
 
