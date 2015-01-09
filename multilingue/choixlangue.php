@@ -152,6 +152,11 @@
 		define('typelogement','Which type of tenement do you offer?');
 		define('photo','Pictures');
 		define('envoyer','Send');
+				//connexion
+		define('deconnexionsuccess','You successfully disconnect!');
+		define('retouraccueil','Back to homepage');
+		define('connexionsuccess','You success to connect !');
+		define('wrongpassword','Password or username incorrect, please try again');
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -280,6 +285,11 @@
 		define('typelogement','Which type of tenement do you offer?');
 		define('photo','Pictures');
 		define('envoyer','Send');
+		//connexion
+		define('deconnexionsuccess','You successfully disconnect!');
+		define('retouraccueil','Back to homepage');
+		define('connexionsuccess','You success to connect !');
+		define('wrongpassword','Password or username incorrect, please try again');
 		}
 	}
 	else
