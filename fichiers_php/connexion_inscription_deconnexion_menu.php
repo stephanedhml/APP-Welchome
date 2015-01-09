@@ -18,18 +18,18 @@ function check_new_msg()
         $req -> execute(array($_SESSION['userid']));
         $id_log = $req -> fetch();
 ?>
-        <li><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL">Profil</a></li>
+        <li><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
         <?php echo check_new_msg() ?>
-		<li><a href="connexion.php">Se déconnecter</a></li>
+		<li><a href="connexion.php"><?php echo disconnect ?></a></li>
 <?php
 	}
 	else
 	{
 	//Sinon, on lui donne un lien pour sinscrire et un autre pour se connecter
 ?>
-        <li><a href="#" class="btn_FAQ">FAQ</a></li>
-        <li><a href="sign_up.php">Inscription</a></li>
-	<li><a href="connexion.php" class="btn_SECONNECTER">Se connecter</a></li>
+        <li><a href="#" class="btn_FAQ"><?php echo faq;?></a></li>
+        <li><a href="sign_up.php"><?php echo inscription; ?></a></li>
+	<li><a href="connexion.php" class="btn_SECONNECTER"><?php echo connect;?></a></li>
 <?php
 	}
 ?>
