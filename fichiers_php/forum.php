@@ -20,7 +20,7 @@ session_start();
 </header>
 <div class="superglobal">
     <div class="global">
-
+        <div class="forum_title"><h7>Forum</h7></div>
         <table class="tableau_forum_accueil0">
             <tr>
                 <th>Catégorie</th>

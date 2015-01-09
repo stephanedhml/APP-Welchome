@@ -15,6 +15,10 @@ $ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
 $ret -> execute(array($_GET["id_topic"]));
 $name_topic = $ret -> fetch();
 
+$rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+$rel -> execute(array($_SESSION['userid']));
+$user = $rel -> fetch();
+
 ?>
 <html>
 <head>
@@ -112,7 +116,7 @@ $name_topic = $ret -> fetch();
         <?php
             }
         else {
-        if(isset($_SESSION['userid'])){
+        if(isset($_SESSION['userid']) AND $user[8]==0){
             ?>
 
             <div class="forum_top">
@@ -165,6 +169,80 @@ $name_topic = $ret -> fetch();
                             <p><a href="profil.php?id_logement=2&amp;id_users=<?php echo $membre[0]; ?>"><?php echo "$membre[1]";?></a></p>
                         </td>
                         <td><?php echo $post[3];?></td>
+                    </tr>
+                <?php
+                }
+                ?>
+
+            </table>
+            <?php
+            echo '
+                        <div class="cadre_answer_post">
+                                <div class="answer1">
+                                    <form action="topic.php?id_topic='. $_GET['id_topic'] .'&id_cat='. $_GET['id_cat'] .'" method="post">
+                                        <label for="message">Message</label><br/></br>
+                                        <input type="text" name="message" class="post_message" /><br /><br/>
+                                        <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
+                                    </form>
+                                </div>
+                        </div>
+                        ';
+        }
+        elseif (isset($_SESSION['userid']) AND $user[8]==1) {
+            ?>
+
+            <div class="forum_top">
+                <div class="arborescence">
+                    <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
+                </div>
+                <div class="forum_top_r_button">
+                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                </div>
+            </div>
+
+            <table class="tableau_forum_accueil">
+                <tr>
+                    <th>Membre</th>
+                    <th>Messages</th>
+                    <th>Administration</th>
+                </tr>
+                <?php
+                $ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
+                $ret -> execute(array($_GET['id_topic']));
+                $premier_post = $ret -> fetch();
+
+                $res = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                $res -> execute(array($premier_post[2]));
+                $auteur = $res -> fetch();
+
+                echo "
+            <tr>
+                <td>
+                <img src='$auteur[10]' class='img_member'><br/>
+                <p><a href='profil.php?id_logement=2&amp;id_users=$auteur[0]'>$auteur[1]</a></p>
+                </td>
+                <td>$premier_post[4]</td>
+            </tr>
+            ";
+
+                $req = $bdd -> prepare("SELECT * FROM forum_post WHERE id_topic=?");
+                $req -> execute(array($_GET['id_topic']));
+                $nb = $req -> rowCount();
+
+
+                for ($i=0;$i<$nb;$i++) {
+                    $post = $req -> fetch();
+                    $ret = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                    $ret -> execute(array($post[1]));
+                    $membre = $ret -> fetch();
+                    ?>
+                    <tr>
+                        <td>
+                            <?php echo '<img src="'.$membre[10].'" class="img_member">';?></br>
+                            <p><a href="profil.php?id_logement=2&amp;id_users=<?php echo $membre[0]; ?>"><?php echo "$membre[1]";?></a></p>
+                        </td>
+                        <td><?php echo $post[3];?></td>
+                        <td><a href='admin.php?id_post=<?php echo $post[0] ?>&del_msg=1&id_topic=<?php echo $_GET['id_topic'] ?>&id_cat=<?php echo $_GET['id_cat'] ?>'><img src='https://cdn3.iconfinder.com/data/icons/lynx/22x22/actions/dialog-close.png'></a></td>
                     </tr>
                 <?php
                 }

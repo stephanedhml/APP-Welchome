@@ -1,8 +1,16 @@
+.forum_title {
+    padding-top: 6%;
+    text-align: center;
+    font-size: 35px;
+    font-family: century, arial,sans-serif;
+
+}
+
 .tableau_forum_accueil0 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7%;
+    margin-top: 4%;
     width: 70%;
 }
 .tableau_forum_accueil {
