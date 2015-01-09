@@ -12,15 +12,7 @@ session_start();
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css" />
 </head>
-<body <!-- onLoad="window.setTimeout('history.go(0)', 10000)" -->>
-<!-- <script type="text/javascript">
-    var auto_refresh = setInterval(
-        function ()
-        {
-            $('#refresher').load('discussion.php?id_friend=12').fadeIn("slow");
-        }, 5000);   //id="refresher"
-
-</script> -->
+<body>
 <header>
     <?php include("menus.php"); ?>
 </header>
@@ -39,7 +31,7 @@ session_start();
                             <div class="cadre_msg_answer"
                             <div class="contentg">
                                 <div class="msg_form">
-                                    <form action="discussion.php?id_friend='. $_GET['id_friend'] .'" method="post" xmlns="http://www.w3.org/1999/html">
+                                    <form action="discussion.php?id_friend='. $_GET['id_friend'] .'&refresh=1" method="post" xmlns="http://www.w3.org/1999/html">
                                         <label for="titre">Titre du message</label>
                                         <input type="text" name="titre"> <br/>
                                         <label for="message">Message</label>
@@ -112,8 +104,7 @@ session_start();
                     {
                         $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
                         $nv -> execute(array($derid));
-                        ?>
-                    <?php
+                        header('Location: discussion.php?id_friend='.$_GET['id_friend'].'');
                     }
                     else
                     {

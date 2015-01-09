@@ -44,7 +44,7 @@ session_start();
                 "user1_want" => 1,
             ));
 
-            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message,echange) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange)");
+            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message,echange,choix) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange, :choix)");
             $res -> execute(array(
                 "destinataire" => $_GET['proprietaire'],
                 "expediteur" => $_SESSION["userid"],
@@ -52,6 +52,7 @@ session_start();
                 "titre" => "Proposition d'échange",
                 "message" => $message,
                 "echange" => 1,
+                "choix" => 1,
             ));
 
                 if($derid = $bdd -> lastInsertId())

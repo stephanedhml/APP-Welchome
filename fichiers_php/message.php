@@ -60,7 +60,7 @@ session_start();
                 echo '<div class="accept_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/></div>';
             }
             $req = $bdd -> prepare("
-              SELECT id_expediteur, titre_message, date_update, id_message, lu_nonlu, echange FROM messages AS m1 WHERE id_destinataire=? ORDER BY id_message DESC
+              SELECT id_expediteur, titre_message, date_update, id_message, lu_nonlu, echange, choix  FROM messages AS m1 WHERE id_destinataire=? ORDER BY id_message DESC
               ");
             $req -> execute(array($_SESSION["userid"]));
             $nb = $req -> rowCount();
@@ -83,7 +83,7 @@ session_start();
                                 <th>Objet</td>
                                 <th>Date</td>
                                 <th>Statut</th>
-                                <?php if (isset($msg_recu[5])) {echo '<th>Accepter la proposition</th>';} ?>
+                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<th>Accepter la proposition</th>';} ?>
 
                             </tr>
                             <tr>
@@ -91,7 +91,7 @@ session_start();
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu[1] ?></a></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
-                                <?php if (isset($msg_recu[5])) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"></td></form>' ;} ?><br/>
+                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
 
                             </tr>
                         </table>
@@ -100,6 +100,18 @@ session_start();
                         $ret = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
                         $ret -> execute(array($msg_recu[0]));
                         $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"]);
+
+                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
+                        $res -> execute(array($_GET['id']));
+                    }
+                    if (isset($_POST['refus'])) {
+                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
+                        $res -> execute(array($_GET['id']));
+
+                        $ret = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=?");
+                        $ret -> execute(array($_GET['id']));
+
+                        header('Location: message.php');
                     }
                     }
                 echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';

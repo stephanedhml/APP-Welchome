@@ -28,7 +28,7 @@ session_start();
                     exit();
                 }
 
-                $req = $bdd -> prepare("SELECT id_expediteur, titre_message, message, id_message, echange FROM messages WHERE id_message=?");
+                $req = $bdd -> prepare("SELECT id_expediteur, titre_message, message, id_message, echange, choix FROM messages WHERE id_message=?");
                 $req -> execute(array($_GET['id']));
                 $nb = $req -> rowCount();
 
@@ -53,14 +53,14 @@ session_start();
                                 <th>Nom exp&#233;diteur</th>
                                 <th>Objet</th>
                                 <th>Message</th>
-                                <?php if (isset($msg_recu[4])) {echo '<th>Accepter la proposition</th>';} ?>
+                                <?php if (isset($msg_recu[4]) AND $msg_recu[5]==1) {echo '<th>Accepter la proposition</th>';} ?>
 
                             </tr>
                             <tr>
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
-                                <?php if (isset($msg_recu[4])) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"></td></form>' ;} ?><br/>
+                                <?php if (isset($msg_recu[4]) AND $msg_recu[5]==1) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
                             </tr>
                         </table> <br/>
                     <?php
@@ -71,6 +71,18 @@ session_start();
 
                         echo '<div class="no_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/><br/> <a href="accueilmanu.php">Retourner à l\'accueil</a></div>';
                         $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"]);
+
+                        header('Location: message.php');
+                    }
+
+                    if (isset($_POST['refus'])) {
+                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
+                        $res -> execute(array($_GET['id']));
+
+                        $ret = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=?");
+                        $ret -> execute(array($_GET['id']));
+
+                        header('Location: liremsg.php?id='.$_GET['id'].'');
                     }
 
                     }
@@ -115,8 +127,8 @@ session_start();
                     }
                     $id = $_GET['id'];
                     echo '
-                            <div class="no_msg_answer"><p id="btn_connexion">Envoyer un message</p></div>
-                            <div class="cadre_msg_answermsg"
+
+                            <div class="cadre_msg_answermsg">
                             <div class="contentg">
                                 <div class="msg_form">
                                     <form action="liremsg.php?id='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
