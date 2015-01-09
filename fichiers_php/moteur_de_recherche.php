@@ -79,7 +79,7 @@ include('modeles.php');
 					} // fin du while
 
 		?>		 <br/><br/>
-					<a href="accueilmanu.php" class="nlle_r">Faire une nouvelle recherche</a></p>
+					<a href="index.php" class="nlle_r">Faire une nouvelle recherche</a></p>
 		<?php
 				} 
 				// Afficher l'éventuelle erreur :
@@ -87,7 +87,7 @@ include('modeles.php');
 				{ //HTML
 		?>
 					<h3>Pas de résultats</h3>
-					<p>Nous n'avons trouvé aucun résultat pour votre requête "<?php echo $_POST['requete']; ?>". <a href="accueilmanu.php">Réessayez</a> avec autre chose.</p>
+					<p>Nous n'avons trouvé aucun résultat pour votre requête "<?php echo $_POST['requete']; ?>". <a href="index.php">Réessayez</a> avec autre chose.</p>
 		<?php
 				}
 				$nbresult->closeCursor(); // on ferme mysql
@@ -96,7 +96,7 @@ include('modeles.php');
 			{ // HTML
                 echo '<body onload=" alert(\'Entre un champ Connard !\')">';
 // puis on le redirige vers la page d'accueil
-                echo '<meta http-equiv="refresh" content="0;URL=accueilmanu.php">';
+                echo '<meta http-equiv="refresh" content="0;URL=index.php">';
 
 			}
 		?>

@@ -24,7 +24,7 @@ session_start();
             <?php
                 if (!isset($_SESSION["userid"]))
                 {
-                    header ("Location: accueilmanu.php");
+                    header ("Location: index.php");
                     exit();
                 }
 
@@ -69,7 +69,7 @@ session_start();
                         $req -> execute(array($msg_recu[0]));
 
 
-                        echo '<div class="no_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/><br/> <a href="accueilmanu.php">Retourner à l\'accueil</a></div>';
+                        echo 'accueil</a></div>';
                         $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"]);
 
                         header('Location: message.php');
@@ -113,14 +113,14 @@ session_start();
                             $nv -> execute(array($derid));
                             ?>
                             <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
-                                <a href="accueilmanu.php">Retourner à l'accueil</a></div>
+                                <a href="index.php">Retourner à l'accueil</a></div>
                         <?php
                         }
                         else
                         {
                             ?>
                             <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                            <a href="accueilmanu.php">Retourner à l'accueil</a>
+                            <a href="index.php">Retourner à l'accueil</a>
                         <?php
                         }
 

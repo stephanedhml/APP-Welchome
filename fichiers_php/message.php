@@ -24,7 +24,7 @@ session_start();
             <?php
             if (!isset($_SESSION["userid"]))
             {
-                header ("Location: accueilmanu.php");
+                header ("Location: index.php");
                 exit();
             }
 
@@ -71,30 +71,34 @@ session_start();
             }
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
+
+                ?>
+                <table class="tableau_new_messages">
+                    <tr>
+                        <th>Nom exp&#233;diteur</td>
+                        <th>Objet</td>
+                        <th>Date</td>
+                        <th>Statut</th>
+                        <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<th>Accepter la proposition</th>';} ?>
+
+                    </tr>
+
+                <?php
+
                 for ($i=0 ; $i < $nb ; $i++) {
                     $msg_recu = $req -> fetch();
                     $quser = $bdd -> prepare("SELECT username FROM users WHERE id_users=?");
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
                     ?>
-                    <table class="tableau_new_messages">
-                            <tr>
-                                <th>Nom exp&#233;diteur</td>
-                                <th>Objet</td>
-                                <th>Date</td>
-                                <th>Statut</th>
-                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<th>Accepter la proposition</th>';} ?>
-
-                            </tr>
                             <tr>
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu[1] ?></a></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
-                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
+                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?>
 
                             </tr>
-                        </table>
                     <?php
                     if (isset($_POST['validation'])) {
                         $ret = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
@@ -114,6 +118,9 @@ session_start();
                         header('Location: message.php');
                     }
                     }
+                ?>
+                </table>
+                <?php
             }
             ?>
             <br/>

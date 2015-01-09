@@ -187,7 +187,7 @@ $user = $rel -> fetch();
                                 <div class="answer1">
                                     <form action="topic.php?id_topic='. $_GET['id_topic'] .'&id_cat='. $_GET['id_cat'] .'" method="post">
                                         <label for="message">Message</label><br/></br>
-                                        <input type="text" name="message" class="post_message" /><br /><br/>
+                                        <textarea name="message" class="post_message" /></textarea><br /><br/>
                                         <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>

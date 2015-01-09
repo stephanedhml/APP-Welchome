@@ -25,7 +25,7 @@ session_start();
             <?php
             if (!isset($_SESSION["userid"]))
             {
-                header ("Location: accueilmanu.php");
+                header ("Location: index.php");
                 exit();
             }
 
@@ -61,14 +61,14 @@ session_start();
                     $nv -> execute(array($derid));
                     ?>
                     <div class="no_msg"><h7>Votre demande a bien été transmise !</h7><br/><br/>
-                        <a href="accueilmanu.php">Retourner à l'accueil</a></div>
+                        <a href="index.php">Retourner à l'accueil</a></div>
                 <?php
                 }
                 else
                 {
                     ?>
                     <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                    <a href="accueilmanu.php">Retourner à l'accueil</a>
+                    <a href="index.php">Retourner à l'accueil</a>
                 <?php
                 }
 

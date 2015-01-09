@@ -35,7 +35,7 @@ session_start();
 		?>
 
 				<div class="message"><?php echo deconnexionsuccess;?></br>
-					<a href="accueilmanu.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
+					<a href="index.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
 				</div>
 
 				<?php
@@ -72,7 +72,7 @@ session_start();
 				?>
 
 						<div class="message"><?php echo connexionsuccess;?></br>
-							<a href="accueilmanu.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
+							<a href="index.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
 						</div>
 
 		<?php

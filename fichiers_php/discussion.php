@@ -23,7 +23,7 @@ session_start();
             <?php
             if (!isset($_SESSION["userid"]))
             {
-                header ("Location: accueilmanu.php");
+                header ("Location: index.php");
                 exit();
             }
             $id = $_GET['id_friend'];
@@ -115,7 +115,7 @@ session_start();
                     {
                         ?>
                         <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                        <a href="accueilmanu.php">Retourner à l'accueil</a>
+                        <a href="index.php">Retourner à l'accueil</a>
                     <?php
                     }
                 }
