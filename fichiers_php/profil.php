@@ -81,7 +81,7 @@
                        <p id="Titre2"> Descriptif </p> <br></br>
                     
 
-                    <?php echo $donnees['description_users'] ;?>
+                    <?php echo $donnees['description'] ;?>
                 
                     
                         
@@ -122,16 +122,11 @@
         <div id="article2">
             <h1 id="Identification"> A Propos</h1>
             <article id="a_propos">
-            <p>Homme</p>
-            <p>Habite à Paris</p>
-            <p>E-mail: <?php echo $donnees['email'] ;?></p>
-            <p>Tel: 06 65 64 14 86</p>
-            <p>Situation: Marié, 3 enfant</p>
-
-        
-            
-               
-            <p> Profession: Architecte </p>
+            <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
+            <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
+            <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
+            <p>Situation: <?php if ($donnees['situation']!=NULL) { echo $donnees['situation'] ;} else {echo "Non renseigné";}?></p>
+            <p> Profession: <?php if ($donnees['profession']!=NULL) { echo $donnees['profession'] ;} else {echo "Non renseigné";}?> </p>
               </article>
                 
             </div>
