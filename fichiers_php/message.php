@@ -12,7 +12,7 @@ session_start();
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body class="forum_messagerie">
 
 <header>
     <?php include("menus.php"); ?>
@@ -114,7 +114,6 @@ session_start();
                         header('Location: message.php');
                     }
                     }
-                echo '<div class="no_msg"><p><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
             }
             ?>
             <br/>

@@ -1,3 +1,7 @@
+.forum_messagerie {
+    background-image: url("../images_diverses/texture_forum_white.jpg");
+}
+
 .forum_title {
     padding-top: 6%;
     text-align: center;

@@ -14,6 +14,8 @@ $name_cat = $ret -> fetch();
 $ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
 $ret -> execute(array($_GET["id_topic"]));
 $name_topic = $ret -> fetch();
+
+
 if (isset($_SESSION["userid"])) {
 
 $rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
@@ -30,7 +32,7 @@ $user = $rel -> fetch();
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body class="forum_messagerie">
 <header>
     <?php include("menus.php"); ?>
 </header>

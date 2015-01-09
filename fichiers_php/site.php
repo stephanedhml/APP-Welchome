@@ -25,7 +25,7 @@ if (isset($_SESSION["userid"])) {
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body class="forum_messagerie">
 <header>
     <?php include("menus.php"); ?>
 </header>
