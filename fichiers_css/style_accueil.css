@@ -1,21 +1,21 @@
 /* Utile si boutons au carroussel
 .navigation
 {
-	position:absolute;
-	bottom:300px;
-	right:5px;
+    position:absolute;
+    bottom:300px;
+    right:5px;
 }
 .navigation span
 {
-	background: #000;
-	color: #fff;
-	padding: 4px 4px;
+    background: #000;
+    color: #fff;
+    padding: 4px 4px;
 }
 .navigation span:hover,.navigation span.active
 {
-	background: #fff;
-	color: #000;
-	cursor:pointer;
+    background: #fff;
+    color: #000;
+    cursor:pointer;
 }*/
 
 .menu_respo {
@@ -64,11 +64,11 @@
 /*
 #bkcolor
 {
-	background-color: rgba(255,255,0,0.3);
-	height: 1024px;
-	width: 100%;
-	position: absolute;
-	top: 86.5px;
+    background-color: rgba(255,255,0,0.3);
+    height: 1024px;
+    width: 100%;
+    position: absolute;
+    top: 86.5px;
 }
 */
 
@@ -142,8 +142,7 @@
 #partie2, h2 h3
 {
     text-align: center;
-    color: #ffffff;
-    text-shadow: 0px 0px 5px black;
+    
 }
 
 @media only screen and (max-width : 900px) {
@@ -243,6 +242,63 @@ body
 .schema1 {
     height: 406px;
 }
+<<<<<<< HEAD
+
+.schema2 {
+
+    text-align: center;
+    background-color: #bdc3c7;
+    
+}
+.schema3 {
+
+    text-align: center;
+    background-color: #ecf0f1;
+    
+}.schema4 {
+
+    text-align: center;
+    background-color: #bdc3c7;
+    
+}.schema5 {
+
+    text-align: center;
+    background-color: #ecf0f1;
+    
+}
+
+.add {
+
+    text-align: center;
+    margin-left:35px;
+    margin-right: 35px;
+    display: inline-block;
+    font-size: 20px;
+
+
+}
+
+.imageaccueil {
+
+    overflow: hidden;
+    border-radius: 150px;
+
+
+}
+
+.h3 {
+
+        padding-top: 20px;
+        height: 600px;
+        font-family: century,Symbol;
+        font-size: 40px;
+        text-align: center;
+    }
+
+.h4 
+
+=======
+>>>>>>> FETCH_HEAD
 .carrousel{
     width: 100%;
     height: 400px;
