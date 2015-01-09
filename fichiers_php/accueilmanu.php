@@ -68,34 +68,11 @@
                     </p>
                 </div>
 
-                 <div class="schema3">
+                <div class="schema3">
                    <div class="h3">
                     <p>
-                        Comment fonctionne Welchome.com
+                        COMMENT ÇA MARCHE ?
                     </p>
-                   
-                    <li class="add">
-                    <span>
-                        <img src="http://www.blog-deco-maison.com/wp-content/uploads/2011/03/cluny-house-maison-reve-singapour-exterieur-petit1.jpg" alt="Ajouter une offre" style="border-radius: 150px;">
-                    </span>
-                    <h3>Ajouter une offre</h3>
-                </li>
-
-                <li class="add">
-                    <span>
-                        <img src="http://media.meltycampus.fr/article-2219607-square_300/torrentz-ouvert-fermeture-femme-ordinateur.jpg" alt="Ajouter une offre" style="border-radius: 150px;">
-                    </span>
-                    <h3>Envoyer/recevoir des propositions</h3>
-                </li>
-
-                <li class="add">
-                    <span>
-                        <img src="http://www.in-leadership.fr/wp-content/uploads/2013/10/poignee-de-mains-300.jpg" alt="Ajouter une offre" style="border-radius: 150px;">
-                    </span>
-                    <h3>Echanger</h3>
-                </li>
-
-
                 </div>
                 </div>
 
@@ -111,7 +88,7 @@
                 <div class="schema5">
                    <img src="../images_diverses/htmlcssjs_logo.png" class="html5_logo">
 
-            </div>
+			</div>
 			
 
 				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
