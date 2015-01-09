@@ -5,7 +5,8 @@
         <a href="#" id="pull">Menu</a>
 		<ul class="clearfix">
 			<?php include("../multilingue/choixlangue.php");?>
-			<li><a href="accueilmanu.php" class="btn_ACCUEIL"><?php echo accueil ?></a></li>
+            <li><a class="lienaccueil" href="accueilmanu.php"><img class="accueil" src="../images_diverses/icon.png" /></a></li>
+			<!-- <li><a href="accueilmanu.php" class="btn_ACCUEIL"><?php echo accueil ?></a></li> -->
 			<li class="recherche_avancee"><a href="recherche_avancee.php"><?php echo rechercheavancee ?></a></li>
 			<li><a href="forum.php" class="btn_FORUM"><?php echo forum ?></a></li>
             <?php

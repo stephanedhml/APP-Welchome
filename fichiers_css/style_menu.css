@@ -115,7 +115,39 @@ nav a#pull {
 }
 /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 }*/
+@media only screen and (min-width : 949px) {
+    .accueil {
+        height: 30px;
+        position: fixed;
+    }
 
+    .lienaccueil {
+        width: 40px;
+        cursor: pointer;
+        height: 20px;
+        padding-right: 50px;
+    }
+
+    .lienaccueil:hover, .lienacueil:active {
+        color: rgb(191, 185, 193);
+    }
+
+}
+
+@media only screen and (max-width : 949px) {
+    .drapeau {
+        display: none;
+    }
+
+    .liendrapeau {
+        display: none;
+    }
+
+    .liendrapeau:hover, .liendrapeau:active {
+        color: rgb(191, 185, 193);
+    }
+
+}
 @media only screen and (min-width : 949px) {
     .drapeau {
         height: 20px;
