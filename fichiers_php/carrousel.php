@@ -15,7 +15,7 @@
 						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
+							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 						</form>
 					<!-- <div id="bkcolor"></div> -->
@@ -26,7 +26,7 @@
 						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
+							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 						</form>
 					<!-- <div id="bkcolor"></div> -->
@@ -37,7 +37,7 @@
 						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
+							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 						</form>
 					<!-- <div id="bkcolor"></div> -->
@@ -48,7 +48,7 @@
 						<?php echo carrouseltxt;?>
 					</h1>
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="Saisir une destination"
+							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 						</form>
 					<!-- <div id="bkcolor"></div> -->
