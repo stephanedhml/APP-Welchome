@@ -54,6 +54,17 @@ session_start();
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
 
+                ?>
+
+                <table class="tableau_new_messages">
+                    <tr>
+                        <th>Nom exp&#233;diteur</th>
+                        <th>Objet</th>
+                        <th>Message</th>
+                    </tr>
+
+                <?php
+
                 for ($i=0 ; $i < $nb AND $i < 15 ; $i++) {
                     $msg_recu = $req -> fetch();
                     $quser = $bdd -> prepare("SELECT username FROM users WHERE id_users=?");
@@ -64,21 +75,15 @@ session_start();
                     $lu -> execute(array($msg_recu[3]));
 
                     ?>
-                    <table class="tableau_new_messages">
-                            <tr>
-                                <th>Nom exp&#233;diteur</th>
-                                <th>Objet</th>
-                                <th>Message</th>
-                            </tr>
                             <tr>
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
                             </tr>
-                        </table> <br/>
                 <?php
 
                     }
+                ?> </table> <br/> <?php
                 if (isset($_POST["titre"], $_POST["message"]))
                 {
                     $titre = $_POST["titre"];
