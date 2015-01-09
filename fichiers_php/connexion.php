@@ -96,7 +96,7 @@ session_start();
 					{
 						echo '<div class="message">' .$message. '</div>';
 					}
-					//On affiche le formulaire
+					//On affiche le formulaire, essai de commit
 		?>
 
 					<div class="cadrec">
