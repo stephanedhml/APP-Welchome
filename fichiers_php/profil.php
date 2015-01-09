@@ -21,23 +21,23 @@
 
 
     <?php
-            
-            
+
+
     global $bdd;
     $annonce = htmlspecialchars($_GET['id_users'] );
     $results =$bdd->query("SELECT * FROM users WHERE id_users=$annonce");
     $donnees = $results->fetch()
-    
+
 
 
 
     ?>
 
-    
+
     <?php
-            
+
             $annonce1 = htmlspecialchars($_GET['id_logement'] );
-            
+
             $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=$annonce1 ORDER BY id_logement DESC");
 
             $donnees1 = $results->fetch()
@@ -92,12 +92,9 @@
                     <aside id="Description3">
 
                        <p id="Titre2"> Préférences d'échange </p> <br></br>
-                    
 
                     <?php echo $donnees['preference_echange'] ;?>
-                
-                    
-                        
+
                     </aside>
                     
                     <br></br>
@@ -105,11 +102,6 @@
                     <aside id="Description3">
 
                        <p id="Titre2"> Logement </p> <br></br>
-
-
-                    
-
-
                         <div class="cadre">
                                 <div class="left">
                             <?php echo '<img width="300px" height="200px" align="left" src="'.$donnees1 ['lien_photo'].'" class="photo">' ?>
@@ -121,21 +113,9 @@
                     <?php echo '<p>' .''.$donnees1['localisation']. ' </br>' . $donnees1['nombre_voyageurs']. ' voyageurs </br>' . $donnees1['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
-
-
-
-                        </div><br/>          
-                
-                    
-                        
+                        </div>
                     </aside>
-
-                
-
                 </div>
-        <br></br><br></br><br></br> Commentaires
-
-        <br></br><br></br> 0 commentaire<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     </article>
     <aside id="bloc_identité">
         
