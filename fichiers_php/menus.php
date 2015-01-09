@@ -11,9 +11,8 @@
             <?php
 				include("connexion_inscription_deconnexion_menu.php"); 
 			?>
-			<a class="liendrapeau" href="?lang=fr"><img class="drapeau" src="../multilingue/drapeaufr.png" /></a>
-			<a class="liendrapeau" href="?lang=en"><img class="drapeau" src="../multilingue/drapeauen.png" /></a>
-
+			<li><a class="liendrapeau" href="?lang=fr"><img class="drapeau" src="../multilingue/drapeaufr.png" /></a></li>
+			<li><a class="liendrapeau" href="?lang=en"><img class="drapeau" src="../multilingue/drapeauen.png" /></a></li>
 		</ul>
 	</nav>
 </div>
