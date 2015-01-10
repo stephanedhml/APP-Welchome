@@ -25,7 +25,7 @@ session_start();
             <tr>
                 <th><?php echo categorie; ?></th>
                 <th><?php echo description; ?></th>
-                <th><?php echo nbmessages; ?></th>
+                <th style="width: 50px;"><?php echo nbmessages; ?></th>
                 <th><?php echo lastmessage; ?></th>
             </tr>
             <?php

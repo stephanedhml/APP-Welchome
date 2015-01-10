@@ -60,10 +60,10 @@ if (isset($_SESSION["userid"])) {
         <table class="tableau_site">
             <tr>
                 <th>Sujets</th>
-                <th>Nb réponses</th>
-                <th>Nb vus</th>
-                <th>Dernier message</th>
-                <?php if (isset($_SESSION["userid"])) {if($user[8]==1) {?> <th>Administration</th> <?php } }?>
+                <th style="width: 50px;">Nb réponses</th>
+                <th style="width: 50px;">Nb vus</th>
+                <th style="width: 150px;">Dernier message</th>
+                <?php if (isset($_SESSION["userid"])) {if($user[8]==1) {?> <th style="width: 50px;">Administration</th> <?php } }?>
             </tr>
             <?php
             $req = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_cat=?");

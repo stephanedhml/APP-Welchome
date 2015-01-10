@@ -33,14 +33,11 @@ session_start();
 				//On unset les variables username et userid pour déconnecter l'utilisateur de sa session
 				unset($_POST["username"],$_POST["userid"]);
 		?>
+                <?php
+                session_destroy();
+                header('Location: index.php');
+                ?>
 
-				<div class="message"><?php echo deconnexionsuccess;?></br>
-					<a href="index.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
-				</div>
-
-				<?php
-					session_destroy();
-				?>
 				
 				<?php
 			}
@@ -69,13 +66,8 @@ session_start();
 						//On enregistre son pseudo et son identifiant dans la session
 						$_SESSION["username"]=$username;
 						$_SESSION["userid"]=$dn["id_users"];
-				?>
 
-						<div class="message"><?php echo connexionsuccess;?></br>
-							<a href="index.php" class="btn_rtr_accueil"><?php echo retouraccueil;?></a>
-						</div>
-
-		<?php
+                        header('Location: index.php');
 					}
 					else
 					{
