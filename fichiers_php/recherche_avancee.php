@@ -38,9 +38,10 @@ session_start();
                 <input type="checkbox" name="type7" id="case" value="camping"/> <label for="case"><?php echo campingcar;?></label><br/>
            </div>
             <br/>
-
+        <!--
         <p><?php echo choixdates;?><br/>
           <?php echo de;?> <input type="date" name="d1" placeholder="JJ/MM/AAAA"> <?php echo à;?> <input type="date" name="d2" placeholder="JJ/MM/AAAA"></p>
+        -->
     </div>
     <div class="bloc_search_center">
         <p><?php echo capacitéaccueil;?><br/>
@@ -59,11 +60,13 @@ session_start();
         <p><?php echo surfacemin;?><br/>
         <input type="number" name="surface_min" value="Surface minimale" min="0"></p>
 
+        <!--
         <p><?php echo choixpreferences;?><br/>
         <input type="checkbox" name="lieu1" id="case" value="banlieu"/> <label for="case"><?php echo banlieue;?></label><br/>
         <input type="checkbox" name="lieu2" id="case" value="campagne"/> <label for="case"><?php echo campagne;?></label><br/>
         <input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/>
         <input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case"><?php echo ville;?></label><br/></p>
+        -->
 
     </div>
 
