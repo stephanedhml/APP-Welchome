@@ -31,7 +31,7 @@ if (isset($_POST["description"]) AND $_POST["description"]!=NULL ) {
     ));
 }
 
-if (isset($_POST["tel"])AND $_POST["description"]!=NULL ) {
+if (isset($_POST["tel"])AND $_POST["tel"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET tel=:tel WHERE id_users=:id_user");
     $desc -> execute(array(
         'tel' => $_POST['tel'],
@@ -39,7 +39,7 @@ if (isset($_POST["tel"])AND $_POST["description"]!=NULL ) {
     ));
 }
 
-if (isset($_POST["metier"])AND $_POST["tel"]!=NULL ) {
+if (isset($_POST["metier"])AND $_POST["metier"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET profession=:profession WHERE id_users=:id_user");
     $desc -> execute(array(
         'profession' => $_POST['metier'],
