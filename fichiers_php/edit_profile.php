@@ -237,14 +237,14 @@ if (isset($_POST["jardin"])AND $_POST["jardin"]!=NULL ) {
             $ret = $bdd -> prepare("SELECT * FROM logement WHERE id_users=?");
             $ret -> execute(array($_SESSION["userid"]));
             $nmber = $ret -> rowCount();
-
+            ?> <div class="container_edit_profil"> <?php
             for ($i=0 ; $i < $nmber ; $i++) {
                 $house = $ret -> fetch();
                     ?>
 
             <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>"><?php echo $house["nom_maison"] ; ?></a>
 
-    <?php } } ?>
+    <?php } ?> </div> <?php } ?>
 
     <?php if (isset($_GET["choix"]) AND $_GET["choix"]==1) { ?>
 <div class="container_edit_profil">
