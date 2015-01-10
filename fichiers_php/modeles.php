@@ -86,7 +86,7 @@ function resultats_requete_avancee()
     {
         $lieu = htmlspecialchars($_POST['ville']);
     }
-    else{}
+    else{$lieu = "";}
     if (isset($_POST['capacite']) and $_POST['capacite']!='')
     {
         $capacite = htmlspecialchars($_POST['capacite']);
