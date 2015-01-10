@@ -18,16 +18,16 @@ function rouge(champ,erreur)
     }
 }
 
-function verifnom() {
-    if (document.getElementById('homename').value == "")
+function verifnom(champ) {
+    if (champ.value == "")
     {
-        rouge(document.getElementById('homename'), true);
+        rouge(champ, true);
         document.getElementById('namehome').innerHTML = 'Ce champ n\'est pas remplit';
         return false;
     }
 
     else {
-        rouge(document.getElementById('homename'), false);
+        rouge(champ, false);
         return true;
     }
 }
@@ -49,66 +49,63 @@ function ville()
     return true;
 }
 
-function verifusername()
+function verifusername(champ)
 {
-    if(document.getElementById('username').value == "")
+    if(champ.value == "")
     {
 
-        rouge(document.getElementById('username'),true);
+        rouge(champ,true);
 
         document.getElementById('user').innerHTML =  'Ce champ n\'est pas remplit';
         return false;
     }
     else
     {
-        rouge(document.getElementById('username'),false);
+        rouge(champ,false);
+        document.getElementById('user').innerHTML =  '';
         return true;
     }
 }
-function veriflieu()
+function veriflieu(champ)
 {
-    if(document.getElementById('land').value == "")
+    if(champ.value == "")
     {
 
-        rouge(document.getElementById('land'),true);
+        rouge(champ,true);
 
         document.getElementById('lieu').innerHTML =  'Ce champ n\'est pas remplit';
         return false;
     }
     else
     {
-        rouge(document.getElementById('land'),false);
+        rouge(champ,false);
+        document.getElementById('lieu').innerHTML =  '';
         return true;
     }
 }
 
-function affichage(id,message)
-{
-    document.getElementById(id).innerHTML =  message;
-    return true;
-}
 
-function verifpassword()
+function verifpassword(champ)
 {
 
-    if(document.getElementById('password').value == "")
+    if(champ.value == "")
     {
 
-        rouge(document.getElementById('password'),true);
+        rouge(champ,true);
 
         document.getElementById('psd').innerHTML =  'Entrez votre mot de passe';
         return false;
     }
-    else if(document.getElementById('password').value.length < 6 && document.getElementById('password').value.length > 0)
+    else if(champ.value.length < 6 && champ.value.length > 0)
     {
-        rouge(document.getElementById('password'),true);
+        rouge(champ,true);
         document.getElementById('psd').innerHTML =  'Le mot de passe comporte au moins 6 caractères.';
         return false;
     }
     else
     {
 
-        rouge(document.getElementById('password'),false);
+        rouge(champ,false);
 
         return true;
     }
@@ -130,8 +127,8 @@ function verifpassword()
 
     function verifegalite(champ)
     {
-    var psswd = document.getElementById('password') ;
-    var psswd2 = document.getElementById('password2') ;
+    var psswd = document.getElementsByName('password') ;
+    var psswd2 = champ ;
 
     if(psswd !=psswd2)
     {
@@ -147,14 +144,14 @@ function verifpassword()
 }
 
 
-function verifinscription()
+function verifinscription(champ)
 {
-    var passwdOk=verifpassword();
-    var usernameOk=verifusername();
-    var nameOk=verifnom(document.getElementById('home'));
-    var passwd2Ok=verifegalite();
-    var emailOk=verifemail(document.getElementById('email'));
-    var lieuOk=veriflieu();
+    var passwdOk=verifpassword(champ.password);
+    var usernameOk=verifusername(champ.username);
+    var nameOk=verifnom(champ.nom_maison);
+    var passwd2Ok=verifegalite(champ.passverif);
+    var emailOk=verifemail(champ.email);
+    var lieuOk=veriflieu(champ.localisation);
     if (passwdOk && usernameOk && passwd2Ok && emailOk && nameOk && lieuOk)
     {
         return true;
@@ -168,7 +165,3 @@ function verifinscription()
 
 
 }
-
-
-
-

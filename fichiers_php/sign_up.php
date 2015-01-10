@@ -140,17 +140,17 @@
             ?>
 			<div class="cadreinscrpt">
                 <div class="signup_form1">
-                <form action="sign_up.php" method="post" enctype="multipart/form-data" onsubmit="return verifinscription()">
+                <form action="sign_up.php" method="post" enctype="multipart/form-data" onsubmit="return verifinscription(this)">
                     <div class="content_gauche">
-                    <label for="username"><?php echo username; ?></label><br/><input type="text"  name="username" id="username" value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername()" /><span id="user"></span></br>
-                    <br/><label for="password"><?php echo password; ?></label><br/><input id="password" onclick="mdp()" type="password" name="password" onblur="verifpassword()"/><span id="psd"></span><br />
+                    <label for="username"><?php echo username; ?></label><br/><input type="text"  name="username"  value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername(this)" /><span id="user"></span></br>
+                    <br/><label for="password"><?php echo password; ?></label><br/><input id="password" onclick="mdp()" type="password" name="password" onblur="verifpassword(this)"/><span id="psd"></span><br />
                     <br/><label for="passverif"><?php echo password; ?><span class="small"><?php echo verification;?> </span></label><br/><input type="password" name="passverif" onblur="verifegalite(this)"/><span id="psd2"></span><br />
-                    <br/><label for="email"><?php  echo email;?></label><br/><input type="text" id="email" name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="verifemail(this)"/><span id="mail"></span><br />
+                    <br/><label for="email"><?php  echo email;?></label><br/><input type="text"  name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="verifemail(this)"/><span id="mail"></span><br />
                     <br/><label for="avatar"><?php echo imageperso; ?></label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
                     </div>
                     <div class="contentd1">
-                        <div class="top_form_inscription_right"><label for="nom_maison"><?php echo logementname; ?></label></div><input type="text" onclick="nom()" id="homename" name="nom_maison" onblur="verifnom()"><span id="namehome"></span><br/><br/>
-                        <label for="location_logement"><?php echo wherelogement; ?></label><br /><input type="text" name="localisation" onclick="ville()" id="land" onblur="veriflieu()"/><span id="lieu"></span><br /><br/>
+                        <div class="top_form_inscription_right"><label for="nom_maison"><?php echo logementname; ?></label></div><input type="text" onclick="nom()" name="nom_maison" onblur="verifnom(this)"><span id="namehome"></span><br/><br/>
+                        <label for="location_logement"><?php echo wherelogement; ?></label><br /><input type="text" name="localisation" onclick="ville()" id="land" onblur="veriflieu(this)"/><span id="lieu"></span><br /><br/>
                         <label for="type_logement"><?php echo typelogement;?></label><br />
                         <select name="type_logement" id="choix">
                                 <option value="Studio"><?php echo studio;?></option>
