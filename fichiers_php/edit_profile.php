@@ -219,13 +219,16 @@ if (isset($_POST["jardin"])AND $_POST["jardin"]!=NULL ) {
         <?php include("menus.php"); ?>
     </div>
     <div class="edit_profil">
-    <div class="edit_title"><h7>Editer votre profil</h7></div>
 
     <?php
         if (isset($_GET['choix'])) {echo "";} else {
     ?>
-            <a href="edit_profile.php?choix=1">Editer votre profil utilisateur</a>
-            <a href="edit_profile.php?choix=2">Editer un de vos logements</a>
+            <div class="left_half">
+                <div class="left_carre"><a href="edit_profile.php?choix=1"><p>Editer votre profil</p></a></div>
+            </div>
+            <div class="right_half">
+                <div class="right_carre"><a href="edit_profile.php?choix=2"><p>Ajouter/modifier un logement</p></a></div>
+            </div>
     <?php } ?>
 
     <?php
@@ -243,8 +246,8 @@ if (isset($_POST["jardin"])AND $_POST["jardin"]!=NULL ) {
 
     <?php } } ?>
 
-<div class="container_edit_profil">
     <?php if (isset($_GET["choix"]) AND $_GET["choix"]==1) { ?>
+<div class="container_edit_profil">
     <form action="edit_profile.php?choix=1" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
         <label for="avatar">Image perso</label><br/>
@@ -290,6 +293,7 @@ if (isset($_POST["jardin"])AND $_POST["jardin"]!=NULL ) {
     <?php
         if (isset($_GET["choix_logement"])) {
     ?>
+<div class="container_edit_profil">
     <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
         <label for="localisation">Localisation</label><br/>
