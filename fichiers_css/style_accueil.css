@@ -263,6 +263,29 @@ body
 
 }
 
+.add1 {
+
+    
+    margin-left:254px;
+   
+    font-family: century;
+ 
+
+
+}
+
+.add2 {
+
+ 
+    padding-left:60px;
+    
+    font-family: century;
+ 
+
+
+}
+
+
 
 
 .h3 {
@@ -272,7 +295,37 @@ body
         font-family: century,Symbol;
         font-size: 40px;
         text-align: center;
+        list-style: none;
     }
+
+.h4 {
+    display: inline-flex;
+    font-family: century,Symbol;
+        font-size: 30px;
+        padding-top: 80px;
+        width: 1200px;
+           color: #333;
+          
+}
+
+.h5{
+    display: inline-flex;
+    font-family: century,Symbol;
+        font-size: 30px;
+        padding-top: 80px;
+        width: 1200px;
+           color: #333;
+        
+
+}
+
+.h6{
+background-color: gainsboro;
+margin-left: 75px;
+height: 370px;
+width: 1300px;
+
+}
 
 .wrapper{
     width:100%;
