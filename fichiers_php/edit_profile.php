@@ -23,7 +23,7 @@ if (isset($_FILES["up_avatar"])) {
     }
 }
 
-if (isset($_POST["description"])) {
+if (isset($_POST["description"]) AND $_POST["description"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET description=:description WHERE id_users=:id_user");
     $desc -> execute(array(
         'description' => $_POST['description'],
@@ -31,7 +31,7 @@ if (isset($_POST["description"])) {
     ));
 }
 
-if (isset($_POST["tel"])) {
+if (isset($_POST["tel"])AND $_POST["description"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET tel=:tel WHERE id_users=:id_user");
     $desc -> execute(array(
         'tel' => $_POST['tel'],
@@ -39,7 +39,7 @@ if (isset($_POST["tel"])) {
     ));
 }
 
-if (isset($_POST["metier"])) {
+if (isset($_POST["metier"])AND $_POST["tel"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET profession=:profession WHERE id_users=:id_user");
     $desc -> execute(array(
         'profession' => $_POST['metier'],
@@ -47,7 +47,7 @@ if (isset($_POST["metier"])) {
     ));
 }
 
-if (isset($_POST["sexe"])) {
+if (isset($_POST["sexe"])AND $_POST["sexe"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET sexe=:sexe WHERE id_users=:id_user");
     $desc -> execute(array(
         'sexe' => $_POST['sexe'],
@@ -55,7 +55,7 @@ if (isset($_POST["sexe"])) {
     ));
 }
 
-if (isset($_POST["situation"])) {
+if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET situation=:situation WHERE id_users=:id_user");
     $desc -> execute(array(
         'situation' => $_POST['situation'],
@@ -65,7 +65,7 @@ if (isset($_POST["situation"])) {
 
 // Logement
 
-if (isset($_POST["localisation"])) {
+if (isset($_POST["localisation"])AND $_POST["localisation"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET localisation=:localisation WHERE id_users=:id_user");
     $desc -> execute(array(
         'localisation' => $_POST['localisation'],
@@ -73,14 +73,14 @@ if (isset($_POST["localisation"])) {
     ));
 }
 
-if (isset($_POST["description_logement"])) {
+if (isset($_POST["description_logement"])AND $_POST["description_logement"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET description_logement=:description WHERE id_users=:id_user");
     $desc -> execute(array(
         'description' => $_POST['description_logement'],
         'id_user' => $_SESSION['userid'],
     ));
 }
-if (isset($_POST["type_logement"])) {
+if (isset($_POST["type_logement"])AND $_POST["type_logement"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET type_logement=:type_logement WHERE id_users=:id_user");
     $desc -> execute(array(
         'type_logement' => $_POST['type_logement'],
@@ -88,7 +88,7 @@ if (isset($_POST["type_logement"])) {
     ));
 }
 
-if (isset($_POST["nom_maison"])) {
+if (isset($_POST["nom_maison"])AND $_POST["nom_maison"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET nom_maison=:nom_maison WHERE id_users=:id_user");
     $desc -> execute(array(
         'nom_maison' => $_POST['nom_maison'],
@@ -96,7 +96,7 @@ if (isset($_POST["nom_maison"])) {
     ));
 }
 
-if (isset($_POST["nombre_voyageurs"])) {
+if (isset($_POST["nombre_voyageurs"])AND $_POST["nombre_voyageurs"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET nombre_voyageurs=:nombre_voyageurs WHERE id_users=:id_user");
     $desc -> execute(array(
         'nombre_voyageurs' => $_POST['nombre_voyageurs'],
@@ -104,7 +104,7 @@ if (isset($_POST["nombre_voyageurs"])) {
     ));
 }
 
-if (isset($_POST["nombre_chambres"])) {
+if (isset($_POST["nombre_chambres"])AND $_POST["nombre_chambres"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET nb_chambres=:nombre_chambres WHERE id_users=:id_user");
     $desc -> execute(array(
         'nombre_chambres' => $_POST['nombre_chambres'],
@@ -112,7 +112,7 @@ if (isset($_POST["nombre_chambres"])) {
     ));
 }
 
-if (isset($_POST["nb_salles_bains"])) {
+if (isset($_POST["nb_salles_bains"])AND $_POST["nb_salles_bains"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET nb_salles_bains=:nb_salles_bains WHERE id_users=:id_user");
     $desc -> execute(array(
         'nb_salles_bains' => $_POST['nb_salles_bains'],
@@ -120,7 +120,7 @@ if (isset($_POST["nb_salles_bains"])) {
     ));
 }
 
-if (isset($_POST["superficie"])) {
+if (isset($_POST["superficie"])AND $_POST["superficie"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET superficie=:superficie WHERE id_users=:id_user");
     $desc -> execute(array(
         'superficie' => $_POST['superficie'],
@@ -128,7 +128,7 @@ if (isset($_POST["superficie"])) {
     ));
 }
 
-if (isset($_POST["date_début_disponibilite"])) {
+if (isset($_POST["date_début_disponibilite"])AND $_POST["date_début_disponibilite"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET date_début_disponibilite=:date_début_disponibilite WHERE id_users=:id_user");
     $desc -> execute(array(
         'date_début_disponibilite' => $_POST['date_début_disponibilite'],
@@ -136,7 +136,7 @@ if (isset($_POST["date_début_disponibilite"])) {
     ));
 }
 
-if (isset($_POST["date_fin_disponibilite"])) {
+if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET date_fin_disponibilite=:date_fin_disponibilite WHERE id_users=:id_user");
     $desc -> execute(array(
         'date_fin_disponibilite' => $_POST['date_fin_disponibilite'],
@@ -209,11 +209,11 @@ if (isset($_POST["date_fin_disponibilite"])) {
         <input type="number" name="nb_salles_bains"/><br/>
         <label for="superficie">Superficie (en m2)</label><br/>
         <input type="number" name="superficie"/><br/>
-        <!-- CHAMPS POUR DATES DISPO LOGEMENT
+        <!-- CHAMPS POUR DATES DISPO LOGEMENT -->
         <label for="date_début_disponibilite">Date de début de disponibilité</label><br/>
         <input type="date" name="date_début_disponibilite"/><br/>
         <label for="date_fin_disponibilite">Date de fin de disponibilité</label><br/>
-        <input type="date" name="date_fin_disponibilite"/><br/> -->
+        <input type="date" name="date_fin_disponibilite"/><br/>
 
         <input type="submit" value="Valider les modifications" id="btn_connexion" /><br/><br/>
     </form>
