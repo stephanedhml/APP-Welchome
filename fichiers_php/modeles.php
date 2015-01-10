@@ -223,13 +223,36 @@ function resultats_requete_avancee()
     {
         $message15="";
     }
+    if (isset($_POST["television"])) {
+        if ($_POST["television"]=='Oui') {$tele =" AND television LIKE 1";} else {$tele ="";};
+    }
+
+    if (isset($_POST["machine_a_laver"])) {
+        if ($_POST["machine_a_laver"]=='Oui') {$malav =" AND machine_a_laver LIKE 1";} else {$malav ="";}
+    }
+
+    if (isset($_POST["parking"])) {
+        if ($_POST["parking"]=='Oui') {$parking =" AND parking LIKE 1";} else {$parking ="";}
+    }
+
+    if (isset($_POST["climatisation"])) {
+        if ($_POST["climatisation"]=='Oui') {$clim =" AND climatisation LIKE 1";} else {$clim ="";}
+    }
+
+    if (isset($_POST["piscine"])) {
+        if ($_POST["piscine"]=='Oui') {$piscine =" AND piscine LIKE 1";} else {$piscine ="";}
+    }
+
+    if (isset($_POST["jardin"])) {
+        if ($_POST["jardin"]=='Oui') {$jardin =" AND jardin LIKE 1";} else {$jardin ="";}
+    }
 
 
 
     $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE
  localisation LIKE '%$lieu%'
   $message1
- $message2
+  $message2
   $message3
   $message4
   $message5
@@ -243,6 +266,12 @@ function resultats_requete_avancee()
   $message13
   $message14
   $message15
+  $tele
+  $malav
+  $parking
+  $clim
+  $piscine
+  $jardin
 
     ORDER BY id_logement DESC");
 

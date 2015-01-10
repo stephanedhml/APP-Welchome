@@ -70,7 +70,7 @@ session_start();
     <div class="bloc_search_right">
 
         <p><?php echo choixattribut;?><br/><br/>
-        <input type="checkbox" name="case01" id="case" value="animaux"/> <label for="case"><?php echo animaux;?></label><br/>
+        <!-- <input type="checkbox" name="case01" id="case" value="animaux"/> <label for="case"><?php echo animaux;?></label><br/>
         <input type="checkbox" name="case02" id="case" value="clim"/> <label for="case"><?php echo climatisation;?></label><br/>
         <input type="checkbox" name="case03" id="case" value="chauffage"/> <label for="case"><?php echo chauffage;?></label><br/>
         <input type="checkbox" name="case04" id="case" value="laver"/> <label for="case"><?php echo machinelaver;?></label><br/>
@@ -81,7 +81,44 @@ session_start();
         <input type="checkbox" name="case09" id="case" value="piscine"/> <label for="case"><?php echo piscine;?></label><br/>
         <input type="checkbox" name="case010" id="case" value="jardin"/> <label for="case"><?php echo jardin;?></label><br/>
         <input type="checkbox" name="case011" id="case" value="balcon"/> <label for="case"><?php echo balcon;?></label><br/>
-        <input type="checkbox" name="case012" id="case" value="wifi"/> <label for="case"><?php echo internet;?></label><br/><br/></p>
+        <input type="checkbox" name="case012" id="case" value="wifi"/> <label for="case"><?php echo internet;?></label><br/><br/></p> -->
+
+            <label for="television">Télévision</label><br/>
+            <select name="television">
+                <OPTION></option>
+                <OPTION>Oui</option>
+                <OPTION>Non</option>
+            </select><br/>
+            <label for="machine_a_laver">Machine à laver</label><br/>
+            <select name="machine_a_laver">
+                <OPTION></option>
+                <OPTION>Oui</option>
+                <OPTION>Non</option>
+            </select><br/>
+            <label for="parking">Parking</label><br/>
+            <select name="parking">
+                <OPTION></option>
+                <OPTION>Oui</option>
+                <OPTION>Non</option>
+            </select><br/>
+            <label for="climatisation">Climatisation</label><br/>
+            <select name="climatisation">
+                <OPTION></option>
+                <OPTION>Oui</option>
+                <OPTION>Non</option>
+            </select><br/>
+            <label for="piscine">Piscine</label><br/>
+            <select name="piscine">
+                <OPTION></option>
+                <OPTION>Oui</option>
+                <OPTION>Non</option>
+            </select><br/>
+            <label for="jardin">Jardin</label><br/>
+            <select name="jardin">
+                <OPTION></option>
+                <OPTION>Oui</option>
+                <OPTION>Non</option>
+            </select><br/>
 
             <p><input type="submit" value="Valider" id="btn_valider"/></p><br/>
 
