@@ -74,7 +74,7 @@ $user = $rel -> fetch();
 
         <table class="tableau_topic">
             <tr>
-                <th>Membre</th>
+                <th style="width: 210px;">Membre</th>
                 <th>Messages</th>
             </tr>
             <?php
@@ -136,7 +136,7 @@ $user = $rel -> fetch();
 
             <table class="tableau_forum_accueil">
                 <tr>
-                    <th>Membre</th>
+                    <th style="width: 210px;">Membre</th>
                     <th>Messages</th>
                 </tr>
                 <?php
@@ -208,9 +208,9 @@ $user = $rel -> fetch();
 
             <table class="tableau_forum_accueil">
                 <tr>
-                    <th>Membre</th>
+                    <th style="width: 210px;">Membre</th>
                     <th>Messages</th>
-                    <th>Administration</th>
+                    <th style="width: 50px;">Administration</th>
                 </tr>
                 <?php
                 $ret = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
@@ -261,7 +261,7 @@ $user = $rel -> fetch();
                                 <div class="answer1">
                                     <form action="topic.php?id_topic='. $_GET['id_topic'] .'&id_cat='. $_GET['id_cat'] .'" method="post">
                                         <label for="message">Message</label><br/></br>
-                                        <input type="text" name="message" class="post_message" /><br /><br/>
+                                        <textarea type="text" name="message" class="post_message" ></textarea><br /><br/>
                                         <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
@@ -283,7 +283,7 @@ $user = $rel -> fetch();
 
             <table class="tableau_topic">
                 <tr>
-                    <th>Membre</th>
+                    <th style="width: 210px;">Membre</th>
                     <th>Messages</th>
                 </tr>
                 <?php

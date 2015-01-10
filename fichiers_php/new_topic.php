@@ -24,20 +24,27 @@ session_start();
             if(isset($_POST['objet'],$_POST['message'])) {
                 $req = $bdd -> prepare("INSERT INTO forum_topic(id_cat,id_user,nom_topic,topic_first_post) VALUES(:cat,:auteur,:nom_topic,:message)");
                 $req -> execute(array(
-                    'cat' => $_GET['id_topic'],
+                    'cat' => $_GET['id_cat'],
                     'auteur' => $_SESSION['userid'],
                     'nom_topic' => $_POST['objet'],
                     'message' => $_POST['message'],
                 ));
-                $rez = $bdd -> prepare("UPDATE forum_forum SET nb_message=nb_message+1 WHERE id_cat=?");
-                $rez -> execute(array($_GET['id_topic']));
+                $new_topic = $bdd -> lastInsertId();
 
-                echo '<div class="no_msg_r"><p><h7>Votre sujet à bien été posté, ainsi que le premier message</h7><br/><br/></p></div>';
+
+                $rez = $bdd -> prepare("UPDATE forum_forum SET nb_message=nb_message+1 WHERE id_cat=?");
+                $rez -> execute(array($_GET['id_cat']));
+
+                $rel = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
+                $rel -> execute(array($new_topic));
+                $id_topik = $rel -> fetch();
+
+                header('Location: topic.php?id_topic='.$new_topic.'&id_cat='. $_GET['id_cat'].'');
             }
         else { echo '
                         <div class="cadre_topic_post">
                                 <div class="answer1">
-                                    <form action="new_topic.php?id_topic='. $_GET['id_topic'] .'" method="post">
+                                    <form action="new_topic.php?id_cat='. $_GET['id_cat'] .'" method="post">
                                         <label for="username" id="username_form">Objet</label><br/></br>
                                         <input type="text" name="objet" class="objet_field" /><br /><br/>
                                         <label for="password">Message</label><br/></br>

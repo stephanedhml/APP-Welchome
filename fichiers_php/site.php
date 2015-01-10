@@ -41,7 +41,7 @@ if (isset($_SESSION["userid"])) {
                     <a href="forum.php">Forum</a> -> <a href="site.php?id_cat='.$name_cat[0].'">'.$name_cat[1].'</a>
                 </div>
                 <div class="forum_top_r_button">
-                    <a href="new_topic.php?id_topic='. $_GET['id_cat'] .'" id="btn_new_topic">Nouveau Sujet</a>
+                    <a href="new_topic.php?id_cat='. $_GET['id_cat'] .'" id="btn_new_topic">Nouveau Sujet</a>
                 </div>
             </div>
             ';
