@@ -9,7 +9,7 @@ session_start();
 
 <?php
 
-if (isset($_FILES["up_avatar"])) {
+if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
     $up_avatar_folder = "../photos_utilisateurs/{$_SESSION['userid']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
