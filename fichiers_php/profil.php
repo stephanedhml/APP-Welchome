@@ -122,6 +122,7 @@
         <div id="article2">
             <h1 id="Identification"> A Propos</h1>
             <article id="a_propos">
+            <a href="edit_profile.php">Editer votre profil</a>
             <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
             <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
             <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
