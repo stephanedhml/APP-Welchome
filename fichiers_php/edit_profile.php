@@ -80,7 +80,7 @@ if (isset($_POST["description_logement"])AND $_POST["description_logement"]!=NUL
         'id_user' => $_SESSION['userid'],
     ));
 }
-if (isset($_POST["type_logement"])AND $_POST["type_logement"]!=NULL ) {
+if (isset($_POST["type_logement"]) AND $_POST["type_logement"]!=null ) {
     $desc = $bdd -> prepare("UPDATE logement SET type_logement=:type_logement WHERE id_users=:id_user");
     $desc -> execute(array(
         'type_logement' => $_POST['type_logement'],
@@ -169,9 +169,10 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
         <input type="text" name="description"/><br/>
         <label for="username" id="username_form">Sexe</label></br>
         <SELECT name="sexe" size="1">
-            <OPTION>Homme
-            <OPTION>Femme
-            <OPTION>Autre
+            <OPTION></OPTION>
+            <OPTION>Homme</OPTION>
+            <OPTION>Femme</OPTION>
+            <OPTION>Autre</OPTION>
         </SELECT></br>
         <label for="tel">Numéro de Téléphone</label></br>
         <input type="tel" name="tel" /><br/>
@@ -179,9 +180,10 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
         <input type="text" name="metier"/><br/>
         <label for="situation">Situation</label><br/>
         <SELECT name="situation" size="1">
-            <OPTION>Célibataire
-            <OPTION>Couple
-            <OPTION>Marié
+            <OPTION></OPTION>
+            <OPTION>Célibataire</OPTION>
+            <OPTION>Couple</OPTION>
+            <OPTION>Marié</OPTION>
         </SELECT></br>
 
         <!-- Logement -->
@@ -191,6 +193,7 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
         <input type="text" name="description_logement"/><br/>
         <label for="type_logement">Type de logement</label><br/>
         <select name="type_logement" id="choix">
+            <option value="null"></option>
             <option value="Studio">studio</option>
             <option value="Appartement">appartement</option>
             <option value="Maison">maison</option>
