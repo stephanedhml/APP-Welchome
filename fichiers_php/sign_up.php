@@ -63,13 +63,14 @@
                                 $res = $bdd -> query("UPDATE users SET avatar= '../photos_utilisateurs/{$new_id}.jpg' WHERE id_users=$new_id"); //A CORRIGER -> le fichier s'appelle id_logement.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 logement et plusieurs extensions possibles !
 
                                 //On enregistre le logement dans la base de donnée
-                                $ret = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users) VALUES(:localisation, :type_logement, :nom_maison, :id_users)");
+                                $ret = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users,numero_logement) VALUES(:localisation, :type_logement, :nom_maison, :id_users, :numero_logement)");
                                 $ret->execute(array
                                 (
                                     'localisation' => $_POST['localisation'],
                                     'nom_maison' => $_POST['nom_maison'],
                                     'type_logement' => $_POST['type_logement'],
                                     'id_users' => $new_id,
+                                    'numero_logement' => 0,
                                 ));
                                 $new_logement = $bdd -> lastInsertId();
                                 //Importer la photo du logement sur le serveur
