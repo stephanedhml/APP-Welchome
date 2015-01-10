@@ -35,9 +35,8 @@ session_start();
                 $rez = $bdd -> prepare("UPDATE forum_forum SET nb_message=nb_message+1 WHERE id_cat=?");
                 $rez -> execute(array($_GET['id_cat']));
 
-                $rel = $bdd -> prepare("SELECT * FROM forum_topic WHERE id_topic=?");
-                $rel -> execute(array($new_topic));
-                $id_topik = $rel -> fetch();
+                $lst = $bdd -> prepare("UPDATE forum_forum SET last_message=? WHERE id_cat=?");
+                $lst -> execute(array($_SESSION['userid'],$_GET['id_cat']));
 
                 header('Location: topic.php?id_topic='.$new_topic.'&id_cat='. $_GET['id_cat'].'');
             }
