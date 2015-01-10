@@ -80,7 +80,7 @@ if (isset($_POST["description_logement"])AND $_POST["description_logement"]!=NUL
         'id_user' => $_SESSION['userid'],
     ));
 }
-if (isset($_POST["type_logement"]) AND $_POST["type_logement"]!=null ) {
+if (isset($_POST["type_logement"]) AND $_POST["type_logement"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE logement SET type_logement=:type_logement WHERE id_users=:id_user");
     $desc -> execute(array(
         'type_logement' => $_POST['type_logement'],
@@ -143,6 +143,60 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
         'id_user' => $_SESSION['userid'],
     ));
 }
+
+if (isset($_POST["television"])AND $_POST["television"]!=NULL ) {
+    if ($_POST["television"]=='Oui') {$tele=1;} else {$tele=0;}
+    $desc = $bdd -> prepare("UPDATE logement SET television=:television WHERE id_users=:id_user");
+    $desc -> execute(array(
+        'television' => $tele,
+        'id_user' => $_SESSION['userid'],
+    ));
+}
+
+if (isset($_POST["machine_a_laver"])AND $_POST["machine_a_laver"]!=NULL ) {
+    if ($_POST["machine_a_laver"]=='Oui') {$vari=1;} elseif ($_POST["television"]='Non') {$vari=0;}
+    $desc = $bdd -> prepare("UPDATE logement SET machine_a_laver=:machine_a_laver WHERE id_users=:id_user");
+    $desc -> execute(array(
+        'machine_a_laver' => $vari,
+        'id_user' => $_SESSION['userid'],
+    ));
+}
+
+if (isset($_POST["parking"])AND $_POST["parking"]!=NULL ) {
+    if ($_POST["parking"]=='Oui') {$vari=1;} elseif ($_POST["television"]='Non') {$vari=0;}
+    $desc = $bdd -> prepare("UPDATE logement SET parking=:parking WHERE id_users=:id_user");
+    $desc -> execute(array(
+        'parking' => $vari,
+        'id_user' => $_SESSION['userid'],
+    ));
+}
+
+if (isset($_POST["climatisation"])AND $_POST["climatisation"]!=NULL ) {
+    if ($_POST["climatisation"]=='Oui') {$vari=1;} elseif ($_POST["television"]='Non') {$vari=0;}
+    $desc = $bdd -> prepare("UPDATE logement SET climatisation=:climatisation WHERE id_users=:id_user");
+    $desc -> execute(array(
+        'climatisation' => $vari,
+        'id_user' => $_SESSION['userid'],
+    ));
+}
+
+if (isset($_POST["piscine"])AND $_POST["piscine"]!=NULL ) {
+    if ($_POST["piscine"]=='Oui') {$vari=1;} elseif ($_POST["television"]='Non') {$vari=0;}
+    $desc = $bdd -> prepare("UPDATE logement SET piscine=:piscine WHERE id_users=:id_user");
+    $desc -> execute(array(
+        'piscine' => $vari,
+        'id_user' => $_SESSION['userid'],
+    ));
+}
+
+if (isset($_POST["jardin"])AND $_POST["jardin"]!=NULL ) {
+    if ($_POST["jardin"]=='Oui') {$vari=1;} elseif ($_POST["television"]='Non') {$vari=0;}
+    $desc = $bdd -> prepare("UPDATE logement SET jardin=:jardin WHERE id_users=:id_user");
+    $desc -> execute(array(
+        'jardin' => $vari,
+        'id_user' => $_SESSION['userid'],
+    ));
+}
 ?>
 
 
@@ -161,8 +215,14 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
 </head>
 
 <body>
+    <div class="header">
+        <?php include("menus.php"); ?>
+    </div>
+    <div class="edit_profil">
+    <div class="edit_title"><h7>Editer votre profil</h7></div>
     <form action="edit_profile.php" method="post" enctype="multipart/form-data">
-        <label for="username" id="username_form">Edition profil</label><br/>
+<div class="container_edit_profil">
+    <div class="bloc_search_left">
         <label for="avatar">Image perso</label><br/>
         <input type="file" name="up_avatar" id="up_avatar"><br />
         <label for="description">Description</label><br/>
@@ -185,15 +245,16 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
             <OPTION>Couple</OPTION>
             <OPTION>Marié</OPTION>
         </SELECT></br>
-
+    </div>
         <!-- Logement -->
+    <div class="bloc_search_center">
         <label for="localisation">Localisation</label><br/>
         <input type="text" name="localisation"/><br/>
         <label for="description_logement">Description du logement</label><br/>
         <input type="text" name="description_logement"/><br/>
         <label for="type_logement">Type de logement</label><br/>
         <select name="type_logement" id="choix">
-            <option value="null"></option>
+            <OPTION></OPTION>
             <option value="Studio">studio</option>
             <option value="Appartement">appartement</option>
             <option value="Maison">maison</option>
@@ -212,12 +273,58 @@ if (isset($_POST["date_fin_disponibilite"])AND $_POST["date_fin_disponibilite"]!
         <input type="number" name="nb_salles_bains"/><br/>
         <label for="superficie">Superficie (en m2)</label><br/>
         <input type="number" name="superficie"/><br/>
-        <!-- CHAMPS POUR DATES DISPO LOGEMENT -->
+
+    </div>
+
+    <!-- Critères logement -->
+
+    <div class="bloc_search_right">
+
+        <label for="television">Télévision</label><br/>
+        <select name="television">
+            <OPTION></option>
+            <OPTION>Oui</option>
+            <OPTION>Non</option>
+        </select><br/>
+        <label for="machine_a_laver">Machine à laver</label><br/>
+        <select name="machine_a_laver">
+            <OPTION></option>
+            <OPTION>Oui</option>
+            <OPTION>Non</option>
+        </select><br/>
+        <label for="parking">Parking</label><br/>
+        <select name="parking">
+            <OPTION></option>
+            <OPTION>Oui</option>
+            <OPTION>Non</option>
+        </select><br/>
+        <label for="climatisation">Climatisation</label><br/>
+        <select name="climatisation">
+            <OPTION></option>
+            <OPTION>Oui</option>
+            <OPTION>Non</option>
+        </select><br/>
+        <label for="piscine">Piscine</label><br/>
+        <select name="piscine">
+            <OPTION></option>
+            <OPTION>Oui</option>
+            <OPTION>Non</option>
+        </select><br/>
+        <label for="jardin">Jardin</label><br/>
+        <select name="jardin">
+            <OPTION></option>
+            <OPTION>Oui</option>
+            <OPTION>Non</option>
+        </select><br/>
+
+        <!-- CHAMPS POUR DATES DISPO LOGEMENT
         <label for="date_début_disponibilite">Date de début de disponibilité</label><br/>
         <input type="date" name="date_début_disponibilite"/><br/>
         <label for="date_fin_disponibilite">Date de fin de disponibilité</label><br/>
-        <input type="date" name="date_fin_disponibilite"/><br/>
+        <input type="date" name="date_fin_disponibilite"/><br/> -->
 
-        <input type="submit" value="Valider les modifications" id="btn_connexion" /><br/><br/>
+        <input type="submit" value="Valider les modifications" id="btn_validation_edit" /><br/><br/>
+    </div>
+</div>
     </form>
 </body>
