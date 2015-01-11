@@ -12,6 +12,7 @@ session_start();
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
+		<script type="text/javascript" src="../carrousel/jquery.js"></script>
 		<script type="text/javascript" src="../fichier_js/connexion.js"></script>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css" />
@@ -35,8 +36,10 @@ session_start();
 		?>
                 <?php
                 session_destroy();
-                header('Location: index.php');
-                ?>
+
+				header('Location:index.php');
+
+				?>
 
 				
 				<?php
@@ -67,7 +70,11 @@ session_start();
 						$_SESSION["username"]=$username;
 						$_SESSION["userid"]=$dn["id_users"];
 
-                        header('Location: index.php');
+						echo '<body onload="notifyMe()">';
+// puis on le redirige vers la page d'accueil
+						echo '<meta http-equiv="refresh" content="0;URL=index.php">';
+						header('Location :index.php');
+
 					}
 					else
 					{
