@@ -101,19 +101,28 @@
 
                     <aside id="Description3">
 
-                       <p id="Titre2"> Logement </p> <br></br>
+                       <p id="Titre2"> Logements </p> <br></br>
+                        <?php
+                        $rez = $bdd->prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_users=? ORDER BY id_logement DESC");
+                        $rez -> execute(array($_GET['id_users']));
+                        $nb_house = $rez -> rowCount();
+
+                        for ($i=0;$i<$nb_house;$i++) {
+                        $house = $rez->fetch();
+                        ?>
                         <div class="cadre">
                                 <div class="left">
-                            <?php echo '<img width="300px" height="200px" align="left" src="'.$donnees1 ['lien_photo'].'" class="photo">' ?>
+                                    <?php echo '<img width="300px" height="200px" align="left" src="'.$house ['lien_photo'].'" class="photo">' ?>
                                 </div>
 
                                 <div class="right">
                                     <span>
-                                    <a href="annonce.php?id_logement=<?php echo $donnees1['id_logement']; ?>&amp;id_users=<?php echo $annonce ?>" >
-                    <?php echo '<p>' .''.$donnees1['localisation']. ' </br>' . $donnees1['nombre_voyageurs']. ' voyageurs </br>' . $donnees1['type_logement'] . '</p>'; ?> </a><br/>
+                                    <a href="annonce.php?id_logement=<?php echo $house['id_logement']; ?>&amp;id_users=<?php echo $annonce ?>" >
+                                    <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                                 </div>
-                        </div>
+                        </div><br/>
+                        <?php } ?>
                     </aside>
                 </div>
     </article>
@@ -122,7 +131,7 @@
         <div id="article2">
             <h1 id="Identification"> A Propos</h1>
             <article id="a_propos">
-            <a href="edit_profile.php">Editer votre profil</a>
+            <?php if($_GET["id_users"]==$_SESSION["userid"]) { ?><a href="edit_profile.php">Editer votre profil</a> <?php } ?>
             <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
             <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
             <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>

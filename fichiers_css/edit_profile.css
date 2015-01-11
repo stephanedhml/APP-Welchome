@@ -82,11 +82,11 @@
     height: 100%;
     line-height: 10px;
 }
-.left_half {
+.left_3 {
     position: absolute;
-    width: 50%;
+    width: 33%;
     height: 100%;
-    padding-left: 20%;
+    margin-left: 10%;
     padding-top: 15%;
 
 }
@@ -113,11 +113,40 @@
     color: white;
     text-decoration: none;
 }
-.right_half {
+.center_3 {
     position: absolute;
-    width: 50%;
+    width: 33%;
     height: 100%;
-    margin-left: 40%;
+    margin-left: 33%;
+    padding-top: 15%;
+}
+.center_carre {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    background-color: #204d74;
+}
+.center_carre a
+{
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.center_carre a p
+{
+    padding-top: 33%;
+    text-align: center;
+    font-size: 33px;
+    font-family: century,arial,sans-serif;
+    color: white;
+}
+.right_3 {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    margin-left: 56%;
     padding-top: 15%;
 }
 .right_carre {
@@ -141,4 +170,55 @@
     font-size: 33px;
     font-family: century,arial,sans-serif;
     color: white;
+}
+.container_liste_logements {
+    margin-top: 100px;
+}
+.cadre_logement {
+    border-width: 1px;
+    border-color: #000;
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    height: 200px;
+    position: relative;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left_cadre_logement {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+}
+
+.right_cadre_logement {
+    position: absolute;
+    height: 200px;
+    width: 500px;
+    margin-left: 300px;
+    margin-top: 50px;
+    font-size: 1.1em;
+}
+
+.right_cadre_logement a:link {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.right_cadre_logement a:visited {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.right_cadre_logement a:focus {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.right_cadre_logement a:active {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.Photo {
+    width: 100%;
+    height: 198px;
 }
