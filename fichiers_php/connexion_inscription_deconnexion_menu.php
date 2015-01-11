@@ -1,4 +1,5 @@
 <!--Différences d'affichage du menu en fonction de l'état connecté ou non-->
+<script type="text/javascript" src="../fichier_js/connexion.js"></script>
 <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 <?php
@@ -22,7 +23,7 @@ function check_new_msg()
 ?>
         <li><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
         <?php echo check_new_msg() ?>
-		<li><a href="connexion.php"><?php echo disconnect ?></a></li>
+		<li><a href="connexion.php" onclick="return deconnect()"><?php echo disconnect ?></a></li>
 <?php
 	}
 	else

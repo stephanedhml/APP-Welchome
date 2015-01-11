@@ -13,8 +13,6 @@ session_start();
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 		<script type="text/javascript" src="../carrousel/jquery.js"></script>
-		<script type ="text/javascript" src="../fichier_js/UIKit.js"></script>
-		<link rel="stylesheet" href="../fichiers_css/UIKit.css" />
 		<script type="text/javascript" src="../fichier_js/connexion.js"></script>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css" />
@@ -38,9 +36,8 @@ session_start();
 		?>
                 <?php
                 session_destroy();
-				echo '<body onload="confirm(\'Êtes vous sur de vouloir vous déconnecter?\')">';
-// puis on le redirige vers la page d'accueil
-				echo '<meta http-equiv="refresh" content="0;URL=index.php">';
+
+				header('Location:index.php');
 
 				?>
 
@@ -76,6 +73,7 @@ session_start();
 						echo '<body onload="notifyMe()">';
 // puis on le redirige vers la page d'accueil
 						echo '<meta http-equiv="refresh" content="0;URL=index.php">';
+						header('Location :index.php');
 
 					}
 					else
