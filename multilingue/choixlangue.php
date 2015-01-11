@@ -90,7 +90,7 @@
 		define('verification','(vérification)');
 		define('email','Email');
 		define('imageperso','Image perso');
-		define('logementname','Nom de votre logement');
+		define('logementname','Titre de l\'annonce');
 		define('wherelogement','Où se situe votre logement ?');
 		define('typelogement','Quel type de logement proposez vous ?');
 		define('photo','Photos');

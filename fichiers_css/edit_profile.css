@@ -171,3 +171,50 @@
     font-family: century,arial,sans-serif;
     color: white;
 }
+.container_liste_logements {
+    margin-top: 100px;
+}
+.cadre_logement {
+    border-width: 1px;
+    border-color: #000;
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    height: 200px;
+    position: relative;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left_cadre_logement {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+}
+
+.right_cadre_logement {
+    position: absolute;
+    height: 200px;
+    width: 500px;
+    margin-left: 300px;
+    margin-top: 50px;
+    font-size: 1.1em;
+}
+
+.right_cadre_logement a:link {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.right_cadre_logement a:visited {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.right_cadre_logement a:focus {
+    color: #2C3E50;
+    text-decoration: none;
+}
+.right_cadre_logement a:active {
+    color: #2C3E50;
+    text-decoration: none;
+}

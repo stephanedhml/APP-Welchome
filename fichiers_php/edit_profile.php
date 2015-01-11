@@ -9,7 +9,7 @@ session_start();
 
 <?php
 
-if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
+if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!==NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
     $up_avatar_folder = "../photos_utilisateurs/{$_SESSION['userid']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
@@ -19,7 +19,7 @@ if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
         $res->execute(array($_SESSION['userid']));
     }
 
-if (isset($_POST["description"]) AND $_POST["description"]!=NULL ) {
+if (isset($_POST["description"]) AND $_POST["description"]!==NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET description=:description WHERE id_users=:id_user");
     $desc -> execute(array(
         'description' => $_POST['description'],
@@ -27,7 +27,7 @@ if (isset($_POST["description"]) AND $_POST["description"]!=NULL ) {
     ));
 }
 
-if (isset($_POST["tel"])AND $_POST["tel"]!=NULL ) {
+if (isset($_POST["tel"])AND $_POST["tel"]!==NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET tel=:tel WHERE id_users=:id_user");
     $desc -> execute(array(
         'tel' => $_POST['tel'],
@@ -35,7 +35,7 @@ if (isset($_POST["tel"])AND $_POST["tel"]!=NULL ) {
     ));
 }
 
-if (isset($_POST["metier"])AND $_POST["metier"]!=NULL ) {
+if (isset($_POST["metier"])AND $_POST["metier"]!==NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET profession=:profession WHERE id_users=:id_user");
     $desc -> execute(array(
         'profession' => $_POST['metier'],
@@ -43,7 +43,7 @@ if (isset($_POST["metier"])AND $_POST["metier"]!=NULL ) {
     ));
 }
 
-if (isset($_POST["sexe"])AND $_POST["sexe"]!=NULL ) {
+if (isset($_POST["sexe"])AND $_POST["sexe"]!==NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET sexe=:sexe WHERE id_users=:id_user");
     $desc -> execute(array(
         'sexe' => $_POST['sexe'],
@@ -51,7 +51,7 @@ if (isset($_POST["sexe"])AND $_POST["sexe"]!=NULL ) {
     ));
 }
 
-if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
+if (isset($_POST["situation"])AND $_POST["situation"]!==NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET situation=:situation WHERE id_users=:id_user");
     $desc -> execute(array(
         'situation' => $_POST['situation'],
@@ -62,7 +62,7 @@ if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
 // Logement MAJ
 if (isset($_GET["update"])) {
 
-    if (isset($_POST["localisation"]) AND $_POST["localisation"] != NULL) {
+    if (isset($_POST["localisation"]) AND $_POST["localisation"] !==NULL) {
         $desc = $bdd->prepare("UPDATE logement SET localisation=:localisation WHERE id_logement=:id_logement");
         $desc->execute(array(
             'localisation' => $_POST['localisation'],
@@ -70,14 +70,14 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["description_logement"]) AND $_POST["description_logement"] != NULL) {
+    if (isset($_POST["description_logement"]) AND $_POST["description_logement"] !==NULL) {
         $desc = $bdd->prepare("UPDATE logement SET description_logement=:description WHERE id_logement=:id_logement");
         $desc->execute(array(
             'description' => $_POST['description_logement'],
             'id_logement' => $_GET['choix_logement'],
         ));
     }
-    if (isset($_POST["type_logement"]) AND $_POST["type_logement"] != NULL) {
+    if (isset($_POST["type_logement"]) AND $_POST["type_logement"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET type_logement=:type_logement WHERE id_logement=:id_logement");
         $desc->execute(array(
             'type_logement' => $_POST['type_logement'],
@@ -85,7 +85,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nom_maison"]) AND $_POST["nom_maison"] != NULL) {
+    if (isset($_POST["nom_maison"]) AND $_POST["nom_maison"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nom_maison=:nom_maison WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nom_maison' => $_POST['nom_maison'],
@@ -93,7 +93,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nombre_voyageurs"]) AND $_POST["nombre_voyageurs"] != NULL) {
+    if (isset($_POST["nombre_voyageurs"]) AND $_POST["nombre_voyageurs"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nombre_voyageurs=:nombre_voyageurs WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nombre_voyageurs' => $_POST['nombre_voyageurs'],
@@ -101,7 +101,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nombre_chambres"]) AND $_POST["nombre_chambres"] != NULL) {
+    if (isset($_POST["nombre_chambres"]) AND $_POST["nombre_chambres"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nb_chambres=:nombre_chambres WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nombre_chambres' => $_POST['nombre_chambres'],
@@ -109,7 +109,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nb_salles_bains"]) AND $_POST["nb_salles_bains"] != NULL) {
+    if (isset($_POST["nb_salles_bains"]) AND $_POST["nb_salles_bains"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nb_salles_bains=:nb_salles_bains WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nb_salles_bains' => $_POST['nb_salles_bains'],
@@ -117,7 +117,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["superficie"]) AND $_POST["superficie"] != NULL) {
+    if (isset($_POST["superficie"]) AND $_POST["superficie"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET superficie=:superficie WHERE id_logement=:id_logement");
         $desc->execute(array(
             'superficie' => $_POST['superficie'],
@@ -125,7 +125,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["date_début_disponibilite"]) AND $_POST["date_début_disponibilite"] != NULL) {
+    if (isset($_POST["date_début_disponibilite"]) AND $_POST["date_début_disponibilite"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET date_début_disponibilite=:date_début_disponibilite WHERE id_logement=:id_logement");
         $desc->execute(array(
             'date_début_disponibilite' => $_POST['date_début_disponibilite'],
@@ -133,7 +133,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["date_fin_disponibilite"]) AND $_POST["date_fin_disponibilite"] != NULL) {
+    if (isset($_POST["date_fin_disponibilite"]) AND $_POST["date_fin_disponibilite"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET date_fin_disponibilite=:date_fin_disponibilite WHERE id_logement=:id_logement");
         $desc->execute(array(
             'date_fin_disponibilite' => $_POST['date_fin_disponibilite'],
@@ -141,7 +141,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["television"]) AND $_POST["television"] != NULL) {
+    if (isset($_POST["television"]) AND $_POST["television"] !=NULL) {
         if ($_POST["television"] == 'Oui') {
             $tele = 1;
         } else {
@@ -154,7 +154,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["machine_a_laver"]) AND $_POST["machine_a_laver"] != NULL) {
+    if (isset($_POST["machine_a_laver"]) AND $_POST["machine_a_laver"] !=NULL) {
         if ($_POST["machine_a_laver"] == 'Oui') {
             $vari = 1;
         } elseif ($_POST["television"] = 'Non') {
@@ -167,7 +167,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["parking"]) AND $_POST["parking"] != NULL) {
+    if (isset($_POST["parking"]) AND $_POST["parking"] !=NULL) {
         if ($_POST["parking"] == 'Oui') {
             $vari = 1;
         } elseif ($_POST["television"] = 'Non') {
@@ -179,11 +179,10 @@ if (isset($_GET["update"])) {
             'id_logement' => $_GET['choix_logement'],
         ));
     }
-
     if (isset($_POST["climatisation"]) AND $_POST["climatisation"] != NULL) {
         if ($_POST["climatisation"] == 'Oui') {
             $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
+        } elseif ($_POST["climatisation"] == 'Non') {
             $vari = 0;
         }
         $desc = $bdd->prepare("UPDATE logement SET climatisation=:climatisation WHERE id_logement=:id_logement");
@@ -193,7 +192,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["piscine"]) AND $_POST["piscine"] != NULL) {
+    if (isset($_POST["piscine"]) AND $_POST["piscine"] !=NULL) {
         if ($_POST["piscine"] == 'Oui') {
             $vari = 1;
         } elseif ($_POST["television"] = 'Non') {
@@ -206,7 +205,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["jardin"]) AND $_POST["jardin"] != NULL) {
+    if (isset($_POST["jardin"]) AND $_POST["jardin"] !=NULL) {
         if ($_POST["jardin"] == 'Oui') {
             $vari = 1;
         } elseif ($_POST["television"] = 'Non') {
@@ -453,15 +452,26 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <?php
         if (isset($_GET['choix']) AND $_GET["choix"]==2) {
 
-            $ret = $bdd -> prepare("SELECT * FROM logement WHERE id_users=?");
+            $ret = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_users=?");
             $ret -> execute(array($_SESSION["userid"]));
             $nmber = $ret -> rowCount();
-            ?> <div class="container_edit_profil"> <?php
+            ?> <div class="container_liste_logements"> <?php
             for ($i=0 ; $i < $nmber ; $i++) {
                 $house = $ret -> fetch();
                     ?>
+                <div class="cadre_logement">
+                    <div class="left_cadre_logement">
+                        <?php echo '<img src="'.$house['lien_photo'].'" class="photo">' ?>
+                    </div>
 
-            <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix"><?php echo $house["nom_maison"] ; ?></a>
+                    <div class="right_cadre_logement">
+                                    <span>
+                                    <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix"><?php echo $house["nom_maison"] ; ?></a>
+                                    <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix">
+                                        <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
+                                    </span>
+                    </div>
+                </div><br/>
 
     <?php } ?> </div> <?php } ?>
 
@@ -514,7 +524,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         if (isset($_GET["choix_logement"])) {
     ?>
 <div class="container_edit_profil">
-    <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix" method="post" enctype="multipart/form-data">
+    <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
         <label for="localisation">Localisation</label><br/>
         <input type="text" name="localisation"/><br/>
@@ -531,7 +541,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
             <option value="Bateau/péniche">bateau</option>
             <option value="Camping car">caming car</option>
         </select><br/>
-        <label for="nom_maison">Nom maison</label><br/>
+        <label for="nom_maison">Titre de l'annonce</label><br/>
         <input type="text" name="nom_maison"/><br/>
         <label for="nombre_voyageurs">Nombre de voyageurs permis</label><br/>
         <input type="number" name="nombre_voyageurs"/><br/>
@@ -595,25 +605,25 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     </div>
 
         <!-- Afficher les informations actuelles de l'utilisateur -->
-        <?php $req = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=?"); $req -> execute(array($_GET["choix_logement"])); $donnees1 = $req -> fetch(); ?>
+        <?php $req = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=?"); $req -> execute(array($_GET["choix_logement"])); $donnees1 = $req -> fetch();?>
 
     <div class="bloc_edit_logement_right">
 
         <?php echo '<img src="'.$donnees1 ['lien_photo'].'" class="photo_edit_actual_house">' ?>
         <p>Localisation : <?php echo $donnees1[2]; ?></p></br>
-        <p>Nom maison : <?php echo $donnees1[4]; ?></p></br>
+        <p>Titre de l'annonce : <?php echo $donnees1[4]; ?></p></br>
         <p>Nombre voyageurs : <?php echo $donnees1[5]; ?></p></br>
         <p>Type logement : <?php echo $donnees1[6]; ?></p></br>
         <p>Nombre chambres : <?php echo $donnees1[7]; ?></p></br>
         <p>Nombre salles de bain : <?php echo $donnees1[8]; ?></p></br>
         <p>Superficie : <?php echo $donnees1[9]; ?> m²</p></br>
         <p>Description du logement : <?php echo $donnees1[10]; ?></p></br>
-        <p>Télévision : <?php if ($donnees1[15] = 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Machine à laver : <?php if ($donnees1[16] = 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Parking : <?php if ($donnees1[17] = 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Climatisation : <?php if ($donnees1[18] = 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Piscine : <?php if ($donnees1[19] = 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Jardin : <?php if ($donnees1[20] = 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p>Télévision : <?php if ($donnees1["television"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p>Machine à laver : <?php if ($donnees1["machine_a_laver"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p>Parking : <?php if ($donnees1["parking"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p>Climatisation : <?php if ($donnees1["climatisation"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p>Piscine : <?php if ($donnees1["piscine"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p>Jardin : <?php if ($donnees1["jardin"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
 
 
 
@@ -647,7 +657,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                     <option value="Bateau/péniche">bateau</option>
                     <option value="Camping car">caming car</option>
                 </select><br/>
-                <label for="nom_maison">Nom maison</label><br/>
+                <label for="nom_maison">Titre de l'annonce</label><br/>
                 <input type="text" name="nom_maison"/><br/>
                 <label for="nombre_voyageurs">Nombre de voyageurs permis</label><br/>
                 <input type="number" name="nombre_voyageurs"/><br/>
