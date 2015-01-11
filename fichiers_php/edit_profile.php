@@ -470,6 +470,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <form action="edit_profile.php?choix=1" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
         <label for="avatar">Image perso</label><br/>
+        <p>300x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
         <input type="file" name="up_avatar" id="up_avatar"><br />
         <label for="description">Description</label><br/>
         <input type="text" name="description"/><br/>
@@ -629,6 +630,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <form action="edit_profile.php?choix=<?php echo $_GET["choix"]; ?>&add=1" method="post" enctype="multipart/form-data">
             <div class="bloc_search_left">
                 <label for="avatar">Photo principale du logement *</label><br/>
+                <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
                 <input type="file" name="up_main_img_logement" ><br />
                 <label for="localisation">Localisation *</label><br/>
                 <input type="text" name="localisation"/><br/>
