@@ -37,7 +37,6 @@
     <div class="superglobal">
         <div class="global">
         <div id="bloc_page">
-            <section id="bloc0">
                 <div id="bloc1">
                     
                     <div class="Titre">
@@ -62,7 +61,7 @@
                 </div>
 
                 <div id="bloc2">
-                    <aside id="Description"><?php echo $donnees['description_logement'];?></aside>
+                    <?php echo $donnees['description_logement'];?>
                 </div>
 
                 <div id="bloc3">
@@ -72,17 +71,22 @@
                 $annonce = htmlspecialchars($_GET['id_logement'] );
                 $req1 = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=? ");
                 $req1 -> execute(array($annonce));
+                $donnees3 = $req1 -> fetch();
                 
                 ?>
-                <article class= "commentaire">
-                    Equipements: </br>
+                <div class= "equipements">
+                    Equipements: </br></br>
 
                 <?php
-
-                $donnees3 = $req1 -> fetch();
-
+                /* Boucle permettant d'obtenir la liste des critères automatiquement : avantage = permettra d'augmenter la liste si ajout d'un crtière dans BackOf / inconvenient : les noms qui s'affichent sont ceux de la BDD donc moches
+                 for ($i=15;$i<21;$i++) {
+                    $colonne = $req1 -> getColumnMeta($i);
+                    if ($donnees3[$colonne["name"]] == 1) {
+                        echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">'.$colonne["name"].'</li><br></br>';
+                    }
+                 } */
                 if ($donnees3['television'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Television </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Télévision </li><br></br>';
                 }
 
                 if ($donnees3['machine_a_laver'] == 1) {
@@ -106,9 +110,9 @@
                 }
 
                   ?>
-                </article>
                 </div>
-                <section class="bouton1">
+
+                <div class="owner">
 
                     <?php echo '<img   src="'.$donnees1 ['avatar'].'"  class="Norma">'  ?> <br></br>
                     <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
@@ -120,20 +124,17 @@
                      <?php
                      }
                      else { ?> <button type="button" class="bouton" onclick="window.location='sign_up.php'">Proposer un échange</button><?php } ?>
-                </section>
 
-                <div>
-                    <p style="padding-top=20px; font-family:century; ">Commentaires: </p><br></br>
-                    <p style= "font-family:century; font-style: oblique;">0 commentaire</p>
-                </div>  
-                <div>
-                <!--<h1 id="disponibilités">Disponibilités: </h1> <iframe name="InlineFrame1" id="InlineFrame1" style="width:690px;height:235px;" src="http://www.mathieuweb.fr/calendrier/calendrier-des-semaines.php?nb_mois=1&nb_mois_ligne=4&mois=0&an=0&langue=fr&texte_color=B9CBDD&week_color=DAE9F8&week_end_color=C7DAED&police_color=453413&sel=true" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
+
                 </div>
-            </section>
+                </div>
+                <div id="bloc4">
+
+                </div>
         </div>
         </div>
-    <?php
-    include("footer2.php");
+    <?php /*
+    include("footer2.php"); */
     ?>
     </div>
     </body>

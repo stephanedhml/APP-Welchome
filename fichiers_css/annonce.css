@@ -20,11 +20,13 @@ background-color: rgb(248,248,248) ;
     margin-left: 40px;
 }
 
-#bloc0
+.global
 {
     width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
-#bloc0 a {
+.global a {
     text-decoration: none;
     color: white;
 }
@@ -63,21 +65,16 @@ background-color: rgb(248,248,248) ;
 {
     margin-top: 5px;
     width: 1200px;
-    
     border-radius: 5px;
-    padding-bottom: 10px;
-      background-color: white;
+    margin-bottom: 10px;
+    background-color: white;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
-
-
 }
 
 #description1
 {
-
     line-height:18px;
-   
     border-radius: 5px;
     text-align: justify;
     margin-top: 10px;
@@ -90,7 +87,6 @@ background-color: rgb(248,248,248) ;
     font-size: 0.9em;
     box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
     background-color: rgba(250, 250, 250, 0.2);
-
 }
 
 #banniere_image,#description1
@@ -101,7 +97,6 @@ background-color: rgb(248,248,248) ;
 #banniere_image
 {
     position: relative;
-   
     margin-top: 10px;
     margin-bottom: 10px;
     height: 480px;
@@ -124,9 +119,6 @@ background-color: rgb(248,248,248) ;
     
 
 }
-
-
-
 
 #équipements
 {
@@ -225,31 +217,6 @@ li
 
 }
 
-.bouton1
-
-{
-
-    text-align: center;
-margin-top: 20px;
-margin-left: 800px;
-height: 350px;
- 
-    border-radius: 5px;
-    text-align: center;
-    
-  
-    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-    background-color: white;
-   
-    width: 400px;
-}
-
-
-.commentaire
-{
-
-}
-
 .Norma
 
 {
@@ -286,22 +253,34 @@ display: inline;
 
 #bloc3
 {
+    width: 1200px;
     margin-top: 5px;
     width: 1200px;
-    
-    border-radius: 5px;
     padding-bottom: 0px;
-      background-color: white;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
-    width: 750px;
     height: 345px;
-    float: left;
-    border-radius: 5px;
     margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.equipements {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     background-color: rgba(0, 0, 0, 0.01);
-    padding-top: 20px;
-    padding-left: 20px;
+    border-radius: 5px;
+    width: 760px;
+    position: absolute;
+    height: 350px;
+}
 
+.owner {
+    height: 350px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: #FFF;
+    width: 400px;
+    margin-left: 800px;
+}
+
+#bloc4 {
+    width: 100%;
 }
