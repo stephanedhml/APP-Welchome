@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="reglage d'un souci de recherche">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fichier_js/recherche_avancee.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/connexion.js" afterPath="$PROJECT_DIR$/fichier_js/connexion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/menus.php" afterPath="$PROJECT_DIR$/fichiers_php/menus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" afterPath="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" />
+    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -186,10 +181,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menus.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="menus.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/menus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79373366" vertical-offset="0" max-vertical-offset="400">
+            <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="400">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
@@ -213,6 +208,29 @@
               <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc;n#affiche#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.333334" vertical-offset="144" max-vertical-offset="2096">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connexion_inscription_deconnexion_menu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5629139" vertical-offset="60" max-vertical-offset="688">
+              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+              <folding>
+                <marker date="1420969462060" expanded="true" signature="410:478" placeholder="SELECT lu_no..messages..." />
+                <marker date="1420969462060" expanded="true" signature="983:1065" placeholder="SELECT id_lo..logement..." />
               </folding>
             </state>
           </provider>
@@ -515,12 +533,6 @@
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
     </task>
-    <task id="LOCAL-00007" summary="Retrait d'une ligne inutile + correction d'un problème de nom de classe">
-      <created>1418165642366</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1418165642366</updated>
-    </task>
     <task id="LOCAL-00008" summary="Création d'un footer">
       <created>1418339137150</created>
       <option name="number" value="00008" />
@@ -809,17 +821,23 @@
       <option name="project" value="LOCAL" />
       <updated>1420969664566</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="reglage d'un souci de recherche">
+      <created>1420980375401</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1420980375401</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22059953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32488823" sideWeight="0.50038433" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1716418" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1156,7 +1174,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="20252" max-vertical-offset="21808">
           <caret line="1289" column="19" selection-start-line="1289" selection-start-column="19" selection-end-line="1289" selection-end-column="19" />
           <folding>
-            <marker date="1420980334981" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1420984350397" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1182,35 +1200,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2127" max-vertical-offset="2768">
           <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.166667" vertical-offset="84" max-vertical-offset="688">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding>
-            <marker date="1420969462060" expanded="true" signature="-1:-1" placeholder="SELECT lu_no..messages..." />
-            <marker date="1420969462060" expanded="true" signature="-1:-1" placeholder="SELECT id_lo..logement..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.666668" vertical-offset="1392" max-vertical-offset="2096">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1420969655780" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,9 +1265,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/menus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79373366" vertical-offset="0" max-vertical-offset="400">
+        <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="400">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.333334" vertical-offset="144" max-vertical-offset="2096">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5629139" vertical-offset="60" max-vertical-offset="688">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+          <folding>
+            <marker date="1420969462060" expanded="true" signature="410:478" placeholder="SELECT lu_no..messages..." />
+            <marker date="1420969462060" expanded="true" signature="983:1065" placeholder="SELECT id_lo..logement..." />
+          </folding>
         </state>
       </provider>
     </entry>
