@@ -14,8 +14,10 @@ function check_new_msg()
 	//Si lutilisateur est connecté, on lui donne un lien pour modifier ses informations, pour voir ses messages et un pour se deconnecter
 	if(isset($_SESSION['username']))
 	{
-        $req = $bdd -> prepare("SELECT id_logement FROM logement WHERE id_users=?");
-        $req -> execute(array($_SESSION['userid']));
+        $req = $bdd -> prepare("SELECT id_logement FROM logement WHERE id_users=:id_user ORDER BY id_logement DESC");
+        $req -> execute(array(
+            'id_user' => $_SESSION['userid'],
+        ));
         $id_log = $req -> fetch();
 ?>
         <li><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
