@@ -533,12 +533,6 @@
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
     </task>
-    <task id="LOCAL-00008" summary="Création d'un footer">
-      <created>1418339137150</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1418339137150</updated>
-    </task>
     <task id="LOCAL-00009" summary="Création d'un footer">
       <created>1418339165976</created>
       <option name="number" value="00009" />
@@ -827,15 +821,21 @@
       <option name="project" value="LOCAL" />
       <updated>1420980375401</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="reglage">
+      <created>1420984462126</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1420984462126</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22059953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22059953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32488823" sideWeight="0.50038433" order="13" side_tool="true" content_ui="tabs" />
@@ -873,7 +873,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Ajout de la table nécessaire au bon fonctionnement du module chat" />
     <MESSAGE value="Changement du nom des champs appelés (ex : Nombre de voyageurs devient Nombre_voyageurs) - à adapter dans le nom des champs de la BDD !" />
     <MESSAGE value="Ajout de la possibilité d'envoyer un message à tous les utilisateurs inscrits sur le site" />
     <MESSAGE value="Correction des accents disgracieux" />
@@ -898,7 +897,8 @@
     <MESSAGE value="notification connexion&#10;" />
     <MESSAGE value="confirmation de deconnexion" />
     <MESSAGE value="reglage d'un souci de recherche" />
-    <option name="LAST_COMMIT_MESSAGE" value="reglage d'un souci de recherche" />
+    <MESSAGE value="reglage" />
+    <option name="LAST_COMMIT_MESSAGE" value="reglage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1174,7 +1174,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="20252" max-vertical-offset="21808">
           <caret line="1289" column="19" selection-start-line="1289" selection-start-column="19" selection-end-line="1289" selection-end-column="19" />
           <folding>
-            <marker date="1420984350397" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1420984452805" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
