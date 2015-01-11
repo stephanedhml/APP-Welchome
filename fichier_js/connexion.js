@@ -58,6 +58,7 @@ function tchekusername(champ)
     else
     {
         rouge(champ,false);
+        document.getElementById('user').innerHTML =  '';
 
         return true;
     }
