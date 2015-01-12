@@ -9,7 +9,7 @@ session_start();
 
 <?php
 
-if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!==NULL) {
+if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
     $up_avatar_folder = "../photos_utilisateurs/{$_SESSION['userid']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
@@ -19,7 +19,7 @@ if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!==NULL) {
         $res->execute(array($_SESSION['userid']));
     }
 
-if (isset($_POST["description"]) AND $_POST["description"]!==NULL ) {
+if (isset($_POST["description"]) AND $_POST["description"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET description=:description WHERE id_users=:id_user");
     $desc -> execute(array(
         'description' => $_POST['description'],
@@ -27,7 +27,7 @@ if (isset($_POST["description"]) AND $_POST["description"]!==NULL ) {
     ));
 }
 
-if (isset($_POST["tel"])AND $_POST["tel"]!==NULL ) {
+if (isset($_POST["tel"])AND $_POST["tel"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET tel=:tel WHERE id_users=:id_user");
     $desc -> execute(array(
         'tel' => $_POST['tel'],
@@ -35,7 +35,7 @@ if (isset($_POST["tel"])AND $_POST["tel"]!==NULL ) {
     ));
 }
 
-if (isset($_POST["metier"])AND $_POST["metier"]!==NULL ) {
+if (isset($_POST["metier"])AND $_POST["metier"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET profession=:profession WHERE id_users=:id_user");
     $desc -> execute(array(
         'profession' => $_POST['metier'],
@@ -43,7 +43,7 @@ if (isset($_POST["metier"])AND $_POST["metier"]!==NULL ) {
     ));
 }
 
-if (isset($_POST["sexe"])AND $_POST["sexe"]!==NULL ) {
+if (isset($_POST["sexe"])AND $_POST["sexe"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET sexe=:sexe WHERE id_users=:id_user");
     $desc -> execute(array(
         'sexe' => $_POST['sexe'],
@@ -51,7 +51,7 @@ if (isset($_POST["sexe"])AND $_POST["sexe"]!==NULL ) {
     ));
 }
 
-if (isset($_POST["situation"])AND $_POST["situation"]!==NULL ) {
+if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET situation=:situation WHERE id_users=:id_user");
     $desc -> execute(array(
         'situation' => $_POST['situation'],
