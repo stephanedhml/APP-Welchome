@@ -99,7 +99,7 @@ background-color: rgb(248,248,248) ;
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 480px;
+    height: 632px;
     border-radius: 5px;
     width: 100%;
 }
@@ -153,7 +153,7 @@ background-color: rgb(248,248,248) ;
 
     width: 100%;
     height: 100%;
-
+    border-radius: 5px;
 }
 
 .membres
@@ -259,7 +259,7 @@ display: inline;
     padding-bottom: 0px;
     height: 345px;
     margin-top: 20px;
-    margin-bottom: 130px;
+    margin-bottom: 20px;
 }
 
 .equipements {
@@ -283,4 +283,36 @@ display: inline;
 
 #bloc4 {
     width: 100%;
+    margin-bottom: 130px;
+}
+
+.logement_pics {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 5px;
+    width: 760px;
+    position: absolute;
+    height: 400px;
+
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.logement_pics img {
+    width: 760px;
+    max-height: 800px;
+    min-height: 400px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 5px;
+}
+.description_pic {
+    height: 400px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: #FFF;
+    width: 400px;
+    margin-left: 800px;
+    margin-bottom: 30px;
 }

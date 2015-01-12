@@ -128,7 +128,26 @@
                 </div>
                 </div>
                 <div id="bloc4">
+                    <?php
 
+                    $rez = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
+                    $rez -> execute(array($_GET["id_logement"]));
+                    $numero_new_logement = $rez -> fetch();
+
+                    $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                    $pic -> execute(array($_GET["id_logement"]));
+                    $nb_pic = $pic -> rowCount();
+
+                    for($i=0;$i<$nb_pic;$i++) {
+                    $url_pic = $pic -> fetch();
+                    ?>
+                    <div class= "logement_pics">
+                        <img src="<?php echo $url_pic['lien_photo'] ?>">
+                    </div>
+                    <div class="description_pic">
+
+                    </div>
+                    <?php } ?>
                 </div>
         </div>
         </div>
