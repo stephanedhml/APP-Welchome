@@ -4,7 +4,7 @@
 try
 	{
 
-		$bdd = new PDO ('mysql:host=localhost;dbname=welchome', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+		$bdd = new PDO ('mysql:host=localhost;dbname=welchome', 'root', 'root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 }
 catch(Exception $e)
 	{

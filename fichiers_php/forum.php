@@ -21,7 +21,7 @@ session_start();
 <div class="superglobal">
     <div class="global">
         <div class="forum_title"><h7><?php echo forum ?></h7></div>
-        <table class="tableau_forum_accueil0">
+        <div class="forum_tableau"><table class="tableau_forum_accueil0">
             <tr>
                 <th><?php echo categorie; ?></th>
                 <th><?php echo description; ?></th>
@@ -52,7 +52,7 @@ session_start();
                 }
             }
             ?>
-        </table>
+        </table></div>
     </div>
 </div>
 <?php
