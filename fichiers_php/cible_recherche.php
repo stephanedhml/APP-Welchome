@@ -56,12 +56,14 @@ include('modeles.php');
                 <?php
                 // on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
                 while($donnees = $nbresult->fetch())
-
                 {
+                    $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                    $pic -> execute(array($donnees['id_logement']));
+                    $url_pic = $pic -> fetch();
                     ?>
                     <div class="cadre">
                         <div class="left">
-                            <?php echo '<img width="125px" height="125px" align="left" src="'.$donnees ['lien_photo'].'" class="photo">' ?>
+                            <?php echo '<img width="125px" height="125px" align="left" src="'.$url_pic['lien_photo'].'" class="photo">' ?>
                         </div>
 
                         <div class="right">

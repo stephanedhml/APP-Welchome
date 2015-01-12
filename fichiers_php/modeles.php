@@ -249,7 +249,7 @@ function resultats_requete_avancee()
 
 
 
-    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE
+    $results =$bdd->query("SELECT * FROM logement WHERE
  localisation LIKE '%$lieu%'
   $message1
   $message2
