@@ -1,4 +1,4 @@
-
+<
 function rouge(champ,erreur)
 {
 
