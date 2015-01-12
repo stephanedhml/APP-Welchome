@@ -62,6 +62,35 @@ if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
 // Logement MAJ
 if (isset($_GET["update"])) {
 
+    $rez = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
+    $rez -> execute(array($_GET["choix_logement"]));
+    $numero_new_logement = $rez -> fetch();
+
+    if (isset($_FILES["maj_main_img_logement"]) AND $_FILES["maj_main_img_logement"]!=NULL) {
+//On importe la photo de profil envoyée par l'utilisateur sur le serveur
+        $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+
+        $resultat = move_uploaded_file($_FILES['maj_main_img_logement']['tmp_name'], $main_photo_new_logement);
+    }
+    if (isset($_FILES["maj_2_img_logement"]) AND $_FILES["maj_2_img_logement"]!=NULL) {
+//On importe la photo de profil envoyée par l'utilisateur sur le serveur
+        $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-2.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+
+        $resultat = move_uploaded_file($_FILES['maj_2_img_logement']['tmp_name'], $main_photo_new_logement);
+        }
+    if (isset($_FILES["maj_3_img_logement"]) AND $_FILES["maj_3_img_logement"]!=NULL) {
+//On importe la photo de profil envoyée par l'utilisateur sur le serveur
+        $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-3.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+
+        $resultat = move_uploaded_file($_FILES['maj_3_img_logement']['tmp_name'], $main_photo_new_logement);
+    }
+    if (isset($_FILES["maj_4_img_logement"]) AND $_FILES["maj_4_img_logement"]!=NULL) {
+//On importe la photo de profil envoyée par l'utilisateur sur le serveur
+        $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+
+        $resultat = move_uploaded_file($_FILES['maj_4_img_logement']['tmp_name'], $main_photo_new_logement);
+    }
+
     if (isset($_POST["localisation"]) AND $_POST["localisation"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET localisation=:localisation WHERE id_logement=:id_logement");
         $desc->execute(array(
@@ -491,7 +520,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <?php
         if (isset($_GET['choix']) AND $_GET["choix"]==2) {
 
-            $ret = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_users=?");
+            $ret = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_users=? ORDER BY id_logement DESC");
             $ret -> execute(array($_SESSION["userid"]));
             $nmber = $ret -> rowCount();
             ?> <div class="container_liste_logements"> <?php
@@ -565,6 +594,15 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 <div class="container_edit_profil">
     <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
+        <label for="avatar">Photo principale du logement *</label><br/>
+        <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
+        <input type="file" name="maj_main_img_logement" ><br />
+        <label for="avatar">Seconde photo</label><br/>
+        <input type="file" name="maj_2_img_logement" ><br />
+        <label for="avatar">Troisième photo</label><br/>
+        <input type="file" name="maj_3_img_logement" ><br />
+        <label for="avatar">Quatrième photo</label><br/>
+        <input type="file" name="maj_4_img_logement" ><br />
         <label for="localisation">Localisation</label><br/>
         <input type="text" name="localisation"/><br/>
         <label for="description_logement">Description du logement</label><br/>
