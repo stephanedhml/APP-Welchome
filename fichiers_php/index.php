@@ -70,13 +70,9 @@
 
                  <div class="schema3">
                    <div class="h3">
-<<<<<<< HEAD
                     <h3 class="h7">
-                        Comment fonctionne Welchome.com
-=======
                     <h3>
                         <?php echo howwelchomework; ?>
->>>>>>> FETCH_HEAD
                     </h3>
                    <div class="add3">
                     <li class="add">
@@ -107,13 +103,8 @@
 
                 <div class="schema4">
                     <div class="h3" >
-<<<<<<< HEAD
                     <p class="h7"> 
-                        POINTS FORTS
-=======
-                    <p > 
                         <?php echo strenght; ?>
->>>>>>> FETCH_HEAD
                     </p>
                     <div class="h6">
                     <div class="h4">
@@ -133,7 +124,7 @@
                 <div class="schema5">
                     <div class="h3" >
                         <p class="h7"> 
-                        A PROPOS
+                        <?php echo apropos; ?>
                     </p>
                     <div class="h8"> Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances. 
                Il est simple d'utilisation gratuit et fiable.

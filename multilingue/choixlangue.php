@@ -213,6 +213,11 @@
 		define('description','Description');
 		define('nbmessages','Nb of messages');
 		define('lastmessage','Last message');
+					//profil
+		define('apropos','About us');
+		define('editprofile','Edit your profile');
+		define('descriptif ','Description');
+		define('preferedtrade','Trade preferences');	
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -306,6 +311,11 @@
 		define('description','Description');
 		define('nbmessages','Nb Messages');
 		define('lastmessage','Dernier message');
+					//profil
+		define('apropos','A Propos');
+		define('editprofile','Editer votre profil');
+		define('descriptif ','Descriptif');
+		define('preferedtrade','Préférences d\'échange');	
 		}
 		else if ($lang=='en') 
 		{  
@@ -396,6 +406,11 @@
 		define('description','Description');
 		define('nbmessages','Nb of messages');
 		define('lastmessage','Last message');
+			//profil
+		define('apropos','About us');
+		define('editprofile','Edit your profile');
+		define('descriptif ','Description');
+		define('preferedtrade','Trade preferences');	
 		}
 	}
 	else
@@ -487,6 +502,11 @@
 		define('description','Description');
 		define('nbmessages','Nb Messages');
 		define('lastmessage','Dernier message');
+					//profil
+		define('apropos','A Propos');
+		define('editprofile','Editer votre profil');
+		define('descriptif ','Descriptif');
+		define('preferedtrade','Préférences d\'échange');	
 	}
 	
 }choixlangue();
