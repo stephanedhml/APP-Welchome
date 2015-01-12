@@ -87,44 +87,44 @@ session_start();
         <input type="checkbox" name="case011" id="case" value="balcon"/> <label for="case"><?php echo balcon;?></label><br/>
         <input type="checkbox" name="case012" id="case" value="wifi"/> <label for="case"><?php echo internet;?></label><br/><br/></p> -->
 
-            <label for="television">Télévision</label><br/>
+            <label for="television"><?php echo tele; ?></label><br/>
             <select name="television">
                 <OPTION></option>
                 <OPTION>Oui</option>
                 <OPTION>Non</option>
             </select><br/>
-            <label for="machine_a_laver">Machine à laver</label><br/>
+            <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
             <select name="machine_a_laver">
                 <OPTION></option>
                 <OPTION>Oui</option>
                 <OPTION>Non</option>
             </select><br/>
-            <label for="parking">Parking</label><br/>
+            <label for="parking"><?php echo parking; ?></label><br/>
             <select name="parking">
                 <OPTION></option>
                 <OPTION>Oui</option>
                 <OPTION>Non</option>
             </select><br/>
-            <label for="climatisation">Climatisation</label><br/>
+            <label for="climatisation"><?php echo climatisation; ?></label><br/>
             <select name="climatisation">
                 <OPTION></option>
                 <OPTION>Oui</option>
                 <OPTION>Non</option>
             </select><br/>
-            <label for="piscine">Piscine</label><br/>
+            <label for="piscine"><?php echo piscine; ?></label><br/>
             <select name="piscine">
                 <OPTION></option>
                 <OPTION>Oui</option>
                 <OPTION>Non</option>
             </select><br/>
-            <label for="jardin">Jardin</label><br/>
+            <label for="jardin"><?php echo jardin; ?></label><br/>
             <select name="jardin">
                 <OPTION></option>
                 <OPTION>Oui</option>
                 <OPTION>Non</option>
             </select><br/>
 
-            <p><input type="submit" value="Valider" id="btn_valider"/></p><br/>
+            <p><input type="submit" value="<?php echo valider;?>" id="btn_valider"/></p><br/>
 
     </div>
 </div>

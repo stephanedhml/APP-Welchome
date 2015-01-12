@@ -34,7 +34,7 @@ session_start();
 				//On unset les variables username et userid pour déconnecter l'utilisateur de sa session
 				unset($_POST["username"],$_POST["userid"]);
                 session_destroy();
-				header('Location:index.php');
+				//header('Location:index.php');
 
 			}
 			else
@@ -64,7 +64,7 @@ session_start();
 						echo '<body onload="notifyMe()">';
 // puis on le redirige vers la page d'accueil
 						echo '<meta http-equiv="refresh" content="0;URL=index.php">';
-						header('Location :index.php');
+						//header('Location :index.php');
 
 					}
 					else

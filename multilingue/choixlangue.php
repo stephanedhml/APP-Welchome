@@ -33,11 +33,22 @@
 		//Menu
 		define('accueil','Accueil');
 		define('rechercheavancee','Recherche avancée');
+		define('lastannonce','Les dernières annonces');
+		define('howwelchomework','Comment fonctionne Welchome.com');
+		define('addoffer','Ajouter une offre');
+		define('sendproposition','Envoyer/recevoir des propositions');
+		define('trade','Echanger');
+		define('strenght','POINTS FORTS');
+		define('unlimitedexchange','Echanges illimités');
+		define('assistmember','Bénéficiez de notre Assistance Membres 7j/7 ');
+		define('freedevice','Un service complètement gratuit');
+		define('hugenetwork','Un large réseau de logements');
 		//connexion inscription deconnexion
 		define('profil','Profil');
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
+		define('logements','Logements');
 		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
@@ -77,6 +88,7 @@
 		define('jardin','Jardin');
 		define('balcon','Balcon');
 		define('internet','internet en wifi');
+		define('valider','Valider');
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
@@ -106,12 +118,27 @@
 		define('description','Description');
 		define('nbmessages','Nb Messages');
 		define('lastmessage','Dernier message');
+			//profil
+		define('apropos','A Propos');
+		define('editprofile','Editer votre profil');
+		define('descriptif ','Descriptif');
+		define('preferedtrade','Préférences d\'échange');		
 		}
 		else if ($lang=='en') 
 		{
 		//Menu
 		define('accueil','Homepage');
 		define('rechercheavancee','Advanced Research');
+		define('lastannonce','Last announcement');
+		define('howwelchomework','How works Welchome.com');
+		define('addoffer','Add an offer');
+		define('sendproposition','Send/receive propositions');
+		define('trade','Trade');
+		define('strenght','STRENGHTS');
+		define('unlimitedexchange','unlimited trades');
+		define('assistmember','Contact our member\'s assistance 7 days a week');
+		define('freedevice','A completely free device');
+		define('hugenetwork','A huge tenement\'s network');
 		//connexion inscription deconnexion
 		define('profil','Profile');
 		define('disconnect','Disconnect');
@@ -156,6 +183,7 @@
 		define('jardin','Garden');
 		define('balcon','Balcony');
 		define('internet','Wifi');
+		define('valider','Enter');
 			//inscription
 		define('bieninscrit','You are successfully registered. You can connect now!');
 		define('connect','Connect');
@@ -194,6 +222,16 @@
 		//Menu
 		define('accueil','Accueil');
 		define('rechercheavancee','Recherche avancée');
+		define('lastannonce','Les dernières annonces');
+		define('howwelchomework','Comment fonctionne Welchome.com');
+		define('addoffer','Ajouter une offre');
+		define('sendproposition','Envoyer/recevoir des propositions');
+		define('trade','Echanger');
+		define('strenght','POINTS FORTS');
+		define('illimitateexchange','Echanges illimités');
+		define('assistmember','Bénéficiez de notre Assistance Membres 7j/7 ');
+		define('freedevice','Un service complètement gratuit');
+		define('hugenetwork','Un large réseau de logements');
 				//connexion inscription deconnexion
 		define('profil','Profil');
 		define('disconnect','Se déconnecter');
@@ -238,6 +276,7 @@
 		define('jardin','Jardin');
 		define('balcon','Balcon');
 		define('internet','internet en wifi');
+		define('valider','Valider');
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
@@ -272,7 +311,17 @@
 		{  
 		//Menu
 		define('accueil','Homepage');
-		define('rechercheavancee','Advanced research');
+		define('rechercheavancee','Advanced Research');
+		define('lastannonce','Last announcement');
+		define('howwelchomework','How works Welchome.com');
+		define('addoffer','Add an offer');
+		define('sendproposition','Send/receive propositions');
+		define('trade','Trade');
+		define('strenght','STRENGHTS');
+		define('unlimitedexchange','unlimited trades');
+		define('assistmember','Contact our member\'s assistance 7 days a week');
+		define('freedevice','A completely free device');
+		define('hugenetwork','A huge tenement\'s network');
 				//connexion inscription deconnexion
 		define('profil','Profile');
 		define('disconnect','Disconnect');
@@ -317,6 +366,7 @@
 		define('jardin','Garden');
 		define('balcon','Balcony');
 		define('internet','Wifi');
+		define('valider','Enter');
 			//inscription
 		define('bieninscrit','You are successfully registered. You can connect now!');
 		define('connect','Connect');
@@ -353,6 +403,16 @@
 		//Menu
 		define('accueil','Accueil');
 		define('rechercheavancee','Recherche avancée');
+		define('lastannonce','Les dernières annonces');
+		define('howwelchomework','Comment fonctionne Welchome.com');
+		define('addoffer','Ajouter une offre');
+		define('sendproposition','Envoyer/recevoir des propositions');
+		define('trade','Echanger');
+		define('strenght','POINTS FORTS');
+		define('illimitateexchange','Echanges illimités');
+		define('assistmember','Bénéficiez de notre Assistance Membres 7j/7 ');
+		define('freedevice','Un service complètement gratuit');
+		define('hugenetwork','Un large réseau de logements');
 		//connexion inscription deconnexion
 		define('profil','Profil');
 		define('disconnect','Se déconnecter');
@@ -397,6 +457,7 @@
 		define('jardin','Jardin');
 		define('balcon','Balcon');
 		define('internet','internet en wifi');
+		define('valider','Valider');
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
