@@ -71,24 +71,67 @@ if (isset($_GET["update"])) {
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_main_img_logement']['tmp_name'], $main_photo_new_logement);
+
     }
     if (isset($_FILES["maj_2_img_logement"]) AND $_FILES["maj_2_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-2.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_2_img_logement']['tmp_name'], $main_photo_new_logement);
+
+        $req = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
+        $req -> execute(array(
+            'id_logement' => $_GET["choix_logement"],
+        ));
+        $test = $req -> rowCount();
+        if ($test<2) {
+            //On ajoute la photo de profil dans la BDD
+            $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
+            $res->execute(array(
+                "id_logement" => $_GET["choix_logement"],
+                "lien_photo" => "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-2.jpg"
+            ));
+        }
         }
     if (isset($_FILES["maj_3_img_logement"]) AND $_FILES["maj_3_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-3.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_3_img_logement']['tmp_name'], $main_photo_new_logement);
+
+        $req = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
+        $req -> execute(array(
+            'id_logement' => $_GET["choix_logement"],
+        ));
+        $test = $req -> rowCount();
+        if ($test<3) {
+            //On ajoute la photo de profil dans la BDD
+            $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
+            $res->execute(array(
+                "id_logement" => $_GET["choix_logement"],
+                "lien_photo" => "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-3.jpg"
+            ));
+        }
     }
     if (isset($_FILES["maj_4_img_logement"]) AND $_FILES["maj_4_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_4_img_logement']['tmp_name'], $main_photo_new_logement);
+
+        $req = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
+        $req -> execute(array(
+            'id_logement' => $_GET["choix_logement"],
+        ));
+        $test = $req -> rowCount();
+        if ($test<4) {
+            //On ajoute la photo de profil dans la BDD
+            $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
+            $res->execute(array(
+                "id_logement" => $_GET["choix_logement"],
+                "lien_photo" => "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-4.jpg"
+            ));
+        }
     }
 
     if (isset($_POST["localisation"]) AND $_POST["localisation"] !=NULL) {
@@ -271,7 +314,7 @@ if (isset($_GET["update"])) {
     $numero_new_logement = $numero_logement+1 ;
 
 
-    if (isset($_FILES["up_main_img_logement"]) AND $_FILES["up_main_img_logement"]!=NULL) {
+    if (isset($_FILES["up_main_img_logement"]) AND $_FILES["up_main_img_logement"]["name"]!= NULL) { var_dump($_FILES["up_main_img_logement"]);
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
@@ -283,7 +326,7 @@ if (isset($_GET["update"])) {
             "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}.jpg"
         ));
     }
-        if (isset($_FILES["up_2_img_logement"]) AND $_FILES["up_2_img_logement"]!=NULL) {
+        if (isset($_FILES["up_2_img_logement"]) AND $_FILES["up_2_img_logement"]["name"]!= NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
             $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-2.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
@@ -295,7 +338,7 @@ if (isset($_GET["update"])) {
                 "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}-2.jpg"
             ));
         }
-        if (isset($_FILES["up_3_img_logement"]) AND $_FILES["up_3_img_logement"]!=NULL) {
+        if (isset($_FILES["up_3_img_logement"]) AND $_FILES["up_3_img_logement"]["name"]!= NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
             $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-3.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
@@ -307,7 +350,7 @@ if (isset($_GET["update"])) {
                 "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}-3.jpg"
             ));
         }
-        if (isset($_FILES["up_4_img_logement"]) AND $_FILES["up_4_img_logement"]!=NULL) {
+        if (isset($_FILES["up_4_img_logement"]) AND $_FILES["up_4_img_logement"]["name"]!= NULL) { var_dump($_FILES["up_4_img_logement"]);
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
             $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
