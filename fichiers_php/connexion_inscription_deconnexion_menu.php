@@ -23,7 +23,7 @@ function check_new_msg()
 ?>
         <li><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
         <?php echo check_new_msg() ?>
-		<li><a href="connexion.php" onclick="return deconnect()"><?php echo disconnect ?></a></li>
+		<li><a href="index.php" onclick="return deconnect()"><?php echo disconnect ?></a></li>
 <?php
 	}
 	else
