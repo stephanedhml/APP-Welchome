@@ -15,8 +15,22 @@
     position: fixed;
     text-align: center;
     margin-top: 210px;
-    margin-left: 70px;
+    margin-left: 105px;
     margin-bottom: 15px;
+}
+.friend_box a {
+    padding-bottom: 10px;
+}
+.friend_logo {
+    position: fixed;
+    width: 200px;
+    padding-left: 110px;
+    padding-top: 10px;
+}
+.img_member_fav {
+    border-radius:65px;
+    width:70px;
+    height:70px;
 }
 .no_msg {
     position: relative;
@@ -141,7 +155,8 @@
     width: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 110px;
+    margin-top: 0px;
+    margin-bottom: 110px;
 
     border-width: 1px;
     border-style: inset;
@@ -270,10 +285,7 @@ table td {
     border-top: 1px solid #ffffff;
     border-bottom:1px solid #e0e0e0;
     border-left: 1px solid #e0e0e0;
-
-    background: #fafafa;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-    background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+    background-color: #fafafa;
 }
 table tr.even td {
     background: #f6f6f6;

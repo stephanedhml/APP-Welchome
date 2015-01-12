@@ -33,24 +33,21 @@ session_start();
             $nb_friend = $req -> rowCount();
 
             if ($nb_friend !==0) {
-                ?><table class="tableau_title_friend_box">
-                    <tr>
-                        <th>Liste d'amis</th>
-                    </tr>
-                </table>
+                ?>
+                <img src="../images_diverses/friends.png" class="friend_logo">
                 <div class="friend_box">
                 <?php
                 for ($x = 0 ; $x < $nb_friend ; $x++) {
                     $user_friend = $req->fetch();
-                    $requst = $bdd -> prepare("SELECT username FROM users INNER JOIN favoris ON users.id_users=favoris.id_ami WHERE users.id_users=?");
+                    $requst = $bdd -> prepare("SELECT * FROM users INNER JOIN favoris ON users.id_users=favoris.id_ami WHERE users.id_users=?");
                     $requst -> execute(array($user_friend[0]));
                     $usr_friend_name = $requst->fetch();
                     ?>
-                    <table class'tableau_friend_box'>
-                        <tr>
-                            <td class="column_msg_1"><a href="discussion.php?id_friend=<?php echo $user_friend[0];?>"><?php echo $usr_friend_name[0]; ?></a></td>
-                        </tr>
-                    </table>
+                            <td class="column_msg_1"><a href="discussion.php?id_friend=<?php echo $user_friend[0];?>">
+                                    <img src='<?php echo $usr_friend_name["avatar"];?>' class='img_member_fav'><br/>
+                                    <!-- <p><a href='discussion.php?id_friend=<?php echo $user_friend[0];?>'><?php echo $usr_friend_name[1]; ?></a></p> -->
+                                </a>
+                            </td>
                 <?php
                 }
                 ?> </div> <?php
@@ -87,12 +84,15 @@ session_start();
 
                 for ($i=0 ; $i < $nb ; $i++) {
                     $msg_recu = $req -> fetch();
-                    $quser = $bdd -> prepare("SELECT username FROM users WHERE id_users=?");
+                    $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
                     ?>
                             <tr>
-                                <td class="column_msg_1"><?php echo $un[0]; ?></td>
+                                <td class="column_msg_1">
+                                    <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                                    <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
+                                </td>
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu[1] ?></a></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>

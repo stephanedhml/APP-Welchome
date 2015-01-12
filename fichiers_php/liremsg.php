@@ -40,7 +40,7 @@ session_start();
                     echo '<div class="new_msg"><h7>Messages</h7></div>';
                     for ($i=0 ; $i < $nb AND $i < 5 ; $i++) {
                         $msg_recu = $req -> fetch();
-                        $quser = $bdd -> prepare("SELECT username FROM users WHERE id_users=?");
+                        $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                         $quser -> execute(array($msg_recu[0]));
                         $un = $quser -> fetch();
 
@@ -57,7 +57,10 @@ session_start();
 
                             </tr>
                             <tr>
-                                <td class="column_msg_1"><?php echo $un[0]; ?></td>
+                                <td class="column_msg_1">
+                                    <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                                    <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
+                                </td>
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
                                 <?php if (isset($msg_recu[4]) AND $msg_recu[5]==1) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
