@@ -20,7 +20,8 @@ session_start();
     <div class="header">
         <?php include("menus.php"); ?>
     </div>
-
+<div class="superglobal">
+<div class="global">
     <div id="form_rech" class="formulaire_r_avancee">
 	<form method="post" action="cible_recherche.php">
 <div class="container_advanced_search">
@@ -129,8 +130,10 @@ session_start();
 </div>
 </form>
         </div>
+</div>
+</div>
     <?php
-    include("footer.php");
+    include("footer2.php");
     ?>
     </body>
 </html>
