@@ -23,10 +23,10 @@ nav {
 	height: 40px;
 	width: 100%;
 
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.66);
 
 	font-size: 11pt;
-	font-family: 'Sinkin', 'PT Sans', Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	font-weight: bold;
 	position: relative;
 
@@ -36,6 +36,7 @@ nav ul {
     text-align: center;
 	margin: 0 auto;
 	height: 40px;
+    margin-right: 50px;
 }
 nav li {
 	display: inline-block;
@@ -114,7 +115,7 @@ nav a#pull {
 }*/
 @media only screen and (min-width : 949px) {
     .accueil {
-        height: 30px;
+        height: 27px;
         position: fixed;
     }
 
@@ -126,7 +127,7 @@ nav a#pull {
         width: 40px;
         cursor: pointer;
         height: 20px;
-        padding-right: 50px;
+        padding-right: 150px;
     }
 
     .lienaccueil:hover, .lienacueil:active {
