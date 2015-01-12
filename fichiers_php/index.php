@@ -64,35 +64,35 @@
 
                 <div class="h2_p2">
                     <p>
-                        Les dernières annonces
+                        <?php echo lastannonce; ?>
                     </p>
                 </div>
 
                  <div class="schema3">
                    <div class="h3">
                     <h3>
-                        Comment fonctionne Welchome.com
+                        <?php echo howwelchomework; ?>
                     </h3>
                    
                     <li class="add">
                     <span>
                         <img src="http://www.blog-deco-maison.com/wp-content/uploads/2011/03/cluny-house-maison-reve-singapour-exterieur-petit1.jpg" alt="Ajouter une offre" style="border-radius: 150px;width: 270px;">
                     </span>
-                    <h3 style="font-size: 22px;">Ajouter une offre</h3>
+                    <h3 style="font-size: 22px;"><?php echo addoffer; ?></h3>
                 </li>
 
                 <li class="add">
                     <span>
                         <img src="http://media.meltycampus.fr/article-2219607-square_300/torrentz-ouvert-fermeture-femme-ordinateur.jpg" alt="Ajouter une offre" style="border-radius: 150px;width: 270px;">
                     </span>
-                    <h3 style="font-size: 22px;">Envoyer/recevoir des propositions</h3>
+                    <h3 style="font-size: 22px;"><?php echo sendproposition; ?></h3>
                 </li>
 
                 <li class="add">
                     <span>
                         <img src="http://www.in-leadership.fr/wp-content/uploads/2013/10/poignee-de-mains-300.jpg" alt="Ajouter une offre" style="border-radius: 150px;width: 270px;">
                     </span>
-                    <h3 style="font-size: 22px;">Echanger</h3>
+                    <h3 style="font-size: 22px;"><?php echo trade; ?></h3>
                 </li>
 
 
@@ -102,16 +102,16 @@
                 <div class="schema4">
                     <div class="h3" >
                     <p > 
-                        POINTS FORTS
+                        <?php echo strenght; ?>
                     </p>
                     <div class="h6">
                     <div class="h4">
-                    <li style="width:350px;"> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;">Echanges illimités</li>
-                    <li class="add1"><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png" style="width:40px; margin-right:20px;">                      Bénéficiez de notre Assistance Membres 7j/7 </li> 
+                    <li style="width:350px;"> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;"><?php echo unlimitedexchange; ?></li>
+                    <li class="add1"><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png" style="width:40px; margin-right:20px;"><?php echo assistmember; ?> </li> 
                    </div>
                    <div class="h5">
-                    <li><img src="http://sbxblog.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/no_cash_clipart.png" style="width:40px; margin-right:20px;">Un service complètement gratuit </li>
-                    <li class="add2"><img src=" http://www.meilleur-immobilier-neuf.fr/images/maison.png" style="width:40px; margin-right:20px;">Un large réseau de logements</li>
+                    <li><img src="http://sbxblog.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/no_cash_clipart.png" style="width:40px; margin-right:20px;"><?php echo freedevice; ?></li>
+                    <li class="add2"><img src=" http://www.meilleur-immobilier-neuf.fr/images/maison.png" style="width:40px; margin-right:20px;"><?php echo hugenetwork; ?></li>
                     </div>  
 
                 </div></div>
