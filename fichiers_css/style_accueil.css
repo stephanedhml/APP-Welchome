@@ -257,7 +257,7 @@ body
     margin-right: 35px;
     display: inline-block;
     font-size: 20px;
-    font-family: century;
+    font-family: arial;
     color: #333;
 
 
@@ -268,7 +268,7 @@ body
     
     margin-left:254px;
    
-    font-family: century;
+    font-family: arial;
  
 
 
@@ -277,7 +277,7 @@ body
 .add2 {
 
  
-    padding-left:60px;
+    padding-left:80px;
     
     font-family: century;
  
@@ -285,22 +285,24 @@ body
 
 }
 
-
+.add3 {
+    margin-top: 70px;
+}
 
 
 .h3 {
 
-        padding-top: 20px;
-        height: 600px;
-        font-family: century,Symbol;
-        font-size: 40px;
+        padding-top: 70px;
+        height: 550px;
+        font-family: arial;
+        font-size: 28px;
         text-align: center;
         list-style: none;
     }
 
 .h4 {
     display: inline-flex;
-    font-family: century,Symbol;
+    font-family: arial;
         font-size: 30px;
         padding-top: 80px;
         width: 1200px;
@@ -310,11 +312,12 @@ body
 
 .h5{
     display: inline-flex;
-    font-family: century,Symbol;
+    font-family: arial;
         font-size: 30px;
         padding-top: 80px;
         width: 1200px;
            color: #333;
+           margin-left: 30px;
         
 
 }
@@ -325,7 +328,24 @@ margin-left: auto;
 margin-right: auto;
 height: 370px;
 width: 1300px;
+margin-top: 70px;
 
+}
+
+.h7{
+    font-family: arial;
+    font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+       color: #333;
+        
+}
+
+.h8{
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 20px;
 }
 
 .wrapper{

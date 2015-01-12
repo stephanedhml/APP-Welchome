@@ -70,10 +70,10 @@
 
                  <div class="schema3">
                    <div class="h3">
-                    <h3>
+                    <h3 class="h7">
                         Comment fonctionne Welchome.com
                     </h3>
-                   
+                   <div class="add3">
                     <li class="add">
                     <span>
                         <img src="http://www.blog-deco-maison.com/wp-content/uploads/2011/03/cluny-house-maison-reve-singapour-exterieur-petit1.jpg" alt="Ajouter une offre" style="border-radius: 150px;width: 270px;">
@@ -94,6 +94,7 @@
                     </span>
                     <h3 style="font-size: 22px;">Echanger</h3>
                 </li>
+                </div>
 
 
                 </div>
@@ -101,7 +102,7 @@
 
                 <div class="schema4">
                     <div class="h3" >
-                    <p > 
+                    <p class="h7"> 
                         POINTS FORTS
                     </p>
                     <div class="h6">
@@ -120,12 +121,16 @@
               
 
                 <div class="schema5">
-                    Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances. 
+                    <div class="h3" >
+                        <p class="h7"> 
+                        A PROPOS
+                    </p>
+                    <div class="h8"> Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances. 
                Il est simple d'utilisation gratuit et fiable.
               Welchome rassemble un large réseau de personnes de confiance dans toute la France.
-              N'hésitez plus, utlilisez WELCHOME.
+              N'hésitez plus, utlilisez Welchome.
 
-			</div>
+			</div></div></div>
 			
 
 				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
