@@ -62,7 +62,7 @@ if (isset($_POST["situation"])AND $_POST["situation"]!==NULL ) {
 // Logement MAJ
 if (isset($_GET["update"])) {
 
-    if (isset($_POST["localisation"]) AND $_POST["localisation"] !==NULL) {
+    if (isset($_POST["localisation"]) AND $_POST["localisation"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET localisation=:localisation WHERE id_logement=:id_logement");
         $desc->execute(array(
             'localisation' => $_POST['localisation'],
@@ -70,7 +70,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["description_logement"]) AND $_POST["description_logement"] !==NULL) {
+    if (isset($_POST["description_logement"]) AND $_POST["description_logement"] !=NULL) {
         $desc = $bdd->prepare("UPDATE logement SET description_logement=:description WHERE id_logement=:id_logement");
         $desc->execute(array(
             'description' => $_POST['description_logement'],
@@ -254,7 +254,6 @@ if (isset($_GET["update"])) {
             "lien_photo" => "../photos_logement/{$numero_new_logement}.jpg"
         ));
     }
-
     if (isset($_POST["localisation"]) AND $_POST["localisation"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET localisation=:localisation WHERE id_logement=:id_logement");
         $desc->execute(array(
