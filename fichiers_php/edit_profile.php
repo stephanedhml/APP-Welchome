@@ -229,13 +229,12 @@ if (isset($_GET["update"])) {
     $numero_logement = $rez -> rowCount();
 
     //On enregistre le logement dans la base de donnée
-    $ret = $bdd->prepare("INSERT INTO logement(id_users,numero_logement) VALUES(:id_users, :numero_logement)");
+    $ret = $bdd-> prepare("INSERT INTO logement(id_users,numero_logement) VALUES(:id_users, :numero_logement)");
     $ret->execute(array
     (
         'id_users' => $_SESSION["userid"],
         'numero_logement' => $numero_logement+1,
     ));
-    $id_new_logement = $ret -> fetch();
     $new_logement = $bdd -> lastInsertId();
 
     ?> <div class="forum_title"><h7>Votre logement a bien été ajouté !</h7></div> <?php
@@ -245,50 +244,50 @@ if (isset($_GET["update"])) {
 
     if (isset($_FILES["up_main_img_logement"]) AND $_FILES["up_main_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
-        $main_photo_new_logement = "../photos_logement/{$id_new_logement}-{$numero_new_logement}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+        $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['up_main_img_logement']['tmp_name'], $main_photo_new_logement);
 //On ajoute la photo de profil dans la BDD
         $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
         $res->execute(array(
             "id_logement" => $new_logement,
-            "lien_photo" => "../photos_logement/{$numero_new_logement}.jpg"
+            "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}.jpg"
         ));
     }
         if (isset($_FILES["up_2_img_logement"]) AND $_FILES["up_2_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
-            $main_photo_new_logement = "../photos_logement/{$id_new_logement}-{$numero_new_logement}-2.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+            $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-2.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
             $resultat = move_uploaded_file($_FILES['up_2_img_logement']['tmp_name'], $main_photo_new_logement);
 //On ajoute la photo de profil dans la BDD
             $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
             $res->execute(array(
                 "id_logement" => $new_logement,
-                "lien_photo" => "../photos_logement/{$id_new_logement}-{$numero_new_logement}-2.jpg"
+                "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}-2.jpg"
             ));
         }
         if (isset($_FILES["up_3_img_logement"]) AND $_FILES["up_3_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
-            $main_photo_new_logement = "../photos_logement/{$id_new_logement}-{$numero_new_logement}-3.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+            $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-3.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
             $resultat = move_uploaded_file($_FILES['up_3_img_logement']['tmp_name'], $main_photo_new_logement);
 //On ajoute la photo de profil dans la BDD
             $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
             $res->execute(array(
                 "id_logement" => $new_logement,
-                "lien_photo" => "../photos_logement/{$id_new_logement}-{$numero_new_logement}-3.jpg"
+                "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}-3.jpg"
             ));
         }
         if (isset($_FILES["up_4_img_logement"]) AND $_FILES["up_4_img_logement"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
-            $main_photo_new_logement = "../photos_logement/{$id_new_logement}-{$numero_new_logement}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+            $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
             $resultat = move_uploaded_file($_FILES['up_4_img_logement']['tmp_name'], $main_photo_new_logement);
 //On ajoute la photo de profil dans la BDD
             $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
             $res->execute(array(
                 "id_logement" => $new_logement,
-                "lien_photo" => "../photos_logement/{$id_new_logement}-{$numero_new_logement}-4.jpg"
+                "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}-4.jpg"
             ));
         }
 

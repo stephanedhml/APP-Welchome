@@ -94,7 +94,7 @@
 
                     <div id="Description3">
 
-                       <p id="Titre2"><?php echo descriptif; ?></p> <br></br>
+                       <p id="Titre2"><!-- <?php echo descriptif; ?> -->Descriptif</p> <br></br>
                     
 
                     <?php echo $donnees['description'] ;?>
@@ -117,7 +117,7 @@
 
                     <div id="Description3">
 
-                       <p id="Titre2"><?php echo logements; ?></p> <br></br>
+                       <p id="Titre2"><!-- <?php echo logements; ?> -->Logements</p> <br></br>
                         <?php
                         $rez = $bdd->prepare("SELECT * FROM logement WHERE id_users=? ORDER BY id_logement DESC");
                         $rez -> execute(array($_GET['id_users']));

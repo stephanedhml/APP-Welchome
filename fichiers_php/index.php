@@ -41,20 +41,22 @@
                     <div class="wrapper" >
 
                         <?php
-                        $req = $bdd -> prepare("SELECT lien_photo FROM photo ORDER BY id_logement DESC LIMIT 8");
-                        $req -> execute();
-                        $res = $bdd -> prepare("SELECT id_logement FROM photo ORDER BY id_logement DESC LIMIT 8");
+                        $res = $bdd -> prepare("SELECT id_logement FROM logement ORDER BY id_logement DESC LIMIT 8");
                         $res -> execute();
                         ?>
 
                         <div class="carrousel">
                             <?php for($i=1;$i<9;$i++) {
-                                $img_link=$req -> fetch();
                                 $id_logement=$res->fetch();
+
+                                $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                                $pic -> execute(array($id_logement[0]));
+                                $url_pic = $pic -> fetch();
+
                                 $ret = $bdd -> query("SELECT id_users FROM logement WHERE id_logement=$id_logement[0]");
                                 $id_users=$ret->fetch();
                                 ?>
-                                <div class="plan p<?php echo $i ?>"><a href="annonce.php?id_logement=<?php echo $id_logement[0] ?>&id_users=<?php echo $id_users[0] ?>"><img src="<?php echo $img_link[0] ?>" class="w<?php echo $i ?>"></a></div>
+                                <div class="plan p<?php echo $i ?>"><a href="annonce.php?id_logement=<?php echo $id_logement[0] ?>&id_users=<?php echo $id_users[0] ?>"><img src="<?php echo $url_pic['lien_photo'] ?>" class="w<?php echo $i ?>"></a></div>
                                 <?php
                             }?>
                         </div>
@@ -108,7 +110,7 @@
                     </p>
                     <div class="h6">
                     <div class="h4">
-                    <li style="width:350px;"> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;"><?php echo unlimitedexchange; ?></li>
+                    <li style="width:350px;"> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;">Echanges illimités</li>
                     <li class="add1"><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png" style="width:40px; margin-right:20px;"><?php echo assistmember; ?> </li> 
                    </div>
                    <div class="h5">
