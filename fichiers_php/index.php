@@ -127,7 +127,7 @@
 				<?php //include '../carrousel_annonce/derniereannonce.php' ?>
             </div>
                 <?php
-                include("footer.php");
+                include("footer2.php");
                 ?>
 			</div>
 		</div>

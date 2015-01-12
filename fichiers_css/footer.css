@@ -10,8 +10,16 @@
 }
 .superglobal{
     min-height: 100%;
+    margin-bottom: -41px;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
 }
 
+/*
 .global{
     position: relative;
     min-height: 100%;
@@ -27,20 +35,21 @@
     color: #fff;
     text-shadow: 1px 1px 0px #283744;
     background-color: #455A64;
-}
+} */
 .footer1 li {
     list-style-type:none;
     line-height: 25px;
+}
+.footer1 {
+    background-color: #455A64;
+    color: white;
+    padding-bottom: 10px;
 }
 .icons {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-.top {
-    position: relative;
-    top: -9px;
 }
 .iconfooter {
     position: absolute;

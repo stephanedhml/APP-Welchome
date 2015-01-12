@@ -10,9 +10,8 @@
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css"/>
-        <link rel="stylesheet" href="../fichiers_css/annonce.css"/>    
-           <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link href="js/owlcarroussel/owl.carousel.css" rel="stylesheet">    
+        <link rel="stylesheet" href="../fichiers_css/annonce.css"/>
+     <link href="js/owlcarroussel/owl.carousel.css" rel="stylesheet">
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
         <title>Annonce</title>
     </head>
@@ -133,9 +132,9 @@
                 </div>
         </div>
         </div>
-    <?php /*
-    include("footer2.php"); */
-    ?>
     </div>
+    <?php
+    include("footer2.php");
+    ?>
     </body>
 </html>

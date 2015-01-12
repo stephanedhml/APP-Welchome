@@ -8,7 +8,7 @@
     src: url("../fonts/Entypo%20Social%20@font-face/entypo-social.eot");
     src: url("../fonts/Entypo%20Social%20@font-face/entypo-social.eot?#iefix") format("embedded-opentype"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.woff") format("woff"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.ttf") format("truetype"), url("../fonts/Entypo%20Social%20@font-face/entypo-social.svg#EntypoRegular") format("svg");
 }
-.superglobal{
+/* .superglobal{
     min-height: 100%;
 }
 
@@ -27,7 +27,7 @@
     color: #fff;
     text-shadow: 1px 1px 0px #283744;
     background-color: #455A64;
-}
+} */
 .footer1 li {
     list-style-type:none;
     line-height: 25px;
@@ -37,10 +37,6 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-.top {
-    position: relative;
-    top: -9px;
 }
 .iconfooter {
     position: absolute;

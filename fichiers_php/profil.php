@@ -46,11 +46,12 @@
 
     ?>
 
-
+<html>
 <header>
     <?php include("menus.php"); ?>
 </header>
-
+<div class="superglobal">
+    <div class="global">
 <body class="body_profil">
     <div id="bloc_page_profil">
         <div class="bloc_profil_gauche">
@@ -62,21 +63,36 @@
 
                 </div>
             </div>
+            <div id="bloc_identité">
+
+                <div id="article2">
+                    <h1 id="Identification"> A Propos</h1>
+                    <article id="a_propos">
+                        <?php if($_GET["id_users"]==$_SESSION["userid"]) { ?><a href="edit_profile.php">Editer votre profil</a> <?php } ?>
+                        <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
+                        <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
+                        <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
+                        <p>Situation: <?php if ($donnees['situation']!=NULL) { echo $donnees['situation'] ;} else {echo "Non renseigné";}?></p>
+                        <p> Profession: <?php if ($donnees['profession']!=NULL) { echo $donnees['profession'] ;} else {echo "Non renseigné";}?> </p>
+                    </article>
+
+                </div>
+            </div>
         </div>
    
 
     <article id="bloc_commentaires">
         <div id="bloc2">
                     
-                     <aside id="Description3">
+                     <div id="Description3">
 
                     <div class="couverture">
                             <?php echo '<img  style="width:700px; height: 300px;" src="'.$donnees1 ['lien_photo'].'" class="photo">' ?>
                     </div>
 
-                      </aside>
+                      </div>
 
-                    <aside id="Description3">
+                    <div id="Description3">
 
                        <p id="Titre2"> Descriptif </p> <br></br>
                     
@@ -85,21 +101,21 @@
                 
                     
                         
-                    </aside>
+                    </div>
 
                     <br></br>
 
-                    <aside id="Description3">
+                    <div id="Description3">
 
                        <p id="Titre2"> Préférences d'échange </p> <br></br>
 
                     <?php echo $donnees['preference_echange'] ;?>
 
-                    </aside>
+                    </div>
                     
                     <br></br>
 
-                    <aside id="Description3">
+                    <div id="Description3">
 
                        <p id="Titre2"> Logements </p> <br></br>
                         <?php
@@ -123,27 +139,15 @@
                                 </div>
                         </div><br/>
                         <?php } ?>
-                    </aside>
+                    </div>
                 </div>
     </article>
-    <aside id="bloc_identité">
-        
-        <div id="article2">
-            <h1 id="Identification"> A Propos</h1>
-            <article id="a_propos">
-            <?php if($_GET["id_users"]==$_SESSION["userid"]) { ?><a href="edit_profile.php">Editer votre profil</a> <?php } ?>
-            <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
-            <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
-            <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
-            <p>Situation: <?php if ($donnees['situation']!=NULL) { echo $donnees['situation'] ;} else {echo "Non renseigné";}?></p>
-            <p> Profession: <?php if ($donnees['profession']!=NULL) { echo $donnees['profession'] ;} else {echo "Non renseigné";}?> </p>
-              </article>
-                
-            </div>
-        </div>
-    </aside>
+    </div>
 
     </div>
     </div>
-
+    <?php
+    include("footer2.php");
+    ?>
 </body>
+</html>

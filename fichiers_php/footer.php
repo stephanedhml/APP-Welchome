@@ -1,8 +1,4 @@
-<?php
-include("config.php");
-?>
-<footer class="footer1">
-    <div class="top">
+<footer class="footer">
         <div class="icons">
             <li id="fb">&#62220;</li>
             <li id="github">&#62208;</li>
@@ -11,7 +7,6 @@ include("config.php");
             <li id="lnkdin">&#62232;</li>
             <p id="team">Developped by Hackers de l'espace</p>
         </div>
-    </div>
     <!-- <div class="left1">
         <ul>
             <li>Manuel BEAUDRU</li>

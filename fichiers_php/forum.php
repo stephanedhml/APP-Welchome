@@ -55,6 +55,9 @@ session_start();
         </table>
     </div>
 </div>
+<?php
+include("footer2.php");
+?>
 </body>
 </html>
 <!-- Ajouter table : categorie, topic, liste sujets, messages ?, -->

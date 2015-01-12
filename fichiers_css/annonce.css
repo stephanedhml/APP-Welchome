@@ -22,7 +22,7 @@ background-color: rgb(248,248,248) ;
 
 .global
 {
-    width: 1200px;
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -259,7 +259,7 @@ display: inline;
     padding-bottom: 0px;
     height: 345px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 130px;
 }
 
 .equipements {

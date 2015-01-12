@@ -33,16 +33,9 @@ session_start();
 			{
 				//On unset les variables username et userid pour déconnecter l'utilisateur de sa session
 				unset($_POST["username"],$_POST["userid"]);
-		?>
-                <?php
                 session_destroy();
-
 				header('Location:index.php');
 
-				?>
-
-				
-				<?php
 			}
 			else
 			{
@@ -55,8 +48,6 @@ session_start();
 					
 					//On récupère le mot de passe de l'utilisateur
                     $dn=recuperer_psswd_user();
-
-
 
 					//Puisque le mdp de la BDD est haché, on hache le mdp fourni par l'utilisateur
 					$pass_hache=sha1($password);
@@ -86,8 +77,7 @@ session_start();
 				{
 					$form = true;
 				}
-				
-				
+
 				if($form)
 				{
 						//On affiche un message
@@ -117,9 +107,9 @@ session_start();
 			}
 					?>
             </div>
-        <?php
-        include("footer.php");
-        ?>
         </div>
+        <?php
+        include("footer2.php");
+        ?>
     </body>
 </html>

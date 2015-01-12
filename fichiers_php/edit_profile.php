@@ -430,9 +430,12 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 </head>
 
 <body>
-    <div class="header">
-        <?php include("menus.php"); ?>
-    </div>
+<div class="header">
+    <?php include("menus.php"); ?>
+</div>
+<div class="superglobal">
+<div class="global">
+
     <div class="edit_profil">
 
     <?php
@@ -723,4 +726,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
         </form>
     </div>
+</div>
+</div>
+    <?php
+    include("footer2.php");
+    ?>
 </body>

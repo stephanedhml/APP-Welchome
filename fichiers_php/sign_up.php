@@ -177,6 +177,10 @@
 
         </div>
 	    </div>
+        </div>
+        <?php
+        include("footer2.php");
+        ?>
     </body>
 </html>
 			

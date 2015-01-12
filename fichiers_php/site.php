@@ -101,5 +101,8 @@ if (isset($_SESSION["userid"])) {
 
     </div>
 </div>
+<?php
+include("footer2.php");
+?>
 </body>
 </html>
