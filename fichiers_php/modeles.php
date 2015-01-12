@@ -31,7 +31,7 @@ function recuperer_psswd_user()
 function resultats_requete_simple($requete)
 {
     global $bdd;
-    $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE localisation LIKE '%$requete%' OR logement.type_logement LIKE '%$requete%' ORDER BY id_logement DESC");
+    $results =$bdd->query("SELECT * FROM logement WHERE localisation LIKE '%$requete%' OR logement.type_logement LIKE '%$requete%' ORDER BY id_logement DESC");
     return $results;
 }
 //Fonction de publication_annonce

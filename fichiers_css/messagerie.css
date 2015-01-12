@@ -14,7 +14,7 @@
 .friend_box {
     position: fixed;
     text-align: center;
-    margin-top: 210px;
+    margin-top: 250px;
     margin-left: 105px;
     margin-bottom: 15px;
 }
@@ -25,12 +25,13 @@
     position: fixed;
     width: 200px;
     padding-left: 110px;
-    padding-top: 10px;
+    padding-top: 40px;
 }
 .img_member_fav {
     border-radius:65px;
     width:70px;
     height:70px;
+    margin-bottom: 10px;
 }
 .no_msg {
     position: relative;

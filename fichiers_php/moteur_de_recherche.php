@@ -59,10 +59,14 @@ include('modeles.php');
 					for($i=0 ; $i < $nb_resultats ; $i++)
 					{
                         $donnees = $nbresult->fetch();
+
+                        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                        $pic -> execute(array($donnees['id_logement']));
+                        $url_pic = $pic -> fetch();
 		?>
 						<div class="cadre">
                                 <div class="left">
-                            <?php echo '<img  align="left" src="'.$donnees ['lien_photo'].'" class="photo">' ?>
+                            <?php echo '<img  align="left" src="'.$url_pic['lien_photo'].'" class="photo">' ?>
                                 </div>
 
                                 <div class="right">
@@ -91,13 +95,6 @@ include('modeles.php');
 		<?php
 				}
 				$nbresult->closeCursor(); // on ferme mysql
-			}
-			else
-			{ // HTML
-                echo '<body onload=" alert(\'Entre un champ Connard !\')">';
-// puis on le redirige vers la page d'accueil
-                echo '<meta http-equiv="refresh" content="0;URL=index.php">';
-
 			}
 		?>
 	</p>

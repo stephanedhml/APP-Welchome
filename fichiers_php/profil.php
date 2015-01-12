@@ -119,16 +119,19 @@
 
                        <p id="Titre2"> Logements </p> <br></br>
                         <?php
-                        $rez = $bdd->prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_users=? ORDER BY id_logement DESC");
+                        $rez = $bdd->prepare("SELECT * FROM logement WHERE id_users=? ORDER BY id_logement DESC");
                         $rez -> execute(array($_GET['id_users']));
                         $nb_house = $rez -> rowCount();
 
                         for ($i=0;$i<$nb_house;$i++) {
                         $house = $rez->fetch();
+                        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                        $pic -> execute(array($house[0]));
+                        $url_pic = $pic -> fetch();
                         ?>
                         <div class="cadre">
                                 <div class="left">
-                                    <?php echo '<img width="300px" height="200px" align="left" src="'.$house ['lien_photo'].'" class="photo">' ?>
+                                    <?php echo '<img width="300px" height="200px" align="left" src="'.$url_pic['lien_photo'].'" class="photo">' ?>
                                 </div>
 
                                 <div class="right">
