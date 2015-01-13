@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/modeles.php" afterPath="$PROJECT_DIR$/fichiers_php/modeles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" afterPath="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/recherche_app.css" afterPath="$PROJECT_DIR$/fichiers_css/recherche_app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_accueil.css" afterPath="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="APP-Welchome.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/vcs.xml" />
+    <ignored path=".idea/APP-Welchome.iml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="fichiers_php/config.php" />
+    <ignored path="alexclementi/en_cours_de_codage/menu_responsivet/.idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="true" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="APP-Welchome" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="menus.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/menus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="1344">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="320">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carrousel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/carrousel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1264">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modeles.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5562914" vertical-offset="2816" max-vertical-offset="6368">
+              <caret line="197" column="62" selection-start-line="197" selection-start-column="62" selection-end-line="197" selection-end-column="62" />
+              <folding>
+                <marker date="1421159384724" expanded="true" signature="184:244" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421159384724" expanded="true" signature="427:482" placeholder="SELECT passw..users..." />
+                <marker date="1421159384724" expanded="true" signature="707:836" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421159384724" expanded="true" signature="1347:1604" placeholder="INSERT INTO ..." />
+                <marker date="1421159384724" expanded="true" signature="1704:1962" placeholder="INSERT INTO ..." />
+                <marker date="1421159384724" expanded="true" signature="8556:8887" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421159384724" expanded="true" signature="9610:9771" placeholder="INSERT INTO ..." />
+                <marker date="1421159384724" expanded="true" signature="10206:10243" placeholder="SELECT id FR..users..." />
+                <marker date="1421159384724" expanded="true" signature="10438:10494" placeholder="SELECT user1..echange..." />
+                <marker date="1421159384724" expanded="true" signature="10628:10713" placeholder="INSERT INTO ..." />
+                <marker date="1421159384724" expanded="true" signature="10902:10987" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moteur_de_recherche.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="1200" max-vertical-offset="1904">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding>
+                <marker date="1421158740944" expanded="true" signature="2129:2168" placeholder="SELECT * FRO..photo..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="javascript" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/fichier_js/connexion.js" />
+        <option value="$PROJECT_DIR$/fichiers_php/form_rech.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/liremsg.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/new_topic.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/profil.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/site.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/topic.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/message.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/ecriremsg.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/echg_msg.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/discussion.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/creerprofil.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/cible_recherche.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/annonce.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/accueilmanu.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/forum.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/index.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/menu2.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php" />
+        <option value="$PROJECT_DIR$/fichier_js/recherche_avancee.js" />
+        <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
+        <option value="$PROJECT_DIR$/multilingue/choixlangue.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/menus.php" />
+        <option value="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
+        <option value="$PROJECT_DIR$/fichiers_php/carrousel.php" />
+        <option value="$PROJECT_DIR$/fichiers_css/recherche_app.css" />
+        <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/config.php" />
+        <option value="$PROJECT_DIR$/fichiers_php/modeles.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multilingue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fichiers_php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APP-Welchome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fichiers_css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///var/www/html/APP-Welchome/fichiers_php/modeles.php" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\APP-Welchome\fichiers_css" />
+      <recent name="C:\wamp\www\APP-Welchome\fichiers_php" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_css/style_accueil.css</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/carrousel.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/config.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/menus.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/fichiers_php/modeles.php</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="" />
+      <created>1417719988511</created>
+      <option name="number" value="Default" />
+      <updated>1417719988511</updated>
+    </task>
+    <task id="LOCAL-00043" summary="publication d'annonce faite">
+      <created>1418871617142</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1418871617142</updated>
+    </task>
+    <task id="LOCAL-00044" summary="derniere amélioration">
+      <created>1418877516042</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1418877516042</updated>
+    </task>
+    <task id="LOCAL-00045" summary="derniere amélioration">
+      <created>1418997542369</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1418997542369</updated>
+    </task>
+    <task id="LOCAL-00046" summary="modif sign up">
+      <created>1420684522523</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1420684522523</updated>
+    </task>
+    <task id="LOCAL-00047" summary="javascript sur sign_up et connexion">
+      <created>1420690299870</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1420690299870</updated>
+    </task>
+    <task id="LOCAL-00048" summary="javascript sur sign_up et connexion">
+      <created>1420690416244</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1420690416244</updated>
+    </task>
+    <task id="LOCAL-00049" summary="javascript sur sign_up et connexion vers2">
+      <created>1420698144618</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1420698144618</updated>
+    </task>
+    <task id="LOCAL-00050" summary="javascript sur sign_up et connexion vers2">
+      <created>1420698150982</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1420698150989</updated>
+    </task>
+    <task id="LOCAL-00051" summary="essai de commit">
+      <created>1420764335559</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1420764335559</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Ajout de la possibilité de supprimer un message">
+      <created>1420812126314</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1420812126314</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Ajout de la possibilité de supprimer un topic">
+      <created>1420815484841</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1420815484841</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Correction d'un léger problème concernant les utilisateurs non connectés">
+      <created>1420815689840</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1420815689840</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Correction du problème d'affichage des liens du menu causé par les drapeaux">
+      <created>1420816697728</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1420816697728</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Amélioration considérable de la partie messagerie">
+      <created>1420821564947</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1420821564947</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Ajout du logo comme bouton d'accueil dans le menu">
+      <created>1420822080589</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1420822080589</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Ajout d'une texture au forum et à la messagerie et autres modifs mineures">
+      <created>1420823893058</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1420823893058</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Amélioration apparence messages entre amis">
+      <created>1420824039377</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1420824039377</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Changement du nom de la page principale et modification de la nature des formulaires de texte">
+      <created>1420825965632</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1420825965632</updated>
+    </task>
+    <task id="LOCAL-00061" summary="correction de soucis dans la barre de menu">
+      <created>1420826445604</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1420826445604</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Ajout des textures">
+      <created>1420826863081</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1420826863081</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Début de page d'édition de profil - changement de l'image de profil (avatar)">
+      <created>1420831793356</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1420831793356</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Correction bug affichage page accueil">
+      <created>1420839330234</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1420839330235</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Complétion de la page d'édition du profil et affichage des informations dans la page de profil de l'utilisateur">
+      <created>1420845827037</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1420845827037</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Ajout d'un nombre considérable de critères éditables via formulaire ainsi que de la BDD la plus complète actuellement">
+      <created>1420848484760</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1420848484760</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Correction d'un problème majeur (les champs non remplis envoyaient NULL et supprimaient les données précédemment enregistrées)">
+      <created>1420850151162</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1420850151162</updated>
+    </task>
+    <task id="LOCAL-00068" summary="modifications mineures">
+      <created>1420851245278</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1420851245278</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Ajout d'un lien sur la page de profil redirigeant vers le formulaire permettant de l'éditer">
+      <created>1420851511510</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1420851511510</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Redirection">
+      <created>1420853008386</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1420853008386</updated>
+    </task>
+    <task id="LOCAL-00071" summary="redirections automatiques lorsque succes">
+      <created>1420853621473</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1420853621473</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Affichage de l'auteur du first topic">
+      <created>1420854290498</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1420854290498</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Création d'un css pour la page d'edit de profil">
+      <created>1420857765770</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1420857765770</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Ajout de nombreux critères EFFECTIFS à la recherche avancée">
+      <created>1420860302597</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1420860302597</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Mise en commentaire des trucs qui ne correspondent à rien dans la BDD dans la recherche avancée">
+      <created>1420860462774</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1420860462774</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Correction du problème obligeant à indiquer un lieu dans la recherche avancée">
+      <created>1420860590039</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1420860590039</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Correction du problème faisant se supprimer la photo de profil si l'on en désigne pas une nouvelle lorsque l'on valide l'edit du profil">
+      <created>1420860996186</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1420860996186</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Correction d'une erreur de copier coller qui faisait se supprimer l'intégralité du profil au bout d'un certain temps">
+      <created>1420862648606</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1420862648606</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Début de structure pour plusieurs logements par utilisateur + correction du css accueil (centrage)">
+      <created>1420894484181</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1420894484181</updated>
+    </task>
+    <task id="LOCAL-00080" summary="modification majeure de la page d'édition de profil (permet de modifier le logement que l'on souhaite, entre autres)">
+      <created>1420901180504</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1420901180504</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Ajout d'une interface pour choisir si on veut éditer son profil utilisateur ou son logement">
+      <created>1420903246405</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1420903246405</updated>
+    </task>
+    <task id="LOCAL-00082" summary="correction temporaire affichage logement à éditer">
+      <created>1420911434323</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1420911434323</updated>
+    </task>
+    <task id="LOCAL-00083" summary="correction problème affichage page accueil">
+      <created>1420983350908</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1420983350908</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Ajout de la possibilité d'ajouter plusieurs logements dans la page d'édition du profil">
+      <created>1420997154186</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1420997154186</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Lien permettant de mettre l'image dans les bonnes proportions pour un rendu optimal sur le site">
+      <created>1420997735960</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1420997735960</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Ajout des différents logements qu'un utilisateur possède dans la page de profil">
+      <created>1420999365653</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1420999365653</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Correction d'un problème dans l'édition des critères d'un logement">
+      <created>1421003885933</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1421003885933</updated>
+    </task>
+    <task id="LOCAL-00088" summary="correction soucis affichage dans annonce">
+      <created>1421004171932</created>
+      <option name="number" value="00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1421004171933</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Code plus agréable à lire mais travail incomplet (interface annonce plus fonctionnelle)">
+      <created>1421014265028</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1421014265028</updated>
+    </task>
+    <task id="LOCAL-00090" summary="javascript et couleur sur les liens">
+      <created>1421121717446</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1421121717446</updated>
+    </task>
+    <task id="LOCAL-00091" summary="bug sur la recherche avancée réglé">
+      <created>1421145997159</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1421145997159</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36151278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17986165" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4605067" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.122213684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3233979" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Correction d'un problème majeur (les champs non remplis envoyaient NULL et supprimaient les données précédemment enregistrées)" />
+    <MESSAGE value="modifications mineures" />
+    <MESSAGE value="Ajout d'un lien sur la page de profil redirigeant vers le formulaire permettant de l'éditer" />
+    <MESSAGE value="Redirection" />
+    <MESSAGE value="redirections automatiques lorsque succes" />
+    <MESSAGE value="Affichage de l'auteur du first topic" />
+    <MESSAGE value="Création d'un css pour la page d'edit de profil" />
+    <MESSAGE value="Ajout de nombreux critères EFFECTIFS à la recherche avancée" />
+    <MESSAGE value="Mise en commentaire des trucs qui ne correspondent à rien dans la BDD dans la recherche avancée" />
+    <MESSAGE value="Correction du problème obligeant à indiquer un lieu dans la recherche avancée" />
+    <MESSAGE value="Correction du problème faisant se supprimer la photo de profil si l'on en désigne pas une nouvelle lorsque l'on valide l'edit du profil" />
+    <MESSAGE value="Correction d'une erreur de copier coller qui faisait se supprimer l'intégralité du profil au bout d'un certain temps" />
+    <MESSAGE value="Début de structure pour plusieurs logements par utilisateur + correction du css accueil (centrage)" />
+    <MESSAGE value="modification majeure de la page d'édition de profil (permet de modifier le logement que l'on souhaite, entre autres)" />
+    <MESSAGE value="Ajout d'une interface pour choisir si on veut éditer son profil utilisateur ou son logement" />
+    <MESSAGE value="correction temporaire affichage logement à éditer" />
+    <MESSAGE value="correction problème affichage page accueil" />
+    <MESSAGE value="Ajout de la possibilité d'ajouter plusieurs logements dans la page d'édition du profil" />
+    <MESSAGE value="Lien permettant de mettre l'image dans les bonnes proportions pour un rendu optimal sur le site" />
+    <MESSAGE value="Ajout des différents logements qu'un utilisateur possède dans la page de profil" />
+    <MESSAGE value="Correction d'un problème dans l'édition des critères d'un logement" />
+    <MESSAGE value="correction soucis affichage dans annonce" />
+    <MESSAGE value="Code plus agréable à lire mais travail incomplet (interface annonce plus fonctionnelle)" />
+    <MESSAGE value="javascript et couleur sur les liens" />
+    <MESSAGE value="bug sur la recherche avancée réglé" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug sur la recherche avancée réglé" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1872">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1421158740944" expanded="true" signature="2129:2168" placeholder="SELECT * FRO..photo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrousel/carrousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="623" max-vertical-offset="1264">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichier_js/inscription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="2880">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/messagerie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2754" max-vertical-offset="5490">
+          <caret line="189" column="20" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="3438">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/js/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9724551" vertical-offset="4318" max-vertical-offset="5238">
+          <caret line="285" column="5" selection-start-line="285" selection-start-column="5" selection-end-line="285" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1736526" vertical-offset="4320" max-vertical-offset="114084">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="835">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/forum.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3599" max-vertical-offset="4518">
+          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="245" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/profil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3328" max-vertical-offset="4624">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/edit_profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3197" max-vertical-offset="4140">
+          <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/annonce.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3856" max-vertical-offset="4656">
+          <caret line="241" column="25" selection-start-line="241" selection-start-column="25" selection-end-line="241" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="544">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/echange.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="259.33334" vertical-offset="6576" max-vertical-offset="13120">
+          <caret line="22" column="97" selection-start-line="22" selection-start-column="97" selection-end-line="22" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/modelecreerprofil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/liremsg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026490066" vertical-offset="208" max-vertical-offset="2608">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/recherche_avancee.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1232">
+          <caret line="21" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/new_topic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1056">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="2576">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/recherche_avancee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="48" max-vertical-offset="2320">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="3072">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="1808">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/topic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="256" max-vertical-offset="5536">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="2240">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667" vertical-offset="64" max-vertical-offset="2080">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/forum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38897893" vertical-offset="0" max-vertical-offset="1088">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/annonce.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42384106" vertical-offset="32" max-vertical-offset="2320">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="e#3020#3624#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/ecriremsg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026490066" vertical-offset="224" max-vertical-offset="1760">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/echg_msg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34437087" vertical-offset="32" max-vertical-offset="1744">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/discussion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13245033" vertical-offset="144" max-vertical-offset="2208">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/creerprofil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026490066" vertical-offset="224" max-vertical-offset="1344">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/cible_recherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.0" vertical-offset="400" max-vertical-offset="1792">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="688">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/logo2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/menu2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58278143" vertical-offset="0" max-vertical-offset="604">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichier_js/recherche_avancee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37441498" vertical-offset="0" max-vertical-offset="641">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichier_js/connexion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.42433697" vertical-offset="288" max-vertical-offset="2272">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.666666" vertical-offset="624" max-vertical-offset="1968">
+          <caret line="67" column="83" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multilingue/choixlangue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-342.66666" vertical-offset="0" max-vertical-offset="8352">
+          <caret line="514" column="0" selection-start-line="514" selection-start-column="0" selection-end-line="514" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multilingue/choixlangue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="2416">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1344">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="7200">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/carrousel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1152">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="1904">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <marker date="1421158740944" expanded="true" signature="2129:2168" placeholder="SELECT * FRO..photo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="320">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/menus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="1344">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5562914" vertical-offset="2816" max-vertical-offset="6368">
+          <caret line="197" column="62" selection-start-line="197" selection-start-column="62" selection-end-line="197" selection-end-column="62" />
+          <folding>
+            <marker date="1421159384724" expanded="true" signature="184:244" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421159384724" expanded="true" signature="427:482" placeholder="SELECT passw..users..." />
+            <marker date="1421159384724" expanded="true" signature="707:836" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421159384724" expanded="true" signature="1347:1604" placeholder="INSERT INTO ..." />
+            <marker date="1421159384724" expanded="true" signature="1704:1962" placeholder="INSERT INTO ..." />
+            <marker date="1421159384724" expanded="true" signature="8556:8887" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421159384724" expanded="true" signature="9610:9771" placeholder="INSERT INTO ..." />
+            <marker date="1421159384724" expanded="true" signature="10206:10243" placeholder="SELECT id FR..users..." />
+            <marker date="1421159384724" expanded="true" signature="10438:10494" placeholder="SELECT user1..echange..." />
+            <marker date="1421159384724" expanded="true" signature="10628:10713" placeholder="INSERT INTO ..." />
+            <marker date="1421159384724" expanded="true" signature="10902:10987" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
