@@ -44,9 +44,9 @@
 
                     <h9 class="Localisation">  <img src="location2.png" width="0.7%"> <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
                     <li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li>
-                    <li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?> voyageurs</li>
-                    <li class="membres"> <?php echo $donnees['nb_chambres'] ;?> Chambres</li>
-                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?> salles de bains</li>
+                    <li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?><?php echo voyageur; ?></li>
+                    <li class="membres"> <?php echo $donnees['nb_chambres'] ;?><?php echo chambre; ?></li>
+                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?></li>
                     <li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²</li>
 
                     </div>
@@ -74,7 +74,7 @@
                 
                 ?>
                 <div class= "equipements">
-                    Equipements: </br></br>
+                    <?php echo equipement; ?></br></br>
 
                 <?php
                 /* Boucle permettant d'obtenir la liste des critères automatiquement : avantage = permettra d'augmenter la liste si ajout d'un crtière dans BackOf / inconvenient : les noms qui s'affichent sont ceux de la BDD donc moches
@@ -85,27 +85,27 @@
                     }
                  } */
                 if ($donnees3['television'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Télévision </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.tele.' </li><br></br>';
                 }
 
                 if ($donnees3['machine_a_laver'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Machine a laver </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.machinelaver.' </li><br></br>';
                 }
 
                 if ($donnees3['parking'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Parking </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">'.parking.' </li><br></br>';
                 }
 
                 if ($donnees3['climatisation'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Climatisation </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.climatisation.' </li><br></br>';
                 }
 
                 if ($donnees3['piscine'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Piscine </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.piscine.' </li><br></br>';
                 }
 
                 if ($donnees3['jardin'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> Jardin </li><br></br>';
+                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.jardin.' </li><br></br>';
                 }
 
                   ?>
@@ -115,14 +115,14 @@
 
                     <?php echo '<img   src="'.$donnees1 ['avatar'].'"  class="Norma">'  ?> <br></br>
                     <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
-                    <h7 class="Norma2"> Membre depuis 2014 </h7> <br> </br>
+                    <h7 class="Norma2"><?php echo membersince ?></h7> <br> </br>
 
-                <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton">Consulter profil</button>
+                <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"><?php echo consultprofil; ?></button>
                      <?php if(isset($_SESSION['userid'])) { ?>
-                         <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'">Proposer un échange</button>
+                         <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'"><?php echo proposeechange; ?></button>
                      <?php
                      }
-                     else { ?> <button type="button" class="bouton" onclick="window.location='sign_up.php'">Proposer un échange</button><?php } ?>
+                     else { ?> <button type="button" class="bouton" onclick="window.location='sign_up.php'"><?php echo proposeechange; ?></button><?php } ?>
 
 
                 </div>
