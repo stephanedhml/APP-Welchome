@@ -26,7 +26,7 @@
 }
 .search_bar {
     diplay:inline;
-    margin-top: 130px;
+    margin-top: 0px;
 }
 #slide1
 {
@@ -127,7 +127,7 @@
 }
 
 @media only screen and (max-width : 1720px) {
-    #recherche_simple {
+    .search_bar {
         margin-top: 6%;
     }
 }
@@ -191,7 +191,7 @@
         font-family: Calibri;
         color: white;
     }
-    #recherche_simple
+    .search_bar
     {
         position: relative;
         margin-left: 20%;
