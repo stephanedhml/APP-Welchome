@@ -1,4 +1,4 @@
-<
+
 function rouge(champ,erreur)
 {
 
@@ -86,7 +86,8 @@ function verifconnexion(f)
 
 }
 
-function notifyMe() {
+function notifyMe()
+{
     // Voyons si le navigateur supporte les notifications
     if (!('Notification' in window)) {
         alert("Ce navigateur ne supporte pas les notifications desktop");
@@ -119,6 +120,7 @@ function notifyMe() {
     // Comme ça, si l'utlisateur a refusé toute notification, et que vous respectez ce choix,
     // il n'y a pas besoin de l'ennuyer à nouveau.
 }
+
 function deconnect()
 {
    if(confirm('Êtes vous certain de vouloir vous déconnecter ?'))

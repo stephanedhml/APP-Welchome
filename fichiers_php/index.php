@@ -19,7 +19,7 @@
 	</head>
 	
 	<body>
-	
+
 		<header>
 			<?php include("menus.php"); ?>
 		</header>

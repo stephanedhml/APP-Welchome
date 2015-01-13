@@ -12,7 +12,7 @@ session_start();
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css" />
     </head>
-<body class="forum_messagerie">
+<body class="forum_messagerie" onload="cacher()">
 
 <header>
     <?php include("menus.php"); ?>
