@@ -125,7 +125,7 @@ function resultats_requete_avancee()
     {
         $message3="";
     }
-    if (isset($_POST['type3']) and $_POST['type3']!='' and (!isset($_POST['type2']) or $_POST['type2']!=''))
+    if (isset($_POST['type3']) AND $_POST['type3']!='' AND (!isset($_POST['type2']) or $_POST['type2']!=''))
     {
         $type3 = htmlspecialchars($_POST['type3']);
         $message4 =  " AND type_logement LIKE '%$type3%'";

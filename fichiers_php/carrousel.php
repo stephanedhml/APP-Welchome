@@ -3,7 +3,7 @@
 					<h1>
 						<?php echo carrouseltxt;?>
 					</h1>
-					<div style="diplay:inline;">
+					<div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" /> 		
@@ -18,12 +18,13 @@
 					<h1>
 						<?php echo carrouseltxt;?>
 					</h1>
+                    <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post" s>
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
-
+                    </div>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -31,11 +32,13 @@
 					<h1>
 						<?php echo carrouseltxt;?>
 					</h1>
+                    <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
+                    </div>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -43,11 +46,13 @@
 					<h1>
 						<?php echo carrouseltxt;?>
 					</h1>
+                    <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
+                    </div>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 				
@@ -55,11 +60,13 @@
 					<h1>
 						<?php echo carrouseltxt;?>
 					</h1>
+                    <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
+                    </div>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 			</div>	
