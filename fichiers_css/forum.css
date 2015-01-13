@@ -1,13 +1,22 @@
-.forum_messagerie {
+/*.forum_messagerie {
     background-image: url("../images_diverses/texture_forum_white.jpg");
-}
+}*/
 
 .forum_title {
-    padding-top: 6%;
+    padding-top: 5%;
     text-align: center;
     font-size: 35px;
-    font-family: century, arial,sans-serif;
+    color: #34495e;
+    font-weight: bold;
+    font-family: sans-serif;
+    height: 90px;
+    background-color: white;
+    letter-spacing: 1px;
 
+}
+.forum_tableau{
+    background-color: #ededeb;
+    border-top: 1px dotted #b3b4b4;
 }
 
 .tableau_forum_accueil0 {

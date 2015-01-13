@@ -19,7 +19,7 @@
 	</head>
 	
 	<body>
-	
+
 		<header>
 			<?php include("menus.php"); ?>
 		</header>
@@ -36,6 +36,8 @@
 						<?php echo intro; ?>
 					</p>
 				</div>
+                
+
 				<div class="schema1">
 
                     <div class="wrapper" >
@@ -62,13 +64,10 @@
                         </div>
 
                     </div>
+                    <div class="h2_p4"><p> <?php echo lastannonce; ?></p></div>
 				</div>
 
-                <div class="h2_p2">
-                    <p>
-                        <?php echo lastannonce; ?>
-                    </p>
-                </div>
+               
 
                  <div class="schema3">
                    <div class="h3">

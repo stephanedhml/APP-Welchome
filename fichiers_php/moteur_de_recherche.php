@@ -95,7 +95,12 @@ include('modeles.php');
 		<?php
 				}
 				$nbresult->closeCursor(); // on ferme mysql
+
 			}
+		else
+		{
+			echo'<meta http-equiv="refresh" content="0;URL=index.php">';
+		}
 		?>
 	</p>
 </div>

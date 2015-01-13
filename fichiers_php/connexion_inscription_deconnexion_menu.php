@@ -10,7 +10,7 @@ function check_new_msg()
     $req = $bdd -> prepare("SELECT lu_nonlu FROM messages WHERE id_destinataire=? AND lu_nonlu=1");
     $req -> execute(array($_SESSION['userid']));
     $new = $req -> rowCount();
-    if ($new!=0) {echo '<li><a href="message.php" class="btn_MESSAGES_NEW">Messages <div class="numberfont">'.$new.'</div></a></li>';} else {echo '<li><a href="message.php" class="btn_MESSAGES">Messages</a></li>';}
+    if ($new!=0) {echo '<li><a  href="message.php"  class="btn_MESSAGES_NEW cl">Messages <div class="numberfont">'.$new.'</div></a></li>';} else {echo '<li><a href="message.php"  class="btn_MESSAGES cl">Messages</a></li>';}
 }
 	//Si lutilisateur est connecté, on lui donne un lien pour modifier ses informations, pour voir ses messages et un pour se deconnecter
 	if(isset($_SESSION['username']))
@@ -21,18 +21,18 @@ function check_new_msg()
         ));
         $id_log = $req -> fetch();
 ?>
-        <li><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
+        <li><a class="cl" href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
         <?php echo check_new_msg() ?>
-		<li><a href="connexion.php" onclick="return deconnect()"><?php echo disconnect ?></a></li>
+		<li><a class="cl" href="connexion.php"  onclick="return deconnect()"><?php echo disconnect ?></a></li>
 <?php
 	}
 	else
 	{
 	//Sinon, on lui donne un lien pour sinscrire et un autre pour se connecter
 ?>
-        <li><a href="#" class="btn_FAQ"><?php echo faq;?></a></li>
-        <li><a href="sign_up.php"><?php echo register; ?></a></li>
-	<li><a href="connexion.php" class="btn_SECONNECTER"><?php echo connect;?></a></li>
+        <li><a href="#" class="btn_FAQ cl"><?php echo faq;?></a></li>
+        <li><a  href="sign_up.php" class="cl" ><?php echo register; ?></a></li>
+	<li><a href="connexion.php" class="btn_SECONNECTER cl"><?php echo connect;?></a></li>
 <?php
 	}
 ?>
