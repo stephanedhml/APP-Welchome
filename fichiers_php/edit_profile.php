@@ -528,7 +528,8 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
+<script type="text/javascript" src="../fichier_js/ajout_photo.js"></script>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
@@ -553,13 +554,13 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         if (isset($_GET['choix'])) {echo "";} else {
     ?>
             <div class="left_3">
-                <div class="left_carre"><a href="edit_profile.php?choix=1"><p>Editer votre profil</p></a></div>
+                <div class="left_carre"><a href="edit_profile.php?choix=1"><p><?php echo editprofile; ?></p></a></div>
             </div>
             <div class="center_3">
-                <div class="center_carre"><a href="edit_profile.php?choix=2"><p>Modifier un logement</p></a></div>
+                <div class="center_carre"><a href="edit_profile.php?choix=2"><p><?php echo modifytenement; ?></p></a></div>
             </div>
             <div class="right_3">
-                <div class="right_carre"><a href="edit_profile.php?choix=3"><p>Ajouter un logement</p></a></div>
+                <div class="right_carre"><a href="edit_profile.php?choix=3"><p><?php echo addtenement; ?></p></a></div>
             </div>
     <?php } ?>
 
@@ -593,27 +594,27 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 <div class="container_edit_profil">
     <form action="edit_profile.php?choix=1" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
-        <label for="avatar">Image perso</label><br/>
+        <label for="avatar"><?php imageperso ;?></label><br/>
         <p>300x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
         <input type="file" name="up_avatar" id="up_avatar"><br />
         <label for="description">Description</label><br/>
         <input type="text" name="description"/><br/>
-        <label for="username" id="username_form">Sexe</label></br>
+        <label for="username" id="username_form"><?php echo genre; ?></label></br>
         <SELECT name="sexe" size="1">
             <OPTION></OPTION>
-            <OPTION>Homme</OPTION>
-            <OPTION>Femme</OPTION>
-            <OPTION>Autre</OPTION>
+            <OPTION><?php echo homme; ?></OPTION>
+            <OPTION><?php echo femme; ?></OPTION>
+            <OPTION><?php echo autre; ?></OPTION>
         </SELECT></br>
-        <label for="tel">Numéro de Téléphone</label></br>
+        <label for="tel"><?php echo numtel; ?></label></br>
         <input type="tel" name="tel" /><br/>
         <label for="profession">Profession</label><br/>
         <input type="text" name="metier"/><br/>
         <label for="situation">Situation</label><br/>
         <SELECT name="situation" size="1">
             <OPTION></OPTION>
-            <OPTION>Célibataire</OPTION>
-            <OPTION>Couple</OPTION>
+            <OPTION><?php echo celibataire; ?></OPTION>
+            <OPTION><?php echo couple; ?></OPTION>
             <OPTION>Marié</OPTION>
         </SELECT></br>
         <input type="submit" value="Valider les modifications" id="btn_validation_edit" /><br/><br/>
@@ -644,11 +645,11 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
         <input type="file" name="maj_main_img_logement" ><br />
         <label for="avatar">Seconde photo</label><br/>
-        <input type="file" name="maj_2_img_logement" ><br />
+        <input type="file" name="maj_2_img_logement" onclick="return verifphoto2(this)" ><br />
         <label for="avatar">Troisième photo</label><br/>
-        <input type="file" name="maj_3_img_logement" ><br />
+        <input type="file" name="maj_3_img_logement" onclick="return verifphoto3(this)"  ><br />
         <label for="avatar">Quatrième photo</label><br/>
-        <input type="file" name="maj_4_img_logement" ><br />
+        <input type="file" name="maj_4_img_logement" onclick="return verifphoto4(this)"  ><br />
         <label for="localisation">Localisation</label><br/>
         <input type="text" name="localisation"/><br/>
         <label for="description_logement">Description du logement</label><br/>

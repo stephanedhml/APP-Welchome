@@ -40,6 +40,12 @@ $user = $rel -> fetch();
 <div class="superglobal">
     <div class="global">
 
+        
+           <div class="forum_title"><h7> <?php echo $name_topic[3] ?></a></h7></div>
+        
+        
+       
+
         <?php
         if(isset($_POST['message']) AND $_POST['message'] != '') {
             $req = $bdd -> prepare("INSERT INTO forum_post(id_user,id_topic,texte_post) VALUES(:auteur,:id_topic,:message)");

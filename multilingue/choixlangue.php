@@ -114,6 +114,7 @@
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
 			//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
@@ -225,7 +226,8 @@
 		define('connexionsuccess','You success to connect !');
 		define('wrongpassword','Password or username incorrect, please try again');
 			//forum accueil
-		define('forum','Forum');
+		define('forum','FORUM');
+		define('forum1','FORUM');
 		define('categorie','Category');
 		define('description','Description');
 		define('nbmessages','Nb of messages');
@@ -341,6 +343,7 @@
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
 				//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
@@ -453,6 +456,7 @@
 		define('wrongpassword','Password or username incorrect, please try again');
 			//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Category');
 		define('description','Description');
 		define('nbmessages','Nb of messages');
@@ -568,6 +572,7 @@
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
 		//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
@@ -594,6 +599,17 @@
 		define('retry','Réessayez');
 		define('autrechose',' avec autre chose.');
 		define('research','Recherche');
+		//edit-profil
+		define('modifytenement','Modifier un logement');
+		define('addtenement','Ajouter un logement');
+		define('imageperso','Image perso');
+		define('genre','Sexe');
+		define('homme','Homme');
+		define('femme','Femme');
+		define('autre','Autre');
+		define('numtel','Numéro de Téléphone');
+		define('celibataire','Célibataire');
+		define('couple','Couple');
 	}
 	
 }

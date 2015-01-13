@@ -32,6 +32,13 @@ if (isset($_SESSION["userid"])) {
 
 <div class="superglobal">
     <div class="global">
+
+        <?php
+        if (isset($_SESSION['userid'])) {
+          echo ' <div class="forum_title"><h7> <a "site.php?id_cat='.$name_cat[0].'">'.$name_cat[1].'</a></h7></div>';
+        }
+        
+        ?>
         <?php
         if(isset($_SESSION['userid'])){
 
@@ -57,6 +64,7 @@ if (isset($_SESSION["userid"])) {
                         </div>
                     ';}
         ?>
+        <div class="forum_tableau">
         <table class="tableau_site">
             <tr>
                 <th>Sujets</th>
@@ -97,7 +105,7 @@ if (isset($_SESSION["userid"])) {
             }
             ?>
 
-        </table>
+        </table></div>
 
     </div>
 </div>
