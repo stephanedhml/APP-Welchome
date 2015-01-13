@@ -1,0 +1,22 @@
+.admin_container {
+    width: 100%;
+}
+
+.user_info {
+    width: 50%;
+    position: absolute;
+}
+.user_cadre {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 500px;
+
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 3px;
+}
+.logement_info {
+    margin-left: 50%;
+    width: 50%;
+    position: absolute;
+}
