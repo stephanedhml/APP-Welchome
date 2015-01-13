@@ -97,7 +97,7 @@ function resultats_requete_avancee()
     {
         $message1="";
     }
-    if (isset($_POST['type1']) and $_POST['type1']!='' and (!isset($_POST['capacite']) or $_POST['capacite']!=''))
+    if (isset($_POST['type1']) and $_POST['type1']!='' and (!isset($_POST['capacite']) or $_POST['capacite']=''))
     {
         $type1 = htmlspecialchars($_POST['type1']);
         $message2 = " AND type_logement LIKE '%$type1%'";
@@ -111,7 +111,7 @@ function resultats_requete_avancee()
     {
         $message2="";
     }
-    if (isset($_POST['type2']) and $_POST['type2']!=''  and (!isset($_POST['type1']) or $_POST['type1']!=''))
+    if (isset($_POST['type2']) and $_POST['type2']!=''  and (!isset($_POST['type1']) or $_POST['type1']=''))
     {
         $type2 = htmlspecialchars($_POST['type2']);
         $message3 =  " AND type_logement LIKE '%$type2%'";
@@ -125,7 +125,7 @@ function resultats_requete_avancee()
     {
         $message3="";
     }
-    if (isset($_POST['type3']) AND $_POST['type3']!='' AND (!isset($_POST['type2']) or $_POST['type2']!=''))
+    if (isset($_POST['type3']) AND $_POST['type3']!='' AND (!isset($_POST['type2']) or $_POST['type2']=''))
     {
         $type3 = htmlspecialchars($_POST['type3']);
         $message4 =  " AND type_logement LIKE '%$type3%'";
@@ -139,7 +139,7 @@ function resultats_requete_avancee()
     {
         $message4="";
     }
-    if (isset($_POST['type4']) and $_POST['type4']!='' and (!isset($_POST['type3']) or $_POST['type3']!=''))
+    if (isset($_POST['type4']) and $_POST['type4']!='' and (!isset($_POST['type3']) or $_POST['type3']=''))
     {
         $type4 = htmlspecialchars($_POST['type4']);
         $message5 =  " AND type_logement LIKE '%$type4%'";
@@ -153,7 +153,7 @@ function resultats_requete_avancee()
     {
         $message5="";
     }
-    if (isset($_POST['type5']) and $_POST['type5']!='' and (!isset($_POST['type4']) or $_POST['type4']!=''))
+    if (isset($_POST['type5']) and $_POST['type5']!='' and (!isset($_POST['type4']) or $_POST['type4']=''))
     {
         $type5 = htmlspecialchars($_POST['type5']);
         $message6 =  " AND type_logement LIKE '%$type5%'";
@@ -167,7 +167,7 @@ function resultats_requete_avancee()
     {
         $message6="";
     }
-    if (isset($_POST['type6']) and $_POST['type6']!='' and (!isset($_POST['type5']) or $_POST['type5']!=''))
+    if (isset($_POST['type6']) and $_POST['type6']!='' and (!isset($_POST['type5']) or $_POST['type5']=''))
     {
         $type6 = htmlspecialchars($_POST['type6']);
         $message7 =  " AND type_logement LIKE '%$type6%'";
@@ -181,7 +181,7 @@ function resultats_requete_avancee()
     {
         $message7="";
     }
-    if (isset($_POST['type7']) and $_POST['type7']!='' and (!isset($_POST['type6']) or $_POST['type6']!=''))
+    if (isset($_POST['type7']) and $_POST['type7']!='' and (!isset($_POST['type6']) or $_POST['type6']=''))
     {
         $type7 = htmlspecialchars($_POST['type7']);
         $message8 =  " AND type_logement LIKE '%$type7%'";

@@ -66,7 +66,7 @@ include('modeles.php');
 		?>
 						<div class="cadre">
                                 <div class="left">
-                            <?php echo '<img  align="left" src="'.$url_pic['lien_photo'].'" class="photo">' ?>
+									<a href="annonce.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>" > <?php echo '<img  align="left" src="'.$url_pic['lien_photo'].'" class="photo">' ?></a>
                                 </div>
 
                                 <div class="right">
