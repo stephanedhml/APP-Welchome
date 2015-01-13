@@ -44,6 +44,8 @@ session_start();
         if ($user_info_nb!=0) {
             $user_info = $req_usr -> fetch();
 
+            $ret = $bdd -> prepare("SELECT * FROM logement WHERE id_users=?");
+            $ret -> execute(array($user_info['id_users']));
         }
         if ($logement_info_nb!=0) {$logement_info = $req_logement -> fetch();}
 
