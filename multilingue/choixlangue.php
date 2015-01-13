@@ -599,6 +599,17 @@
 		define('retry','Réessayez');
 		define('autrechose',' avec autre chose.');
 		define('research','Recherche');
+		//edit-profil
+		define('modifytenement','Modifier un logement');
+		define('addtenement','Ajouter un logement');
+		define('imageperso','Image perso');
+		define('genre','Sexe');
+		define('homme','Homme');
+		define('femme','Femme');
+		define('autre','Autre');
+		define('numtel','Numéro de Téléphone');
+		define('celibataire','Célibataire');
+		define('couple','Couple');
 	}
 	
 }
