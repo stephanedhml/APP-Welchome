@@ -12,7 +12,7 @@
      ?>
 
     <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
-    <title><?php echo profil; ?></title>
+    <title>Profil</title>
 </head>
 
 <body>
