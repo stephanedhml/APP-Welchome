@@ -43,21 +43,21 @@
         -->
 			</div>
 			<div class="bloc_search_center1">
-				<p><?php echo capacitéaccueil;?><br/>
-					<input type="number" name="capacite" value="Capacité d'accueil" min="0"></p>
+				<p><?php echo capacitéaccueil;?>
+					<input type="number" class="in" name="capacite" value="Capacité d'accueil" min="0"></p>
 
-				<?php echo nbchambres;?><br />
-				<input type="number" name="nb_room" min="0"/>
+				<?php echo nbchambres;?>
+				<input type="number" class="in" name="nb_room" min="0"/>
 				</p>
 
 				<p>
-					<?php echo nbsallesbain;?><br />
-					<input type="number" name="nb_bathroom" min="0" />
+					<?php echo nbsallesbain;?>
+					<input type="number" class="in" name="nb_bathroom" min="0" />
 				</p>
 
 
-				<p><?php echo surfacemin;?><br/>
-					<input type="number" name="surface_min" value="Surface minimale" min="0"></p>
+				<p><?php echo surfacemin;?>
+					<input type="number" class="in" name="surface_min" value="Surface minimale" min="0"></p>
 
 				<!--
         <p><?php echo choixpreferences;?><br/>

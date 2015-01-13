@@ -4,7 +4,7 @@
     display: none;
     text-align: center;
     text-decoration: none;
-    font-size: 11pt;
+    font-size: 9pt;
     font-family: 'PT Sans', Arial, sans-serif;
     padding-top: 40px;
     line-height: 40px;
@@ -72,3 +72,8 @@
 }
 
 .cl:hover{color: #ff396e;}
+.in
+{
+    width: 40px;
+}
+

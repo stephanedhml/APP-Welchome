@@ -87,6 +87,7 @@ function resultats_requete_avancee()
         $lieu = htmlspecialchars($_POST['ville']);
     }
     else{$lieu = "";}
+
     if (isset($_POST['capacite']) and $_POST['capacite']!='')
     {
         $capacite = htmlspecialchars($_POST['capacite']);
@@ -96,64 +97,99 @@ function resultats_requete_avancee()
     {
         $message1="";
     }
-    if (isset($_POST['type1']) and $_POST['type1']!='')
+    if (isset($_POST['type1']) and $_POST['type1']!='' and (!isset($_POST['capacite']) or $_POST['capacite']!=''))
     {
         $type1 = htmlspecialchars($_POST['type1']);
         $message2 = " AND type_logement LIKE '%$type1%'";
+    }
+    else if(isset($_POST['capacite']) and $_POST['capacite']!='')
+    {
+        $type1 = htmlspecialchars($_POST['type1']);
+        $message2="OR type_logement LIKE '%$type1%'";
     }
     else
     {
         $message2="";
     }
-    if (isset($_POST['type2']) and $_POST['type2']!='')
+    if (isset($_POST['type2']) and $_POST['type2']!=''  and (!isset($_POST['type1']) or $_POST['type1']!=''))
     {
         $type2 = htmlspecialchars($_POST['type2']);
         $message3 =  " AND type_logement LIKE '%$type2%'";
+    }
+    else if(isset($_POST['type1']) and $_POST['type1']!='')
+    {
+        $type2 = htmlspecialchars($_POST['type2']);
+        $message3="OR type_logement LIKE '%$type2%'";
     }
     else
     {
         $message3="";
     }
-    if (isset($_POST['type3']) and $_POST['type3']!='')
+    if (isset($_POST['type3']) and $_POST['type3']!='' and (!isset($_POST['type2']) or $_POST['type2']!=''))
     {
         $type3 = htmlspecialchars($_POST['type3']);
         $message4 =  " AND type_logement LIKE '%$type3%'";
+    }
+    else if(isset($_POST['type2']) and $_POST['type2']!='')
+    {
+        $type3 = htmlspecialchars($_POST['type3']);
+        $message4="OR type_logement LIKE '%$type3%'";
     }
     else
     {
         $message4="";
     }
-    if (isset($_POST['type4']) and $_POST['type4']!='')
+    if (isset($_POST['type4']) and $_POST['type4']!='' and (!isset($_POST['type3']) or $_POST['type3']!=''))
     {
         $type4 = htmlspecialchars($_POST['type4']);
         $message5 =  " AND type_logement LIKE '%$type4%'";
+    }
+    else if(isset($_POST['type3']) and $_POST['type3']!='')
+    {
+        $type4 = htmlspecialchars($_POST['type4']);
+        $message5="OR type_logement LIKE '%$type4%'";
     }
     else
     {
         $message5="";
     }
-    if (isset($_POST['type5']) and $_POST['type5']!='')
+    if (isset($_POST['type5']) and $_POST['type5']!='' and (!isset($_POST['type4']) or $_POST['type4']!=''))
     {
         $type5 = htmlspecialchars($_POST['type5']);
         $message6 =  " AND type_logement LIKE '%$type5%'";
+    }
+    else if(isset($_POST['type4']) and $_POST['type4']!='')
+    {
+        $type5 = htmlspecialchars($_POST['type5']);
+        $message6="OR type_logement LIKE '%$type5%'";
     }
     else
     {
         $message6="";
     }
-    if (isset($_POST['type6']) and $_POST['type6']!='')
+    if (isset($_POST['type6']) and $_POST['type6']!='' and (!isset($_POST['type5']) or $_POST['type5']!=''))
     {
         $type6 = htmlspecialchars($_POST['type6']);
         $message7 =  " AND type_logement LIKE '%$type6%'";
+    }
+    else if(isset($_POST['type5']) and $_POST['type5']!='')
+    {
+        $type6 = htmlspecialchars($_POST['type6']);
+        $message7="OR type_logement LIKE '%$type6%'";
     }
     else
     {
         $message7="";
     }
-    if (isset($_POST['type7']) and $_POST['type7']!='')
+    if (isset($_POST['type7']) and $_POST['type7']!='' and (!isset($_POST['type6']) or $_POST['type6']!=''))
     {
         $type7 = htmlspecialchars($_POST['type7']);
         $message8 =  " AND type_logement LIKE '%$type7%'";
+    }
+    else if(isset($_POST['type6']) and $_POST['type6']!='')
+    {
+        $type7 = htmlspecialchars($_POST['type7']);
+        $message8="OR type_logement LIKE '%$type7%'";
     }
     else
     {

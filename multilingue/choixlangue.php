@@ -54,22 +54,22 @@
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
 		//Recherche avancée
-		define('choixville','Dans quelle ville souhaitez-vous aller ?');
-		define('choixlogement','Par quel(s) type(s) de logement êtes vous interessé ?');
+		define('choixville','Lieu souhaité');
+		define('choixlogement','Type(s) de logement');
 		define('appartement','un appartement');
 		define('studio','un studio');
 		define('maison','une maison');
 		define('pavillon','un pavillon');
-		define('bungalow','un bungalow ou un gîte');
+		define('bungalow','un gîte');
 		define('campingcar','un camping car');
 		define('bateau','un bateau');
 		define('choixdates','Veuillez entrez les dates qui vous conviennent :');
 		define('de','de');
 		define('à','à');
-		define('capacitéaccueil','Entrez la capacité d\'accueil qui vous intéresse :');
-		define('nbchambres','Combien de chambres voulez-vous?');
-		define('nbsallesbain','Combien de salles de bain voulez-vous ?');
-		define('surfacemin','Entrer la surface minimale du logement que vous souhaitez :');
+		define('capacitéaccueil','Capacité d\'accueil :');
+		define('nbchambres','Nombre de chambres :');
+		define('nbsallesbain','Nombre de salles de bain :');
+		define('surfacemin','Surface minimale :');
 		define('choixpreferences','Avez-vous des préférences parmi les propositions suivantes ?');
 		define('banlieue','Banlieue');
 		define('campagne','Campagne');
@@ -414,7 +414,8 @@
 		}
 	}
 	else
-	{  
+	{
+
 		//Menu
 		define('accueil','Accueil');
 		define('rechercheavancee','Recherche avancée');
@@ -424,7 +425,7 @@
 		define('sendproposition','Envoyer/recevoir des propositions');
 		define('trade','Echanger');
 		define('strenght','POINTS FORTS');
-		define('illimitateexchange','Echanges illimités');
+		define('unlimitedexchange','Echanges illimités');
 		define('assistmember','Bénéficiez de notre Assistance Membres 7j/7 ');
 		define('freedevice','Un service complètement gratuit');
 		define('hugenetwork','Un large réseau de logements');
@@ -433,27 +434,28 @@
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
+		define('logements','Logements');
 		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
 		//Recherche avancée
-		define('choixville','Dans quelle ville souhaitez-vous aller ?');
-		define('choixlogement','Par quel(s) type(s) de logement êtes vous interessé ?');
+		define('choixville','Lieu souhaité');
+		define('choixlogement','Type(s) de logement');
 		define('appartement','un appartement');
 		define('studio','un studio');
 		define('maison','une maison');
 		define('pavillon','un pavillon');
-		define('bungalow','un bungalow ou un gîte');
+		define('bungalow','un gîte');
 		define('campingcar','un camping car');
 		define('bateau','un bateau');
 		define('choixdates','Veuillez entrez les dates qui vous conviennent :');
 		define('de','de');
 		define('à','à');
-		define('capacitéaccueil','Entrez la capacité d\'accueil qui vous intéresse :');
-		define('nbchambres','Combien de chambres voulez-vous?');
-		define('nbsallesbain','Combien de salles de bain voulez-vous ?');
-		define('surfacemin','Entrer la surface minimale du logement que vous souhaitez :');
+		define('capacitéaccueil','Capacité d\'accueil :');
+		define('nbchambres','Nombre de chambres :');
+		define('nbsallesbain','Nombre de salles de bain :');
+		define('surfacemin','Surface minimale :');
 		define('choixpreferences','Avez-vous des préférences parmi les propositions suivantes ?');
 		define('banlieue','Banlieue');
 		define('campagne','Campagne');
@@ -486,12 +488,12 @@
 		define('verification','(vérification)');
 		define('email','Email');
 		define('imageperso','Image perso');
-		define('logementname','Nom de votre logement');
+		define('logementname','Titre de l\'annonce');
 		define('wherelogement','Où se situe votre logement ?');
 		define('typelogement','Quel type de logement proposez vous ?');
 		define('photo','Photos');
 		define('envoyer','Envoyer');
-			//connexion
+		//connexion
 		define('deconnexionsuccess','Vous avez bien été déconnecté !');
 		define('retouraccueil','Retour à l\'accueil');
 		define('connexionsuccess','Vous avez bien été connecté !');
@@ -502,13 +504,14 @@
 		define('description','Description');
 		define('nbmessages','Nb Messages');
 		define('lastmessage','Dernier message');
-					//profil
+		//profil
 		define('apropos','A Propos');
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
-		define('preferedtrade','Préférences d\'échange');	
+		define('preferedtrade','Préférences d\'échange');
 	}
 	
-}choixlangue();
+}
+choixlangue();
 ?>
 	

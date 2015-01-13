@@ -61,9 +61,10 @@ session_start();
 						//On enregistre son pseudo et son identifiant dans la session
 						$_SESSION["username"]=$username;
 						$_SESSION["userid"]=$dn["id_users"];
-
-						echo '<body onload="notifyMe()">';
-//<!--puis on le redirige vers la page d'accueil-
+?>
+						<body onload="notifyMe()">
+<!--puis on le redirige vers la page d'accueil-->
+			<?php
 						echo '<meta http-equiv="refresh" content="0;URL=index.php">';
 
 
