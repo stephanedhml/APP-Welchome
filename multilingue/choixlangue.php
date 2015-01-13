@@ -114,6 +114,7 @@
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
 			//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
@@ -208,7 +209,8 @@
 		define('connexionsuccess','You success to connect !');
 		define('wrongpassword','Password or username incorrect, please try again');
 			//forum accueil
-		define('forum','Forum');
+		define('forum','FORUM');
+		define('forum1','FORUM');
 		define('categorie','Category');
 		define('description','Description');
 		define('nbmessages','Nb of messages');
@@ -307,6 +309,7 @@
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
 				//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
@@ -402,6 +405,7 @@
 		define('wrongpassword','Password or username incorrect, please try again');
 			//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Category');
 		define('description','Description');
 		define('nbmessages','Nb of messages');
@@ -500,6 +504,7 @@
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
 		//forum accueil
 		define('forum','Forum');
+		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');

@@ -20,7 +20,7 @@ session_start();
 </header>
 <div class="superglobal">
     <div class="global">
-        <div class="forum_title"><h7><?php echo forum ?></h7></div>
+        <div class="forum_title"><h7><?php echo forum1 ?></h7></div>
         <div class="forum_tableau"><table class="tableau_forum_accueil0">
             <tr>
                 <th><?php echo categorie; ?></th>
