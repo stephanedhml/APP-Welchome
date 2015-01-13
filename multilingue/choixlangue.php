@@ -141,6 +141,25 @@
 		define('retry','Réessayez');
 		define('autrechose',' avec autre chose.');		
 		define('research','Recherche');
+				//edit-profil
+		define('modifytenement','Modifier un logement');
+		define('addtenement','Ajouter un logement');
+		define('genre','Sexe');
+		define('homme','Homme');
+		define('femme','Femme');
+		define('autre','Autre');
+		define('numtel','Numéro de Téléphone');
+		define('celibataire','Célibataire');
+		define('couple','Couple');
+		define('married','Marié');
+		define('photo1','Photo principale du logement ');
+		define('photo2','Seconde photo');
+		define('photo3','Troisième photo');
+		define('photo4','Quatrième photo');
+		define('descriptionlogement','Description du logement');
+		define('titreannonce','Titre de l\'annonce');
+		define('nbvoyageursauthorized','Nombre de voyageurs permis');
+		define('superficie','Superficie (en m2)');
 		}
 		else if ($lang=='en') 
 		{
@@ -254,6 +273,25 @@
 		define('retry','Retry');
 		define('autrechose',' with something else.');	
 		define('research','Research');		
+				//edit-profil
+		define('modifytenement','Modify a tenement');
+		define('addtenement','Add a tenement');
+		define('genre','Gender');
+		define('homme','Man');
+		define('femme','Woman');
+		define('autre','Other');
+		define('numtel','Telephone number');
+		define('celibataire','Single');
+		define('couple','Couple');
+		define('married','Married');
+		define('photo1','Most important picture of the tenement');
+		define('photo2','Second picture');
+		define('photo3','Third photo');
+		define('photo4','Fourth photo');
+		define('descriptionlogement','tenement\'s description');
+		define('titreannonce','Title of the announcement');
+		define('nbvoyageursauthorized','Number of traveller authorized');
+		define('superficie','Surface(in m2)');
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -369,7 +407,26 @@
 		define('noresultbis','Nous n\'avons trouvé aucun résultat pour votre requête .');
 		define('retry','Réessayez');
 		define('autrechose',' avec autre chose.');
-		define('research','Recherche');		
+		define('research','Recherche');	
+				//edit-profil
+		define('modifytenement','Modifier un logement');
+		define('addtenement','Ajouter un logement');
+		define('genre','Sexe');
+		define('homme','Homme');
+		define('femme','Femme');
+		define('autre','Autre');
+		define('numtel','Numéro de Téléphone');
+		define('celibataire','Célibataire');
+		define('couple','Couple');
+		define('married','Marié');
+		define('photo1','Photo principale du logement ');
+		define('photo2','Seconde photo');
+		define('photo3','Troisième photo');
+		define('photo4','Quatrième photo');
+		define('descriptionlogement','Description du logement');
+		define('titreannonce','Titre de l\'annonce');
+		define('nbvoyageursauthorized','Nombre de voyageurs permis');
+		define('superficie','Superficie (en m2)');
 		}
 		else if ($lang=='en') 
 		{  
@@ -483,6 +540,25 @@
 		define('retry','Retry');
 		define('autrechose',' with something else.');	
 		define('research','Research');
+				//edit-profil
+		define('modifytenement','Modify a tenement');
+		define('addtenement','Add a tenement');
+		define('genre','Gender');
+		define('homme','Man');
+		define('femme','Woman');
+		define('autre','Other');
+		define('numtel','Telephone number');
+		define('celibataire','Single');
+		define('couple','Couple');
+		define('married','Married');
+		define('photo1','Most important picture of the tenement');
+		define('photo2','Second picture');
+		define('photo3','Third photo');
+		define('photo4','Fourth photo');
+		define('descriptionlogement','tenement\'s description');
+		define('titreannonce','Title of the announcement');
+		define('nbvoyageursauthorized','Number of traveller authorized');
+		define('superficie','Surface(in m2)');
 		}
 	}
 	else
@@ -602,7 +678,6 @@
 		//edit-profil
 		define('modifytenement','Modifier un logement');
 		define('addtenement','Ajouter un logement');
-		define('imageperso','Image perso');
 		define('genre','Sexe');
 		define('homme','Homme');
 		define('femme','Femme');
@@ -610,6 +685,15 @@
 		define('numtel','Numéro de Téléphone');
 		define('celibataire','Célibataire');
 		define('couple','Couple');
+		define('married','Marié');
+		define('photo1','Photo principale du logement ');
+		define('photo2','Seconde photo');
+		define('photo3','Troisième photo');
+		define('photo4','Quatrième photo');
+		define('descriptionlogement','Description du logement');
+		define('titreannonce','Titre de l\'annonce');
+		define('nbvoyageursauthorized','Nombre de voyageurs permis');
+		define('superficie','Superficie (en m2)');
 	}
 	
 }
