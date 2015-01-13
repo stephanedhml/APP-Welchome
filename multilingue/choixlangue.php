@@ -80,7 +80,7 @@
 		define('climatisation','Climatisation');
 		define('chauffage','Chauffage');
 		define('machinelaver','Machine à laver');
-		define('sechelinge','sechelinge');
+		define('sechelinge','sèche linge');
 		define('cheminee','Cheminée');
 		define('tele','Télévision');
 		define('parking','Parking');
@@ -123,7 +123,24 @@
 		define('apropos','A Propos');
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
-		define('preferedtrade','Préférences d\'échange');		
+		define('preferedtrade','Préférences d\'échange');
+			//annonce
+		define('voyageur','Voyageurs');
+		define('chambre','Chambres');
+		define('sallebain','salles de bains');
+		define('equipement','Equipements: ');
+		define('membersince','Membre depuis 2014');
+		define('consultprofil','Consulter profil');
+		define('proposeechange','Proposer un échange');
+		 //ciblerecherche
+		define('noustrouver','Nous avons trouvé');
+		define('nblogementtrouve','dans notre base de données. Voici les logements que nous avons trouvées:');
+		define('nouvellerecherche','Faire une nouvelle recherche avec critère');
+		define('noresult','Pas de résultats');
+		define('noresultbis','Nous n\'avons trouvé aucun résultat pour votre requête .');
+		define('retry','Réessayez');
+		define('autrechose',' avec autre chose.');		
+		define('research','Recherche');
 		}
 		else if ($lang=='en') 
 		{
@@ -219,7 +236,24 @@
 		define('apropos','About us');
 		define('editprofile','Edit your profile');
 		define('descriptif ','Description');
-		define('preferedtrade','Trade preferences');	
+		define('preferedtrade','Trade preferences');
+			//annonce
+		define('voyageur','Travellers');
+		define('chambre','Bedrooms');
+		define('sallebain','Bathrooms');
+		define('equipement','Equipments: ');
+		define('membersince','Member since 2014');
+		define('consultprofil','View profile');
+		define('proposeechange','Offer a trade');
+		//ciblerecherche
+		define('noustrouver','We found');
+		define('nblogementtrouve','in our database. Here is the tenements we found:');
+		define('nouvellerecherche','Do a new research with criteria');
+		define('noresult','No result');
+		define('noresultbis','We found no result for your request.');
+		define('retry','Retry');
+		define('autrechose',' with something else.');	
+		define('research','Research');		
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -275,7 +309,7 @@
 		define('climatisation','Climatisation');
 		define('chauffage','Chauffage');
 		define('machinelaver','Machine à laver');
-		define('sechelinge','sechelinge');
+		define('sechelinge','sèche linge');
 		define('cheminee','Cheminée');
 		define('tele','Télévision');
 		define('parking','Parking');
@@ -319,6 +353,23 @@
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
 		define('preferedtrade','Préférences d\'échange');	
+			//annonce
+		define('voyageur','Voyageurs');
+		define('chambre','Chambres');
+		define('sallebain','Bathrooms');
+		define('equipement','Equipements: ');
+		define('membersince','Membre depuis 2014');
+		define('consultprofil','Consulter profil');
+		define('proposeechange','Proposer un echange');
+		//cible recherche
+		define('noustrouver','Nous avons trouvé');
+		define('nblogementtrouve','dans notre base de données. Voici les logements que nous avons trouvées:');
+		define('nouvellerecherche','Faire une nouvelle recherche avec critère');
+		define('noresult','Pas de résultats');
+		define('noresultbis','Nous n\'avons trouvé aucun résultat pour votre requête .');
+		define('retry','Réessayez');
+		define('autrechose',' avec autre chose.');
+		define('research','Recherche');		
 		}
 		else if ($lang=='en') 
 		{  
@@ -414,7 +465,24 @@
 		define('apropos','About us');
 		define('editprofile','Edit your profile');
 		define('descriptif ','Description');
-		define('preferedtrade','Trade preferences');	
+		define('preferedtrade','Trade preferences');
+			//annonce
+		define('voyageur','Travellers');
+		define('chambre','Bedrooms');
+		define('sallebain','Bathrooms');
+		define('equipement','Equipments: ');
+		define('membersince','Member since 2014');
+		define('consultprofil','View profile');
+		define('proposeechange','Offer a trade');	
+					//ciblerecherche
+		define('noustrouver','We found');
+		define('nblogementtrouve','in our database. Here is the tenements we found:');
+		define('nouvellerecherche','Do a new research with criteria');
+		define('noresult','No result');
+		define('noresultbis','We found no result for your request.');
+		define('retry','Retry');
+		define('autrechose',' with something else.');	
+		define('research','Research');
 		}
 	}
 	else
@@ -470,7 +538,7 @@
 		define('climatisation','Climatisation');
 		define('chauffage','Chauffage');
 		define('machinelaver','Machine à laver');
-		define('sechelinge','sechelinge');
+		define('sechelinge','Sèche linge');
 		define('cheminee','Cheminée');
 		define('tele','Télévision');
 		define('parking','Parking');
@@ -514,6 +582,23 @@
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
 		define('preferedtrade','Préférences d\'échange');
+		//annonce
+		define('voyageur','Voyageurs');
+		define('chambre','Chambres');
+		define('sallebain','salles de bains');
+		define('equipement','Equipements: ');
+		define('membersince','Membre depuis 2014');
+		define('consultprofil','Consulter profil');
+		define('proposeechange','Proposer un échange');
+		//ciblerecherche
+		define('noustrouver','Nous avons trouvé');
+		define('nblogementtrouve','dans notre base de données. Voici les logements que nous avons trouvées:');
+		define('nouvellerecherche','Faire une nouvelle recherche avec critère');
+		define('noresult','Pas de résultats');
+		define('noresultbis','Nous n\'avons trouvé aucun résultat pour votre requête .');
+		define('retry','Réessayez');
+		define('autrechose',' avec autre chose.');
+		define('research','Recherche');
 	}
 	
 }

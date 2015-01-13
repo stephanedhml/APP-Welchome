@@ -24,7 +24,10 @@
     z-index: 100000;
     width: 100%;
 }
-
+.search_bar {
+    diplay:inline;
+    margin-top: 130px;
+}
 #slide1
 {
 
@@ -59,7 +62,7 @@
     background-image: url('../walls/wall5cmp.jpg');
 }
 
-*/
+
 
 /*
 #bkcolor
@@ -71,6 +74,7 @@
 	top: 86.5px;
 }
 */
+
 
 #partie2
 
@@ -120,11 +124,10 @@
     
     display: inline-block;
     vertical-align: middle;
-    margin-top: 87px;
 }
 
 @media only screen and (max-width : 1720px) {
-    #recherche_simple {
+    .search_bar {
         margin-top: 6%;
     }
 }
@@ -188,7 +191,7 @@
         font-family: Calibri;
         color: white;
     }
-    #recherche_simple
+    .search_bar
     {
         position: relative;
         margin-left: 20%;
