@@ -10,23 +10,23 @@ session_start();
 <?php
 //On différencie l'admin d'un utilisateur lambda
 
-if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1)
+if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user'];} else {$id_user=$id_user;}
 
 if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
-    $up_avatar_folder = "../photos_utilisateurs/{$_SESSION['userid']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
+    $up_avatar_folder = "../photos_utilisateurs/{$id_user}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['up_avatar']['tmp_name'], $up_avatar_folder);
 //On ajoute la photo de profil dans la BDD
-        $res = $bdd->prepare("UPDATE users SET avatar= '../photos_utilisateurs/{$_SESSION['userid']}.jpg' WHERE id_users=?");
-        $res->execute(array($_SESSION['userid']));
+        $res = $bdd->prepare("UPDATE users SET avatar= '../photos_utilisateurs/{$id_user}.jpg' WHERE id_users=?");
+        $res->execute(array($id_user));
     }
 
 if (isset($_POST["description"]) AND $_POST["description"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET description=:description WHERE id_users=:id_user");
     $desc -> execute(array(
         'description' => $_POST['description'],
-        'id_user' => $_SESSION['userid'],
+        'id_user' => $id_user,
     ));
 }
 
@@ -34,7 +34,7 @@ if (isset($_POST["tel"])AND $_POST["tel"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET tel=:tel WHERE id_users=:id_user");
     $desc -> execute(array(
         'tel' => $_POST['tel'],
-        'id_user' => $_SESSION['userid'],
+        'id_user' => $id_user,
     ));
 }
 
@@ -42,7 +42,7 @@ if (isset($_POST["metier"])AND $_POST["metier"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET profession=:profession WHERE id_users=:id_user");
     $desc -> execute(array(
         'profession' => $_POST['metier'],
-        'id_user' => $_SESSION['userid'],
+        'id_user' => $id_user,
     ));
 }
 
@@ -50,7 +50,7 @@ if (isset($_POST["sexe"])AND $_POST["sexe"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET sexe=:sexe WHERE id_users=:id_user");
     $desc -> execute(array(
         'sexe' => $_POST['sexe'],
-        'id_user' => $_SESSION['userid'],
+        'id_user' => $id_user,
     ));
 }
 
@@ -58,7 +58,7 @@ if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
     $desc = $bdd -> prepare("UPDATE users SET situation=:situation WHERE id_users=:id_user");
     $desc -> execute(array(
         'situation' => $_POST['situation'],
-        'id_user' => $_SESSION['userid'],
+        'id_user' => $id_user,
     ));
 }
 
@@ -554,13 +554,13 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         if (isset($_GET['choix'])) {echo "";} else {
     ?>
             <div class="left_3">
-                <div class="left_carre"><a href="edit_profile.php?choix=1"><p><?php echo editprofile; ?></p></a></div>
+                <div class="left_carre"><a href="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo editprofile; ?></p></a></div>
             </div>
             <div class="center_3">
-                <div class="center_carre"><a href="edit_profile.php?choix=2"><p><?php echo modifytenement; ?></p></a></div>
+                <div class="center_carre"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p>Modifier vos logement</p></a></div>
             </div>
             <div class="right_3">
-                <div class="right_carre"><a href="edit_profile.php?choix=3"><p><?php echo addtenement; ?></p></a></div>
+                <div class="right_carre"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p>Ajouter un logement</p></a></div>
             </div>
     <?php } ?>
 
@@ -581,8 +581,8 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
                     <div class="right_cadre_logement">
                                     <span>
-                                    <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix"><?php echo $house["nom_maison"] ; ?></a>
-                                    <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix">
+                                    <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><?php echo $house["nom_maison"] ; ?></a>
+                                    <a href="edit_profile.php?choix_logement=<?php echo $house[0]; ?>&choix<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>">
                                         <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                     </div>
@@ -592,36 +592,36 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
     <?php if (isset($_GET["choix"]) AND $_GET["choix"]==1) { ?>
 <div class="container_edit_profil">
-    <form action="edit_profile.php?choix=1" method="post" enctype="multipart/form-data">
+    <form action="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
         <label for="avatar"><?php imageperso ;?></label><br/>
         <p>300x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
         <input type="file" name="up_avatar" id="up_avatar"><br />
         <label for="description">Description</label><br/>
         <input type="text" name="description"/><br/>
-        <label for="username" id="username_form"><?php echo genre; ?></label></br>
+        <label for="username" id="username_form">Sexe</label></br>
         <SELECT name="sexe" size="1">
             <OPTION></OPTION>
-            <OPTION><?php echo homme; ?></OPTION>
-            <OPTION><?php echo femme; ?></OPTION>
-            <OPTION><?php echo autre; ?></OPTION>
+            <OPTION>Homme</OPTION>
+            <OPTION>Femme</OPTION>
+            <OPTION>Autre</OPTION>
         </SELECT></br>
-        <label for="tel"><?php echo numtel; ?></label></br>
+        <label for="tel">Numéro téléphone</label></br>
         <input type="tel" name="tel" /><br/>
         <label for="profession">Profession</label><br/>
         <input type="text" name="metier"/><br/>
         <label for="situation">Situation</label><br/>
         <SELECT name="situation" size="1">
             <OPTION></OPTION>
-            <OPTION><?php echo celibataire; ?></OPTION>
-            <OPTION><?php echo couple; ?></OPTION>
+            <OPTION>Célibataire</OPTION>
+            <OPTION>Couple</OPTION>
             <OPTION>Marié</OPTION>
         </SELECT></br>
         <input type="submit" value="Valider les modifications" id="btn_validation_edit" /><br/><br/>
     </div>
 
     <!-- Afficher les informations actuelles de l'utilisateur -->
-    <?php $req = $bdd -> prepare("SELECT * FROM users WHERE id_users=?"); $req -> execute(array($_SESSION['userid'])); $donnees = $req -> fetch(); ?>
+    <?php $req = $bdd -> prepare("SELECT * FROM users WHERE id_users=?"); $req -> execute(array($id_user)); $donnees = $req -> fetch(); ?>
     <div class="bloc_edit_user_right">
         <?php echo '<img   src="'.$donnees ['avatar'].'"  class="profil">'  ?>
         <p>Description : <?php echo $donnees['description'] ;?></p>
@@ -639,7 +639,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         if (isset($_GET["choix_logement"])) {
     ?>
 <div class="container_edit_profil">
-    <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update" method="post" enctype="multipart/form-data">
+    <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
         <label for="avatar">Photo principale du logement *</label><br/>
         <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
@@ -761,7 +761,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     if (isset($_GET["choix"]) AND $_GET["choix"]==3 AND empty($_GET["add"])) {
     ?>
     <div class="container_edit_profil">
-        <form action="edit_profile.php?choix=<?php echo $_GET["choix"]; ?>&add=1" method="post" enctype="multipart/form-data">
+        <form action="edit_profile.php?choix=<?php echo $_GET["choix"]; ?>&add=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
             <div class="bloc_search_left">
                 <label for="avatar">Photo principale du logement *</label><br/>
                 <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>

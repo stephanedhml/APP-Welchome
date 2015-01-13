@@ -90,6 +90,7 @@ session_start();
                     <div class="user_info">
                         <div class="user_cadre">
                             <img src="<?php echo $user_info['avatar'] ?>" class="profil">
+                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1" >Editer profil utilisateur</a>
                             <p><?php echo $user_info[1] ?></p>
                             <p><?php echo $user_info['sexe'] ?></p>
                             <p><?php echo $user_info['tel'] ?></p>
