@@ -14,7 +14,7 @@ include('modeles.php');
 
     <?php include("../menu_responsive/javascript/menu_responsive.js");
     ?>
-    <title>Recherche</title>
+    <title>Recherhe</title>
 </head>
 
 <body>
@@ -42,12 +42,12 @@ include('modeles.php');
                 ?>
                 <img src="../images_diverses/search_result.png" class="search_result">
                 <p class="search_result_txt">
-                    Nous avons trouvé
+                   <?php echo noustrouver; ?>
                     <?php echo $nb_resultats;
                     // on vérifie le nombre de résultats pour orthographier correctement.
                     if($nb_resultats > 1) { echo ' résultats'; } else { echo ' résultat'; }
                     ?>
-                    dans notre base de données. Voici les logements que nous avons trouvées:<br/><br/>
+                    <?php echo nblogementtrouve; ?><br/><br/>
 
                 </p>
 
@@ -80,15 +80,15 @@ include('modeles.php');
                 } // fin du while
 
                 ?>		 <br/>
-                <a href="recherche_avancee.php" class="nlle_r">Faire une nouvelle recherche avec critère</a></p>
+                <a href="recherche_avancee.php" class="nlle_r"><?php echo nouvellerecherche; ?></a></p>
             <?php
             }
             // Afficher l'éventuelle erreur :
             else
             { //HTML
                 ?>
-                <h3>Pas de résultats</h3>
-                <p>Nous n'avons trouvé aucun résultat pour votre requête . <a href="recherche_avancee.php">Réessayez</a> avec autre chose.</p>
+                <h3><?php echo noresult; ?></h3>
+                <p><?php echo noresultbis; ?><a href="recherche_avancee.php"><?php echo retry; ?></a><?php echo autrechose; ?></p>
             <?php
             }
             $nbresult->closeCursor(); // on ferme mysql
