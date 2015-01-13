@@ -3,16 +3,17 @@
 					<h1>
 						<?php echo carrouseltxt;?>
 					</h1>
-					<div style="diplay:block;">
+					<div style="diplay:inline;">
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
-							id="recherche_simple" />
-							<input type="submit" id="input">
+							id="recherche_simple" /> 		
+							<input type="submit" id="input" value="Rechercher">
+
 						</form>
 					</div>	
 					<!-- <div id="bkcolor"></div> -->
 				</div>
-				
+
 				<div id="slide2" class="slide">
 					<h1>
 						<?php echo carrouseltxt;?>
@@ -20,7 +21,7 @@
 						<form action="moteur_de_recherche.php" method="Post" s>
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
-							<input type="submit" id="input">
+							<input type="submit" id="input" value="Rechercher">
 						</form>
 
 					<!-- <div id="bkcolor"></div> -->
@@ -33,7 +34,7 @@
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
-							<input type="submit" id="input">
+							<input type="submit" id="input" value="Rechercher">
 						</form>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
@@ -45,7 +46,7 @@
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
-							<input type="submit" id="input">
+							<input type="submit" id="input" value="Rechercher">
 						</form>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
@@ -57,8 +58,10 @@
 						<form action="moteur_de_recherche.php" method="Post">
 							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
 							id="recherche_simple" />
-							<input type="submit" id="input">
+							<input type="submit" id="input" value="Rechercher">
 						</form>
 					<!-- <div id="bkcolor"></div> -->
 				</div>
 			</div>	
+				
+				

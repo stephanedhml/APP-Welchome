@@ -95,30 +95,32 @@
 {
     
     margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 100px;
-    width: 60%;
+   
+    width: 49%;
     height: 40px;
     font-size: 27px;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 #input{
     background-color: #1abc9c;
-    height: 51px;
+    height: 46px;
     width: 130px;
     color: #FFF;
     border: 0;
     position: relative;
     left: -3px;
-    border-radius: 3px;
+
+    
     font-size: 14px;
-    box-shadow: 0 5px #16a085;
+   
   
     font-weight: 700;
-    margin-left: 1035px;
+    
     display: inline-block;
+    vertical-align: middle;
+    margin-top: 87px;
 }
 
 @media only screen and (max-width : 1720px) {
