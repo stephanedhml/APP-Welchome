@@ -8,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <script type="text/javascript" src="../fichier_js/inscription.js"></script>
+        <!-- <script type="text/javascript" src="../fichier_js/inscription.js"></script> -->
         <link rel="stylesheet" href="../style.css" />
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
@@ -45,9 +45,11 @@
                             $res = $req->fetch();
                             if(!$res)
                             {
+                                $confirm_code=md5(uniqid(rand()));
                                 //On insère les données saisies par l'utilisateur dans la BDD
-                                $req = $bdd->prepare('INSERT INTO users(username,password,email) VALUES(:username, :password, :email)');
+                                $req = $bdd->prepare('INSERT INTO temp_users(confirm_code,username,password,email) VALUES(:confirm,:username, :password, :email)');
                                 $req->execute(array(
+                                    'confirm' => $confirm_code,
                                     'username' => $_POST["username"],
                                     'password' => $pass_hache,
                                     'email' => $_POST["email"],
@@ -60,10 +62,10 @@
                                     $resultat = move_uploaded_file($_FILES['up_avatar']['tmp_name'],$up_avatar_folder);
                                 }
                                 //On ajoute la photo de profil dans la BDD
-                                $res = $bdd -> query("UPDATE users SET avatar= '../photos_utilisateurs/{$new_id}.jpg' WHERE id_users=$new_id"); //A CORRIGER -> le fichier s'appelle id_logement.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 logement et plusieurs extensions possibles !
+                                $res = $bdd -> query("UPDATE temp_users SET avatar= '../photos_utilisateurs/{$new_id}.jpg' WHERE id_users=$new_id"); //A CORRIGER -> le fichier s'appelle id_logement.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 logement et plusieurs extensions possibles !
 
                                 //On enregistre le logement dans la base de donnée
-                                $ret = $bdd->prepare("INSERT INTO logement(localisation,type_logement,nom_maison,id_users,numero_logement) VALUES(:localisation, :type_logement, :nom_maison, :id_users, :numero_logement)");
+                                $ret = $bdd->prepare("INSERT INTO temp_logement(localisation,type_logement,nom_maison,id_users,numero_logement) VALUES(:localisation, :type_logement, :nom_maison, :id_users, :numero_logement)");
                                 $ret->execute(array
                                 (
                                     'localisation' => $_POST['localisation'],
@@ -79,7 +81,7 @@
                                     $resultat = move_uploaded_file($_FILES['upload_photo']['tmp_name'],$up_folder);
                                 }
                                 //Ajouter la photo du logement importée dans la BDD
-                                $res = $bdd -> prepare("INSERT INTO photo(id_logement,lien_photo) VALUES(:id_logement, :lien_photo)");
+                                $res = $bdd -> prepare("INSERT INTO temp_photo(id_logement,lien_photo) VALUES(:id_logement, :lien_photo)");
                                 $res -> execute(array(
                                     'id_logement' => $new_logement,
                                     'lien_photo' => $up_folder,
@@ -88,6 +90,35 @@
                                 {
                                     //Si ça a fonctionné, on affiche pas le formulaire
                                     $form=false;
+                                    // if suceesfully inserted data into database, send confirmation link to email
+
+// ---------------- SEND MAIL FORM ----------------
+
+// send e-mail to ...
+                                        $to=$_POST["email"];
+
+// Your subject
+                                        $subject="Your confirmation link here";
+
+// From
+                                        $header="from: Geekelektro <beaudru.manuel@gmail.com>";
+
+// Your message
+                                        $message="Your Comfirmation link \r\n";
+                                        $message.="Click on this link to activate your account \r\n";
+                                        $message.="http://localhost/APP-Welchome/fichiers_php/confirmation.php?passkey=$confirm_code";
+
+// send email
+                                        $sentmail = mail($to,$subject,$message,$header);
+
+
+// if your email succesfully sent
+                                    if($sentmail){
+                                        echo "Your Confirmation link Has Been Sent To Your Email Address.";
+                                    }
+                                    else {
+                                        echo "Cannot send Confirmation link to your e-mail address";
+                                    }
                                     ?>
                                     <div class='message'><?php echo bieninscrit ;?>
                                         </br><a href="connexion.php"><?php echo connect ?></a></div>
@@ -183,5 +214,58 @@
         ?>
     </body>
 </html>
-			
+
+
+<?php
+/*
+// table name
+$tbl_name=temp_members_db;
+
+// Random confirmation code
+$confirm_code=md5(uniqid(rand()));
+
+// values sent from form
+$name=$_POST['name'];
+$email=$_POST['email'];
+$country=$_POST['country'];
+
+// Insert data into database
+$sql="INSERT INTO $tbl_name(confirm_code, name, email, password, country)VALUES('$confirm_code', '$name', '$email', '$password', '$country')";
+$result=mysql_query($sql);
+
+// if suceesfully inserted data into database, send confirmation link to email
+if($result){
+// ---------------- SEND MAIL FORM ----------------
+
+// send e-mail to ...
+    $to=$email;
+
+// Your subject
+    $subject="Your confirmation link here";
+
+// From
+    $header="from: your name <your email>";
+
+// Your message
+    $message="Your Comfirmation link \r\n";
+    $message.="Click on this link to activate your account \r\n";
+    $message.="http://www.yourweb.com/confirmation.php?passkey=$confirm_code";
+
+// send email
+    $sentmail = mail($to,$subject,$message,$header);
+}
+
+// if not found
+else {
+    echo "Not found your email in our database";
+}
+
+// if your email succesfully sent
+if($sentmail){
+    echo "Your Confirmation link Has Been Sent To Your Email Address.";
+}
+else {
+    echo "Cannot send Confirmation link to your e-mail address";
+}
+
 			
