@@ -737,7 +737,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <?php $req = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?"); $req -> execute(array($_GET["choix_logement"])); $donnees1 = $req -> fetch();
 
         $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
-        $pic -> execute(array($house[0]));
+        $pic -> execute(array($donnees1[0]));
         $url_pic = $pic -> fetch();
         ?>
 
