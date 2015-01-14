@@ -86,7 +86,7 @@ session_start();
                 for ($i=0 ; $i < $nb ; $i++) {
                     $msg_recu = $req -> fetch();
                     //On vérifie si les deux utilisateurs qui conversent n'ont pas accepté de devenir amis en récupérant les données dans la requête qui suit
-                    $ret = $bdd -> prepare("SELECT user1,user2 FROM echange WHERE id_demandeur=:demandeur AND id_proprietaire=:proprietaire");
+                    $ret = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:demandeur AND id_proprietaire=:proprietaire");
                     $ret -> execute(array(
                         'demandeur' => $msg_recu[0],
                         'proprietaire' => $_SESSION['userid'],
@@ -105,14 +105,14 @@ session_start();
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu['message'] ?></a></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
-                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[1]!==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?>
+                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?>
 
                             </tr>
                     <?php
                     if (isset($_POST['validation'])) {
                         $ret = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
                         $ret -> execute(array($msg_recu[0]));
-                        $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"]);
+                        $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"],$ech['id_logement']);
 
                         $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
                         $res -> execute(array($_GET['id']));

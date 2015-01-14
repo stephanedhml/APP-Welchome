@@ -120,15 +120,18 @@
 
                     <?php
                     //On vérifie que les deux utilisateurs ne sont pas déjà en cours de négociation
-                    $ret = $bdd -> prepare("SELECT user1,user2 FROM echange WHERE id_demandeur=:demandeur AND id_proprietaire=:proprietaire");
+                    $ret = $bdd -> prepare("SELECT friend FROM favoris WHERE id_user=:utilisateur AND id_ami=:proprietaire AND id_logement=:id_logement");
                     $ret -> execute(array(
-                        'demandeur' => $_GET['id_users'],
-                        'proprietaire' => $_SESSION['userid'],
+                        'utilisateur' => $_SESSION['userid'],
+                        'proprietaire' => $_GET['id_users'],
+                        'id_logement' => $_GET['id_logement'],
                     ));
-                    $ech = $ret -> fetch();
+                    $friend = $ret -> fetch();
                     ?>
                 <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"><?php echo consultprofil; ?></button>
-                     <?php if(isset($_SESSION['userid']) AND ($ech[0]!==1 AND $ech[1]!==1)) { ?>
+                     <?php if(isset($_SESSION['userid']) AND $friend[0]==1) {
+                     }
+                     elseif (isset($_SESSION['userid'])) {?>
                          <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'"><?php echo proposeechange; ?></button>
                      <?php
                      }
