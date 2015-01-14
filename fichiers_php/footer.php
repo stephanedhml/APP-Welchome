@@ -7,7 +7,7 @@
             <li id="lnkdin">&#62232;</li>
             <p id="team">Developped by Hackers de l'espace</p>
         </div>
-    <!-- <div class="left1">
+    <div class="left1">
         <ul>
             <li>Manuel BEAUDRU</li>
             <li>Stephane DUHAMEL</li>
@@ -39,5 +39,5 @@
             <li>Javascript<img src=""></li>
             <li>JQuery</li>
         </ul>
-    </div> -->
+    </div> 
 </footer>

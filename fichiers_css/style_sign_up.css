@@ -1,5 +1,5 @@
 .wood {
-    background-image: url('../walls/wood.jpg');
+    
 }
 .cadreinscrpt {
     position: relative;
@@ -7,12 +7,13 @@
     width: 903px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 225px;
+    padding-top: 3%;
     border-width: 1px;
-    border-style: inset;
+    
     border-color: black;
+    padding-bottom: 150px;
     border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+    
 }
 
 .signup_form1 {
@@ -26,13 +27,14 @@
     /* height: 580px; */
     /* padding-top: 50px; */
     width: 100%;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }
 .content_gauche {
     position: absolute;
     width: 300px;
     background-color: #E0E0E0;
     height: 503px;
-    box-shadow: inset 0 0 2px #1c1a19;
+    
     border-radius: 4px 0 0 4px;
 }
 .contentd1 {

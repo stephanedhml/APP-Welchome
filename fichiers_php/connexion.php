@@ -26,6 +26,7 @@ session_start();
 		</div>
         <div class="superglobal">
         <div class="global">
+        	<div class="forum_title"><h7>LOGIN</h7></div>
 
 		<?php
 			//Si l'utilisateur est connecté, on le déconnecte

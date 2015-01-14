@@ -53,7 +53,7 @@ if (isset($_SESSION["userid"])) {
             </div>
             ';
         }
-        else {echo '
+        else {echo '    <div class="forum_title"><h7> <a "site.php?id_cat='.$name_cat[0].'">'.$name_cat[1].'</a></h7></div>
                         <div class="forum_top">
                             <div class="arborescence">
                                  <a href="forum.php">Forum</a> -> <a href="site.php?id_cat='.$name_cat[0].'">'.$name_cat[1].'</a>
@@ -64,7 +64,7 @@ if (isset($_SESSION["userid"])) {
                         </div>
                     ';}
         ?>
-        <div class="forum_tableau">
+
         <table class="tableau_site">
             <tr>
                 <th>Sujets</th>
@@ -105,7 +105,7 @@ if (isset($_SESSION["userid"])) {
             }
             ?>
 
-        </table></div>
+        </table>
 
     </div>
 </div>
