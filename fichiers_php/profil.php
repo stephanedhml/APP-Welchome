@@ -38,7 +38,7 @@
 
             $annonce1 = htmlspecialchars($_GET['id_logement'] );
 
-            $results =$bdd->query("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=$annonce1 ORDER BY id_logement DESC");
+            $results =$bdd->query("SELECT * FROM logement NATURAL JOIN photo WHERE id_logement=$annonce1 ORDER BY id_logement DESC");
 
             $donnees1 = $results->fetch()
 
@@ -68,7 +68,7 @@
                 <div id="article2">
                     <h1 id="Identification"><?php echo apropos; ?></h1>
                     <article id="a_propos">
-                        <?php if(isset($_SESSION["userid"]) AND $_GET["id_users"]==$_SESSION["userid"]) { ?><a href="edit_profile.php"><?php echo editprofile; ?></a> <?php } ?>
+                        <?php if(isset($_SESSION["userid"]) AND $_GET["id_users"]==$_SESSION["userid"]) { ?><a href="edit_profile.php?id_user=<?php echo $_GET['id_users'] ?>"><?php echo editprofile; ?></a> <?php } ?>
                         <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
                         <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
                         <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>

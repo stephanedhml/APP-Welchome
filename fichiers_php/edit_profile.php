@@ -10,7 +10,7 @@ session_start();
 <?php
 //On différencie l'admin d'un utilisateur lambda
 
-if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user'];} else {$id_user=$id_user;}
+if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user'];} else {$id_user=$_SESSION['userid'];}
 
 if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
@@ -567,7 +567,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <?php
         if (isset($_GET['choix']) AND $_GET["choix"]==2) {
 
-            $ret = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_users=? ORDER BY id_logement DESC");
+            $ret = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN photo WHERE id_users=? ORDER BY id_logement DESC");
             $ret -> execute(array($_SESSION["userid"]));
             $nmber = $ret -> rowCount();
             ?> <div class="container_liste_logements"> <?php

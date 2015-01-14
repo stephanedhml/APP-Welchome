@@ -43,7 +43,7 @@ session_start();
                             </div> ';
 
 
-            $req = $bdd -> query("SELECT id_expediteur, titre_message, message, id_message, echange FROM messages WHERE id_expediteur= '" . $_GET['id_friend'] . "' OR id_expediteur= '" . $_SESSION["userid"] . "' ORDER BY date_update DESC");
+            $req = $bdd -> query("SELECT id_expediteur, titre_message, message, id_message, echange FROM messages WHERE id_expediteur= '" . $_GET['id_friend'] . "' AND id_expediteur= '" . $_SESSION["userid"] . "' OR id_expediteur= '" . $_SESSION["userid"] . "' ORDER BY date_update DESC");
             /* $req -> execute(array($_GET['id_friend'], $_SESSION["userid"])); */
             $nb = $req -> rowCount();
 
