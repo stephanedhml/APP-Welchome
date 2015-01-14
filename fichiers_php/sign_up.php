@@ -22,6 +22,7 @@
 		</div>
         <div class="superglobal">
         <div class="global">
+            <div class="forum_title"><h7>INSCRIPTION</h7></div>
             <?php
             //Vérification du bon envoi du formulaire
             if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'], $_POST['password'], $_POST['passverif'], $_POST['email']) and $_POST['username']!='')
