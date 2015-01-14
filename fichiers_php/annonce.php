@@ -117,8 +117,18 @@
                     <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
                     <h7 class="Norma2"><?php echo membersince ?></h7> <br> </br>
 
+
+                    <?php
+                    //On vérifie que les deux utilisateurs ne sont pas déjà en cours de négociation
+                    $ret = $bdd -> prepare("SELECT user1,user2 FROM echange WHERE id_demandeur=:demandeur AND id_proprietaire=:proprietaire");
+                    $ret -> execute(array(
+                        'demandeur' => $_GET['id_users'],
+                        'proprietaire' => $_SESSION['userid'],
+                    ));
+                    $ech = $ret -> fetch();
+                    ?>
                 <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"><?php echo consultprofil; ?></button>
-                     <?php if(isset($_SESSION['userid'])) { ?>
+                     <?php if(isset($_SESSION['userid']) AND ($ech[0]!==1 AND $ech[1]!==1)) { ?>
                          <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'"><?php echo proposeechange; ?></button>
                      <?php
                      }

@@ -129,10 +129,10 @@
 }
 .cadre_msg {
     position: relative;
-    width: 300px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 145px;
+    margin-top: 270px;
 
     border-width: 1px;
     border-style: inset;
@@ -206,6 +206,14 @@
     margin-top: 3px;
     width: 900px;
 }
+.tableau_new_last_messages {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 3px;
+    width: 900px;
+}
 .column_msg_1 {
     width: 120px;
 }
@@ -214,6 +222,21 @@
 }
 .column_msg_3 {
     width: 400px;
+}
+.cadre_answer_post_discussion {
+    position: relative;
+    width: 900px;
+    height: 343px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 0px;
+
+    border-width: 1px;
+    border-style: inset;
+    border-color: black;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }
 
 table a:link {

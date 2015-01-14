@@ -28,7 +28,7 @@ session_start();
                     exit();
                 }
 
-                $req = $bdd -> prepare("SELECT id_expediteur, titre_message, message, id_message, echange, choix FROM messages WHERE id_message=?");
+                $req = $bdd -> prepare("SELECT id_expediteur, message, id_message, echange, choix FROM messages WHERE id_message=?");
                 $req -> execute(array($_GET['id']));
                 $nb = $req -> rowCount();
 
@@ -45,15 +45,14 @@ session_start();
                         $un = $quser -> fetch();
 
                         $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=? ");
-                        $lu -> execute(array($msg_recu[3]));
+                        $lu -> execute(array($msg_recu[2]));
 
                         ?>
                         <table class="tableau_new_messages" ">
                             <tr>
                                 <th>Nom exp&#233;diteur</th>
-                                <th>Objet</th>
                                 <th>Message</th>
-                                <?php if (isset($msg_recu[4]) AND $msg_recu[5]==1) {echo '<th>Accepter la proposition</th>';} ?>
+                                <?php if (isset($msg_recu[3]) AND $msg_recu[4]==1) {echo '<th>Accepter la proposition</th>';} ?>
 
                             </tr>
                             <tr>
@@ -61,9 +60,8 @@ session_start();
                                     <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
                                     <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
                                 </td>
-                                <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
-                                <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
-                                <?php if (isset($msg_recu[4]) AND $msg_recu[5]==1) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
+                                <td class="column_msg_3"><?php echo $msg_recu[1]; ?></td>
+                                <?php if (isset($msg_recu[3]) AND $msg_recu[4]==1) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
                             </tr>
                         </table> <br/>
                     <?php
@@ -89,9 +87,8 @@ session_start();
                     }
 
                     }
-                    if (isset($_POST["titre"], $_POST["message"]))
+                    if (isset($_POST["message"]))
                     {
-                        $titre = $_POST["titre"];
                         $message = $_POST["message"];
                         $userid = $_SESSION["userid"];
                         //On fait correspondre le pseudo du destinataire avec son id
@@ -100,12 +97,11 @@ session_start();
                         $req -> execute(array($id2));
                         $dn = $req -> fetch();
 
-                        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
+                        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
                         $res -> execute(array(
                             "destinataire" => $dn[0],
                             "expediteur" => $userid,
                             "dates" => $date = date("Y-m-d H:i:s"),
-                            "titre" => $titre,
                             "message" => $message,
                         ));
 
@@ -130,20 +126,15 @@ session_start();
                     }
                     $id = $_GET['id'];
                     echo '
-
-                            <div class="cadre_msg_answermsg">
-                            <div class="contentg">
-                                <div class="msg_form">
-                                    <form action="liremsg.php?id='. $id .'" method="post" xmlns="http://www.w3.org/1999/html">
-                                        <label for="titre">Titre du message</label>
-                                        <input type="text" name="titre"> <br/>
-                                        <label for="message">Message</label>
-                                        <input type="text" name="message"> <br /><br />
-                                        <input type="submit" value="Envoyer">
+                        <div class="cadre_answer_post_discussion">
+                                <div class="answer1">
+                                    <form action="liremsg.php?id='. $id .'" method="post">
+                                        <label for="message">Message</label><br/></br>
+                                        <textarea type="text" name="message" class="post_message" ></textarea><br /><br/>
+                                        <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
-                            </div>
-                            </div> ';
+                        </div>';
                 }
             ?>
             <br/>

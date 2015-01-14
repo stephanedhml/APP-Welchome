@@ -68,8 +68,8 @@
     padding-top: 20px;
 }
 .post_message {
-    width: 60%;
-    height: 35%;
+    width: 600px;
+    height: 200px;
 }
 .cadre_answer_post {
     position: relative;

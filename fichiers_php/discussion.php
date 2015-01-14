@@ -79,32 +79,49 @@ session_start();
                 <table class="tableau_new_messages">
                     <tr>
                         <th>Nom exp&#233;diteur</th>
-                        <th>Objet</th>
                         <th>Message</th>
                     </tr>
                 </table>
 
                 <?php
 
-                for ($i=0 ; $i < $nb AND $i < 15 ; $i++) {
+                for ($i=0 ; $i < $nb AND $i < 8 ; $i++) {
                     $msg_recu = $req -> fetch();
-                    $quser = $bdd -> prepare("SELECT username FROM users WHERE id_users=?");
+                    $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
 
                     $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=? AND id_expediteur= '" . $_GET['id_friend'] . "' ");
                     $lu -> execute(array($msg_recu[3]));
 
-                    ?><table class="tableau_new_messages">
+
+                        if ($i<7) {
+                            ?>
+                            <table class="tableau_new_messages">
                             <tr>
-                                <td class="column_msg_1"><?php echo $un[0]; ?></td>
-                                <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
+                                <td class="column_msg_1">
+                                    <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                                    <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
+                                </td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
                             </tr>
-                <?php
-                if ($i==1) {
+                            </table>
+                        <?php
+                        } else { ?>
+                            <table class="tableau_new_last_messages">
+                            <tr>
+                                <td class="column_msg_1">
+                                    <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                                    <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
+                                </td>
+                                <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
+                            </tr>
+                            </table>
+                        <?php
+                        }
+                if ($i==0) {
                     ?>
-                    <div class="cadre_answer_post" >
+                    <div class="cadre_answer_post_discussion" >
                                         <div class="answer1" >
                                             <form action = "discussion.php?id_friend=<?php echo $_GET['id_friend'] ?>" method = "post" >
                                                 <label for="message" >Message</label ><br /></br >
@@ -112,7 +129,7 @@ session_start();
                                                 <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
                                             </form >
                                         </div >
-                    </div ></table> <br/>
+                    </div>
                     <?php
                     }
 

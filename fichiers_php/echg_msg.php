@@ -86,13 +86,13 @@ session_start();
                 $logement = $_GET["logement"];
             ?>
 
-            <div class="cadre_msg"
+            <div class="cadre_msg">
             <div class="contentg">
-                <div class="msg_form">
+                <div class="answer1">
                     <form action="echg_msg.php?demandeur=<?php echo $demandeur;?>&proprietaire=<?php echo $proprietaire; ?>&logement=<?php echo $logement ;?>" method="post" xmlns="http://www.w3.org/1999/html">
-                        <label for="message">Message</label>
-                        <input type="text" name="message"> <br /><br />
-                        <input type="submit" value="Envoyer">
+                        <label for="message" >Message</label ><br /></br >
+                        <textarea type = "text" name = "message" class="post_message" ></textarea ><br /><br />
+                        <input type = "submit" value = "Envoyer" id = "btn_connexion" /><br /><br />
                     </form>
                 </div>
             </div>
