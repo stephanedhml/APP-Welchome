@@ -317,7 +317,7 @@ if (isset($_GET["update"])) {
     $numero_new_logement = $numero_logement+1 ;
 
 
-    if (isset($_FILES["up_main_img_logement"]) AND $_FILES["up_main_img_logement"]["name"]!= NULL) { var_dump($_FILES["up_main_img_logement"]);
+    if (isset($_FILES["up_main_img_logement"]) AND $_FILES["up_main_img_logement"]["name"]!= NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
@@ -353,7 +353,7 @@ if (isset($_GET["update"])) {
                 "lien_photo" => "../photos_logement/{$new_logement}-{$numero_new_logement}-3.jpg"
             ));
         }
-        if (isset($_FILES["up_4_img_logement"]) AND $_FILES["up_4_img_logement"]["name"]!= NULL) { var_dump($_FILES["up_4_img_logement"]);
+        if (isset($_FILES["up_4_img_logement"]) AND $_FILES["up_4_img_logement"]["name"]!= NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
             $main_photo_new_logement = "../photos_logement/{$new_logement}-{$numero_new_logement}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
