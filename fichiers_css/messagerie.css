@@ -15,7 +15,7 @@
     position: fixed;
     text-align: center;
     margin-top: 250px;
-    margin-left: 105px;
+    margin-left: 55px;
     margin-bottom: 15px;
 }
 .friend_box a {
@@ -24,8 +24,8 @@
 .friend_logo {
     position: fixed;
     width: 300px;
-    padding-left: 50px;
-    padding-top: 50px;
+    margin-left: -5px;
+    padding-top: 65px;
 }
 .img_member_fav {
     border-radius:65px;
@@ -202,8 +202,9 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 100px;
-    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    width: 900px;
 }
 .column_msg_1 {
     width: 120px;

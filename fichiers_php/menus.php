@@ -8,9 +8,9 @@
 			<?php include("../multilingue/choixlangue.php");?>
             <li><a class="lienaccueil" href="index.php"><img class="accueil" src="logo2.png" /></a></li>
 
-<li class="recherche_avancee "><a href="recherche_avancee.php" class="cl" onmouseover="affiche()" onmouseout="cacher()"><?php echo rechercheavancee ?></a></li>
+            <li class="recherche_avancee"><a href="recherche_avancee.php" class="cl" <!-- onclick="affiche()" onmouseout="cacher()" --><?php echo rechercheavancee ?></a></li>
 
-			<!--<li class="recherche_avancee"><a href="recherche_avancee.php" onmouseover="affiche()" onmouseover="colorer(this)" onmouseout="cacher()"><?php// echo rechercheavancee ?></a></li>-->
+			<!-- <li class="recherche_avancee"><a href="recherche_avancee.php" onmouseover="affiche()" onmouseover="colorer(this)" onmouseout="cacher()"><?php// echo rechercheavancee ?></a></li> -->
 			<li><a href="forum.php" class="btn_FORUM cl"><?php echo forum ?></a></li>
             <?php
 				include("connexion_inscription_deconnexion_menu.php"); 
@@ -20,6 +20,9 @@
 		</ul>
 	</nav>
 </div>
+
+<!-- Pose des problèmes de redirection avec les header car affiche du code HTML avant lui !
+
 <div id='form_rech'  class="formulaire_r_avancee1"  onmouseover="affiche()" onmouseout="cacher()" onsubmit="cacher()">
 	<form method="post" action="cible_recherche.php">
 		<div class="container_advanced_search1"  >
@@ -40,7 +43,7 @@
 				<!--
         <p><?php echo choixdates;?><br/>
           <?php echo de;?> <input type="date" name="d1" placeholder="JJ/MM/AAAA"> <?php echo à;?> <input type="date" name="d2" placeholder="JJ/MM/AAAA"></p>
-        -->
+
 			</div>
 			<div class="bloc_search_center1">
 				<p><?php echo capacitéaccueil;?>
@@ -65,7 +68,7 @@
         <input type="checkbox" name="lieu2" id="case" value="campagne"/> <label for="case"><?php echo campagne;?></label><br/>
         <input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/>
         <input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case"><?php echo ville;?></label><br/></p>
-        -->
+
 
 			</div>
 
@@ -76,4 +79,4 @@
 			</div>
 		</div>
 	</form>
-</div>
+</div> -->

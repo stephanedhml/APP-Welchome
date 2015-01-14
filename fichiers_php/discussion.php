@@ -13,35 +13,55 @@ session_start();
     <link rel="stylesheet" href="../style.css" />
 </head>
 <body class="forum_messagerie">
-<header>
-    <?php include("menus.php"); ?>
-</header>
+
+        <?php include("menus.php"); ?>
+
 <div class="superglobal">
     <div class="global">
 
         <div id="bloc_page_msg">
             <?php
+            //Traitement du formulaire envoyé - placé ici à cause de "header" qui requiert qu'aucun code HTML ne soit inséré avant lui : http://www.commentcamarche.net/faq/878-redirection-php-redirect-header
+            if (isset($_POST["message"]))
+            {
+                $message = $_POST["message"];
+                $userid = $_SESSION["userid"];
+                //On fait correspondre le pseudo du destinataire avec son id
+                $id2 = $_GET["id_friend"];
+                /* $req = $bdd -> prepare("SELECT id_destinataire FROM messages WHERE id_destinataire = ? ");
+                $req -> execute(array($id2));
+                $dn = $req -> fetch(); */
+
+                $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+                $res -> execute(array(
+                    "destinataire" => $id2,
+                    "expediteur" => $userid,
+                    "dates" => $date = date("Y-m-d H:i:s"),
+                    "message" => $message,
+                ));
+
+
+                if($derid = $bdd -> lastInsertId())
+                {
+                    $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+                    $nv -> execute(array($derid));
+                    header('Location: discussion.php?id_friend='.$_GET['id_friend'].'');
+                }
+                else
+                {
+                    ?>
+                    <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
+                    <a href="index.php">Retourner à l'accueil</a>
+                <?php
+                }
+            }
+
             if (!isset($_SESSION["userid"]))
             {
                 header ("Location: index.php");
                 exit();
             }
             $id = $_GET['id_friend'];
-            echo '
-                            <div class="cadre_msg_answer"
-                            <div class="contentg">
-                                <div class="msg_form">
-                                    <form action="discussion.php?id_friend='. $_GET['id_friend'] .'&refresh=1" method="post" xmlns="http://www.w3.org/1999/html">
-                                        <label for="titre">Titre du message</label>
-                                        <input type="text" name="titre"> <br/>
-                                        <label for="message">Message</label>
-                                        <input type="text" name="message"> <br /><br />
-                                        <input type="submit" value="Envoyer"> <!-- onclick="window.location.href=window.location.href" -->
-                                    </form>
-                                </div>
-                            </div>
-                            </div> ';
-
 
             $req = $bdd -> query("SELECT id_expediteur, titre_message, message, id_message, echange FROM messages WHERE id_expediteur= '" . $_GET['id_friend'] . "' AND id_expediteur= '" . $_SESSION["userid"] . "' OR id_expediteur= '" . $_SESSION["userid"] . "' ORDER BY date_update DESC");
             /* $req -> execute(array($_GET['id_friend'], $_SESSION["userid"])); */
@@ -62,6 +82,7 @@ session_start();
                         <th>Objet</th>
                         <th>Message</th>
                     </tr>
+                </table>
 
                 <?php
 
@@ -74,51 +95,28 @@ session_start();
                     $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=? AND id_expediteur= '" . $_GET['id_friend'] . "' ");
                     $lu -> execute(array($msg_recu[3]));
 
-                    ?>
+                    ?><table class="tableau_new_messages">
                             <tr>
                                 <td class="column_msg_1"><?php echo $un[0]; ?></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[1]; ?></td>
                                 <td class="column_msg_3"><?php echo $msg_recu[2]; ?></td>
                             </tr>
                 <?php
-
-                    }
-                ?> </table> <br/> <?php
-                if (isset($_POST["titre"], $_POST["message"]))
-                {
-                    $titre = $_POST["titre"];
-                    $message = $_POST["message"];
-                    $userid = $_SESSION["userid"];
-                    //On fait correspondre le pseudo du destinataire avec son id
-                    $id2 = $_GET["id_friend"];
-                    /* $req = $bdd -> prepare("SELECT id_destinataire FROM messages WHERE id_destinataire = ? ");
-                    $req -> execute(array($id2));
-                    $dn = $req -> fetch(); */
-
-                    $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message) VALUES(:destinataire,:expediteur,:dates,:titre, :message)");
-                    $res -> execute(array(
-                        "destinataire" => $id2,
-                        "expediteur" => $userid,
-                        "dates" => $date = date("Y-m-d H:i:s"),
-                        "titre" => $titre,
-                        "message" => $message,
-                    ));
-
-
-                    if($derid = $bdd -> lastInsertId())
-                    {
-                        $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
-                        $nv -> execute(array($derid));
-                        header('Location: discussion.php?id_friend='.$_GET['id_friend'].'');
-                    }
-                    else
-                    {
-                        ?>
-                        <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                        <a href="index.php">Retourner à l'accueil</a>
+                if ($i==1) {
+                    ?>
+                    <div class="cadre_answer_post" >
+                                        <div class="answer1" >
+                                            <form action = "discussion.php?id_friend=<?php echo $_GET['id_friend'] ?>" method = "post" >
+                                                <label for="message" >Message</label ><br /></br >
+                                                <textarea type = "text" name = "message" class="post_message" ></textarea ><br /><br />
+                                                <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
+                                            </form >
+                                        </div >
+                    </div ></table> <br/>
                     <?php
                     }
-                }
+
+                    }
             }
             ?>
             <br/>
