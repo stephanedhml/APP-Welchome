@@ -91,33 +91,26 @@
                                     //Si ça a fonctionné, on affiche pas le formulaire
                                     $form=false;
                                     // if suceesfully inserted data into database, send confirmation link to email
-
+                                        $adress = $_POST['email'];
 // ---------------- SEND MAIL FORM ----------------
+                                    include('class.smtp.php');
 
-// send e-mail to ...
-                                        $to=$_POST["email"];
+// Remplissez le champs login et pass si vous avez besoin de vous identifié
+// SMTP('smtp.serveur.fr', 'login', 'pass');
 
-// Your subject
-                                        $subject="Your confirmation link here";
+// SMTP sans authentification
+// $smtp = new SMTP('smtp.serveur.fr');
 
-// From
-                                        $header="from: Geekelektro <beaudru.manuel@gmail.com>";
+                                    $smtp = new SMTP('smtp.gmail.com', 'beaudru.manuel@gmail.com', '2706715mM');
 
-// Your message
-                                        $message="Your Comfirmation link \r\n";
-                                        $message.="Click on this link to activate your account \r\n";
-                                        $message.="http://localhost/APP-Welchome/fichiers_php/confirmation.php?passkey=$confirm_code";
+                                    $smtp->set_from('Welchome', 'beaudru.manuel@gmail.com');
 
-// send email
-                                        $sentmail = mail($to,$subject,$message,$header);
+                                    $smtp->smtp_mail(''.$adress.'', 'Confirmation', 'http://localhost/APP-Welchome/fichiers_php/confirmation.php?passkey='.$confirm_code.'');// Envoie du mail
 
-
-// if your email succesfully sent
-                                    if($sentmail){
-                                        echo "Your Confirmation link Has Been Sent To Your Email Address.";
-                                    }
-                                    else {
-                                        echo "Cannot send Confirmation link to your e-mail address";
+                                    if(!$smtp->erreur){
+                                        echo '<div style="text-align:center; color:#008000;">Votre mail a bien été envoyé.</div>',"\r\n";
+                                    }else{// Affichage des erreurs
+                                        echo $smtp->erreur;
                                     }
                                     ?>
                                     <div class='message'><?php echo bieninscrit ;?>
@@ -214,58 +207,3 @@
         ?>
     </body>
 </html>
-
-
-<?php
-/*
-// table name
-$tbl_name=temp_members_db;
-
-// Random confirmation code
-$confirm_code=md5(uniqid(rand()));
-
-// values sent from form
-$name=$_POST['name'];
-$email=$_POST['email'];
-$country=$_POST['country'];
-
-// Insert data into database
-$sql="INSERT INTO $tbl_name(confirm_code, name, email, password, country)VALUES('$confirm_code', '$name', '$email', '$password', '$country')";
-$result=mysql_query($sql);
-
-// if suceesfully inserted data into database, send confirmation link to email
-if($result){
-// ---------------- SEND MAIL FORM ----------------
-
-// send e-mail to ...
-    $to=$email;
-
-// Your subject
-    $subject="Your confirmation link here";
-
-// From
-    $header="from: your name <your email>";
-
-// Your message
-    $message="Your Comfirmation link \r\n";
-    $message.="Click on this link to activate your account \r\n";
-    $message.="http://www.yourweb.com/confirmation.php?passkey=$confirm_code";
-
-// send email
-    $sentmail = mail($to,$subject,$message,$header);
-}
-
-// if not found
-else {
-    echo "Not found your email in our database";
-}
-
-// if your email succesfully sent
-if($sentmail){
-    echo "Your Confirmation link Has Been Sent To Your Email Address.";
-}
-else {
-    echo "Cannot send Confirmation link to your e-mail address";
-}
-
-			
