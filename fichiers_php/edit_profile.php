@@ -567,16 +567,21 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <?php
         if (isset($_GET['choix']) AND $_GET["choix"]==2) {
 
-            $ret = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN photo WHERE id_users=? ORDER BY id_logement DESC");
+            $ret = $bdd -> prepare("SELECT * FROM logement WHERE id_users=? ORDER BY id_logement DESC");
             $ret -> execute(array($_SESSION["userid"]));
             $nmber = $ret -> rowCount();
             ?> <div class="container_liste_logements"> <?php
             for ($i=0 ; $i < $nmber ; $i++) {
                 $house = $ret -> fetch();
+
+                $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                $pic -> execute(array($house[0]));
+                $url_pic = $pic -> fetch();
+
                     ?>
                 <div class="cadre_logement">
                     <div class="left_cadre_logement">
-                        <?php echo '<img src="'.$house['lien_photo'].'" class="photo">' ?>
+                        <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo">' ?>
                     </div>
 
                     <div class="right_cadre_logement">
@@ -729,11 +734,16 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     </div>
 
         <!-- Afficher les informations actuelles de l'utilisateur -->
-        <?php $req = $bdd -> prepare("SELECT * FROM logement NATURAL JOIN Photo WHERE id_logement=?"); $req -> execute(array($_GET["choix_logement"])); $donnees1 = $req -> fetch();?>
+        <?php $req = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?"); $req -> execute(array($_GET["choix_logement"])); $donnees1 = $req -> fetch();
+
+        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+        $pic -> execute(array($house[0]));
+        $url_pic = $pic -> fetch();
+        ?>
 
     <div class="bloc_edit_logement_right">
 
-        <?php echo '<img src="'.$donnees1 ['lien_photo'].'" class="photo_edit_actual_house">' ?>
+        <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo_edit_actual_house">' ?>
         <p>Localisation : <?php echo $donnees1[2]; ?></p></br>
         <p>Titre de l'annonce : <?php echo $donnees1[4]; ?></p></br>
         <p>Nombre voyageurs : <?php echo $donnees1[5]; ?></p></br>
