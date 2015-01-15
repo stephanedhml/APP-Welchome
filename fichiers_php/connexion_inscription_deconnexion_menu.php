@@ -30,7 +30,7 @@ function check_new_msg()
 	{
 	//Sinon, on lui donne un lien pour sinscrire et un autre pour se connecter
 ?>
-        <li><a href="#" class="btn_FAQ cl"><?php echo faq;?></a></li>
+        
         <li><a  href="sign_up.php" class="cl" ><?php echo register; ?></a></li>
 	<li><a href="connexion.php" class="btn_SECONNECTER cl"><?php echo connect;?></a></li>
 <?php

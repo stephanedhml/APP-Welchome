@@ -1,0 +1,73 @@
+
+
+.less.active .button-read-more, .button-read-less  {display: none}
+
+.less.active .button-read-less {display: block}
+
+.more {margin-top: 10px}
+
+.more p {margin: 0;padding: 0}
+
+.less
+{
+	
+}
+
+.FAQ_tableau
+{
+margin-left: 17%;
+width: 30%;
+float: left;
+}
+
+.FAQ_tableau2
+{
+margin-left: 60%;
+margin-top: 8%;
+width: 30%;
+
+}
+
+.FAQ_tableau3
+{
+margin-left: 17%;
+width: 30%;
+float: left;
+}
+
+.FAQ_tableau4
+{
+margin-left: 60%;
+width: 30%;
+
+}
+
+.loupe
+{
+	width: 28px;
+	height: 28px
+}
+
+.Titre_article
+{
+	font-size: 25px;
+	padding-left: 10px;
+	font-weight: 300;
+	font-family: sans-serif;
+
+}
+
+.contenu_article
+{
+	padding-left: 40px;
+}
+
+.Tableau_rangee1
+{
+	height: 200px;
+}
+
+.Tableau_rangee2
+{
+	height: 200px;
+}
