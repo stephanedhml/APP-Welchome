@@ -26,7 +26,7 @@
     global $bdd;
     $annonce = htmlspecialchars($_GET['id_users'] );
     $rey =$bdd->prepare("SELECT * FROM users WHERE id_users=?");
-    $rey -> execute(array($annonce));
+    $rey -> execute(array($_GET['id_users']));
     $donnees = $rey->fetch();
 
     $rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");

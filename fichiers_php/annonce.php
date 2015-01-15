@@ -141,7 +141,7 @@
                      }
                      elseif (isset($_SESSION['userid']) AND $stalk[0]!=NULL) {
                      }
-                     elseif (isset($_SESSION['userid']) AND $_SESSION['userid']=$_GET['id_users']) {
+                     elseif (isset($_SESSION['userid']) AND strcasecmp($_SESSION['userid'],$_GET['id_users']) == 0) {
                      }
                      elseif (isset($_SESSION['userid'])) {?>
                          <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'"><?php echo proposeechange; ?></button>
