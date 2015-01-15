@@ -125,20 +125,22 @@ function verifpassword(champ)
         }
     }
 
-    function verifegalite(champ)
+    function verifegalite()
     {
-    var psswd = document.getElementsByName('password') ;
-    var psswd2 = champ ;
+    var psswd = document.getElementById('paw').value ;
+    var psswd2 = document.getElementById('paw2').value ;
 
-    if(psswd !=psswd2)
+    if(psswd != psswd2)
     {
-        rouge(champ, true);
+        rouge(document.getElementById('paw2'), true);
         document.getElementById('psd2').innerHTML =  'Les mots de passe ne correspondent pas';
         return false;
     }
     else
     {
-        rouge(champ, false);
+        rouge(document.getElementById('paw2'), false);
+        document.getElementById('psd2').innerHTML =  '';
+
         return true;
     }
 }
