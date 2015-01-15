@@ -119,22 +119,24 @@
 
 
                     <?php
-                    //On vérifie que les deux utilisateurs ne sont pas déjà en cours de négociation
-                    $ret = $bdd -> prepare("SELECT friend FROM favoris WHERE id_user=:utilisateur AND id_ami=:proprietaire AND id_logement=:id_logement");
-                    $ret -> execute(array(
-                        'utilisateur' => $_SESSION['userid'],
-                        'proprietaire' => $_GET['id_users'],
-                        'id_logement' => $_GET['id_logement'],
-                    ));
-                    $friend = $ret -> fetch();
+                    if(isset($_SESSION['userid']))
+                    {
+					//On vérifie que les deux utilisateurs ne sont pas déjà en cours de négociation
+						$ret = $bdd -> prepare("SELECT friend FROM favoris WHERE id_user=:utilisateur AND id_ami=:proprietaire AND id_logement=:id_logement");
+						$ret -> execute(array(
+							'utilisateur' => $_SESSION['userid'],
+							'proprietaire' => $_GET['id_users'],
+							'id_logement' => $_GET['id_logement'],
+						));
+						$friend = $ret -> fetch();
 
-                    $rez = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:demandeur AND id_logement=:id_logement");
-                    $rez -> execute(array(
-                       'demandeur' => $_SESSION['userid'],
-                        'id_logement' => $_GET['id_logement'],
-                    ));
-                    $stalk = $rez -> fetch();
-
+						$rez = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:demandeur AND id_logement=:id_logement");
+						$rez -> execute(array(
+						   'demandeur' => $_SESSION['userid'],
+							'id_logement' => $_GET['id_logement'],
+						));
+						$stalk = $rez -> fetch();
+					}
                     ?>
                 <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"><?php echo consultprofil; ?></button>
                      <?php if(isset($_SESSION['userid']) AND $friend[0]==1) {
