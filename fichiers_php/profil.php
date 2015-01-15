@@ -25,10 +25,13 @@
 
     global $bdd;
     $annonce = htmlspecialchars($_GET['id_users'] );
-    $results =$bdd->query("SELECT * FROM users WHERE id_users=$annonce");
-    $donnees = $results->fetch()
+    $rey =$bdd->prepare("SELECT * FROM users WHERE id_users=?");
+    $rey -> execute(array($annonce));
+    $donnees = $rey->fetch();
 
-
+    $rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+    $rel -> execute(array($_SESSION['userid']));
+    $utilisateur = $rel -> fetch();
 
 
     ?>
@@ -70,7 +73,7 @@
                 <div id="article2">
                     <h1 id="Identification"><?php echo apropos; ?></h1>
                     <article id="a_propos">
-                        <?php if(isset($_SESSION["userid"]) AND $_GET["id_users"]==$_SESSION["userid"]) { ?><a href="edit_profile.php?id_user=<?php echo $_GET['id_users'] ?>"><?php echo editprofile; ?></a> <?php } ?>
+                        <?php if(isset($_SESSION["userid"]) AND strcasecmp($donnees[1],$utilisateur[1]) == 0) { ?><a href="edit_profile.php?id_user=<?php echo $_SESSION['userid'] ?>"><?php echo editprofile; ?></a> <?php } ?>
                         <p><?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
                         <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
                         <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
