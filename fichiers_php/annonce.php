@@ -197,11 +197,11 @@
                         <img src="<?php echo $url_pic['lien_photo'] ?>">
                     </div>
                     <div class="description_pic">
-                        <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                        <?php if (strcasecmp($un["id_users"],NULL) == 0) {} else { ?><img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
                         <a class="Norma1" href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un['username']; ?></a>
                         <blockquote><p style="margin-left: 30px;"><?php echo $com['message'] ?></p></blockquote>
                     </div>
-                    <?php } ?>
+                    <?php }} ?>
                 </div>
                 <?php
                 for ($i=0;$i<$nb_coms;$i++) {
