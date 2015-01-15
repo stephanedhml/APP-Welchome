@@ -12,7 +12,7 @@
 
 			<!-- <li class="recherche_avancee"><a href="recherche_avancee.php" onmouseover="affiche()" onmouseover="colorer(this)" onmouseout="cacher()"><?php// echo rechercheavancee ?></a></li> -->
 			<li><a href="forum.php" class="btn_FORUM cl"><?php echo forum ?></a></li>
-			<li><a href="FAQ.php" class="btn_FORUM cl">FAQ</a></li>
+		
 
             <?php
 				include("connexion_inscription_deconnexion_menu.php"); 
