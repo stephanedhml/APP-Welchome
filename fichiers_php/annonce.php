@@ -252,7 +252,7 @@
                     <div class="answer1" >
                         <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
                             <label for="message" >Message</label ><br /></br >
-                            <textarea type = "text" name = "message" class="post_message" ></textarea ><br /><br />
+                            <textarea type = "text" name = "message" class="post_message" value="Ecrivez votre commentaire en 300 caractères max" maxlength="300"></textarea ><br /><br />
                             <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
                         </form >
                     </div >
