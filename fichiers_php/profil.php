@@ -28,10 +28,11 @@
     $rey =$bdd->prepare("SELECT * FROM users WHERE id_users=?");
     $rey -> execute(array($_GET['id_users']));
     $donnees = $rey->fetch();
-
-    $rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
-    $rel -> execute(array($_SESSION['userid']));
-    $utilisateur = $rel -> fetch();
+    if (isset($_SESSION['userid'])) {
+        $rel = $bdd->prepare("SELECT * FROM users WHERE id_users=?");
+        $rel->execute(array($_SESSION['userid']));
+        $utilisateur = $rel->fetch();
+    }
 
 
     ?>
