@@ -210,7 +210,31 @@
                 $quser -> execute(array($com['id_expediteur']));
                 $un = $quser -> fetch();
                 ?>
-                <table class="tableau_com_annonce">
+
+                <?php
+                if ($i<$nb_coms-1) {
+                    ?>
+                    <table class="tableau_com_annonce">
+                        <tr>
+                            <td class="column_msg_1">
+                                <img src='<?php echo $un["avatar"]; ?>' class='img_member'><br/>
+
+                                <p>
+                                    <a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a>
+                                </p>
+                            </td>
+                            <td class="column_msg_3">
+                                <blockquote><p
+                                        style="margin-left: 40px; width: 800px;"><?php echo $com['message']; ?></p>
+                                </blockquote>
+                            </td>
+                        </tr>
+                    </table>
+                <?php
+                }
+                    if ($i=$nb_coms) {
+                ?>
+                <table class="tableau_last_com_annonce">
                     <tr>
                         <td class="column_msg_1">
                             <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
@@ -220,7 +244,7 @@
                     </tr>
                 </table>
 
-                <?php } ?>
+                <?php }} ?>
                 <?php
                 if  (isset($_SESSION['userid']) AND $friend[0]==1) {
                 ?>
