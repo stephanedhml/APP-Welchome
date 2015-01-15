@@ -25,7 +25,7 @@
             <div class="forum_title"><h7>INSCRIPTION</h7></div>
             <?php
             //Vérification du bon envoi du formulaire
-            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'], $_POST['password'], $_POST['passverif'], $_POST['email']) and $_POST['username']!='')
+            if(isset($_POST['username'],$_POST['nom_maison'], $_POST['localisation'], $_POST['type_logement'], $_POST['password'], $_POST['passverif'], $_POST['email'], $_FILES['up_avatar']['error'], $_FILES['upload_photo']['error']) and $_POST['username']!='')
             {
                 //On vérifie que les deux mots de passe coïncident
                 if($_POST['password']==$_POST['passverif'])

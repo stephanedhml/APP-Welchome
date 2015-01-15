@@ -28,6 +28,17 @@
     $results =$bdd->query("SELECT * FROM users  WHERE id_users=$annonce1");
     $donnees1 = $results->fetch();
 
+    //On ajoute le message de l'utilisateur correspondant à l'annonce dans la BDD
+
+    if (isset($_POST['message'])) {
+        $up = $bdd -> prepare("INSERT INTO messages(id_expediteur,date_update,message,id_logement) VALUES(:expediteur,:dates, :message, :id_logement)");
+        $up -> execute(array(
+            'expediteur' => $_SESSION['userid'],
+            'dates' => $date = date("Y-m-d H:i:s"),
+            'message' => $_POST['message'],
+            'id_logement' => $_GET['id_logement'],
+        ));
+    }
     ?>
 
     <header>
@@ -165,21 +176,52 @@
                     $pic -> execute(array($_GET["id_logement"]));
                     $nb_pic = $pic -> rowCount();
 
+                    $req = $bdd -> prepare("SELECT * FROM messages WHERE id_logement=? ORDER BY id_message DESC");
+                    $req -> execute(array($_GET['id_logement']));
+                    $nb_house_com = $req -> rowCount();
+
+                    $nb_coms = $nb_house_com - $nb_pic;
+
+
                     for($i=0;$i<$nb_pic;$i++) {
+
+                    $com = $req -> fetch();
+                    $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                    $quser -> execute(array($com['id_expediteur']));
+
                     $url_pic = $pic -> fetch();
+                    $un = $quser -> fetch();
                     ?>
                     <div class= "logement_pics">
                         <img src="<?php echo $url_pic['lien_photo'] ?>">
                     </div>
                     <div class="description_pic">
-
+                                <p><?php echo $com['message'] ?></p>
                     </div>
                     <?php } ?>
                 </div>
                 <?php
+                for ($i=0;$i<$nb_coms;$i++) {
+                $com = $req -> fetch();
+                $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+                $quser -> execute(array($com['id_expediteur']));
+                $un = $quser -> fetch();
+                ?>
+                <table class="tableau_com_annonce">
+                    <tr>
+                        <td class="column_msg_1">
+                            <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                            <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
+                        </td>
+                        <td class="column_msg_3"><?php echo $com['message']; ?></td>
+                    </tr>
+                </table>
+
+                <?php } ?>
+                <?php
                 if  (isset($_SESSION['userid']) AND $friend[0]==1) {
                 ?>
-                <div class="cadre_answer_post_discussion" >
+                <div class="cadre_answer_post_annonce" >
                     <div class="answer1" >
                         <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
                             <label for="message" >Message</label ><br /></br >
