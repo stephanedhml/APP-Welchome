@@ -55,14 +55,14 @@ session_start();
             $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id=?");
             $nv -> execute(array($derid));
             ?>
-            <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
+            <div class="no_msg"><h7><?php messagesent; ?></h7><br/><br/>
             <a href="index.php"><?php echo retouraccueil; ?></a></div>
             <?php
         }
         else
         {
             ?>
-            <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
+            <div><?php echo errorsendmessage; ?></div> <br/>
             <a href="index.php"><?php echo retouraccueil; ?></a>
             <?php
         }
@@ -89,11 +89,11 @@ session_start();
             }
             ?>
         </select> <br /> <br />
-        <label for="titre">Titre du message</label>
+        <label for="titre"><?php echo messagename; ?></label>
         <input type="text" name="titre"> <br/>
         <label for="message">Message</label>
         <input type="text" name="message"> <br /><br />
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="<?php echo envoyer; ?>">
     </form>
 </div>
 </div>

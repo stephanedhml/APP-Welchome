@@ -8,44 +8,46 @@
 
 .more p {margin: 0;padding: 0}
 
-.less
-{
-	
-}
+
 
 .FAQ_tableau
 {
-margin-left: 17%;
-width: 30%;
+margin-left: 8%;
+width: 45%;
 float: left;
+background-color: white;
 }
 
 .FAQ_tableau2
 {
-margin-left: 60%;
+margin-left: 58%;
 margin-top: 8%;
-width: 30%;
+width: 40%;
+background-color: white;
 
 }
 
 .FAQ_tableau3
 {
-margin-left: 17%;
-width: 30%;
+margin-left: 8%;
+width: 45%;
 float: left;
+background-color: white;
 }
 
 .FAQ_tableau4
 {
-margin-left: 60%;
-width: 30%;
+margin-left: 58%;
+width: 40%;
+background-color: white;
 
 }
 
 .loupe
 {
-	width: 28px;
-	height: 28px
+	width: 250px;
+	height: 150px;
+	float: left;
 }
 
 .Titre_article
@@ -57,9 +59,10 @@ width: 30%;
 
 }
 
-.contenu_article
+.contenu_article2
 {
-	padding-left: 40px;
+	padding-left: 260px;
+
 }
 
 .Tableau_rangee1
@@ -70,4 +73,14 @@ width: 30%;
 .Tableau_rangee2
 {
 	height: 200px;
+}
+
+.Tableau_rangee3
+{
+	height: 200px;
+}
+
+.superglobal2
+{
+	margin-bottom: 40px;
 }

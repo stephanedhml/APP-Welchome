@@ -48,7 +48,6 @@
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
-		define('logements','Logements');
 		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
@@ -107,24 +106,25 @@
 		define('typelogement','Quel type de logement proposez vous ?');
 		define('photo','Photos');
 		define('envoyer','Envoyer');
-			//connexion
+		//connexion
 		define('deconnexionsuccess','Vous avez bien été déconnecté !');
 		define('retouraccueil','Retour à l\'accueil');
 		define('connexionsuccess','Vous avez bien été connecté !');
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
-			//forum accueil
+		//forum accueil
 		define('forum','Forum');
 		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
 		define('lastmessage','Dernier message');
-			//profil
+		//profil
 		define('apropos','A Propos');
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
 		define('preferedtrade','Préférences d\'échange');
-			//annonce
+		define('logements','Logements');
+		//annonce
 		define('voyageur','Voyageurs');
 		define('chambre','Chambres');
 		define('sallebain','salles de bains');
@@ -132,7 +132,7 @@
 		define('membersince','Membre depuis 2014');
 		define('consultprofil','Consulter profil');
 		define('proposeechange','Proposer un échange');
-		 //ciblerecherche
+		//ciblerecherche
 		define('noustrouver','Nous avons trouvé');
 		define('nblogementtrouve','dans notre base de données. Voici les logements que nous avons trouvées:');
 		define('nouvellerecherche','Faire une nouvelle recherche avec critère');
@@ -141,7 +141,7 @@
 		define('retry','Réessayez');
 		define('autrechose',' avec autre chose.');		
 		define('research','Recherche');
-				//edit-profil
+		//edit-profil
 		define('modifytenement','Modifier un logement');
 		define('addtenement','Ajouter un logement');
 		define('genre','Sexe');
@@ -160,7 +160,6 @@
 		define('titreannonce','Titre de l\'annonce');
 		define('nbvoyageursauthorized','Nombre de voyageurs permis');
 		define('superficie','Superficie (en m2)');
-		
 		define('nbvoyageurs','Nombre voyageurs');
 		define('television','Télévision');
 		define('yes','Oui');
@@ -168,7 +167,6 @@
 		define('localisation','Localisation');
 		//admin
 		define('editerunprofil','Editer profil utilisateur');
-		
 		//creer profil
 		define('profilcreertrue','Votre profil a bien été créé. Félicitations!');
 		define('errorcreateprofile','Une erreur est survenue lors de l\'élaboration du profil');
@@ -178,6 +176,30 @@
 		//echange message
 		define('demandetransmise','Votre demande a bien été transmise !');
 		define('receiver','Destinataire');
+		//discussion
+		define('errorsendmessage','Il y a eu un problème lors de l\'envoi de votre message, veuillez réessayer.');
+		define('nameexpediteur','Nom expéditeur');
+		//ecriremsg
+		define('messagesent','Votre message a bien été envoyé !');
+		define('messagename','Titre du message');
+		//liremsg
+		define('nomessage','Aucun message');
+		define('sendmessage','Envoyer un message');
+		define('poster','Poster');
+		//message
+		define('dialogueaccept','Vous avez accepté le dialogue pour l\'échange.');
+		define('statut','Statut');
+		define('propositionaccept','Accepter la proposition');
+		//new topic
+		define('publier','Publier');
+		//site
+		define('sujet','Sujets');
+		define('nbreponse','Nb réponses');
+		define('nbvu','Nb vus');
+		//topic
+		define('newsubject','Nouveau Sujet');
+		define('member','Membre');
+		define('registeranswer','Inscrivez vous pour répondre !');
 		}
 		else if ($lang=='en') 
 		{
@@ -199,11 +221,11 @@
 		define('disconnect','Disconnect');
 		define('faq','FAQ');
 		define('register','Register');		
-				//Accueil
+		//Accueil
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
 		define('choixdestination','Choose your destination');
-			//Recherche avancee
+		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
 		define('appartement','an appartment');
@@ -239,7 +261,7 @@
 		define('balcon','Balcony');
 		define('internet','Wifi');
 		define('valider','Enter');
-			//inscription
+		//inscription
 		define('bieninscrit','You are successfully registered. You can connect now!');
 		define('connect','Connect');
 		define('erreurinscription','An error has happenned during the register.');
@@ -257,24 +279,25 @@
 		define('typelogement','Which type of tenement do you offer?');
 		define('photo','Pictures');
 		define('envoyer','Send');
-				//connexion
+		//connexion
 		define('deconnexionsuccess','You successfully disconnect!');
 		define('retouraccueil','Back to homepage');
 		define('connexionsuccess','You success to connect !');
 		define('wrongpassword','Password or username incorrect, please try again');
-			//forum accueil
+		//forum accueil
 		define('forum','FORUM');
 		define('forum1','FORUM');
 		define('categorie','Category');
 		define('description','Description');
 		define('nbmessages','Nb of messages');
 		define('lastmessage','Last message');
-					//profil
+		//Profil
 		define('apropos','About us');
 		define('editprofile','Edit your profile');
 		define('descriptif ','Description');
 		define('preferedtrade','Trade preferences');
-			//annonce
+		define('logements','Tenements');
+		//annonce
 		define('voyageur','Travellers');
 		define('chambre','Bedrooms');
 		define('sallebain','Bathrooms');
@@ -291,7 +314,7 @@
 		define('retry','Retry');
 		define('autrechose',' with something else.');	
 		define('research','Research');		
-				//edit-profil
+		//edit-profil
 		define('modifytenement','Modify a tenement');
 		define('addtenement','Add a tenement');
 		define('genre','Gender');
@@ -310,7 +333,6 @@
 		define('titreannonce','Title of the announcement');
 		define('nbvoyageursauthorized','Number of traveller authorized');
 		define('superficie','Surface(in m2)');
-		
 		define('nbvoyageurs','Number of traveller');
 		define('television','Television');
 		define('yes','Yes');
@@ -318,7 +340,6 @@
 		define('localisation','Localization');
 		//admin
 		define('editerunprofil','Editer user profile');
-		
 		//creer profil
 		define('profilcreertrue','Your profile has been sucessfully created. Congratulation!');
 		define('errorcreateprofile','An error has occurred during the profile creation');
@@ -328,6 +349,30 @@
 		//echange message
 		define('demandetransmise','Your request has been successfully passed on!');
 		define('receiver','Receiver');
+		//discussion
+		define('errorsendmessage','An error has occurred during the message sending. Please try again.');
+		define('nameexpediteur','Sender name');
+		//ecriremsg
+		define('messagesent','Your message has been sent !');
+		define('messagename','message title');
+		//liremsg
+		define('nomessage','No message');
+		define('sendmessage','Send a message');
+		define('poster','Post');
+		//message
+		define('dialogueaccept','The dialogue for the trade has been accepted.');
+		define('statut','Status');
+		define('propositionaccept','Accept the proposition');
+		//new topic
+		define('publier','Post');
+		//site
+		define('sujet','Subjects');
+		define('nbreponse','Nb responses');
+		define('nbvu','Nb vus');
+		//topic
+		define('newsubject','New subject');
+		define('member','Member');
+		define('registeranswer','Register in order to answer !');
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -347,12 +392,12 @@
 		define('assistmember','Bénéficiez de notre Assistance Membres 7j/7 ');
 		define('freedevice','Un service complètement gratuit');
 		define('hugenetwork','Un large réseau de logements');
-				//connexion inscription deconnexion
+		//connexion inscription deconnexion
 		define('profil','Profil');
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
-				//Accueil
+		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
@@ -415,19 +460,20 @@
 		define('retouraccueil','Retour à l\'accueil');
 		define('connexionsuccess','Vous avez bien été connecté !');
 		define('wrongpassword','Le nom d\'utilisateur ou le mot de passe saisi est incorrect. Veuillez réessayer !');
-				//forum accueil
+		//forum accueil
 		define('forum','Forum');
 		define('forum1','FORUM');
 		define('categorie','Catégorie');
 		define('description','Description');
 		define('nbmessages','Nb Messages');
 		define('lastmessage','Dernier message');
-					//profil
+		//profil
 		define('apropos','A Propos');
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
-		define('preferedtrade','Préférences d\'échange');	
-			//annonce
+		define('preferedtrade','Préférences d\'échange');
+		define('logements','Logements');		
+		//annonce
 		define('voyageur','Voyageurs');
 		define('chambre','Chambres');
 		define('sallebain','Bathrooms');
@@ -444,7 +490,7 @@
 		define('retry','Réessayez');
 		define('autrechose',' avec autre chose.');
 		define('research','Recherche');	
-				//edit-profil
+		//edit-profil
 		define('modifytenement','Modifier un logement');
 		define('addtenement','Ajouter un logement');
 		define('genre','Sexe');
@@ -463,7 +509,6 @@
 		define('titreannonce','Titre de l\'annonce');
 		define('nbvoyageursauthorized','Nombre de voyageurs permis');
 		define('superficie','Superficie (en m2)');
-		
 		define('nbvoyageurs','Nombre voyageurs');
 		define('television','Télévision');
 		define('yes','Oui');
@@ -471,7 +516,6 @@
 		define('localisation','Localisation');
 		//admin
 		define('editerunprofil','Editer profil utilisateur');
-		
 		//creer profil
 		define('profilcreertrue','Votre profil a bien été créé. Félicitations!');
 		define('errorcreateprofile','Une erreur est survenue lors de l\'élaboration du profil');
@@ -481,6 +525,30 @@
 		//echange message
 		define('demandetransmise','Votre demande a bien été transmise !');
 		define('receiver','Destinataire');
+		//discussion
+		define('errorsendmessage','Il y a eu un problème lors de l\'envoi de votre message, veuillez réessayer.');
+		define('nameexpediteur','Nom expéditeur');
+		//ecriremsg
+		define('messagesent','Votre message a bien été envoyé !');
+		define('messagename','Titre du message');
+		//liremsg
+		define('nomessage','Aucun message');
+		define('sendmessage','Envoyer un message');
+		define('poster','Poster');
+		//message
+		define('dialogueaccept','Vous avez accepté le dialogue pour l\'échange.');
+		define('statut','Statut');
+		define('propositionaccept','Accepter la proposition');
+		//new topic
+		define('publier','Publier');
+		//site
+		define('sujet','Sujets');
+		define('nbreponse','Nb réponses');
+		define('nbvu','Nb vus');
+		//topic
+		define('newsubject','Nouveau Sujet');
+		define('member','Membre');
+		define('registeranswer','Inscrivez vous pour répondre !');
 		}
 		else if ($lang=='en') 
 		{  
@@ -497,16 +565,16 @@
 		define('assistmember','Contact our member\'s assistance 7 days a week');
 		define('freedevice','A completely free device');
 		define('hugenetwork','A huge tenement\'s network');
-				//connexion inscription deconnexion
+		//connexion inscription deconnexion
 		define('profil','Profile');
 		define('disconnect','Disconnect');
 		define('faq','FLQ');
 		define('register','Register');
-			//Accueil
+		//Accueil
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
 		define('choixdestination','Choose your destination');
-			//Recherche avancee
+		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
 		define('appartement','an appartment');
@@ -542,7 +610,7 @@
 		define('balcon','Balcony');
 		define('internet','Wifi');
 		define('valider','Enter');
-			//inscription
+		//inscription
 		define('bieninscrit','You are successfully registered. You can connect now!');
 		define('connect','Connect');
 		define('erreurinscription','An error has happenned during the register.');
@@ -565,19 +633,20 @@
 		define('retouraccueil','Back to homepage');
 		define('connexionsuccess','You success to connect !');
 		define('wrongpassword','Password or username incorrect, please try again');
-			//forum accueil
+		//forum accueil
 		define('forum','Forum');
 		define('forum1','FORUM');
 		define('categorie','Category');
 		define('description','Description');
 		define('nbmessages','Nb of messages');
 		define('lastmessage','Last message');
-			//profil
+		//profil
 		define('apropos','About us');
 		define('editprofile','Edit your profile');
 		define('descriptif ','Description');
 		define('preferedtrade','Trade preferences');
-			//annonce
+		define('logements','Tenements');
+		//annonce
 		define('voyageur','Travellers');
 		define('chambre','Bedrooms');
 		define('sallebain','Bathrooms');
@@ -585,7 +654,7 @@
 		define('membersince','Member since 2014');
 		define('consultprofil','View profile');
 		define('proposeechange','Offer a trade');	
-					//ciblerecherche
+		//ciblerecherche
 		define('noustrouver','We found');
 		define('nblogementtrouve','in our database. Here is the tenements we found:');
 		define('nouvellerecherche','Do a new research with criteria');
@@ -594,7 +663,7 @@
 		define('retry','Retry');
 		define('autrechose',' with something else.');	
 		define('research','Research');
-				//edit-profil
+		//edit-profil
 		define('modifytenement','Modify a tenement');
 		define('addtenement','Add a tenement');
 		define('genre','Gender');
@@ -613,7 +682,6 @@
 		define('titreannonce','Title of the announcement');
 		define('nbvoyageursauthorized','Number of traveller authorized');
 		define('superficie','Surface(in m2)');
-		
 		define('nbvoyageurs','Number of traveller');
 		define('television','Television');
 		define('yes','Yes');
@@ -621,7 +689,6 @@
 		define('localisation','Localization');
 		//admin
 		define('editerunprofil','Editer user profile');
-		
 		//creer profil
 		define('profilcreertrue','Your profile has been sucessfully created. Congratulation!');
 		define('errorcreateprofile','An error has occurred during the profile creation');
@@ -631,11 +698,34 @@
 		//echange message
 		define('demandetransmise','Your request has been successfully passed on!');
 		define('receiver','Receiver');
+		//discussion
+		define('errorsendmessage','An error has occurred during the message sending. Please try again.');
+		define('nameexpediteur','Sender name');
+		//ecriremsg
+		define('messagesent','Your message has been sent !');
+		define('messagename','message title');
+		//liremsg
+		define('nomessage','No message');
+		define('sendmessage','Send a message');
+		define('poster','Post');
+		//message
+		define('dialogueaccept','The dialogue for the trade has been accepted.');
+		define('statut','Status');
+		define('propositionaccept','Accept the proposition');
+		//new topic
+		define('publier','Post');
+		//site
+		define('sujet','Subjects');
+		define('nbreponse','Nb responses');
+		define('nbvu','Nb vus');
+		//topic
+		define('newsubject','New subject');
+		define('member','Member');
+		define('registeranswer','Register in order to answer !');
 		}
 	}
 	else
 	{
-
 		//Menu
 		define('accueil','Accueil');
 		define('rechercheavancee','Recherche avancée');
@@ -654,7 +744,6 @@
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
-		define('logements','Logements');
 		//Accueil
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
@@ -730,6 +819,7 @@
 		define('editprofile','Editer votre profil');
 		define('descriptif ','Descriptif');
 		define('preferedtrade','Préférences d\'échange');
+		define('logements','Logements');
 		//annonce
 		define('voyageur','Voyageurs');
 		define('chambre','Chambres');
@@ -766,7 +856,6 @@
 		define('titreannonce','Titre de l\'annonce');
 		define('nbvoyageursauthorized','Nombre de voyageurs permis');
 		define('superficie','Superficie (en m2)');
-		
 		define('nbvoyageurs','Nombre voyageurs');
 		define('television','Télévision');
 		define('yes','Oui');
@@ -774,7 +863,6 @@
 		define('localisation','Localisation');
 		//admin
 		define('editerunprofil','Editer profil utilisateur');
-		
 		//creer profil
 		define('profilcreertrue','Votre profil a bien été créé. Félicitations!');
 		define('errorcreateprofile','Une erreur est survenue lors de l\'élaboration du profil');
@@ -784,6 +872,30 @@
 		//echange message
 		define('demandetransmise','Votre demande a bien été transmise !');
 		define('receiver','Destinataire');
+		//discussion
+		define('errorsendmessage','Il y a eu un problème lors de l\'envoi de votre message, veuillez réessayer.');
+		define('nameexpediteur','Nom expéditeur');
+		//ecriremsg
+		define('messagesent','Votre message a bien été envoyé !');
+		define('messagename','Titre du message');
+		//liremsg
+		define('nomessage','Aucun message');
+		define('sendmessage','Envoyer un message');
+		define('poster','Poster');
+		//message
+		define('dialogueaccept','Vous avez accepté le dialogue pour l\'échange.');
+		define('statut','Statut');
+		define('propositionaccept','Accepter la proposition');
+		//new topic
+		define('publier','Publier');
+		//site
+		define('sujet','Sujets');
+		define('nbreponse','Nb réponses');
+		define('nbvu','Nb vus');
+		//topic
+		define('newsubject','Nouveau Sujet');
+		define('member','Membre');
+		define('registeranswer','Inscrivez vous pour répondre !');
 	}
 	
 }

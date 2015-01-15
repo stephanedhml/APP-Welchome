@@ -67,10 +67,10 @@ if (isset($_SESSION["userid"])) {
 
         <table class="tableau_site">
             <tr>
-                <th>Sujets</th>
-                <th style="width: 50px;">Nb réponses</th>
-                <th style="width: 50px;">Nb vus</th>
-                <th style="width: 150px;">Dernier message</th>
+                <th><?php echo sujet; ?></th>
+                <th style="width: 50px;"><?php echo nbreponse; ?></th>
+                <th style="width: 50px;"><?php echo nbvu; ?></th>
+                <th style="width: 150px;"><?php echo lastmessage; ?></th>
                 <?php if (isset($_SESSION["userid"])) {if($user[8]==1) {?> <th style="width: 50px;">Administration</th> <?php } }?>
             </tr>
             <?php

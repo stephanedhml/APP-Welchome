@@ -54,7 +54,7 @@ session_start();
             }
 
             if (isset($_POST['validation'])) {
-                echo '<div class="accept_msg"><h7>Vous avez accepté le dialogue pour l\'échange</h7><br/></div>';
+                echo '<div class="accept_msg"><h7>'.dialogueaccept.'</h7><br/></div>';
             }
             $req = $bdd -> prepare("
               SELECT id_expediteur, titre_message, date_update, id_message, lu_nonlu, echange, choix, message  FROM messages AS m1 WHERE id_destinataire=? ORDER BY id_message DESC
@@ -65,7 +65,7 @@ session_start();
 
 
             if ($nb == 0) {
-                echo '<div class="no_msg_r"><p><h7>Aucun message</h7><br/><br/></p></div>';
+                echo '<div class="no_msg_r"><p><h7>'.nomessage.'</h7><br/><br/></p></div>';
             }
             else {
                 echo '<div class="new_msg"><h7>Messages</h7></div>';
@@ -73,11 +73,11 @@ session_start();
                 ?>
                 <table class="tableau_new_messages">
                     <tr>
-                        <th>Nom exp&#233;diteur</td>
+                        <th><?php echo nameexpediteur; ?></td>
                         <th>Message</td>
                         <th>Date</td>
-                        <th>Statut</th>
-                        <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<th>Accepter la proposition</th>';} ?>
+                        <th><?php echo statut; ?></th>
+                        <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<th>'.propositionaccept.'</th>';} ?>
 
                     </tr>
 
@@ -105,7 +105,7 @@ session_start();
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu['message'] ?></a></td>
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
-                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?>
+                                <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="'.yes.'" class="bouton"><input type="submit" name="refus" value="'.no.'" class="bouton"></td></form>' ;} ?>
 
                             </tr>
                     <?php

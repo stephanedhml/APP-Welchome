@@ -41,13 +41,15 @@ jQuery(document).ready(function() {
     <?php include("menus.php"); ?>
 </header>
 
-<div class="superglobal">
+<div class="superglobal2">
     <div class="global">
         <div class="forum_title"><h7>Aide en ligne</h7></div>
 <div class="Tableau_rangee1">
 <div class="FAQ_tableau">
-<img src="https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/loupe-512.png" class="loupe"><strong class="Titre_article">Nouveau membre Welchome</strong>
+
 <div class="contenu_article">
+    <img src="http://ttvpsy.psychologies.com/0/8/6/3680.jpg" class="loupe"><strong class="Titre_article">Nouveau membre Welchome</strong>
+<div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
@@ -85,13 +87,14 @@ jQuery(document).ready(function() {
         <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
         <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
-</div>
+</div></div>
     </div>
     </div>
 
     <div class="FAQ_tableau2">
-<img src="https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/loupe-512.png" class="loupe"><strong class="Titre_article">Messagerie</strong>
 <div class="contenu_article">
+<img src="http://icake.fr/wp-content/uploads/2012/05/famille-ordi3.jpg" class="loupe"><strong class="Titre_article">Messagerie</strong>
+<div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
@@ -130,13 +133,14 @@ jQuery(document).ready(function() {
         <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
     </div>
-</div>
+</div></div>
     </div>
 
     </div>
     <div class="Tableau_rangee2"><div class="FAQ_tableau3">
-<img src="https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/loupe-512.png" class="loupe"><strong class="Titre_article">Profil & Vérifications</strong>
-<div class="contenu_article">
+        <div class="contenu_article">
+<img src="http://cdn.pratique.fr/sites/default/files/articles/franchise-profil.jpg" class="loupe"><strong class="Titre_article">Profil & Vérifications</strong>
+<div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
@@ -175,12 +179,12 @@ jQuery(document).ready(function() {
         <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
-    </div>
+    </div> </div>
     </div>
 
     <div class="FAQ_tableau4">
-<img src="https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/loupe-512.png" class="loupe"><strong class="Titre_article">Recherches</strong>
-<div class="contenu_article">
+<img src="http://blog.r-no.fr/wp-content/uploads/2013/02/clavier-encre-electronique-1.jpg" class="loupe"><strong class="Titre_article">Recherches</strong>
+<div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
@@ -222,9 +226,9 @@ jQuery(document).ready(function() {
 </div>
     </div></div>
 
-     <div class="Tableau_rangee2"><div class="FAQ_tableau3">
-<img src="https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/loupe-512.png" class="loupe"><strong class="Titre_article">Compte & Mot de passe</strong>
-<div class="contenu_article">
+     <div class="Tableau_rangee3"><div class="FAQ_tableau3">
+<img src="http://img.phonandroid.com/2015/01/proteger-securiser-mots-passe-dashlane.jpg" class="loupe"><strong class="Titre_article">Compte & Mot de passe</strong>
+<div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
@@ -267,8 +271,8 @@ jQuery(document).ready(function() {
     </div>
 
     <div class="FAQ_tableau4">
-<img src="https://cdn4.iconfinder.com/data/icons/flatron-set-2/512/loupe-512.png" class="loupe"><strong class="Titre_article">Commentaires sur un échange</strong>
-<div class="contenu_article">
+<img src="http://imworld.aufeminin.com/story/20131203/femme-ordinateur-137550_w1000.jpg" class="loupe"><strong class="Titre_article">Commentaires sur un échange</strong>
+<div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
