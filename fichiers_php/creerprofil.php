@@ -30,18 +30,18 @@ include("config.php");
 					if($bdd->lastInsertId())
 					{
 						$form=false;
-						echo ' <div>Votre profil a bien été créé. Félicitations!</div>';
+						echo ' <div>'.profilcreertrue.'</div>';
 					}
 					else
 					{
 						$form=true;
-						$message= "Une erreur est survenue lors de l'élaboration du profil.";
+						$message= errorcreateprofile;
 					}
 				}
 				else
 				{
 					$form=true;
-					$message="Le numéro de téléphone doit comporter 10 chiffres ou 14 avec l'id du pays"; 
+					$message=telverif; 
 				}
 			}
 			else
@@ -61,9 +61,9 @@ include("config.php");
 			<div class="content">
 				<form action="creerprofil.php" method="post">
 					<div class="signup_form">
-						<br/><label for="lastname">Nom :</label><br/><input type="text" name="lastname" /><br />
-						<br/><label for="firstname">Prénom :</label><br/><input type="text" name="firstname" /><br />
-						<br/><label for="genre">Genre :</label><br/><span>M</span><input type="radio" name="genre" /><span>F</span><input type="radio" name="genre" /><br />
+						<br/><label for="lastname"><?php echo lastname; ?> :</label><br/><input type="text" name="lastname" /><br />
+						<br/><label for="firstname"><?php echo firstname; ?> :</label><br/><input type="text" name="firstname" /><br />
+						<br/><label for="genre"><?php echo genre; ?> :</label><br/><span>M</span><input type="radio" name="genre" /><span>F</span><input type="radio" name="genre" /><br />
 						<br/><label for="tel">Tel :</label><br/><input type="tel" name="tel"/><br/>
 						<br/><input type="submit" value="Envoyer" id="btn_envoyer" />
 					</div>

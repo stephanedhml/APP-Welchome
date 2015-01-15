@@ -557,10 +557,10 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                 <div class="left_carre"><a href="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo editprofile; ?></p></a></div>
             </div>
             <div class="center_3">
-                <div class="center_carre"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p>Modifier vos logement</p></a></div>
+                <div class="center_carre"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo modifytenement; ?></p></a></div>
             </div>
             <div class="right_3">
-                <div class="right_carre"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p>Ajouter un logement</p></a></div>
+                <div class="right_carre"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo addtenement; ?></p></a></div>
             </div>
     <?php } ?>
 
@@ -604,25 +604,25 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <input type="file" name="up_avatar" id="up_avatar"><br />
         <label for="description">Description</label><br/>
         <input type="text" name="description"/><br/>
-        <label for="username" id="username_form">Sexe</label></br>
+        <label for="username" id="username_form"><?php echo genre; ?></label></br>
         <SELECT name="sexe" size="1">
             <OPTION></OPTION>
-            <OPTION>Homme</OPTION>
-            <OPTION>Femme</OPTION>
-            <OPTION>Autre</OPTION>
+            <OPTION><?php echo homme; ?></OPTION>
+            <OPTION><?php echo femme; ?></OPTION>
+            <OPTION><?php echo autre; ?></OPTION>
         </SELECT></br>
-        <label for="tel">Numéro téléphone</label></br>
+        <label for="tel"><?php echo numtel; ?></label></br>
         <input type="tel" name="tel" /><br/>
         <label for="profession">Profession</label><br/>
         <input type="text" name="metier"/><br/>
         <label for="situation">Situation</label><br/>
         <SELECT name="situation" size="1">
             <OPTION></OPTION>
-            <OPTION>Célibataire</OPTION>
-            <OPTION>Couple</OPTION>
-            <OPTION>Marié</OPTION>
+            <OPTION><?php echo single; ?></OPTION>
+            <OPTION><?php echo couple; ?></OPTION>
+            <OPTION><?php married; ?></OPTION>
         </SELECT></br>
-        <input type="submit" value="Valider les modifications" id="btn_validation_edit" /><br/><br/>
+        <input type="submit" value="<?php echo valider; ?>" id="btn_validation_edit" /><br/><br/>
     </div>
 
     <!-- Afficher les informations actuelles de l'utilisateur -->
@@ -631,10 +631,10 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <?php echo '<img   src="'.$donnees ['avatar'].'"  class="profil">'  ?>
         <p>Description : <?php echo $donnees['description'] ;?></p>
         <p>E-mail: <?php if ($donnees['email']!=NULL) { echo $donnees['email'] ;} else {echo "Non renseigné";}?></p>
-        <p>Sexe : <?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
-        <p>Tel: <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
-        <p> Profession: <?php if ($donnees['profession']!=NULL) { echo $donnees['profession'] ;} else {echo "Non renseigné";}?> </p>
-        <p>Situation: <?php if ($donnees['situation']!=NULL) { echo $donnees['situation'] ;} else {echo "Non renseigné";}?></p>
+        <p><?php echo genre ; ?> : <?php if ($donnees['sexe']!=NULL) {echo $donnees['sexe'] ;}?></p>
+        <p>Tel : <?php if ($donnees['tel']!=NULL) { echo $donnees['tel'] ;} else {echo "Non renseigné";}?></p>
+        <p>Profession : <?php if ($donnees['profession']!=NULL) { echo $donnees['profession'] ;} else {echo "Non renseigné";}?> </p>
+        <p>Situation : <?php if ($donnees['situation']!=NULL) { echo $donnees['situation'] ;} else {echo "Non renseigné";}?></p>
     </div>
 
     <?php } ?>
@@ -646,39 +646,39 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 <div class="container_edit_profil">
     <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
     <div class="bloc_search_left">
-        <label for="avatar">Photo principale du logement *</label><br/>
+        <label for="avatar"><?php echo photo1; ?> *</label><br/>
         <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
         <input type="file" name="maj_main_img_logement" ><br />
-        <label for="avatar">Seconde photo</label><br/>
+        <label for="avatar"><?php echo photo2; ?></label><br/>
         <input type="file" name="maj_2_img_logement" onclick="return verifphoto2(this)" ><br />
-        <label for="avatar">Troisième photo</label><br/>
+        <label for="avatar"><?php echo photo3; ?></label><br/>
         <input type="file" name="maj_3_img_logement" onclick="return verifphoto3(this)"  ><br />
-        <label for="avatar">Quatrième photo</label><br/>
+        <label for="avatar"><?php echo photo4; ?></label><br/>
         <input type="file" name="maj_4_img_logement" onclick="return verifphoto4(this)"  ><br />
-        <label for="localisation">Localisation</label><br/>
+        <label for="localisation"><?php echo localisation; ?></label><br/>
         <input type="text" name="localisation"/><br/>
-        <label for="description_logement">Description du logement</label><br/>
+        <label for="description_logement"><?php echo descriptionlogement; ?></label><br/>
         <input type="text" name="description_logement"/><br/>
-        <label for="type_logement">Type de logement</label><br/>
+        <label for="type_logement"><?php echo choixlogement; ?></label><br/>
         <select name="type_logement" id="choix">
             <OPTION></OPTION>
-            <option value="Studio">studio</option>
-            <option value="Appartement">appartement</option>
-            <option value="Maison">maison</option>
-            <option value="Pavillon">pavillon</option>
-            <option value="Bungalow/gite">bungalow</option>
-            <option value="Bateau/péniche">bateau</option>
-            <option value="Camping car">caming car</option>
+            <option value="Studio"><?php echo studio; ?></option>
+            <option value="Appartement"><?php echo appartement; ?></option>
+            <option value="Maison"><?php echo maison; ?></option>
+            <option value="Pavillon"><?php echo pavillon; ?></option>
+            <option value="Bungalow/gite"><?php echo bungalow; ?></option>
+            <option value="Bateau/péniche"><?php echo bateau; ?></option>
+            <option value="Camping car"><?php echo campingcar; ?></option>
         </select><br/>
-        <label for="nom_maison">Titre de l'annonce</label><br/>
+        <label for="nom_maison"><?php echo titreannonce; ?></label><br/>
         <input type="text" name="nom_maison"/><br/>
-        <label for="nombre_voyageurs">Nombre de voyageurs permis</label><br/>
+        <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
         <input type="number" name="nombre_voyageurs"/><br/>
-        <label for="nombre_chambres">Nombre de chambres</label><br/>
+        <label for="nombre_chambres"><?php echo nbchambres; ?></label><br/>
         <input type="number" name="nombre_chambres"/><br/>
-        <label for="nb_salles_bains">Nombre de salles de bain</label><br/>
+        <label for="nb_salles_bains"><?php echo nbsallesbain; ?></label><br/>
         <input type="number" name="nb_salles_bains"/><br/>
-        <label for="superficie">Superficie (en m2)</label><br/>
+        <label for="superficie"><?php echo superficie; ?></label><br/>
         <input type="number" name="superficie"/><br/>
 
     </div>
@@ -687,41 +687,41 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
     <div class="bloc_search_center">
 
-        <label for="television">Télévision</label><br/>
+        <label for="television"><?php echo television; ?></label><br/>
         <select name="television">
             <OPTION></option>
-            <OPTION>Oui</option>
-            <OPTION>Non</option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
         </select><br/>
-        <label for="machine_a_laver">Machine à laver</label><br/>
+        <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
         <select name="machine_a_laver">
             <OPTION></option>
-            <OPTION>Oui</option>
-            <OPTION>Non</option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
         </select><br/>
-        <label for="parking">Parking</label><br/>
+        <label for="parking"><?php echo parking; ?></label><br/>
         <select name="parking">
             <OPTION></option>
-            <OPTION>Oui</option>
-            <OPTION>Non</option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
         </select><br/>
-        <label for="climatisation">Climatisation</label><br/>
+        <label for="climatisation"><?php echo climatisation; ?></label><br/>
         <select name="climatisation">
             <OPTION></option>
-            <OPTION>Oui</option>
-            <OPTION>Non</option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
         </select><br/>
-        <label for="piscine">Piscine</label><br/>
+        <label for="piscine"><?php echo piscine; ?></label><br/>
         <select name="piscine">
             <OPTION></option>
-            <OPTION>Oui</option>
-            <OPTION>Non</option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
         </select><br/>
-        <label for="jardin">Jardin</label><br/>
+        <label for="jardin"><?php echo jardin ?></label><br/>
         <select name="jardin">
             <OPTION></option>
-            <OPTION>Oui</option>
-            <OPTION>Non</option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
         </select><br/>
 
         <!-- CHAMPS POUR DATES DISPO LOGEMENT
@@ -730,7 +730,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <label for="date_fin_disponibilite">Date de fin de disponibilité</label><br/>
         <input type="date" name="date_fin_disponibilite"/><br/> -->
 
-        <input type="submit" value="Valider les modifications" id="btn_validation_edit" /><br/><br/>
+        <input type="submit" value="<?php echo valider; ?>" id="btn_validation_edit" /><br/><br/>
     </div>
 
         <!-- Afficher les informations actuelles de l'utilisateur -->
@@ -744,20 +744,20 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <div class="bloc_edit_logement_right">
 
         <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo_edit_actual_house">' ?>
-        <p>Localisation : <?php echo $donnees1[2]; ?></p></br>
-        <p>Titre de l'annonce : <?php echo $donnees1[4]; ?></p></br>
-        <p>Nombre voyageurs : <?php echo $donnees1[5]; ?></p></br>
-        <p>Type logement : <?php echo $donnees1[6]; ?></p></br>
-        <p>Nombre chambres : <?php echo $donnees1[7]; ?></p></br>
-        <p>Nombre salles de bain : <?php echo $donnees1[8]; ?></p></br>
-        <p>Superficie : <?php echo $donnees1[9]; ?> m²</p></br>
-        <p>Description du logement : <?php echo $donnees1[10]; ?></p></br>
-        <p>Télévision : <?php if ($donnees1["television"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Machine à laver : <?php if ($donnees1["machine_a_laver"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Parking : <?php if ($donnees1["parking"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Climatisation : <?php if ($donnees1["climatisation"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Piscine : <?php if ($donnees1["piscine"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p>Jardin : <?php if ($donnees1["jardin"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p><?php echo localisation; ?> : <?php echo $donnees1[2]; ?></p></br>
+        <p><?php echo titreannonce; ?> : <?php echo $donnees1[4]; ?></p></br>
+        <p><?php echo nbvoyageurs; ?> : <?php echo $donnees1[5]; ?></p></br>
+        <p><?php echo choixlogement; ?> : <?php echo $donnees1[6]; ?></p></br>
+        <p><?php echo nbchambres; ?> : <?php echo $donnees1[7]; ?></p></br>
+        <p><?php echo nbsallesbain; ?> : <?php echo $donnees1[8]; ?></p></br>
+        <p><?php echo superficie; ?> : <?php echo $donnees1[9]; ?> m²</p></br>
+        <p><?php echo descriptionlogement; ?> : <?php echo $donnees1[10]; ?></p></br>
+        <p><?php echo television; ?> : <?php if ($donnees1["television"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p><?php echo machinelaver; ?> : <?php if ($donnees1["machine_a_laver"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p><?php echo parking; ?> : <?php if ($donnees1["parking"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p><?php echo climatisation; ?> : <?php if ($donnees1["climatisation"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p><?php echo piscine; ?> : <?php if ($donnees1["piscine"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <p><?php echo jardin; ?> : <?php if ($donnees1["jardin"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
 
 
 
@@ -773,40 +773,40 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <div class="container_edit_profil">
         <form action="edit_profile.php?choix=<?php echo $_GET["choix"]; ?>&add=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
             <div class="bloc_search_left">
-                <label for="avatar">Photo principale du logement *</label><br/>
-                <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
-                <input type="file" name="up_main_img_logement" ><br />
-                <label for="avatar">Seconde photo</label><br/>
-                <input type="file" name="up_2_img_logement" ><br />
-                <label for="avatar">Troisième photo</label><br/>
-                <input type="file" name="up_3_img_logement" ><br />
-                <label for="avatar">Quatrième photo</label><br/>
-                <input type="file" name="up_4_img_logement" ><br />
-                <label for="localisation">Localisation *</label><br/>
-                <input type="text" name="localisation"/><br/>
-                <label for="description_logement">Description du logement *</label><br/>
-                <input type="text" name="description_logement"/><br/>
-                <label for="type_logement">Type de logement *</label><br/>
-                <select name="type_logement" id="choix">
-                    <OPTION></OPTION>
-                    <option value="Studio">studio</option>
-                    <option value="Appartement">appartement</option>
-                    <option value="Maison">maison</option>
-                    <option value="Pavillon">pavillon</option>
-                    <option value="Bungalow/gite">bungalow</option>
-                    <option value="Bateau/péniche">bateau</option>
-                    <option value="Camping car">caming car</option>
-                </select><br/>
-                <label for="nom_maison">Titre de l'annonce</label><br/>
-                <input type="text" name="nom_maison"/><br/>
-                <label for="nombre_voyageurs">Nombre de voyageurs permis</label><br/>
-                <input type="number" name="nombre_voyageurs"/><br/>
-                <label for="nombre_chambres">Nombre de chambres *</label><br/>
-                <input type="number" name="nombre_chambres"/><br/>
-                <label for="nb_salles_bains">Nombre de salles de bain *</label><br/>
-                <input type="number" name="nb_salles_bains"/><br/>
-                <label for="superficie">Superficie (en m2)</label><br/>
-                <input type="number" name="superficie"/><br/>
+                        <label for="avatar"><?php echo photo1; ?> *</label><br/>
+        <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
+        <input type="file" name="maj_main_img_logement" ><br />
+        <label for="avatar"><?php echo photo2; ?></label><br/>
+        <input type="file" name="maj_2_img_logement" onclick="return verifphoto2(this)" ><br />
+        <label for="avatar"><?php echo photo3; ?></label><br/>
+        <input type="file" name="maj_3_img_logement" onclick="return verifphoto3(this)"  ><br />
+        <label for="avatar"><?php echo photo4; ?></label><br/>
+        <input type="file" name="maj_4_img_logement" onclick="return verifphoto4(this)"  ><br />
+        <label for="localisation"><?php echo localisation; ?></label><br/>
+        <input type="text" name="localisation"/><br/>
+        <label for="description_logement"><?php echo descriptionlogement; ?></label><br/>
+        <input type="text" name="description_logement"/><br/>
+        <label for="type_logement"><?php echo choixlogement; ?></label><br/>
+        <select name="type_logement" id="choix">
+            <OPTION></OPTION>
+            <option value="Studio"><?php echo studio; ?></option>
+            <option value="Appartement"><?php echo appartement; ?></option>
+            <option value="Maison"><?php echo maison; ?></option>
+            <option value="Pavillon"><?php echo pavillon; ?></option>
+            <option value="Bungalow/gite"><?php echo bungalow; ?></option>
+            <option value="Bateau/péniche"><?php echo bateau; ?></option>
+            <option value="Camping car"><?php echo campingcar; ?></option>
+        </select><br/>
+        <label for="nom_maison"><?php echo titreannonce; ?></label><br/>
+        <input type="text" name="nom_maison"/><br/>
+        <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
+        <input type="number" name="nombre_voyageurs"/><br/>
+        <label for="nombre_chambres"><?php echo nbchambres; ?></label><br/>
+        <input type="number" name="nombre_chambres"/><br/>
+        <label for="nb_salles_bains"><?php echo nbsallesbain; ?></label><br/>
+        <input type="number" name="nb_salles_bains"/><br/>
+        <label for="superficie"><?php echo superficie; ?></label><br/>
+        <input type="number" name="superficie"/><br/>
 
             </div>
 
@@ -814,42 +814,43 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
             <div class="bloc_search_center">
 
-                <label for="television">Télévision</label><br/>
-                <select name="television">
-                    <OPTION></option>
-                    <OPTION>Oui</option>
-                    <OPTION>Non</option>
-                </select><br/>
-                <label for="machine_a_laver">Machine à laver</label><br/>
-                <select name="machine_a_laver">
-                    <OPTION></option>
-                    <OPTION>Oui</option>
-                    <OPTION>Non</option>
-                </select><br/>
-                <label for="parking">Parking</label><br/>
-                <select name="parking">
-                    <OPTION></option>
-                    <OPTION>Oui</option>
-                    <OPTION>Non</option>
-                </select><br/>
-                <label for="climatisation">Climatisation</label><br/>
-                <select name="climatisation">
-                    <OPTION></option>
-                    <OPTION>Oui</option>
-                    <OPTION>Non</option>
-                </select><br/>
-                <label for="piscine">Piscine</label><br/>
-                <select name="piscine">
-                    <OPTION></option>
-                    <OPTION>Oui</option>
-                    <OPTION>Non</option>
-                </select><br/>
-                <label for="jardin">Jardin</label><br/>
-                <select name="jardin">
-                    <OPTION></option>
-                    <OPTION>Oui</option>
-                    <OPTION>Non</option>
-                </select><br/>
+               <label for="television"><?php echo television; ?></label><br/>
+        <select name="television">
+            <OPTION></option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
+        </select><br/>
+        <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
+        <select name="machine_a_laver">
+            <OPTION></option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
+        </select><br/>
+        <label for="parking"><?php echo parking; ?></label><br/>
+        <select name="parking">
+            <OPTION></option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
+        </select><br/>
+        <label for="climatisation"><?php echo climatisation; ?></label><br/>
+        <select name="climatisation">
+            <OPTION></option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
+        </select><br/>
+        <label for="piscine"><?php echo piscine; ?></label><br/>
+        <select name="piscine">
+            <OPTION></option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
+        </select><br/>
+        <label for="jardin"><?php echo jardin ?></label><br/>
+        <select name="jardin">
+            <OPTION></option>
+            <OPTION><?php echo oui; ?></option>
+            <OPTION><?php echo non; ?></option>
+        </select><br/>
+
 
                 <!-- CHAMPS POUR DATES DISPO LOGEMENT
                 <label for="date_début_disponibilite">Date de début de disponibilité</label><br/>
@@ -857,7 +858,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                 <label for="date_fin_disponibilite">Date de fin de disponibilité</label><br/>
                 <input type="date" name="date_fin_disponibilite"/><br/> -->
 
-                <input type="submit" value="Valider les modifications" id="btn_validation_edit" /><br/><br/>
+                <input type="submit" value="<?php echo valider; ?>" id="btn_validation_edit" /><br/><br/>
             </div>
     <?php } /* elseif (isset($_GET["choix"], $_POST["localisation"], $_POST["description_logement"], $_POST["type_logement"], $_POST["nombre_chambres"], $_POST["nb_salles_bains"]) AND $_GET["choix"]==3 AND $_POST["localisation"] != NULL AND $_POST["description_logement"] != NULL AND $_POST["type_logement"] != NULL AND $_POST["nombre_chambres"] != NULL AND $_POST["nb_salles_bains"] != NULL ) {?> <div class="forum_title"><h7>Votre logement a bien été ajouté !</h7></div> <?php } */ ?>
 
