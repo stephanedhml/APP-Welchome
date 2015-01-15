@@ -56,14 +56,14 @@ session_start();
             $nv -> execute(array($derid));
             ?>
             <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
-            <a href="index.php">Retourner à l'accueil</a></div>
+            <a href="index.php"><?php echo retouraccueil; ?></a></div>
             <?php
         }
         else
         {
             ?>
             <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-            <a href="index.php">Retourner à l'accueil</a>
+            <a href="index.php"><?php echo retouraccueil; ?></a>
             <?php
         }
 
@@ -78,7 +78,7 @@ session_start();
 <div class="contentg">
 <div class="msg_form">
     <form action="ecriremsg.php" method="post" xmlns="http://www.w3.org/1999/html">
-        <label for="destinataire">Destinataire</label><br/>
+        <label for="destinataire"><?php receiver; ?></label><br/>
         <select name="destinataire">
             <?php
             for ($i=0 ; $i < $nb ; $i++) {
