@@ -2,7 +2,7 @@
  * Created by marvin on 13/01/15.
  */
 
-function verifphoto2(c)
+function verifphoto2()
 {
     if(c.value == null)
     {
