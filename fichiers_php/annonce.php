@@ -144,7 +144,7 @@
                      elseif (isset($_SESSION['userid']) AND strcasecmp($_SESSION['userid'],$_GET['id_users']) == 0) {
                      }
                      elseif (isset($_SESSION['userid'])) {?>
-                         <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>&logement=<?php echo $donnees["id_logement"]; ?>'"><?php echo proposeechange; ?></button>
+                         <button type="button" class="bouton" onclick="window.location='echg_msg.php?demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>'"><?php echo proposeechange; ?></button>
                      <?php
                      }
                      else { ?> <button type="button" class="bouton" onclick="window.location='sign_up.php'"><?php echo proposeechange; ?></button><?php } ?>
@@ -174,6 +174,19 @@
                     </div>
                     <?php } ?>
                 </div>
+                <?php
+                if  (isset($_SESSION['userid']) AND $friend[0]==1) {
+                ?>
+                <div class="cadre_answer_post_discussion" >
+                    <div class="answer1" >
+                        <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
+                            <label for="message" >Message</label ><br /></br >
+                            <textarea type = "text" name = "message" class="post_message" ></textarea ><br /><br />
+                            <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
+                        </form >
+                    </div >
+                </div>
+                <?php } ?>
         </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <script type="text/javascript" src="../fichier_js/inscription.js"></script>
+        <!-- <script type="text/javascript" src="../fichier_js/inscription.js"></script> -->
         <link rel="stylesheet" href="../style.css" />
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
