@@ -34,7 +34,7 @@ session_start();
 
 
                 if ($nb == 0) {
-                    echo '<div class="no_msg"><p><h7>Aucun message</h7><br/><br/><a href="ecriremsg.php" id="btn_connexion">Envoyer un message</a></p></div>';
+                    echo '<div class="no_msg"><p><h7>'.nomessage.'</h7><br/><br/><a href="ecriremsg.php" id="btn_connexion">'.sendmessage.'</a></p></div>';
                 }
                 else {
                     echo '<div class="new_msg"><h7>Messages</h7></div>';
@@ -50,7 +50,7 @@ session_start();
                         ?>
                         <table class="tableau_new_messages" ">
                             <tr>
-                                <th>Nom exp&#233;diteur</th>
+                                <th><?php echo nameexpediteur; ?></th>
                                 <th>Message</th>
                                 <?php if (isset($msg_recu[3]) AND $msg_recu[4]==1) {echo '<th>Accepter la proposition</th>';} ?>
 
@@ -111,15 +111,15 @@ session_start();
                             $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
                             $nv -> execute(array($derid));
                             ?>
-                            <div class="no_msg"><h7>Votre message a bien &#233;t&#233; envoy&#233; !</h7><br/><br/>
-                                <a href="index.php">Retourner à l'accueil</a></div>
+                            <div class="no_msg"><h7><?php echo messagesent;?></h7><br/><br/>
+                                <a href="index.php"><?php echo retouraccueil; ?></a></div>
                         <?php
                         }
                         else
                         {
                             ?>
-                            <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                            <a href="index.php">Retourner à l'accueil</a>
+                            <div><?php echo errorsendmessage; ?></div> <br/>
+                            <a href="index.php"><?php echo retouraccueil; ?></a>
                         <?php
                         }
 
@@ -131,7 +131,7 @@ session_start();
                                     <form action="liremsg.php?id='. $id .'" method="post">
                                         <label for="message">Message</label><br/></br>
                                         <textarea type="text" name="message" class="post_message" ></textarea><br /><br/>
-                                        <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
+                                        <input type="submit" value="'.poster.'" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
                         </div>';

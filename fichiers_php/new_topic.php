@@ -48,7 +48,7 @@ session_start();
                                         <input type="text" name="objet" class="objet_field" /><br /><br/>
                                         <label for="password">Message</label><br/></br>
                                         <textarea name="message" class="message_field"></textarea><br /><br/></br>
-                                        <input type="submit" value="Publier" id="btn_connexion" /><br/><br/>
+                                        <input type="submit" value="'.publier.'" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
                         </div>

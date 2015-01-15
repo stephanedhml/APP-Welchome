@@ -51,8 +51,8 @@ session_start();
                 else
                 {
                     ?>
-                    <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                    <a href="index.php">Retourner à l'accueil</a>
+                    <div><?php echo errorsendmessage; ?></div> <br/>
+                    <a href="index.php"><?php echo retouraccueil; ?></a>
                 <?php
                 }
             }
@@ -79,7 +79,7 @@ session_start();
 
                 <table class="tableau_new_messages">
                     <tr>
-                        <th>Nom exp&#233;diteur</th>
+                        <th><?php echo nameexpediteur; ?></th>
                         <th>Message</th>
                     </tr>
                 </table>

@@ -73,14 +73,14 @@ $user = $rel -> fetch();
                 <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
             </div>
             <div class="forum_top_r_button">
-                <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic"><?php echo newsubject; ?></a>
             </div>
         </div>
 
 
         <table class="tableau_topic">
             <tr>
-                <th style="width: 210px;">Membre</th>
+                <th style="width: 210px;"><?php echo member; ?></th>
                 <th>Messages</th>
             </tr>
             <?php
@@ -136,13 +136,13 @@ $user = $rel -> fetch();
                     <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
                 </div>
                 <div class="forum_top_r_button">
-                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic"><?php echo newsubject; ?></a>
                 </div>
             </div>
 
             <table class="tableau_forum_accueil">
                 <tr>
-                    <th style="width: 210px;">Membre</th>
+                    <th style="width: 210px;"><?php echo member; ?></th>
                     <th>Messages</th>
                 </tr>
                 <?php
@@ -194,7 +194,7 @@ $user = $rel -> fetch();
                                     <form action="topic.php?id_topic='. $_GET['id_topic'] .'&id_cat='. $_GET['id_cat'] .'" method="post">
                                         <label for="message">Message</label><br/></br>
                                         <textarea name="message" class="post_message" /></textarea><br /><br/>
-                                        <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
+                                        <input type="submit" value="'.poster.'" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
                         </div>
@@ -208,13 +208,13 @@ $user = $rel -> fetch();
                     <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
                 </div>
                 <div class="forum_top_r_button">
-                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic">Nouveau Sujet</a>
+                    <a href="new_topic.php?id_topic=<?php echo $_GET['id_cat'] ?>" id="btn_new_topic"><?php echo newsubject; ?></a>
                 </div>
             </div>
 
             <table class="tableau_forum_accueil">
                 <tr>
-                    <th style="width: 210px;">Membre</th>
+                    <th style="width: 210px;"><?php echo member; ?></th>
                     <th>Messages</th>
                     <th style="width: 50px;">Administration</th>
                 </tr>
@@ -268,7 +268,7 @@ $user = $rel -> fetch();
                                     <form action="topic.php?id_topic='. $_GET['id_topic'] .'&id_cat='. $_GET['id_cat'] .'" method="post">
                                         <label for="message">Message</label><br/></br>
                                         <textarea type="text" name="message" class="post_message" ></textarea><br /><br/>
-                                        <input type="submit" value="Poster" id="btn_connexion" /><br/><br/>
+                                        <input type="submit" value="'.poster.'" id="btn_connexion" /><br/><br/>
                                     </form>
                                 </div>
                         </div>
@@ -282,14 +282,14 @@ $user = $rel -> fetch();
                     <a href="forum.php">Forum</a> -> <a href="site.php?id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_cat[1] ?></a> -> <a href="topic.php?id_topic=<?php echo $name_topic[0] ?>&id_cat=<?php echo $name_cat[0] ?>"><?php echo $name_topic[3] ?></a>
                 </div>
                 <div class="forum_top_r_button">
-                    <a href="sign_up.php" id="btn_new_topic">Inscrivez vous pour répondre !</a>
+                    <a href="sign_up.php" id="btn_new_topic"><?php echo registeranswer; ?></a>
                 </div>
             </div>
 
 
             <table class="tableau_topic">
                 <tr>
-                    <th style="width: 210px;">Membre</th>
+                    <th style="width: 210px;"><?php echo member; ?></th>
                     <th>Messages</th>
                 </tr>
                 <?php
