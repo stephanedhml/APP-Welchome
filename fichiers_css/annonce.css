@@ -71,7 +71,15 @@ background-color: rgb(248,248,248) ;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }
-
+.annonce_txt {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    padding: 20px;
+    padding-left: 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+}
 #description1
 {
     line-height:18px;
@@ -222,7 +230,7 @@ li
 {
     display: inline;
     
-    margin-top: 35px;
+
     border-radius:65px;
     width:120px;
     height:120px;
@@ -231,9 +239,10 @@ li
 .Norma2
 
 {
-    font-style: oblique;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-family: century;
-    font-size:14px;
+    font-size:24px;
 }
 
 .Norma1
@@ -241,6 +250,8 @@ li
 {
     font-family: century;
     font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .logo
@@ -270,7 +281,14 @@ display: inline;
     position: absolute;
     height: 350px;
 }
-
+.equipements p {
+    padding-left: 40px;
+}
+.title_annonce {
+    padding-top: 40px;
+    font-family: century;
+    font-size: 20px;
+}
 .owner {
     height: 350px;
     border-radius: 5px;
@@ -316,6 +334,33 @@ display: inline;
     margin-left: 800px;
     margin-bottom: 30px;
 }
+.description_pic img {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.description_pic a {
+    color: black;
+}
+.description_pic blockquote {
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    quotes: "«" "»";
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    width: 370px;
+    height: 155px;
+    margin: 0.25em 0;
+    padding: 0.25em;
+    padding-top: 20px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+}
 .cadre_answer_post_annonce {
     position: relative;
     height: 343px;
@@ -337,4 +382,30 @@ display: inline;
     margin-bottom: 3px;
     margin-top: 3px;
     width: 1200px;
+}
+blockquote {
+
+    quotes: "«" "»";
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    width: 500px;
+    margin: 0.25em 0;
+    padding: 0.25em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+
+}
+blockquote::before {
+    content: open-quote;
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    top: -20px;
+    color: #7a7a7a;
+}
+blockquote::after {
+    content: close-quote;
 }

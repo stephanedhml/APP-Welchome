@@ -71,7 +71,7 @@
                 </div>
 
                 <div id="bloc2">
-                    <?php echo $donnees['description_logement'];?>
+                    <p class="annonce_txt"><?php echo $donnees['description_logement'];?></p>
                 </div>
 
                 <div id="bloc3">
@@ -85,8 +85,8 @@
                 
                 ?>
                 <div class= "equipements">
-                    <?php echo equipement; ?></br></br>
-
+                    <p class="title_annonce"><?php echo equipement; ?></p></br></br>
+                    <p>
                 <?php
                 /* Boucle permettant d'obtenir la liste des critères automatiquement : avantage = permettra d'augmenter la liste si ajout d'un crtière dans BackOf / inconvenient : les noms qui s'affichent sont ceux de la BDD donc moches
                  for ($i=15;$i<21;$i++) {
@@ -120,13 +120,14 @@
                 }
 
                   ?>
+                    </p>
                 </div>
 
                 <div class="owner">
 
-                    <?php echo '<img   src="'.$donnees1 ['avatar'].'"  class="Norma">'  ?> <br></br>
-                    <h7 class="Norma1"> <?php echo $donnees1['username'];?>  </h7> <br> </br>
-                    <h7 class="Norma2"><?php echo membersince ?></h7> <br> </br>
+                    <p class="Norma2">Propriétaire</p>
+                    <?php echo '<img   src="'.$donnees1 ['avatar'].'"  class="Norma">'  ?>
+                    <p class="Norma1"> <?php echo $donnees1['username'];?></p>
 
 
                     <?php
@@ -196,7 +197,9 @@
                         <img src="<?php echo $url_pic['lien_photo'] ?>">
                     </div>
                     <div class="description_pic">
-                                <p><?php echo $com['message'] ?></p>
+                        <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                        <a class="Norma1" href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un['username']; ?></a>
+                        <blockquote><p style="margin-left: 30px;"><?php echo $com['message'] ?></p></blockquote>
                     </div>
                     <?php } ?>
                 </div>
@@ -213,7 +216,7 @@
                             <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
                             <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
                         </td>
-                        <td class="column_msg_3"><?php echo $com['message']; ?></td>
+                        <td class="column_msg_3"><blockquote><p style="margin-left: 40px; width: 800px;"><?php echo $com['message']; ?></p></blockquote></td>
                     </tr>
                 </table>
 
