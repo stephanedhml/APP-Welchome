@@ -18,7 +18,7 @@
 
 	<body class="wood">
 		<div class="header">
-            <?php include("menus.php"); ?>
+			<?php include("menu.php"); ?>
 		</div>
         <div class="superglobal">
         <div class="global">
