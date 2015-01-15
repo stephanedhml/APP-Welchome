@@ -12,7 +12,7 @@
 
 .FAQ_tableau
 {
-margin-left: 8%;
+margin-left: 4%;
 width: 45%;
 float: left;
 background-color: white;
@@ -20,7 +20,7 @@ background-color: white;
 
 .FAQ_tableau2
 {
-margin-left: 58%;
+margin-left: 52%;
 margin-top: 8%;
 width: 40%;
 background-color: white;
@@ -29,7 +29,7 @@ background-color: white;
 
 .FAQ_tableau3
 {
-margin-left: 8%;
+margin-left: 4%;
 width: 45%;
 float: left;
 background-color: white;
@@ -37,10 +37,10 @@ background-color: white;
 
 .FAQ_tableau4
 {
-margin-left: 58%;
+margin-left: 52%;
 width: 40%;
 background-color: white;
-
+position: 	absolute;
 }
 
 .loupe
@@ -67,17 +67,17 @@ background-color: white;
 
 .Tableau_rangee1
 {
-	height: 200px;
+	min-height: 200px;
 }
 
 .Tableau_rangee2
 {
-	height: 200px;
+	min-height: 200px;
 }
 
 .Tableau_rangee3
 {
-	height: 200px;
+	min-height: 200px;
 }
 
 .superglobal2
