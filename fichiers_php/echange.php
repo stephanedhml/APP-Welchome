@@ -1,3 +1,4 @@
+<!-- pas encore traduit -->
 <?php
 $req = $bdd -> prepare('INSERT INTO echange(id_demandeur, id_proprietaire, id_logement, date_update) VALUES(:demandeur, :proprietaire, :logement, :date_update)');
 $req -> execute(array(

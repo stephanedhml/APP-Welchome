@@ -160,6 +160,24 @@
 		define('titreannonce','Titre de l\'annonce');
 		define('nbvoyageursauthorized','Nombre de voyageurs permis');
 		define('superficie','Superficie (en m2)');
+		
+		define('nbvoyageurs','Nombre voyageurs');
+		define('television','Télévision');
+		define('yes','Oui');
+		define('no','Non');
+		define('localisation','Localisation');
+		//admin
+		define('editerunprofil','Editer profil utilisateur');
+		
+		//creer profil
+		define('profilcreertrue','Votre profil a bien été créé. Félicitations!');
+		define('errorcreateprofile','Une erreur est survenue lors de l\'élaboration du profil');
+		define('telverif','Le numéro de téléphone doit comporter 10 chiffres ou 14 avec l\'id du pays');
+		define('lastname','Nom');
+		define('firstname','Prénom');
+		//echange message
+		define('demandetransmise','Votre demande a bien été transmise !');
+		define('receiver','Destinataire');
 		}
 		else if ($lang=='en') 
 		{
@@ -292,6 +310,24 @@
 		define('titreannonce','Title of the announcement');
 		define('nbvoyageursauthorized','Number of traveller authorized');
 		define('superficie','Surface(in m2)');
+		
+		define('nbvoyageurs','Number of traveller');
+		define('television','Television');
+		define('yes','Yes');
+		define('no','No');
+		define('localisation','Localization');
+		//admin
+		define('editerunprofil','Editer user profile');
+		
+		//creer profil
+		define('profilcreertrue','Your profile has been sucessfully created. Congratulation!');
+		define('errorcreateprofile','An error has occurred during the profile creation');
+		define('telverif','Phone number must be 10  or 14 numbers with the country ID');
+		define('lastname','Lastname');
+		define('firstname','Firstname');
+		//echange message
+		define('demandetransmise','Your request has been successfully passed on!');
+		define('receiver','Receiver');
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -427,6 +463,24 @@
 		define('titreannonce','Titre de l\'annonce');
 		define('nbvoyageursauthorized','Nombre de voyageurs permis');
 		define('superficie','Superficie (en m2)');
+		
+		define('nbvoyageurs','Nombre voyageurs');
+		define('television','Télévision');
+		define('yes','Oui');
+		define('no','Non');
+		define('localisation','Localisation');
+		//admin
+		define('editerunprofil','Editer profil utilisateur');
+		
+		//creer profil
+		define('profilcreertrue','Votre profil a bien été créé. Félicitations!');
+		define('errorcreateprofile','Une erreur est survenue lors de l\'élaboration du profil');
+		define('telverif','Le numéro de téléphone doit comporter 10 chiffres ou 14 avec l\'id du pays');
+		define('lastname','Nom');
+		define('firstname','Prénom');
+		//echange message
+		define('demandetransmise','Votre demande a bien été transmise !');
+		define('receiver','Destinataire');
 		}
 		else if ($lang=='en') 
 		{  
@@ -559,6 +613,24 @@
 		define('titreannonce','Title of the announcement');
 		define('nbvoyageursauthorized','Number of traveller authorized');
 		define('superficie','Surface(in m2)');
+		
+		define('nbvoyageurs','Number of traveller');
+		define('television','Television');
+		define('yes','Yes');
+		define('no','No');
+		define('localisation','Localization');
+		//admin
+		define('editerunprofil','Editer user profile');
+		
+		//creer profil
+		define('profilcreertrue','Your profile has been sucessfully created. Congratulation!');
+		define('errorcreateprofile','An error has occurred during the profile creation');
+		define('telverif','Phone number must be 10  or 14 numbers with the country ID');
+		define('lastname','Lastname');
+		define('firstname','Firstname');
+		//echange message
+		define('demandetransmise','Your request has been successfully passed on!');
+		define('receiver','Receiver');
 		}
 	}
 	else
@@ -694,6 +766,24 @@
 		define('titreannonce','Titre de l\'annonce');
 		define('nbvoyageursauthorized','Nombre de voyageurs permis');
 		define('superficie','Superficie (en m2)');
+		
+		define('nbvoyageurs','Nombre voyageurs');
+		define('television','Télévision');
+		define('yes','Oui');
+		define('no','Non');
+		define('localisation','Localisation');
+		//admin
+		define('editerunprofil','Editer profil utilisateur');
+		
+		//creer profil
+		define('profilcreertrue','Votre profil a bien été créé. Félicitations!');
+		define('errorcreateprofile','Une erreur est survenue lors de l\'élaboration du profil');
+		define('telverif','Le numéro de téléphone doit comporter 10 chiffres ou 14 avec l\'id du pays');
+		define('lastname','Nom');
+		define('firstname','Prénom');
+		//echange message
+		define('demandetransmise','Votre demande a bien été transmise !');
+		define('receiver','Destinataire');
 	}
 	
 }

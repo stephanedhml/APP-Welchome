@@ -17,12 +17,12 @@ session_start();
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css" />
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
-        <title>Connection</title>
+        <title>Connexion</title>
     </head>
 
 	<body class="wood">
 		<div class="header">
-            <?php include("menus.php"); ?>
+			<?php include("menu.php"); ?>
 		</div>
         <div class="superglobal">
         <div class="global">

@@ -1,3 +1,4 @@
+<!--pas encore traduit -->
 <?php
 include("config.php");
 include("modeles.php");

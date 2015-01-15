@@ -28,6 +28,45 @@ session_start();
                 header ("Location: index.php");
                 exit();
             }
+            elseif (isset($_GET["demandeur"],$_GET["proprietaire"])) {
+            $demandeur = $_GET["demandeur"];
+            $proprietaire = $_GET["proprietaire"];
+
+            //Affiche les logements pour que l'utilisateur puisse choisir celui qu'il veut échanger
+
+            $ret = $bdd -> prepare("SELECT * FROM logement WHERE id_users=? ORDER BY id_logement DESC");
+            $ret -> execute(array($_SESSION["userid"]));
+            $nmber = $ret -> rowCount();
+
+            if (isset($_GET['logement'])) {} else {
+            ?>
+                <div class="forum_title"><h7>Choisissez le logement que vous souhaitez échanger</h7></div>
+                <div class="container_liste_logements"> <?php
+                for ($i=0 ; $i < $nmber ; $i++) {
+                    $house = $ret -> fetch();
+
+                    $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                    $pic -> execute(array($house[0]));
+                    $url_pic = $pic -> fetch();
+
+                    ?>
+                    <div class="cadre_logement">
+                        <div class="left_cadre_logement">
+                            <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo">' ?>
+                        </div>
+
+                        <div class="right_cadre_logement">
+                                    <span>
+                                    <a href="echg_msg.php?demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>"><?php echo $house["nom_maison"] ; ?></a>
+                                    <a href="echg_msg.php?demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>">
+                                        <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
+                                    </span>
+                        </div>
+                    </div><br/></div>
+
+                <?php } }
+
+
 
             if (isset($_POST["message"]))
             {
@@ -60,30 +99,22 @@ session_start();
                     $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
                     $nv -> execute(array($derid));
                     ?>
-                    <div class="no_msg"><h7>Votre demande a bien été transmise !</h7><br/><br/>
-                        <a href="index.php">Retourner à l'accueil</a></div>
+                    <div class="no_msg"><h7><?php echo demandetransmise; ?></h7><br/><br/>
+                        <a href="index.php"><?php echo retouraccueil; ?></a></div>
                 <?php
                 }
                 else
                 {
                     ?>
-                    <div>Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
-                    <a href="index.php">Retourner à l'accueil</a>
+                    <div><!-- pas traduit pour le moment -->Il y a eu un problème lors de l'envoi de votre message, veuillez r&#233;essayer.</div> <br/>
+                    <a href="index.php"><?php echo retouraccueil; ?></a>
                 <?php
                 }
 
             }
 
-            $req = $bdd -> prepare("SELECT username FROM users");
-            $req -> execute(array());
-            $nb = $req -> rowCount();
 
-            ?>
-
-            <?php
-                $demandeur = $_GET["demandeur"];
-                $proprietaire = $_GET["proprietaire"];
-                $logement = $_GET["logement"];
+            if (isset($_GET["logement"])) { $logement = $_GET["logement"];
             ?>
 
             <div class="cadre_msg">
@@ -97,6 +128,7 @@ session_start();
                 </div>
             </div>
         </div>
+            <?php } }?>
     </div>
 </div>
 </div>
