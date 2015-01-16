@@ -69,7 +69,7 @@
                  <div class="schema3">
                    <div class="h3">
                     <h3 class="h7">
-                    
+                    <h3>
                         <?php echo howwelchomework; ?>
                     </h3>
                    <div class="add3">

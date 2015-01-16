@@ -12,47 +12,35 @@
 
 .FAQ_tableau
 {
-margin-left: 2%;
-width: 46%;
+margin-left: 4%;
+width: 45%;
 float: left;
 background-color: white;
-border-radius: 4px;
-box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
-
 }
 
 .FAQ_tableau2
 {
 margin-left: 52%;
-margin-top: 6%;
-width: 46%;
+margin-top: 8%;
+width: 40%;
 background-color: white;
-min-height: 150px;
-border-radius: 4px;
-box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 
 }
 
 .FAQ_tableau3
 {
-margin-left: 2%;
-width: 46%;
+margin-left: 4%;
+width: 45%;
 float: left;
 background-color: white;
-border-radius: 4px;
-box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
-
 }
 
 .FAQ_tableau4
 {
 margin-left: 52%;
-width: 46%;
+width: 40%;
 background-color: white;
 position: 	absolute;
-border-radius: 4px;
-box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
-
 }
 
 .loupe
@@ -79,19 +67,17 @@ box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 
 .Tableau_rangee1
 {
-	min-height: 160px;
-	margin-bottom: 20px;
+	min-height: 200px;
 }
 
 .Tableau_rangee2
 {
-	min-height: 160px;
-	margin-bottom: 20px;
+	min-height: 200px;
 }
 
 .Tableau_rangee3
 {
-	min-height: 160px;
+	min-height: 200px;
 }
 
 .superglobal2

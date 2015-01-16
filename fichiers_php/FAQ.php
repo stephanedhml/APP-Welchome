@@ -43,7 +43,7 @@ jQuery(document).ready(function() {
 
 <div class="superglobal2">
     <div class="global">
-        <div class="forum_title"><h7>AIDE EN LIGNE</h7></div>
+        <div class="forum_title"><h7>Aide en ligne</h7></div>
 <div class="Tableau_rangee1">
 <div class="FAQ_tableau">
 
@@ -54,12 +54,12 @@ jQuery(document).ready(function() {
 
     <div class="more" style="display:none">
 
-        <p>Il est très facile de vous présenter et décrire votre maison à la communauté Welchome. Plus vous mettrez de photos en ligne, plus vous susciterez de confiance et d'intérêt. Des photos de bonne qualité valorisent votre offre.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Pour commencer</p></a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
 
     </div>
 
@@ -68,24 +68,24 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Choisissez parmi nos nombreuses offres, sauvegardez celles qui vous plaisent et  contacter les membres auteurs de ces offres grâce notre système de messagerie. Soyez proactif et répondez rapidement à tous les messages que vous recevrez.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Envoyez beaucoup de propositions</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
  
 
 <div class="toggle">
         <div class="more" style="display:none">
-        <p>Faites connaissance avec votre/vos partenaire(s) par courriel et par téléphone, mettez-vous d'accord sur les dates, réglez tous les détails.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Concluer un échange</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div></div>
     </div>
@@ -99,28 +99,38 @@ jQuery(document).ready(function() {
 
     <div class="more" style="display:none">
 
-        <p>Utilisez notre système de messagerie pour contacter les autres membres. Les messages que vous envoyez ou recevez sur le site sont conservés dans votre messagerie interne personnelle, tout comme les réponses que vous envoyez. Dès que vous échangez des messages avec une personne, elle rentre dans votre liste d'amis.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Comment contacter d'autres membres?</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
 
     </div>
 
 </div>
  
 
-
-
 <div class="toggle">
-        <div class="more" style="display:none">
-        <p>Lorsqu'un logement vous intéresse, appuyer sur "proposer un échange". Le propritaire sera ainsi notifier de votre demande et vous rentrerez un ainsi en contact avec lui.</p>
+    <div class="more" style="display:none">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment proposer un échange?</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
+    </div>
+</div>
+ 
+
+<div class="toggle">
+        <div class="more" style="display:none">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+    </div>
+    
+    <div class="less">
+        <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
     </div>
 </div></div>
@@ -135,12 +145,12 @@ jQuery(document).ready(function() {
 
     <div class="more" style="display:none">
 
-        <p>Votre profil vous permet de vous présenter, vous et votre famille, sur le site Trocmaison.com . Vous pouvez partager des informations sur vos centres d'intérêt, votre âge, votre profession, et le type d'échange dont vous rêvez. Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. Plus vous donnez d'informations sur votre profil, plus il vous sera facile de trouver le partenaire idéal pour échanger. </p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Mettre à jour son profil?</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
 
     </div>
 
@@ -149,33 +159,43 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Pour remplir son profil, ajouter ou modifier un logement, accédez à votre page profil via la barre menu et appuyer sur éditer votre profil dans la colonne à propos.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment changer son profil, ajouter ou modifier un logement?</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
  
 
-
+<div class="toggle">
+        <div class="more" style="display:none">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+    </div>
+    
+    <div class="less">
+        <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
+    </div>
+</div>
     </div> </div>
     </div>
 
     <div class="FAQ_tableau4">
-<img src="http://blog.r-no.fr/wp-content/uploads/2013/02/clavier-encre-electronique-1.jpg" class="loupe"><strong class="Titre_article">Recherche</strong>
+<img src="http://blog.r-no.fr/wp-content/uploads/2013/02/clavier-encre-electronique-1.jpg" class="loupe"><strong class="Titre_article">Recherches</strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Pour faire une recherche simple, rentrez une localisation ou le nom d'un logement dans la barre de recheche sur la page d'accueil.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Recherche simple</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
+
     </div>
 
 </div>
@@ -183,17 +203,26 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Pour rechercher un logement avec plus de précision, appuyer ou survoler le bouton recherche avancé.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Recherche précise</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
  
 
-
+<div class="toggle">
+        <div class="more" style="display:none">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+    </div>
+    
+    <div class="less">
+        <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
+    </div>
+    </div>
 </div>
     </div></div>
 
@@ -209,7 +238,8 @@ jQuery(document).ready(function() {
     
     <div class="less">
     	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
+
     </div>
 
 </div>
@@ -222,7 +252,7 @@ jQuery(document).ready(function() {
     
     <div class="less">
         <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
  
@@ -234,7 +264,7 @@ jQuery(document).ready(function() {
     
     <div class="less">
         <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
     </div>
@@ -252,7 +282,7 @@ jQuery(document).ready(function() {
     
     <div class="less">
     	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
 
     </div>
 
@@ -266,7 +296,7 @@ jQuery(document).ready(function() {
     
     <div class="less">
         <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
 </div>
  
@@ -278,7 +308,7 @@ jQuery(document).ready(function() {
     
     <div class="less">
         <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-less button-read" href="#read">Replier</a>
     </div>
     </div>
 </div>
