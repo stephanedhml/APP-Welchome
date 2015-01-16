@@ -77,7 +77,7 @@ session_start();
                         <th>Message</td>
                         <th>Date</td>
                         <th><?php echo statut; ?></th>
-                        <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {echo '<th>'.propositionaccept.'</th>';} ?>
+                        <?php if (isset($msg_recu[5]) AND $msg_recu[6]==1) {?> Accepter une discussion <?php } ?>
 
                     </tr>
 

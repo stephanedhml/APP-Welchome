@@ -1,22 +1,28 @@
 .voeux {
-    font-size: 35px;
+    font-size: 25px;
     font-family: century,arial,sans-serif;
     text-align: center;
     margin-bottom: 30px;
 }
 .demandes_logement {
     margin-top: 120px;
-    margin-left: 50%;
-    width: 50%;
+    margin-left: 33%;
+    width: 33%;
     position: absolute;
 }
 
 .owner_logement {
     margin-top: 120px;
-    width: 50%;
+    width: 33%;
     position: absolute;
 }
 
+.en_cours {
+    margin-top: 120px;
+    margin-left: 66%;
+    width: 33%;
+    position: absolute;
+}
 .img_gauche {
     width: 300px;
     height: 200px;
@@ -32,7 +38,7 @@
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
     height: 200px;
     position: relative;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
@@ -47,7 +53,7 @@
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
     height: 200px;
     position: relative;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
@@ -62,7 +68,7 @@
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
     height: 130px;
     position: relative;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
@@ -78,7 +84,7 @@
 }
 .list_info_user {
     margin-left: 325px;
-    padding-top: 12px;
+    padding-top: 5px;
 }
 
 .choice {
@@ -95,6 +101,26 @@
 }
 
 .choice a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: century,arial,sans-serif;
+}
+
+.end {
+    width: 80%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #f57c00;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+}
+
+.end a {
     text-decoration: none;
     color: white;
     font-size: 25px;

@@ -29,7 +29,7 @@ session_start();
         <?php
 
         //On récupère toutes les demandes d'échange de l'utilisateur
-        $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=?");
+        $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=? AND en_cours=0 ");
         $res -> execute(array($_SESSION['userid']));
         $nb_demands = $res -> rowCount();
 
@@ -81,9 +81,8 @@ session_start();
                                     </span>
                 </div>
             </div>
-            <div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer demande</a></div>
-
-            <?php
+            <?php if ($ech1['demandeur_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
+        <?php
 
             } ?>
             </div>
@@ -91,7 +90,7 @@ session_start();
                 <div class="voeux"><h7>Utilisateurs désirant échanger avec vous</h7></div>
             <?php
             //On récupère toutes les demandes d'échanges FAITES à l'utilisateur
-            $ret = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=?");
+            $ret = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=0 ");
             $ret -> execute(array($_SESSION['userid']));
             $nb_requests = $ret -> rowCount();
 
@@ -138,9 +137,54 @@ session_start();
                                     </span>
                         </div>
                     </div>
-                <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">Accepter demande</a></div>
+                <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">Commencer l'échange</a></div><?php } else {?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div><?php}?>
             <?php
             }
+            ?>
+            </div>
+                <div class="en_cours">
+                    <div class="voeux"<h7>Echanges en cours</h7></div>
+                    <?php
+
+                    //On récupère toutes les demandes d'échange de l'utilisateur
+                    $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=? AND en_cours=1 ");
+                    $res -> execute(array($_SESSION['userid']));
+                    $nb_en_cours = $res -> rowCount();
+
+                    //Liste logements demandés + lien cliquable qui envoie l'information de l'id du logement dont l'utilisateur souhaite valider l'échange
+
+                    for ($i=0;$i<$nb_en_cours;$i++) {
+                        $ech3 = $res -> fetch();
+                        //On récupère les informations sur le logement dont l'id est donné par la requête de l'échange
+                        $rep = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
+                        $rep -> execute(array($ech3['id_logement']));
+                        $house1 = $rep->fetch();
+                        //On récupère les photos du logement qu'on cherche
+                        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                        $pic -> execute(array($house1[0]));
+                        $url_pic1 = $pic -> fetch();
+
+                        ?>
+                        <div class="cadre_ask">
+                            <div class="img_gauche">
+                                <?php echo '<img width="300px" height="200px" align="left" src="'.$url_pic1['lien_photo'].'" class="photo">' ?>
+                            </div>
+
+                            <div class="right">
+                                    <span>
+                                    <a href="annonce.php?id_logement=<?php echo $house1['id_logement']; ?>&amp;id_users=<?php echo $house1['id_users'] ?>" >
+                                        <?php echo '<p>' .''.$house1['localisation']. ' </br>' . $house1['nombre_voyageurs']. ' voyageurs </br>' . $house1['type_logement'] . '</p>'; ?> </a><br/>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="end"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer la fin de l'échange</a></div>
+
+                    <?php
+
+                    } ?>
+                </div>
+<?php
+                }
             //On récupère l'information envoyée par le lien sur lequel peut cliquer le client (lien affiché dans les lignes qui suivent)
 
             if (isset($_GET['accept_demand'])) {
@@ -163,8 +207,6 @@ session_start();
                 }
             }
             ?>
-
-
-            </div>
+        </div>
         </div>
     </div>
