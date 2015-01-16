@@ -61,7 +61,7 @@ session_start();
                                     <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
                                 </td>
                                 <td class="column_msg_3"><?php echo $msg_recu[1]; ?></td>
-                                <?php if (isset($msg_recu[3]) AND $msg_recu[4]==1) {echo '<td class="column_msg_1"><form action="liremsg.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
+                                <?php if (isset($msg_recu[3]) AND $msg_recu[4]==1) {echo '<td class="column_msg_1"><form action="message.php?id=' . $_GET['id'] . '" method="post"><input type="submit" name="validation" value="Oui" class="bouton"><input type="submit" name="refus" value="Non" class="bouton"></td></form>' ;} ?><br/>
                             </tr>
                         </table> <br/>
                     <?php

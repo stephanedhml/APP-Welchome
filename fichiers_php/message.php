@@ -112,7 +112,7 @@ session_start();
                     if (isset($_POST['validation'])) {
                         $ret = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
                         $ret -> execute(array($msg_recu[0]));
-                        $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"],$ech['id_logement']);
+                        $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"],$ech['id_logement'],$ech['id_logement_asked']);
 
                         $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
                         $res -> execute(array($_GET['id']));

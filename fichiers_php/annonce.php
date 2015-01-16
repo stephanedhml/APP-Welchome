@@ -153,7 +153,11 @@
                 <button type="button" onclick="self.location.href='profil.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>'" class="bouton"><?php echo consultprofil; ?></button>
                      <?php if(isset($_SESSION['userid']) AND $friend[0]==1) {
                      }
-                     elseif (isset($_SESSION['userid']) AND $stalk[0]!=NULL) {
+                     elseif (isset($_SESSION['userid']) AND $stalk['user1']!=0) {
+                     }
+                     elseif (isset($_SESSION['userid']) AND $stalk['end_ech']=1 AND strcasecmp($_SESSION['userid'],$_GET['id_users']) !== 0) {?>
+                         <button type="button" class="bouton" onclick="window.location='echg_msg.php?id_logement_asked=<?php echo $_GET['id_logement']; ?>&demandeur=<?php echo $_SESSION["userid"]; ?>&proprietaire=<?php echo $donnees1["id_users"]; ?>'"><?php echo proposeechange; ?></button>
+                     <?php
                      }
                      elseif (isset($_SESSION['userid']) AND strcasecmp($_SESSION['userid'],$_GET['id_users']) == 0) {
                      }

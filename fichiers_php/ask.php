@@ -165,6 +165,10 @@ session_start();
                             $req = $bdd -> prepare("UPDATE echange SET end_ech = 1 WHERE id_logement=?");
                             $req -> execute(array($_GET['id_logement']));
                         }
+                        if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
+                            $req = $bdd -> prepare("UPDATE echange SET user1 = 0 AND user2 = 0 WHERE id_logement=?");
+                            $req -> execute(array($_GET['id_logement']));
+                        }
                     }
                     //On récupère toutes les demandes d'échange de l'utilisateur
                     $res = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=1 AND end_ech!=1 ");
@@ -221,6 +225,10 @@ session_start();
                         //Si les deux parties ont validé l'échange, alors l'échange est en cours :
                         if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
                             $req = $bdd -> prepare("UPDATE echange SET end_ech = 1 WHERE id_logement_asked=?");
+                            $req -> execute(array($_GET['id_logement']));
+                        }
+                        if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
+                            $req = $bdd -> prepare("UPDATE echange SET user1 = 0 AND user2 = 0 WHERE id_logement=?");
                             $req -> execute(array($_GET['id_logement']));
                         }
                     }

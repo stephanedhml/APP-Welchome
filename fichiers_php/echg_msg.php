@@ -57,8 +57,8 @@ session_start();
 
                         <div class="right_cadre_logement">
                                     <span>
-                                    <a href="echg_msg.php?demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>"><?php echo $house["nom_maison"] ; ?></a>
-                                    <a href="echg_msg.php?demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>">
+                                    <a href="echg_msg.php?id_logement_asked=<?php echo $_GET['id_logement_asked']; ?>&demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>"><?php echo $house["nom_maison"] ; ?></a>
+                                    <a href="echg_msg.php?id_logement_asked=<?php echo $_GET['id_logement_asked']; ?>&demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>">
                                         <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
                         </div>
@@ -66,21 +66,34 @@ session_start();
 
                 <?php } }
 
-
-
             if (isset($_POST["message"]))
             {
+                //On vérifie si l'utilisateur a déjà échangé cette maison avec cet utilisateur, si c'est le cas alors on supprime l'info "a déjà échangé telle maison avec tel utilisateur"
+                $rer = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement_asked");
+                $rer -> execute(array(
+                    'id_demandeur' => $_SESSION['userid'],
+                    'id_logement_asked' => $_GET['id_logement_asked'],
+                ));
+                $already = $rer -> fetch();
+
+                if (isset($already['end_ech']) AND $already['end_ech']==1) {
+                    $del = $bdd -> prepare("DELETE FROM echange WHERE id_echange=?");
+                    $del -> execute(array($already['id_echange']));
+                }
+
+                //On traite le formulaire
                 $message = $_POST["message"];
                 $userid = $_SESSION["userid"];
 
 
-            $req = $bdd -> prepare('INSERT INTO echange(id_demandeur, id_proprietaire, id_logement, date_update, user1) VALUES(:demandeur, :proprietaire, :logement, :date_update,:user1_want)');
+            $req = $bdd -> prepare('INSERT INTO echange(id_demandeur, id_proprietaire, id_logement, date_update, user1,id_logement_asked) VALUES(:demandeur, :proprietaire, :logement, :date_update,:user1_want,:id_logement_asked)');
             $req -> execute(array(
                 "demandeur" => $_GET['demandeur'],
                 "proprietaire" => $_GET['proprietaire'],
                 "logement" => $_GET['logement'],
                 "date_update" => date("Y-m-d H:i:s"),
                 "user1_want" => 1,
+                "id_logement_asked" => $_GET['id_logement_asked'],
             ));
 
             $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message,echange,choix) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange, :choix)");
@@ -120,7 +133,7 @@ session_start();
             <div class="cadre_msg">
             <div class="contentg">
                 <div class="answer1">
-                    <form action="echg_msg.php?demandeur=<?php echo $demandeur;?>&proprietaire=<?php echo $proprietaire; ?>&logement=<?php echo $logement ;?>" method="post" xmlns="http://www.w3.org/1999/html">
+                    <form action="echg_msg.php?id_logement_asked=<?php echo $_GET['id_logement_asked']; ?>&demandeur=<?php echo $demandeur;?>&proprietaire=<?php echo $proprietaire; ?>&logement=<?php echo $logement ;?>" method="post" xmlns="http://www.w3.org/1999/html">
                         <label for="message" >Message</label ><br /></br >
                         <textarea type = "text" name = "message" class="post_message" ></textarea ><br /><br />
                         <input type = "submit" value = "Envoyer" id = "btn_connexion" /><br /><br />
