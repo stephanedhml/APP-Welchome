@@ -21,7 +21,7 @@ function check_new_msg()
         ));
         $id_log = $req -> fetch();
 ?>
-        <li><a class="cl" style="width: 100px;" href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
+        <li><a class="cl" style="width: 100px;" href="edit_profile.php?id_user=id_user=<?php echo $_SESSION['userid']?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
         <?php echo check_new_msg() ?>
 		<li><a class="cl" href="connexion.php"  onclick="return deconnect()"><?php echo disconnect ?></a></li>
 <?php

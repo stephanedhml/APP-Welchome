@@ -552,15 +552,31 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
     <?php
         if (isset($_GET['choix'])) {echo "";} else {
+
+            //Récupérer les infos utilisateurs pour le rediriger vers son profil
+            $req = $bdd -> prepare("SELECT id_logement FROM logement WHERE id_users=:id_user ORDER BY id_logement DESC");
+            $req -> execute(array(
+                'id_user' => $_SESSION['userid'],
+            ));
+            $id_log = $req -> fetch();
     ?>
-            <div class="left_3">
-                <div class="left_carre"><a href="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo editprofile; ?></p></a></div>
+            <div class="left_3_top">
+                <div class="left_carre_top"><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>"><p>Consulter votre profil</p></a></div>
             </div>
-            <div class="center_3">
-                <div class="center_carre"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo modifytenement; ?></p></a></div>
+            <div class="center_3_top">
+                <div class="center_carre_top"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo modifytenement; ?></p></a></div>
             </div>
-            <div class="right_3">
-                <div class="right_carre"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo addtenement; ?></p></a></div>
+            <div class="right_3_top">
+                <div class="right_carre_top"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo addtenement; ?></p></a></div>
+            </div>
+            <div class="left_3_bot">
+                <div class="left_carre_bot"><a href="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo editprofile; ?></p></a></div>
+            </div>
+            <div class="center_3_bot">
+                <div class="center_carre_bot"><a href="ask.php"><p>Confirmation Validation</p></a></div>
+            </div>
+            <div class="right_3_bot">
+                <div class="right_carre_bot"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p>Amis</p></a></div>
             </div>
     <?php } ?>
 
