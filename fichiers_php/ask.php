@@ -137,7 +137,7 @@ session_start();
                                     </span>
                         </div>
                     </div>
-                <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">Commencer l'échange</a></div><?php } else {?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div><?php}?>
+                <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
             <?php
             }
             ?>
@@ -184,7 +184,6 @@ session_start();
                     } ?>
                 </div>
 <?php
-                }
             //On récupère l'information envoyée par le lien sur lequel peut cliquer le client (lien affiché dans les lignes qui suivent)
 
             if (isset($_GET['accept_demand'])) {
