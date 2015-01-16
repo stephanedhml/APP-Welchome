@@ -145,7 +145,85 @@ session_start();
                 <div class="en_cours">
                     <div class="voeux"<h7>Echanges en cours</h7></div>
                     <?php
+                    //Partie PROPRIETAIRE à l'origine
+                    if (isset($_GET['end_proprio'])) {
 
+                        $req = $bdd -> prepare("UPDATE echange SET demandeur_has_visited=1 WHERE id_proprietaire=:id_proprietaire AND id_logement=:id_logement");
+                        $req -> execute(array(
+                            'id_proprietaire' => $_SESSION['userid'],
+                            'id_logement' => $_GET['id_logement'],
+                        ));
+                        //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
+                        $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement=:id_logement");
+                        $retb -> execute(array(
+                            'id_demandeur' => $_SESSION['userid'],
+                            'id_logement' => $_GET['id_logement'],
+                        ));
+                        $ech2bis = $retb -> fetch();
+                        //Si les deux parties ont validé l'échange, alors l'échange est en cours :
+                        if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
+                            $req = $bdd -> prepare("UPDATE echange SET end_ech = 1 WHERE id_logement=?");
+                            $req -> execute(array($_GET['id_logement']));
+                        }
+                    }
+                    //On récupère toutes les demandes d'échange de l'utilisateur
+                    $res = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=1 ");
+                    $res -> execute(array($_SESSION['userid']));
+                    $nb_en_cours = $res -> rowCount();
+
+                    //Liste logements demandés + lien cliquable qui envoie l'information de l'id du logement dont l'utilisateur souhaite valider l'échange
+
+                    for ($i=0;$i<$nb_en_cours;$i++) {
+                        $ech3 = $res -> fetch();
+                        //On récupère les informations sur le logement dont l'id est donné par la requête de l'échange
+                        $rep = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
+                        $rep -> execute(array($ech3['id_logement']));
+                        $house1 = $rep->fetch();
+                        //On récupère les photos du logement qu'on cherche
+                        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                        $pic -> execute(array($house1[0]));
+                        $url_pic1 = $pic -> fetch();
+
+                        ?>
+                        <div class="cadre_ask">
+                            <div class="img_gauche">
+                                <?php echo '<img width="300px" height="200px" align="left" src="'.$url_pic1['lien_photo'].'" class="photo">' ?>
+                            </div>
+
+                            <div class="right">
+                                    <span>
+                                    <a href="annonce.php?id_logement=<?php echo $house1['id_logement']; ?>&amp;id_users=<?php echo $house1['id_users'] ?>" >
+                                        <?php echo '<p>' .''.$house1['localisation']. ' </br>' . $house1['nombre_voyageurs']. ' voyageurs </br>' . $house1['type_logement'] . '</p>'; ?> </a><br/>
+                                    </span>
+                            </div>
+                        </div>
+                        <?php if ($ech3['demandeur_has_visited']!=1) { ?><div class="end"><a href="ask.php?end_proprio&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer la fin de l'échange</a></div><?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
+
+                    <?php
+
+                    } ?>
+        <?php
+                    //Partie DEMANDEUR (à l'origine)
+                    if (isset($_GET['end_demandeur'])) {
+
+                        $req = $bdd -> prepare("UPDATE echange SET proprietaire_has_visited=1 WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement");
+                        $req -> execute(array(
+                            'id_demandeur' => $_SESSION['userid'],
+                            'id_logement' => $_GET['id_logement'],
+                        ));
+                        //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
+                        $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement");
+                        $retb -> execute(array(
+                            'id_demandeur' => $_SESSION['userid'],
+                            'id_logement' => $_GET['id_logement'],
+                        ));
+                        $ech2bis = $retb -> fetch();
+                        //Si les deux parties ont validé l'échange, alors l'échange est en cours :
+                        if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
+                            $req = $bdd -> prepare("UPDATE echange SET end_ech = 1 WHERE id_logement_asked=?");
+                            $req -> execute(array($_GET['id_logement']));
+                        }
+                    }
                     //On récupère toutes les demandes d'échange de l'utilisateur
                     $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=? AND en_cours=1 ");
                     $res -> execute(array($_SESSION['userid']));
@@ -177,7 +255,7 @@ session_start();
                                     </span>
                             </div>
                         </div>
-                        <div class="end"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer la fin de l'échange</a></div>
+                        <?php if ($ech3['proprietaire_has_visited']!=1) { ?><div class="end"><a href="ask.php?end_demandeur&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer la fin de l'échange</a></div><?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
 
                     <?php
 
