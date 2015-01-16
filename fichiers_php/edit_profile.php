@@ -216,18 +216,29 @@ if (isset($_GET["update"])) {
         ));
     }
 
+ $critere =$bdd->query("SELECT * FROM equipement ");
+            
+                while ($do=$critere->fetch())   
 
-    if (isset($_POST["television"]) AND $_POST["television"] !=NULL) {
-        if ($_POST["television"] == 'Oui') {
-            $tele = 1;
-        } else {
-            $tele = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET television=:television WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'television' => $tele,
-            'id_logement' => $_GET['choix_logement'],
-        ));
+
+                { 
+
+    if (isset($_POST[$do[1]]) AND $_POST[$do[1]] != NULL) {
+        if ($_POST["$do[1]"] == 'oui') {
+            
+        
+        $rez=$bdd->prepare ("INSERT INTO annonce_equipement VALUES (:id_logement, :id_equipement)");
+        $rez->execute(array(
+            "id_logement"=>$_GET['id_logement'],
+            "id_equipement"=>$do[0],
+
+            ));
+
+        
+        }}
+    
+        
+
     }
 
     
@@ -391,8 +402,8 @@ if (isset($_GET["update"])) {
 
                 { 
 
-    if (isset($_POST["$do[0]") AND $_POST["$do[0]"] != NULL) {
-        if ($_POST["$do[0]"] == 'Oui') {
+    if (isset($_POST[$do[0]]) AND $_POST[$do[0]] != NULL) {
+        if ($_POST["$do[0]"] == 'oui') {
             
         
         $rez=$bdd->prepare ("INSERT INTO annonce_equipement VALUES (:id_logement, :id_equipement)");
@@ -403,10 +414,10 @@ if (isset($_GET["update"])) {
             ));
 
         
-        }
+        }}
     
-        }
         
+
     }
 
     
@@ -553,11 +564,11 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                     
                     
                         
-                        <label for="test"> <?php echo $do[0] ?></label><br/>
-            <select name="test1">
+                        <label for="equipement"> <?php echo $do[0] ?></label><br/>
+            <select name="<?php echo $do[0] ?>">
                 <OPTION></option>
-                <OPTION>yes</option>
-                <OPTION>no</option>
+                <OPTION>oui</option>
+                <OPTION>non</option>
             </select><br/>
                     
 
@@ -667,8 +678,8 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                     
                     
                         
-                        <label for="test"> <?php echo $do[0] ?></label><br/>
-            <select name="test1">
+                        <label for="equipement"> <?php echo $do[0] ?></label><br/>
+            <select name="<?php echo $do[0] ?>">
                 <OPTION></option>
                 <OPTION>oui</option>
                 <OPTION>non</option>
