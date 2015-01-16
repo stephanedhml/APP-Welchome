@@ -1,0 +1,100 @@
+.voeux {
+    font-size: 35px;
+    font-family: century,arial,sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.demandes_logement {
+    margin-top: 120px;
+    margin-left: 50%;
+    width: 50%;
+    position: absolute;
+}
+
+.owner_logement {
+    margin-top: 120px;
+    width: 50%;
+    position: absolute;
+}
+
+.img_gauche {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+}
+
+.cadre_ask
+{
+    border-width:1px;
+    border-color:black;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+    height: 200px;
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.cadre_ask_want
+{
+    border-width:1px;
+    border-color:black;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+    height: 200px;
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.user_want
+{
+    border-width:1px;
+    border-color:black;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+    height: 130px;
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.img_member_ask {
+    border-radius:65px;
+    width:120px;
+    height:120px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 80px;
+}
+.list_info_user {
+    margin-left: 325px;
+    padding-top: 12px;
+}
+
+.choice {
+    width: 80%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #AD1F1F;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+}
+
+.choice a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: century,arial,sans-serif;
+}
