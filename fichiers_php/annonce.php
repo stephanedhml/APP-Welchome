@@ -246,7 +246,15 @@
 
                 <?php }} ?>
                 <?php
-                if  (isset($_SESSION['userid']) AND $friend[0]==1) {
+                if  (isset($_SESSION['userid'])) {
+                    $req = $bdd -> prepare("SELECT * FROM echange WHERE id_logement=:id_logement OR id_logement_asked=:id_logement_asked");
+                    $req -> execute(array(
+                        'id_logement' => $_GET['id_logement'],
+                        'id_logement_asked' => $_GET['id_logement'],
+                    ));
+                    $com = $req -> fetch();
+                    if ($com['end_ech']==1) {
+                    if (strcmp($_SESSION['userid'],$com['id_demandeur'])==0 OR strcmp($_SESSION['userid'],$com['id_proprietaire'])==0) {
                 ?>
                 <div class="cadre_answer_post_annonce" >
                     <div class="answer1" >
@@ -257,7 +265,7 @@
                         </form >
                     </div >
                 </div>
-                <?php } ?>
+                <?php } } } ?>
         </div>
         </div>
     </div>
