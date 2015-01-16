@@ -19,8 +19,8 @@ function check_new_msg()
         $req -> execute(array(
             'id_user' => $_SESSION['userid'],
         ));
-        $id_log = $req -> fetch();
-?>
+        $id_log = $req -> fetch(); ?>
+        <li><a href="FAQ.php" class="btn_FAQ cl"><?php echo faq;?></a></li>
         <li><a class="cl" style="width: 100px;" href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>" class="btn_PROFIL"><?php echo profil; ?></a></li>
         <?php echo check_new_msg() ?>
 		<li><a class="cl" href="connexion.php"  onclick="return deconnect()"><?php echo disconnect ?></a></li>

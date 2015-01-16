@@ -88,44 +88,35 @@ session_start();
         <input type="checkbox" name="case011" id="case" value="balcon"/> <label for="case"><?php echo balcon;?></label><br/>
         <input type="checkbox" name="case012" id="case" value="wifi"/> <label for="case"><?php echo internet;?></label><br/><br/></p> -->
 
-            <label for="television"><?php echo tele; ?></label><br/>
-            <select name="television">
+            <?php       
+            $critere =$bdd->query("SELECT nom FROM equipement ");
+            
+            ?>
+            <?php 
+
+                while ($do=$critere->fetch())   
+
+
+                { ?>
+                    
+                    
+                        
+                        <label for="test"> <?php echo $do[0] ?></label><br/>
+            <select name="test1">
                 <OPTION></option>
-                <OPTION><?php echo yes; ?></option>
-                <OPTION><?php echo no; ?></option>
+                <OPTION>yes</option>
+                <OPTION>no</option>
             </select><br/>
-            <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
-            <select name="machine_a_laver">
-                <OPTION></option>
-                <OPTION><?php echo yes; ?></option>
-                <OPTION><?php echo no; ?></option>
-            </select><br/>
-            <label for="parking"><?php echo parking; ?></label><br/>
-            <select name="parking">
-                <OPTION></option>
-                <OPTION><?php echo yes; ?></option>
-                <OPTION><?php echo no; ?></option>
-            </select><br/>
-            <label for="climatisation"><?php echo climatisation; ?></label><br/>
-            <select name="climatisation">
-                <OPTION></option>
-                <OPTION><?php echo yes; ?></option>
-                <OPTION><?php echo no; ?></option>
-            </select><br/>
-            <label for="piscine"><?php echo piscine; ?></label><br/>
-            <select name="piscine">
-                <OPTION></option>
-                <OPTION><?php echo yes; ?></option>
-                <OPTION><?php echo no; ?></option>
-            </select><br/>
-            <label for="jardin"><?php echo jardin; ?></label><br/>
-            <select name="jardin">
-                <OPTION></option>
-                <OPTION><?php echo yes; ?></option>
-                <OPTION><?php echo no; ?></option>
-            </select><br/>
+                    
+
+           <?php }
+           ?>
+          
 
             <p><input type="submit" value="<?php echo valider;?>" id="btn_valider"/></p><br/>
+
+            
+
 
     </div>
 </div>

@@ -216,6 +216,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
+
     if (isset($_POST["television"]) AND $_POST["television"] !=NULL) {
         if ($_POST["television"] == 'Oui') {
             $tele = 1;
@@ -229,69 +230,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["machine_a_laver"]) AND $_POST["machine_a_laver"] !=NULL) {
-        if ($_POST["machine_a_laver"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET machine_a_laver=:machine_a_laver WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'machine_a_laver' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
-
-    if (isset($_POST["parking"]) AND $_POST["parking"] !=NULL) {
-        if ($_POST["parking"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET parking=:parking WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'parking' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
-    if (isset($_POST["climatisation"]) AND $_POST["climatisation"] != NULL) {
-        if ($_POST["climatisation"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["climatisation"] == 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET climatisation=:climatisation WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'climatisation' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
-
-    if (isset($_POST["piscine"]) AND $_POST["piscine"] !=NULL) {
-        if ($_POST["piscine"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET piscine=:piscine WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'piscine' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
-
-    if (isset($_POST["jardin"]) AND $_POST["jardin"] !=NULL) {
-        if ($_POST["jardin"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET jardin=:jardin WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'jardin' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
+    
 
 }
 
@@ -445,83 +384,34 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["television"]) AND $_POST["television"] != NULL) {
-        if ($_POST["television"] == 'Oui') {
-            $tele = 1;
-        } else {
-            $tele = 0;
+        $critere =$bdd->query("SELECT * FROM equipement ");
+            
+                while ($do=$critere->fetch())   
+
+
+                { 
+
+    if (isset($_POST["$do[0]") AND $_POST["$do[0]"] != NULL) {
+        if ($_POST["$do[0]"] == 'Oui') {
+            
+        
+        $rez=$bdd->prepare ("INSERT INTO annonce_equipement VALUES (:id_logement, :id_equipement)");
+        $rez->execute(array(
+            "id_logement"=>$_GET['id_logement'],
+            "id_equipement"=>$do[0],
+
+            ));
+
+        
         }
-        $desc = $bdd->prepare("UPDATE logement SET television=:television WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'television' => $tele,
-            'id_logement' => $new_logement,
-        ));
+    
+        }
+        
     }
 
-    if (isset($_POST["machine_a_laver"]) AND $_POST["machine_a_laver"] != NULL) {
-        if ($_POST["machine_a_laver"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET machine_a_laver=:machine_a_laver WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'machine_a_laver' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
+    
 
-    if (isset($_POST["parking"]) AND $_POST["parking"] != NULL) {
-        if ($_POST["parking"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET parking=:parking WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'parking' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
-
-    if (isset($_POST["climatisation"]) AND $_POST["climatisation"] != NULL) {
-        if ($_POST["climatisation"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET climatisation=:climatisation WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'climatisation' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
-
-    if (isset($_POST["piscine"]) AND $_POST["piscine"] != NULL) {
-        if ($_POST["piscine"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET piscine=:piscine WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'piscine' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
-
-    if (isset($_POST["jardin"]) AND $_POST["jardin"] != NULL) {
-        if ($_POST["jardin"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET jardin=:jardin WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'jardin' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
+    
 
 }
 elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement"], $_POST["type_logement"], $_POST["nombre_chambres"], $_POST["nb_salles_bains"]) AND $_POST["localisation"] == NULL AND $_POST["description_logement"] == NULL AND $_POST["type_logement"] == NULL AND $_POST["nombre_chambres"] == NULL AND $_POST["nb_salles_bains"] == NULL) {?> <div class="forum_title"><h7>Vous n'avez pas renseigné tous les champs obligatoires (avec des *)</h7></div> <?php } ?>
@@ -650,42 +540,29 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
     <div class="bloc_search_center">
 
-        <label for="television"><?php echo television; ?></label><br/>
-        <select name="television">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
-        <select name="machine_a_laver">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="parking"><?php echo parking; ?></label><br/>
-        <select name="parking">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="climatisation"><?php echo climatisation; ?></label><br/>
-        <select name="climatisation">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="piscine"><?php echo piscine; ?></label><br/>
-        <select name="piscine">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="jardin"><?php echo jardin ?></label><br/>
-        <select name="jardin">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
+        <?php       
+            $critere =$bdd->query("SELECT nom FROM equipement ");
+            
+            ?>
+            <?php 
+
+                while ($do=$critere->fetch())   
+
+
+                { ?>
+                    
+                    
+                        
+                        <label for="test"> <?php echo $do[0] ?></label><br/>
+            <select name="test1">
+                <OPTION></option>
+                <OPTION>yes</option>
+                <OPTION>no</option>
+            </select><br/>
+                    
+
+           <?php }
+           ?>
 
         <!-- CHAMPS POUR DATES DISPO LOGEMENT
         <label for="date_début_disponibilite">Date de début de disponibilité</label><br/>
@@ -777,43 +654,29 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
             <div class="bloc_search_center">
 
-               <label for="television"><?php echo television; ?></label><br/>
-        <select name="television">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
-        <select name="machine_a_laver">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="parking"><?php echo parking; ?></label><br/>
-        <select name="parking">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="climatisation"><?php echo climatisation; ?></label><br/>
-        <select name="climatisation">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="piscine"><?php echo piscine; ?></label><br/>
-        <select name="piscine">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="jardin"><?php echo jardin ?></label><br/>
-        <select name="jardin">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
+                    <?php       
+            $critere =$bdd->query("SELECT nom FROM equipement ");
+            
+            ?>
+            <?php 
 
+                while ($do=$critere->fetch())   
+
+
+                { ?>
+                    
+                    
+                        
+                        <label for="test"> <?php echo $do[0] ?></label><br/>
+            <select name="test1">
+                <OPTION></option>
+                <OPTION>oui</option>
+                <OPTION>non</option>
+            </select><br/>
+                    
+
+           <?php }
+           ?>
 
                 <!-- CHAMPS POUR DATES DISPO LOGEMENT
                 <label for="date_début_disponibilite">Date de début de disponibilité</label><br/>
