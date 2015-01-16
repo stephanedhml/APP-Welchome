@@ -383,6 +383,14 @@ display: inline;
     margin-top: 3px;
     width: 1200px;
 }
+.tableau_last_com_annonce {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 3px;
+    width: 1200px;
+}
 blockquote {
 
     quotes: "«" "»";

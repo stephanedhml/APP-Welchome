@@ -197,11 +197,11 @@
                         <img src="<?php echo $url_pic['lien_photo'] ?>">
                     </div>
                     <div class="description_pic">
-                        <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
+                        <?php if (strcasecmp($un["id_users"],NULL) == 0) {} else { ?><img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
                         <a class="Norma1" href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un['username']; ?></a>
                         <blockquote><p style="margin-left: 30px;"><?php echo $com['message'] ?></p></blockquote>
                     </div>
-                    <?php } ?>
+                    <?php }} ?>
                 </div>
                 <?php
                 for ($i=0;$i<$nb_coms;$i++) {
@@ -210,7 +210,31 @@
                 $quser -> execute(array($com['id_expediteur']));
                 $un = $quser -> fetch();
                 ?>
-                <table class="tableau_com_annonce">
+
+                <?php
+                if ($i<$nb_coms-1) {
+                    ?>
+                    <table class="tableau_com_annonce">
+                        <tr>
+                            <td class="column_msg_1">
+                                <img src='<?php echo $un["avatar"]; ?>' class='img_member'><br/>
+
+                                <p>
+                                    <a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a>
+                                </p>
+                            </td>
+                            <td class="column_msg_3">
+                                <blockquote><p
+                                        style="margin-left: 40px; width: 800px;"><?php echo $com['message']; ?></p>
+                                </blockquote>
+                            </td>
+                        </tr>
+                    </table>
+                <?php
+                }
+                    if ($i=$nb_coms) {
+                ?>
+                <table class="tableau_last_com_annonce">
                     <tr>
                         <td class="column_msg_1">
                             <img src='<?php echo $un["avatar"];?>' class='img_member'><br/>
@@ -220,7 +244,7 @@
                     </tr>
                 </table>
 
-                <?php } ?>
+                <?php }} ?>
                 <?php
                 if  (isset($_SESSION['userid']) AND $friend[0]==1) {
                 ?>
@@ -228,7 +252,7 @@
                     <div class="answer1" >
                         <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
                             <label for="message" >Message</label ><br /></br >
-                            <textarea type = "text" name = "message" class="post_message" ></textarea ><br /><br />
+                            <textarea type = "text" name = "message" class="post_message" value="Ecrivez votre commentaire en 300 caractères max" maxlength="300"></textarea ><br /><br />
                             <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
                         </form >
                     </div >

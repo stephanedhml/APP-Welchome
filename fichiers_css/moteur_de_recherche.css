@@ -37,8 +37,9 @@ body
 .right {
     position: absolute;
     padding-left: 325px;
-    height: 200px;
+    height: 150px;
     padding-top: 4%;
+    overflow: hidden;
 }
 .recherche p {
     margin: 0px;

@@ -54,7 +54,7 @@ jQuery(document).ready(function() {
 
     <div class="more" style="display:none">
 
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">
@@ -99,7 +99,7 @@ jQuery(document).ready(function() {
 
     <div class="more" style="display:none">
 
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
     </div>
     
     <div class="less">

@@ -5,7 +5,7 @@
 					</h1>
 					<div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
+							<input type="text" name="requete" placeholder="<?php echo htmlspecialchars(choixdestination); ?>"
 							id="recherche_simple" /> 		
 							<input type="submit" id="input" value="Rechercher">
 
@@ -20,7 +20,7 @@
 					</h1>
                     <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post" s>
-							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
+							<input type="text" name="requete" placeholder="<?php echo htmlspecialchars(choixdestination); ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
@@ -34,7 +34,7 @@
 					</h1>
                     <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
+							<input type="text" name="requete" placeholder="<?php echo htmlspecialchars(choixdestination); ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
@@ -48,7 +48,7 @@
 					</h1>
                     <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
+							<input type="text" name="requete" placeholder="<?php echo htmlspecialchars(choixdestination); ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>
@@ -62,7 +62,7 @@
 					</h1>
                     <div class="search_bar">
 						<form action="moteur_de_recherche.php" method="Post">
-							<input type="text" name="requete" placeholder="<?php echo choixdestination; ?>"
+							<input type="text" name="requete" placeholder="<?php echo htmlspecialchars(choixdestination); ?>"
 							id="recherche_simple" />
 							<input type="submit" id="input" value="Rechercher">
 						</form>

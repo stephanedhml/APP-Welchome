@@ -568,7 +568,7 @@
 		//connexion inscription deconnexion
 		define('profil','Profile');
 		define('disconnect','Disconnect');
-		define('faq','FLQ');
+		define('faq','FAQ');
 		define('register','Register');
 		//Accueil
 		define ('intro','Find a tenement that fits you');

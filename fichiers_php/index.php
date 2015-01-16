@@ -8,13 +8,10 @@
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 		<link rel="stylesheet" href="../style.css" />
-		<script type="text/javascript" src="../carrousel/jquery.js"></script>
-		<script type="text/javascript" src="../carrousel/carrousel.js"></script>
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+		<script type="text/javascript" src="../fichier_js/carrousel.js"></script>
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<link rel="stylesheet" href="../carrousel_annonce/derniereannonce.css" />
-<script type="text/javascript" src="../carrousel/carrousel1.js"></script>
-<script type="text/javascript" src="../carrousel/carrousel2.js"></script>
-<script type="text/javascript" src="../carrousel/carrousel3.js"></script>
 		<title>Accueil</title>
 	</head>
 	
