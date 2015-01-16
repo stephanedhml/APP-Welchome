@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/ajout_photo.js" afterPath="$PROJECT_DIR$/fichier_js/ajout_photo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/config.php" afterPath="$PROJECT_DIR$/fichiers_php/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/edit_profile.css" afterPath="$PROJECT_DIR$/fichiers_css/edit_profile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/edit_profile.php" afterPath="$PROJECT_DIR$/fichiers_php/edit_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/inscription.js" afterPath="$PROJECT_DIR$/fichier_js/inscription.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -483,12 +478,6 @@
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
     </task>
-    <task id="LOCAL-00060" summary="Changement du nom de la page principale et modification de la nature des formulaires de texte">
-      <created>1420825965632</created>
-      <option name="number" value="00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1420825965632</updated>
-    </task>
     <task id="LOCAL-00061" summary="correction de soucis dans la barre de menu">
       <created>1420826445604</created>
       <option name="number" value="00061" />
@@ -777,7 +766,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421318958687</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="javascript sur edit profil&#10;">
+      <created>1421412399756</created>
+      <option name="number" value="00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1421412399757</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -787,6 +782,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36151278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16833206" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4605067" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1913646" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -795,7 +791,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -823,7 +818,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Ajout de la possibilité d'ajouter plusieurs logements dans la page d'édition du profil" />
     <MESSAGE value="Lien permettant de mettre l'image dans les bonnes proportions pour un rendu optimal sur le site" />
     <MESSAGE value="Ajout des différents logements qu'un utilisateur possède dans la page de profil" />
     <MESSAGE value="Correction d'un problème dans l'édition des critères d'un logement" />
@@ -848,7 +842,8 @@
     <MESSAGE value="Correction barre de recherche&#10;" />
     <MESSAGE value="correction légère css barre menu&#10;" />
     <MESSAGE value="inscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="inscription" />
+    <MESSAGE value="javascript sur edit profil&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="javascript sur edit profil&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1149,6 +1144,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="304">
           <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
