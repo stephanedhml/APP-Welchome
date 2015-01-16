@@ -478,12 +478,6 @@
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
     </task>
-    <task id="LOCAL-00061" summary="correction de soucis dans la barre de menu">
-      <created>1420826445604</created>
-      <option name="number" value="00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1420826445604</updated>
-    </task>
     <task id="LOCAL-00062" summary="Ajout des textures">
       <created>1420826863081</created>
       <option name="number" value="00062" />
@@ -772,7 +766,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421412399757</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="javascript sur edit profil&#10;">
+      <created>1421412528112</created>
+      <option name="number" value="00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1421412528112</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="ToolWindowManager">
