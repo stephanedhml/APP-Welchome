@@ -63,6 +63,8 @@ function tchekusername(champ)
         return true;
     }
 }
+
+
 function mdp()
 {
     document.getElementById('mdp').innerHTML =  '6 caractères minimum';

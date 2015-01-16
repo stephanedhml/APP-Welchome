@@ -8,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <!-- <script type="text/javascript" src="../fichier_js/inscription.js"></script> -->
+         <script type="text/javascript" src="../fichier_js/inscription.js"></script>
         <link rel="stylesheet" href="../style.css" />
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
@@ -16,7 +16,7 @@
 		<title>Inscription</title>
 	</head>
 
-	<body class="wood">
+	<body onload="exi()" class="wood">
 		<div class="header">
 			<?php include("menu.php"); ?>
 		</div>
@@ -144,9 +144,9 @@
                 <div class="signup_form1">
                 <form action="sign_up.php" method="post" enctype="multipart/form-data" onsubmit="return verifinscription(this)">
                     <div class="content_gauche">
-                    <label for="username"><?php echo username; ?></label><br/><input type="text"  name="username"  value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername(this)" /><span id="user"></span></br>
+                    <label for="username"><?php echo username; ?></label><br/><input type="text" id="uuu"  name="username"  value="<?php if(isset($_POST["username"])){echo htmlentities($_POST["username"], ENT_QUOTES,"UTF-8");} ?>" onblur="verifusername(this)" /><span id="user"></span></br>
                     <br/><label for="password"><?php echo password; ?></label><br/><input  onclick="mdp()" type="password" name="password" id="paw" onblur="verifpassword(this)"/><span id="psd"></span><br />
-                    <br/><label for="passverif"><?php echo password; ?><span class="small"><?php echo verification;?> </span></label><br/><input type="password" name="passverif" id="paw2" onblur="verifegalite(this)"/><span id="psd2"></span><br />
+                    <br/><label for="passverif"><?php echo password; ?><span class="small"><?php echo verification;?> </span></label><br/><input type="password" name="passverif" id="paw2"  onblur="verifegalite(this)"/><span id="psd2"></span><br />
                     <br/><label for="email"><?php  echo email;?></label><br/><input type="text"  name="email" value="<?php if(isset($_POST['email'])){echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');} ?>" onblur="verifemail(this)"/><span id="mail"></span><br />
                     <br/><label for="avatar"><?php echo imageperso; ?></label><br/><input type="file" name="up_avatar" id="up_avatar"><br />
                     </div>
