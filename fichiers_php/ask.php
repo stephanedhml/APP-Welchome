@@ -31,13 +31,14 @@ session_start();
         //On récupère l'information envoyée par le lien sur lequel peut cliquer le client (lien affiché dans les lignes qui suivent)
 
         if (isset($_GET['confirm_demand'])) {
-            $req = $bdd -> prepare("UPDATE echange SET demandeur_want = 1 WHERE id_demandeur=:id_demandeur AND id_logement=:id_logement");
+
+            $req = $bdd -> prepare("UPDATE echange SET demandeur_want=1 WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement");
             $req -> execute(array(
                 'id_demandeur' => $_SESSION['userid'],
                 'id_logement' => $_GET['id_logement'],
             ));
             //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
-            $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement=:id_logement");
+            $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement");
             $retb -> execute(array(
                 'id_demandeur' => $_SESSION['userid'],
                 'id_logement' => $_GET['id_logement'],
@@ -45,7 +46,7 @@ session_start();
             $ech2bis = $retb -> fetch();
             //Si les deux parties ont validé l'échange, alors l'échange est en cours :
             if ($ech2bis['demandeur_want']==1 AND $ech2bis['proprietaire_want']==1) {
-                $req = $bdd -> prepare("UPDATE echange SET en_cours = 1 WHERE id_logement=?");
+                $req = $bdd -> prepare("UPDATE echange SET en_cours = 1 WHERE id_logement_asked=?");
                 $req -> execute(array($_GET['id_logement']));
             }
         }
@@ -60,7 +61,7 @@ session_start();
         $ech1 = $res -> fetch();
         //On récupère les informations sur le logement dont l'id est donné par la requête de l'échange
         $rep = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
-        $rep -> execute(array($ech1['id_logement']));
+        $rep -> execute(array($ech1['id_logement_asked']));
         $house1 = $rep->fetch();
         //On récupère les photos du logement qu'on cherche
         $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
@@ -80,7 +81,7 @@ session_start();
                                     </span>
                 </div>
             </div>
-            <?php if ($ech1['demandeur_want']!=1) { ?><div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
+            <?php if ($ech1['demandeur_want']!=1) { ?> <div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>">Commencer l'échange</a></div> <?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
         <?php
 
             } ?>
@@ -156,7 +157,7 @@ session_start();
                         $ech3 = $res -> fetch();
                         //On récupère les informations sur le logement dont l'id est donné par la requête de l'échange
                         $rep = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
-                        $rep -> execute(array($ech3['id_logement']));
+                        $rep -> execute(array($ech3['id_logement_asked']));
                         $house1 = $rep->fetch();
                         //On récupère les photos du logement qu'on cherche
                         $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
