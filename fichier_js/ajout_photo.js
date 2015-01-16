@@ -4,7 +4,7 @@
 
 function verifphoto2()
 {
-    if(c.value == null)
+    if(document.getElementById('p1').value == '')
     {
         alert('Uploadez d\'abord la photo 1');
         return false;
@@ -14,21 +14,22 @@ function verifphoto2()
 
         return true;
     }
-}function verifphoto3(c)
+}
+function verifphoto3()
 {
-    if(c.value == null)
+    if(document.getElementById('p2').value == '')
     {
         alert('Uploadez d\'abord la photo 2');
         return false;
     }
     else
     {
-
         return true;
     }
-}function verifphoto4(c)
+}
+function verifphoto4()
 {
-    if(c.value == null)
+    if(document.getElementById('p3').value == '')
     {
         alert('Uploadez d\'abord la photo 3');
         return false;
