@@ -247,11 +247,11 @@ jQuery(document).ready(function() {
 
     <div class="more" style="display:none">
 
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        <p>Les commentaires sont importants. Ils aident à renforcer la confiance et la sécurité au sein de la communauté, permettent le partage d'informations et encouragent de futures opportunités d'échange. Les commentaires sont l'occasion pour vous de bâtir votre réputation. C'est pourquoi, après chaque échange, sollicitez vos partenaires pour qu'ils écrivent un commentaire pour vous. Evidemment, le meilleur moyen de demander un commentaire est d'être le premier à en écrire un.</p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
+    	<a class="button-read-more button-read" href="#read"><p>Ecrire un commentaire après l'échange</p></a>
         <a class="button-read-less button-read" href="#read">Réduire</a>
 
     </div>
@@ -261,26 +261,17 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        <p>Allez sur la page profil ou logement de la personne et donner votre avis sur l'expérience que vous avez vécu.</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
+        <a class="button-read-more button-read" href="#read">Comment écrire un commentaire?</a>
         <a class="button-read-less button-read" href="#read">Réduire</a>
     </div>
 </div>
  
 
-<div class="toggle">
-        <div class="more" style="display:none">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-    </div>
-    
-    <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
-    </div>
-    </div>
+
 </div>
     </div></div>
 
