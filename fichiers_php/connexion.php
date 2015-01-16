@@ -14,13 +14,14 @@ session_start();
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 		<script type="text/javascript" src="../carrousel/jquery.js"></script>
 		<script type="text/javascript" src="../fichier_js/connexion.js"></script>
+		<script type="text/javascript" src="../fichier_js/inscription.js"></script>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="../style.css" />
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
         <title>Connexion</title>
     </head>
 
-	<body class="wood">
+	<body onload="exi()" class="wood">
 		<div class="header">
 			<?php include("menu.php"); ?>
 		</div>
@@ -96,7 +97,7 @@ session_start();
 						<div class="connex1">
 						<form action="connexion.php" method="post" onsubmit="return verifconnexion(this)">
 								<label for="username" id="username_form"><?php echo username ?></label><br/>
-								<input type="text" name="username" onblur="tchekusername(this)" /><span id="user"></span><br /><br/>
+								<input type="text" name="username" id="uuu" onblur="tchekusername(this)" /><span id="user"></span><br /><br/>
 								<label for="password"><?php echo password; ?></label><br/>
 								<input type="password" name="password" /><span id="mdp"></span><br /><br/>
 								<input type="submit" value="<?php echo connect;?>" id="btn_connexion" /><br/><br/>

@@ -22,12 +22,14 @@ function verifnom(champ) {
     if (champ.value == "")
     {
         rouge(champ, true);
-        document.getElementById('namehome').innerHTML = 'Ce champ n\'est pas remplit';
+        document.getElementById('namehome').innerHTML = ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
         return false;
     }
 
     else {
         rouge(champ, false);
+        document.getElementById('namehome').innerHTML = ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';
+
         return true;
     }
 }
@@ -56,13 +58,14 @@ function verifusername(champ)
 
         rouge(champ,true);
 
-        document.getElementById('user').innerHTML =  'Ce champ n\'est pas remplit';
+        document.getElementById('user').innerHTML =  ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
         return false;
     }
     else
     {
         rouge(champ,false);
-        document.getElementById('user').innerHTML =  '';
+        document.getElementById('user').innerHTML = ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';
+
         return true;
     }
 }
@@ -73,13 +76,14 @@ function veriflieu(champ)
 
         rouge(champ,true);
 
-        document.getElementById('lieu').innerHTML =  'Ce champ n\'est pas remplit';
+        document.getElementById('lieu').innerHTML =  ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
         return false;
     }
     else
     {
         rouge(champ,false);
-        document.getElementById('lieu').innerHTML =  '';
+        document.getElementById('lieu').innerHTML = ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';
+
         return true;
     }
 }
@@ -93,19 +97,21 @@ function verifpassword(champ)
 
         rouge(champ,true);
 
-        document.getElementById('psd').innerHTML =  'Entrez votre mot de passe';
+        document.getElementById('psd').innerHTML =  ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
+
         return false;
     }
     else if(champ.value.length < 6 && champ.value.length > 0)
     {
         rouge(champ,true);
-        document.getElementById('psd').innerHTML =  'Le mot de passe comporte au moins 6 caractères.';
+        document.getElementById('psd').innerHTML =  ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
         return false;
     }
     else
     {
 
         rouge(champ,false);
+        document.getElementById('psd').innerHTML = ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';
 
         return true;
     }
@@ -116,30 +122,39 @@ function verifpassword(champ)
         var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
         if (!regex.test(champ.value)) {
             rouge(champ, true);
-            document.getElementById('mail').innerHTML =  'Cette email n\'est pas valide';
+            document.getElementById('mail').innerHTML =  ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
             return false;
         }
         else {
             rouge(champ, false);
+            document.getElementById('mail').innerHTML = ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';
+
             return true;
         }
     }
+function exi()
+{
+        document.getElementById('uuu').focus();
+}
 
-    function verifegalite()
+    function verifegalite(c)
     {
     var psswd = document.getElementById('paw').value ;
-    var psswd2 = document.getElementById('paw2').value ;
+    var psswd2 = c.value ;
 
-    if(psswd != psswd2)
+    if(psswd != psswd2 || psswd == '' )
     {
-        rouge(document.getElementById('paw2'), true);
-        document.getElementById('psd2').innerHTML =  'Les mots de passe ne correspondent pas';
+        rouge(c, true);
+        document.getElementById('psd2').innerHTML =  ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png">';
         return false;
     }
+
     else
     {
-        rouge(document.getElementById('paw2'), false);
-        document.getElementById('psd2').innerHTML =  '';
+
+        rouge(c, false);
+        document.getElementById('psd2').innerHTML = ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';
+
 
         return true;
     }
