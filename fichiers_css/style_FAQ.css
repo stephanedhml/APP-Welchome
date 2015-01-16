@@ -13,7 +13,7 @@
 .FAQ_tableau
 {
 margin-left: 2%;
-width: 46%;
+width: 48%;
 float: left;
 background-color: white;
 border-radius: 4px;
@@ -23,9 +23,9 @@ box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 
 .FAQ_tableau2
 {
-margin-left: 52%;
+margin-left: 51%;
 margin-top: 6%;
-width: 46%;
+width: 48%;
 background-color: white;
 min-height: 150px;
 border-radius: 4px;
@@ -36,7 +36,7 @@ box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 .FAQ_tableau3
 {
 margin-left: 2%;
-width: 46%;
+width: 48%;
 float: left;
 background-color: white;
 border-radius: 4px;
@@ -46,8 +46,8 @@ box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 
 .FAQ_tableau4
 {
-margin-left: 52%;
-width: 46%;
+margin-left: 51%;
+width: 48%;
 background-color: white;
 position: 	absolute;
 border-radius: 4px;

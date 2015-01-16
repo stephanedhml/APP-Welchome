@@ -198,17 +198,17 @@ jQuery(document).ready(function() {
     </div></div>
 
      <div class="Tableau_rangee3"><div class="FAQ_tableau3">
-<img src="http://img.phonandroid.com/2015/01/proteger-securiser-mots-passe-dashlane.jpg" class="loupe"><strong class="Titre_article">Compte & Mot de passe</strong>
+<img src="http://img.phonandroid.com/2015/01/proteger-securiser-mots-passe-dashlane.jpg" class="loupe"><strong class="Titre_article">Conclure votre premier échange</strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        <p>Utilisez les outils à votre disposition - profils, vérifications, commentaire sur les échanges passés. Discuter avec le locataire via la plateforme de messages du site. Une conversation sur Skype est une solution idéale pour communiquer avec votre partenaire d'échange. Vous pouvez même utiliser Skype pour faire une vidéo de présentation de votre maison en direct. </p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Comment échanger sa maison</p></a>
+    	<a class="button-read-more button-read" href="#read"><p>Trouver le logement ideal</p></a>
          <a class="button-read-less button-read" href="#read">Réduire</a>
     </div>
 
@@ -217,26 +217,17 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+        <p>Certaines personnes sont très détendues vis à vis de leurs accords d'échange alors que d'autres préfèrent définir de façon formelle tous les détails de l'accord. Chacune de ces attitudes est parfaitement légitime. Vous devez savoir laquelle vous convient le mieux et correspond à vos besoins et vos attentes. Cependant, le fondement de tout accord doit être la confiance mutuelle, l'engagement et le respect. Nous encourageons tous nos membres à utiliser des contrats d'échange. L'expérience montre leur utilité pour clarifier la communication et éviter les malentendus.</p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">L'échange est-il sur?</a>
+        <a class="button-read-more button-read" href="#read">Contrat d'échange</a>
         <a class="button-read-less button-read" href="#read">Réduire</a>
     </div>
 </div>
  
 
-<div class="toggle">
-        <div class="more" style="display:none">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-    </div>
-    
-    <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment marche les assurances?</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
-    </div>
-</div>
+
     </div>
     </div>
 
