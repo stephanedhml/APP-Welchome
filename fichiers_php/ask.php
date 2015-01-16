@@ -167,7 +167,7 @@ session_start();
                         }
                     }
                     //On récupère toutes les demandes d'échange de l'utilisateur
-                    $res = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=1 ");
+                    $res = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=1 AND end_ech!=1 ");
                     $res -> execute(array($_SESSION['userid']));
                     $nb_en_cours = $res -> rowCount();
 
@@ -225,7 +225,7 @@ session_start();
                         }
                     }
                     //On récupère toutes les demandes d'échange de l'utilisateur
-                    $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=? AND en_cours=1 ");
+                    $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=? AND en_cours=1 AND end_ech!=1 ");
                     $res -> execute(array($_SESSION['userid']));
                     $nb_en_cours = $res -> rowCount();
 
