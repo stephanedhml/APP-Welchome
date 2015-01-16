@@ -327,7 +327,7 @@ body
 
 .h3 {
 
-        padding-top: 70px;
+        padding-top: 95px;
         height: 550px;
         font-family: arial;
         font-size: 28px;
@@ -362,14 +362,14 @@ background-color: gainsboro;
 margin-left: auto;
 margin-right: auto;
 height: 370px;
-width: 1300px;
+width: 1210px;
 margin-top: 70px;
 
 }
 
 .h7{
     font-family: arial;
-    font-weight: bold;
+    font-weight: 400;
         font-size: 40px;
         text-align: center;
        color: #333;
