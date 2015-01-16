@@ -690,38 +690,38 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <label for="television"><?php echo television; ?></label><br/>
         <select name="television">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
         <select name="machine_a_laver">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="parking"><?php echo parking; ?></label><br/>
         <select name="parking">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="climatisation"><?php echo climatisation; ?></label><br/>
         <select name="climatisation">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="piscine"><?php echo piscine; ?></label><br/>
         <select name="piscine">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="jardin"><?php echo jardin ?></label><br/>
         <select name="jardin">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
 
         <!-- CHAMPS POUR DATES DISPO LOGEMENT
@@ -817,38 +817,38 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                <label for="television"><?php echo television; ?></label><br/>
         <select name="television">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
         <select name="machine_a_laver">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="parking"><?php echo parking; ?></label><br/>
         <select name="parking">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="climatisation"><?php echo climatisation; ?></label><br/>
         <select name="climatisation">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="piscine"><?php echo piscine; ?></label><br/>
         <select name="piscine">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
         <label for="jardin"><?php echo jardin ?></label><br/>
         <select name="jardin">
             <OPTION></option>
-            <OPTION><?php echo oui; ?></option>
-            <OPTION><?php echo non; ?></option>
+            <OPTION><?php echo yes; ?></option>
+            <OPTION><?php echo no; ?></option>
         </select><br/>
 
 
