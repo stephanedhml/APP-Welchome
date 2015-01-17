@@ -90,7 +90,7 @@ session_start();
                 <div class="voeux"><h7>Utilisateurs désirant échanger avec vous</h7></div>
             <?php
             //On récupère toutes les demandes d'échanges FAITES à l'utilisateur
-            $ret = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=0 ");
+            $ret = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=0  AND end_ech=0");
             $ret -> execute(array($_SESSION['userid']));
             $nb_requests = $ret -> rowCount();
 
