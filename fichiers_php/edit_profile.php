@@ -65,29 +65,29 @@ if (isset($_POST["situation"])AND $_POST["situation"]!=NULL ) {
 // Logement MAJ
 if (isset($_GET["update"])) {
 
-    $rez = $bdd -> prepare("SELECT * FROM logement WHERE id_logement=?");
-    $rez -> execute(array($_GET["choix_logement"]));
-    $numero_new_logement = $rez -> fetch();
+    $rez = $bdd->prepare("SELECT * FROM logement WHERE id_logement=?");
+    $rez->execute(array($_GET["choix_logement"]));
+    $numero_new_logement = $rez->fetch();
 
-    if (isset($_FILES["maj_main_img_logement"]) AND $_FILES["maj_main_img_logement"]["name"]!=NULL) {
+    if (isset($_FILES["maj_main_img_logement"]) AND $_FILES["maj_main_img_logement"]["name"] != NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_main_img_logement']['tmp_name'], $main_photo_new_logement);
 
     }
-    if (isset($_FILES["maj_2_img_logement"]) AND $_FILES["maj_2_img_logement"]["name"]!=NULL) {
+    if (isset($_FILES["maj_2_img_logement"]) AND $_FILES["maj_2_img_logement"]["name"] != NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-2.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_2_img_logement']['tmp_name'], $main_photo_new_logement);
 
-        $req = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
-        $req -> execute(array(
+        $req = $bdd->prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
+        $req->execute(array(
             'id_logement' => $_GET["choix_logement"],
         ));
-        $test = $req -> rowCount();
-        if ($test<2) {
+        $test = $req->rowCount();
+        if ($test < 2) {
             //On ajoute la photo de profil dans la BDD
             $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
             $res->execute(array(
@@ -95,19 +95,19 @@ if (isset($_GET["update"])) {
                 "lien_photo" => "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-2.jpg"
             ));
         }
-        }
-    if (isset($_FILES["maj_3_img_logement"]) AND $_FILES["maj_3_img_logement"]["name"]!=NULL) {
+    }
+    if (isset($_FILES["maj_3_img_logement"]) AND $_FILES["maj_3_img_logement"]["name"] != NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-3.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_3_img_logement']['tmp_name'], $main_photo_new_logement);
 
-        $req = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
-        $req -> execute(array(
+        $req = $bdd->prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
+        $req->execute(array(
             'id_logement' => $_GET["choix_logement"],
         ));
-        $test = $req -> rowCount();
-        if ($test<3) {
+        $test = $req->rowCount();
+        if ($test < 3) {
             //On ajoute la photo de profil dans la BDD
             $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
             $res->execute(array(
@@ -116,18 +116,18 @@ if (isset($_GET["update"])) {
             ));
         }
     }
-    if (isset($_FILES["maj_4_img_logement"]) AND $_FILES["maj_4_img_logement"]["name"]!=NULL) {
+    if (isset($_FILES["maj_4_img_logement"]) AND $_FILES["maj_4_img_logement"]["name"] != NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
         $main_photo_new_logement = "../photos_logement/{$_GET["choix_logement"]}-{$numero_new_logement['numero_logement']}-4.jpg"; //A CORRIGER -> le fichier s'appelle id_user.jpg, il faut gérer le fait qu'on puisse avoir plusieurs images pour 1 utilisateur et plusieurs extensions possibles !
 
         $resultat = move_uploaded_file($_FILES['maj_4_img_logement']['tmp_name'], $main_photo_new_logement);
 
-        $req = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
-        $req -> execute(array(
+        $req = $bdd->prepare("SELECT * FROM photo WHERE id_logement=:id_logement");
+        $req->execute(array(
             'id_logement' => $_GET["choix_logement"],
         ));
-        $test = $req -> rowCount();
-        if ($test<4) {
+        $test = $req->rowCount();
+        if ($test < 4) {
             //On ajoute la photo de profil dans la BDD
             $res = $bdd->prepare("INSERT INTO photo(id_logement, lien_photo) VALUES(:id_logement,:lien_photo)");
             $res->execute(array(
@@ -137,7 +137,7 @@ if (isset($_GET["update"])) {
         }
     }
 
-    if (isset($_POST["localisation"]) AND $_POST["localisation"] !=NULL) {
+    if (isset($_POST["localisation"]) AND $_POST["localisation"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET localisation=:localisation WHERE id_logement=:id_logement");
         $desc->execute(array(
             'localisation' => $_POST['localisation'],
@@ -145,14 +145,14 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["description_logement"]) AND $_POST["description_logement"] !=NULL) {
+    if (isset($_POST["description_logement"]) AND $_POST["description_logement"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET description_logement=:description WHERE id_logement=:id_logement");
         $desc->execute(array(
             'description' => $_POST['description_logement'],
             'id_logement' => $_GET['choix_logement'],
         ));
     }
-    if (isset($_POST["type_logement"]) AND $_POST["type_logement"] !=NULL) {
+    if (isset($_POST["type_logement"]) AND $_POST["type_logement"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET type_logement=:type_logement WHERE id_logement=:id_logement");
         $desc->execute(array(
             'type_logement' => $_POST['type_logement'],
@@ -160,7 +160,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nom_maison"]) AND $_POST["nom_maison"] !=NULL) {
+    if (isset($_POST["nom_maison"]) AND $_POST["nom_maison"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nom_maison=:nom_maison WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nom_maison' => $_POST['nom_maison'],
@@ -168,7 +168,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nombre_voyageurs"]) AND $_POST["nombre_voyageurs"] !=NULL) {
+    if (isset($_POST["nombre_voyageurs"]) AND $_POST["nombre_voyageurs"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nombre_voyageurs=:nombre_voyageurs WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nombre_voyageurs' => $_POST['nombre_voyageurs'],
@@ -176,7 +176,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nombre_chambres"]) AND $_POST["nombre_chambres"] !=NULL) {
+    if (isset($_POST["nombre_chambres"]) AND $_POST["nombre_chambres"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nb_chambres=:nombre_chambres WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nombre_chambres' => $_POST['nombre_chambres'],
@@ -184,7 +184,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["nb_salles_bains"]) AND $_POST["nb_salles_bains"] !=NULL) {
+    if (isset($_POST["nb_salles_bains"]) AND $_POST["nb_salles_bains"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET nb_salles_bains=:nb_salles_bains WHERE id_logement=:id_logement");
         $desc->execute(array(
             'nb_salles_bains' => $_POST['nb_salles_bains'],
@@ -192,7 +192,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["superficie"]) AND $_POST["superficie"] !=NULL) {
+    if (isset($_POST["superficie"]) AND $_POST["superficie"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET superficie=:superficie WHERE id_logement=:id_logement");
         $desc->execute(array(
             'superficie' => $_POST['superficie'],
@@ -200,7 +200,7 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["date_début_disponibilite"]) AND $_POST["date_début_disponibilite"] !=NULL) {
+    if (isset($_POST["date_début_disponibilite"]) AND $_POST["date_début_disponibilite"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET date_début_disponibilite=:date_début_disponibilite WHERE id_logement=:id_logement");
         $desc->execute(array(
             'date_début_disponibilite' => $_POST['date_début_disponibilite'],
@@ -208,93 +208,38 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["date_fin_disponibilite"]) AND $_POST["date_fin_disponibilite"] !=NULL) {
+    if (isset($_POST["date_fin_disponibilite"]) AND $_POST["date_fin_disponibilite"] != NULL) {
         $desc = $bdd->prepare("UPDATE logement SET date_fin_disponibilite=:date_fin_disponibilite WHERE id_logement=:id_logement");
         $desc->execute(array(
             'date_fin_disponibilite' => $_POST['date_fin_disponibilite'],
             'id_logement' => $_GET['choix_logement'],
         ));
     }
+//MISE A JOUR DES CRITERES
 
-    if (isset($_POST["television"]) AND $_POST["television"] !=NULL) {
-        if ($_POST["television"] == 'Oui') {
-            $tele = 1;
-        } else {
-            $tele = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET television=:television WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'television' => $tele,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
+    $req = $bdd->query("SELECT * FROM equipement");
 
-    if (isset($_POST["machine_a_laver"]) AND $_POST["machine_a_laver"] !=NULL) {
-        if ($_POST["machine_a_laver"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET machine_a_laver=:machine_a_laver WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'machine_a_laver' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
+    while ($equipement = $req->fetch()) {
+        $id_equipement = $equipement[0];
 
-    if (isset($_POST["parking"]) AND $_POST["parking"] !=NULL) {
-        if ($_POST["parking"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET parking=:parking WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'parking' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
-    if (isset($_POST["climatisation"]) AND $_POST["climatisation"] != NULL) {
-        if ($_POST["climatisation"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["climatisation"] == 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET climatisation=:climatisation WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'climatisation' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
+        if (isset($_POST["$id_equipement-1"]) AND $_POST["$id_equipement-1"] != NULL) {
 
-    if (isset($_POST["piscine"]) AND $_POST["piscine"] !=NULL) {
-        if ($_POST["piscine"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
+            $desc = $bdd->prepare("INSERT INTO annonce_equipement(id_logement, id_equipement) VALUES (:id_logement,:id_equipement)");
+            $desc->execute(array(
+                'id_logement' => $_GET["choix_logement"],
+                'id_equipement' => $equipement[0],
+            ));
         }
-        $desc = $bdd->prepare("UPDATE logement SET piscine=:piscine WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'piscine' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
-    }
+        if (isset($_POST["$id_equipement-0"]) AND $_POST["$id_equipement-0"] != NULL) {
 
-    if (isset($_POST["jardin"]) AND $_POST["jardin"] !=NULL) {
-        if ($_POST["jardin"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
+            $desc = $bdd->prepare("DELETE FROM annonce_equipement WHERE id_equipement=:id_equipement AND id_logement=:id_logement");
+            $desc->execute(array(
+                'id_logement' => $_GET["choix_logement"],
+                'id_equipement' => $equipement[0],
+            ));
         }
-        $desc = $bdd->prepare("UPDATE logement SET jardin=:jardin WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'jardin' => $vari,
-            'id_logement' => $_GET['choix_logement'],
-        ));
     }
-
 }
-
     // Ajout d'un logement
     if (isset($_GET["add"],$_FILES["up_main_img_logement"], $_POST["localisation"], $_POST["description_logement"], $_POST["type_logement"], $_POST["nombre_chambres"], $_POST["nb_salles_bains"]) AND $_POST["localisation"] != NULL AND $_POST["description_logement"] != NULL AND $_POST["type_logement"] != NULL AND $_POST["nombre_chambres"] != NULL AND $_POST["nb_salles_bains"] != NULL AND $_FILES["up_main_img_logement"]!=NULL) {
 
@@ -445,82 +390,19 @@ if (isset($_GET["update"])) {
         ));
     }
 
-    if (isset($_POST["television"]) AND $_POST["television"] != NULL) {
-        if ($_POST["television"] == 'Oui') {
-            $tele = 1;
-        } else {
-            $tele = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET television=:television WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'television' => $tele,
-            'id_logement' => $new_logement,
-        ));
-    }
+    $req = $bdd->query("SELECT * FROM equipement");
 
-    if (isset($_POST["machine_a_laver"]) AND $_POST["machine_a_laver"] != NULL) {
-        if ($_POST["machine_a_laver"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET machine_a_laver=:machine_a_laver WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'machine_a_laver' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
+    while ($equipement = $req->fetch()) {
+        $id_equipement = $equipement[0];
 
-    if (isset($_POST["parking"]) AND $_POST["parking"] != NULL) {
-        if ($_POST["parking"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET parking=:parking WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'parking' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
+        if (isset($_POST[$id_equipement]) AND $_POST[$id_equipement] != NULL) {
 
-    if (isset($_POST["climatisation"]) AND $_POST["climatisation"] != NULL) {
-        if ($_POST["climatisation"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
+            $desc = $bdd->prepare("INSERT INTO annonce_equipement(id_logement, id_equipement) VALUES (:id_logement,:id_equipement)");
+            $desc->execute(array(
+                'id_logement' => $_GET["choix_logement"],
+                'id_equipement' => $equipement[0],
+            ));
         }
-        $desc = $bdd->prepare("UPDATE logement SET climatisation=:climatisation WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'climatisation' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
-
-    if (isset($_POST["piscine"]) AND $_POST["piscine"] != NULL) {
-        if ($_POST["piscine"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET piscine=:piscine WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'piscine' => $vari,
-            'id_logement' => $new_logement,
-        ));
-    }
-
-    if (isset($_POST["jardin"]) AND $_POST["jardin"] != NULL) {
-        if ($_POST["jardin"] == 'Oui') {
-            $vari = 1;
-        } elseif ($_POST["television"] = 'Non') {
-            $vari = 0;
-        }
-        $desc = $bdd->prepare("UPDATE logement SET jardin=:jardin WHERE id_logement=:id_logement");
-        $desc->execute(array(
-            'jardin' => $vari,
-            'id_logement' => $new_logement,
-        ));
     }
 
 }
@@ -657,58 +539,75 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <!-- Logement MAJ -->
 
     <?php
-        if (isset($_GET["choix_logement"])) {
-            include("block_left.php");
-    ?>
+        if (isset($_GET["choix_logement"])) { ?>
+    <link rel="stylesheet" href="../style.css"/>
+<div class="container_edit_profil">
+    <script type="text/javascript" src="../fichier_js/ajout_photo.js"></script>
+    <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
+        <div class="bloc_search_left">
+            <label for="avatar"><?php echo photo1; ?> *</label><br/>
+        <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
+        <div class="bouto" >
+            <input type="button" class="but" value="Parcourir" >
+            <input type="file" class="fote" name="maj_main_img_logement" id="p1" ><br />
+        </div>
 
+        <label for="avatar"><?php echo photo2; ?></label><br/>
+        <div class="bouto" onclick="return verifphoto2()">
+            <input type="button" value="Parcourir" class="but" onclick="return verifphoto2()">
+            <input type="file" class="fote" name="maj_2_img_logement" id="p2"  ><br />
+        </div>
 
+        <label for="avatar"><?php echo photo3; ?></label><br/>
+        <div class="bouto"  onclick="return verifphoto3()" >
+            <input type="button" class="but"  value="Parcourir" onclick="return verifphoto3()" >
+            <input class="fote" type="file" name="maj_3_img_logement" id="p3" ><br />
+        </div>
+
+        <label for="avatar"><?php echo photo4; ?></label><br/>
+        <div class="bouto" onclick="return verifphoto4()" >
+            <input type="button" class="but" value="Parcourir" onclick="return verifphoto4()" >
+            <input class="fote" type="file" name="maj_4_img_logement" id="p4"  ><br />
+        </div>
+        <label for="localisation"><?php echo localisation; ?></label><br/>
+        <input type="text" name="localisation"/><br/>
+        <label for="description_logement"><?php echo descriptionlogement; ?></label><br/>
+        <input type="text" name="description_logement"/><br/>
+        <label for="type_logement"><?php echo choixlogement; ?></label><br/>
+        <select name="type_logement" id="choix">
+            <OPTION></OPTION>
+            <option value="Studio"><?php echo studio; ?></option>
+            <option value="Appartement"><?php echo appartement; ?></option>
+            <option value="Maison"><?php echo maison; ?></option>
+            <option value="Pavillon"><?php echo pavillon; ?></option>
+            <option value="Bungalow/gite"><?php echo bungalow; ?></option>
+            <option value="Bateau/péniche"><?php echo bateau; ?></option>
+            <option value="Camping car"><?php echo campingcar; ?></option>
+        </select><br/>
+        <label for="nom_maison"><?php echo titreannonce; ?></label><br/>
+        <input type="text" name="nom_maison"/><br/>
+        <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
+        <input type="number" name="nombre_voyageurs"/><br/>
+        <label for="nombre_chambres"><?php echo nbchambres; ?></label><br/>
+        <input type="number" name="nombre_chambres"/><br/>
+        <label for="nb_salles_bains"><?php echo nbsallesbain; ?></label><br/>
+        <input type="number" name="nb_salles_bains"/><br/>
+        <label for="superficie"><?php echo superficie; ?></label><br/>
+        <input type="number" name="superficie"/><br/>
+
+</div>
     <!-- Critères logement MAJ -->
 
     <div class="bloc_search_center">
 
-        <label for="television"><?php echo television; ?></label><br/>
-        <select name="television">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
-        <select name="machine_a_laver">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="parking"><?php echo parking; ?></label><br/>
-        <select name="parking">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="climatisation"><?php echo climatisation; ?></label><br/>
-        <select name="climatisation">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="piscine"><?php echo piscine; ?></label><br/>
-        <select name="piscine">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
-        <label for="jardin"><?php echo jardin ?></label><br/>
-        <select name="jardin">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
+        <?php
+        $req = $bdd -> query("SELECT * FROM equipement");
 
-        <!-- CHAMPS POUR DATES DISPO LOGEMENT
-        <label for="date_début_disponibilite">Date de début de disponibilité</label><br/>
-        <input type="date" name="date_début_disponibilite"/><br/>
-        <label for="date_fin_disponibilite">Date de fin de disponibilité</label><br/>
-        <input type="date" name="date_fin_disponibilite"/><br/> -->
-
+        while ($equipement = $req -> fetch()) { ?>
+        <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><input type="checkbox" name="<?php echo $equipement['id_equipement'] ?>-0"> <input type="checkbox" name="<?php echo $equipement['id_equipement'] ?>-1"></br>
+        <?php
+        }
+        ?>
         <input type="submit" value="<?php echo valider; ?>" id="btn_validation_edit" /><br/><br/>
     </div>
 
@@ -731,14 +630,17 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <p><?php echo nbsallesbain; ?> : <?php echo $donnees1[8]; ?></p></br>
         <p><?php echo superficie; ?> : <?php echo $donnees1[9]; ?> m²</p></br>
         <p><?php echo descriptionlogement; ?> : <?php echo $donnees1[10]; ?></p></br>
-        <p><?php echo television; ?> : <?php if ($donnees1["television"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p><?php echo machinelaver; ?> : <?php if ($donnees1["machine_a_laver"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p><?php echo parking; ?> : <?php if ($donnees1["parking"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p><?php echo climatisation; ?> : <?php if ($donnees1["climatisation"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p><?php echo piscine; ?> : <?php if ($donnees1["piscine"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
-        <p><?php echo jardin; ?> : <?php if ($donnees1["jardin"] == 1) {echo ' <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png">';} else {echo ' <img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"> '; } ?></p></br>
+        <?php
+        $req = $bdd -> prepare("SELECT * FROM annonce_equipement WHERE id_logement=?");
+        $req -> execute(array($_GET['choix_logement']));
 
-
+        while ($equip = $req -> fetch()) {
+            $ret = $bdd -> prepare("SELECT * FROM equipement WHERE id_equipement=?");
+            $ret -> execute(array($equip[1]));
+            $nom_equip = $ret -> fetch();
+            ?>
+            <p><?php echo $nom_equip[1] ?> <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png"></p>
+        <?php } ?>
 
     </div>
         <?php } ?>
@@ -792,13 +694,16 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
             <!-- Critères logement -->
 
             <div class="bloc_search_center">
+        <?php
+        $req = $bdd -> query("SELECT * FROM equipement");
 
-               <label for="television"><?php echo television; ?></label><br/>
-        <select name="television">
-            <OPTION></option>
-            <OPTION><?php echo yes; ?></option>
-            <OPTION><?php echo no; ?></option>
-        </select><br/>
+        while ($equipement = $req -> fetch()) { ?>
+        <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><input type="checkbox" name="<?php echo $equipement['id_equipement'] ?>"></br>
+        <?php
+        }
+        ?>
+
+        <!-- ANCIENNE METHODE
         <label for="machine_a_laver"><?php echo machinelaver; ?></label><br/>
         <select name="machine_a_laver">
             <OPTION></option>
