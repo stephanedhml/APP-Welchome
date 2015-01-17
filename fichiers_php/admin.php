@@ -46,6 +46,22 @@ if (isset($_GET["del_logement"]) AND $_GET["del_logement"] == 1) {
     $ret = $bdd->prepare("DELETE FROM logement WHERE id_logement=?");
     $ret->execute(array($_GET["id_logement"]));
 }
+if (isset($_GET["new_equip"]) AND $_GET["new_equip"] != NULL) {
+
+    $desc = $bdd->prepare("INSERT INTO equipement(nom) VALUES (:nom)");
+    $desc->execute(array(
+        'nom' => $_GET["new_equip"],
+    ));
+    header('Location: admin.php');
+}
+if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
+
+    $desc = $bdd->prepare("DELETE FROM equipement WHERE id_equipement=:id");
+    $desc->execute(array(
+        'id' => $_GET["del_equip"],
+    ));
+    header('Location: admin.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,6 +81,19 @@ if (isset($_GET["del_logement"]) AND $_GET["del_logement"] == 1) {
 </header>
 <div class="superglobal">
     <div class="global">
+        <div class="add_equipement_container">
+            <div class="add_equipement_top">
+                <?php
+                $req = $bdd->query("SELECT * FROM equipement");
+                ?>Liste des équipements disponibles : <?php
+                while ($equipement = $req->fetch()) {
+                    echo $equipement['nom'];?>&nbsp;<a href="admin.php?del_equip=<?php echo $equipement['id_equipement'] ?>"><img src="http://www.britishairways.com/assets/images/information/icons/red-cross-16x16.png"></a> ,&nbsp;<?php
+                }
+                ?>
+            </div>
+            <div class="add_equipement_bottom_field"><form action="admin.php"><label style="font-size: 25px;">Ajouter un nouvel équipement :&nbsp;</label><input type="text" name="new_equip" style="height: 30px; position: absolute; margin-top: 5px; width: 200px;"></form></div>
+
+        </div>
         <div class="search_bar">
             <form action="admin.php" method="post">
                 <input type="text" name="search" placeholder="Rechercher un utilisateur ou une annonce"
