@@ -9,7 +9,7 @@
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 		<link rel="stylesheet" href="../style.css" />
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-		<!-- <script type="text/javascript" src="../fichier_js/carrousel.js"></script> -->
+		<script type="text/javascript" src="../fichier_js/carrousel.js"></script>
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<link rel="stylesheet" href="../carrousel_annonce/derniereannonce.css" />
 		<title>Accueil</title>
@@ -69,7 +69,7 @@
                  <div class="schema3">
                    <div class="h3">
                     <h3 class="h7">
-                    <h3>
+                    <h3 class="accueil_title">
                         <?php echo howwelchomework; ?>
                     </h3>
                    <div class="add3">
@@ -116,19 +116,21 @@
                             </div>
                         </div>
                     </div>
-
-
+                </div>
+                <div class="bloc5">
+                    <p class="accueil_title"><?php echo apropos; ?></p>
+                    <div class="description_accueil">
+                        <p>Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
+                            Il est simple d'utilisation gratuit et fiable.
+                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
+                            N'hésitez plus, utlilisez Welchome.
+                        </p>
+                    </div>
+                </div>
               
 
                 <div class="schema5">
                     <div class="h3" >
-                        <p class="h7"> 
-                        <?php echo apropos; ?>
-                    </p>
-                    <div class="h8"> Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances. 
-               Il est simple d'utilisation gratuit et fiable.
-              Welchome rassemble un large réseau de personnes de confiance dans toute la France.
-              N'hésitez plus, utlilisez Welchome.
 
 			</div></div></div>
 			
