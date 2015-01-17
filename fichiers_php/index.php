@@ -106,13 +106,22 @@
                     </p>
                     <div class="h6">
                     <div class="h4">
-                    <li style="width:350px;"> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;">Echanges illimités</li>
-                    <li class="add1"><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png" style="width:40px; margin-right:20px;"><?php echo assistmember; ?> </li> 
+                    <li slyle=""> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;">Echanges illimités</li></br>
+                    
                    </div>
-                   <div class="h5">
-                    <li><img src="http://sbxblog.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/no_cash_clipart.png" style="width:40px; margin-right:20px;"><?php echo freedevice; ?></li>
-                    <li class="add2"><img src=" http://www.meilleur-immobilier-neuf.fr/images/maison.png" style="width:40px; margin-right:20px;"><?php echo hugenetwork; ?></li>
+                   <div class="h10">
+
+                   <li style=""><img src="http://sbxblog.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/no_cash_clipart.png" style="width:40px; margin-right:20px;"><?php echo freedevice; ?></li>
+               </div>
+                   <div class="h4">
+                    
+                    <li class="" ><img src=" http://www.meilleur-immobilier-neuf.fr/images/maison.png" style="width:40px; margin-right:20px;"><?php echo hugenetwork; ?></li>
+                    
                     </div>  
+                    <div class="h10">
+
+                   <li class=""><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png" style="width:40px;"><?php echo assistmember; ?> </li> 
+               </div>
 
                 </div></div>
 
