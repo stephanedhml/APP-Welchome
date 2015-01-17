@@ -94,7 +94,7 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
             <div class="add_equipement_bottom_field"><form action="admin.php"><label style="font-size: 25px;">Ajouter un nouvel équipement :&nbsp;</label><input type="text" name="new_equip" style="height: 30px; position: absolute; margin-top: 5px; width: 200px;"></form></div>
 
         </div>
-        <div class="search_bar">
+        <div class="search_bar_bkoff">
             <form action="admin.php" method="post">
                 <input type="text" name="search" placeholder="Rechercher un utilisateur ou une annonce"
                        id="recherche_simple"/>
