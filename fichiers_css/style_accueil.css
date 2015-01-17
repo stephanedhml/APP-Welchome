@@ -57,6 +57,69 @@
 {
     background-image: url('../walls/wall4cmp.jpg');
 }
+.strenght_container {
+    height: 550px;
+    padding-top: 50px;
+}
+.bloc_strenght {
+    background-color: #DCDCDC;
+    height: 500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.bloc_top_left {
+    width: 50%;
+    height: 250px;
+    position: absolute;
+    font-family: century,arial,sans-serif;
+    font-size: 30px;
+}
+.bloc_top_left img {
+    width: 80px;
+}
+.bloc_top_right {
+    margin-left: 50%;
+    width: 50%;
+    height: 250px;
+    position: absolute;
+    font-family: century,arial,sans-serif;
+    font-size: 30px;
+}
+.bloc_top_right img {
+    width: 80px;
+}
+.bloc_bot_left {
+    width: 50%;
+    height: 250px;
+    position: absolute;
+    margin-top: 250px;
+    font-family: century,arial,sans-serif;
+    font-size: 30px;
+}
+.bloc_bot_left img {
+    width: 80px;
+}
+.bloc_bot_right {
+    margin-left: 50%;
+    width: 50%;
+    height: 250px;
+    position: absolute;
+    margin-top: 250px;
+    font-family: century,arial,sans-serif;
+    font-size: 30px;
+}
+.bloc_bot_right img {
+    width: 80px;
+}
+.bloc2 {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 40px;
+}
 #slide5
 {
     background-image: url('../walls/wall5cmp.jpg');
@@ -171,13 +234,6 @@
     width: 800px;
     margin-bottom: 40px;
     margin-top: 40px;
-}
-
-
-#partie2, h2 h3
-{
-    text-align: center;
-    
 }
 
 @media only screen and (max-width : 900px) {
@@ -295,8 +351,6 @@ body
     background-color: #ecf0f1;
     
 }.schema4 {
-
-    text-align: center;
     background-color: #bdc3c7;
     
 }.schema5 {
@@ -347,9 +401,6 @@ body
 
 
 .h3 {
-
-        padding-top: 6%;
-        
         font-family: arial;
         font-size: 28px;
         text-align: center;

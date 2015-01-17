@@ -9,7 +9,7 @@
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 		<link rel="stylesheet" href="../style.css" />
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-		<script type="text/javascript" src="../fichier_js/carrousel.js"></script>
+		<!-- <script type="text/javascript" src="../fichier_js/carrousel.js"></script> -->
         <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
 		<link rel="stylesheet" href="../carrousel_annonce/derniereannonce.css" />
 		<title>Accueil</title>
@@ -100,30 +100,22 @@
                 </div>
 
                 <div class="schema4">
-                    <div class="h3" >
-                    <p class="h7"> 
-                        <?php echo strenght; ?>
-                    </p>
-                    <div class="h6">
-                    <div class="h4">
-                    <li slyle=""> <img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png" style="width:40px; margin-right:20px;">Echanges illimités</li></br>
-                    
-                   </div>
-                   <div class="h10">
-
-                   <li style=""><img src="http://sbxblog.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/no_cash_clipart.png" style="width:40px; margin-right:20px;"><?php echo freedevice; ?></li>
-               </div>
-                   <div class="h4">
-                    
-                    <li class="" ><img src=" http://www.meilleur-immobilier-neuf.fr/images/maison.png" style="width:40px; margin-right:20px;"><?php echo hugenetwork; ?></li>
-                    
-                    </div>  
-                    <div class="h10">
-
-                   <li class=""><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png" style="width:40px;"><?php echo assistmember; ?> </li> 
-               </div>
-
-                </div></div>
+                    <div class="strenght_container">
+                        <div class="bloc_strenght">
+                            <div class="bloc_top_left">
+                                <div class="bloc2"><img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png"><p>Echanges illimités</p></div>
+                            </div>
+                            <div class="bloc_top_right">
+                                <div class="bloc2"><img src="http://www.meilleur-immobilier-neuf.fr/images/maison.png"><p><?php echo hugenetwork; ?></p></div>
+                            </div>
+                            <div class="bloc_bot_left">
+                                <div class="bloc2"><img src="http://sbxblog.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/no_cash_clipart.png"><p><?php echo freedevice; ?></p></div>
+                            </div>
+                            <div class="bloc_bot_right">
+                                <div class="bloc2"><img src="http://www.clipartbest.com/cliparts/dTr/a5E/dTra5Ejjc.png"><p><?php echo assistmember; ?></p></div>
+                            </div>
+                        </div>
+                    </div>
 
 
               
