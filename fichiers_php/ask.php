@@ -161,14 +161,20 @@ session_start();
                         ));
                         $ech2bis = $retb -> fetch();
                         //Si les deux parties ont validé l'échange, alors l'échange est en cours :
-                        if ($ech2bis['demandeur_has_visited']=1 AND $ech2bis['proprietaire_has_visited']=1) {
-                            $req = $bdd -> prepare("UPDATE echange SET end_ech = 1, en_cours = 0 WHERE id_logement=?");
-                            $req -> execute(array($_GET['id_logement']));
-                        }
-                        if ($ech2bis['demandeur_has_visited']=1 AND $ech2bis['proprietaire_has_visited']=1) {
-                            $req = $bdd -> prepare("UPDATE echange SET user1 = 0, user2 = 0 WHERE id_logement=?");
-                            $req -> execute(array($_GET['id_logement']));
-                        }
+                        if (strcasecmp($ech2bis['proprietaire_has_visited'],"1") == 0) {
+                            switch ($ech2bis['demandeur_has_visited']) {
+
+                                case 0:
+                                    echo "";
+                                    break;
+                                case 1:
+                                    $req = $bdd -> prepare("UPDATE echange SET end_ech = 1, en_cours = 0 WHERE id_logement=?");
+                                    $req -> execute(array($_GET['id_logement']));
+
+                                    $req = $bdd -> prepare("UPDATE echange SET user1 = 0, user2 = 0 WHERE id_logement=?");
+                                    $req -> execute(array($_GET['id_logement']));
+                                    break;
+                            }}
                     }
                     //On récupère toutes les demandes d'échange de l'utilisateur
                     $res = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=? AND en_cours=1 AND end_ech=0 ");
@@ -223,14 +229,20 @@ session_start();
                         ));
                         $ech2bis = $retb -> fetch();
                         //Si les deux parties ont validé l'échange, alors l'échange est en cours :
-                        if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
-                            $req = $bdd -> prepare("UPDATE echange SET end_ech = 1, en_cours = 0 WHERE id_logement_asked=?");
-                            $req -> execute(array($_GET['id_logement']));
-                        }
-                        if ($ech2bis['demandeur_has_visited']==1 AND $ech2bis['proprietaire_has_visited']==1) {
-                            $req = $bdd -> prepare("UPDATE echange SET user1 = 0, user2 = 0 WHERE id_logement=?");
-                            $req -> execute(array($_GET['id_logement']));
-                        }
+                        if (strcasecmp($ech2bis['demandeur_has_visited'],"1") == 0) {
+                            switch ($ech2bis['proprietaire_has_visited']) {
+
+                                case 0:
+                                    echo "";
+                                    break;
+                                case 1:
+                                    $req = $bdd -> prepare("UPDATE echange SET end_ech = 1, en_cours = 0 WHERE id_logement_asked=?");
+                                    $req -> execute(array($_GET['id_logement']));
+
+                                    $req = $bdd -> prepare("UPDATE echange SET user1 = 0, user2 = 0 WHERE id_logement=?");
+                                    $req -> execute(array($_GET['id_logement']));
+                                    break;
+                            }}
                     }
                     //On récupère toutes les demandes d'échange de l'utilisateur
                     $res = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=? AND en_cours=1 AND end_ech=0 ");
