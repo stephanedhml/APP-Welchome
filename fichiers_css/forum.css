@@ -3,19 +3,18 @@
 }*/
 
 .forum_title {
-    padding-top: 6%;
+    padding-top: 80px;
     text-align: center;
     font-size: 35px;
-    color: #34495e;
+    color: #34495E;
     font-weight: 300;
-    font-family: sans-serif;
     height: 90px;
     width: 100%;
-    background-color: white;
+    background-color: #FFF;
     letter-spacing: 1px;
     padding-right: 40px;
-    border-bottom: 1px solid #bdc3c7;
-
+    border-bottom: 1px solid #BDC3C7;
+    font-family: century,arial,sans-serif;
 }
 
 
