@@ -634,7 +634,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <?php
         $req = $bdd -> prepare("SELECT * FROM annonce_equipement WHERE id_logement=?");
         $req -> execute(array($_GET['choix_logement']));
-
+        ?> <p>Equipements :</p><br/> <?php
         while ($equip = $req -> fetch()) {
             $ret = $bdd -> prepare("SELECT * FROM equipement WHERE id_equipement=?");
             $ret -> execute(array($equip[1]));
