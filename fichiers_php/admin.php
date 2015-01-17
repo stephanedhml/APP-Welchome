@@ -124,23 +124,25 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
                 <div class="admin_container">
                     <div class="user_info">
                         <div class="user_cadre">
-                            <img src="<?php echo $user_info['avatar'] ?>" class="profil">
-                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1"><?php echo editerunprofil; ?></a>
+                            <a href='admin.php?id_user=<?php echo $user_info[0] ?>&del_usr=1'>
+                            <div class="supp">
+                                <p>Supprimer définitivement <?php echo $user_info[1] ?></p>
+                            </div></a>
+                            <div class="photo_user_pos"><img src="<?php echo $user_info['avatar'] ?>" class="img_user_admin"></div>
+                            <div class="info_container">
 
-                            <p><?php echo $user_info[1] ?></p>
+                            <p>Pseudo : <?php echo $user_info[1] ?></p>
 
-                            <p><?php echo $user_info['sexe'] ?></p>
+                            <p>Sexe : <?php echo $user_info['sexe'] ?></p>
 
-                            <p><?php echo $user_info['tel'] ?></p>
+                            <p>Tel. : <?php echo $user_info['tel'] ?></p>
 
-                            <p><?php echo $user_info['situation'] ?></p>
+                            <p>Situation : <?php echo $user_info['situation'] ?></p>
 
-                            <p><?php echo $user_info['profession'] ?></p>
+                            <p>Profession : <?php echo $user_info['profession'] ?></p>
 
-                            <p><?php echo $user_info['description'] ?></p>
-                            <a href='admin.php?id_user=<?php echo $user_info[0] ?>&del_usr=1'><img
-                                    src='https://cdn3.iconfinder.com/data/icons/lynx/22x22/actions/dialog-close.png'></a>
-
+                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1">Editer le profil de <?php echo $user_info[1] ?></a>
+                            </div>
                         </div>
                     </div>
                     <div class="logement_info">
@@ -152,7 +154,7 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
                             $pic->execute(array($house[0]));
                             $url_pic = $pic->fetch();
                             ?>
-                            <div class="cadre">
+                            <div class="cadre_admin">
                                 <div class="left">
                                     <?php echo '<img width="300px" height="200px" align="left" src="' . $url_pic['lien_photo'] . '" class="photo">' ?>
                                 </div>
@@ -161,12 +163,14 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
                                     <span>
                                     <a href="annonce.php?id_logement=<?php echo $house['id_logement']; ?>&amp;id_users=<?php echo $user_info[0] ?>">
                                         <?php echo '<p>' . $house['nom_maison'] . ' </br>' . $house['localisation'] . ' </br>' . $house['nombre_voyageurs'] . ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
-                                        <a href='admin.php?id_logement=<?php echo $house[0] ?>&del_logement=1'><img
-                                                src='https://cdn3.iconfinder.com/data/icons/lynx/22x22/actions/dialog-close.png'></a>
-
                                     </span>
                                 </div>
-                            </div><br/>
+                                <a href='admin.php?id_logement=<?php echo $house[0] ?>&del_logement=1'>
+                                    <div class="supp_logement">
+                                        <p>Supprimer définitivement : <?php echo $house['nom_maison'] ?></p>
+                                    </div></a>
+                            </div>
+                            <br/>
                         <?php } ?>
                     </div>
                 </div>
