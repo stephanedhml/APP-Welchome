@@ -395,7 +395,7 @@ if (isset($_GET["update"])) {
     while ($equipement = $req->fetch()) {
         $id_equipement = $equipement[0];
 
-        if (isset($_POST[$id_equipement]) AND $_POST[$id_equipement] != NULL) {
+        if (isset($_POST["$id_equipement-1"]) AND $_POST["$id_equipement-1"] != NULL) {
 
             $desc = $bdd->prepare("INSERT INTO annonce_equipement(id_logement, id_equipement) VALUES (:id_logement,:id_equipement)");
             $desc->execute(array(
@@ -604,7 +604,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         $req = $bdd -> query("SELECT * FROM equipement");
 
         while ($equipement = $req -> fetch()) { ?>
-        <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><input type="checkbox" name="<?php echo $equipement['id_equipement'] ?>-0"> <input type="checkbox" name="<?php echo $equipement['id_equipement'] ?>-1"></br>
+        <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><br/>
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-0"><label>Non</label>
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-1"><label>Oui</label><br>
         <?php
         }
         ?>
@@ -698,7 +700,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         $req = $bdd -> query("SELECT * FROM equipement");
 
         while ($equipement = $req -> fetch()) { ?>
-        <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><input type="checkbox" name="<?php echo $equipement['id_equipement'] ?>"></br>
+        <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><br>
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-0"><label>Non</label>
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-1"><label>Oui</label><br>
         <?php
         }
         ?>
