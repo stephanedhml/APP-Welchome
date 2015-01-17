@@ -257,7 +257,8 @@ if (isset($_GET["update"])) {
     ));
     $new_logement = $bdd -> lastInsertId();
 
-    ?> <div class="forum_title"><h7>Votre logement a bien été ajouté !</h7></div> <?php
+    ?>
+        <div class="forum_title" xmlns="http://www.w3.org/1999/html"><h7>Votre logement a bien été ajouté !</h7></div> <?php
 
     $numero_new_logement = $numero_logement+1 ;
 
@@ -416,9 +417,6 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style.css"/>
-    <link rel="stylesheet" href="../fichiers_css/annonce.css"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="js/owlcarroussel/owl.carousel.css" rel="stylesheet">
     <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
     <title>Edition Profil</title>
 </head>
@@ -544,7 +542,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 <div class="container_edit_profil">
     <script type="text/javascript" src="../fichier_js/ajout_photo.js"></script>
     <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
-        <div class="bloc_search_left">
+        <div class="bloc_edit_left">
             <label for="avatar"><?php echo photo1; ?> *</label><br/>
         <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
         <div class="bouto" >
@@ -572,8 +570,8 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <label for="localisation"><?php echo localisation; ?></label><br/>
         <input type="text" name="localisation"/><br/>
         <label for="description_logement"><?php echo descriptionlogement; ?></label><br/>
-        <input type="text" name="description_logement"/><br/>
-        <label for="type_logement"><?php echo choixlogement; ?></label><br/>
+        <textarea type="text" name="description_logement" style="height: 200px; width: 300px"/></textarea><br/>
+        <label for="type_logement">Type de logement</label><br/>
         <select name="type_logement" id="choix">
             <OPTION></OPTION>
             <option value="Studio"><?php echo studio; ?></option>
@@ -598,15 +596,15 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 </div>
     <!-- Critères logement MAJ -->
 
-    <div class="bloc_search_center">
+    <div class="bloc_edit_center">
 
         <?php
         $req = $bdd -> query("SELECT * FROM equipement");
 
         while ($equipement = $req -> fetch()) { ?>
         <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><br/>
-            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-0"><label>Non</label>
-            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-1"><label>Oui</label><br>
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-0">&nbsp;<label>Non&nbsp;</label>&nbsp;&nbsp;
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-1">&nbsp;<label>Oui&nbsp;</label><br>
         <?php
         }
         ?>
@@ -624,10 +622,11 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <div class="bloc_edit_logement_right">
 
         <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo_edit_actual_house">' ?>
+        <div class="text_lefted">
         <p><?php echo localisation; ?> : <?php echo $donnees1[2]; ?></p></br>
         <p><?php echo titreannonce; ?> : <?php echo $donnees1[4]; ?></p></br>
         <p><?php echo nbvoyageurs; ?> : <?php echo $donnees1[5]; ?></p></br>
-        <p><?php echo choixlogement; ?> : <?php echo $donnees1[6]; ?></p></br>
+        <p>Type de logement : <?php echo $donnees1[6]; ?></p></br>
         <p><?php echo nbchambres; ?> : <?php echo $donnees1[7]; ?></p></br>
         <p><?php echo nbsallesbain; ?> : <?php echo $donnees1[8]; ?></p></br>
         <p><?php echo superficie; ?> : <?php echo $donnees1[9]; ?> m²</p></br>
@@ -643,9 +642,20 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
             ?>
             <p><?php echo $nom_equip[1] ?> <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png"></p>
         <?php } ?>
-
+        </div>
+        <?php
+        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+        $pic -> execute(array($_GET["choix_logement"]));
+        $allpic = $pic -> fetch();
+        while ($allpic = $pic -> fetch()) {
+        ?>
+        <img src="<?php echo $allpic['lien_photo'] ?>" class="photo_edit_actual_house">
+        <?php
+        }
+        ?>
     </div>
-        <?php } ?>
+        <?php
+        } ?>
 </div>
     </form>
 
