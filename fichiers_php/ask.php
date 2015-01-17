@@ -4,6 +4,73 @@ include("modeles.php");
 include("../menu_responsive/javascript/menu_responsive.js");
 
 session_start();
+
+if (isset($_GET["del_voeu"]) AND $_GET["del_voeu"] == 1) {
+
+    $req = $bdd->prepare("DELETE FROM echange WHERE id_logement_asked=:id_logement AND id_demandeur=:id_demandeur");
+    $req->execute(array(
+        'id_logement' => $_GET["id_logement"],
+        'id_demandeur' => $_SESSION['userid'],
+    ));
+    //On informe l'autre utilisateur qu'on ne veut plus échanger
+    $message = "Je suis désolé, je ne souhaite plus échanger mon logement avec vous !";
+    $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+    $res -> execute(array(
+        "destinataire" => $_GET['destinataire'],
+        "expediteur" => $_SESSION['userid'],
+        "dates" => $date = date("Y-m-d H:i:s"),
+        "message" => $message,
+    ));
+    if($derid = $bdd -> lastInsertId())
+    {
+        $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+        $nv -> execute(array($derid));
+        header('Location: ask.php');
+    }
+    else
+    {
+        ?>
+        <div><?php echo errorsendmessage; ?></div> <br/>
+        <a href="index.php"><?php echo retouraccueil; ?></a>
+    <?php
+    }
+
+    header('Location: ask.php');
+}
+if (isset($_GET["del_request"]) AND $_GET["del_request"] == 1) {
+
+    $req = $bdd->prepare("DELETE FROM echange WHERE id_logement=:id_logement AND id_proprietaire=:id_proprietaire AND id_demandeur=:id_demandeur");
+    $req->execute(array(
+        'id_logement' => $_GET["id_logement"],
+        'id_proprietaire' => $_SESSION['userid'],
+        'id_demandeur' => $_GET['id_demandeur']
+    ));
+
+    //On informe l'autre utilisateur qu'on ne veut plus échanger
+    $message = "Je suis désolé, je ne souhaite plus échanger mon logement avec vous";
+    $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+    $res -> execute(array(
+        "destinataire" => $_GET['id_demandeur'],
+        "expediteur" => $_SESSION['userid'],
+        "dates" => $date = date("Y-m-d H:i:s"),
+        "message" => $message,
+    ));
+    if($derid = $bdd -> lastInsertId())
+    {
+        $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+        $nv -> execute(array($derid));
+        header('Location: ask.php');
+    }
+    else
+    {
+        ?>
+        <div><?php echo errorsendmessage; ?></div> <br/>
+        <a href="index.php"><?php echo retouraccueil; ?></a>
+    <?php
+    }
+
+    header('Location: ask.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -101,9 +168,11 @@ session_start();
                                     <span>
                                     <a href="annonce.php?id_logement=<?php echo $house1['id_logement']; ?>&amp;id_users=<?php echo $house1['id_users'] ?>" >
                                         <?php echo '<p>' .''.$house1['localisation']. ' </br>' . $house1['nombre_voyageurs']. ' voyageurs </br>' . $house1['type_logement'] . '</p>'; ?> </a><br/>
+
                                     </span>
                 </div>
             </div>
+            <div class="choice"><a href="ask.php?del_voeu=1&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech1['id_proprietaire'] ?>">Supprimer ce voeu</a></div>
             <?php if ($ech1['demandeur_want']!=1) { ?> <div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech1['id_proprietaire'] ?>">Commencer l'échange</a></div> <?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
         <?php
 
@@ -160,6 +229,7 @@ session_start();
                                     </span>
                         </div>
                     </div>
+                <div class="choice"><a href="ask.php?del_request=1&id_logement=<?php echo $house2['id_logement'] ?>&id_proprietaire=<?php echo $ech2['id_proprietaire'] ?>&id_demandeur=<?php echo $ech2['id_demandeur'] ?>">Supprimer cette demande</a></div>
                 <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>&destinataire=<?php echo $demandeur['id_users'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
             <?php
             }
