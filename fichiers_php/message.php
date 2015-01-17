@@ -96,6 +96,32 @@ session_start();
                     $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                     $quser -> execute(array($msg_recu[0]));
                     $un = $quser -> fetch();
+                    if (isset($_POST['validation'])) {
+                        $rel = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
+                        $rel -> execute(array($msg_recu[0]));
+                        $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"],$ech['id_logement'],$ech['id_logement_asked']);
+
+                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
+                        $res -> execute(array($_GET['id']));
+
+                        //Une fois accepté, on passe en non lu le message
+                        $lu = $bdd->prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=? ");
+                        $lu->execute(array($_GET['id']));
+
+                        header("Location: message.php");
+                        exit();
+                    }
+                    if (isset($_POST['refus'])) {
+                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
+                        $res -> execute(array($_GET['id']));
+
+                        //Une fois accepté, on passe en non lu le message
+                        $ret = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=?");
+                        $ret -> execute(array($_GET['id']));
+
+                        header('Location: message.php');
+                        exit();
+                    }
                     ?>
                             <tr>
                                 <td class="column_msg_1">
@@ -109,23 +135,6 @@ session_start();
 
                             </tr>
                     <?php
-                    if (isset($_POST['validation'])) {
-                        $ret = $bdd -> prepare("UPDATE echange SET user2=1 WHERE id_demandeur=?");
-                        $ret -> execute(array($msg_recu[0]));
-                        $fav = ajout_favoris($msg_recu[0],$_SESSION["userid"],$ech['id_logement'],$ech['id_logement_asked']);
-
-                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
-                        $res -> execute(array($_GET['id']));
-                    }
-                    if (isset($_POST['refus'])) {
-                        $res = $bdd -> prepare("UPDATE messages SET choix=NULL WHERE id_message=?");
-                        $res -> execute(array($_GET['id']));
-
-                        $ret = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=?");
-                        $ret -> execute(array($_GET['id']));
-
-                        header('Location: message.php');
-                    }
                     }
                 ?>
                 </table>

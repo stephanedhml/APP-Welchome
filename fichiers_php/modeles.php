@@ -376,7 +376,7 @@ function ajout_favoris($demandeur, $proprietaire, $logement, $logement_proposed)
     $res -> fetch();
 
     if ($user1=1 AND $user2=1) {
-        $req = $bdd -> prepare("INSERT INTO favoris(id_user,id_ami, friend,id_logement_proposed) VALUES(:username, :friend_username, :ami, :id_logement, :id_logement_proposed)");
+        $req = $bdd -> prepare("INSERT INTO favoris(id_user,id_ami, friend , id_logement, id_logement_proposed) VALUES(:username, :friend_username, :ami, :id_logement, :id_logement_proposed)");
         $req -> execute(array(
             'username' => $proprietaire,
             'friend_username' => $demandeur,
