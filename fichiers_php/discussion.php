@@ -23,7 +23,7 @@ session_start();
         <div id="bloc_page_msg">
             <?php
             //Traitement du formulaire envoyé - placé ici à cause de "header" qui requiert qu'aucun code HTML ne soit inséré avant lui : http://www.commentcamarche.net/faq/878-redirection-php-redirect-header
-            if (isset($_POST["message"]))
+            if (isset($_POST["message"]) AND $_POST["message"]!=NULL)
             {
                 $message = $_POST["message"];
                 $userid = $_SESSION["userid"];

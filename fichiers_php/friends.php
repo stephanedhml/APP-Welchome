@@ -43,6 +43,7 @@ if (isset($_GET["del_friend"]) AND $_GET["del_friend"] == 1) {
     <div class="global">
 
     <div id="bloc_page_msg">
+        <div class="new_msg"><h7>Amis</h7></div>
 
     <?php
     $req = $bdd -> prepare("SELECT id_ami FROM favoris WHERE friend=1 AND id_user=? GROUP BY id_ami");

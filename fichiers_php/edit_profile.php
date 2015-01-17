@@ -576,7 +576,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                 <div class="center_carre_bot"><a href="ask.php"><p>Confirmation Validation</p></a></div>
             </div>
             <div class="right_3_bot">
-                <div class="right_carre_bot"><a href="edit_profile.php?choix=3<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p>Amis</p></a></div>
+                <div class="right_carre_bot"><a href="friends.php"><p>Amis</p></a></div>
             </div>
     <?php } ?>
 
