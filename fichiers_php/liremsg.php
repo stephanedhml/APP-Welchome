@@ -28,7 +28,7 @@ session_start();
                     exit();
                 }
 
-                $req = $bdd -> prepare("SELECT id_expediteur, message, id_message, echange, choix FROM messages WHERE id_message=?");
+                $req = $bdd -> prepare("SELECT id_expediteur, message, id_message, echange, choix, lu_nonlu FROM messages WHERE id_message=?");
                 $req -> execute(array($_GET['id']));
                 $nb = $req -> rowCount();
 
@@ -43,10 +43,14 @@ session_start();
                         $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                         $quser -> execute(array($msg_recu[0]));
                         $un = $quser -> fetch();
+                        if ($msg_recu['lu_nonlu']==1) {
+                            $lu = $bdd->prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=? ");
+                            $lu->execute(array($msg_recu[2]));
 
-                        $lu = $bdd -> prepare("UPDATE messages SET lu_nonlu=NULL WHERE id_message=? ");
-                        $lu -> execute(array($msg_recu[2]));
-
+                            $id_msg = $_GET['id'];
+                            header("Location: liremsg.php?id=$id_msg");
+                            exit();
+                        }
                         ?>
                         <table class="tableau_new_messages" ">
                             <tr>

@@ -37,6 +37,29 @@ session_start();
                 'id_demandeur' => $_SESSION['userid'],
                 'id_logement' => $_GET['id_logement'],
             ));
+
+            //Lorsque la confirmation est faite, on envoie un message à l'autre pour lui dire qu'on est prêt
+            $message = "Je suis prêt pour échanger mon logement avec le votre. Quand vous serez prêt, renseignez le afin que l'échange puisse commencer !";
+            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+            $res -> execute(array(
+                "destinataire" => $_GET['destinataire'],
+                "expediteur" => $_SESSION['userid'],
+                "dates" => $date = date("Y-m-d H:i:s"),
+                "message" => $message,
+            ));
+            if($derid = $bdd -> lastInsertId())
+            {
+                $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+                $nv -> execute(array($derid));
+                header('Location: ask.php');
+            }
+            else
+            {
+                ?>
+                <div><?php echo errorsendmessage; ?></div> <br/>
+                <a href="index.php"><?php echo retouraccueil; ?></a>
+            <?php
+            }
             //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
             $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement");
             $retb -> execute(array(
@@ -81,7 +104,7 @@ session_start();
                                     </span>
                 </div>
             </div>
-            <?php if ($ech1['demandeur_want']!=1) { ?> <div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>">Commencer l'échange</a></div> <?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house1['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
+            <?php if ($ech1['demandeur_want']!=1) { ?> <div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech1['id_proprietaire'] ?>">Commencer l'échange</a></div> <?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
         <?php
 
             } ?>
@@ -137,7 +160,7 @@ session_start();
                                     </span>
                         </div>
                     </div>
-                <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
+                <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>&destinataire=<?php echo $demandeur['id_users'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
             <?php
             }
             ?>
@@ -153,6 +176,27 @@ session_start();
                             'id_proprietaire' => $_SESSION['userid'],
                             'id_logement' => $_GET['id_logement'],
                         ));
+                        //Lorsque la confirmation est faite, on envoie un message à l'autre pour lui dire qu'on est prêt
+                        $message = "Je suis prêt pour échanger mon logement avec le votre. Quand vous serez prêt, renseignez le afin que l'échange puisse commencer !";
+                        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+                        $res -> execute(array(
+                            "destinataire" => $_GET['destinataire'],
+                            "expediteur" => $_SESSION['userid'],
+                            "dates" => $date = date("Y-m-d H:i:s"),
+                            "message" => $message,
+                        ));
+                        if($derid = $bdd -> lastInsertId())
+                        {
+                            $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+                            $nv -> execute(array($derid));
+                           }
+                        else
+                        {
+                            ?>
+                            <div><?php echo errorsendmessage; ?></div> <br/>
+                            <a href="index.php"><?php echo retouraccueil; ?></a>
+                        <?php
+                        }
                         //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
                         $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement=:id_logement");
                         $retb -> execute(array(
@@ -207,7 +251,7 @@ session_start();
                                     </span>
                             </div>
                         </div>
-                        <?php if ($ech3['demandeur_has_visited']!=1) { ?><div class="end"><a href="ask.php?end_proprio&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer la fin de l'échange</a></div><?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
+                        <?php if ($ech3['demandeur_has_visited']!=1) { ?><div class="end"><a href="ask.php?end_proprio&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech3['id_demandeur'] ?>">Confirmer la fin de l'échange</a></div><?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
 
                     <?php
 
@@ -221,6 +265,28 @@ session_start();
                             'id_demandeur' => $_SESSION['userid'],
                             'id_logement' => $_GET['id_logement'],
                         ));
+                        //Lorsque la confirmation est faite, on envoie un message à l'autre pour lui dire qu'on est prêt
+                        $message = "Je suis prêt pour échanger mon logement avec le votre. Quand vous serez prêt, renseignez le afin que l'échange puisse commencer !";
+                        $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+                        $res -> execute(array(
+                            "destinataire" => $_GET['destinataire'],
+                            "expediteur" => $_SESSION['userid'],
+                            "dates" => $date = date("Y-m-d H:i:s"),
+                            "message" => $message,
+                        ));
+                        if($derid = $bdd -> lastInsertId())
+                        {
+                            $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+                            $nv -> execute(array($derid));
+
+                        }
+                        else
+                        {
+                            ?>
+                            <div><?php echo errorsendmessage; ?></div> <br/>
+                            <a href="index.php"><?php echo retouraccueil; ?></a>
+                        <?php
+                        }
                         //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
                         $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_demandeur=:id_demandeur AND id_logement_asked=:id_logement");
                         $retb -> execute(array(
@@ -275,7 +341,7 @@ session_start();
                                     </span>
                             </div>
                         </div>
-                        <?php if ($ech3['proprietaire_has_visited']!=1) { ?><div class="end"><a href="ask.php?end_demandeur&id_logement=<?php echo $house1['id_logement'] ?>">Confirmer la fin de l'échange</a></div><?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
+                        <?php if ($ech3['proprietaire_has_visited']!=1) { ?><div class="end"><a href="ask.php?end_demandeur&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech3['id_proprietaire'] ?>">Confirmer la fin de l'échange</a></div><?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
 
                     <?php
 
@@ -290,6 +356,28 @@ session_start();
                     'id_proprietaire' => $_SESSION['userid'],
                     'id_logement' => $_GET['id_logement'],
                 ));
+            //Lorsque la confirmation est faite, on envoie un message à l'autre pour lui dire qu'on est prêt
+            $message = "Je suis prêt pour échanger mon logement avec le votre. Quand vous serez prêt, renseignez le afin que l'échange puisse commencer !";
+            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
+            $res -> execute(array(
+                "destinataire" => $_GET['destinataire'],
+                "expediteur" => $_SESSION['userid'],
+                "dates" => $date = date("Y-m-d H:i:s"),
+                "message" => $message,
+            ));
+            if($derid = $bdd -> lastInsertId())
+            {
+                $nv = $bdd -> prepare("UPDATE messages SET lu_nonlu = 1 WHERE id_message=?");
+                $nv -> execute(array($derid));
+
+            }
+            else
+            {
+                ?>
+                <div><?php echo errorsendmessage; ?></div> <br/>
+                <a href="index.php"><?php echo retouraccueil; ?></a>
+            <?php
+            }
             //Ici, on vérifie au passage que si le demandeur a lui aussi validé l'échange, alors l'échange commence
                 $retb = $bdd -> prepare("SELECT * FROM echange WHERE id_proprietaire=:id_proprietaire AND id_logement=:id_logement");
                 $retb -> execute(array(
