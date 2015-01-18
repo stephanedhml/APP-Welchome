@@ -51,7 +51,7 @@
 }
 #slide3
 {
-    background-image: url('../walls/wall3cmp.jpg');
+    background-image: url('../walls/wall9.jpg');
 }
 #slide4
 {
@@ -122,10 +122,11 @@
 }
 #slide5
 {
-    background-image: url('../walls/wall5cmp.jpg');
+    background-image: url('../walls/wall11.jpg');
 }
 .accueil_title {
-    padding-top: 80px;
+    padding-top: 7%;
+    padding-bottom: 2%;
     text-align: center;
     font-size: 35px;
     color: #34495E;
@@ -414,7 +415,7 @@ body
         font-size: 28px;
         text-align: center;
         list-style: none;
-        padding-bottom: 6%;
+        padding-bottom: 7%;
     }
 
 .h4 {
@@ -474,7 +475,7 @@ margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 20px;
     font-family: century,arial,sans-serif;
     text-align: center;
