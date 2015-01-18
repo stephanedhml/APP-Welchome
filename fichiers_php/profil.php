@@ -134,6 +134,13 @@
                         $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
                         $pic -> execute(array($house[0]));
                         $url_pic = $pic -> fetch();
+
+                        $rei = $bdd -> prepare("SELECT * FROM echange WHERE id_logement=:id_1 OR id_logement_asked=:id_2 AND en_cours=1");
+                        $rei -> execute(array(
+                            'id_1' => $house[0],
+                            'id_2' => $house[0],
+                            ));
+                        $during = $rei -> fetch();
                         ?>
                         <div class="cadre">
                                 <div class="left">
@@ -145,6 +152,10 @@
                                     <a href="annonce.php?id_logement=<?php echo $house['id_logement']; ?>&amp;id_users=<?php echo $annonce ?>" >
                                     <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
+                                    <?php if(isset($_SESSION["userid"]) AND strcasecmp($donnees[1],$utilisateur[1]) == 0 AND $during[0]==NULL) {
+                                        ?>
+                                    <div class="end2"><a href="profil.php?suppress_annonce=<?php echo $house[0]; ?>">Supprimer</a></div>
+                                    <?php } ?>
                                 </div>
                         </div><br/>
                         <?php } ?>

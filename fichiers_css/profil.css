@@ -259,7 +259,7 @@ padding-top: 10px;
 }
 
 .right a:link {
-    color: #2c3e50;
+    /* color: #2c3e50; */
     text-decoration:none; 
 
 }
@@ -282,3 +282,23 @@ padding-top: 10px;
 
 }
 
+.end2 {
+    width: 350px;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #c20312;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.end2 a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: century,arial,sans-serif;
+}
