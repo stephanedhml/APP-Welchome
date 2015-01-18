@@ -172,7 +172,7 @@ if (isset($_GET["del_request"]) AND $_GET["del_request"] == 1) {
                                     </span>
                 </div>
             </div>
-            <div class="choice"><a href="ask.php?del_voeu=1&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech1['id_proprietaire'] ?>">Supprimer ce voeu</a></div>
+            <div class="choice1"><a href="ask.php?del_voeu=1&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech1['id_proprietaire'] ?>">Supprimer ce voeu</a></div>
             <?php if ($ech1['demandeur_want']!=1) { ?> <div class="choice"><a href="ask.php?confirm_demand&id_logement=<?php echo $house1['id_logement'] ?>&destinataire=<?php echo $ech1['id_proprietaire'] ?>">Commencer l'échange</a></div> <?php } else { ?> <div class="choice"><a>En attente de l'autre utilisateur</a></div> <?php } ?>
         <?php
 
@@ -229,7 +229,7 @@ if (isset($_GET["del_request"]) AND $_GET["del_request"] == 1) {
                                     </span>
                         </div>
                     </div>
-                <div class="choice"><a href="ask.php?del_request=1&id_logement=<?php echo $house2['id_logement'] ?>&id_proprietaire=<?php echo $ech2['id_proprietaire'] ?>&id_demandeur=<?php echo $ech2['id_demandeur'] ?>">Supprimer cette demande</a></div>
+                <div class="choice1"><a href="ask.php?del_request=1&id_logement=<?php echo $house2['id_logement'] ?>&id_proprietaire=<?php echo $ech2['id_proprietaire'] ?>&id_demandeur=<?php echo $ech2['id_demandeur'] ?>">Supprimer cette demande</a></div>
                 <?php if ($ech2['proprietaire_want']!=1) { ?><div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>&destinataire=<?php echo $demandeur['id_users'] ?>">Commencer l'échange</a></div><?php } else { ?> <div class="choice"><a href="ask.php?accept_demand&id_logement=<?php echo $house2['id_logement'] ?>">En attente de l'autre utilisateur</a></div> <?php } ?>
             <?php
             }
