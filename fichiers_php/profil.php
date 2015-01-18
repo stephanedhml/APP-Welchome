@@ -1,3 +1,13 @@
+<?php
+session_start();
+include("config.php");
+
+if (isset($_GET['supp_log'])) {
+    $del = $bdd -> prepare("DELETE FROM logement WHERE id_logement=?");
+    $del -> execute(array($_GET['supp_log']));
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +17,6 @@
     <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
     <script type="text/javascript" src="../carrousel/jquery.js"></script>
     <script type="text/javascript" src="../carrousel/carrousel.js"></script>
-    <?php session_start();
-    include("config.php");
-     ?>
-
     <?php include("../menu_responsive/javascript/menu_responsive.js"); ?>
     <title>Profil</title>
 </head>
@@ -154,7 +160,7 @@
                                     </span>
                                     <?php if(isset($_SESSION["userid"]) AND strcasecmp($donnees[1],$utilisateur[1]) == 0 AND $during[0]==NULL) {
                                         ?>
-                                    <div class="end2"><a href="profil.php?suppress_annonce=<?php echo $house[0]; ?>">Supprimer</a></div>
+                                    <div class="end2"><a href="profil.php?supp_log=<?php echo $house[0]; ?>&id_logement=<?php echo $house[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>">Supprimer</a></div>
                                     <?php } ?>
                                 </div>
                         </div><br/>
