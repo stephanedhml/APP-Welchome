@@ -677,8 +677,8 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <input type="file" name="maj_4_img_logement" onclick="return verifphoto4(this)"  ><br />
         <label for="localisation"><?php echo localisation; ?></label><br/>
         <input type="text" name="localisation"/><br/>
+        <label for="description_logement">Description du logement</label><br/>
         <textarea type="text" name="description_logement" style="height: 200px; width: 300px"/></textarea><br/>
-        <input type="text" name="description_logement"/><br/>
         <label for="type_logement"><?php echo choixlogement; ?></label><br/>
         <select name="type_logement" id="choix">
             <OPTION></OPTION>
