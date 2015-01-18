@@ -586,9 +586,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <input type="text" name="nom_maison"/><br/>
         <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
         <input type="number" name="nombre_voyageurs"/><br/>
-        <label for="nombre_chambres"><?php echo nbchambres; ?></label><br/>
+        <label for="nombre_chambres">Nombre de chambres</label><br/>
         <input type="number" name="nombre_chambres"/><br/>
-        <label for="nb_salles_bains"><?php echo nbsallesbain; ?></label><br/>
+        <label for="nb_salles_bains">Nombre de salles de bain</label><br/>
         <input type="number" name="nb_salles_bains"/><br/>
         <label for="superficie"><?php echo superficie; ?></label><br/>
         <input type="number" name="superficie"/><br/>
