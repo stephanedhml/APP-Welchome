@@ -679,7 +679,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <input type="text" name="localisation"/><br/>
         <label for="description_logement">Description du logement</label><br/>
         <textarea type="text" name="description_logement" style="height: 200px; width: 300px"/></textarea><br/>
-        <label for="type_logement"><?php echo choixlogement; ?></label><br/>
+        <label for="type_logement">Type de logement</label><br/>
         <select name="type_logement" id="choix">
             <OPTION></OPTION>
             <option value="Studio"><?php echo studio; ?></option>
@@ -694,9 +694,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <input type="text" name="nom_maison"/><br/>
         <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
         <input type="number" name="nombre_voyageurs"/><br/>
-        <label for="nombre_chambres"><?php echo nbchambres; ?></label><br/>
+        <label for="nombre_chambres">Nombre de chambres</label><br/>
         <input type="number" name="nombre_chambres"/><br/>
-        <label for="nb_salles_bains"><?php echo nbsallesbain; ?></label><br/>
+        <label for="nb_salles_bains">Nombre de salles de bain</label><br/>
         <input type="number" name="nb_salles_bains"/><br/>
         <label for="superficie"><?php echo superficie; ?></label><br/>
         <input type="number" name="superficie"/><br/>
