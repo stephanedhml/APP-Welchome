@@ -235,20 +235,38 @@
                         'id_logement' => $_GET['id_logement'],
                         'id_logement_asked' => $_GET['id_logement'],
                     ));
-                    $com = $req -> fetch();
+                    while($com = $req -> fetch()) {
                     if ($com['end_ech']==1) {
-                    if (strcmp($_SESSION['userid'],$com['id_demandeur'])==0 OR strcmp($_SESSION['userid'],$com['id_proprietaire'])==0) {
-                ?>
-                <div class="cadre_answer_post_annonce" >
-                    <div class="answer1" >
-                        <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
-                            <label for="message" >Message</label ><br /></br >
-                            <textarea type = "text" name = "message" class="post_message" value="Ecrivez votre commentaire en 300 caractères max" maxlength="300"></textarea ><br /><br />
-                            <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
-                        </form >
-                    </div >
-                </div>
-                <?php } } } ?>
+                        switch (strcmp($_SESSION['userid'],$com['id_demandeur'])) {
+                            case 0:
+                                ?>
+                                <div class="cadre_answer_post_annonce" >
+                                    <div class="answer1" >
+                                        <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
+                                            <label for="message" >Message</label ><br /></br >
+                                            <textarea type = "text" name = "message" class="post_message" value="Ecrivez votre commentaire en 300 caractères max" maxlength="300"></textarea ><br /><br />
+                                            <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
+                                        </form >
+                                    </div >
+                                </div>
+                                <?php
+                            break;
+                        }
+                        switch (strcmp($_SESSION['userid'],$com['id_proprietaire'])) {
+                            case 0:
+                                ?>
+                                <div class="cadre_answer_post_annonce" >
+                                    <div class="answer1" >
+                                        <form action = "annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>" method = "post" >
+                                            <label for="message" >Message</label ><br /></br >
+                                            <textarea type = "text" name = "message" class="post_message" value="Ecrivez votre commentaire en 300 caractères max" maxlength="300"></textarea ><br /><br />
+                                            <input type = "submit" value = "Poster" id = "btn_connexion" /><br /><br />
+                                        </form >
+                                    </div >
+                                </div>
+                            <?php
+                            break;
+                        } } } } ?>
         </div>
         </div>
     </div>
