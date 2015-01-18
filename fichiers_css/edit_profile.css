@@ -1,3 +1,6 @@
+body a {
+    text-decoration: none;
+}
 .edit_profil {
     text-align: center;
 }
@@ -353,8 +356,17 @@
     margin-left: 0px;
     background-color: #F5F5F5;
     line-height: 50px;
+    text-align: center;
 }
-
+.bloc_add_left {
+    position: absolute;
+    width: 67%;
+    height: 100%;
+    margin-left: 0px;
+    background-color: #F5F5F5;
+    line-height: 70px;
+    text-align: center;
+}
 .bloc_edit_center {
     position: absolute;
     width: 33%;
@@ -362,6 +374,16 @@
     margin-left: 33%;
     background-color: #EEEEEE;
     line-height: 40px;
+    text-align: center;
+}
+.bloc_add_center {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    margin-left: 67%;
+    background-color: #EEEEEE;
+    line-height: 40px;
+    text-align: center;
 }
 .bloc_edit_logement_right {
     position: absolute;

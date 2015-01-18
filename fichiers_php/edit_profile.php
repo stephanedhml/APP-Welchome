@@ -665,9 +665,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     ?>
     <div class="container_edit_profil">
         <form action="edit_profile.php?choix=<?php echo $_GET["choix"]; ?>&add=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
-            <div class="bloc_search_left">
-                        <label for="avatar"><?php echo photo1; ?> *</label><br/>
-        <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
+            <div class="bloc_add_left">
+                        <label for="avatar"><?php echo photo1; ?></label>
+        (700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com) *</a><br/>
         <input type="file" name="maj_main_img_logement" ><br />
         <label for="avatar"><?php echo photo2; ?></label><br/>
         <input type="file" name="maj_2_img_logement" onclick="return verifphoto2(this)" ><br />
@@ -705,14 +705,14 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
             <!-- Critères logement -->
 
-            <div class="bloc_search_center">
+            <div class="bloc_add_center">
         <?php
         $req = $bdd -> query("SELECT * FROM equipement");
 
         while ($equipement = $req -> fetch()) { ?>
         <label for="<?php echo $equipement['nom'] ?>"><?php echo $equipement['nom'] ?></label><br>
-            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-0"><label>Non</label>
-            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-1"><label>Oui</label><br>
+            <input type="radio" name="<?php echo $equipement['id_equipement'] ?>-0">&nbsp;&nbsp;<label>Non</label>
+            &nbsp;&nbsp;<input type="radio" name="<?php echo $equipement['id_equipement'] ?>-1">&nbsp;&nbsp;<label>Oui</label><br>
         <?php
         }
         ?>

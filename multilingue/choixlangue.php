@@ -128,7 +128,7 @@
 		define('voyageur','Voyageurs');
 		define('chambre','Chambres');
 		define('sallebain','salles de bains');
-		define('equipement','Equipements: ');
+		define('equipement','Equipements : ');
 		define('membersince','Membre depuis 2014');
 		define('consultprofil','Consulter profil');
 		define('proposeechange','Proposer un échange');

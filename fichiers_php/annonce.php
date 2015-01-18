@@ -85,41 +85,18 @@
                 
                 ?>
                 <div class= "equipements">
-                    <p class="title_annonce"><?php echo equipement; ?></p></br></br>
+                    <p class="title_annonce">Equipements</p></br></br>
                     <p>
                 <?php
-                /* Boucle permettant d'obtenir la liste des critères automatiquement : avantage = permettra d'augmenter la liste si ajout d'un crtière dans BackOf / inconvenient : les noms qui s'affichent sont ceux de la BDD donc moches
-                 for ($i=15;$i<21;$i++) {
-                    $colonne = $req1 -> getColumnMeta($i);
-                    if ($donnees3[$colonne["name"]] == 1) {
-                        echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">'.$colonne["name"].'</li><br></br>';
-                    }
-                 } */
-                if ($donnees3['television'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.tele.' </li><br></br>';
-                }
-
-                if ($donnees3['machine_a_laver'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.machinelaver.' </li><br></br>';
-                }
-
-                if ($donnees3['parking'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png">'.parking.' </li><br></br>';
-                }
-
-                if ($donnees3['climatisation'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.climatisation.' </li><br></br>';
-                }
-
-                if ($donnees3['piscine'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.piscine.' </li><br></br>';
-                }
-
-                if ($donnees3['jardin'] == 1) {
-                    echo '<li class="equipement"> <img class= "ok" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Symbol_OK.png"> '.jardin.' </li><br></br>';
-                }
-
-                  ?>
+                $req = $bdd -> prepare("SELECT * FROM annonce_equipement WHERE id_logement=?");
+                $req -> execute(array($_GET['id_logement']));
+                while ($equip = $req -> fetch()) {
+                $ret = $bdd -> prepare("SELECT * FROM equipement WHERE id_equipement=?");
+                $ret -> execute(array($equip[1]));
+                $nom_equip = $ret -> fetch();
+                ?>
+                    <p><?php echo $nom_equip[1] ?> <img src="https://cdn3.iconfinder.com/data/icons/musthave/16/Check.png"></p>
+                    <?php } ?>
                     </p>
                 </div>
 
