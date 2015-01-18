@@ -99,8 +99,63 @@ include('modeles.php');
 			}
 		else
 		{
-			echo'<meta http-equiv="refresh" content="0;URL=index.php">';
-		}
+
+        // on crée une variable $requete pour faciliter l'écriture de la requête SQL.
+        $requete = htmlspecialchars($_POST['requete']);
+        $nbresult =resultats_requete_simple($requete);
+
+        // on utilise la fonction mysql_num_rows pour compter les résultats pour vérifier par après
+        $nb_resultats = $nbresult->rowCount();
+
+        if($nb_resultats != 0) // si le nombre de résultats est supérieur à 0, on continue
+        {
+            // maintenant, on va afficher les résultats
+            ?>
+            <img src="../images_diverses/search_result.png" class="search_result">
+            <p class="search_result_txt">
+                <?php echo noustrouver; ?>
+                <?php echo $nb_resultats;
+                // on vérifie le nombre de résultats pour orthographier correctement.
+                if($nb_resultats > 1) { echo ' résultats'; } else { echo ' résultat'; }
+                ?>
+                <?php echo nblogementtrouve; ?><br/><br/>
+
+            </p>
+
+
+
+            <?php
+            // on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
+            for($i=0 ; $i < $nb_resultats ; $i++)
+            {
+                $donnees = $nbresult->fetch();
+
+                $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                $pic -> execute(array($donnees['id_logement']));
+                $url_pic = $pic -> fetch();
+                ?>
+                <div class="cadre">
+                    <div class="left">
+                        <a href="annonce.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>" > <?php echo '<img  align="left" src="'.$url_pic['lien_photo'].'" class="photo">' ?></a>
+                    </div>
+
+                    <div class="right">
+                                    <span>
+                                      <a href="annonce.php?id_logement=<?php echo $donnees['id_logement']; ?>&amp;id_users=<?php echo $donnees['id_users']; ?>" >
+                                          <?php echo '<p>' .''.$donnees['localisation']. ' </br>' . $donnees['nombre_voyageurs']. ' voyageurs </br>' . $donnees['type_logement'] . " </br>  ". $donnees['description_logement'] . '</p>'; ?> </a><br/>
+                                    </span>
+                    </div>
+
+
+
+                </div><br/>
+            <?php
+            } // fin du while
+
+            ?>		 <br/><br/>
+            <a href="index.php" class="nlle_r"><?php echo nouvellerecherche; ?></a></p>
+        <?php
+		} }
 		?>
 	</p>
 </div>
