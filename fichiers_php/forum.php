@@ -4,6 +4,14 @@ include("modeles.php");
 include("../menu_responsive/javascript/menu_responsive.js");
 
 session_start();
+
+if (isset($_SESSION["userid"])) {
+
+    $rel = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
+    $rel -> execute(array($_SESSION['userid']));
+    $user = $rel -> fetch();
+
+}
 ?>
 
 <html>
@@ -21,6 +29,18 @@ session_start();
 <div class="superglobal">
     <div class="global">
         <div class="forum_title"><h7><?php echo forum1 ?></h7></div>
+        <?php
+        if(isset($_SESSION['userid'])){ if ($user[8]==1) {
+
+        echo '
+        <div class="forum_top">
+            <div class="forum_top_r_button">
+                <a href="new_topic.php?new_cat" id="btn_new_topic">Nouveau Sujet</a>
+            </div>
+        </div>
+        ';
+        } }
+        ?>
         <div class="forum_tableau"><table class="tableau_forum_accueil0">
             <tr>
                 <th><?php echo categorie; ?></th>
