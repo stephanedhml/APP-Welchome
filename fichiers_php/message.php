@@ -75,7 +75,6 @@ session_start();
                     <tr>
                         <th><?php echo nameexpediteur; ?></td>
                         <th>Message</td>
-                        <th>Date</td>
                         <th><?php echo statut; ?></th>
                         <th>Accepter une discussion</th>
                         <th>Photo</th>
@@ -134,10 +133,9 @@ session_start();
                                     <p><a href='profil.php?id_logement=2&amp;id_users=<?php echo $un[0]; ?>'><?php echo $un[1]; ?></a></p>
                                 </td>
                                 <td class="column_msg_3"><a href="liremsg.php?id=<?php echo $msg_recu[3] ?>"><?php echo $msg_recu['message'] ?></a></td>
-                                <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
-                                <td class="column_msg_1"><?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) {echo '<form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="'.yes.'" class="bouton"><input type="submit" name="refus" value="'.no.'" class="bouton"></form>' ;} ?></td>
-                                <td class="column_msg_1"><?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) { ?> <a href="annonce.php?id_logement=<?php echo $msg_recu['id_logement_proposed'] ?>&id_users=<?php echo $un[0] ?>"><img src="<?php echo $photo['lien_photo'] ?>" style="width: 200px; height: 130px;"></a> <?php } ?></td>
+                                <td class="column_msg_4"><?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) {echo '<form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="'.yes.'" class="bouton"><input type="submit" name="refus" value="'.no.'" class="bouton"></form>' ;} ?></td>
+                                <td class="column_msg_5"><?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) { ?> <a href="annonce.php?id_logement=<?php echo $msg_recu['id_logement_proposed'] ?>&id_users=<?php echo $un[0] ?>"><img src="<?php echo $photo['lien_photo'] ?>" style="width: 200px; height: 130px;"></a> <?php } ?></td>
 
                             </tr>
                     <?php

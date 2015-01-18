@@ -217,12 +217,22 @@
 }
 .column_msg_1 {
     width: 120px;
+    padding: 8px;
 }
 .column_msg_2 {
-    width: 140px;
+    width: 50px;
+    padding: 2px;
 }
 .column_msg_3 {
-    width: 400px;
+    width: 800px;
+    overflow: hidden;
+}
+.column_msg_4 {
+    padding: 2px;
+    width: 30px;
+}
+.column_msg_5 {
+    padding: 2px;
 }
 .cadre_answer_post_discussion {
     position: relative;
