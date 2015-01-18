@@ -57,7 +57,7 @@ session_start();
                 echo '<div class="accept_msg"><h7>'.dialogueaccept.'</h7><br/></div>';
             }
             $req = $bdd -> prepare("
-              SELECT id_expediteur, titre_message, date_update, id_message, lu_nonlu, echange, choix, message  FROM messages AS m1 WHERE id_destinataire=? ORDER BY id_message DESC
+              SELECT id_expediteur, titre_message, date_update, id_message, lu_nonlu, echange, choix, message, id_logement_proposed  FROM messages AS m1 WHERE id_destinataire=? ORDER BY id_message DESC
               ");
             $req -> execute(array($_SESSION["userid"]));
             $nb = $req -> rowCount();
@@ -78,6 +78,7 @@ session_start();
                         <th>Date</td>
                         <th><?php echo statut; ?></th>
                         <th>Accepter une discussion</th>
+                        <th>Photo</th>
 
                     </tr>
 
@@ -122,6 +123,10 @@ session_start();
                         header('Location: message.php');
                         exit();
                     }
+                    //On récupère les infos du logement proposé par une demande d'un autre utilisateur
+                    $rep = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                    $rep -> execute(array($msg_recu['id_logement_proposed']));
+                    $photo = $rep -> fetch();
                     ?>
                             <tr>
                                 <td class="column_msg_1">
@@ -132,6 +137,7 @@ session_start();
                                 <td class="column_msg_2"><?php echo $msg_recu[2]; ?></td>
                                 <td class="column_msg_2"><?php if ($msg_recu[4] == 1) {echo 'Non Lu';} else {echo 'Lu';} ?></td>
                                 <td class="column_msg_1"><?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) {echo '<form action="message.php?id=' . $msg_recu[3] . '" method="post"><input type="submit" name="validation" value="'.yes.'" class="bouton"><input type="submit" name="refus" value="'.no.'" class="bouton"></form>' ;} ?></td>
+                                <td class="column_msg_1"><?php if (isset($msg_recu[5]) AND $msg_recu[6]==1 AND $ech[6]!==1) { ?> <a href="annonce.php?id_logement=<?php echo $msg_recu['id_logement_proposed'] ?>&id_users=<?php echo $un[0] ?>"><img src="<?php echo $photo['lien_photo'] ?>" style="width: 200px; height: 130px;"></a> <?php } ?></td>
 
                             </tr>
                     <?php

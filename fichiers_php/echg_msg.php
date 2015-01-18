@@ -96,7 +96,7 @@ session_start();
                 "id_logement_asked" => $_GET['id_logement_asked'],
             ));
 
-            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message,echange,choix) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange, :choix)");
+            $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,titre_message,message,echange,choix,id_logement_proposed) VALUES(:destinataire,:expediteur,:dates,:titre, :message, :echange, :choix,:logement_propose)");
             $res -> execute(array(
                 "destinataire" => $_GET['proprietaire'],
                 "expediteur" => $_SESSION["userid"],
@@ -105,6 +105,7 @@ session_start();
                 "message" => $message,
                 "echange" => 1,
                 "choix" => 1,
+                "logement_propose" => $_GET["logement"],
             ));
 
                 if($derid = $bdd -> lastInsertId())

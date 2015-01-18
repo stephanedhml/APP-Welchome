@@ -22,7 +22,7 @@ session_start();
     </div>
 <div class="superglobal">
 <div class="global">
-    <div class="forum_title"><h7>RECHERCHE AVANCÉ</h7></div>
+    <div class="forum_title"><h7>RECHERCHE AVANCÉE</h7></div>
     <div id="form_rech" class="formulaire_r_avancee">
 	<form method="post" action="cible_recherche.php">
 <div class="container_advanced_search">

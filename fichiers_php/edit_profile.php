@@ -10,7 +10,7 @@ session_start();
 <?php
 //On différencie l'admin d'un utilisateur lambda
 
-if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user'];} else {$id_user=$_SESSION['userid'];}
+if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user']; var_dump($id_user);} else {$id_user=$_SESSION['userid'];}
 
 if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
@@ -245,14 +245,14 @@ if (isset($_GET["update"])) {
 
     //On récupère le nombre de logements que l'utilisateur possède afin de renseigner le bon numéro de logement dans la requête qui suivra
     $rez = $bdd -> prepare("SELECT * FROM logement WHERE id_users=?");
-    $rez -> execute(array($_SESSION["userid"]));
+    $rez -> execute(array($id_user));
     $numero_logement = $rez -> rowCount();
 
     //On enregistre le logement dans la base de donnée
     $ret = $bdd-> prepare("INSERT INTO logement(id_users,numero_logement) VALUES(:id_users, :numero_logement)");
     $ret->execute(array
     (
-        'id_users' => $_SESSION["userid"],
+        'id_users' => $id_user,
         'numero_logement' => $numero_logement+1,
     ));
     $new_logement = $bdd -> lastInsertId();
@@ -436,12 +436,12 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
             //Récupérer les infos utilisateurs pour le rediriger vers son profil
             $req = $bdd -> prepare("SELECT id_logement FROM logement WHERE id_users=:id_user ORDER BY id_logement DESC");
             $req -> execute(array(
-                'id_user' => $_SESSION['userid'],
+                'id_user' => $id_user,
             ));
             $id_log = $req -> fetch();
     ?>
             <div class="left_3_top">
-                <div class="left_carre_top"><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $_SESSION['userid']; ?>"><p>Consulter votre profil</p></a></div>
+                <div class="left_carre_top"><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $id_user; ?>"><p>Consulter votre profil</p></a></div>
             </div>
             <div class="center_3_top">
                 <div class="center_carre_top"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo modifytenement; ?></p></a></div>
@@ -464,7 +464,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         if (isset($_GET['choix']) AND $_GET["choix"]==2) {
 
             $ret = $bdd -> prepare("SELECT * FROM logement WHERE id_users=? ORDER BY id_logement DESC");
-            $ret -> execute(array($_SESSION["userid"]));
+            $ret -> execute(array($id_user));
             $nmber = $ret -> rowCount();
             ?> <div class="container_liste_logements"> <?php
             for ($i=0 ; $i < $nmber ; $i++) {
