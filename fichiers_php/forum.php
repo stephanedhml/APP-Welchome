@@ -44,9 +44,12 @@ session_start();
                     ?>
                     <tr>
                         <td><a href="site.php?id_cat=<?php echo $cat[0]?>"><?php echo $cat[1];?></a></td>
-                        <td><?php echo $cat[2];?></td>
+                        <td><a href="site.php?id_cat=<?php echo $cat[0]?>"><?php echo $cat[2];?></a></td>
                         <td><?php echo $cat[3];?></td>
-                        <td><?php echo ''.$lastf[1].'';?></td>
+                        <td style="padding: 8px; width: 120px;">
+                            <img src="<?php echo $lastf['avatar']?>" class="img_member"><br>
+                            <?php echo $lastf[1]?>
+                        </td>
                     </tr>
                     <?php
                 }
