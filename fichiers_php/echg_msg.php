@@ -39,32 +39,32 @@ session_start();
             $nmber = $ret -> rowCount();
 
             if (isset($_GET['logement'])) {} else {
-            ?>
-                <div class="forum_title"><h7>Choisissez le logement que vous souhaitez échanger</h7></div>
-                <div class="container_liste_logements"> <?php
-                for ($i=0 ; $i < $nmber ; $i++) {
-                    $house = $ret -> fetch();
-
-                    $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
-                    $pic -> execute(array($house[0]));
-                    $url_pic = $pic -> fetch();
-
                     ?>
-                    <div class="cadre_logement">
-                        <div class="left_cadre_logement">
-                            <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo">' ?>
-                        </div>
+                    <div class="forum_title"><h7>Choisissez le logement que vous souhaitez échanger</h7></div>
+                    <div class="container_liste_logements"> <?php
+                    for ($i=0 ; $i < $nmber ; $i++) {
+                        $house = $ret -> fetch();
 
-                        <div class="right_cadre_logement">
+                        $pic = $bdd -> prepare("SELECT * FROM photo WHERE id_logement=?");
+                        $pic -> execute(array($house[0]));
+                        $url_pic = $pic -> fetch();
+
+                        ?>
+                        <div class="cadre_logement">
+                            <div class="left_cadre_logement">
+                                <?php echo '<img src="'.$url_pic['lien_photo'].'" class="photo">' ?>
+                            </div>
+
+                            <div class="right_cadre_logement">
                                     <span>
                                     <a href="echg_msg.php?id_logement_asked=<?php echo $_GET['id_logement_asked']; ?>&demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>"><?php echo $house["nom_maison"] ; ?></a>
                                     <a href="echg_msg.php?id_logement_asked=<?php echo $_GET['id_logement_asked']; ?>&demandeur=<?php echo $demandeur; ?>&proprietaire=<?php echo $proprietaire ?>&logement=<?php echo $house[0]; ?>">
                                         <?php echo '<p>' .''.$house['localisation']. ' </br>' . $house['nombre_voyageurs']. ' voyageurs </br>' . $house['type_logement'] . '</p>'; ?> </a><br/>
                                     </span>
-                        </div>
-                    </div><br/></div>
+                            </div>
+                        </div><br/></div>
 
-                <?php } }
+                    <?php } }
 
             if (isset($_POST["message"]))
             {

@@ -55,7 +55,7 @@ include('modeles.php');
 
 					
 		<?php
-					// on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
+					// on fait un for pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction :
 					for($i=0 ; $i < $nb_resultats ; $i++)
 					{
                         $donnees = $nbresult->fetch();
@@ -80,7 +80,7 @@ include('modeles.php');
 
                         </div><br/>
 		<?php
-					} // fin du while
+					} // fin du for
 
 		?>		 <br/><br/>
 					<a href="index.php" class="nlle_r"><?php echo nouvellerecherche; ?></a></p>

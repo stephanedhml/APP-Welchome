@@ -247,7 +247,7 @@ if (isset($_GET["del_request"]) AND $_GET["del_request"] == 1) {
                             'id_logement' => $_GET['id_logement'],
                         ));
                         //Lorsque la confirmation est faite, on envoie un message à l'autre pour lui dire qu'on est prêt
-                        $message = "Je suis prêt pour échanger mon logement avec le votre. Quand vous serez prêt, renseignez le afin que l'échange puisse commencer !";
+                        $message = "J'atteste que l'échange est terminé, faites de même pour que nous puissions donner notre avis sur nos logements respectifs !";
                         $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
                         $res -> execute(array(
                             "destinataire" => $_GET['destinataire'],
@@ -336,7 +336,7 @@ if (isset($_GET["del_request"]) AND $_GET["del_request"] == 1) {
                             'id_logement' => $_GET['id_logement'],
                         ));
                         //Lorsque la confirmation est faite, on envoie un message à l'autre pour lui dire qu'on est prêt
-                        $message = "Je suis prêt pour échanger mon logement avec le votre. Quand vous serez prêt, renseignez le afin que l'échange puisse commencer !";
+                        $message = "J'atteste que l'échange est terminé, faites de même pour que nous puissions donner notre avis sur nos logements respectifs !";
                         $res = $bdd -> prepare("INSERT INTO messages(id_destinataire,id_expediteur,date_update,message) VALUES(:destinataire,:expediteur,:dates, :message)");
                         $res -> execute(array(
                             "destinataire" => $_GET['destinataire'],
