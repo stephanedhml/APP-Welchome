@@ -492,14 +492,14 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <?php } ?> </div> <?php } ?>
 
     <?php if (isset($_GET["choix"]) AND $_GET["choix"]==1) { ?>
-<div class="container_edit_profil">
+<div class="container_edit_profil" style="height: 700px;">
     <form action="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
-    <div class="bloc_search_left">
-        <label for="avatar"><?php imageperso ;?></label><br/>
-        <p>300x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
+    <div class="bloc_edit_left">
+        <label for="avatar">Avatar</label>
+        (300x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com)</a>
         <input type="file" name="up_avatar" id="up_avatar"><br />
         <label for="description">Description</label><br/>
-        <input type="text" name="description"/><br/>
+        <textarea type="text" name="description" style="height: 200px; width: 300px"/></textarea><br/>
         <label for="username" id="username_form"><?php echo genre; ?></label></br>
         <SELECT name="sexe" size="1">
             <OPTION></OPTION>
@@ -514,9 +514,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <label for="situation">Situation</label><br/>
         <SELECT name="situation" size="1">
             <OPTION></OPTION>
-            <OPTION><?php echo single; ?></OPTION>
-            <OPTION><?php echo couple; ?></OPTION>
-            <OPTION><?php married; ?></OPTION>
+            <OPTION>Célibataire</OPTION>
+            <OPTION>Couple</OPTION>
+            <OPTION>Marié</OPTION>
         </SELECT></br>
         <input type="submit" value="<?php echo valider; ?>" id="btn_validation_edit" /><br/><br/>
     </div>
@@ -677,7 +677,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         <input type="file" name="maj_4_img_logement" onclick="return verifphoto4(this)"  ><br />
         <label for="localisation"><?php echo localisation; ?></label><br/>
         <input type="text" name="localisation"/><br/>
-        <label for="description_logement"><?php echo descriptionlogement; ?></label><br/>
+        <textarea type="text" name="description_logement" style="height: 200px; width: 300px"/></textarea><br/>
         <input type="text" name="description_logement"/><br/>
         <label for="type_logement"><?php echo choixlogement; ?></label><br/>
         <select name="type_logement" id="choix">
