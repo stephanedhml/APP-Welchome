@@ -62,6 +62,14 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
     ));
     header('Location: admin.php');
 }
+if (isset($_GET["usr_admin"]) AND $_GET["usr_admin"] != NULL) {
+
+    $desc = $bdd->prepare("UPDATE users SET rights=1 WHERE id_users=:id");
+    $desc->execute(array(
+        'id' => $_GET["id_user"],
+    ));
+    header('Location: admin.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -141,7 +149,9 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
 
                             <p>Profession : <?php echo $user_info['profession'] ?></p>
 
-                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1">Editer le profil de <?php echo $user_info[1] ?></a>
+                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1">Editer le profil de <?php echo $user_info[1] ?></a><br>
+                            <a href="admin.php?id_user=<?php echo $user_info[0]; ?>&amp;usr_admin=1">Promouvoir <?php echo $user_info[1] ?> administrateur</a>
+
                             </div>
                         </div>
                     </div>
@@ -206,7 +216,9 @@ if (isset($_GET["del_equip"]) AND $_GET["del_equip"] != NULL) {
 
                             <p><?php echo $user_info['profession'] ?></p>
 
-                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1"><?php echo editerunprofil; ?></a>
+                            <a href="edit_profile.php?id_user=<?php echo $user_info[0]; ?>&amp;edit_usr=1"><?php echo editerunprofil; ?></a><br>
+                            <a href="admin.php?id_user=<?php echo $user_info[0]; ?>&amp;usr_admin=1">Promouvoir <?php echo $user_info[1] ?> administrateur</a>
+
 
                             </div>
                         </div>
