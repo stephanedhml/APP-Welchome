@@ -65,7 +65,7 @@ session_start();
 						$_SESSION["userid"]=$dn["id_users"];
 ?>
 						<body onload="notifyMe()">
-<!--puis on le redirige vers la page d'accueil-->
+						<!--puis on le redirige vers la page d'accueil-->
 			<?php
 						echo '<meta http-equiv="refresh" content="0;URL=index.php">';
 

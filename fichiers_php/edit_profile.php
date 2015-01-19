@@ -423,7 +423,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 
 <body>
 <div class="header">
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </div>
 <div class="superglobal">
 <div class="global">
@@ -540,60 +540,9 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
         if (isset($_GET["choix_logement"])) { ?>
     <link rel="stylesheet" href="../style.css"/>
 <div class="container_edit_profil">
-    <script type="text/javascript" src="../fichier_js/ajout_photo.js"></script>
+
     <form action="edit_profile.php?choix_logement=<?php echo $_GET["choix_logement"]; ?>&choix&update<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
-        <div class="bloc_edit_left">
-            <label for="avatar"><?php echo photo1; ?> *</label><br/>
-        <p>700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com</a></p>
-        <div class="bouto" >
-            <input type="button" class="but" value="Parcourir" >
-            <input type="file" class="fote" name="maj_main_img_logement" id="p1" ><br />
-        </div>
-
-        <label for="avatar"><?php echo photo2; ?></label><br/>
-        <div class="bouto" onclick="return verifphoto2()">
-            <input type="button" value="Parcourir" class="but" onclick="return verifphoto2()">
-            <input type="file" class="fote" name="maj_2_img_logement" id="p2"  ><br />
-        </div>
-
-        <label for="avatar"><?php echo photo3; ?></label><br/>
-        <div class="bouto"  onclick="return verifphoto3()" >
-            <input type="button" class="but"  value="Parcourir" onclick="return verifphoto3()" >
-            <input class="fote" type="file" name="maj_3_img_logement" id="p3" ><br />
-        </div>
-
-        <label for="avatar"><?php echo photo4; ?></label><br/>
-        <div class="bouto" onclick="return verifphoto4()" >
-            <input type="button" class="but" value="Parcourir" onclick="return verifphoto4()" >
-            <input class="fote" type="file" name="maj_4_img_logement" id="p4"  ><br />
-        </div>
-        <label for="localisation"><?php echo localisation; ?></label><br/>
-        <input type="text" name="localisation"/><br/>
-        <label for="description_logement"><?php echo descriptionlogement; ?></label><br/>
-        <textarea type="text" name="description_logement" style="height: 200px; width: 300px"/></textarea><br/>
-        <label for="type_logement">Type de logement</label><br/>
-        <select name="type_logement" id="choix">
-            <OPTION></OPTION>
-            <option value="Studio"><?php echo studio; ?></option>
-            <option value="Appartement"><?php echo appartement; ?></option>
-            <option value="Maison"><?php echo maison; ?></option>
-            <option value="Pavillon"><?php echo pavillon; ?></option>
-            <option value="Bungalow/gite"><?php echo bungalow; ?></option>
-            <option value="Bateau/péniche"><?php echo bateau; ?></option>
-            <option value="Camping car"><?php echo campingcar; ?></option>
-        </select><br/>
-        <label for="nom_maison"><?php echo titreannonce; ?></label><br/>
-        <input type="text" name="nom_maison"/><br/>
-        <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
-        <input type="number" name="nombre_voyageurs"/><br/>
-        <label for="nombre_chambres">Nombre de chambres</label><br/>
-        <input type="number" name="nombre_chambres"/><br/>
-        <label for="nb_salles_bains">Nombre de salles de bain</label><br/>
-        <input type="number" name="nb_salles_bains"/><br/>
-        <label for="superficie"><?php echo superficie; ?></label><br/>
-        <input type="number" name="superficie"/><br/>
-
-</div>
+        <?php include("block_maj_left.php") ?>
     <!-- Critères logement MAJ -->
 
     <div class="bloc_edit_center">
@@ -665,43 +614,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     ?>
     <div class="container_edit_profil">
         <form action="edit_profile.php?choix=<?php echo $_GET["choix"]; ?>&add=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>" method="post" enctype="multipart/form-data">
-            <div class="bloc_add_left">
-                        <label for="avatar"><?php echo photo1; ?></label>
-        (700x300 : <a href="http://www.fotor.com/fr/" target="_blank">Fotor.com) *</a><br/>
-        <input type="file" name="maj_main_img_logement" ><br />
-        <label for="avatar"><?php echo photo2; ?></label><br/>
-        <input type="file" name="maj_2_img_logement" onclick="return verifphoto2(this)" ><br />
-        <label for="avatar"><?php echo photo3; ?></label><br/>
-        <input type="file" name="maj_3_img_logement" onclick="return verifphoto3(this)"  ><br />
-        <label for="avatar"><?php echo photo4; ?></label><br/>
-        <input type="file" name="maj_4_img_logement" onclick="return verifphoto4(this)"  ><br />
-        <label for="localisation"><?php echo localisation; ?></label><br/>
-        <input type="text" name="localisation"/><br/>
-        <label for="description_logement">Description du logement</label><br/>
-        <textarea type="text" name="description_logement" style="height: 200px; width: 300px"/></textarea><br/>
-        <label for="type_logement">Type de logement</label><br/>
-        <select name="type_logement" id="choix">
-            <OPTION></OPTION>
-            <option value="Studio"><?php echo studio; ?></option>
-            <option value="Appartement"><?php echo appartement; ?></option>
-            <option value="Maison"><?php echo maison; ?></option>
-            <option value="Pavillon"><?php echo pavillon; ?></option>
-            <option value="Bungalow/gite"><?php echo bungalow; ?></option>
-            <option value="Bateau/péniche"><?php echo bateau; ?></option>
-            <option value="Camping car"><?php echo campingcar; ?></option>
-        </select><br/>
-        <label for="nom_maison"><?php echo titreannonce; ?></label><br/>
-        <input type="text" name="nom_maison"/><br/>
-        <label for="nombre_voyageurs"><?php echo nbvoyageursauthorized; ?></label><br/>
-        <input type="number" name="nombre_voyageurs"/><br/>
-        <label for="nombre_chambres">Nombre de chambres</label><br/>
-        <input type="number" name="nombre_chambres"/><br/>
-        <label for="nb_salles_bains">Nombre de salles de bain</label><br/>
-        <input type="number" name="nb_salles_bains"/><br/>
-        <label for="superficie"><?php echo superficie; ?></label><br/>
-        <input type="number" name="superficie"/><br/>
-
-            </div>
+           <?php include("block_add_left.php")?>
 
             <!-- Critères logement -->
 
@@ -767,4 +680,6 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
     <?php
     include("footer2.php");
     ?>
+    </div>
 </body>
+</html>

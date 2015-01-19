@@ -232,7 +232,7 @@
 		define('studio','a studio flat');
 		define('maison','a house');
 		define('pavillon','a detached house');
-		define('bungalow','a bungalow or a holiday cottage');
+		define('bungalow','a holiday cottage');
 		define('campingcar','a camping car');
 		define('bateau','a boat');
 		define('choixdates','Enter the dates which suit you');
@@ -408,7 +408,7 @@
 		define('studio','un studio');
 		define('maison','une maison');
 		define('pavillon','un pavillon');
-		define('bungalow','un bungalow ou un gîte');
+		define('bungalow','un gîte');
 		define('campingcar','un camping car');
 		define('bateau','un bateau');
 		define('choixdates','Veuillez entrez les dates qui vous conviennent :');
@@ -581,7 +581,7 @@
 		define('studio','a studio flat');
 		define('maison','a house');
 		define('pavillon','a detached house');
-		define('bungalow','a bungalow or a holiday cottage');
+		define('bungalow',' a holiday cottage');
 		define('campingcar','a camping car');
 		define('bateau','a boat');
 		define('choixdates','Enter the dates which suit you');

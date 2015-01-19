@@ -5,6 +5,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+        <script type="text/javascript" src="../fichier_js/connexion.js"></script>
         <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
         <link rel="icon" href="../images_diverses/icon.png" type="image/x-icon"/>
 		<link rel="stylesheet" href="../style.css" />
@@ -14,7 +15,8 @@
 		<link rel="stylesheet" href="../carrousel_annonce/derniereannonce.css" />
 		<title>Accueil</title>
 	</head>
-	
+
+
 	<body>
 
 		<header>
