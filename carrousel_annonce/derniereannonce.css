@@ -1,0 +1,190 @@
+
+.bloccarrouseltxtimage
+{
+	width: 1900px;
+}
+.titreannonce
+{
+	text-decoration: underline; 
+	color: white;
+	width: 1070px;
+    font-size: 30px;
+    margin: 0px;
+    font-family: Calibri;
+}
+
+.bloccarrouseltxt
+{
+	display: inline-bloc;
+	height: 600px;
+    width: 1070px;
+	float:right;
+	text-align: left;
+	word-wrap: break-word;
+	overflow:hidden;
+    border: 5px ridge #CFD8DC;
+	padding-left: 5px;
+}
+
+
+.annoncetxt
+{
+        width: 50%;
+        font-size: 30px;
+        margin-left: 10px;
+        font-family: Calibri;
+        color: black;
+}
+.imageslide
+{
+	height: 600px;
+    width: 800px;
+    border: 5px ridge #CFD8DC;
+	
+}
+.navigationsss
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigationsss span
+{
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigationsss span:hover,.navigationsss span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
+}
+
+.navigations
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigations span
+{
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigations span:hover,.navigations span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
+}
+.navigationss
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigationss span
+{
+	background: #000;
+	color: #fff;
+	padding: 4px 4px;
+}
+.navigationss span:hover,.navigationss span.active
+{
+	background: #fff;
+	color: #000;
+	cursor:pointer;
+}
+
+.slidesss
+{
+   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+}
+.slides
+{
+	   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+}
+.slidess
+{
+   height: 400px;
+    width: 600px;
+    border-left: 5px ridge #CFD8DC;
+}
+/*@media only screen and (max-width : 1400px) 
+{
+.bloccarrouseltxtimage
+{
+<<<<<<< HEAD
+	width: 1400px;
+}
+.titreannonce
+{
+	text-decoration: underline; 
+	color: blue;
+	width: 870px;
+    font-size: 30px;
+    margin: 0px;
+    font-family: Calibri;
+}
+
+.bloccarrouseltxt
+{
+	display: inline-bloc;
+	height: 350px;
+    width: 870px;
+	float:right;
+	text-align: left;
+	word-wrap: break-word;
+	overflow:hidden;
+    border: 5px ridge #CFD8DC;
+	padding-left: 5px;
+}
+
+
+.annoncetxt
+{
+        width: 50%;
+        font-size: 30px;
+        margin-left: 10px;
+        font-family: Calibri;
+        color: black;
+}
+.imageslide
+{
+	height: 350px;
+    width: 500px;
+    border: 5px ridge #CFD8DC;
+	
+}
+.navigations
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigationss
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+.navigationsss
+{
+	position:absolute;
+	left:670px;
+	font-size: 30px;
+	padding-top: 160px;
+}
+}*/
+
