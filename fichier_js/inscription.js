@@ -159,17 +159,27 @@ function exi()
         return true;
     }
 }
-
+function check(){
+    if(document.getElementById('cond').checked == true)
+    {
+       return true;
+    }
+    else{
+        alert('Vous devez lire et accepter les conditions générales d’utilisation de Welchome.');
+        return false;
+    }
+}
 
 function verifinscription(champ)
 {
     var passwdOk=verifpassword(champ.password);
     var usernameOk=verifusername(champ.username);
+    var checkOk=check();
     var nameOk=verifnom(champ.nom_maison);
     var passwd2Ok=verifegalite(champ.passverif);
     var emailOk=verifemail(champ.email);
     var lieuOk=veriflieu(champ.localisation);
-    if (passwdOk && usernameOk && passwd2Ok && emailOk && nameOk && lieuOk)
+    if (passwdOk && usernameOk && passwd2Ok && emailOk && nameOk && lieuOk && checkOk)
     {
         return true;
     }

@@ -91,6 +91,8 @@
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
+		define('conf',"J’ai lu et j’accepte les conditions générales d’utilisation de ce site");
+		define('noconf',"Vous n'avez pas accepté les conditions générales d’utilisation de ce site");
 		define('erreurinscription','Une erreur est survenue lors de l\'inscription.');
 		define('pseudopris','Désolé, ce pseudo est déjà pris !');
 		define('wrongmail','L\'email rentrée n\'est pas valide.');
@@ -273,6 +275,8 @@
 		define('password','Password');
 		define('verification','(Check)');
 		define('email','Email');
+		define('conf','I have read and accept the general terms and conditions of this website');
+		define('noconf','You did not accept the general terms and conditions of this website');
 		define('imageperso','Personal picture');
 		define('logementname','Tenement\'s nickname');
 		define('wherelogement','Where is your tenement ?');
@@ -440,6 +444,8 @@
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
+		define('conf',"J’ai lu et j’accepte les conditions générales d’utilisation de ce site");
+		define('noconf',"Vous n'avez pas accepté les conditions générales d’utilisation de ce site");
 		define('erreurinscription','Une erreur est survenue lors de l\'inscription.');
 		define('pseudopris','Désolé, ce pseudo est déjà pris !');
 		define('wrongmail','L\'email rentrée n\'est pas valide.');
@@ -613,6 +619,8 @@
 		//inscription
 		define('bieninscrit','You are successfully registered. You can connect now!');
 		define('connect','Connect');
+		define('conf','I have read and accept the general terms and conditions of this website');
+		define('noconf','You did not accept the general terms and conditions of this website');
 		define('erreurinscription','An error has happenned during the register.');
 		define('pseudopris','I\'m afraid, this username is already taken !');
 		define('wrongmail','Wrong email.');
@@ -741,6 +749,9 @@
 		define('hugenetwork','Un large réseau de logements');
 		//connexion inscription deconnexion
 		define('profil','Profil');
+		define('conf',"J’ai lu et j’accepte les conditions générales d’utilisation de ce site");
+		define('noconf',"Vous n'avez pas accepté les conditions générales d’utilisation de ce site");
+
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
