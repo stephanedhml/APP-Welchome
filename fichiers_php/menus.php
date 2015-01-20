@@ -65,14 +65,14 @@
 					<input type="number" class="in" name="surface_min" value="Surface minimale" min="0"></p>
 
 				<p><?php echo choixpreferences;?><br/>
-					<div class="coll1">
+				<div class="coll1">
 					<input type="checkbox" name="lieu1" id="case" value="banlieu"/> <label for="case"><?php echo banlieue;?></label><br/>
 					<input type="checkbox" name="lieu2" id="case" value="campagne"/> <label for="case"><?php echo campagne;?></label><br/>
 				</div>
-				<div class="coll2"
-					<input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/>
+				<div class="coll2">
+					<input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/></p>
 					<input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case"><?php echo ville;?></label><br/></p>
-			</div>
+				</div>
 
 			</div>
 
