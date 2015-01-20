@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/conditions.php" afterPath="$PROJECT_DIR$/fichiers_php/conditions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/sign_up.php" afterPath="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichier_js/inscription.js" afterPath="$PROJECT_DIR$/fichier_js/inscription.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -375,10 +374,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66225165" vertical-offset="1104" max-vertical-offset="3232">
+            <state vertical-scroll-proportion="-16.666666" vertical-offset="1104" max-vertical-offset="3232">
               <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
               <folding>
                 <marker date="1421712409091" expanded="true" signature="2270:2313" placeholder="SELECT id_us..users..." />
@@ -391,11 +390,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inscription.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fichier_js/inscription.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2428" max-vertical-offset="3200">
-              <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.33280253" vertical-offset="511" max-vertical-offset="3200">
+              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -486,9 +485,9 @@
         <option value="$PROJECT_DIR$/fichiers_php/edit_profile.php" />
         <option value="$PROJECT_DIR$/fichiers_php/ask.php" />
         <option value="$PROJECT_DIR$/multilingue/choixlangue.php" />
-        <option value="$PROJECT_DIR$/fichier_js/inscription.js" />
         <option value="$PROJECT_DIR$/fichiers_php/conditions.php" />
         <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
+        <option value="$PROJECT_DIR$/fichier_js/inscription.js" />
       </list>
     </option>
   </component>
@@ -591,7 +590,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
+    <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -779,12 +778,6 @@
       <created>1417719988511</created>
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Création d'un css pour la page d'edit de profil">
-      <created>1420857765770</created>
-      <option name="number" value="00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1420857765770</updated>
     </task>
     <task id="LOCAL-00074" summary="Ajout de nombreux critères EFFECTIFS à la recherche avancée">
       <created>1420860302597</created>
@@ -1074,12 +1067,18 @@
       <option name="project" value="LOCAL" />
       <updated>1421711920953</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="correction conditions générales d'utilisation">
+      <created>1421740360203</created>
+      <option name="number" value="00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1421740360203</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36040044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1120,7 +1119,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="amélioration css messagerie" />
     <MESSAGE value="Possibilité d'ajouter plusieurs photos à un même logement (inexploité pour le moment)" />
     <MESSAGE value="correction recherche avancée avec plusieurs photos par logement" />
     <MESSAGE value="correction ajout nouveau logement" />
@@ -1145,7 +1143,8 @@
     <MESSAGE value="Amélioration conséquente page demandes/choix" />
     <MESSAGE value="recherche avancée qui apparait" />
     <MESSAGE value="conditions générales d'utilisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="conditions générales d'utilisation" />
+    <MESSAGE value="correction conditions générales d'utilisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction conditions générales d'utilisation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1619,14 +1618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichier_js/inscription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2428" max-vertical-offset="3200">
-          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6" vertical-offset="6435" max-vertical-offset="11040">
@@ -1670,7 +1661,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66225165" vertical-offset="1104" max-vertical-offset="3232">
+        <state vertical-scroll-proportion="-16.666666" vertical-offset="1104" max-vertical-offset="3232">
           <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
           <folding>
             <marker date="1421712409091" expanded="true" signature="2270:2313" placeholder="SELECT id_us..users..." />
@@ -1679,6 +1670,14 @@
             <marker date="1421712409091" expanded="true" signature="4262:4426" placeholder="INSERT INTO ..." />
             <marker date="1421712409091" expanded="true" signature="5578:5653" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichier_js/inscription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33280253" vertical-offset="511" max-vertical-offset="3200">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
