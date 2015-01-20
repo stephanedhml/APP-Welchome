@@ -425,7 +425,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
 <div class="header">
     <?php include("menu2.php"); ?>
 </div>
-<div class="superglobal">
+<div class="superglobal1">
 <div class="global">
 
     <div class="edit_profil">
