@@ -41,13 +41,13 @@ function mdp()
 }
 function nom()
 {
-    document.getElementById('namehome').innerHTML =  ' Soyez inspiré';
+    document.getElementById('namehome').innerHTML =  '  Soyez inspiré';
     return true;
 }
 
 function ville()
 {
-    document.getElementById('lieu').innerHTML =  ' La ville de préférence';
+    document.getElementById('lieu').innerHTML =  '  La ville de préférence';
     return true;
 }
 

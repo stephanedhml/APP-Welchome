@@ -122,10 +122,7 @@
                 <div class="bloc5">
                     <p class="accueil_title"><?php echo apropos; ?></p>
                     <div class="description_accueil">
-                        <p>Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
-                            Il est simple d'utilisation gratuit et fiable.
-                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
-                            N'hésitez plus, utlilisez Welchome.
+                        <p><?php echo accueiltxt; ?>
                         </p>
                     </div>
                 </div>
