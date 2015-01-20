@@ -43,23 +43,23 @@ jQuery(document).ready(function() {
 
 <div class="superglobal2">
     <div class="global">
-        <div class="forum_title"><h7>AIDE EN LIGNE</h7></div>
+        <div class="forum_title"><h7><?php echo aide; ?></h7></div>
 <div class="Tableau_rangee1">
 <div class="FAQ_tableau">
 
 <div class="contenu_article">
-    <img src="http://ttvpsy.psychologies.com/0/8/6/3680.jpg" class="loupe"><strong class="Titre_article">Nouveau membre Welchome</strong>
+    <img src="http://ttvpsy.psychologies.com/0/8/6/3680.jpg" class="loupe"><strong class="Titre_article"><?php echo newmember; ?></strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Il est très facile de vous présenter et décrire votre maison à la communauté Welchome. Plus vous mettrez de photos en ligne, plus vous susciterez de confiance et d'intérêt. Des photos de bonne qualité valorisent votre offre.</p>
+        <p><?php echo pourcommencertxt; ?></p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Pour commencer</p></a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p><?php echo pourcommencer; ?></p></a>
+        <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
 
     </div>
 
@@ -68,24 +68,24 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Choisissez parmi nos nombreuses offres, sauvegardez celles qui vous plaisent et  contacter les membres auteurs de ces offres grâce notre système de messagerie. Soyez proactif et répondez rapidement à tous les messages que vous recevrez.</p>
+        <p><?php echo envoyerbcptxt; ?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Envoyez beaucoup de propositions</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo envoyerbcp;?></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 </div>
  
 
 <div class="toggle">
         <div class="more" style="display:none">
-        <p>Faites connaissance avec votre/vos partenaire(s) par courriel et par téléphone, mettez-vous d'accord sur les dates, réglez tous les détails.</p>
+        <p><?php echo conclureechangetxt;?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Concluer un échange</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo conclureechange;?></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 </div></div>
     </div>
@@ -93,18 +93,18 @@ jQuery(document).ready(function() {
 
     <div class="FAQ_tableau2">
 <div class="contenu_article">
-<img src="http://icake.fr/wp-content/uploads/2012/05/famille-ordi3.jpg" class="loupe"><strong class="Titre_article">Messagerie</strong>
+<img src="http://icake.fr/wp-content/uploads/2012/05/famille-ordi3.jpg" class="loupe"><strong class="Titre_article"><?php echo message; ?></strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Utilisez notre système de messagerie pour contacter les autres membres. Les messages que vous envoyez ou recevez sur le site sont conservés dans votre messagerie interne personnelle, tout comme les réponses que vous envoyez. Dès que vous échangez des messages avec une personne, elle rentre dans votre liste d'amis.</p>
+        <p><?php echo commentcontactertxt;?></p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Comment contacter d'autres membres?</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p><?php echo commentcontacter;?></p></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
 
     </div>
 
@@ -115,12 +115,12 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
         <div class="more" style="display:none">
-        <p>Lorsqu'un logement vous intéresse, appuyer sur "proposer un échange". Le propritaire sera ainsi notifier de votre demande et vous rentrerez un ainsi en contact avec lui.</p>
+        <p><?php echo commentproposertxt; ?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment proposer un échange?</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo commentproposer; ?></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
     </div>
 </div></div>
@@ -129,18 +129,18 @@ jQuery(document).ready(function() {
     </div>
     <div class="Tableau_rangee2"><div class="FAQ_tableau3">
         <div class="contenu_article">
-<img src="http://cdn.pratique.fr/sites/default/files/articles/franchise-profil.jpg" class="loupe"><strong class="Titre_article">Profil & Vérifications</strong>
+<img src="http://cdn.pratique.fr/sites/default/files/articles/franchise-profil.jpg" class="loupe"><strong class="Titre_article"><?php echo profilverif; ?></strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Votre profil vous permet de vous présenter, vous et votre famille, sur le site Trocmaison.com . Vous pouvez partager des informations sur vos centres d'intérêt, votre âge, votre profession, et le type d'échange dont vous rêvez. Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. Plus vous donnez d'informations sur votre profil, plus il vous sera facile de trouver le partenaire idéal pour échanger. </p>
+        <p><?php echo mettreajourprofiltxt; ?></p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Mettre à jour son profil?</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p><?php echo mettreajourprofil; ?></p></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
 
     </div>
 
@@ -149,12 +149,12 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Pour remplir son profil, ajouter ou modifier un logement, accédez à votre page profil via la barre menu et appuyer sur éditer votre profil dans la colonne à propos.</p>
+        <p><?php echo changerprofiltxt; ?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment changer son profil, ajouter ou modifier un logement?</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo changerprofil; ?></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 </div>
  
@@ -164,18 +164,18 @@ jQuery(document).ready(function() {
     </div>
 
     <div class="FAQ_tableau4">
-<img src="http://blog.r-no.fr/wp-content/uploads/2013/02/clavier-encre-electronique-1.jpg" class="loupe"><strong class="Titre_article">Recherche</strong>
+<img src="http://blog.r-no.fr/wp-content/uploads/2013/02/clavier-encre-electronique-1.jpg" class="loupe"><strong class="Titre_article"><?php echo recherche;?></strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Pour faire une recherche simple, rentrez une localisation ou le nom d'un logement dans la barre de recheche sur la page d'accueil.</p>
+        <p><?php echo recherchesimpletxt; ?></p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Recherche simple</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p><?php echo recherchesimple; ?></p></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 
 </div>
@@ -183,12 +183,12 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Pour rechercher un logement avec plus de précision, appuyer ou survoler le bouton recherche avancé.</p>
+        <p><?php echo rechercheprecisetxt; ?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Recherche précise</a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo rechercheprecise; ?></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 </div>
  
@@ -198,18 +198,18 @@ jQuery(document).ready(function() {
     </div></div>
 
      <div class="Tableau_rangee3"><div class="FAQ_tableau3">
-<img src="http://www.elomag.com/wp-content/uploads/2011/01/poignee-de-main.jpg" class="loupe"><strong class="Titre_article">Conclure votre premier échange</strong>
+<img src="http://www.elomag.com/wp-content/uploads/2011/01/poignee-de-main.jpg" class="loupe"><strong class="Titre_article"><?php echo conclureechange1; ?></strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Utilisez les outils à votre disposition - profils, vérifications, commentaire sur les échanges passés. Discuter avec le locataire via la plateforme de messages du site. Une conversation sur Skype est une solution idéale pour communiquer avec votre partenaire d'échange. Vous pouvez même utiliser Skype pour faire une vidéo de présentation de votre maison en direct. </p>
+        <p><?php echo trouverlogementtxt; ?></p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Trouver le logement ideal</p></a>
-         <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p><?php echo trouverlogement; ?></p></a>
+         <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 
 </div>
@@ -217,12 +217,12 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Certaines personnes sont très détendues vis à vis de leurs accords d'échange alors que d'autres préfèrent définir de façon formelle tous les détails de l'accord. Chacune de ces attitudes est parfaitement légitime. Vous devez savoir laquelle vous convient le mieux et correspond à vos besoins et vos attentes. Cependant, le fondement de tout accord doit être la confiance mutuelle, l'engagement et le respect. Nous encourageons tous nos membres à utiliser des contrats d'échange. L'expérience montre leur utilité pour clarifier la communication et éviter les malentendus.</p>
+        <p><?php echo contratdechangetxt; ?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Contrat d'échange</a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo contratdechange; ?></a>
+        <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 </div>
  
@@ -232,18 +232,18 @@ jQuery(document).ready(function() {
     </div>
 
     <div class="FAQ_tableau4">
-<img src="http://imworld.aufeminin.com/story/20131203/femme-ordinateur-137550_w1000.jpg" class="loupe"><strong class="Titre_article">Commentaires sur un échange</strong>
+<img src="http://imworld.aufeminin.com/story/20131203/femme-ordinateur-137550_w1000.jpg" class="loupe"><strong class="Titre_article"><?php echo commentairesechange; ?></strong>
 <div class="contenu_article2">
 <div class="toggle">
 
     <div class="more" style="display:none">
 
-        <p>Les commentaires sont importants. Ils aident à renforcer la confiance et la sécurité au sein de la communauté, permettent le partage d'informations et encouragent de futures opportunités d'échange. Les commentaires sont l'occasion pour vous de bâtir votre réputation. C'est pourquoi, après chaque échange, sollicitez vos partenaires pour qu'ils écrivent un commentaire pour vous. Evidemment, le meilleur moyen de demander un commentaire est d'être le premier à en écrire un.</p>
+        <p><?php echo fairecommentairetxt; ?></p>
     </div>
     
     <div class="less">
-    	<a class="button-read-more button-read" href="#read"><p>Ecrire un commentaire après l'échange</p></a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+    	<a class="button-read-more button-read" href="#read"><p><?php echo fairecommentaire; ?></p></a>
+        <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
 
     </div>
 
@@ -252,12 +252,12 @@ jQuery(document).ready(function() {
 
 <div class="toggle">
     <div class="more" style="display:none">
-        <p>Allez sur la page profil ou logement de la personne et donner votre avis sur l'expérience que vous avez vécu.</p>
+        <p><?php echo commentecriretxt; ?></p>
     </div>
     
     <div class="less">
-        <a class="button-read-more button-read" href="#read">Comment écrire un commentaire?</a>
-        <a class="button-read-less button-read" href="#read">Réduire</a>
+        <a class="button-read-more button-read" href="#read"><?php echo commentecrire; ?></a>
+        <a class="button-read-less button-read" href="#read"><?php echo reduire; ?></a>
     </div>
 </div>
  

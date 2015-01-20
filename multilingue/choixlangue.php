@@ -206,6 +206,41 @@
 		define('newsubject','Nouveau Sujet');
 		define('member','Membre');
 		define('registeranswer','Inscrivez vous pour répondre !');
+				//FAQ
+		define('aide','AIDE EN LIGNE');
+		define('Nouveau membre Welchome');
+		define('newmeber','pourcommencertxt','Il est très facile de vous présenter et décrire votre maison à la communauté Welchome. Plus vous mettrez de photos en ligne, plus vous susciterez de confiance et d\'intérêt. Des photos de bonne qualité valorisent votre offre.');
+		define('pourcommencer','Pour commencer');
+		define('reduire','Réduire');
+		define('envoyerbcptxt','Choisissez parmi nos nombreuses offres, sauvegardez celles qui vous plaisent et  contacter les membres auteurs de ces offres grâce notre système de messagerie. Soyez proactif et répondez rapidement à tous les messages que vous recevrez.');
+		define('envoyerbcp','Envoyez beaucoup de propositions');
+		define('conclureechangetxt','Faites connaissance avec votre/vos partenaire(s) par courriel et par téléphone, mettez-vous d\'accord sur les dates, réglez tous les détails.');
+		define('conclureechange','Conclure un échange');
+		define('message','Messagerie');
+		define('commentcontactertxt','Utilisez notre système de messagerie pour contacter les autres membres. Les messages que vous envoyez ou recevez sur le site sont conservés dans votre messagerie interne personnelle, tout comme les réponses que vous envoyez. Dès que vous échangez des messages avec une personne, elle rentre dans votre liste d\'amis.');
+		define('commentcontacter','Comment contacter d\'autres membres?');
+		define('commentproposertxt','Lorsqu\'un logement vous intéresse, appuyer sur "proposer un échange". Le propriétaire sera ainsi notifié de votre demande et vous rentrerez ainsi en contact avec lui.');
+		define('commentproposer','Comment proposer un échange?');
+		define('profilverif','Profil & Vérifications');
+		define('mettreajourprofiltxt','Votre profil vous permet de vous présenter, vous et votre famille. Vous pouvez partager des informations sur vos centres d\'intérêt, votre âge, votre profession, et le type d\'échange dont vous rêvez. Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. Plus vous donnez d\'informations sur votre profil, plus il vous sera facile de trouver le partenaire idéal pour échanger.');
+		define('mettreajourprofil','Mettre à jour son profil?');
+		define('changerprofiltxt','Pour remplir son profil, ajouter ou modifier un logement, accédez à votre page profil via la barre menu et appuyer sur éditer votre profil dans la colonne à propos.');
+		define('changerprofil','Comment changer son profil, ajouter ou modifier un logement?');
+		define('recherche','Recherche');
+		define('recherchesimpletxt','Pour faire une recherche simple, rentrez une localisation ou le nom d\'un logement dans la barre de recherche sur la page d\'accueil.');
+		define('recherchesimple','Recherche simple');
+		define('rechercheprecisetxt','Pour rechercher un logement avec plus de précision, appuyer ou survoler le bouton recherche avancé.');
+		define('rechercheprecise','Recherche précise');
+		define('conclureechange1','Conclure votre premier échange');
+		define('trouverlogementtxt','Utilisez les outils à votre disposition - profils, vérifications, commentaire sur les échanges passés. Discuter avec le locataire via la plateforme de messages du site. Une conversation sur Skype est une solution idéale pour communiquer avec votre partenaire d\'échange. Vous pouvez même utiliser Skype pour faire une vidéo de présentation de votre maison en direct.'); 
+		define('trouverlogement','Trouver le logement ideal');
+		define('contratdechangetxt','Certaines personnes sont très détendues vis à vis de leurs accords d\'échange alors que d\'autres préfèrent définir de façon formelle tous les détails de l\'accord. Chacune de ces attitudes est parfaitement légitime. Vous devez savoir laquelle vous convient le mieux et correspond à vos besoins et vos attentes. Cependant, le fondement de tout accord doit être la confiance mutuelle, l\'engagement et le respect. Nous encourageons tous nos membres à utiliser des contrats d\'échange. L\'expérience montre leur utilité pour clarifier la communication et éviter les malentendus.');
+		define('contratdechange','Contrat d\'échange');
+		define('commentairesechange','Commentaires sur un échange');
+		define('fairecommentairetxt','Les commentaires sont importants. Ils aident à renforcer la confiance et la sécurité au sein de la communauté, permettent le partage d\'informations et encouragent de futures opportunités d\'échange. Les commentaires sont l\'occasion pour vous de bâtir votre réputation. C\'est pourquoi, après chaque échange, sollicitez vos partenaires pour qu\'ils écrivent un commentaire pour vous. Evidemment, le meilleur moyen de demander un commentaire est d\'être le premier à en écrire un.');
+		define('fairecommentaire','Ecrire un commentaire après l\'échange');
+		define('commentecriretxt','Allez sur la page profil ou logement de la personne et donner votre avis sur l\'expérience que vous avez vécu.'); 
+		define('commentecrire','Comment écrire un commentaire?');
 		}
 		else if ($lang=='en') 
 		{
@@ -385,6 +420,41 @@
 		define('newsubject','New subject');
 		define('member','Member');
 		define('registeranswer','Register in order to answer !');
+						//FAQ
+		define('aide','Help online');
+		define('newmember','New Welchome member');
+		define('pourcommencertxt','It\'s easy to introduce and describe your tenement to the Welchome community. The most you put pictures online, the most you will be reliable and your tenement attractive. Good pictures significate good announcement.');
+		define('pourcommencer','To begin');
+		define('reduire','Reduce');
+		define('envoyerbcptxt','Choose among the offers, saved them and and contact the announcer thanks to our message system. Be proactive and answer fastly at your propositions of tenements.');
+		define('envoyerbcp','Send a lot of propositions');
+		define('conclureechangetxt','Meet your partner by e-mail or phone, choose your dates and set all the details.');
+		define('conclureechange','Conclude a trade');
+		define('message','Bulletin board');
+		define('commentcontactertxt','Use our bulletin board to contact the other members. The message received and sent are stocked in your own personal bulletin board'); 
+		define('commentcontacter','How can I contact other members?');
+		define('commentproposertxt','When a tenement fits you, click on "offer a trade". The tenement\'s owner will be notified of your proposition and so, you will be in contact with him.');
+		define('commentproposer','How can I offer a trade?');
+		define('profilverif','Profile & Checks');
+		define('mettreajourprofiltxt','Your profile allows you to introduce yourself and your family . You can share informations about your job, entertainments, and the type of tenement of your dream. Your profile with the presentation page of your offer is an essentiel element of the trade. Vous pouvez partager des informations sur vos centres d\'intérêt, votre âge, votre profession, et le type d\'échange dont vous rêvez.  Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. The more you give information the easiest it will be to find the ideal trade partner.');
+		define('mettreajourprofil','How do I get my profile up to date?');
+		define('changerprofiltxt','To fill in your profile, add or modify a tenement, and access to your profile page thanks to the menu, then click on edit your profile in the "about " column.');
+		define('changerprofil','How do I modify my profile, or add an modify a tenement?');
+		define('recherche','Search');
+		define('recherchesimpletxt','To do a simple research, enter a localisation or a tenement name, in the research bar on the homepage.');
+		define('recherchesimple','Simple search');
+		define('rechercheprecisetxt','To use advanced research, click on or hover the advanced research button.');
+		define('rechercheprecise','Advanced Research');
+		define('conclureechange1','Conclude your first trade');
+		define('trouverlogementtxt','Use the tools at your disposal - profiles, checks, comments. Discuss with the tenement owner thanks to the bulletin board.'); 
+		define('trouverlogement','Find the ideal tenement');
+		define('contratdechangetxt','Some people are relaxed whereas some prefer to define strictly all the details of the trade. Each of this attitude are legitimate. You need to know which one will suit you the best. However, all is about mutual confidence, contract and respect. We encourage all our member to use tenemnent\'s contract. The experience show us their utility to clarify the communication and avoid the misunderstandings.');
+		define('contratdechange1','Trade contract');
+		define('commentairesechange','Trade comment');
+		define('fairecommentairetxt','Comments are important. they help to reinforce the community confident and security, allow the share of informations and encourage futur trades. Comments make your reputation. That\'s why,after each trade, ask your partner to let you a comment. Obviously, The best way to have a comment is to write one.');
+		define('fairecommentaire','Write a comment after the trade');
+		define('commentecriretxt','Go to the profile or tenement page and show your appreciation');
+		define('commentecrire','How do I write a comment?');
 		}
 	}
 	else if (isset($_COOKIE['lang']))
@@ -567,6 +637,41 @@
 		define('newsubject','Nouveau Sujet');
 		define('member','Membre');
 		define('registeranswer','Inscrivez vous pour répondre !');
+				//FAQ
+		define('aide','AIDE EN LIGNE');
+		define('newmember','Nouveau membre Welchome');
+		define('pourcommencertxt','Il est très facile de vous présenter et décrire votre maison à la communauté Welchome. Plus vous mettrez de photos en ligne, plus vous susciterez de confiance et d\'intérêt. Des photos de bonne qualité valorisent votre offre.');
+		define('pourcommencer','Pour commencer');
+		define('reduire','Réduire');
+		define('envoyerbcptxt','Choisissez parmi nos nombreuses offres, sauvegardez celles qui vous plaisent et  contacter les membres auteurs de ces offres grâce notre système de messagerie. Soyez proactif et répondez rapidement à tous les messages que vous recevrez.');
+		define('envoyerbcp','Envoyez beaucoup de propositions');
+		define('conclureechangetxt','Faites connaissance avec votre/vos partenaire(s) par courriel et par téléphone, mettez-vous d\'accord sur les dates, réglez tous les détails.');
+		define('conclureechange','Conclure un échange');
+		define('message','Messagerie');
+		define('commentcontactertxt','Utilisez notre système de messagerie pour contacter les autres membres. Les messages que vous envoyez ou recevez sur le site sont conservés dans votre messagerie interne personnelle, tout comme les réponses que vous envoyez. Dès que vous échangez des messages avec une personne, elle rentre dans votre liste d\'amis.');
+		define('commentcontacter','Comment contacter d\'autres membres?');
+		define('commentproposertxt','Lorsqu\'un logement vous intéresse, appuyer sur "proposer un échange". Le propriétaire sera ainsi notifié de votre demande et vous rentrerez ainsi en contact avec lui.');
+		define('commentproposer','Comment proposer un échange?');
+		define('profilverif','Profil & Vérifications');
+		define('mettreajourprofiltxt','Votre profil vous permet de vous présenter, vous et votre famille. Vous pouvez partager des informations sur vos centres d\'intérêt, votre âge, votre profession, et le type d\'échange dont vous rêvez. Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. Plus vous donnez d\'informations sur votre profil, plus il vous sera facile de trouver le partenaire idéal pour échanger.');
+		define('mettreajourprofil','Mettre à jour son profil?');
+		define('changerprofiltxt','Pour remplir son profil, ajouter ou modifier un logement, accédez à votre page profil via la barre menu et appuyer sur éditer votre profil dans la colonne à propos.');
+		define('changerprofil','Comment changer son profil, ajouter ou modifier un logement?');
+		define('recherche','Recherche');
+		define('recherchesimpletxt','Pour faire une recherche simple, rentrez une localisation ou le nom d\'un logement dans la barre de recherche sur la page d\'accueil.');
+		define('recherchesimple','Recherche simple');
+		define('rechercheprecisetxt','Pour rechercher un logement avec plus de précision, appuyer ou survoler le bouton recherche avancé.');
+		define('rechercheprecise','Recherche précise');
+		define('conclureechange1','Conclure votre premier échange');
+		define('trouverlogementtxt','Utilisez les outils à votre disposition - profils, vérifications, commentaire sur les échanges passés. Discuter avec le locataire via la plateforme de messages du site. Une conversation sur Skype est une solution idéale pour communiquer avec votre partenaire d\'échange. Vous pouvez même utiliser Skype pour faire une vidéo de présentation de votre maison en direct.'); 
+		define('trouverlogement','Trouver le logement ideal');
+		define('contratdechangetxt','Certaines personnes sont très détendues vis à vis de leurs accords d\'échange alors que d\'autres préfèrent définir de façon formelle tous les détails de l\'accord. Chacune de ces attitudes est parfaitement légitime. Vous devez savoir laquelle vous convient le mieux et correspond à vos besoins et vos attentes. Cependant, le fondement de tout accord doit être la confiance mutuelle, l\'engagement et le respect. Nous encourageons tous nos membres à utiliser des contrats d\'échange. L\'expérience montre leur utilité pour clarifier la communication et éviter les malentendus.');
+		define('contratdechange','Contrat d\'échange');
+		define('commentairesechange','Commentaires sur un échange');
+		define('fairecommentairetxt','Les commentaires sont importants. Ils aident à renforcer la confiance et la sécurité au sein de la communauté, permettent le partage d\'informations et encouragent de futures opportunités d\'échange. Les commentaires sont l\'occasion pour vous de bâtir votre réputation. C\'est pourquoi, après chaque échange, sollicitez vos partenaires pour qu\'ils écrivent un commentaire pour vous. Evidemment, le meilleur moyen de demander un commentaire est d\'être le premier à en écrire un.');
+		define('fairecommentaire','Ecrire un commentaire après l\'échange');
+		define('commentecriretxt','Allez sur la page profil ou logement de la personne et donner votre avis sur l\'expérience que vous avez vécu.'); 
+		define('commentecrire','Comment écrire un commentaire?');
 		}
 		else if ($lang=='en') 
 		{  
@@ -746,6 +851,41 @@
 		define('newsubject','New subject');
 		define('member','Member');
 		define('registeranswer','Register in order to answer !');
+				//FAQ
+		define('aide','Help online');
+		define('newmember','New Welchome member');
+		define('pourcommencertxt','It\'s easy to introduce and describe your tenement to the Welchome community. The most you put pictures online, the most you will be reliable and your tenement attractive. Good pictures significate good announcement.');
+		define('pourcommencer','To begin');
+		define('reduire','Reduce');
+		define('envoyerbcptxt','Choose among the offers, saved them and and contact the announcer thanks to our message system. Be proactive and answer fastly at your propositions of tenements.');
+		define('envoyerbcp','Send a lot of propositions');
+		define('conclureechangetxt','Meet your partner by e-mail or phone, choose your dates and set all the details.');
+		define('conclureechange','Conclude a trade');
+		define('message','Bulletin board');
+		define('commentcontactertxt','Use our bulletin board to contact the other members. The message received and sent are stocked in your own personal bulletin board'); 
+		define('commentcontacter','How can I contact other members?');
+		define('commentproposertxt','When a tenement fits you, click on "offer a trade". The tenement\'s owner will be notified of your proposition and so, you will be in contact with him.');
+		define('commentproposer','How can I offer a trade?');
+		define('profilverif','Profile & Checks');
+		define('mettreajourprofiltxt','Your profile allows you to introduce yourself and your family . You can share informations about your job, entertainments, and the type of tenement of your dream. Your profile with the presentation page of your offer is an essentiel element of the trade. Vous pouvez partager des informations sur vos centres d\'intérêt, votre âge, votre profession, et le type d\'échange dont vous rêvez.  Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. The more you give information the easiest it will be to find the ideal trade partner.');
+		define('mettreajourprofil','How do I get my profile up to date?');
+		define('changerprofiltxt','To fill in your profile, add or modify a tenement, and access to your profile page thanks to the menu, then click on edit your profile in the "about " column.');
+		define('changerprofil','How do I modify my profile, or add an modify a tenement?');
+		define('recherche','Search');
+		define('recherchesimpletxt','To do a simple research, enter a localisation or a tenement name, in the research bar on the homepage.');
+		define('recherchesimple','Simple search');
+		define('rechercheprecisetxt','To use advanced research, click on or hover the advanced research button.');
+		define('rechercheprecise','Advanced Research');
+		define('conclureechange1','Conclude your first trade');
+		define('trouverlogementtxt','Use the tools at your disposal - profiles, checks, comments. Discuss with the tenement owner thanks to the bulletin board.'); 
+		define('trouverlogement','Find the ideal tenement');
+		define('contratdechangetxt','Some people are relaxed whereas some prefer to define strictly all the details of the trade. Each of this attitude are legitimate. You need to know which one will suit you the best. However, all is about mutual confidence, contract and respect. We encourage all our member to use tenemnent\'s contract. The experience show us their utility to clarify the communication and avoid the misunderstandings.');
+		define('contratdechange','Trade contract');
+		define('commentairesechange','Trade comment');
+		define('fairecommentairetxt','Comments are important. they help to reinforce the community confident and security, allow the share of informations and encourage futur trades. Comments make your reputation. That\'s why,after each trade, ask your partner to let you a comment. Obviously, The best way to have a comment is to write one.');
+		define('fairecommentaire','Write a comment after the trade');
+		define('commentecriretxt','Go to the profile or tenement page and show your appreciation');
+		define('commentecrire','How do I write a comment?');
 		}
 	}
 	else
@@ -927,9 +1067,45 @@
 		define('newsubject','Nouveau Sujet');
 		define('member','Membre');
 		define('registeranswer','Inscrivez vous pour répondre !');
-	}
+		//FAQ
+		define('aide','AIDE EN LIGNE');
+		define('newmember','Nouveau membre Welchome');
+		define('pourcommencertxt','Il est très facile de vous présenter et décrire votre maison à la communauté Welchome. Plus vous mettrez de photos en ligne, plus vous susciterez de confiance et d\'intérêt. Des photos de bonne qualité valorisent votre offre.');
+		define('pourcommencer','Pour commencer');
+		define('reduire','Réduire');
+		define('envoyerbcptxt','Choisissez parmi nos nombreuses offres, sauvegardez celles qui vous plaisent et  contacter les membres auteurs de ces offres grâce notre système de messagerie. Soyez proactif et répondez rapidement à tous les messages que vous recevrez.');
+		define('envoyerbcp','Envoyez beaucoup de propositions');
+		define('conclureechangetxt','Faites connaissance avec votre/vos partenaire(s) par courriel et par téléphone, mettez-vous d\'accord sur les dates, réglez tous les détails.');
+		define('conclureechange','Conclure un échange');
+		define('message','Messagerie');
+		define('commentcontactertxt','Utilisez notre système de messagerie pour contacter les autres membres. Les messages que vous envoyez ou recevez sur le site sont conservés dans votre messagerie interne personnelle, tout comme les réponses que vous envoyez. Dès que vous échangez des messages avec une personne, elle rentre dans votre liste d\'amis.');
+		define('commentcontacter','Comment contacter d\'autres membres?');
+		define('commentproposertxt','Lorsqu\'un logement vous intéresse, appuyer sur "proposer un échange". Le propriétaire sera ainsi notifié de votre demande et vous rentrerez ainsi en contact avec lui.');
+		define('commentproposer','Comment proposer un échange?');
+		define('profilverif','Profil & Vérifications');
+		define('mettreajourprofiltxt','Votre profil vous permet de vous présenter, vous et votre famille. Vous pouvez partager des informations sur vos centres d\'intérêt, votre âge, votre profession, et le type d\'échange dont vous rêvez. Votre profil, associé à la page de présentation de votre offre, est un élément essentiel pour conclure un échange. Plus vous donnez d\'informations sur votre profil, plus il vous sera facile de trouver le partenaire idéal pour échanger.');
+		define('mettreajourprofil','Mettre à jour son profil?');
+		define('changerprofiltxt','Pour remplir son profil, ajouter ou modifier un logement, accédez à votre page profil via la barre menu et appuyer sur éditer votre profil dans la colonne à propos.');
+		define('changerprofil','Comment changer son profil, ajouter ou modifier un logement?');
+		define('recherche','Recherche');
+		define('recherchesimpletxt','Pour faire une recherche simple, rentrez une localisation ou le nom d\'un logement dans la barre de recherche sur la page d\'accueil.');
+		define('recherchesimple','Recherche simple');
+		define('rechercheprecisetxt','Pour rechercher un logement avec plus de précision, appuyer ou survoler le bouton recherche avancé.');
+		define('rechercheprecise','Recherche précise');
+		define('conclureechange','Conclure votre premier échange');
+		define('trouverlogementtxt','Utilisez les outils à votre disposition - profils, vérifications, commentaire sur les échanges passés. Discuter avec le locataire via la plateforme de messages du site. Une conversation sur Skype est une solution idéale pour communiquer avec votre partenaire d\'échange. Vous pouvez même utiliser Skype pour faire une vidéo de présentation de votre maison en direct.'); 
+		define('trouverlogement','Trouver le logement ideal');
+		define('contratdechangetxt','Certaines personnes sont très détendues vis à vis de leurs accords d\'échange alors que d\'autres préfèrent définir de façon formelle tous les détails de l\'accord. Chacune de ces attitudes est parfaitement légitime. Vous devez savoir laquelle vous convient le mieux et correspond à vos besoins et vos attentes. Cependant, le fondement de tout accord doit être la confiance mutuelle, l\'engagement et le respect. Nous encourageons tous nos membres à utiliser des contrats d\'échange. L\'expérience montre leur utilité pour clarifier la communication et éviter les malentendus.');
+		define('contratdechange1','Contrat d\'échange');
+		define('commentairesechange','Commentaires sur un échange');
+		define('fairecommentairetxt','Les commentaires sont importants. Ils aident à renforcer la confiance et la sécurité au sein de la communauté, permettent le partage d\'informations et encouragent de futures opportunités d\'échange. Les commentaires sont l\'occasion pour vous de bâtir votre réputation. C\'est pourquoi, après chaque échange, sollicitez vos partenaires pour qu\'ils écrivent un commentaire pour vous. Evidemment, le meilleur moyen de demander un commentaire est d\'être le premier à en écrire un.');
+		define('fairecommentaire','Ecrire un commentaire après l\'échange');
+		define('commentecriretxt','Allez sur la page profil ou logement de la personne et donner votre avis sur l\'expérience que vous avez vécu.'); 
+		define('commentecrire','Comment écrire un commentaire?');
+		
+	}                                                                                                                                                                                           
 	
-}
+}                                                                                                                                                                                                                                                    
 choixlangue();
 ?>
 	
