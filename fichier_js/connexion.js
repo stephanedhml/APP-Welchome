@@ -38,7 +38,7 @@ function rouge(champ,erreur)
     {
 
         rouge(champ,false);
-        document.getElementById('mdp').innerHTML =  'C\'est bon.';
+        document.getElementById('mdp').innerHTML =  '';
 
         return true;
     }
@@ -51,7 +51,7 @@ function tchekusername(champ)
         rouge(champ,true);
 
 
-        document.getElementById('user').innerHTML =  'Entrez votre username';
+        document.getElementById('user').innerHTML =  '';
 
         return false;
     }

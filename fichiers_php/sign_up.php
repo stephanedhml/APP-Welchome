@@ -89,10 +89,17 @@
                                 {
                                     //Si ça a fonctionné, on affiche pas le formulaire
                                     $form=false;
-                                    ?>
-                                    <div class='message'><?php echo bieninscrit ;?>
-                                        </br><a href="connexion.php"><?php echo connect ?></a></div>
-                                <?php
+                                    if($_POST['cond']!='on') {
+                                        ?>
+                                        <div class='message'><?php echo bieninscrit;?>
+                                            </div>
+                                        <meta http-equiv="refresh" content="3;URL=connexion.php">
+                                    <?php
+                                    }
+                                    else {
+                                        $form = true;
+                                        $message = noconf;
+                                    }
                                 }
                                 else
                                 {
@@ -164,6 +171,8 @@
                                 <option value="Camping car"><?php echo campingcar;?></option>
                         </select><span id="type"></span><br />
                         <label for="lien_photo"><?php echo photo;?></label><br /><input type="file" name="upload_photo" id="upload_photo"><br/><br/> <!-- Il faut ajouter la possibilité d'up plusieurs photos pour un même logement ! -->
+                        <input type="checkbox" name="cond" id="cond" value="condition"/> <label for="case"><a href="conditions.php" target="_blank"> <?php echo conf;?></a></label><br/>
+
                         <!-- <label for="dispo_logement">Disponibilité de votre logement</label><br /> du <input type="text" name="date_arrivée" placeholder="JJ/MM/AAAA" size="12" /> au <input type="text" name="date_départ" placeholder="JJ/MM/AAAA" size="12" /> -->
                         <input type="submit" value="<?php echo envoyer;?>" id="btn_envoyer" />
                     </div>

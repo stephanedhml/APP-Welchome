@@ -1,18 +1,68 @@
 .formulaire_r_avancee1 {
-    position: fixed;
+    position: relative;
     color: #1c1a19;
     display: none;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     font-size: 9pt;
     font-family: 'PT Sans', Arial, sans-serif;
-    padding-top: 40px;
+    padding-top: 1px;
     line-height: 40px;
+    z-index: 170;
+    height: 0px;
+}.formulaire_r_av {
+    position: relative;
+    color: #1c1a19;
+    display: none;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 9pt;
+    font-family: 'PT Sans', Arial, sans-serif;
+    padding-top: 1px;
+    line-height: 40px;
+    z-index: 170;
+    height: 0px;
 }
+/*
+.col1
+{
+    width: 50%;
+    margin-left: 0px;
+    display: block;
+}
+.col2
+{
+    width: 50%;
+    margin-left: 100px;
+    display: block;
+}
+*/
+.col1,.col2
+{
 
+    display:inline;
+    /*padding: 5px;*/
+    float: left;
+    width:45%;
+    text-align:center;
+    /*position: fixed;*/
+}
+.coll1,.coll2
+{
+
+    display:inline;
+    /*padding: 5px;*/
+    float:left;
+    width:40%;
+
+    /*position: fixed;*/
+}
 #btn_valider {
+
     background-color: #78909C;
-    border: 1px solid transparent;
+   margin-top: 45%;
     border-bottom: 3px solid #37474F;
     color: #fff;
     display: inline-block;
@@ -34,14 +84,38 @@
 .liste_deroulante1 input {
     margin-left: 0px;
 }
+#table {
+    opacity: 0;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#table:target {
+    opacity: 1;
+}
 .container_advanced_search1 {
     position: fixed;
-    width: 1100px;
-    height: 400px;
+    width: 1400px;
+    height: 310px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
+    margin-top: 40px;
     border-width: 1px;
+    opacity: 0.9;
+    border-color: black;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
+}.container_advanced_sea {
+    position: fixed;
+    width: 1400px;
+    height: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border-width: 1px;
+    opacity: 0.9;
     border-color: black;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
@@ -49,15 +123,15 @@
 
 .bloc_search_left1 {
     position: absolute;
-    width: 33%;
+    width: 42%;
     height: 100%;
-    margin-left: 0px;
+    margin-left: 10px;
     background-color: #F5F5F5;
 }
 
 .bloc_search_center1 {
     position: absolute;
-    width: 33%;
+    width: 42%;
     height: 100%;
     margin-left: 33%;
     background-color: #EEEEEE;
@@ -65,8 +139,8 @@
 
 .bloc_search_right1 {
     position: absolute;
-    width: 34%;
-    margin-left: 66%;
+    width: 15%;
+    margin-left: 75%;
     background-color: #E0E0E0;
     height: 100%;
 }

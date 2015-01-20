@@ -4,12 +4,12 @@
 function affiche()
 {
 
-    document.getElementById("form_rech").style.display="block";
+    document.getElementById("formrech").style.display="block";
     return true;
 }
 function cacher()
 {
-    document.getElementById("form_rech").style.display="none";
+    document.getElementById("formrech").style.display="none";
     return true;
 }
 

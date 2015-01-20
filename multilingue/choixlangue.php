@@ -52,6 +52,10 @@
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
+				define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
+                            Il est simple d\'utilisation gratuit et fiable.
+                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
+                            N\'hésitez plus, utlilisez Welchome.');
 		//Recherche avancée
 		define('choixville','Lieu souhaité');
 		define('choixlogement','Type(s) de logement');
@@ -91,6 +95,8 @@
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
+		define('conf',"J’ai lu et j’accepte les conditions générales d’utilisation de ce site");
+		define('noconf',"Vous n'avez pas accepté les conditions générales d’utilisation de ce site");
 		define('erreurinscription','Une erreur est survenue lors de l\'inscription.');
 		define('pseudopris','Désolé, ce pseudo est déjà pris !');
 		define('wrongmail','L\'email rentrée n\'est pas valide.');
@@ -225,6 +231,10 @@
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
 		define('choixdestination','Choose your destination');
+		define('accueiltxt','Welchome is a website which gives you the opportunity to trade your house or your tenement for the holydays.
+                            It is easy to use, free and reliable.
+                            Welchome gather a huge network of reliable people in France.
+                            Don\'t hesitate anymore, use Welchome.');
 		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
@@ -232,7 +242,7 @@
 		define('studio','a studio flat');
 		define('maison','a house');
 		define('pavillon','a detached house');
-		define('bungalow','a bungalow or a holiday cottage');
+		define('bungalow','a holiday cottage');
 		define('campingcar','a camping car');
 		define('bateau','a boat');
 		define('choixdates','Enter the dates which suit you');
@@ -273,6 +283,8 @@
 		define('password','Password');
 		define('verification','(Check)');
 		define('email','Email');
+		define('conf','I have read and accept the general terms and conditions of this website');
+		define('noconf','You did not accept the general terms and conditions of this website');
 		define('imageperso','Personal picture');
 		define('logementname','Tenement\'s nickname');
 		define('wherelogement','Where is your tenement ?');
@@ -401,6 +413,10 @@
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
+		define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
+                            Il est simple d\'utilisation gratuit et fiable.
+                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
+                            N\'hésitez plus, utlilisez Welchome.');
 		//Recherche avancée
 		define('choixville','Dans quelle ville souhaitez-vous aller ?');
 		define('choixlogement','Par quel(s) type(s) de logement êtes vous interessé ?');
@@ -408,7 +424,7 @@
 		define('studio','un studio');
 		define('maison','une maison');
 		define('pavillon','un pavillon');
-		define('bungalow','un bungalow ou un gîte');
+		define('bungalow','un gîte');
 		define('campingcar','un camping car');
 		define('bateau','un bateau');
 		define('choixdates','Veuillez entrez les dates qui vous conviennent :');
@@ -440,6 +456,8 @@
 		//inscription
 		define('bieninscrit','Vous avez bien été inscrit. Vous pouvez désormais vous connecter !');
 		define('connect','Se connecter');
+		define('conf',"J’ai lu et j’accepte les conditions générales d’utilisation de ce site");
+		define('noconf',"Vous n'avez pas accepté les conditions générales d’utilisation de ce site");
 		define('erreurinscription','Une erreur est survenue lors de l\'inscription.');
 		define('pseudopris','Désolé, ce pseudo est déjà pris !');
 		define('wrongmail','L\'email rentrée n\'est pas valide.');
@@ -574,6 +592,10 @@
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
 		define('choixdestination','Choose your destination');
+		define('accueiltxt','Welchome is a website which gives you the opportunity to trade your house or your tenement for the holydays.
+                            It is easy to use, free and reliable.
+                            Welchome gather a huge network of reliable people in France.
+                            Don\'t hesitate anymore, use Welchome.');
 		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
@@ -581,7 +603,7 @@
 		define('studio','a studio flat');
 		define('maison','a house');
 		define('pavillon','a detached house');
-		define('bungalow','a bungalow or a holiday cottage');
+		define('bungalow',' a holiday cottage');
 		define('campingcar','a camping car');
 		define('bateau','a boat');
 		define('choixdates','Enter the dates which suit you');
@@ -613,6 +635,8 @@
 		//inscription
 		define('bieninscrit','You are successfully registered. You can connect now!');
 		define('connect','Connect');
+		define('conf','I have read and accept the general terms and conditions of this website');
+		define('noconf','You did not accept the general terms and conditions of this website');
 		define('erreurinscription','An error has happenned during the register.');
 		define('pseudopris','I\'m afraid, this username is already taken !');
 		define('wrongmail','Wrong email.');
@@ -741,6 +765,9 @@
 		define('hugenetwork','Un large réseau de logements');
 		//connexion inscription deconnexion
 		define('profil','Profil');
+		define('conf',"J’ai lu et j’accepte les conditions générales d’utilisation de ce site");
+		define('noconf',"Vous n'avez pas accepté les conditions générales d’utilisation de ce site");
+
 		define('disconnect','Se déconnecter');
 		define('faq','FAQ');
 		define('register','Inscription');
@@ -748,6 +775,10 @@
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
+		define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
+                            Il est simple d\'utilisation gratuit et fiable.
+                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
+                            N\'hésitez plus, utlilisez Welchome.');
 		//Recherche avancée
 		define('choixville','Lieu souhaité');
 		define('choixlogement','Type(s) de logement');
