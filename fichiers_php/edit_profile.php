@@ -10,7 +10,7 @@ session_start();
 <?php
 //On différencie l'admin d'un utilisateur lambda
 
-if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user']; var_dump($id_user);} else {$id_user=$_SESSION['userid'];}
+if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) {$id_user=$_GET['id_user'];} else {$id_user=$_SESSION['userid'];}
 
 if (isset($_FILES["up_avatar"]) AND $_FILES["up_avatar"]!=NULL) {
 //On importe la photo de profil envoyée par l'utilisateur sur le serveur
