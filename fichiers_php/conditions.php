@@ -10,8 +10,8 @@
     <title>Conditions</title>
 </head>
 <body
-<div class="container">
-<div class="container espace">
+<div class="container" >
+<div class="container espace" style="margin-left: 20px;margin-right: 20px;padding: 20px">
 <p align="center">
 <u>
 <strong>Conditions d’utilisation</strong>

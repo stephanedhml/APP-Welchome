@@ -92,7 +92,8 @@
                                     if($_POST['cond']!='on') {
                                         ?>
                                         <div class='message'><?php echo bieninscrit;?>
-                                            </br><a href="connexion.php"><?php echo connect ?></a></div>
+                                            </div>
+                                        <meta http-equiv="refresh" content="3;URL=connexion.php">
                                     <?php
                                     }
                                     else {
