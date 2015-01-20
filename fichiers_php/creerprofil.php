@@ -16,7 +16,7 @@ include("config.php");
 	<body>
 		<div class="header">
 			<?php
-				include("menus.php");
+				include("menu2.php");
 				include("modelecreerprofil.php");
 			?>
 		</div>

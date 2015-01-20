@@ -85,7 +85,7 @@ if (isset($_GET["usr_admin"]) AND $_GET["usr_admin"] != NULL) {
 <body>
 
 <header>
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </header>
 <div class="superglobal">
     <div class="global">

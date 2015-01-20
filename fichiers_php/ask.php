@@ -86,7 +86,7 @@ if (isset($_GET["del_request"]) AND $_GET["del_request"] == 1) {
 <body>
 
 <header>
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </header>
 <div class="superglobal">
     <div class="global">

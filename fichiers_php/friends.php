@@ -37,7 +37,7 @@ if (isset($_GET["del_friend"]) AND $_GET["del_friend"] == 1) {
 <body class="forum_messagerie">
 
     <header>
-        <?php include("menus.php"); ?>
+        <?php include("menu2.php"); ?>
     </header>
 <div class="superglobal">
     <div class="global">

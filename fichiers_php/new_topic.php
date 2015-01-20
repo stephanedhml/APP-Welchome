@@ -35,7 +35,7 @@ if ($user[8]==1) {
 </head>
 <body class="forum_messagerie">
 <header>
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </header>
 
 <div class="superglobal">
