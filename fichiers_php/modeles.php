@@ -84,7 +84,9 @@ function resultats_requete_avancee()
 
     if (isset($_POST['ville']) and $_POST['ville']!='')
     {
-        $lieu = htmlspecialchars($_POST['ville']);
+        $a='LIKE';
+        $b=$_POST['ville'];
+        $lieu =$a.$b;
     }
     else{$lieu = "";}
 
@@ -286,7 +288,7 @@ function resultats_requete_avancee()
 
 
     $results =$bdd->query("SELECT * FROM logement WHERE
- localisation LIKE '%$lieu%'
+ localisation '%$lieu%'
   $message1
   $message2
   $message3
