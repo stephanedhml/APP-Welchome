@@ -198,7 +198,7 @@ jQuery(document).ready(function() {
     </div></div>
 
      <div class="Tableau_rangee3"><div class="FAQ_tableau3">
-<img src="http://img.phonandroid.com/2015/01/proteger-securiser-mots-passe-dashlane.jpg" class="loupe"><strong class="Titre_article">Conclure votre premier échange</strong>
+<img src="http://www.elomag.com/wp-content/uploads/2011/01/poignee-de-main.jpg" class="loupe"><strong class="Titre_article">Conclure votre premier échange</strong>
 <div class="contenu_article2">
 <div class="toggle">
 
