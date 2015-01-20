@@ -241,8 +241,9 @@ if (isset($_GET["update"])) {
     }
 }
     // Ajout d'un logement
-    if (isset($_GET["add"],$_FILES["up_main_img_logement"], $_POST["localisation"], $_POST["description_logement"], $_POST["type_logement"], $_POST["nombre_chambres"], $_POST["nb_salles_bains"]) AND $_POST["localisation"] != NULL AND $_POST["description_logement"] != NULL AND $_POST["type_logement"] != NULL AND $_POST["nombre_chambres"] != NULL AND $_POST["nb_salles_bains"] != NULL AND $_FILES["up_main_img_logement"]!=NULL) {
 
+    if (isset($_GET["add"],$_FILES["up_main_img_logement"], $_POST["localisation"], $_POST["description_logement"], $_POST["type_logement"], $_POST["nombre_chambres"], $_POST["nb_salles_bains"]) AND $_POST["localisation"]!= NULL AND $_POST["description_logement"]!= NULL AND $_POST["type_logement"]!= NULL AND $_POST["nombre_chambres"]!= NULL AND $_POST["nb_salles_bains"]!= NULL AND $_FILES["up_main_img_logement"]!= NULL) {
+    var_dump($_GET["add"]);
     //On récupère le nombre de logements que l'utilisateur possède afin de renseigner le bon numéro de logement dans la requête qui suivra
     $rez = $bdd -> prepare("SELECT * FROM logement WHERE id_users=?");
     $rez -> execute(array($id_user));
@@ -256,6 +257,21 @@ if (isset($_GET["update"])) {
         'numero_logement' => $numero_logement+1,
     ));
     $new_logement = $bdd -> lastInsertId();
+
+    $req = $bdd->query("SELECT * FROM equipement");
+
+    while ($equipement = $req->fetch()) {
+        $id_equipement = $equipement[0];
+
+            if (isset($_POST["$id_equipement-1"]) AND $_POST["$id_equipement-1"] != NULL) {
+
+                $desc = $bdd->prepare("INSERT INTO annonce_equipement(id_logement, id_equipement) VALUES (:id_logement,:id_equipement)");
+                $desc->execute(array(
+                    'id_logement' => $new_logement,
+                    'id_equipement' => $equipement[0],
+                ));
+            }
+        }
 
     ?>
         <div class="forum_title" xmlns="http://www.w3.org/1999/html"><h7>Votre logement a bien été ajouté !</h7></div> <?php
@@ -396,6 +412,7 @@ if (isset($_GET["update"])) {
     while ($equipement = $req->fetch()) {
         $id_equipement = $equipement[0];
 
+        if (isset($_GET['update'])) {
         if (isset($_POST["$id_equipement-1"]) AND $_POST["$id_equipement-1"] != NULL) {
 
             $desc = $bdd->prepare("INSERT INTO annonce_equipement(id_logement, id_equipement) VALUES (:id_logement,:id_equipement)");
@@ -404,14 +421,14 @@ if (isset($_GET["update"])) {
                 'id_equipement' => $equipement[0],
             ));
         }
-    }
+    } }
 
 }
 elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement"], $_POST["type_logement"], $_POST["nombre_chambres"], $_POST["nb_salles_bains"]) AND $_POST["localisation"] == NULL AND $_POST["description_logement"] == NULL AND $_POST["type_logement"] == NULL AND $_POST["nombre_chambres"] == NULL AND $_POST["nb_salles_bains"] == NULL) {?> <div class="forum_title"><h7>Vous n'avez pas renseigné tous les champs obligatoires (avec des *)</h7></div> <?php } ?>
 
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
 <script type="text/javascript" src="../fichier_js/ajout_photo.js"></script>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="../images_diverses/icon.png" type="image/x-icon"/>
