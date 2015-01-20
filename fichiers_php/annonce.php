@@ -54,11 +54,11 @@
                     <h7 id="Titre1"><?php echo $donnees['nom_maison'] ;?>  </h7> <br></br>
 
                     <h9 class="Localisation">  <img src="location2.png" width="0.7%"> <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
-                    <li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li>
-                    <li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?><?php echo voyageur; ?></li>
-                    <li class="membres"> <?php echo $donnees['nb_chambres'] ;?><?php echo chambre; ?></li>
-                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?></li>
-                    <li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²</li>
+                    <?php if ($donnees['type_logement']!=NULL) { ?><li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li> <?php } else {} ?>
+                        <?php if ($donnees['nombre_voyageurs']!=NULL) { ?><li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?><?php echo voyageur; ?></li><?php } else {} ?>
+                        <?php if ($donnees['nb_chambres']!=NULL) { ?><li class="membres"> <?php echo $donnees['nb_chambres'] ;?><?php echo chambre; ?></li><?php } else {} ?>
+                        <?php if ($donnees['nb_salles_bains']!=NULL) { ?><li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?></li><?php } else {} ?>
+                        <?php if ($donnees['superficie']!=NULL) { ?><li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²</li><?php } else {} ?>
 
                     </div>
 
