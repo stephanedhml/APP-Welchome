@@ -42,7 +42,7 @@
     ?>
 
     <header>
-        <?php include("menu2.php"); ?>
+        <?php include("menus.php"); ?>
     </header>
     <div class="superglobal">
         <div class="global">
@@ -54,11 +54,12 @@
                     <h7 id="Titre1"><?php echo $donnees['nom_maison'] ;?>  </h7> <br></br>
 
                     <h9 class="Localisation">  <img src="location2.png" width="0.7%"> <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
-                    <?php if ($donnees['type_logement']!=NULL) { ?><li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li> <?php } else {} ?>
-                        <?php if ($donnees['nombre_voyageurs']!=NULL) { ?><li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?><?php echo voyageur; ?></li><?php } else {} ?>
-                        <?php if ($donnees['nb_chambres']!=NULL) { ?><li class="membres"> <?php echo $donnees['nb_chambres'] ;?><?php echo chambre; ?></li><?php } else {} ?>
-                        <?php if ($donnees['nb_salles_bains']!=NULL) { ?><li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?></li><?php } else {} ?>
-                        <?php if ($donnees['superficie']!=NULL) { ?><li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²</li><?php } else {} ?>
+                    <li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li>
+                    <li class="membres"> <img src="user3.png" width="1%"> <?php  if (isset($donnees['nombre_voyageurs']) and $donnees['nombre_voyageurs'] !=0){ echo $donnees['nombre_voyageurs'].voyageur;} ?></li>
+                    <li class="membres"> <?php if (isset($donnees['nb_chambres']) and $donnees['nb_chambres'] !=0){echo $donnees['nb_chambres']. chambre; }?></li>
+                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php if (isset($donnees['nb_salles_bains']) and $donnees['nb_salles_bains'] !=0){ echo $donnees['nb_salles_bains'] ;}?></li>
+                        <?php  if (isset($donnees['superficie']) and $donnees['superficie'] !=0){?>
+                    <li class="membres"> <img src="big36.png" width="1%">  <?php echo $donnees['superficie']. 'm²' ;}?></li>
 
                     </div>
 
