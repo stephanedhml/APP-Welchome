@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="correction ajout logement">
+    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -1510,7 +1510,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421805411672</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="obligé">
+      <created>1421805438760</created>
+      <option name="number" value="00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1421805438760</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1579,7 +1585,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="petit ajout" />
     <MESSAGE value="travail css" />
     <MESSAGE value="ajout possibilité promouvoir un utilisateur admin via back office" />
     <MESSAGE value="correction mauvaise phrase" />
@@ -1604,7 +1609,8 @@
     <MESSAGE value="correction ajout logement" />
     <MESSAGE value="correction de nombreux bugs d'affichage" />
     <MESSAGE value="correction bug commentaire annonce !" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction bug commentaire annonce !" />
+    <MESSAGE value="obligé" />
+    <option name="LAST_COMMIT_MESSAGE" value="obligé" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
