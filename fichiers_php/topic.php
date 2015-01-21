@@ -34,7 +34,7 @@ $user = $rel -> fetch();
 </head>
 <body class="forum_messagerie">
 <header>
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </header>
 
 <div class="superglobal">

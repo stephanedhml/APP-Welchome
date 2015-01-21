@@ -23,7 +23,7 @@ session_start();
 
 	<body onload="exi()" class="wood">
 		<div class="header">
-			<?php include("menu.php"); ?>
+			<?php include("menu2.php"); ?>
 		</div>
         <div class="superglobal">
         <div class="global">

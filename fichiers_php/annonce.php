@@ -30,7 +30,7 @@
 
     //On ajoute le message de l'utilisateur correspondant à l'annonce dans la BDD
 
-    if (isset($_POST['message'])) {
+    if (isset($_POST['message']) AND $_POST['message']!=NULL) {
         $up = $bdd -> prepare("INSERT INTO messages(id_expediteur,date_update,message,id_logement) VALUES(:expediteur,:dates, :message, :id_logement)");
         $up -> execute(array(
             'expediteur' => $_SESSION['userid'],
@@ -55,10 +55,11 @@
 
                     <h9 class="Localisation">  <img src="location2.png" width="0.7%"> <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
                     <li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li>
-                    <li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?><?php echo voyageur; ?></li>
-                    <li class="membres"> <?php echo $donnees['nb_chambres'] ;?><?php echo chambre; ?></li>
-                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?></li>
-                    <li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²</li>
+                    <li class="membres"> <img src="user3.png" width="1%"> <?php  if (isset($donnees['nombre_voyageurs']) and $donnees['nombre_voyageurs'] !=0){ echo $donnees['nombre_voyageurs'].voyageur;} ?></li>
+                    <li class="membres"> <?php if (isset($donnees['nb_chambres']) and $donnees['nb_chambres'] !=0){echo $donnees['nb_chambres']. chambre; }?></li>
+                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php if (isset($donnees['nb_salles_bains']) and $donnees['nb_salles_bains'] !=0){ echo $donnees['nb_salles_bains'].sallebain ;}?></li>
+                        <?php  if (isset($donnees['superficie']) and $donnees['superficie'] !=0){?>
+                    <li class="membres"> <img src="big36.png" width="1%">  <?php echo $donnees['superficie'].'m²';}?></li>
 
                     </div>
 
@@ -192,10 +193,11 @@
                 $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                 $quser -> execute(array($com['id_expediteur']));
                 $un = $quser -> fetch();
+
                 ?>
 
                 <?php
-                if ($i<$nb_coms-1) {
+                if ($i<$nb_coms) {
                     ?>
                     <table class="tableau_com_annonce">
                         <tr>
@@ -215,7 +217,7 @@
                     </table>
                 <?php
                 }
-                    if ($i=$nb_coms) {
+                    if (strcmp($i,$nb_coms)==0) {
                 ?>
                 <table class="tableau_last_com_annonce">
                     <tr>
@@ -237,8 +239,26 @@
                     ));
                     while($com = $req -> fetch()) {
                     if ($com['end_ech']==1) {
-                        switch (strcmp($_SESSION['userid'],$com['id_demandeur'])) {
-                            case 0:
+                        if (strcmp($_SESSION['userid'],$com['id_demandeur'])==0 AND strcmp($_SESSION['userid'],$com['id_proprietaire'])==0) {
+                            var_dump($_SESSION['userid']);
+                            ?>
+                            <div class="cadre_answer_post_annonce">
+                                <div class="answer1">
+                                    <form
+                                        action="annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>"
+                                        method="post">
+                                        <label for="message">Message</label><br/></br >
+                                        <textarea type="text" name="message" class="post_message"
+                                                  value="Ecrivez votre commentaire en 300 caractères max"
+                                                  maxlength="300"></textarea><br/><br/>
+                                        <input type="submit" value="Poster" id="btn_connexion"/><br/><br/>
+                                    </form>
+                                </div>
+                            </div>
+                        <?php
+                        }
+                        else {
+                        if (strcmp($_SESSION['userid'],$com['id_demandeur'])==0) {
                                 ?>
                                 <div class="cadre_answer_post_annonce" >
                                     <div class="answer1" >
@@ -250,10 +270,8 @@
                                     </div >
                                 </div>
                                 <?php
-                            break;
                         }
-                        switch (strcmp($_SESSION['userid'],$com['id_proprietaire'])) {
-                            case 0:
+                        elseif (strcmp($_SESSION['userid'],$com['id_proprietaire'])==0) {
                                 ?>
                                 <div class="cadre_answer_post_annonce" >
                                     <div class="answer1" >
@@ -265,8 +283,7 @@
                                     </div >
                                 </div>
                             <?php
-                            break;
-                        } } } } ?>
+                        } } } } } ?>
         </div>
         </div>
     </div>

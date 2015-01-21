@@ -94,7 +94,7 @@ body a {
     width: 33%;
 
     margin-left: 10%;
-    margin-top: 80px;
+    margin-top: 150px;
 
 }
 .left_3_bot {
@@ -102,7 +102,7 @@ body a {
     width: 33%;
 
     margin-left: 10%;
-    margin-top: 380px;
+    margin-top: 450px;
 
 }
 .left_carre_top {
@@ -156,14 +156,14 @@ body a {
     width: 33%;
 
     margin-left: 33%;
-    margin-top: 80px;
+    margin-top: 150px;
 }
 .center_3_bot {
     position: absolute;
     width: 33%;
 
     margin-left: 33%;
-    margin-top: 380px;
+    margin-top: 450px;
 }
 .center_carre_top {
     position: relative;
@@ -214,14 +214,14 @@ body a {
     width: 33%;
 
     margin-left: 56%;
-    margin-top: 80px;
+    margin-top: 150px;
 }
 .right_3_bot {
     position: absolute;
     width: 33%;
 
     margin-left: 56%;
-    margin-top: 380px;
+    margin-top: 450px;
 }
 .right_carre_top {
     position: relative;

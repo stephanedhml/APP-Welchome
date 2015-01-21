@@ -31,13 +31,13 @@ session_start();
         <input type="text" name="ville" />
 	   <p><?php echo choixlogement; ?><br/>
            <div class="liste_deroulante1">
-                <input type="checkbox" name="type1" id="case" value="studio"/> <label for="case"><?php echo studio;?></label><br/>
-                <input type="checkbox" name="type2" id="case" value="appart"/> <label for="case"><?php echo appartement;?></label><br/>
-                <input type="checkbox" name="type3" id="case" value="maison"/> <label for="case"><?php echo maison;?></label><br/>
-                <input type="checkbox" name="type4" id="case" value="pavillon"/> <label for="case"><?php echo pavillon;?></label><br/>
-                <input type="checkbox" name="type5" id="case" value="bungalow"/> <label for="case"><?php echo bungalow;?></label><br/>
-                <input type="checkbox" name="type6" id="case" value="bateau"/> <label for="case"><?php echo bateau;?></label><br/>
-                <input type="checkbox" name="type7" id="case" value="camping"/> <label for="case"><?php echo campingcar;?></label><br/>
+                <input type="checkbox" name="type1" id="case" /> <label for="case"><?php echo studio;?></label><br/>
+                <input type="checkbox" name="type2" id="case" /> <label for="case"><?php echo appartement;?></label><br/>
+                <input type="checkbox" name="type3" id="case" /> <label for="case"><?php echo maison;?></label><br/>
+                <input type="checkbox" name="type4" id="case" /> <label for="case"><?php echo pavillon;?></label><br/>
+                <input type="checkbox" name="type5" id="case" /> <label for="case"><?php echo bungalow;?></label><br/>
+                <input type="checkbox" name="type6" id="case" /> <label for="case"><?php echo bateau;?></label><br/>
+                <input type="checkbox" name="type7" id="case" /> <label for="case"><?php echo campingcar;?></label><br/>
            </div>
             <br/>
         <!--
@@ -60,7 +60,7 @@ session_start();
 
 
         <p><?php echo surfacemin;?><br/>
-        <input type="number" name="surface_min" value="Surface minimale" min="0"></p>
+        <input type="number" name="surface_min" value="Surface minimale" min="0"></p></br>
 
         <!--
         <p><?php echo choixpreferences;?><br/>
@@ -69,7 +69,8 @@ session_start();
         <input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/>
         <input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case"><?php echo ville;?></label><br/></p>
         -->
-
+        <p>Nom du logement</br>
+            <input type="texte" name="nom_log" id="nmlgt"/></p><br/>
     </div>
 
     <div class="bloc_search_right">

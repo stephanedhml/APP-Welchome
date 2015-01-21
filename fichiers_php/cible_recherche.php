@@ -19,7 +19,7 @@ include('modeles.php');
 
 <body>
 <div class="header">
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </div>
 <div class="superglobal">
     <div class="global">

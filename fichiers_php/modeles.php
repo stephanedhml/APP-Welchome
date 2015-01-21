@@ -78,17 +78,18 @@ VALUES(:localisation,:lieu, :nom_maison, :nb_personne, :logement, :nb_chambres, 
 // Fonction de recherche_avancée.php
 
 
+
 function resultats_requete_avancee()
 {
     global $bdd;
 
-    if (isset($_POST['ville']) and $_POST['ville']!='')
-    {
-        $a='LIKE';
-        $b=$_POST['ville'];
-        $lieu =$a.$b;
-    }
-    else{$lieu = "";}
+$_POST['type1']=isset($_POST['type1']) ? 'on' : NULL;
+$_POST['type2']=isset($_POST['type2']) ? 'on' : NULL;
+$_POST['type3']=isset($_POST['type3']) ? 'on' : NULL;
+$_POST['type4']=isset($_POST['type4']) ? 'on' : NULL;
+$_POST['type5']=isset($_POST['type5']) ? 'on' : NULL;
+$_POST['type6']=isset($_POST['type6']) ? 'on' : NULL;
+$_POST['type7']=isset($_POST['type7']) ? 'on' : NULL;
 
     if (isset($_POST['capacite']) and $_POST['capacite']!='')
     {
@@ -99,99 +100,82 @@ function resultats_requete_avancee()
     {
         $message1="";
     }
-    if (isset($_POST['type1']) and $_POST['type1']!='' and (!isset($_POST['capacite']) or $_POST['capacite']=''))
+    if ($_POST['type1']=='on' )
     {
-        $type1 = htmlspecialchars($_POST['type1']);
-        $message2 = " AND type_logement LIKE '%$type1%'";
-    }
-    else if(isset($_POST['capacite']) and $_POST['capacite']!='')
-    {
-        $type1 = htmlspecialchars($_POST['type1']);
-        $message2="OR type_logement LIKE '%$type1%'";
+        $message2 = " AND type_logement LIKE '%tudio%'";
     }
     else
     {
         $message2="";
     }
-    if (isset($_POST['type2']) and $_POST['type2']!=''  and (!isset($_POST['type1']) or $_POST['type1']=''))
+    if ($_POST['type2']=='on'  and (!isset($_POST['type1'])))
     {
-        $type2 = htmlspecialchars($_POST['type2']);
-        $message3 =  " AND type_logement LIKE '%$type2%'";
+        $message3 =  " AND type_logement LIKE '%ppart%' ";
     }
-    else if(isset($_POST['type1']) and $_POST['type1']!='')
+    else if( $_POST['type2']=='on' and $_POST['type1']=='on')
     {
-        $type2 = htmlspecialchars($_POST['type2']);
-        $message3="OR type_logement LIKE '%$type2%'";
+        $message3="OR type_logement LIKE '%ppart%'";
     }
     else
     {
         $message3="";
     }
-    if (isset($_POST['type3']) AND $_POST['type3']!='' AND (!isset($_POST['type2']) or $_POST['type2']=''))
+    if (isset($_POST['type3']) AND $_POST['type3']=='on' AND !isset($_POST['type2']) AND !isset($_POST['type1']) )
     {
-        $type3 = htmlspecialchars($_POST['type3']);
-        $message4 =  " AND type_logement LIKE '%$type3%'";
+        $message4 =  " AND type_logement LIKE '%aison%'";
     }
-    else if(isset($_POST['type2']) and $_POST['type2']!='')
+    else if($_POST['type3']=='on' and ($_POST['type2']=='on' or $_POST['type1']=='on'))
     {
-        $type3 = htmlspecialchars($_POST['type3']);
-        $message4="OR type_logement LIKE '%$type3%'";
+
+        $message4="OR type_logement LIKE '%aison%'";
     }
     else
     {
         $message4="";
     }
-    if (isset($_POST['type4']) and $_POST['type4']!='' and (!isset($_POST['type3']) or $_POST['type3']=''))
+    if ($_POST['type4']=='on' and !isset($_POST['type3']) and !isset($_POST['type2']) and !isset($_POST['type1']))
     {
-        $type4 = htmlspecialchars($_POST['type4']);
-        $message5 =  " AND type_logement LIKE '%$type4%'";
+        $message5 =  " AND type_logement LIKE '%avillon%'";
     }
-    else if(isset($_POST['type3']) and $_POST['type3']!='')
+    else if($_POST['type4']=='on' and ($_POST['type3']=='on' or $_POST['type2']=='on'or $_POST['type1']=='on'))
     {
-        $type4 = htmlspecialchars($_POST['type4']);
-        $message5="OR type_logement LIKE '%$type4%'";
+        $message5="OR type_logement LIKE '%avillon%'";
     }
     else
     {
         $message5="";
     }
-    if (isset($_POST['type5']) and $_POST['type5']!='' and (!isset($_POST['type4']) or $_POST['type4']=''))
+    if ($_POST['type5']=='on' and !isset($_POST['type4']) and !isset($_POST['type3']) and !isset($_POST['type2']) and !isset($_POST['type1']))
     {
-        $type5 = htmlspecialchars($_POST['type5']);
-        $message6 =  " AND type_logement LIKE '%$type5%'";
+        $message6 =  " AND type_logement LIKE '%ungalow%'";
     }
-    else if(isset($_POST['type4']) and $_POST['type4']!='')
+    else if($_POST['type5']=='on' and ($_POST['type4']=='on' or $_POST['type3']=='on' or $_POST['type2']=='on'or $_POST['type1']=='on'))
     {
-        $type5 = htmlspecialchars($_POST['type5']);
-        $message6="OR type_logement LIKE '%$type5%'";
+        $message6="OR type_logement LIKE '%ungalow%'";
     }
     else
     {
         $message6="";
     }
-    if (isset($_POST['type6']) and $_POST['type6']!='' and (!isset($_POST['type5']) or $_POST['type5']=''))
+    if ($_POST['type6']=='on' and !isset($_POST['type5'])  and !isset($_POST['type4']) and !isset($_POST['type3']) and !isset($_POST['type2']) and !isset($_POST['type1']))
     {
-        $type6 = htmlspecialchars($_POST['type6']);
-        $message7 =  " AND type_logement LIKE '%$type6%'";
+        $message7 =  " AND type_logement LIKE '%ateau%'";
     }
-    else if(isset($_POST['type5']) and $_POST['type5']!='')
+    else if($_POST['type6']=='on' and ($_POST['type5']=='on' or  $_POST['type4']=='on' or $_POST['type3']=='on' or $_POST['type2']=='on'or $_POST['type1']=='on'))
     {
-        $type6 = htmlspecialchars($_POST['type6']);
-        $message7="OR type_logement LIKE '%$type6%'";
+        $message7="OR type_logement LIKE '%ateau%'";
     }
     else
     {
         $message7="";
     }
-    if (isset($_POST['type7']) and $_POST['type7']!='' and (!isset($_POST['type6']) or $_POST['type6']=''))
+    if ($_POST['type7']=='on' and !isset($_POST['type6']) and !isset($_POST['type5'])  and !isset($_POST['type4']) and !isset($_POST['type3']) and !isset($_POST['type2']) and !isset($_POST['type1']))
     {
-        $type7 = htmlspecialchars($_POST['type7']);
-        $message8 =  " AND type_logement LIKE '%$type7%'";
+        $message8 =  " AND type_logement LIKE '%amping%'";
     }
-    else if(isset($_POST['type6']) and $_POST['type6']!='')
+    else if($_POST['type7']=='on' and ($_POST['type6']=='on' or $_POST['type5']=='on' or $_POST['type4']=='on' or $_POST['type3']=='on' or $_POST['type2']=='on' or $_POST['type1']=='on'))
     {
-        $type7 = htmlspecialchars($_POST['type7']);
-        $message8="OR type_logement LIKE '%$type7%'";
+        $message8="OR type_logement LIKE '%amping%'";
     }
     else
     {
@@ -261,6 +245,16 @@ function resultats_requete_avancee()
     {
         $message15="";
     }
+    if (isset($_POST['nom_log']) and $_POST['nom_log']!='')
+    {
+        $nomlog = htmlspecialchars($_POST['nom_log']);
+        $message16 =" AND nom_maison LIKE '%$nomlog%'";
+    }
+    else
+    {
+        $message16="";
+    }
+
     if (isset($_POST["television"])) {
         if ($_POST["television"]=='Oui') {$tele =" AND television LIKE 1";} else {$tele ="";};
     }
@@ -284,12 +278,45 @@ function resultats_requete_avancee()
     if (isset($_POST["jardin"])) {
         if ($_POST["jardin"]=='Oui') {$jardin =" AND jardin LIKE 1";} else {$jardin ="";}
     }
-
-
-
-    $results =$bdd->query("SELECT * FROM logement WHERE
- localisation '%$lieu%'
+    if (isset($_POST['ville']) and $_POST['ville']!='')
+    {
+        $lieu =$_POST['ville'];
+       try{ $results =$bdd->query("SELECT * FROM logement WHERE
+ localisation LIKE '%$lieu%'
   $message1
+  $message2
+  $message3
+  $message4
+  $message5
+  $message6
+  $message7
+  $message8
+  $message9
+  $message10
+  $message11
+  $message12
+  $message13
+  $message14
+  $message15
+  $message16
+  $tele
+  $malav
+  $parking
+  $clim
+  $piscine
+  $jardin
+    ORDER BY id_logement DESC");
+    }
+catch(Exception $e)
+	{
+        die('Erreur : '.$e->getMessage());
+    }
+    }
+    else
+    {
+       try{ $results =$bdd->query("SELECT * FROM logement WHERE
+ id_users>=1
+$message1
   $message2
   $message3
   $message4
@@ -311,7 +338,18 @@ function resultats_requete_avancee()
   $piscine
   $jardin
 
+
     ORDER BY id_logement DESC");
+    }
+catch(Exception $e)
+	{
+        die('Erreur : '.$e->getMessage());
+    }
+    }
+
+
+
+
 
     return $results;
 }

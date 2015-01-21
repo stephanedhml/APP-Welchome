@@ -18,7 +18,7 @@
 
 	<body onload="exi()" class="wood">
 		<div class="header">
-			<?php include("menu.php"); ?>
+			<?php include("menu2.php"); ?>
 		</div>
         <div class="superglobal">
         <div class="global">
@@ -93,7 +93,7 @@
                                         ?>
                                         <div class='message'><?php echo bieninscrit;?>
                                             </div>
-                                        <meta http-equiv="refresh" content="3;URL=connexion.php">
+                                        <meta http-equiv="refresh" content="1;URL=connexion.php">
                                     <?php
                                     }
                                     else {

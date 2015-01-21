@@ -1,27 +1,45 @@
+@media screen and (max-width: 1680px) {
+    .demandes_logement {
+        margin-top: 120px;
+    }
+
+    .owner_logement {
+        margin-top: 120px;
+    }
+
+    .en_cours {
+        margin-top: 120px;
+    }
+}
+
+
+
 .voeux {
     font-size: 25px;
     font-family: century,arial,sans-serif;
     text-align: center;
     margin-bottom: 30px;
 }
-.demandes_logement {
-    margin-top: 120px;
-    margin-left: 33%;
-    width: 33%;
-    position: absolute;
-}
+@media screen and (min-width: 1681px) {
+    .demandes_logement {
+        margin-top: 120px;
+        margin-left: 33%;
+        width: 33%;
+        position: absolute;
+    }
 
-.owner_logement {
-    margin-top: 120px;
-    width: 33%;
-    position: absolute;
-}
+    .owner_logement {
+        margin-top: 120px;
+        width: 33%;
+        position: absolute;
+    }
 
-.en_cours {
-    margin-top: 120px;
-    margin-left: 66%;
-    width: 33%;
-    position: absolute;
+    .en_cours {
+        margin-top: 120px;
+        margin-left: 66%;
+        width: 33%;
+        position: absolute;
+    }
 }
 .img_gauche {
     width: 300px;
@@ -72,6 +90,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .img_member_ask {

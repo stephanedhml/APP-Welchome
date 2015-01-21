@@ -16,7 +16,7 @@ session_start();
 <body class="forum_messagerie">
 
         <header>
-            <?php include("menus.php"); ?>
+            <?php include("menu2.php"); ?>
         </header>
     <div class="superglobal">
         <div class="global">
