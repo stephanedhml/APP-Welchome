@@ -32,15 +32,15 @@
 				<p><?php echo choixlogement; ?><br/>
 				<div class="liste_deroulante1">
 					<div class="col1">
-						<input type="checkbox" name="type1" id="case" value="studio"/> <label for="case"><?php echo studio;?></label><br/>
-						<input type="checkbox" name="type2" id="case" value="appart"/> <label for="case"><?php echo appartement;?></label><br/>
-						<input type="checkbox" name="type3" id="case" value="maison"/> <label for="case"><?php echo maison;?></label><br/>
-						<input type="checkbox" name="type4" id="case" value="pavillon"/> <label for="case"><?php echo pavillon;?></label><br/>
+						<input type="checkbox" name="type1" id="case" /> <label for="case"><?php echo studio;?></label><br/>
+						<input type="checkbox" name="type2" id="case" /> <label for="case"><?php echo appartement;?></label><br/>
+						<input type="checkbox" name="type3" id="case" /> <label for="case"><?php echo maison;?></label><br/>
+						<input type="checkbox" name="type4" id="case" /> <label for="case"><?php echo pavillon;?></label><br/>
 					</div>
 					<div class="col2">
-						<input type="checkbox" name="type5" id="case" value="bungalow"/> <label for="case"><?php echo bungalow;?></label><br/>
-						<input type="checkbox" name="type6" id="case" value="bateau"/> <label for="case"><?php echo bateau;?></label><br/>
-						<input type="checkbox" name="type7" id="case" value="camping"/> <label for="case"><?php echo campingcar;?></label><br/>
+						<input type="checkbox" name="type5" id="case" /> <label for="case"><?php echo bungalow;?></label><br/>
+						<input type="checkbox" name="type6" id="case" /> <label for="case"><?php echo bateau;?></label><br/>
+						<input type="checkbox" name="type7" id="case" /> <label for="case"><?php echo campingcar;?></label><br/>
 					</div>
 				</div>
 				<br/>

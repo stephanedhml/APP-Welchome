@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="correction ajout logement">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_css/style_accueil.css" afterPath="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
+    <list default="true" id="a6587a16-7e8b-4b6c-a876-62d7ff60c5c4" name="Default" comment="modification de annonce.php">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/menu.php" afterPath="$PROJECT_DIR$/fichiers_php/menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/menus.php" afterPath="$PROJECT_DIR$/fichiers_php/menus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/modeles.php" afterPath="$PROJECT_DIR$/fichiers_php/modeles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" afterPath="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="APP-Welchome.iws" />
@@ -199,47 +202,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.615385" vertical-offset="11840" max-vertical-offset="12744">
-              <caret line="702" column="0" selection-start-line="702" selection-start-column="0" selection-end-line="702" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#form#0;n#div#7;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style_accueil.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43857634" vertical-offset="2408" max-vertical-offset="9918">
-              <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
+            <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="304">
+              <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="block_add_left.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fichiers_php/block_add_left.php">
+      <file leaf-file-name="modeles.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.115385" vertical-offset="163" max-vertical-offset="1080">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="-34.0" vertical-offset="704" max-vertical-offset="6800">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1421803995241" expanded="true" signature="184:244" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803995241" expanded="true" signature="427:482" placeholder="SELECT passw..users..." />
+                <marker date="1421803995241" expanded="true" signature="707:836" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803995241" expanded="true" signature="1347:1604" placeholder="INSERT INTO ..." />
+                <marker date="1421803995241" expanded="true" signature="1704:1962" placeholder="INSERT INTO ..." />
+                <marker date="1421803995241" expanded="true" signature="8121:8451" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803995241" expanded="true" signature="8589:8903" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803995241" expanded="true" signature="9714:9875" placeholder="INSERT INTO ..." />
+                <marker date="1421803995241" expanded="true" signature="10310:10347" placeholder="SELECT id FR..users..." />
+                <marker date="1421803995241" expanded="true" signature="10573:10629" placeholder="SELECT user1..echange..." />
+                <marker date="1421803995241" expanded="true" signature="10763:10921" placeholder="INSERT INTO ..." />
+                <marker date="1421803995241" expanded="true" signature="11208:11364" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="block_maj_left.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fichiers_php/block_maj_left.php">
+      <file leaf-file-name="cible_recherche.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/cible_recherche.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1080">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.5" vertical-offset="156" max-vertical-offset="1792">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+              <folding>
+                <marker date="1421803684441" expanded="true" signature="2122:2161" placeholder="SELECT * FRO..photo..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="annonce.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/annonce.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43050846" vertical-offset="753" max-vertical-offset="4528">
+              <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+              <folding>
+                <marker date="1421803733877" expanded="true" signature="741:801" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803733877" expanded="true" signature="935:971" placeholder="SELECT * FRO..users..." />
+                <marker date="1421803733877" expanded="true" signature="1170:1288" placeholder="INSERT INTO ..." />
+                <marker date="1421803733877" expanded="true" signature="3006:3042" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="3170:3202" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="3286:3350" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="3437:3512" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="3572:3614" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803733877" expanded="true" signature="3793:4051" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="3888:4051" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="3952:4004" placeholder="SELECT * FRO..annonce_equipement..." />
+                <marker date="1421803733877" expanded="true" signature="4161:4207" placeholder="SELECT * FRO..equipement..." />
+                <marker date="1421803733877" expanded="true" signature="4569:4657" placeholder="..." />
+                <marker date="1421803733877" expanded="true" signature="5013:5120" placeholder="SELECT frien..favoris..." />
+                <marker date="1421803733877" expanded="true" signature="5362:5439" placeholder="SELECT * FRO..echange..." />
+                <marker date="1421803733877" expanded="true" signature="6920:6962" placeholder="SELECT * FRO..logement..." />
+                <marker date="1421803733877" expanded="true" signature="7137:7176" placeholder="SELECT * FRO..photo..." />
+                <marker date="1421803733877" expanded="true" signature="7341:7408" placeholder="SELECT * FRO..messages..." />
+                <marker date="1421803733877" expanded="true" signature="7732:7768" placeholder="SELECT * FRO..users..." />
+                <marker date="1421803733877" expanded="true" signature="8936:8972" placeholder="SELECT * FRO..users..." />
+                <marker date="1421803733877" expanded="true" signature="10854:10946" placeholder="SELECT * FRO..echange..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/profil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="1024" max-vertical-offset="2944">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="81" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fichiers_php/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.333333" vertical-offset="672" max-vertical-offset="2400">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+              <folding>
+                <marker date="1421803684445" expanded="true" signature="1264:1330" placeholder="SELECT id_lo..logement..." />
+                <marker date="1421803684445" expanded="true" signature="1626:1665" placeholder="SELECT * FRO..photo..." />
+                <marker date="1421803684445" expanded="true" signature="1857:1905" placeholder="SELECT id_us..logement..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -264,67 +323,22 @@
     <setting file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fichiers_php/ecriremsg.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/js/calendar.js" />
-        <option value="$PROJECT_DIR$/fichier_js/connexion.js" />
-        <option value="$PROJECT_DIR$/fichiers_css/recherche_avancee.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/footer.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/connexion.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_connexion.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/footer2.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/footer2.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/site.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/liremsg.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/cible_recherche.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/menus.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/carrousel.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/sign_up.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/annonce.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/topic.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/discussion.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/encours.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/echange.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/moteur_de_recherche.css" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/block_left.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/admin.css" />
-        <option value="$PROJECT_DIR$/multilingue/choixlangue.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/admin.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/recherche_avancee.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/modeles.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/message.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/messagerie.css" />
-        <option value="$PROJECT_DIR$/fichiers_css/edit_profile.css" />
-        <option value="$PROJECT_DIR$/fichiers_css/ask.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/forum.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/new_topic.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_menu.css" />
-        <option value="$PROJECT_DIR$/fichiers_css/forum.css" />
-        <option value="$PROJECT_DIR$/fichiers_css/footer.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_sign_up.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/echg_msg.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/ask.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/profil.css" />
-        <option value="$PROJECT_DIR$/fichiers_php/profil.php" />
         <option value="$PROJECT_DIR$/fichiers_php/annonce.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/index.php" />
         <option value="$PROJECT_DIR$/fichiers_php/config.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/block_add_left.php" />
-        <option value="$PROJECT_DIR$/fichiers_php/edit_profile.php" />
-        <option value="$PROJECT_DIR$/fichiers_css/style_accueil.css" />
       </list>
     </option>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -335,9 +349,6 @@
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -381,7 +392,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fichiers_php" />
+              <option name="myItemId" value="multilingue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,7 +406,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fichiers_css" />
+              <option name="myItemId" value="fichiers_php" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,11 +431,21 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -433,22 +454,12 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
-      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -463,624 +474,6 @@
       <created>1417719988511</created>
       <option name="number" value="Default" />
       <updated>1417719988511</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commit de fichiers qui devraient être ignorés...">
-      <created>1417720406822</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1417720406822</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Ajout d'un carrousel horizontal à la page d'accueil">
-      <created>1417739231388</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1417739231388</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Correction du bug d'affichage du carrousel sur Firefox">
-      <created>1417739662465</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1417739662465</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Ajout des images carrousel">
-      <created>1417772551235</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1417772551235</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Règlage du problème de dépassement lié au carrousel">
-      <created>1417774562089</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1417774562089</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Retrait d'une ligne inutile + correction d'un problème de nom de classe">
-      <created>1418165642366</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1418165642366</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Création d'un footer">
-      <created>1418339137150</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1418339137150</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Création d'un footer">
-      <created>1418339165976</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1418339165976</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Intégration d'un footer en position fixed sur toutes les pages">
-      <created>1418340413273</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1418340413273</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Commit pour commit">
-      <created>1418389478451</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1418389478451</updated>
-    </task>
-    <task id="LOCAL-00012" summary="mise è jour de Formulaire.php (publication d'une annonce)">
-      <created>1418600655212</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1418600655212</updated>
-    </task>
-    <task id="LOCAL-00013" summary="ajout de confirmation_annonce.php">
-      <created>1418600701402</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1418600701402</updated>
-    </task>
-    <task id="LOCAL-00014" summary="ajout de cible_postannonce.php">
-      <created>1418600743524</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1418600743524</updated>
-    </task>
-    <task id="LOCAL-00015" summary="mise à jour de modeles.php">
-      <created>1418600794407</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1418600794407</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ajout de cible_recherche.php">
-      <created>1418600845797</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1418600845797</updated>
-    </task>
-    <task id="LOCAL-00017" summary="mise à jour de recherche_avancee.php">
-      <created>1418600952693</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1418600952693</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Annule les modifications de Marvin sur la branche master2">
-      <created>1418626603717</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1418626603717</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Réel retour en arrière modif marvin">
-      <created>1418626882513</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1418626882513</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Ajout des modifs de marvin dans la branche recherche_avance">
-      <created>1418626954555</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1418626954555</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Module d'écriture dans la BDD opérationnel (mais incomplet dans le choix des destinataires)">
-      <created>1418667801983</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1418667801983</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Affiche les messages reçus dans des tableaux">
-      <created>1418678859941</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1418678859941</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Association de l'id_user au pseudo de l'expéditeur dans les résultats de l'array">
-      <created>1418679519839</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1418679519839</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Ajout d'une amorce">
-      <created>1418680354832</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1418680354832</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Ajout de la table nécessaire au bon fonctionnement du module chat">
-      <created>1418680518361</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1418680518361</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Changement du nom des champs appelés (ex : Nombre de voyageurs devient Nombre_voyageurs) - à adapter dans le nom des champs de la BDD !">
-      <created>1418682877794</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1418682877794</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Ajout de la possibilité d'envoyer un message à tous les utilisateurs inscrits sur le site">
-      <created>1418684713337</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1418684713337</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Correction des accents disgracieux">
-      <created>1418684846731</created>
-      <option name="number" value="00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1418684846731</updated>
-    </task>
-    <task id="LOCAL-00029" summary="lien retour accueil">
-      <created>1418684949371</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1418684949371</updated>
-    </task>
-    <task id="LOCAL-00030" summary="lien retour accueil">
-      <created>1418685026941</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1418685026941</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Amélioration visuelle et tentative de réparation d'un pb dans la recherche simple">
-      <created>1418687816884</created>
-      <option name="number" value="00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1418687816884</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Ajout de la BDD qui fonctionne le mieux pour l'instant (correction de l'affichage réduit des annonces lors d'une r_simple et contient la table message">
-      <created>1418689204488</created>
-      <option name="number" value="00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1418689204488</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Ajout de la bonne BDD avec les entrées nickel">
-      <created>1418689572175</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1418689572175</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Amélioration apparence page lire message">
-      <created>1418698373006</created>
-      <option name="number" value="00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1418698373006</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Grosse MAJ visuelle du tableau des messages + ajout d'une règle UTF8 pour les requêtes SQL">
-      <created>1418701134018</created>
-      <option name="number" value="00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1418701134018</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Apparence des derniers messages reçus">
-      <created>1418702195919</created>
-      <option name="number" value="00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1418702195919</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Apparence correcte de la messagerie">
-      <created>1418703121268</created>
-      <option name="number" value="00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1418703121268</updated>
-    </task>
-    <task id="LOCAL-00038" summary="création de la branche modif_bdd">
-      <created>1418845582393</created>
-      <option name="number" value="00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1418845582393</updated>
-    </task>
-    <task id="LOCAL-00039" summary="tout fonctionne sauf les putain de messages de Manu =)">
-      <created>1418869269634</created>
-      <option name="number" value="00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1418869269634</updated>
-    </task>
-    <task id="LOCAL-00040" summary="j'ai mis la bdd">
-      <created>1418869447366</created>
-      <option name="number" value="00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1418869447371</updated>
-    </task>
-    <task id="LOCAL-00041" summary="j'ai mis la bdd">
-      <created>1418869719646</created>
-      <option name="number" value="00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1418869719646</updated>
-    </task>
-    <task id="LOCAL-00042" summary="j'ai mis la bdd">
-      <created>1418869986906</created>
-      <option name="number" value="00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1418869986906</updated>
-    </task>
-    <task id="LOCAL-00043" summary="publication d'annonce faite">
-      <created>1418871617142</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1418871617142</updated>
-    </task>
-    <task id="LOCAL-00044" summary="derniere amélioration">
-      <created>1418877516042</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1418877516042</updated>
-    </task>
-    <task id="LOCAL-00045" summary="derniere amélioration">
-      <created>1418997542369</created>
-      <option name="number" value="00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1418997542369</updated>
-    </task>
-    <task id="LOCAL-00046" summary="modif sign up">
-      <created>1420684522523</created>
-      <option name="number" value="00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1420684522523</updated>
-    </task>
-    <task id="LOCAL-00047" summary="javascript sur sign_up et connexion">
-      <created>1420690299870</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1420690299870</updated>
-    </task>
-    <task id="LOCAL-00048" summary="javascript sur sign_up et connexion">
-      <created>1420690416244</created>
-      <option name="number" value="00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1420690416244</updated>
-    </task>
-    <task id="LOCAL-00049" summary="javascript sur sign_up et connexion vers2">
-      <created>1420698144618</created>
-      <option name="number" value="00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1420698144618</updated>
-    </task>
-    <task id="LOCAL-00050" summary="javascript sur sign_up et connexion vers2">
-      <created>1420698150982</created>
-      <option name="number" value="00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1420698150989</updated>
-    </task>
-    <task id="LOCAL-00051" summary="essai de commit">
-      <created>1420764335559</created>
-      <option name="number" value="00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1420764335559</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Ajout de la possibilité de supprimer un message">
-      <created>1420812126314</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1420812126314</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Ajout de la possibilité de supprimer un topic">
-      <created>1420815484841</created>
-      <option name="number" value="00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1420815484841</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Correction d'un léger problème concernant les utilisateurs non connectés">
-      <created>1420815689840</created>
-      <option name="number" value="00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1420815689840</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Correction du problème d'affichage des liens du menu causé par les drapeaux">
-      <created>1420816697728</created>
-      <option name="number" value="00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1420816697728</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Amélioration considérable de la partie messagerie">
-      <created>1420821564947</created>
-      <option name="number" value="00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1420821564947</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Ajout du logo comme bouton d'accueil dans le menu">
-      <created>1420822080589</created>
-      <option name="number" value="00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1420822080589</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Ajout d'une texture au forum et à la messagerie et autres modifs mineures">
-      <created>1420823893058</created>
-      <option name="number" value="00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1420823893058</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Amélioration apparence messages entre amis">
-      <created>1420824039377</created>
-      <option name="number" value="00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1420824039377</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Changement du nom de la page principale et modification de la nature des formulaires de texte">
-      <created>1420825965632</created>
-      <option name="number" value="00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1420825965632</updated>
-    </task>
-    <task id="LOCAL-00061" summary="correction de soucis dans la barre de menu">
-      <created>1420826445604</created>
-      <option name="number" value="00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1420826445604</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Ajout des textures">
-      <created>1420826863081</created>
-      <option name="number" value="00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1420826863081</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Début de page d'édition de profil - changement de l'image de profil (avatar)">
-      <created>1420831793356</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1420831793356</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Correction bug affichage page accueil">
-      <created>1420839330234</created>
-      <option name="number" value="00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1420839330235</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Complétion de la page d'édition du profil et affichage des informations dans la page de profil de l'utilisateur">
-      <created>1420845827037</created>
-      <option name="number" value="00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1420845827037</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Ajout d'un nombre considérable de critères éditables via formulaire ainsi que de la BDD la plus complète actuellement">
-      <created>1420848484760</created>
-      <option name="number" value="00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1420848484760</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Correction d'un problème majeur (les champs non remplis envoyaient NULL et supprimaient les données précédemment enregistrées)">
-      <created>1420850151162</created>
-      <option name="number" value="00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1420850151162</updated>
-    </task>
-    <task id="LOCAL-00068" summary="modifications mineures">
-      <created>1420851245278</created>
-      <option name="number" value="00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1420851245278</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Ajout d'un lien sur la page de profil redirigeant vers le formulaire permettant de l'éditer">
-      <created>1420851511510</created>
-      <option name="number" value="00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1420851511510</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Redirection">
-      <created>1420853008386</created>
-      <option name="number" value="00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1420853008386</updated>
-    </task>
-    <task id="LOCAL-00071" summary="redirections automatiques lorsque succes">
-      <created>1420853621473</created>
-      <option name="number" value="00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1420853621473</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Affichage de l'auteur du first topic">
-      <created>1420854290498</created>
-      <option name="number" value="00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1420854290498</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Création d'un css pour la page d'edit de profil">
-      <created>1420857765770</created>
-      <option name="number" value="00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1420857765770</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Ajout de nombreux critères EFFECTIFS à la recherche avancée">
-      <created>1420860302597</created>
-      <option name="number" value="00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1420860302597</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Mise en commentaire des trucs qui ne correspondent à rien dans la BDD dans la recherche avancée">
-      <created>1420860462774</created>
-      <option name="number" value="00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1420860462774</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Correction du problème obligeant à indiquer un lieu dans la recherche avancée">
-      <created>1420860590039</created>
-      <option name="number" value="00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1420860590039</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Correction du problème faisant se supprimer la photo de profil si l'on en désigne pas une nouvelle lorsque l'on valide l'edit du profil">
-      <created>1420860996186</created>
-      <option name="number" value="00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1420860996186</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Correction d'une erreur de copier coller qui faisait se supprimer l'intégralité du profil au bout d'un certain temps">
-      <created>1420862648606</created>
-      <option name="number" value="00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1420862648606</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Début de structure pour plusieurs logements par utilisateur + correction du css accueil (centrage)">
-      <created>1420894484181</created>
-      <option name="number" value="00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1420894484181</updated>
-    </task>
-    <task id="LOCAL-00080" summary="modification majeure de la page d'édition de profil (permet de modifier le logement que l'on souhaite, entre autres)">
-      <created>1420901180504</created>
-      <option name="number" value="00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1420901180504</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Ajout d'une interface pour choisir si on veut éditer son profil utilisateur ou son logement">
-      <created>1420903246405</created>
-      <option name="number" value="00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1420903246405</updated>
-    </task>
-    <task id="LOCAL-00082" summary="correction temporaire affichage logement à éditer">
-      <created>1420911434323</created>
-      <option name="number" value="00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1420911434323</updated>
-    </task>
-    <task id="LOCAL-00083" summary="correction problème affichage page accueil">
-      <created>1420983350908</created>
-      <option name="number" value="00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1420983350908</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Ajout de la possibilité d'ajouter plusieurs logements dans la page d'édition du profil">
-      <created>1420997154186</created>
-      <option name="number" value="00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1420997154186</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Lien permettant de mettre l'image dans les bonnes proportions pour un rendu optimal sur le site">
-      <created>1420997735960</created>
-      <option name="number" value="00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1420997735960</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Ajout des différents logements qu'un utilisateur possède dans la page de profil">
-      <created>1420999365653</created>
-      <option name="number" value="00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1420999365653</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Correction d'un problème dans l'édition des critères d'un logement">
-      <created>1421003885933</created>
-      <option name="number" value="00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1421003885933</updated>
-    </task>
-    <task id="LOCAL-00088" summary="correction soucis affichage dans annonce">
-      <created>1421004171932</created>
-      <option name="number" value="00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1421004171933</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Code plus agréable à lire mais travail incomplet (interface annonce plus fonctionnelle)">
-      <created>1421014265028</created>
-      <option name="number" value="00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1421014265028</updated>
-    </task>
-    <task id="LOCAL-00090" summary="correction de l'annonce">
-      <created>1421018500000</created>
-      <option name="number" value="00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1421018500000</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Correction du footer parfaitement fonctionnel partout !">
-      <created>1421024762604</created>
-      <option name="number" value="00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1421024762604</updated>
-    </task>
-    <task id="LOCAL-00092" summary="correction affichage lorsque non connecté">
-      <created>1421024939756</created>
-      <option name="number" value="00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1421024939756</updated>
-    </task>
-    <task id="LOCAL-00093" summary="correction soucis validation formulaire vide">
-      <created>1421025720719</created>
-      <option name="number" value="00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1421025720719</updated>
-    </task>
-    <task id="LOCAL-00094" summary="correction d'un bug se faisant tout se supprimer">
-      <created>1421026688780</created>
-      <option name="number" value="00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1421026688780</updated>
-    </task>
-    <task id="LOCAL-00095" summary="MAJ BDD Manu 12-01-2015">
-      <created>1421026816705</created>
-      <option name="number" value="00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1421026816705</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Ajout footer dans recherche avancée">
-      <created>1421027370147</created>
-      <option name="number" value="00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1421027370147</updated>
-    </task>
-    <task id="LOCAL-00097" summary="amélioration css messagerie">
-      <created>1421073498486</created>
-      <option name="number" value="00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1421073498486</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Possibilité d'ajouter plusieurs photos à un même logement (inexploité pour le moment)">
-      <created>1421077167390</created>
-      <option name="number" value="00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1421077167391</updated>
-    </task>
-    <task id="LOCAL-00099" summary="correction recherche avancée avec plusieurs photos par logement">
-      <created>1421077408330</created>
-      <option name="number" value="00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1421077408330</updated>
-    </task>
-    <task id="LOCAL-00100" summary="correction ajout nouveau logement">
-      <created>1421079547971</created>
-      <option name="number" value="00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1421079547971</updated>
-    </task>
-    <task id="LOCAL-00101" summary="ajout changement photos logement">
-      <created>1421081279741</created>
-      <option name="number" value="00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1421081279741</updated>
-    </task>
-    <task id="LOCAL-00102" summary="changements conséquents page annonce pour intégrer toutes les photos du logement">
-      <created>1421084829988</created>
-      <option name="number" value="00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1421084829988</updated>
-    </task>
-    <task id="LOCAL-00103" summary="possibilité de MAJ ses photos y compris si on l'a pas insérée au moment de la création de l'annonce">
-      <created>1421088836875</created>
-      <option name="number" value="00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1421088836876</updated>
-    </task>
-    <task id="LOCAL-00104" summary="Correction léger pépin">
-      <created>1421089096144</created>
-      <option name="number" value="00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1421089096144</updated>
     </task>
     <task id="LOCAL-00105" summary="pas le choix&#10;">
       <created>1421157042513</created>
@@ -1380,54 +773,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36040044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842582" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15833974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4605067" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219076" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23081024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842582" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46162403" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36040044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1913646" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46162403" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32369298" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18550107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1482,10 +852,175 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../OVH et autres/annonce.php">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/discussion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="115.5" vertical-offset="3003" max-vertical-offset="4806">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1648" max-vertical-offset="2464">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/profil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3856" max-vertical-offset="4640">
+          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="251" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1472" max-vertical-offset="4272">
+          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="304">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/recherche_avancee.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1386">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/edit_profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3197" max-vertical-offset="4140">
+          <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.346153" vertical-offset="1279" max-vertical-offset="2178">
+          <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_connexion.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="2574">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/footer2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.307693" vertical-offset="0" max-vertical-offset="972">
+          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/footer2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1998">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2232">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.538462" vertical-offset="1122" max-vertical-offset="2034">
+          <caret line="105" column="2" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/liremsg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0" vertical-offset="864" max-vertical-offset="2934">
+          <caret line="61" column="138" selection-start-line="61" selection-start-column="138" selection-end-line="61" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.846154" vertical-offset="756" max-vertical-offset="2052">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="64" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/creerprofil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1512">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/carrousel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1422">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8154">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="774">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/echg_msg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.115385" vertical-offset="337" max-vertical-offset="2538">
+          <caret line="42" column="106" selection-start-line="42" selection-start-column="106" selection-end-line="42" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/messagerie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3456" max-vertical-offset="6156">
+          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="207" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/FAQ.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12781066" vertical-offset="324" max-vertical-offset="5958">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_css/annonce.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6458" max-vertical-offset="7632">
+          <caret line="389" column="21" selection-start-line="389" selection-start-column="21" selection-end-line="389" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1493,26 +1028,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6923077" vertical-offset="4194" max-vertical-offset="6336">
           <caret line="234" column="20" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..favoris">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..logement">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,6 +1039,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/echange.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40473372" vertical-offset="0" max-vertical-offset="845">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2682">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1472" max-vertical-offset="4272">
+          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
@@ -1530,404 +1070,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..annonce_equipement">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..equipement">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2358">
-          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.3719862" vertical-offset="0" max-vertical-offset="871">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/recherche_avancee.css">
+    <entry file="file://$PROJECT_DIR$/fichiers_css/profil.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="72" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..photo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multilingue/choixlangue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.538462" vertical-offset="2040" max-vertical-offset="16362">
-          <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3888" max-vertical-offset="5220">
+          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="251" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/recherche_avancee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2628">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="4806">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/messagerie.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56257176" vertical-offset="3578" max-vertical-offset="6354">
-          <caret line="226" column="12" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/site.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5384616" vertical-offset="968" max-vertical-offset="2178">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/forum.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4680">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5034965" vertical-offset="252" max-vertical-offset="2250">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/forum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25680473" vertical-offset="793" max-vertical-offset="1638">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/new_topic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0449704" vertical-offset="1297" max-vertical-offset="2142">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/discussion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0120193" vertical-offset="1940" max-vertical-offset="2772">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1648" max-vertical-offset="2464">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="138" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..forum_forum">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/style_menu.css">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/forum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5734266" vertical-offset="324" max-vertical-offset="3474">
-          <caret line="93" column="22" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.050887574" vertical-offset="353" max-vertical-offset="1224">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/ecriremsg.php">
+    <entry file="file://$PROJECT_DIR$/fichiers_css/forum.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3431953" vertical-offset="1135" max-vertical-offset="1980">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion_inscription_deconnexion_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="774">
-          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/style_sign_up.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2268">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/cible_recherche.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-67.84615" vertical-offset="0" max-vertical-offset="2016">
-          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/carrousel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.923077" vertical-offset="550" max-vertical-offset="1422">
-          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/moteur_de_recherche.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.076923" vertical-offset="302" max-vertical-offset="3132">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/echange.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.153846" vertical-offset="0" max-vertical-offset="450">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-69.73077" vertical-offset="185" max-vertical-offset="2916">
-          <caret line="111" column="31" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.384615" vertical-offset="6390" max-vertical-offset="7236">
-          <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="395" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..echange">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="880" max-vertical-offset="4160">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/ask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7020" max-vertical-offset="8496">
-          <caret line="413" column="102" selection-start-line="413" selection-start-column="102" selection-end-line="413" selection-end-column="102" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1328" max-vertical-offset="7552">
+          <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_css/ask.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1864" max-vertical-offset="2736">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="1890">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/edit_profile.css">
+    <entry file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1498" max-vertical-offset="7182">
-          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/profil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4276" max-vertical-offset="5580">
-          <caret line="261" column="25" selection-start-line="261" selection-start-column="25" selection-end-line="261" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="3636">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b5f37ff/bd8243a5-d6f0-4429-86f2-e76fe8eec678/welchome..messages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/echg_msg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.36134455" vertical-offset="1471" max-vertical-offset="2790">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..logement..." />
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..photo..." />
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..echange..." />
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1421751654652" expanded="true" signature="-1:-1" placeholder="UPDATE messa..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/annonce.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43457383" vertical-offset="2086" max-vertical-offset="5076">
-          <caret line="136" column="212" selection-start-line="136" selection-start-column="212" selection-end-line="136" selection-end-column="212" />
-          <folding>
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..logement..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..logement..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..annonce_equipement..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..equipement..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT frien..favoris..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..echange..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..logement..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..photo..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..messages..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1421751654646" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..echange..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2718">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding>
-            <marker date="1421751654655" expanded="true" signature="-1:-1" placeholder="SELECT id_lo..logement..." />
-            <marker date="1421751654655" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..photo..." />
-            <marker date="1421751654655" expanded="true" signature="-1:-1" placeholder="SELECT id_us..logement..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/accueilmanu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2340">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding>
-            <marker date="1421073619261" expanded="true" signature="-1:-1" placeholder="SELECT lien_..photo..." />
-            <marker date="1421073619261" expanded="true" signature="-1:-1" placeholder="SELECT id_lo..photo..." />
-            <marker date="1421073619261" expanded="true" signature="-1:-1" placeholder="SELECT id_us..logement..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.680851" vertical-offset="2376" max-vertical-offset="3312">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..logement..." />
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..logement..." />
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..photo..." />
-            <marker date="1421751654661" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..echange..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="342">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85106385" vertical-offset="432" max-vertical-offset="2250">
-          <caret line="64" column="60" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/block_maj_left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-60.166668" vertical-offset="9500" max-vertical-offset="11040">
+          <caret line="684" column="7" selection-start-line="684" selection-start-column="7" selection-end-line="684" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fichiers_php/block_add_left.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.115385" vertical-offset="163" max-vertical-offset="1080">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_php/edit_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.615385" vertical-offset="11840" max-vertical-offset="12744">
-          <caret line="702" column="0" selection-start-line="702" selection-start-column="0" selection-end-line="702" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#form#0;n#div#7;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fichiers_css/style_accueil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43857634" vertical-offset="2408" max-vertical-offset="9918">
-          <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/menus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0" vertical-offset="112" max-vertical-offset="1456">
+          <caret line="37" column="92" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.666666" vertical-offset="48" max-vertical-offset="1472">
+          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/sign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6180556" vertical-offset="1212" max-vertical-offset="3232">
+          <caret line="98" column="42" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multilingue/choixlangue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7636364" vertical-offset="673" max-vertical-offset="14848">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/recherche_avancee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5562914" vertical-offset="288" max-vertical-offset="2336">
+          <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/menu2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6357616" vertical-offset="0" max-vertical-offset="604">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/cible_recherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.5" vertical-offset="156" max-vertical-offset="1792">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <folding>
+            <marker date="1421803684441" expanded="true" signature="2122:2161" placeholder="SELECT * FRO..photo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="1024" max-vertical-offset="2944">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="81" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="672" max-vertical-offset="2400">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <marker date="1421803684445" expanded="true" signature="1264:1330" placeholder="SELECT id_lo..logement..." />
+            <marker date="1421803684445" expanded="true" signature="1626:1665" placeholder="SELECT * FRO..photo..." />
+            <marker date="1421803684445" expanded="true" signature="1857:1905" placeholder="SELECT id_us..logement..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/modeles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.0" vertical-offset="704" max-vertical-offset="6800">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <marker date="1421803995241" expanded="true" signature="184:244" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803995241" expanded="true" signature="427:482" placeholder="SELECT passw..users..." />
+            <marker date="1421803995241" expanded="true" signature="707:836" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803995241" expanded="true" signature="1347:1604" placeholder="INSERT INTO ..." />
+            <marker date="1421803995241" expanded="true" signature="1704:1962" placeholder="INSERT INTO ..." />
+            <marker date="1421803995241" expanded="true" signature="8121:8451" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803995241" expanded="true" signature="8589:8903" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803995241" expanded="true" signature="9714:9875" placeholder="INSERT INTO ..." />
+            <marker date="1421803995241" expanded="true" signature="10310:10347" placeholder="SELECT id FR..users..." />
+            <marker date="1421803995241" expanded="true" signature="10573:10629" placeholder="SELECT user1..echange..." />
+            <marker date="1421803995241" expanded="true" signature="10763:10921" placeholder="INSERT INTO ..." />
+            <marker date="1421803995241" expanded="true" signature="11208:11364" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="304">
+          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fichiers_php/annonce.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43050846" vertical-offset="753" max-vertical-offset="4528">
+          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding>
+            <marker date="1421803733877" expanded="true" signature="741:801" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803733877" expanded="true" signature="935:971" placeholder="SELECT * FRO..users..." />
+            <marker date="1421803733877" expanded="true" signature="1170:1288" placeholder="INSERT INTO ..." />
+            <marker date="1421803733877" expanded="true" signature="3006:3042" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="3170:3202" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="3286:3350" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="3437:3512" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="3572:3614" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803733877" expanded="true" signature="3793:4051" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="3888:4051" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="3952:4004" placeholder="SELECT * FRO..annonce_equipement..." />
+            <marker date="1421803733877" expanded="true" signature="4161:4207" placeholder="SELECT * FRO..equipement..." />
+            <marker date="1421803733877" expanded="true" signature="4569:4657" placeholder="..." />
+            <marker date="1421803733877" expanded="true" signature="5013:5120" placeholder="SELECT frien..favoris..." />
+            <marker date="1421803733877" expanded="true" signature="5362:5439" placeholder="SELECT * FRO..echange..." />
+            <marker date="1421803733877" expanded="true" signature="6920:6962" placeholder="SELECT * FRO..logement..." />
+            <marker date="1421803733877" expanded="true" signature="7137:7176" placeholder="SELECT * FRO..photo..." />
+            <marker date="1421803733877" expanded="true" signature="7341:7408" placeholder="SELECT * FRO..messages..." />
+            <marker date="1421803733877" expanded="true" signature="7732:7768" placeholder="SELECT * FRO..users..." />
+            <marker date="1421803733877" expanded="true" signature="8936:8972" placeholder="SELECT * FRO..users..." />
+            <marker date="1421803733877" expanded="true" signature="10854:10946" placeholder="SELECT * FRO..echange..." />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
