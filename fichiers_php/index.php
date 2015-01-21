@@ -105,7 +105,7 @@
                     <div class="strenght_container">
                         <div class="bloc_strenght">
                             <div class="bloc_top_left">
-                                <div class="bloc2"><img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png"><p>Echanges illimités</p></div>
+                                <div class="bloc2"><img src="http://www.xn--icne-wqa.com/images/icones/1/4/view-refresh-4.png"><p><?php echo echangeillimite; ?></p></div>
                             </div>
                             <div class="bloc_top_right">
                                 <div class="bloc2"><img src="http://www.meilleur-immobilier-neuf.fr/images/maison.png"><p><?php echo hugenetwork; ?></p></div>

@@ -56,6 +56,7 @@
                             Il est simple d\'utilisation gratuit et fiable.
                             Welchome rassemble un large réseau de personnes de confiance dans toute la France.
                             N\'hésitez plus, utlilisez Welchome.');
+		define('echangeillimite','Echanges illimités');
 		//Recherche avancée
 		define('choixville','Lieu souhaité');
 		define('choixlogement','Type(s) de logement');
@@ -270,6 +271,7 @@
                             It is easy to use, free and reliable.
                             Welchome gather a huge network of reliable people in France.
                             Don\'t hesitate anymore, use Welchome.');
+		define('echangeillimite','Unlimited trade');
 		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
@@ -487,6 +489,7 @@
                             Il est simple d\'utilisation gratuit et fiable.
                             Welchome rassemble un large réseau de personnes de confiance dans toute la France.
                             N\'hésitez plus, utlilisez Welchome.');
+		define('echangeillimite','Echanges illimités');
 		//Recherche avancée
 		define('choixville','Dans quelle ville souhaitez-vous aller ?');
 		define('choixlogement','Par quel(s) type(s) de logement êtes vous interessé ?');
@@ -701,6 +704,7 @@
                             It is easy to use, free and reliable.
                             Welchome gather a huge network of reliable people in France.
                             Don\'t hesitate anymore, use Welchome.');
+		define('echangeillimite','Unlimited trade');
 		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
@@ -919,6 +923,7 @@
                             Il est simple d\'utilisation gratuit et fiable.
                             Welchome rassemble un large réseau de personnes de confiance dans toute la France.
                             N\'hésitez plus, utlilisez Welchome.');
+		define('echangeillimite','Echanges illimités');
 		//Recherche avancée
 		define('choixville','Lieu souhaité');
 		define('choixlogement','Type(s) de logement');
