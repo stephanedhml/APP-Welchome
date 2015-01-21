@@ -60,7 +60,7 @@ session_start();
 
 
         <p><?php echo surfacemin;?><br/>
-        <input type="number" name="surface_min" value="Surface minimale" min="0"></p>
+        <input type="number" name="surface_min" value="Surface minimale" min="0"></p></br>
 
         <!--
         <p><?php echo choixpreferences;?><br/>
@@ -69,7 +69,8 @@ session_start();
         <input type="checkbox" name="lieu3" id="case" value="montagne"/> <label for="case"><?php echo montagne;?></label><br/>
         <input type="checkbox" name="lieu4" id="case" value="ville"/> <label for="case"><?php echo ville;?></label><br/></p>
         -->
-
+        <p>Nom du logement</br>
+            <input type="texte" name="nom_log" id="nmlgt"/></p><br/>
     </div>
 
     <div class="bloc_search_right">

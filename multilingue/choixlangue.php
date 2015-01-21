@@ -208,7 +208,7 @@
 		define('registeranswer','Inscrivez vous pour répondre !');
 				//FAQ
 		define('aide','AIDE EN LIGNE');
-		define('Nouveau membre Welchome');
+		/*define('Nouveau membre Welchome');*/
 		define('newmeber','pourcommencertxt','Il est très facile de vous présenter et décrire votre maison à la communauté Welchome. Plus vous mettrez de photos en ligne, plus vous susciterez de confiance et d\'intérêt. Des photos de bonne qualité valorisent votre offre.');
 		define('pourcommencer','Pour commencer');
 		define('reduire','Réduire');
@@ -266,10 +266,7 @@
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
 		define('choixdestination','Choose your destination');
-		define('accueiltxt','Welchome is a website which gives you the opportunity to trade your house or your tenement for the holydays.
-                            It is easy to use, free and reliable.
-                            Welchome gather a huge network of reliable people in France.
-                            Don\'t hesitate anymore, use Welchome.');
+		define('accueiltxt','Welchome is a website which gives you the opportunity to trade your house or your tenement for the holydays.It is easy to use, free and reliable.Welchome gather a huge network of reliable people in France.Don\'t hesitate anymore, use Welchome.');
 		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
@@ -483,10 +480,7 @@
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
-		define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
-                            Il est simple d\'utilisation gratuit et fiable.
-                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
-                            N\'hésitez plus, utlilisez Welchome.');
+		define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.Il est simple d\'utilisation gratuit et fiable.Welchome rassemble un large réseau de personnes de confiance dans toute la France.N\'hésitez plus, utlilisez Welchome.');
 		//Recherche avancée
 		define('choixville','Dans quelle ville souhaitez-vous aller ?');
 		define('choixlogement','Par quel(s) type(s) de logement êtes vous interessé ?');
@@ -697,10 +691,7 @@
 		define ('intro','Find a tenement that fits you');
 		define('carrouseltxt','Your free holidays next to you');
 		define('choixdestination','Choose your destination');
-		define('accueiltxt','Welchome is a website which gives you the opportunity to trade your house or your tenement for the holydays.
-                            It is easy to use, free and reliable.
-                            Welchome gather a huge network of reliable people in France.
-                            Don\'t hesitate anymore, use Welchome.');
+		define('accueiltxt','Welchome is a website which gives you the opportunity to trade your house or your tenement for the holydays.It is easy to use, free and reliable.Welchome gather a huge network of reliable people in France.Don\'t hesitate anymore, use Welchome.');
 		//Recherche avancee
 		define('choixville','Which city do you wish to go?');
 		define('choixlogement','Which type of accomodation are you interested in?');
@@ -915,10 +906,7 @@
 		define ('intro','Trouvez un logement qui vous correspond');
 		define('carrouseltxt','Vos vacances à portée de mains gratuitement');
 		define('choixdestination','Saisir une destination');
-		define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.
-                            Il est simple d\'utilisation gratuit et fiable.
-                            Welchome rassemble un large réseau de personnes de confiance dans toute la France.
-                            N\'hésitez plus, utlilisez Welchome.');
+		define('accueiltxt','Welchome est un site internet qui vous permet d’échanger votre maison ou votre appartement pour les vacances.Il est simple d\'utilisation gratuit et fiable.Welchome rassemble un large réseau de personnes de confiance dans toute la France.N\'hésitez plus, utlilisez Welchome.');
 		//Recherche avancée
 		define('choixville','Lieu souhaité');
 		define('choixlogement','Type(s) de logement');

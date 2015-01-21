@@ -83,7 +83,13 @@ function resultats_requete_avancee()
 {
     global $bdd;
 
-
+$_POST['type1']=isset($_POST['type1']) ? 'on' : NULL;
+$_POST['type2']=isset($_POST['type2']) ? 'on' : NULL;
+$_POST['type3']=isset($_POST['type3']) ? 'on' : NULL;
+$_POST['type4']=isset($_POST['type4']) ? 'on' : NULL;
+$_POST['type5']=isset($_POST['type5']) ? 'on' : NULL;
+$_POST['type6']=isset($_POST['type6']) ? 'on' : NULL;
+$_POST['type7']=isset($_POST['type7']) ? 'on' : NULL;
 
     if (isset($_POST['capacite']) and $_POST['capacite']!='')
     {
@@ -239,6 +245,16 @@ function resultats_requete_avancee()
     {
         $message15="";
     }
+    if (isset($_POST['nom_log']) and $_POST['nom_log']!='')
+    {
+        $nomlog = htmlspecialchars($_POST['nom_log']);
+        $message16 =" AND nom_maison LIKE '%$nomlog%'";
+    }
+    else
+    {
+        $message16="";
+    }
+
     if (isset($_POST["television"])) {
         if ($_POST["television"]=='Oui') {$tele =" AND television LIKE 1";} else {$tele ="";};
     }
@@ -282,6 +298,7 @@ function resultats_requete_avancee()
   $message13
   $message14
   $message15
+  $message16
   $tele
   $malav
   $parking
