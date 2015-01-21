@@ -193,10 +193,11 @@
                 $quser = $bdd -> prepare("SELECT * FROM users WHERE id_users=?");
                 $quser -> execute(array($com['id_expediteur']));
                 $un = $quser -> fetch();
+
                 ?>
 
                 <?php
-                if ($i<$nb_coms-1) {
+                if ($i<$nb_coms) {
                     ?>
                     <table class="tableau_com_annonce">
                         <tr>
@@ -216,7 +217,7 @@
                     </table>
                 <?php
                 }
-                    if ($i=$nb_coms) {
+                    if (strcmp($i,$nb_coms)==0) {
                 ?>
                 <table class="tableau_last_com_annonce">
                     <tr>
