@@ -30,7 +30,7 @@
 
     //On ajoute le message de l'utilisateur correspondant à l'annonce dans la BDD
 
-    if (isset($_POST['message'])) {
+    if (isset($_POST['message']) AND $_POST['message']!=NULL) {
         $up = $bdd -> prepare("INSERT INTO messages(id_expediteur,date_update,message,id_logement) VALUES(:expediteur,:dates, :message, :id_logement)");
         $up -> execute(array(
             'expediteur' => $_SESSION['userid'],
@@ -239,8 +239,26 @@
                     ));
                     while($com = $req -> fetch()) {
                     if ($com['end_ech']==1) {
-                        switch (strcmp($_SESSION['userid'],$com['id_demandeur'])) {
-                            case 0:
+                        if (strcmp($_SESSION['userid'],$com['id_demandeur'])==0 AND strcmp($_SESSION['userid'],$com['id_proprietaire'])==0) {
+                            var_dump($_SESSION['userid']);
+                            ?>
+                            <div class="cadre_answer_post_annonce">
+                                <div class="answer1">
+                                    <form
+                                        action="annonce.php?id_logement=<?php echo $_GET['id_logement'] ?>&id_users=<?php echo $_GET['id_users'] ?>"
+                                        method="post">
+                                        <label for="message">Message</label><br/></br >
+                                        <textarea type="text" name="message" class="post_message"
+                                                  value="Ecrivez votre commentaire en 300 caractères max"
+                                                  maxlength="300"></textarea><br/><br/>
+                                        <input type="submit" value="Poster" id="btn_connexion"/><br/><br/>
+                                    </form>
+                                </div>
+                            </div>
+                        <?php
+                        }
+                        else {
+                        if (strcmp($_SESSION['userid'],$com['id_demandeur'])==0) {
                                 ?>
                                 <div class="cadre_answer_post_annonce" >
                                     <div class="answer1" >
@@ -252,10 +270,8 @@
                                     </div >
                                 </div>
                                 <?php
-                            break;
                         }
-                        switch (strcmp($_SESSION['userid'],$com['id_proprietaire'])) {
-                            case 0:
+                        elseif (strcmp($_SESSION['userid'],$com['id_proprietaire'])==0) {
                                 ?>
                                 <div class="cadre_answer_post_annonce" >
                                     <div class="answer1" >
@@ -267,8 +283,7 @@
                                     </div >
                                 </div>
                             <?php
-                            break;
-                        } } } } ?>
+                        } } } } } ?>
         </div>
         </div>
     </div>
