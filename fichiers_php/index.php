@@ -20,7 +20,7 @@
 	<body>
 
 		<header>
-			<?php include("menu2.php"); ?>
+			<?php include("menu.php"); ?>
 		</header>
         <div class="superglobal">
         <div class="global">

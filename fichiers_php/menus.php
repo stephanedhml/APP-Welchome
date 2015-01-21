@@ -8,7 +8,7 @@
 			<?php include("../multilingue/choixlangue.php");?>
             <li><a class="lienaccueil" href="index.php"><img class="accueil" src="logo2.png" /></a></li>
 
-            <li class="recherche_avancee"><a href="recherche_avancee.php" onmouseover="affiche()" onmouseout="cacher()" class="cl" ><?php echo rechercheavancee ?></a></li>
+            <li class="recherche_avancee"><a href="recherche_avancee.php" onmouseover="affiche()" class="cl" ><?php echo rechercheavancee ?></a></li>
 
 			<!-- <li class="recherche_avancee"><a href="recherche_avancee.php" onmouseover="affiche()" onmouseover="colorer(this)" onmouseout="cacher()"><?php// echo rechercheavancee ?></a></li> -->
 			<li><a href="forum.php" class="btn_FORUM cl"><?php echo forum ?></a></li>
