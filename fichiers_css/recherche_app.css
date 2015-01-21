@@ -65,6 +65,7 @@
     border-bottom: 3px solid #37474F;
     color: #fff;
     display: inline-block;
+    margin-top: 50%;
     width: 150px;
     text-align: center;
     text-decoration: none;
@@ -96,35 +97,41 @@
 }
 .container_advanced_search1 {
     position: fixed;
-    width: 1400px;
+    width: 96%;
     height: 310px;
-    margin-left: auto;
+    margin-left: 2%;
     margin-right: auto;
     margin-top: 40px;
     border-width: 1px;
     opacity: 0.9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
     border-color: black;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }.container_advanced_sea {
     position: fixed;
-    width: 1400px;
+    width: 96%;
     height: 310px;
-    margin-left: auto;
+    margin-left: 2%;
     margin-right: auto;
     margin-top: 25px;
     border-width: 1px;
     opacity: 0.9;
     border-color: black;
     border-radius: 4px;
+     -moz-border-radius: 4px;
+     -webkit-border-radius: 4px;
+     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, .5) 0 1px 3px;
 }
 
 .bloc_search_left1 {
     position: absolute;
-    width: 42%;
+    width: 35%;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 0;
     background-color: #F5F5F5;
 }
 
@@ -138,7 +145,7 @@
 
 .bloc_search_right1 {
     position: absolute;
-    width: 15%;
+    width: 25%;
     margin-left: 75%;
     background-color: #E0E0E0;
     height: 100%;
