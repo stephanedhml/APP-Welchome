@@ -51,7 +51,7 @@
 }
 #slide3
 {
-    background-image: url('../walls/wall9.jpg');
+    background-image: url('../walls/wall9cmp.jpg');
 }
 #slide4
 {
@@ -154,7 +154,6 @@
 #partie2
 
 {
-    display: inline-block;
     top:1000px;
     background-color: rgba(236, 240, 241,1.0);
 }

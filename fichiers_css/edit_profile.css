@@ -4,6 +4,10 @@ body a {
 .edit_profil {
     text-align: center;
 }
+.superglobal1{
+    min-height: 100%;
+    margin-bottom: 8%;
+}
 
 .edit_profil label {
     margin-top: 35px;

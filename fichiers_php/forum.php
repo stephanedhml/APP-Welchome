@@ -24,7 +24,7 @@ if (isset($_SESSION["userid"])) {
 <body class="forum_messagerie">
 
 <header>
-    <?php include("menus.php"); ?>
+    <?php include("menu2.php"); ?>
 </header>
 <div class="superglobal">
     <div class="global">
