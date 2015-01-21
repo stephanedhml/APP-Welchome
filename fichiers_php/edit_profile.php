@@ -458,7 +458,7 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
             $id_log = $req -> fetch();
     ?>
             <div class="left_3_top">
-                <div class="left_carre_top"><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $id_user; ?>"><p>Consulter votre profil</p></a></div>
+                <div class="left_carre_top"><a href="profil.php?id_logement=<?php echo $id_log[0]; ?>&id_users=<?php echo $id_user; ?>"><p><?php echo consultprofile; ?></p></a></div>
             </div>
             <div class="center_3_top">
                 <div class="center_carre_top"><a href="edit_profile.php?choix=2<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo modifytenement; ?></p></a></div>
@@ -470,10 +470,10 @@ elseif (isset($_GET["add"], $_POST["localisation"], $_POST["description_logement
                 <div class="left_carre_bot"><a href="edit_profile.php?choix=1<?php if (isset($_GET["edit_usr"]) AND $_GET["edit_usr"]==1) { ?>&id_user=<?php echo $id_user ?>&edit_usr=1<?php } ?>"><p><?php echo editprofile; ?></p></a></div>
             </div>
             <div class="center_3_bot">
-                <div class="center_carre_bot"><a href="ask.php"><p>Confirmation Validation</p></a></div>
+                <div class="center_carre_bot"><a href="ask.php"><p><?php echo confirmval; ?></p></a></div>
             </div>
             <div class="right_3_bot">
-                <div class="right_carre_bot"><a href="friends.php"><p>Amis</p></a></div>
+                <div class="right_carre_bot"><a href="friends.php"><p><?php echo friends; ?></p></a></div>
             </div>
     <?php } ?>
 

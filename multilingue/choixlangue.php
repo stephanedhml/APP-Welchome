@@ -172,6 +172,8 @@
 		define('yes','Oui');
 		define('no','Non');
 		define('localisation','Localisation');
+		define('consultprofile','Consulter votre profil');
+		define('friends','Amis');
 		//admin
 		define('editerunprofil','Editer profil utilisateur');
 		//creer profil
@@ -387,6 +389,9 @@
 		define('yes','Yes');
 		define('no','No');
 		define('localisation','Localization');
+		define('consultprofile','Watch your profile');
+		define('confirmval','Confirm checking');
+		define('friends','Friends');
 		//admin
 		define('editerunprofil','Editer user profile');
 		//creer profil
@@ -605,6 +610,9 @@
 		define('yes','Oui');
 		define('no','Non');
 		define('localisation','Localisation');
+		define('consultprofile','Consulter votre profil');
+		define('confirmval','Confirmation Validation');
+		define('friends','Amis');
 		//admin
 		define('editerunprofil','Editer profil utilisateur');
 		//creer profil
@@ -820,6 +828,9 @@
 		define('yes','Yes');
 		define('no','No');
 		define('localisation','Localization');
+		define('consultprofile','Watch your profile');
+		define('confirmval','Confirm checking');
+		define('friends','Friends');
 		//admin
 		define('editerunprofil','Editer user profile');
 		//creer profil
@@ -1037,6 +1048,9 @@
 		define('yes','Oui');
 		define('no','Non');
 		define('localisation','Localisation');
+		define('consultprofile','Consulter votre profil');
+		define('confirmval','Confirmation Validation');
+		define('friends','Amis');
 		//admin
 		define('editerunprofil','Editer profil utilisateur');
 		//creer profil
