@@ -55,10 +55,11 @@
 
                     <h9 class="Localisation">  <img src="location2.png" width="0.7%"> <?php echo $donnees['localisation'] ;?>  </h9> <br></br>
                     <li class="membres">  &#8962;  <?php echo $donnees['type_logement'] ;?></li>
-                    <li class="membres"> <img src="user3.png" width="1%"> <?php echo $donnees['nombre_voyageurs']  ;?><?php echo voyageur; ?></li>
-                    <li class="membres"> <?php echo $donnees['nb_chambres'] ;?><?php echo chambre; ?></li>
-                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php echo $donnees['nb_salles_bains'] ;?></li>
-                    <li class="membres"> <img src="big36.png" width="1%"> <?php echo $donnees['superficie'] ;?> m²</li>
+                    <li class="membres"> <img src="user3.png" width="1%"> <?php  if (isset($donnees['nombre_voyageurs']) and $donnees['nombre_voyageurs'] !=0){ echo $donnees['nombre_voyageurs'].voyageur;} ?></li>
+                    <li class="membres"> <?php if (isset($donnees['nb_chambres']) and $donnees['nb_chambres'] !=0){echo $donnees['nb_chambres']. chambre; }?></li>
+                    <li class="membres">  <img src="small32-2.png" width="0.6%"> <?php if (isset($donnees['nb_salles_bains']) and $donnees['nb_salles_bains'] !=0){ echo $donnees['nb_salles_bains'] ;}?></li>
+                        <?php  if (isset($donnees['superficie']) and $donnees['superficie'] !=0){?>
+                    <li class="membres"> <img src="big36.png" width="1%">  <?php echo $donnees['superficie']. 'm²' ;}?></li>
 
                     </div>
 
